@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 /misc.xml
-/_build/
+/source/_build/
 /main.py
 /venv/
 /.idea/
