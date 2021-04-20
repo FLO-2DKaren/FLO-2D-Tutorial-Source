@@ -3,6 +3,7 @@
 /workspace.xml
 /misc.xml
 /source/_build/
+/_build/
 /main.py
 /venv/
 /.idea/
