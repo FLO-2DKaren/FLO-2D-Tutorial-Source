@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to FLO-2D-Tutorials's documentation!
+FLO-2D-Tutorials's
 ============================================
 
 .. toctree::
@@ -11,9 +11,9 @@ Welcome to FLO-2D-Tutorials's documentation!
    :caption: Contents:
 
    Installation
-   Start a project
+   Start a Project
    Build a Project Domain
-   Get the data
+   Get the Data
    Create a Raster
    High Definition Screen Resolution
    Import Data Files

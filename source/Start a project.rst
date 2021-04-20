@@ -32,7 +32,8 @@ A new window will appear:
 1. Click **Create**
 2. In the new window,
 3. Type in the database name and hit **Save**
-3. Select the projection in the next window
+4. Select the projection in the next window
+
 * Set the default **Grid cell size** and the **Manning's n**
 
 Click **OK**
