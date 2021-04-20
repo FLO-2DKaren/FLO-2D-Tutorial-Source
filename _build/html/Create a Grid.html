@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Grid &#8212; FLO-2D-Tutorials  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Sample Elevation Data from Points" href="Sample%20Elevation%20from%20Points.html" />
+    <link rel="prev" title="Gutters" href="Gutters.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Sample%20Elevation%20from%20Points.html" title="Sample Elevation Data from Points"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Gutters.html" title="Gutters"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Create a Grid</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="create-a-grid">
+<h1>Create a Grid<a class="headerlink" href="#create-a-grid" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="method-1-from-an-external-layer">
+<h2>Method 1 From an External Layer<a class="headerlink" href="#method-1-from-an-external-layer" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>In order to create a grid, a domain layer must be available.  If a domain layer is not available use this tutorial:
+<span class="xref std std-ref">Build a Computational Domain</span></p></li>
+<li><p>Click the Create Grid Button</p></li>
+</ol>
+<img alt="_images/creategrid10.png" src="_images/creategrid10.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select external polygon layer.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/creategrid1.png"><img alt="_images/creategrid1.png" src="_images/creategrid1.png" style="width: 5.17644in; height: 2.66633in;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>This method will copy the polygon to the Comp Domain Layer and create
+the grid.</p></li>
+<li><p>The second method is to create a polygon in the <em>Computational
+Domain</em> layer in the <em>Layers Panel</em>&gt;<em>User Layers</em>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/creategrid2.png"><img alt="_images/creategrid2.png" src="_images/creategrid2.png" style="width: 2.51042in; height: 3.9485in;" /></a>
+<ol class="arabic simple" start="5">
+<li><p>Select the <em>Toggle Editing</em> icon from the QGIS Toolbar to activate
+the editor and then click the <em>Add Feature</em> button to create a
+polygon.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/creategrid3.png"><img alt="_images/creategrid3.png" src="_images/creategrid3.png" style="width: 4.38037in; height: 1.23092in;" /></a>
+<ol class="arabic simple" start="6">
+<li><p>Digitize the polygon in the map canvas and right click to close the
+polygon. Set the grid element size and click <em>OK</em> to complete the
+polygon.</p></li>
+</ol>
+<p><a href="#id1"><span class="problematic" id="id2">|creategrid1|</span></a><a href="#id3"><span class="problematic" id="id4">|creategrid2|</span></a></p>
+<ol class="arabic simple" start="7">
+<li><p>Save the layer and turn off the editor by clicking the Editor tool to
+toggle it off.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/creategrid6.png"><img alt="_images/creategrid6.png" src="_images/creategrid6.png" style="width: 4.35181in; height: 1.4in;" /></a>
+<ol class="arabic simple" start="8">
+<li><p>From the Grid Tools widget, select Create Grid.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/creategrid7.png"><img alt="_images/creategrid7.png" src="_images/creategrid7.png" style="width: 3.15043in; height: 1.24984in;" /></a>
+<ol class="arabic simple" start="9">
+<li><p>If this is a new project, the grid system will be created
+automatically. If this is a current project, the user will be asked
+to overwrite the current grid system. Click <em>Yes</em> to continue and
+<em>No</em> to cancel. Once the grid system is generated, the “Grid
+created!” message will appear. Click <em>OK</em> to close.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/creategrid8.png"><img alt="_images/creategrid8.png" src="_images/creategrid8.png" style="width: 5.36458in; height: 1.18861in;" /></a>
+<ol class="arabic simple" start="10">
+<li><p>If the grid system is not as expected, edit the <em>Computational
+Domain</em> layer and repeat the <em>Create Grid</em> process. Each time the
+grid system is replaced, the elevation and roughness data are also
+reset and must be recalculated. Each time the grid system is
+replaced, it may be necessary to re-assign the <em>User Layers</em> to the
+<em>Schematic Layers</em>. The grid system data is saved to the <em>Grid</em>
+<em>Schematic Layer</em> as shown below.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/creategrid9.png"><img alt="C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML67cc0996.PNG" src="_images/creategrid9.png" style="width: 5.52402in; height: 3.42708in;" /></a>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Build%20a%20Project%20Domain.html">Build a Project Domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20a%20Raster.html">Create a raster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="High%20Definition%20Screen%20Resolution.html">High Definition Screens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20Data%20Files.html">Import the FLO-2D *.DAT files into the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20GeoPackage.html">Import a GeoPackage from a Previous Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gutters.html">Gutters</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Create a Grid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#method-1-from-an-external-layer">Method 1 From an External Layer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Sample%20Elevation%20from%20Points.html">Sample Elevation Data from Points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sample%20Elevation%20from%20Raster.html">Sample Elevation Data from Raster</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Sample%20Elevation%20from%20Points.html" title="Sample Elevation Data from Points"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Gutters.html" title="Gutters"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Create a Grid</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Karen O&#39;Brien.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+    </div>
+  </body>
+</html>

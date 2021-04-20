@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gutters &#8212; FLO-2D-Tutorials  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Create a Grid" href="Create%20a%20Grid.html" />
+    <link rel="prev" title="Import a GeoPackage from a Previous Build" href="Import%20GeoPackage.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Create%20a%20Grid.html" title="Create a Grid"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Import%20GeoPackage.html" title="Import a GeoPackage from a Previous Build"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Gutters</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gutters">
+<h1>Gutters<a class="headerlink" href="#gutters" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In the FLO-2D model, street gutters convey shallow flow using a typical
+curb and gutter cross section that has a triangular shape created by the
+cross slope associated with the street crown. For the FLO-2D gutter
+routing, the triangular flow area is assumed to have a 2 percent from
+the middle of the street to the trough of the gutter. The gutter flow is
+exchanged with other upstream and downstream gutter elements, the
+sidewalk, and other street elements (not having a gutter). Floodplain
+flow is exchanged with the gutter elements through the sidewalk
+interface. See the FLO-2D Reference Manual for more information on using
+the Gutter component with FLO-2D.</p>
+</div>
+<div class="section" id="digitize-or-copy-data">
+<h2>Digitize or Copy Data<a class="headerlink" href="#digitize-or-copy-data" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Select the layer or the <em>Gutter Line</em> Layer and click <em>Toggle
+Editing</em>. Create polygons or polylines that represent the gutter
+alignment. Enter the data from the attributes table. Save the Gutter
+layer and close the editor.</p></li>
+</ol>
+<img alt="_images/gutters1.png" src="_images/gutters1.png" />
+</div>
+<div class="section" id="sample-data">
+<h2>Sample Data<a class="headerlink" href="#sample-data" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="2">
+<li><p>Click the <em>Sampling Gutter Values</em> icon in the <em>Grid Tools</em> and click
+<em>OK</em> when the process is complete. Fill the Global values and click
+OK to close the global data.</p></li>
+</ol>
+<img alt="_images/gutters2.png" src="_images/gutters2.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click OK to close the calculator.</p></li>
+</ol>
+<img alt="_images/gutters3.png" src="_images/gutters3.png" />
+<ol class="arabic simple" start="4">
+<li><p>Fill out the global values table and click OK.</p></li>
+</ol>
+<img alt="_images/gutters4.png" src="_images/gutters4.png" />
+</div>
+<div class="section" id="export-data">
+<h2>Export Data<a class="headerlink" href="#export-data" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="5">
+<li><p>It is not necessary to turn on a Gutter Switch. If the GUTTER.DAT
+file is in the project folder, Gutters will be applied. Simply delete
+or rename the file to turn them off.</p></li>
+</ol>
+<img alt="_images/gutters5.png" src="_images/gutters5.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the data export button.</p></li>
+</ol>
+<blockquote>
+<div><img alt="_images/gutters6.png" src="_images/gutters6.png" />
+</div></blockquote>
+<img alt="_images/gutters7.png" src="_images/gutters7.png" />
+<p>Navigate to the project folder and save the *.DAT files.</p>
+<p>Note: It isn’t always necessary to export every file. Some files like
+infiltrationand rain get really big and take time to export. Uncheck
+files that do not need to be replaced.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Create the gutter polygons or gutter polylines if they are missing
+from the <em>Gutters Areas</em> layers.</p></li>
+</ol>
+<img alt="_images/gutters8.png" src="_images/gutters8.png" />
+<ol class="arabic simple" start="2">
+<li><p>If the <em>Grid</em> layer is empty, create a grid and try again.</p></li>
+<li><p>If a Python error appears during the sampling process, the attribute
+table may be missing. Save and reload the project into QGIS and try
+again.</p></li>
+</ol>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Build%20a%20Project%20Domain.html">Build a Project Domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20a%20Raster.html">Create a raster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="High%20Definition%20Screen%20Resolution.html">High Definition Screens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20Data%20Files.html">Import the FLO-2D *.DAT files into the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20GeoPackage.html">Import a GeoPackage from a Previous Build</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Gutters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#digitize-or-copy-data">Digitize or Copy Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-data">Sample Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#export-data">Export Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20a%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sample%20Elevation%20from%20Points.html">Sample Elevation Data from Points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sample%20Elevation%20from%20Raster.html">Sample Elevation Data from Raster</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Create%20a%20Grid.html" title="Create a Grid"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Import%20GeoPackage.html" title="Import a GeoPackage from a Previous Build"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Gutters</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Karen O&#39;Brien.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+    </div>
+  </body>
+</html>

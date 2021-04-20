@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a raster &#8212; FLO-2D-Tutorials  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="High Definition Screens" href="High%20Definition%20Screen%20Resolution.html" />
+    <link rel="prev" title="Build a Project Domain" href="Build%20a%20Project%20Domain.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="High%20Definition%20Screen%20Resolution.html" title="High Definition Screens"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Build%20a%20Project%20Domain.html" title="Build a Project Domain"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Create a raster</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="create-a-raster">
+<h1>Create a raster<a class="headerlink" href="#create-a-raster" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>There are many uses for rasterized data in QGIS. It loads faster and is
+easier to style. FLO-2D spatial data and results can quickly be
+rasterized with this process.</p>
+</div>
+<div class="section" id="rasterize-grid-layer">
+<h2>Rasterize Grid Layer<a class="headerlink" href="#rasterize-grid-layer" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>In this example, the grid elevation raster is used. To create a grid
+elevation raster, use the Saga-Rasterize tool.</p></li>
+<li><p>On the Main QGIS Menu, click <em>Processing</em>&gt;<em>Toolbox</em>.</p></li>
+</ol>
+<img alt="_images/createaraster1.png" src="_images/createaraster1.png" />
+<ol class="arabic simple" start="3">
+<li><p>Enter the search term <em>Rasterize</em> in the Processing Toolbox search
+feature. Double click the <em>Saga Rasterized tool</em>.</p></li>
+</ol>
+<img alt="_images/createaraster2.png" src="_images/createaraster2.png" />
+<ol class="arabic simple" start="4">
+<li><p>Change the dialog box as shown below and click <em>Run</em>.</p></li>
+<li><p>Cell size is the grid element size.</p></li>
+<li><p>Fit = cells will ensure that the raster pixels are centered on the
+grid elements.</p></li>
+<li><p>Saga-Rasterize is a good raster generator for FLO-2D data because it
+builds a raster with hidden null data.</p></li>
+<li><p>If you want a temporary layer, leave the Rasterized field emptly.</p></li>
+<li><p>If you want a permanent file, use the Rasterize/Browser button to
+place the file in a directory. In this example a temporary file is
+used.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/createaraster3.png"><img alt="_images/createaraster3.png" src="_images/createaraster3.png" style="width: 5.8326in; height: 8.06149in;" /></a>
+<ol class="arabic simple" start="10">
+<li><p>Shapes = Grid Layer</p></li>
+<li><p>Attribute = elevation or whatever attribute you want to rasterize.</p></li>
+<li><p>Method for Multiple is default unless you want something in a
+different resolution from the source data.</p></li>
+<li><p>Method for lines = 0. Processing won’t run without this value. It
+isn’t important.</p></li>
+<li><p>Method for lines = 0. Processing won’t run without this value. It
+isn’t important.</p></li>
+<li><p>Target = float</p></li>
+<li><p>Output extent is important. Choose the Grid Layer</p></li>
+</ol>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/createaraster4.png"><img alt="_images/createaraster4.png" src="_images/createaraster4.png" style="width: 1.91643in; height: 0.71866in;" /></a>
+</div></blockquote>
+<a class="reference internal image-reference" href="_images/createaraster5.png"><img alt="_images/createaraster5.png" src="_images/createaraster5.png" style="width: 6.5in; height: 6.66389in;" /></a>
+<ol class="arabic simple">
+<li><p>Fit = cells</p></li>
+<li><p>Rasterized = Temporary or browse to a file locaiton.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/createaraster6.png"><img alt="_images/createaraster6.png" src="_images/createaraster6.png" style="width: 6.49743in; height: 3.51944in;" /></a>
+</div>
+<div class="section" id="save-the-permanent-layer">
+<h2>Save the Permanent layer<a class="headerlink" href="#save-the-permanent-layer" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="17">
+<li><p>In this example, the raster that is created is a temporary layer
+called <em>Rasterize</em>.</p></li>
+<li><p>This layer can be saved to a permanent layer using the QGIS <em>Save
+As</em> feature. T</p></li>
+<li><p>To save a temporary layer, right click the layer and click
+Export/Save As.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/createaraster7.png"><img alt="_images/createaraster7.png" src="_images/createaraster7.png" style="width: 6.5in; height: 3.7625in;" /></a>
+<ol class="arabic simple" start="20">
+<li><p>Navigate to the location and save the file.</p></li>
+<li><p>Fill out the Save File data and click OK Most of the data is default
+for this type of processing.</p></li>
+</ol>
+<blockquote>
+<div><a class="reference internal image-reference" href="_images/createaraster8.png"><img alt="_images/createaraster8.png" src="_images/createaraster8.png" style="width: 6.00967in; height: 6.68666in;" /></a>
+</div></blockquote>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Build%20a%20Project%20Domain.html">Build a Project Domain</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Create a raster</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rasterize-grid-layer">Rasterize Grid Layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#save-the-permanent-layer">Save the Permanent layer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="High%20Definition%20Screen%20Resolution.html">High Definition Screens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20Data%20Files.html">Import the FLO-2D *.DAT files into the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20GeoPackage.html">Import a GeoPackage from a Previous Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gutters.html">Gutters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20a%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sample%20Elevation%20from%20Points.html">Sample Elevation Data from Points</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sample%20Elevation%20from%20Raster.html">Sample Elevation Data from Raster</a></li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="High%20Definition%20Screen%20Resolution.html" title="High Definition Screens"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Build%20a%20Project%20Domain.html" title="Build a Project Domain"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Create a raster</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Karen O&#39;Brien.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Elevation Data from Raster &#8212; FLO-2D-Tutorials  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Sample Elevation Data from Points" href="Sample%20Elevation%20from%20Points.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Sample%20Elevation%20from%20Points.html" title="Sample Elevation Data from Points"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sample Elevation Data from Raster</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sample-elevation-data-from-raster">
+<h1>Sample Elevation Data from Raster<a class="headerlink" href="#sample-elevation-data-from-raster" title="Permalink to this headline">¶</a></h1>
+<p>To interpolate the elevation to a grid layer from a raster layer, use
+the <em>Sampling Grid Elevation from Raster Layer</em> icon.</p>
+<a class="reference internal image-reference" href="_images/sampleelefromraster1.png"><img alt="_images/sampleelefromraster1.png" src="_images/sampleelefromraster1.png" style="width: 4.71079in; height: 1.27067in;" /></a>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>A basic understanding of a raster file is necessary to use this routine.
+A raster file is a georeferenced image file with band data assigned to
+pixels aligned in column and row. In this case, the bands are elevation.
+Important properties:</p>
+<ol class="arabic simple">
+<li><p>The raster must have the same coordinate reference system (CRS) as
+the project. If the CRS is missing or is set by the user, save the
+raster with the correct CRS.</p></li>
+<li><p>The best resolution of the grid element elevation is achieved when
+the elevation raster pixel size is smaller than the grid element
+size.</p></li>
+<li><p>The raster warp method uses a weighted average to warp the original
+raster pixels to the cell size pixels.</p></li>
+</ol>
+</div>
+<div class="section" id="sample-elevation">
+<h2>Sample Elevation<a class="headerlink" href="#sample-elevation" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple" start="4">
+<li><p>Click the <em>Sampling Grid Elevation Button</em> and enter the required data
+in the dialog fields. As shown below, when the elevation sample is
+complete, the <em>Sampling Done</em> dialog box will appear. Select the <em>Fill
+NODATA</em> option to set the elevation of empty grid elements from
+neighbors.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/sampleelefromraster2.png"><img alt="_images/sampleelefromraster2.png" src="_images/sampleelefromraster2.png" style="width: 4.92708in; height: 2.09028in;" /></a>
+<p>When the interpolation process is complete, the filename_interp.tif
+raster will be created in the project directory. This is the warped and
+realigned raster that was used to sample the elevation. It can be
+imported into the project at any time for review purposes.</p>
+<p>The NODATA value in the previous dialog box is applied to the interp.tif
+raster.</p>
+<a class="reference internal image-reference" href="_images/sampleelefromraster3.png"><img alt="_images/sampleelefromraster3.png" src="_images/sampleelefromraster3.png" style="width: 6.5in; height: 2.30486in;" /></a>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>If the project or the data is on a server, this function may fail.
+Ensure all data is on the workstation.</p></li>
+<li><p>If the raster has the wrong CRS or does not have complete coverage,
+the following message will be displayed. Save the raster with the
+correct CRS and make sure it has complete coverage.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/sampleelefromraster4.png"><img alt="_images/sampleelefromraster4.png" src="_images/sampleelefromraster4.png" style="width: 4.4375in; height: 1.32292in;" /></a>
+<ol class="arabic simple" start="3">
+<li><p>If the “Sample Done” box is displayed but the grid table still has
+-9999 as the elevation, the raster CRS is not being read correctly.
+Save the raster as a new layer and assign the correct CRS.</p></li>
+<li><p>If the grid layer elevation data does not seem accurate, review the
+origin vs layer extent. If the layer extent is offset from the
+origin, the raster realign will be inaccurate. Re-create the raster
+so that the origin and extent are not offset.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/sampleelefromraster5.png"><img alt="_images/sampleelefromraster5.png" src="_images/sampleelefromraster5.png" style="width: 3.62114in; height: 4.08282in;" /></a>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Build%20a%20Project%20Domain.html">Build a Project Domain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20a%20Raster.html">Create a raster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="High%20Definition%20Screen%20Resolution.html">High Definition Screens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20Data%20Files.html">Import the FLO-2D *.DAT files into the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Import%20GeoPackage.html">Import a GeoPackage from a Previous Build</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Gutters.html">Gutters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20a%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sample%20Elevation%20from%20Points.html">Sample Elevation Data from Points</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sample Elevation Data from Raster</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-elevation">Sample Elevation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Sample%20Elevation%20from%20Points.html" title="Sample Elevation Data from Points"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FLO-2D-Tutorials  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Sample Elevation Data from Raster</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Karen O&#39;Brien.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.5.3.
+    </div>
+  </body>
+</html>
