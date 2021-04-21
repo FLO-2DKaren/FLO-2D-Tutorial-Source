@@ -314,12 +314,13 @@ body .highlight {
 }
 
 .search div {
-  display: inline;
+  position: absolute;
 }
 
 #searchbox h3 {
   color: #FF8C00;
   margin-bottom: 0px;
+  position: absolute;
   font-weight: normal;
 }
 
