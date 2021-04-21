@@ -70,7 +70,7 @@ Export Data
 Navigate to the project folder and save the \*.DAT files.
 
 Note: It isn’t always necessary to export every file. Some files like
-infiltrationand rain get really big and take time to export. Uncheck
+infiltration and rain get really big and take time to export. Uncheck
 files that do not need to be replaced.
 
 Troubleshooting

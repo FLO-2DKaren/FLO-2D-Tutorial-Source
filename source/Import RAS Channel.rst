@@ -1,6 +1,4 @@
 
-\***Jasmine, This one has a hyperlink.**\*
-==========================================
 
 Import HEC-RAS GeoRAS Channel
 =============================

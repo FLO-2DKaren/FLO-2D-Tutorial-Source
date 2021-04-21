@@ -2,8 +2,7 @@
 Convert Schematic Layers to User Layers
 =======================================
 
-\****Jasmine, If you want, just add Line 1 to the RST file. Nothing else changed.***\*
-======================================================================================
+
 
 This tool will convert imported \*.dat files to editable user layers.
 Use it after performing an Import FLO-2D \*.DAT files.

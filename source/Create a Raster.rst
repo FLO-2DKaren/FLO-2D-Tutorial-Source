@@ -43,8 +43,7 @@ Rasterize Grid Layer
    used.
 
 .. image:: img/createaraster3.png
-   :width: 5.8326in
-   :height: 8.06149in
+
 
 10. Shapes = Grid Layer
 
@@ -66,20 +65,16 @@ Rasterize Grid Layer
 ..
 
    .. image:: img/createaraster4.png
-      :width: 1.91643in
-      :height: 0.71866in
+
 
 .. image:: img/createaraster5.png
-   :width: 6.5in
-   :height: 6.66389in
+
 
 1. Fit = cells
 
 2. Rasterized = Temporary or browse to a file locaiton.
 
 .. image:: img/createaraster6.png
-   :width: 6.49743in
-   :height: 3.51944in
 
 Save the Permanent layer
 ------------------------
@@ -94,8 +89,7 @@ Save the Permanent layer
     Export/Save As.
 
 .. image:: img/createaraster7.png
-   :width: 6.5in
-   :height: 3.7625in
+
 
 20. Navigate to the location and save the file.
 
@@ -105,5 +99,4 @@ Save the Permanent layer
 ..
 
    .. image:: img/createaraster8.png
-      :width: 6.00967in
-      :height: 6.68666in
+

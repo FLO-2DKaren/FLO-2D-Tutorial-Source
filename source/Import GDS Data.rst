@@ -1,6 +1,4 @@
 
-\***Jasmine This one needs a hyperlink. update images and text.**\*
-===================================================================
 
 Import the FLO-2D \*.DAT files into the Project
 ===============================================
@@ -14,7 +12,7 @@ create one and import the project using this process.
 Before performing this task, set up a geopackage using `FLO-2D Plugin
 Settings <#_FLO-2D_Plugin_Settings>`__.
 
-1. To import a FLO-2D data files into a Geopackage:
+1. To import a FLO-2D data files into a Geo Package:
 
 2. Click the Import GDS Files
 

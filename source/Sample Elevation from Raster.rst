@@ -5,8 +5,7 @@ To interpolate the elevation to a grid layer from a raster layer, use
 the *Sampling Grid Elevation from Raster Layer* icon.
 
 .. image:: img/sampleelefromraster1.png
-   :width: 4.71079in
-   :height: 1.27067in
+
 
 Overview
 --------
@@ -37,8 +36,7 @@ Sample Elevation
    neighbors.
 
 .. image:: img/sampleelefromraster2.png
-   :width: 4.92708in
-   :height: 2.09028in
+
 
 When the interpolation process is complete, the filename_interp.tif
 raster will be created in the project directory. This is the warped and
@@ -49,8 +47,7 @@ The NODATA value in the previous dialog box is applied to the interp.tif
 raster.
 
 .. image:: img/sampleelefromraster3.png
-   :width: 6.5in
-   :height: 2.30486in
+
 
 Troubleshooting
 ---------------
@@ -63,8 +60,7 @@ Troubleshooting
    correct CRS and make sure it has complete coverage.
 
 .. image:: img/sampleelefromraster4.png
-   :width: 4.4375in
-   :height: 1.32292in
+
 
 3. If the “Sample Done” box is displayed but the grid table still has
    -9999 as the elevation, the raster CRS is not being read correctly.
@@ -76,6 +72,5 @@ Troubleshooting
    so that the origin and extent are not offset.
 
 .. image:: img/sampleelefromraster5.png
-   :width: 3.62114in
-   :height: 4.08282in
+
 

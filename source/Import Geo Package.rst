@@ -1,5 +1,3 @@
-\***Jasmine. We need to hyperlink this to FLO-2D Plugin Settings. You can see where below. Also update text and images.**\*
-===========================================================================================================================
 
 Import a GeoPackage from a Previous Build
 =========================================
@@ -15,11 +13,11 @@ To update a GeoPackage:
 -----------------------
 
 1. Set up a new project (see FLO-2D Plugin Settings). This will build
-   the new geodatabase.
+   the new Geo Database.
 
-2. Select the Import from GeoPackage icon from the FLO-2D Toolbar.
+2. Select the Import from Geo Package icon from the FLO-2D Toolbar.
 
-3. Navigate to the location of the GeoPackage and click Open. This will
+3. Navigate to the location of the Geo Package and click Open. This will
    import the old data into the new format.
 
 .. image:: img/importageopackage2.png
