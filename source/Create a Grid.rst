@@ -1,21 +1,16 @@
+
+
 Create a Grid
 =============
 
-Method 1 From an External Layer
--------------------------------
-
-1. In order to create a grid, a domain layer must be available.  If a domain layer is not available use this tutorial:
-   :ref:`Build a Computational Domain`
-
-2. Click the Create Grid Button
-
-.. image:: img/creategrid10.png
+1. The first step in creating a FLO-2D grid system is to create the
+   *Computational Domain*. The first method is to copy the polygon from
+   any polygon layer.
 
 2. Select external polygon layer.
 
-.. image:: img/creategrid1.png
-   :width: 5.17644in
-   :height: 2.66633in
+.. image:: img/createagrid1.png
+ 
 
 3. This method will copy the polygon to the Comp Domain Layer and create
    the grid.
@@ -23,36 +18,32 @@ Method 1 From an External Layer
 4. The second method is to create a polygon in the *Computational
    Domain* layer in the *Layers Panel*>\ *User Layers*.
 
-.. image:: img/creategrid2.png
-   :width: 2.51042in
-   :height: 3.9485in
+.. image:: img/createagrid2.png
+   
 
 5. Select the *Toggle Editing* icon from the QGIS Toolbar to activate
    the editor and then click the *Add Feature* button to create a
    polygon.
 
-.. image:: img/creategrid3.png
-   :width: 4.38037in
-   :height: 1.23092in
+.. image:: img/createagrid3.png
+
 
 6. Digitize the polygon in the map canvas and right click to close the
    polygon. Set the grid element size and click *OK* to complete the
    polygon.
 
-|creategrid1|\ |creategrid2|
+|image1|\ |image2|
 
 7. Save the layer and turn off the editor by clicking the Editor tool to
    toggle it off.
 
-.. image:: img/creategrid6.png
-   :width: 4.35181in
-   :height: 1.4in
+.. image:: img/createagrid6.png
+
 
 8. From the Grid Tools widget, select Create Grid.
 
-.. image:: img/creategrid7.png
-   :width: 3.15043in
-   :height: 1.24984in
+.. image:: img/createagrid7.png
+
 
 9. If this is a new project, the grid system will be created
    automatically. If this is a current project, the user will be asked
@@ -60,9 +51,8 @@ Method 1 From an External Layer
    *No* to cancel. Once the grid system is generated, the “Grid
    created!” message will appear. Click *OK* to close.
 
-.. image:: img/creategrid8.png
-   :width: 5.36458in
-   :height: 1.18861in
+.. image:: img/createagrid8.png
+  
 
 10. If the grid system is not as expected, edit the *Computational
     Domain* layer and repeat the *Create Grid* process. Each time the
@@ -72,7 +62,11 @@ Method 1 From an External Layer
     *Schematic Layers*. The grid system data is saved to the *Grid*
     *Schematic Layer* as shown below.
 
-.. image:: img/creategrid9.png
+.. image:: img/createagrid9.png
    :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML67cc0996.PNG
-   :width: 5.52402in
-   :height: 3.42708in
+ 
+
+.. |image1| image:: img/createagrid4.png
+  
+.. |image2| image:: img/createagrid5.png
+ 
