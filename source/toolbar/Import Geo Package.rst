@@ -6,7 +6,7 @@ When the FLO-2D Plugin is updated, the GeoPackage structure changes. The
 project can no longer be opened in the standard method described in the
 previous section.
 
-.. image:: img/importageopackage1.png
+.. image:: ../img/importageopackage1.png
 
 
 To update a GeoPackage:
@@ -20,11 +20,11 @@ To update a GeoPackage:
 3. Navigate to the location of the Geo Package and click Open. This will
    import the old data into the new format.
 
-.. image:: img/importageopackage2.png
+.. image:: ../img/importageopackage2.png
 
 
 4. When the import is complete, the project will be loaded with no error
    messages.
 
-.. image:: img/importageopackage3.png
+.. image:: ../img/importageopackage3.png
 

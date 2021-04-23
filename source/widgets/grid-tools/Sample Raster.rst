@@ -1,10 +1,14 @@
+
+\***Jasmine, there are new instructions below and a new image.**\*
+==================================================================
+
 Sample Elevation Data from Raster
 =================================
 
 To interpolate the elevation to a grid layer from a raster layer, use
 the *Sampling Grid Elevation from Raster Layer* icon.
 
-.. image:: img/sampleelefromraster1.png
+.. image:: ../../img/sampleraster1.png
 
 
 Overview
@@ -12,7 +16,7 @@ Overview
 
 A basic understanding of a raster file is necessary to use this routine.
 A raster file is a georeferenced image file with band data assigned to
-pixels aligned in column and row. In this case, the bands are elevation.
+pixels aligned in column and row. In this case, the band is elevation.
 Important properties:
 
 1. The raster must have the same coordinate reference system (CRS) as
@@ -29,24 +33,35 @@ Important properties:
 Sample Elevation
 ----------------
 
-4. Click the *Sampling Grid Elevation Button* and enter the required data
-   in the dialog fields. As shown below, when the elevation sample is
-   complete, the *Sampling Done* dialog box will appear. Select the *Fill
-   NODATA* option to set the elevation of empty grid elements from
-   neighbors.
+1. Click the *Sampling Grid Elevation Button* and enter the required
+   data in the dialog fields. As shown below.
 
-.. image:: img/sampleelefromraster2.png
+2. Select the *Fill NODATA* option to set the elevation of empty grid
+   elements from neighbors.
+
+3. When the elevation sample is complete, the *Sampling Done* dialog box
+   will appear.
+
+.. image:: ../../img/sampleraster2.png
 
 
-When the interpolation process is complete, the filename_interp.tif
-raster will be created in the project directory. This is the warped and
-realigned raster that was used to sample the elevation. It can be
-imported into the project at any time for review purposes.
+4. When the interpolation process is complete, the filename_interp.tif
+   raster will be created in the project directory.
 
-The NODATA value in the previous dialog box is applied to the interp.tif
-raster.
+5. This is the warped and realigned raster that was used to sample the
+   elevation. It can be imported into the project at any time for review
+   purposes.
 
-.. image:: img/sampleelefromraster3.png
+6. The NODATA value in the previous dialog box is applied to the
+   interp.tif raster.
+
+.. image:: ../../img/sampleraster3.png
+   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML6d5d0668.PNG
+
+
+7. The data is saved to the Schematize Layers/Grid layer.
+
+.. image:: ../../img/sampleraster4.png
 
 
 Troubleshooting
@@ -59,8 +74,9 @@ Troubleshooting
    the following message will be displayed. Save the raster with the
    correct CRS and make sure it has complete coverage.
 
-.. image:: img/sampleelefromraster4.png
-
+.. image:: ../../img/sampleraster5.png
+   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML19717213.PNG
+ 
 
 3. If the “Sample Done” box is displayed but the grid table still has
    -9999 as the elevation, the raster CRS is not being read correctly.
@@ -71,6 +87,5 @@ Troubleshooting
    origin, the raster realign will be inaccurate. Re-create the raster
    so that the origin and extent are not offset.
 
-.. image:: img/sampleelefromraster5.png
-
-
+.. image:: ../../img/sampleraster6.png
+  

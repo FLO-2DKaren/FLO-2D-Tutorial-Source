@@ -20,8 +20,6 @@ In QGIS, FLO-2D Plugin click the **Settings Button**
 .. figure:: img/settings.png
 	:align: left
 	:alt: Creating a new model database
-	:height: 50
-	:width: 50
 
 A new window will appear:
 

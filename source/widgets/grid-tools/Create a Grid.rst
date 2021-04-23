@@ -9,7 +9,7 @@ Create a Grid
 
 2. Select external polygon layer.
 
-.. image:: img/createagrid1.png
+.. image:: ../../img/createagrid1.png
  
 
 3. This method will copy the polygon to the Comp Domain Layer and create
@@ -18,14 +18,14 @@ Create a Grid
 4. The second method is to create a polygon in the *Computational
    Domain* layer in the *Layers Panel*>\ *User Layers*.
 
-.. image:: img/createagrid2.png
+.. image:: ../../img/createagrid2.png
    
 
 5. Select the *Toggle Editing* icon from the QGIS Toolbar to activate
    the editor and then click the *Add Feature* button to create a
    polygon.
 
-.. image:: img/createagrid3.png
+.. image:: ../../img/createagrid3.png
 
 
 6. Digitize the polygon in the map canvas and right click to close the
@@ -37,12 +37,12 @@ Create a Grid
 7. Save the layer and turn off the editor by clicking the Editor tool to
    toggle it off.
 
-.. image:: img/createagrid6.png
+.. image:: ../../img/createagrid6.png
 
 
 8. From the Grid Tools widget, select Create Grid.
 
-.. image:: img/createagrid7.png
+.. image:: ../../img/createagrid7.png
 
 
 9. If this is a new project, the grid system will be created
@@ -51,7 +51,7 @@ Create a Grid
    *No* to cancel. Once the grid system is generated, the “Grid
    created!” message will appear. Click *OK* to close.
 
-.. image:: img/createagrid8.png
+.. image:: ../../img/createagrid8.png
   
 
 10. If the grid system is not as expected, edit the *Computational
@@ -62,11 +62,11 @@ Create a Grid
     *Schematic Layers*. The grid system data is saved to the *Grid*
     *Schematic Layer* as shown below.
 
-.. image:: img/createagrid9.png
+.. image:: ../../img/createagrid9.png
    :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML67cc0996.PNG
  
 
-.. |image1| image:: img/createagrid4.png
+.. |image1| image:: ../../img/createagrid4.png
   
-.. |image2| image:: img/createagrid5.png
+.. |image2| image:: ../../img/createagrid5.png
  

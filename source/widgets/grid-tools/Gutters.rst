@@ -24,7 +24,7 @@ Digitize or Copy Data
    alignment. Enter the data from the attributes table. Save the Gutter
    layer and close the editor.
 
-.. image:: img/gutters1.png
+.. image:: ../../img/gutters1.png
 
 
 Sample Data
@@ -34,17 +34,17 @@ Sample Data
    *OK* when the process is complete. Fill the Global values and click
    OK to close the global data.
 
-.. image:: img/gutters2.png
+.. image:: ../../img/gutters2.png
 
 
 3. Click OK to close the calculator.
 
-.. image:: img/gutters3.png
+.. image:: ../../img/gutters3.png
 
 
 4. Fill out the global values table and click OK.
 
-.. image:: img/gutters4.png
+.. image:: ../../img/gutters4.png
 
 
 Export Data
@@ -54,17 +54,17 @@ Export Data
    file is in the project folder, Gutters will be applied. Simply delete
    or rename the file to turn them off.
 
-.. image:: img/gutters5.png
+.. image:: ../../img/gutters5.png
 
 
 6. Click the data export button.
 
 ..
 
-   .. image:: img/gutters6.png
+   .. image:: ../../img/gutters6.png
 
 
-.. image:: img/gutters7.png
+.. image:: ../../img/gutters7.png
 
 
 Navigate to the project folder and save the \*.DAT files.
@@ -79,7 +79,7 @@ Troubleshooting
 1. Create the gutter polygons or gutter polylines if they are missing
    from the *Gutters Areas* layers.
 
-.. image:: img/gutters8.png
+.. image:: ../../img/gutters8.png
  
 
 2. If the *Grid* layer is empty, create a grid and try again.
