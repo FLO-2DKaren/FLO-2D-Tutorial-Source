@@ -51,10 +51,83 @@ div.related a {
 /* basically adds color to the body text, like behind it*/
 div.section {
   background-color: #f63f11;
-  border-radius: 0em;
+  border-radius: 1px;
   padding: 10px 10px 10px;
   margin: 10px 10px 10px;
 }
 
+/*changes the format of the h1. So any text above or below ====== */
+div.section h1 {
+  text-align: center;
+  font-size: 500%;
+  border-bottom: 5px solid #d4a366;
+  padding: 0.2em;
+  margin: 0;
+}
+/*this edits the style of h2, anything with ---- above or under* so if you wanted to continue editing your headers just
+change h1 to h3 for example. Header notation is based on sphinx styling */
+div.section h2 {
+  text-align: left;
+  font-size: 140%;
+  padding: 0px;
+  margin: 0;
+}
+
+/* This edits the styling of paragraph text/general text, so this applies to TOC titles [:caption:]*/
+div.section p {
+  margin: 0;
+  padding: 5px 5px;
+  color: #09427d;
+  text-shadow: #98dbcc;
+}
+
+/* This sets requirements for your images, for example you can bound it to limits or minimums. */
+div.section img {
+  margin: 0 2px;
+  vertical-align: middle;
+  padding: 0.5em 0.5em 0;
+  max-width: 100%;
+;
+}
+
+/* this moves the footer, this is where the Copyright is located*/
+div.footer {
+  margin: 0.5em;
+  font-size: 80%;
+  text-align: right;
+}
+
+/* This is a border around the body border*/
+
+div.documentwrapper {
+  float: left;
+  width: 100%;
+  background-color: #333333;
+}
+
+div.sphinxsidebar {
+  float: left;
+  width: 220px;
+  margin-left: -100%;
+  padding: 10px;
+}
+
+
+
+/* this is link text, any text associated with a link will be modified with a*/
+a{
+  font-size: 17px;
+  text-decoration: none;
+  color: lightpink;
+}
+
+/* When you hover over a link, this function will change its style*/
+a:hover{
+  color: goldenrod;
+  font-weight: bold;
+}
+
+div.bodywrapper {
+  margin: 0 0 0 220px;
 
 
