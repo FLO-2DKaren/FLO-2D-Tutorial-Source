@@ -23,8 +23,8 @@ Import HEC-RAS GeoRAS Channel
 5. The user can edit the channel placement or cross sections so the
    channel will be schematized correctly.
 
-6. See the `Cross Section Editor <#_Schematize_Channel>`__ in the FLO-2D
+6. See the `Cross Section Editor <../widgets/profile-tool/Create%20a%20Raster.html>`__ in the FLO-2D
    *Widgets* section below for further instructions.
 
-.. image:: ../img/importRASchannel4.png
+.. image:: ../img/importRASchannel4.pngxx
 

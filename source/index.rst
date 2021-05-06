@@ -7,7 +7,7 @@
 FLO-2D Tutorial
 ============================================
 
-Table of Contentsssssssssssss
+Table of Contentss
 ---------------------------------------------------------------
 
 .. toctree::

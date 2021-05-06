@@ -10,7 +10,7 @@ debug data files and search for data conflicts.
 
 1. Perform a debug run
 
-2. `Export the \*.DAT Files <#_Export_FLO-2D_*.DAT_1>`__.
+2. `Export the \*.DAT Files <Export%20Project.html>`__.
 
 3. Click the Run FLO-2D button.
 
