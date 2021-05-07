@@ -1,9 +1,8 @@
-
 Create a raster
 ===============
 
 Overview
---------
+~~~~~~~~~~
 
 There are many uses for rasterized data in QGIS. It loads faster and is
 easier to style. FLO-2D spatial data and results can quickly be

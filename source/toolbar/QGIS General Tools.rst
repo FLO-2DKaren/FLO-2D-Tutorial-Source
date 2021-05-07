@@ -1,6 +1,5 @@
-
 QGIS Tools
-==========
+============
 
 QGIS Settings
 -------------
@@ -20,7 +19,7 @@ example.
 
 
 Save Project
-============
+-------------
 
 .. image:: ../img/qgisgeneraltools3.png
 
@@ -53,15 +52,14 @@ What if moved your project?
 3. Fix the links with QGIS and the FLO-2D plugin with this process.
 
 4. Fix the external data links with the Handle Unavailable Layers
-   window. Autofind works well. Apply Changes to close the window.
+   window. Auto find works well. Apply Changes to close the window.
 
-.. image:: ../img/qgisgeneraltools7.png
+.. image:: ../img/qgisgeneraltools7.gif
 
 
-\****Jasmine replace this image with the gif by replacing the one in the
-../img folder.**\*
 
-5. The Load Model window finds the geopackage and fixes the path. Click
+
+5. The Load Model window finds the Geo Package and fixes the path. Click
    yes to load the model from the new path.
 
 .. image:: ../img/qgisgeneraltools8.png

@@ -1,10 +1,8 @@
-
-
 Walls
 =====
 
 *Create Walls Shapefile*
-------------------------
+
 
 Overview
 ~~~~~~~~
@@ -83,7 +81,7 @@ Add Walls to Levee Lines
    complete the walls by schematizing them.
 
 Troubleshooting
----------------
+~~~~~~~~~~~~~~~
 
 1. Duplicate levees are features that can cause errors in FLO-2D. The
    Levee Tool will analyze duplicate levees and remove the levee with

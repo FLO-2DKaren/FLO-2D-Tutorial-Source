@@ -1,9 +1,8 @@
-
 Gutters
 =======
 
 Overview
---------
+~~~~~~~~~~
 
 In the FLO-2D model, street gutters convey shallow flow using a typical
 curb and gutter cross section that has a triangular shape created by the
@@ -74,7 +73,7 @@ infiltration and rain get really big and take time to export. Uncheck
 files that do not need to be replaced.
 
 Troubleshooting
----------------
+~~~~~~~~~~~~~~~
 
 1. Create the gutter polygons or gutter polylines if they are missing
    from the *Gutters Areas* layers.

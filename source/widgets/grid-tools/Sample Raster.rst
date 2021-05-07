@@ -1,7 +1,4 @@
-
-
-
-Sample Elevation Data from Raster
+Sample Raster
 =================================
 
 To interpolate the elevation to a grid layer from a raster layer, use
@@ -11,7 +8,7 @@ the *Sampling Grid Elevation from Raster Layer* icon.
 
 
 Overview
---------
+~~~~~~~~~~
 
 A basic understanding of a raster file is necessary to use this routine.
 A raster file is a georeferenced image file with band data assigned to
@@ -64,7 +61,7 @@ Sample Elevation
 
 
 Troubleshooting
----------------
+~~~~~~~~~~~~~~~~
 
 1. If the project or the data is on a server, this function may fail.
    Ensure all data is on the workstation.
