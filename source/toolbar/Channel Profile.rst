@@ -1,5 +1,3 @@
-
-
 Channel Profile Tool
 ====================
 

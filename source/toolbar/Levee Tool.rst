@@ -1,7 +1,5 @@
-
-
 Levee Elevation Tool
-====================
+=====================
 
 .. image:: ../img/leveetool1.png
  
@@ -112,7 +110,7 @@ levee.
  
 
 *Levee from Elevation Points within Search Radius*
---------------------------------------------------
+
 
 .. image:: ../img/leveetool14.png
 

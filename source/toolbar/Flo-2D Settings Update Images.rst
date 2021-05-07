@@ -1,4 +1,3 @@
-
 FLO-2D Plugin Settings
 ======================
 

@@ -1,6 +1,8 @@
-
-Data Warnings and Errors – DEBUG Tool
+Debug Tool
 =====================================
+
+Data Warnings and Errors
+-------------------------
 
 The Data Warnings and Error button opens a system that helps the user
 debug data files and search for data conflicts.

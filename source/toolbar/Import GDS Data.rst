@@ -1,5 +1,4 @@
-
-Import Data Files
+Import GDS Data
 ==================
 
 Import the FLO-2D \*.DAT files into the Project
@@ -11,7 +10,7 @@ create one and import the project using this process.
 .. image:: ../img/importgdsdata1.png
 
 
-Before performing this task, set up a geopackage using `FLO-2D Plugin
+Before performing this task, set up a Geo Package using `FLO-2D Plugin
 Settings <#_FLO-2D_Plugin_Settings>`__.
 
 1. To import a FLO-2D data files into a Geo Package:
@@ -39,5 +38,4 @@ Settings <#_FLO-2D_Plugin_Settings>`__.
 
 
 8. The final step is to convert the new layers to User Layers. See
-   `Convert Schematic Layers to User
-   Layers. <Schema%202%20User.html>`__
+   `Convert Schematic Layers to User Layers. <Schema%202%20User.html>`__

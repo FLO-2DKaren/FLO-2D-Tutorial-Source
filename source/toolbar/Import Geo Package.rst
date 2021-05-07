@@ -1,16 +1,15 @@
+Import a Geo Package
+=============================
 
-Import a GeoPackage from a Previous Build
-=========================================
-
-When the FLO-2D Plugin is updated, the GeoPackage structure changes. The
+When the FLO-2D Plugin is updated, the Geo Package structure changes. The
 project can no longer be opened in the standard method described in the
 previous section.
 
 .. image:: ../img/importageopackage1.png
 
 
-To update a GeoPackage:
------------------------
+To Update a Geo Package:
+--------------------------
 
 1. Set up a new project (see FLO-2D Plugin Settings). This will build
    the new Geo Database.

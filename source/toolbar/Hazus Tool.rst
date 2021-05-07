@@ -1,7 +1,3 @@
-
-\***Jasmine, This one has a note, and bullets. Might want to verify the headings are level 1 or 2.
-==================================================================================================
-
 Hazus Tool
 ==========
 
@@ -20,7 +16,7 @@ Building Layer
 .. image:: ../img/hazutool1.png
 
 
-Import Depth and Water Surface Layers.
+Import Depth and Water Surface Layers
 --------------------------------------
 
 3. Add a depth layer and a water surface layer. Click *Layer*>\ *Add
@@ -36,7 +32,7 @@ Import Depth and Water Surface Layers.
 5. Repeat this process for the DEPFP.OUT file.
 
 *Assign Water Elevation and Depth to the Grid Layer*
-----------------------------------------------------
+
 
 6. On the Grid Tools widget select the Assign water elevations/flow
    depths to grid from points layer icon.
@@ -116,7 +112,7 @@ Review Intersection Layer
 .. image:: ../img/hazutool14.png
   
 
-Homogenize the Intersection layer.
+Homogenize the Intersection Layer
 ----------------------------------
 
 18. Select the HAZUS icon in the *FLO-2D Toolbar*.
@@ -170,7 +166,8 @@ Join Building Statistics Table to Building Polygons
 23. Save the *Buildings* Layer to a shapefile. Select the *Save As…* to
     a location and name the file.
 
-Note: The style of this new layer can be edited to help the user review
+
+**Note:** The style of this new layer can be edited to help the user review
 the data. The attributes can be sorted and arranged to help track
 outliers or bad data. Use the field calculator to perform additional
 statistical analysis on the data in this layer.

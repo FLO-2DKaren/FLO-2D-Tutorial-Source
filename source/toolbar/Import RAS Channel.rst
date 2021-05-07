@@ -1,7 +1,5 @@
-
-
-Import HEC-RAS GeoRAS Channel
-=============================
+Import RAS Channel
+=========================
 
 .. image:: ../img/importRASchannel1.png
 

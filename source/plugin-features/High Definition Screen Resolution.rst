@@ -1,4 +1,3 @@
-
 High Definition Screens
 =======================
 
@@ -15,7 +14,7 @@ the *Environmental Variables* for QT Creator scaling factor, on the
 shown below. Set the *Environmental Variables* for the System not the
 user.
 
-.. figure:: ../img/highdefscreen1.png
+.. image:: ../img/highdefscreen1.png
 	:align: left
 	:alt: Creating a new model database
 
@@ -23,6 +22,6 @@ For QGIS, navigate to *Settings > Options > General* and set the icon
 size to 24 and the text size to 8. Try a few different combinations to
 suit the current screen.
 
-.. figure:: ../img/highdefscreen2.png
+.. image:: ../img/highdefscreen2.png
 	:align: left
 	:alt: Creating a new model database

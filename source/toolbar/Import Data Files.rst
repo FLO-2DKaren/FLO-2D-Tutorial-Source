@@ -1,13 +1,14 @@
-
+Import Data Files
+==================
 
 Import the FLO-2D \*.DAT files into the Project
-===============================================
+-----------------------------------------------
 
-To import a FLO-2D data files into a Geopackage:
+To import a FLO-2D data files into a Geo Package:
 
 1. Click the Import GDS Files
 
-   .. image:: ../img/importdatafiles1.png
+.. image:: ../img/importdatafiles1.png
 
 1. Navigate to the FLO-2D \*.DAT files
 
