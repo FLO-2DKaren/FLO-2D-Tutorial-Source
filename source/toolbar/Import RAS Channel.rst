@@ -26,5 +26,5 @@ Import HEC-RAS GeoRAS Channel
 6. See the `Cross Section Editor <../widgets/profile-tool/Create%20a%20Raster.html>`__ in the FLO-2D
    *Widgets* section below for further instructions.
 
-.. image:: ../img/importRASchannel4.pngxx
+.. image:: ../img/importRASchannel4.png
 

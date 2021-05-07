@@ -1,6 +1,5 @@
 
-\***Jasmine, there are new instructions below and a new image.**\*
-==================================================================
+
 
 Sample Elevation Data from Raster
 =================================

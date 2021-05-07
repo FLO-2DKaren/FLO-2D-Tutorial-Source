@@ -11,7 +11,7 @@ Overview
 --------
 
 A basic understanding of a raster file is necessary to use this routine.
-A raster file is a georeferenced image file with band data assigned to
+A raster file is a geo-referenced image file with band data assigned to
 pixels aligned in column and row. In this case, the bands are elevation.
 Important properties:
 
