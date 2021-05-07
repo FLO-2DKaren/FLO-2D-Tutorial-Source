@@ -64,7 +64,7 @@ Rasterize Grid Layer
 
 ..
 
-   .. image:: ../../img/createaraster4.png
+.. image:: ../../img/createaraster4.png
 
 
 .. image:: ../../img/createaraster5.png
@@ -98,5 +98,5 @@ Save the Permanent layer
 
 ..
 
-   .. image:: ../../img/createaraster8.png
+.. image:: ../../img/createaraster8.png
 
