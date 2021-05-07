@@ -17,13 +17,13 @@ Creating a new database
 -----------------------
 In QGIS, FLO-2D Plugin click the **Settings Button**
 
-.. figure:: img/settings.png
+.. image:: img/startaproject1.png
 	:align: left
 	:alt: Creating a new model database
 
 A new window will appear:
 
-.. figure:: img/settingsdialog.png
+.. image:: img/startaproject2.png
 	:align: left
 	:alt: Creating a new model database
 
