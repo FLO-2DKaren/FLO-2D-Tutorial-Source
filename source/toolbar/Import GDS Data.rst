@@ -40,4 +40,4 @@ Settings <#_FLO-2D_Plugin_Settings>`__.
 
 8. The final step is to convert the new layers to User Layers. See
    `Convert Schematic Layers to User
-   Layers. <#_Convert_Schematic_Layers>`__
+   Layers. <Schema%202%20User.html>`__

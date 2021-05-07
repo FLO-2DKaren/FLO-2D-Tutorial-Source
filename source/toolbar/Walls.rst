@@ -1,6 +1,4 @@
 
-\***Jasmine, This is another long one with a bulleted list and numbered list. It also has a hyperlink.
-======================================================================================================
 
 Walls
 =====
@@ -81,7 +79,7 @@ Add Walls to Levee Lines
 .. image:: ../img/walls6.png
 
 
-6. Go to `Levee <#_Levee_from_Levee>`__ from Levee User Lines above to
+6. Go to `Levee <Levee%20Tool.html>`__ from Levee User Lines above to
    complete the walls by schematizing them.
 
 Troubleshooting
