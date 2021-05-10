@@ -58,9 +58,8 @@ Export Data
 
 6. Click the data export button.
 
-..
 
-   .. image:: ../../img/gutters6.png
+.. image:: ../../img/gutters6.png
 
 
 .. image:: ../../img/gutters7.png
@@ -68,7 +67,7 @@ Export Data
 
 Navigate to the project folder and save the \*.DAT files.
 
-Note: It isn’t always necessary to export every file. Some files like
+**Note:** It isn’t always necessary to export every file. Some files like
 infiltration and rain get really big and take time to export. Uncheck
 files that do not need to be replaced.
 
