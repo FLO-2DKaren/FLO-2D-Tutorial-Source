@@ -27,7 +27,7 @@ Import Depth and Water Surface Layers
 
 4. Right click the layer and assign the Coordinate Reference System.
 
-|image3|\ |C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML2dc68f89.PNG|
+|image3|\ |image4|
 
 5. Repeat this process for the DEPFP.OUT file.
 
@@ -44,13 +44,13 @@ Import Depth and Water Surface Layers
    grid field button.
 
 .. image:: ../img/hazutool7.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML2ddb3cfe.PNG
+
 
 
 8. Click OK to close the dialog box.
 
 .. image:: ../img/hazutool8.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML2dde7815.PNG
+
    
 
 9.  Repeat the process for the Depth layer.
@@ -70,7 +70,7 @@ Import Depth and Water Surface Layers
 12. Click *OK* to close the dialog box.
 
 .. image:: ../img/hazutool8.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML2dde7815.PNG
+
  
 
 Intersect Building Layer to Grid
@@ -102,7 +102,6 @@ Review Intersection Layer
     building has 7 partitions with different data from each grid:
 
 .. image:: ../img/hazutool13.jpeg
-   :alt: HAZUS3
    
 
 17. Each partition of the building has, different field values. For
@@ -148,7 +147,7 @@ to the ground elevations, if selected.*
 
 
 .. image:: ../img/hazutool19.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML3180a766.PNG
+
 
 Join Building Statistics Table to Building Polygons
 ---------------------------------------------------
@@ -160,7 +159,6 @@ Join Building Statistics Table to Building Polygons
  
 
 .. image:: ../img/hazutool21.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML318e5ee0.PNG
 
 
 23. Save the *Buildings* Layer to a shapefile. Select the *Save As…* to
@@ -176,7 +174,6 @@ statistical analysis on the data in this layer.
 
 
 .. image:: ../img/hazutool23.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML31a1bf72.PNG
 
 
 24. Now, the Buildings Shapefile has “join” fields from the Buildings
@@ -211,5 +208,5 @@ Rasterize the Buildings
  
 .. |image3| image:: ../img/hazutool4.png
  
-.. |C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML2dc68f89.PNG| image:: ../img/hazutool5.png
+.. |image4| image:: ../img/hazutool5.png
 
