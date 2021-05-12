@@ -1,0 +1,39 @@
+Spatial Shallow n
+=================
+
+Overview
+--------
+
+A spatially variable shallow n-value enables the flow roughness to be depth integrated enable high n-values at shallow flow depths.
+The value can also be globally assigned in the *FLO-2D Control and Tolerance Variables* window.
+Polygons can be applied to select individual or groups of grid elements to supersede the global n-value as in the case for streets and parking lots.
+
+Digitize or Copy Data
+---------------------
+
+Select the *Shallow-n Areas* layer and click edit.
+Create or copy the polygons that represent the shallow roughness areas to the layer and save them.
+
+.. image:: image\spatia002.png
+
+
+Sample Data
+-----------
+
+Click the *Sampling Spatial Shallow-n Values* icon and then *OK* once the process is complete.
+
+.. image:: image\spatia003.png
+
+
+.. image:: image\spatia004.png
+
+
+Troubleshooting
+---------------
+
+1. Create the shallow-n polygons if they are missing from the *Shallow-n Areas* layer.
+
+2. If the Grid layer is empty, create a grid and try again.
+
+3. If a Python error appears during the sampling process, the attribute table may be missing.
+   Save and reload the project into QGIS and try again.

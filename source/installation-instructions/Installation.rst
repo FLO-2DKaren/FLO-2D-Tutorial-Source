@@ -8,7 +8,7 @@ QGIS
 
 To install QGIS, we recommend using `OSGeo4W 64 bit installer <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_.
 
-During installation, select **Advanced Install** > **Install from Internet** > **All Users** > Path to download > **Direct Connection** > The default available download website
+During installation, select Advanced Install> **Install from Internet** > **All Users** > Path to download > **Direct Connection** > The default available download website
 
 A new window will appear to **Select Packages**. Select the following packages from the **Desktop** section:
 
