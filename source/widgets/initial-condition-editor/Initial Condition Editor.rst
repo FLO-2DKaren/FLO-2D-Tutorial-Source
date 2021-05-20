@@ -22,10 +22,11 @@ depth. The reservoir data is written to the INFLOW.DAT file.
 5. |initia005|\ Click *Schematize* to save the data to the schematic
    layers.
 
-.. image:: image\initia002.png
+.. image:: ../../img/Initial-Condition-Editor/initia002.png
 
 
-.. image:: image\initia003.png
+.. image:: ../../img/Initial-Condition-Editor/initia003.png
+
 
 Troubleshooting
 ~~~~~~~~~~~~~~~
@@ -42,14 +43,14 @@ Use this option to set an initial depth in any channel segment.
 The water depth will be assigned to every channel cross section within the segment at runtime.
 The initial condition will be written to the CHANNEL.DAT file.
 
-.. image:: image\initia004.png
+.. image:: ../../img/Initial-Condition-Editor/initia004.png
 
 
 1. Select the channel segment.
 
 2. Set the initial depth.
 
-.. image:: image\initia005.png
+.. image:: ../../img/Initial-Condition-Editor/initia005.png
 
 3. Click *Schematize* to save the data to the schematic layers.
 
@@ -61,9 +62,9 @@ Troubleshooting
 The simplicity of this tool makes it simple to adjust.
 It is not necessary to use the tool here because the variable can also be set in the Schematized Channels Editor.
 
-.. |initia006| image:: image\initia006.png
+.. |initia006| image:: ../../img/Initial-Condition-Editor/initia006.png
 
-.. |initia007| image:: image\initia007.png
+.. |initia007| image:: ../../img/Initial-Condition-Editor/initia007.png
 
-.. |initia005| image:: image\initia005.png
+.. |initia005| image:: ../../img/Initial-Condition-Editor/initia005.png
 

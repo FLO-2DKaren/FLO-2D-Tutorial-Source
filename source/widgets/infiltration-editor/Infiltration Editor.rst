@@ -12,9 +12,9 @@ Global
 Global data is set up using the Global Infiltration button.
 Click the button to open the editor dialog box.
 
-.. image:: image\infilt002.png
+.. image:: ../../img/Infiltration-Editor/infilt002.png
 
-.. image:: image\infilt003.png
+.. image:: ../../img/Infiltration-Editor/infilt003.png
 
 Channel Infiltration
 --------------------
@@ -22,11 +22,11 @@ Channel Infiltration
 To assign channel infiltration, use the channel infiltration editor.
 Set a global hydraulic conductivity for all channel elements and click the Channel Infiltration button.
 
-.. image:: image\infilt004.png
+.. image:: ../../img/Infiltration-Editor/infilt004.png
 
 Local channel infiltration is set by segment in the dialog box.
 
-.. image:: image\infilt005.png
+.. image:: ../../img/Infiltration-Editor/infilt005.png
 
 Green-Ampt from Infiltration Polygons
 -------------------------------------
@@ -45,12 +45,12 @@ Create a polygon to represent an area of infiltration.
 
 5. |infilt021|\ Click Schematize.
 
-.. image:: image\infilt006.png
+.. image:: ../../img/Infiltration-Editor/infilt006.png
 
 The infiltration polygons outline areas of cells that have similar infiltration characteristics.
 In the following image, the infiltration areas are different for urban, desert and desert drainage.
 
-.. image:: image\infilt007.png
+.. image:: ../../img/Infiltration-Editor/infilt007.png
 
 Green-Ampt from Infiltration Calculator
 ---------------------------------------
@@ -65,18 +65,18 @@ The land use data can account for vegetative cover and impervious cover.
 
 Prepare the data into shapefiles using QGIS or import them into QGIS.
 
-.. image:: image\infilt008.png
+.. image:: ../../img/Infiltration-Editor/infilt008.png
 
 To run the calculator, click the Calculate Green-Ampt button.
 
-.. image:: image\infilt009.png
+.. image:: ../../img/Infiltration-Editor/infilt009.png
 
 Use the following dialog box to assign the required shapefiles and fields to the calculator.
 Click OK to run the calculation.
 The plugin will assign spatially variable infiltration data to each cell.
 The data is exported to the INFIL.DAT file.
 
-.. image:: image\infilt010.png
+.. image:: ../../img/Infiltration-Editor/infilt010.png
 
 SCS
 ---
@@ -91,26 +91,26 @@ The SCS infiltration editor can add global or spatially variable infiltration da
 1. Set up the Global Infiltration first.
    Click Global Infiltration.
 
-.. image:: image\infilt011.png
+.. image:: ../../img/Infiltration-Editor/infilt011.png
 
 2. Fill the Global Infiltration dialog box.
 
-.. image:: image\infilt012.png
+.. image:: ../../img/Infiltration-Editor/infilt012.png
 
 SCS Calculator Single Shapefile
 
 1. Click the Calculate SCS CN button.
 
-.. image:: image\infilt013.png
+.. image:: ../../img/Infiltration-Editor/infilt013.png
 
 2. Select the layer and field with the infiltration data and click OK to run the calculator.
 
-.. image:: image\infilt014.png
+.. image:: ../../img/Infiltration-Editor/infilt014.png
 
 3. When the calculation is complete, the following box will appear.
    Click OK to close the box.
 
-.. image:: image\infilt015.png
+.. image:: ../../img/Infiltration-Editor/infilt015.png
 
 SCS Calculator Single Shapefile Multiple Fields
 
@@ -120,16 +120,16 @@ This option was developed specifically for Pima County.
 
 1. Click the Calculate SCS CN button.
 
-.. image:: image\infilt013.png
+.. image:: ../../img/Infiltration-Editor/infilt013.png
 
 2. Select the layer and fields with the infiltration data and click OK to run the calculator.
 
-.. image:: image\infilt016.png
+.. image:: ../../img/Infiltration-Editor/infilt016.png
 
 3. When the calculation is complete, the following box will appear.
    Click OK to close the box.
 
-.. image:: image\infilt015.png
+.. image:: ../../img/Infiltration-Editor/infilt015.png
 
 Horton
 ------
@@ -144,11 +144,11 @@ The SCS infiltration editor can add global or spatially variable infiltration da
 1. Set up the Global Infiltration first.
    Click Global Infiltration.
 
-.. image:: image\infilt011.png
+.. image:: ../../img/Infiltration-Editor/infilt011.png
 
 2. Fill the Global Infiltration dialog box.
 
-.. image:: image\infilt017.png
+.. image:: ../../img/Infiltration-Editor/infilt017.png
 
 Horton Spatially Variable Method
 --------------------------------
@@ -168,7 +168,7 @@ Create a polygon to represent an area of infiltration.
 
 7. Click the Save button and Editor Pencil button.
 
-.. image:: image\infilt018.png
+.. image:: ../../img/Infiltration-Editor/infilt018.png
 
 8. Click Schematize.
 
@@ -189,9 +189,9 @@ Troubleshooting
 3. Make sure the shapefile fields have a correctly defined number type.
    The shapefiles that are supplied with the QGIS Lessons will help define the Field Variable Format such as string, whole number or decimal number.
 
-.. |infilt019| image:: image\infilt019.png
-.. |infilt020| image:: image\infilt020.png
-.. |infilt021| image:: image\infilt021.png
-.. |infilt019| image:: image\infilt019.png
-.. |infilt020| image:: image\infilt020.png
-.. |infilt021| image:: image\infilt021.png
+.. |infilt019| image:: ../../img/Infiltration-Editor/infilt019.png
+.. |infilt020| image:: ../../img/Infiltration-Editor/infilt020.png
+.. |infilt021| image:: ../../img/Infiltration-Editor/infilt021.png
+.. |infilt019| image:: ../../img/Infiltration-Editor/infilt019.png
+.. |infilt020| image:: ../../img/Infiltration-Editor/infilt020.png
+.. |infilt021| image:: ../../img/Infiltration-Editor/infilt021.png
