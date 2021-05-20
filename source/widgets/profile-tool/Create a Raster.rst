@@ -16,13 +16,13 @@ Rasterize Grid Layer
 
 2. On the Main QGIS Menu, click *Processing*>\ *Toolbox*.
 
-.. image:: ../../img/createaraster1.png
+.. image:: ../../img/Create-a-Raster/createaraster1.png
 
 
 3. Enter the search term *Rasterize* in the Processing Toolbox search
    feature. Double click the *Saga Rasterized tool*.
 
-.. image:: ../../img/createaraster2.png
+.. image:: ../../img/Create-a-Raster/createaraster2.png
 
 
 4. Change the dialog box as shown below and click *Run*.
@@ -41,7 +41,7 @@ Rasterize Grid Layer
    place the file in a directory. In this example a temporary file is
    used.
 
-.. image:: ../../img/createaraster3.png
+.. image:: ../../img/Create-a-Raster/createaraster3.png
 
 
 10. Shapes = Grid Layer
@@ -63,17 +63,17 @@ Rasterize Grid Layer
 
 ..
 
-.. image:: ../../img/createaraster4.png
+.. image:: ../../img/Create-a-Raster/createaraster4.png
 
 
-.. image:: ../../img/createaraster5.png
+.. image:: ../../img/Create-a-Raster/createaraster5.png
 
 
 1. Fit = cells
 
 2. Rasterized = Temporary or browse to a file locaiton.
 
-.. image:: ../../img/createaraster6.png
+.. image:: ../../img/Create-a-Raster/createaraster6.png
 
 Save the Permanent layer
 ------------------------
@@ -87,7 +87,7 @@ Save the Permanent layer
 19. To save a temporary layer, right click the layer and click
     Export/Save As.
 
-.. image:: ../../img/createaraster7.png
+.. image:: ../../img/Create-a-Raster/createaraster7.png
 
 
 20. Navigate to the location and save the file.
@@ -97,5 +97,5 @@ Save the Permanent layer
 
 ..
 
-.. image:: ../../img/createaraster8.png
+.. image:: ../../img/Create-a-Raster/createaraster8.png
 

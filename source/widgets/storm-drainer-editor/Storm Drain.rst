@@ -13,14 +13,14 @@ The Storm Drain Editor tool has several functions to prepare the data that integ
 
 The storm drain editor widget has the following functionality:
 
-.. image:: image\stormd002.png
+.. image:: ../../img/Storm-Drain/stormd002.png
 
 Create storm drain components from shapefiles
 ---------------------------------------------
 
 The select component from shapefile feature is used to build a storm drain network from a set of shapefiles.
 
-.. image:: image\stormd003.png
+.. image:: ../../img/Storm-Drain/stormd003.png
 
 The following information summarized the data that is needed in the Shapefiles for the creation of the \*.INP.
 The collection of As-Built always help when assumptions are needed in the creation of the \*.INP file.
@@ -65,7 +65,7 @@ Curb Height (Optional)
 
 Click the button to open a dialog box that calls shapefiles attributes and assign them to the storm drain features.
 
-.. image:: image\stormd004.png
+.. image:: ../../img/Storm-Drain/stormd004.png
 
 Conduits Shapefiles
 
@@ -108,7 +108,7 @@ Maximum Flow (optional)
 
 Click the button to open a dialog box that calls shapefiles attributes and assign them to the storm drain features.
 
-.. image:: image\stormd005.png
+.. image:: ../../img/Storm-Drain/stormd005.png
 
 Outfall Shapefiles
 ------------------
@@ -129,7 +129,7 @@ Data identified as optional is not required.
 
 6. Click the button to open a dialog box that calls shapefiles attributes and assign them to the storm drain features.
 
-.. image:: image\stormd006.png
+.. image:: ../../img/Storm-Drain/stormd006.png
 
 Import SWMM.inp
 ---------------
@@ -137,7 +137,7 @@ Import SWMM.inp
 An existing SWMM.inp project can be imported in a FLO-2D Surface System.
 Click on Import SWMM.inp and browse the project folder that contains the file.
 
-.. image:: image\stormd007.png
+.. image:: ../../img/Storm-Drain/stormd007.png
 
 This button loads inlets/junctions, outfalls and conduits from an \*.INP file.
 The Storm Drain data needs to be schematized, the table components that can be opened from the Storm Drain Editor will contain the variables from the
@@ -164,7 +164,7 @@ Export SWMM.inp
 Export SWMM.inp file in a FLO-2D format prior to running.
 The SWMM.INP can be created from shapefiles and then exported or it might be modified from an existing SWMM.INP.
 
-.. image:: image\stormd008.png
+.. image:: ../../img/Storm-Drain/stormd008.png
 
 Data save in the Components tables is written to the .INP file using this function.
 
@@ -173,44 +173,44 @@ Components: Inlets/Junctions
 
 Edit components that already exist using the Components editors for Inlets/Junctions, Outfalls and Conduits.
 
-.. image:: image\stormd009.png
+.. image:: ../../img/Storm-Drain/stormd009.png
 
 A dialog is shown with data for the selected component, in this case the Inlets/Junctions were selected, the user can edit the tables.
 
-.. image:: image\stormd010.png
+.. image:: ../../img/Storm-Drain/stormd010.png
 
 Components: Outfalls
 --------------------
 
 Edit components that already exist using the Components editors for Inlets/Junctions, Outfalls and Conduits.
 
-.. image:: image\stormd011.png
+.. image:: ../../img/Storm-Drain/stormd011.png
 
 A dialog is shown with data for the selected component, in this case the Outfalls were selected, the user can edit the tables.
 
-.. image:: image\stormd012.png
+.. image:: ../../img/Storm-Drain/stormd012.png
 
 Components: Conduits
 --------------------
 
 Edit components that already exist using the Components editors for Inlets/Junctions, Outfalls and Conduits.
 
-.. image:: image\stormd013.png
+.. image:: ../../img/Storm-Drain/stormd013.png
 
 A dialog is shown with data for the selected component, in this case the Outfalls were selected, the user can edit the tables.
 
-.. image:: image\stormd014.png
+.. image:: ../../img/Storm-Drain/stormd014.png
 
 Rating Tables
 -------------
 
 Set up the rating tables by adding a rating table to the table editor and assigning the table to the correct inlet.
 
-.. image:: image\stormd015.png
+.. image:: ../../img/Storm-Drain/stormd015.png
 
 Use the Inlet Editor to assign the table to the Type 4 inlet.
 
-.. image:: image\stormd016.png
+.. image:: ../../img/Storm-Drain/stormd016.png
 
 External Inflow Data
 --------------------
@@ -218,7 +218,7 @@ External Inflow Data
 Set up the external inflow data for a storm drain node.
 Use the Inlet/Junction editor to set up external inflow parameters and data.
 
-.. image:: image\stormd017.png
+.. image:: ../../img/Storm-Drain/stormd017.png
 
 Use the Internal Inflow tools to define parameters and select time series data.
 
@@ -234,4 +234,4 @@ Simple parameters are used in this case.
 
 -  Time series file: Example Project/QGIS Lesson 3/SDInflow.dat
 
-.. image:: image\stormd018.png
+.. image:: ../../img/Storm-Drain/stormd018.png

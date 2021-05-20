@@ -18,18 +18,18 @@ The Building Rain switch is selected so that rain on totally blocked ARF cells w
 The initial abstraction is default of zero inches.
 The rainfall distribution is imported from a data file.
 
-.. image:: image\rained002.png
+.. image:: ../../img/Rain-Editor/rained002.png
 
 |rained019|\ Select the rainfall distribution using the Folder menu. Import
 the rainfall distribution file from a set of predefined files. The files
 are installed in the FLO-2D Documentation folder. C:\users\public\public
 documents\FLO-2D Pro Documentation\flo_help\Rainfall Distributions
 
-.. image:: image\rained003.png
+.. image:: ../../img/Rain-Editor/rained003.png
 
 |rained020|\ The rainfall data is imported into the FLO-2D Table Editor.
 
-.. image:: image\rained004.png
+.. image:: ../../img/Rain-Editor/rained004.png
 
 1. |rained021|\ Load the currently selected time series into the editor
    table.
@@ -42,7 +42,7 @@ documents\FLO-2D Pro Documentation\flo_help\Rainfall Distributions
 
 5. Rename a time series data set.
 
-.. image:: image\rained005.png
+.. image:: ../../img/Rain-Editor/rained005.png
 
 .. _section-1:
 
@@ -52,7 +52,7 @@ Moving Storm
 To simulate a moving storm cell, select a storm direction and speed.
 This data must be assigned along with isohyetal contours that represent storm intensity as depth are reductions contours.
 
-.. image:: image\rained006.png
+.. image:: ../../img/Rain-Editor/rained006.png
 
 Spatially Variable Rainfall NOAA Atlas 14
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -68,7 +68,7 @@ One map is required for each precipitation frequency.
 The following example is a map of the 100yr 6hr storm prediction for Arizona.
 The legend represents total rainfall in inches.
 
-.. image:: image\rained007.png
+.. image:: ../../img/Rain-Editor/rained007.png
 
 To perform the calculation, use the Area Reduction calculator.
 
@@ -82,7 +82,7 @@ The raster pixels are typically 1000 by 1000 ft or larger.
 It is not necessary to average the data.
 Select the maximum value to set the cell value.
 
-.. image:: image\rained008.png
+.. image:: ../../img/Rain-Editor/rained008.png
 
 Realtime Rainfall NEXRAD
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,7 +114,7 @@ Both filetypes are text files.
 The \*.asc files are rainfall coverage for the project area at a specified time interval.
 In this case the time interval is 5 minutes.
 
-.. image:: image\rained009.png
+.. image:: ../../img/Rain-Editor/rained009.png
 
 The rainfall catalog is a text file that contains specific information about the layout and timing of the data.
 The first line of data is a control line that sets up the timing of the storm and the interval.
@@ -135,9 +135,9 @@ The rainfall data will interpolate from time = 0 rainfall = 0 to the first inter
 
 *\**Important Note**\**
 
-.. image:: image\rained010.png
+.. image:: ../../img/Rain-Editor/rained010.png
 
-.. image:: image\rained011.png
+.. image:: ../../img/Rain-Editor/rained011.png
 
 Setup Import Options
 ''''''''''''''''''''
@@ -146,11 +146,11 @@ The rainfall data does not have a specific coordinate reference system (CRS).
 Set the import options for QGIS to automatically assign all imported data with no knows CRS to the Project CRS.
 Click Settings Options
 
-.. image:: image\rained012.png
+.. image:: ../../img/Rain-Editor/rained012.png
 
 Select the following options and click OK.
 
-.. image:: image\rained013.png
+.. image:: ../../img/Rain-Editor/rained013.png
 
 Import Realtime Rainfall
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -158,17 +158,17 @@ Import Realtime Rainfall
 To interpolate realtime rainfall data, activate the Realtime Rainfall Editor.
 Click the Import Real Time Rainfall ASCII files.
 
-.. image:: image\rained014.png
+.. image:: ../../img/Rain-Editor/rained014.png
 
 The plugin requests the directory where the NEXRAD data is stored.
 Navigate to the correct directory and click Select Folder.
 
-.. image:: image\rained015.png
+.. image:: ../../img/Rain-Editor/rained015.png
   
 
 Click OK once the process is complete.
 
-.. image:: image\rained016.png
+.. image:: ../../img/Rain-Editor/rained016.png
 
 
 Export the rainfall data.
@@ -176,24 +176,24 @@ Export the rainfall data.
 
 Click Export the Rainfall Data
 
-.. image:: image\rained017.png
+.. image:: ../../img/Rain-Editor/rained017.png
   
 Name the storm and click Save.
 
-.. image:: image\rained018.png
+.. image:: ../../img/Rain-Editor/rained018.png
 
 
-.. |rained019| image:: image\rained019.png
+.. |rained019| image:: ../../img/Rain-Editor/rained019.png
  
-.. |rained020| image:: image\rained020.png
+.. |rained020| image:: ../../img/Rain-Editor/rained020.png
 
-.. |rained021| image:: image\rained021.png
+.. |rained021| image:: ../../img/Rain-Editor/rained021.png
 
-.. |rained022| image:: image\rained022.png
+.. |rained022| image:: ../../img/Rain-Editor/rained022.png
 
-.. |rained023| image:: image\rained023.png
+.. |rained023| image:: ../../img/Rain-Editor/rained023.png
 
-.. |rained024| image:: image\rained024.png
+.. |rained024| image:: ../../img/Rain-Editor/rained024.png
 
-.. |rained025| image:: image\rained025.png
+.. |rained025| image:: ../../img/Rain-Editor/rained025.png
 

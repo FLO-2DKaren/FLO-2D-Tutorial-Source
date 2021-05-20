@@ -14,12 +14,12 @@ Create a Raster
    To create a grid elevation raster, use the Saga-Rasterize tool.
    On the Main QGIS Menu, click Processing>Toolbox.
 
-.. image:: image\profil002.png
+.. image:: ../../img/Profile-Tool/profil002.png
   
 2. Enter the search term *Rasterize* in the Processing Toolbox search feature.
    Double click the Saga Rasterized tool.
 
-.. image:: image\profil003.png
+.. image:: ../../img/Profile-Tool/profil003.png
 
 
 3. Change the dialog box as shown below and click *Run*.
@@ -28,14 +28,14 @@ Create a Raster
    Saga-Rasterize is a good raster generator for FLO-2D data because it builds a raster with hidden null data.
    QGIS has many raster generators, and they all work slightly differently.
 
-.. image:: image\profil004.png
+.. image:: ../../img/Profile-Tool/profil004.png
 
 
 The raster that is created is a temporary layer called *Rasterize*.
 This layer should be saved to a permanent layer using the QGIS *Save As* feature.
 This feature is found by right clicking the layer.
 
-.. image:: image\profil005.png
+.. image:: ../../img/Profile-Tool/profil005.png
 
 
 Plot a profile of a polyline on the raster.
@@ -47,19 +47,19 @@ This example will test it on a channel polyline.
 1. Click the *Raster profile* radio button and set the raster.
    This example uses *Grid Elevation* raster.
 
-.. image:: image\profil006.png
+.. image:: ../../img/Profile-Tool/profil006.png
  
 
 2. |profil009|\ Click *the FLO-2D Info Tool* and click on a channel
    segment.
 
-.. image:: image\profil007.png
+.. image:: ../../img/Profile-Tool/profil007.png
 
 3. Select the segment and the elevation profile along the segment line is plotted in the FLO-2D Plot area and the Raster data along the channel line is
    printed to the FLO-2D Table.
    Any data that can be rasterized can be plotted in this manner.
    The table can be copied to an Excel sheet and saved.
 
-.. image:: image\profil008.png
+.. image:: ../../img/Profile-Tool/profil008.png
 
-.. |profil009| image:: image\profil009.png
+.. |profil009| image:: ../../img/Profile-Tool/profil009.png
