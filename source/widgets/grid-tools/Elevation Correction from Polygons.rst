@@ -6,7 +6,7 @@ Overview
 
 This tool is used to correct elevation data for polygons, points or polylines.
 
-.. image:: image\elevationcorrectionfrompolygons002.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons002.png
  
 
 The correction datasets are set up in the *User Layers* group.
@@ -28,7 +28,7 @@ Tin from Points and Polygon
 
 1. The first option is to edit the elevation on the grid using elevation points that are contained within a polygon boundary.
 
-.. image:: image\elevationcorrectionfrompolygons003.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons003.png
 
 
 2. The tool creates a TIN that is confined to the elevation polygon layer.
@@ -42,13 +42,13 @@ Note: The elevation image in this example is not the grid element.
 It is a hillshade of the raw raster data.
 The tool corrects the grid elevation only.
 
-.. image:: image\elevationcorrectionfrompolygons004.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons004.png
 
  
 
 Here is a before and after image of the calculation.
 
-.. image:: image\elevationcorrectionfrompolygons005.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons005.png
 
 Tin from Polygon Boundary
 -------------------------
@@ -56,25 +56,25 @@ Tin from Polygon Boundary
 3. The second option is to build a TIN from the grid element elevation surrounding a polygon.
    This will assess the elevation where the polygon intersects the grid and interpolate that elevation to the TIN.
 
-.. image:: image\elevationcorrectionfrompolygons006.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons006.png
 
 4. This option is used when a Cut or Fill correction is required.
    For example, to fill a channel with elevation data along the bank, cover the channel with an elevation polygon and apply the correction.
 
-.. image:: image\elevationcorrectionfrompolygons007.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons007.png
 
 Elevation Polygon Attributes
 ----------------------------
 
 5. This option is used when a single known elevation correction is required.
 
-.. image:: image\elevationcorrectionfrompolygons008.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons008.png
 
 6. In this example, the invert elevation at the headwall inlet is incorrect.
    The polygon has a new elevation assigned that will be applied directly to the grid layer.
    In this case the correction is applied to centroid of the cell and the selected polygon only.
 
-.. image:: image\elevationcorrectionfrompolygons009.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons009.png
 
 Grid Statistics within Blocked Areas
 ------------------------------------
@@ -83,9 +83,9 @@ Grid Statistics within Blocked Areas
    The mean, max or min elevation of the combined cell centroids within the polygon are applied as a general condition to all of the cells centroids
    within the polygon.
 
-.. image:: image\elevationcorrectionfrompolygons010.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons010.png
 
-.. image:: image\elevationcorrectionfrompolygons011.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons011.png
 
 External Layer Tab
 ------------------
@@ -108,7 +108,7 @@ There are several grid element correction options available in this tool.
 
 -  Use only selected features or all features.
 
-.. image:: image\elevationcorrectionfrompolygons012.png
+.. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons012.png
 
 Method 1 Elevation Correction
 -----------------------------

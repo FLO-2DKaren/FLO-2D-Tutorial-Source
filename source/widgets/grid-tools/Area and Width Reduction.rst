@@ -17,13 +17,13 @@ Select *Buildings* from the external layer.
 If there are multiple types of polygons in the layer, it is possible to select the building by attribute type.
 Copy the selected polygons using Left Click Feature or Map Canvas and Ctrl C.
 
-.. image:: image\areaandwidthreductionfactorbuildings002.png
+.. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/areaandwidthreductionfactorbuildings002.png
 
 Highlight the *Blocked Areas* layer and click the *Toggle Editing* icon.
 Paste the selected polygons into the *Blocked Areas* layer.
 Left Click Canvas and Ctrl V.
 
-.. image:: image\areaandwidthreductionfactorbuildings003.png
+.. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/areaandwidthreductionfactorbuildings003.png
 
 
 Click the *Toggle Editing* icon again to save and close the editor.
@@ -41,7 +41,7 @@ Commands and tutorials for these tools are available on the QGIS Tutorials websi
 Calculate ARF and WRF layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: image\areaandwidthreductionfactorbuildings004.png
+.. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/areaandwidthreductionfactorbuildings004.png
 
 
 Click the *Evaluate Reduction Factors (ARF and WRF)* icon.
@@ -49,22 +49,22 @@ There are two options.
 Use the Blocked Areas Layer if constructing polygons from the digitizing tools.
 Use the external polygon layer if building polygons are in another layer.
 
-.. image:: image\areaandwidthreductionfactorbuildings005.png
+.. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/areaandwidthreductionfactorbuildings005.png
 
 
 Click OK and wait for the procedure to finish.
 The following message will appear and click *OK* to close it.
 
-.. image:: image\areaandwidthreductionfactorbuildings006.png
+.. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/areaandwidthreductionfactorbuildings006.png
  
 
 The ARF and WRF features are visible in the *Schematic Layers* group.
 
-.. image:: image\areaandwidthreductionfactorbuildings007.png
+.. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/areaandwidthreductionfactorbuildings007.png
 
 Click on the Set Control Parameters icon, and then on the Control Variables (CONT.DAT) tab Check on Area Reduction Factors (ARF) and then click Save.
 
-.. image:: image\areaandwidthreductionfactorbuildings008.png
+.. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/areaandwidthreductionfactorbuildings008.png
 
 Troubleshooting
 ~~~~~~~~~~~~~~~

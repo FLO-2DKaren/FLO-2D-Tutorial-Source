@@ -13,7 +13,7 @@ body {
 
 /* this changes the navigation bar at the top of the page */
 div.related {
-  background-color: #f65310;
+  background-color: #6565f5;
   margin: 10px 10px 10px;
   padding: 10px 10px 10px;
   clear: page;
@@ -50,7 +50,7 @@ div.related a {
 
 /* basically adds color to the body text, like behind it*/
 div.section {
-  background-color: #f63f11;
+  background-color: #fdfdfc;
   border-radius: 1px;
   padding: 10px 10px 10px;
   margin: 10px 10px 10px;
@@ -77,7 +77,7 @@ div.section h2 {
 div.section p {
   margin: 0;
   padding: 5px 5px;
-  color: #09427d;
+  color: #000000;
   text-shadow: #98dbcc;
 }
 

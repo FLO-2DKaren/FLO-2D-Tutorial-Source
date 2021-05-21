@@ -2,19 +2,19 @@ Sample Roughness Data
 =====================
 
 Overview
-~~~~~~~~
+
 
 In this task, the spatially variable manning’s roughness is calculated from a polygon shapefile.
 The polygons represent roughness associated with different LandUse categories such as building, street, grass, desert brush and many others.
 
-.. image:: image\sample002.png
+.. image:: ../../img/Sample-Roughness-Data/sample002.png
 
 The plugin has 4 methods for calculating roughness.
 Use the Sampling Manning’s tool to access the calculator.
 
 Click the *Sample Manning’s icon* from polygon layers.
 
-.. image:: image\sample003.png
+.. image:: ../../img/Sample-Roughness-Data/sample003.png
 
 This layer requires a polygon shapefile with roughness data or digitized data assigned to the *Roughness User Layer*.
 The tool will calculate Manning’s roughness values with three different processes.
@@ -24,14 +24,14 @@ Roughness Polygon Intersection
 
 To calculate a weighted average of manning’s polygons to grid element polygons, use the Source Layer and Intersect cell rectangle option.
 
-.. image:: image\sample004.png
+.. image:: ../../img/Sample-Roughness-Data/sample004.png
 
 Roughness Point Sample
 ----------------------
 
 To calculate a point sample from the centroid of the grid element on the manning’s polygons, use the Source Layer and Intersect cell centroid option.
 
-.. image:: image\sample005.png
+.. image:: ../../img/Sample-Roughness-Data/sample005.png
 
 Roughness Update
 ----------------
@@ -39,20 +39,20 @@ Roughness Update
 To calculate a point sample from the centroid of the grid element on the manning’s polygons, use the Source Layer and Intersect cell centroid option.
 This option will only update cells whose centroid lies within the Roughness Layer polygons and leave all other values as is.
 
-.. image:: image\sample006.png
+.. image:: ../../img/Sample-Roughness-Data/sample006.png
 
 Once the sample is complete, the following window will appear.
 Click *OK* to close the window.
 
-.. image:: image\sample007.png
+.. image:: ../../img/Sample-Roughness-Data/sample007.png
 
 The roughness values are assigned to the *Grid* layer in *the Schematized Layers* group.
 
-.. image:: image\sample008.png
+.. image:: ../../img/Sample-Roughness-Data/sample008.png
 
 If it is necessary to update or change a small selection of elements, use the *Roughness* layer in the *User Layers* group.
 
-.. image:: image\sample009.png
+.. image:: ../../img/Sample-Roughness-Data/sample009.png
 
 Troubleshooting
 

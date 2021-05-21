@@ -16,18 +16,18 @@ Digitize or Copy Data
 Select the *Froude Areas* layer and click *Toggle Editing*.
 Create or copy the polygons that represent the Froude areas to the layer and save them.
 
-.. image:: image\spatia002.png
+.. image:: ../../img/Spatial-Limiting-Froude/spatia002.png
 
 Sample Data
 -----------
 
 1. Click the Sampling Froude Numbers icon.
 
-.. image:: image\spatia003.png
+.. image:: ../../img/Spatial-Limiting-Froude/spatia003.png
 
 2. Once the process is complete *OK* to close it.
 
-.. image:: image\spatia004.png
+.. image:: ../../img/Spatial-Limiting-Froude/spatia004.png
 
 Troubleshooting
 '''''''''''''''

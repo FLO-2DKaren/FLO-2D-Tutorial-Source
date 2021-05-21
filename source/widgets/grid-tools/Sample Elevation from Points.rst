@@ -18,12 +18,12 @@ Sample Elevation Data from Points
 6. Classify the data (classifying the data adjustments will assist in
    locating erroneous data).
 
-.. image:: ../../img/sampleelefrompoints1.png
+.. image:: ../../img/Sample-Elevation-From-Points/sampleelefrompoints1.png
 
 7. The point data style is a graduated color scheme set to the elevation
    scale (see figure below).
 
-.. image:: ../../img/sampleelefrompoints2.png
+.. image:: ../../img/Sample-Elevation-From-Points/sampleelefrompoints2.png
 
 Sample Data
 -----------
@@ -31,7 +31,7 @@ Sample Data
 8. Click the *Assign Elevation to Grid from Points Layer* icon to
    interpolate the elevation data to the grid.
 
-.. image:: ../../img/sampleelefrompoints3.png
+.. image:: ../../img/Sample-Elevation-From-Points/sampleelefrompoints3.png
 
 9.  The sampling dialog box appears to select the point source,
     elevation field, and calculation type. Choose a max search distance
@@ -39,14 +39,14 @@ Sample Data
     native map units. This field can be assigned a zero value to default
     to the minimum search distance.
 
-.. image:: ../../img/sampleelefrompoints4.png
+.. image:: ../../img/Sample-Elevation-From-Points/sampleelefrompoints4.png
 
 10. Once the calculation is complete, the following dialog is displayed.
     Click *OK* to continue.
 
-.. image:: ../../img/sampleelefrompoints5.png
+.. image:: ../../img/Sample-Elevation-From-Points/sampleelefrompoints5.png
 
 11. The elevation data is saved to the *Grid* Layer in the *Schematic
     Layers* group.
 
-.. image:: ../../img/sampleelefrompoints6.png
+.. image:: ../../img/Sample-Elevation-From-Points/sampleelefrompoints6.png

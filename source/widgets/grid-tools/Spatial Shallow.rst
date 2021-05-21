@@ -14,7 +14,7 @@ Digitize or Copy Data
 Select the *Shallow-n Areas* layer and click edit.
 Create or copy the polygons that represent the shallow roughness areas to the layer and save them.
 
-.. image:: image\spatia002.png
+.. image:: ../../img/Spatial-Shallow/spatia002.png
 
 
 Sample Data
@@ -22,10 +22,10 @@ Sample Data
 
 Click the *Sampling Spatial Shallow-n Values* icon and then *OK* once the process is complete.
 
-.. image:: image\spatia003.png
+.. image:: ../../img/Spatial-Shallow/spatia003.png
 
 
-.. image:: image\spatia004.png
+.. image:: ../../img/Spatial-Shallow/spatia004.png
 
 
 Troubleshooting

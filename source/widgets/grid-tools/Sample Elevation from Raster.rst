@@ -4,7 +4,7 @@ Sample Elevation Data from Raster
 To interpolate the elevation to a grid layer from a raster layer, use
 the *Sampling Grid Elevation from Raster Layer* icon.
 
-.. image:: ../../img/sampleelefromraster1.png
+.. image:: ../../img/Sample-Elevation-From-Raster/sampleraster1.png
 
 
 Overview
@@ -35,7 +35,7 @@ Sample Elevation
    NODATA* option to set the elevation of empty grid elements from
    neighbors.
 
-.. image:: ../../img/sampleelefromraster2.png
+.. image:: ../../img/Sample-Elevation-From-Raster/sampleraster2.png
 
 
 When the interpolation process is complete, the filename_interp.tif
@@ -46,7 +46,7 @@ imported into the project at any time for review purposes.
 The NODATA value in the previous dialog box is applied to the interp.tif
 raster.
 
-.. image:: ../../img/sampleelefromraster3.png
+.. image:: ../../img/Sample-Elevation-From-Raster/sampleraster3.png
 
 
 Troubleshooting
@@ -59,7 +59,7 @@ Troubleshooting
    the following message will be displayed. Save the raster with the
    correct CRS and make sure it has complete coverage.
 
-.. image:: ../../img/sampleelefromraster4.png
+.. image:: ../../img/Sample-Elevation-From-Raster/sampleraster4.png
 
 
 3. If the “Sample Done” box is displayed but the grid table still has
@@ -71,6 +71,6 @@ Troubleshooting
    origin, the raster realign will be inaccurate. Re-create the raster
    so that the origin and extent are not offset.
 
-.. image:: ../../img/sampleelefromraster5.png
+.. image:: ../../img/Sample-Elevation-From-Raster/sampleelefromraster5.png
 
 

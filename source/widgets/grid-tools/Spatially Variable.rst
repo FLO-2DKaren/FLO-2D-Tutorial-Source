@@ -18,7 +18,7 @@ Digitize or Copy Data
 Click the *Tolerance Areas* layer and use the editor tool to digitize the outline of the building roof area.
 This is the area that collects water.
 
-.. image:: image\spatia002.png
+.. image:: ../../img/Spatial-Variable/spatia002.png
 
 The roof polygons can be imported to a separate layer and pasted into the *Tolerance Areas* layer.
 In this instance, the polygons were copied from the *Blocked Areas* layer.
@@ -34,7 +34,7 @@ Define the Tolerance Attribute
 
 Open the attribute table of the *Tolerance Areas* layer.
 
-.. image:: image\spatia003.png
+.. image:: ../../img/Spatial-Variable/spatia003.png
 
 
 On the attribute table window, click on the *Toggle Editing* icon, change the field to TOL, add the command to set the TOL depth (6.68 / $area) and
@@ -50,12 +50,12 @@ Sample Data
 
 1. Click the Sample Spatial Tolerance Values icon.
 
-.. image:: image\spatia005.png
+.. image:: ../../img/Spatial-Variable/spatia005.png
 
 
 2. Once the process is complete, Click *OK* to complete TOL the assignment.
 
-.. image:: image\spatia006.png
+.. image:: ../../img/Spatial-Variable/spatia006.png
 
 3. This process has converted the volume from the polygon to the grid elements that intersect the polygon.
 
