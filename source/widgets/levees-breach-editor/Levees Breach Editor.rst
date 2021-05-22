@@ -4,81 +4,110 @@ Levees Breach Editor
 Breach Prescribed
 -----------------
 
-|levees014|\ Use the Grid ID tool to pick the levee element to assign a
-prescribed breach to.
+This tool will define a single breach location.
+If walls are being designed, use the Levee and Wall method not this method.
 
-.. image:: ../../img/Levees-Breach-Editor/levees002.png
+1. Use the Grid ID tool to pick the levee element to assign a prescribed breach to.
 
-From the Levees and Breach Editor, click Prescribed Failure radio button and then click the Levee Grid Elements button.
+.. image:: ../../img/Levee-Breach/Levees002.png
 
-.. image:: ../../img/Levees-Breach-Editor/levees003.png
+.. image:: ../../img/Levee-Breach/Levees003.png
+
+2. From the Levees and Breach Editor, click Prescribed Failure radio button and then click the Levee Grid Elements button.
+
+.. image:: ../../img/Levee-Breach/Levees004.png
 
 The process to apply levee prescribed breach:
 
-1. Add the grid element number of the levee that will initiate the failure.
+3. Add the grid element number of the levee that will initiate the failure.
    Press the eye button.
    (Green)
 
-2. Place the cursor into the levee elevation combo.
+4. Place the cursor into the levee elevation combo.
    (Orange)
 
-3. Check the Failure check box.
+5. Check the Failure check box.
    (Purple)
 
-4. Fill the failure criteria.
+6. Fill the failure criteria.
    See Data Input Manual for variables use.
    (Blue)
 
-5. Click Apply Change.
+7. Click Apply Change.
    (Red)
 
-.. image:: ../../img/Levees-Breach-Editor/levees004.png
+8. Close the dialog box after clicking Apply.
+
+.. image:: ../../img/Levee-Breach/Levees005.png
 
 Breach Erosion
 --------------
 
-To create Breach Erosion data for the embedded Fread Dam Breach module, set the Failure Mode to Breach Failure.
-This action will activate the Breach widget.
+FLO-2D has embedded the Fread BREACH earthen dam breach and erosion model.
 
-.. image:: ../../img/Levees-Breach-Editor/levees005.png
+Fread, D.
+(1988).
+BREACH: An erosion model for earthen dam failures.
 
-The General breach data is set in the Breach Widget.
-Fill the boxes below.
+1. To create Breach Erosion data for this tool, set the Failure Mode to Breach Failure.
+   This action will activate the Breach widget.
 
-.. image:: ../../img/Levees-Breach-Editor/levees006.png
+.. image:: ../../img/Levee-Breach/Levees006.png
 
-|levees015|\ Use the Point button to create a Dam Breach Node. Click the
-button and then click the breach location on the map.
+2. The General breach data is set in the Breach Widget.
+   Fill the boxes below.
+
+.. image:: ../../img/Levee-Breach/Levees007.png
+
+3. Use the Point button to create a Dam Breach Node.
+   Click the button and then click the breach location on the map.
+
+.. image:: ../../img/Levee-Breach/Levees008.png
 
 It is important to apply the breach to the reservoir side of the levee.
 Do not apply a breach point on the downstream side of the levee.
 In this case, the breach starts in the North direction because the Point is closest to that levee.
 
-.. image:: ../../img/Levees-Breach-Editor/levees007.png
+4. Click this location.
 
-.. image:: ../../img/Levees-Breach-Editor/levees008.png
+.. image:: ../../img/Levee-Breach/Levees009.png
 
-Click OK to close the Dialog box.
-It is not necessary to fill the data here.
+.. image:: ../../img/Levee-Breach/Levees010.png
 
-.. image:: ../../img/Levees-Breach-Editor/levees009.png
+5. Click OK to close the Dialog box.
+   It is not necessary to fill the data here.
 
-Click the Save icon on the Breach Widget activate the breach editor.
-Click the Individual Breach Data Button to fill the dam and breach data into the dialog box.
+.. image:: ../../img/Levee-Breach/Levees011.png
 
-.. image:: ../../img/Levees-Breach-Editor/levees010.png
+6. Click the Save icon on the Breach Widget activate the breach editor.
+   Click the Individual Breach Data Button to fill the dam and breach data into the dialog box.
 
-.. image:: ../../img/Levees-Breach-Editor/levees011.png
+.. image:: ../../img/Levee-Breach/Levees012.png
 
-Export the data and check the BREACH.DAT and LEVEE.DAT data files.
+This dialog box is used to define the followoing data.
+For more information see the Data Input Manual and the Erosion Breach Tutorial.
+
+-  Dam geometry
+
+-  Geotechnical soil data
+
+-  Breach mehtodology data
+
+7. Fix the box and click Save.
+
+.. image:: ../../img/Levee-Breach/Levees013.png
+
+8. Export the data and check the BREACH.DAT and LEVEE.DAT data files.
+
+.. image:: ../../img/Levee-Breach/Levees014.png
 
 LEVEE.DAT should include the Breach Erosion Switch.
 
-.. image:: ../../img/Levees-Breach-Editor/levees012.png
+.. image:: ../../img/Levee-Breach/Levees015.png
 
 BREACH.DAT should have only the B lines and D lines for general and individual breach data.
 
-.. image:: ../../img/Levees-Breach-Editor/levees013.png
+.. image:: ../../img/Levee-Breach/Levees016.png
 
 Important notes for Dam Breach Modeling.
 
@@ -92,6 +121,3 @@ Important notes for Dam Breach Modeling.
 
 4. The levee crest elevation is used as the dam crest elevation.
    The base elevation is set by the levee cells where the breach occurs.
-
-.. |levees014| image:: ../../img/Levees-Breach-Editor/levees014.png
-.. |levees015| image:: ../../img/Levees-Breach-Editor/levees015.png
