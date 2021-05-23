@@ -36,7 +36,7 @@ the following attributes:
 
 -  Horizontal Fail Rate (float) (not required)
 
-.. image:: ../img/walls1.png
+.. image:: ../img/Walls/walls1.png
 
 
 In the case of walls, the failure data is usually set to default = 0
@@ -51,15 +51,15 @@ Add Walls to Levee Lines
 
 1. Move the Walls shapefile to the top of the User Layers.
 
-.. image:: ../img/walls2.png
+.. image:: ../img/Walls/walls2.png
  
 
 2. Click the Levee Tool and click the *Add walls to User Levee Lines*.
 
-.. image:: ../img/walls3.png
+.. image:: ../img/Walls/walls3.png
 
 
-.. image:: ../img/walls4.png
+.. image:: ../img/Walls/walls4.png
 
 
 3. Fill the Walls dialog box and click with the appropriate layers and
@@ -68,13 +68,13 @@ Add Walls to Levee Lines
 4. If other levees already exist, check the *Add these walls to current
    User Levee Lines layer*.
 
-.. image:: ../img/walls5.png
+.. image:: ../img/Walls/walls5.png
 
 
 5. If the walls are added to the layer successfully, the following image
    will appear.
 
-.. image:: ../img/walls6.png
+.. image:: ../img/Walls/walls6.png
 
 
 6. Go to `Levee <Levee%20Tool.html>`__ from Levee User Lines above to
@@ -89,7 +89,7 @@ Troubleshooting
    levee data is saved to the Layers List so it can be analyzed for
    potential modifications.
 
-.. image:: ../img/walls7.png
+.. image:: ../img/Walls/walls7.png
  
 2. Crest elevation is another potential source for a fatal error for
    FLO-2D. If a levee or wall crest is lower than an adjacent grid
@@ -101,20 +101,20 @@ Troubleshooting
 3. If the Walls layer is not in the User Layers, the following error
    will appear. Move the Walls Layer into User Layers and try again.
 
-.. image:: ../img/walls8.png
+.. image:: ../img/Walls/walls8.png
 
 
 4. If the project is old, it will be necessary to import the old gpkg
    into a new gpkg. This error will appear.
 
-.. image:: ../img/walls9.png
+.. image:: ../img/Walls/walls9.png
 
 
 5. If a levee line is exactly aligned with a grid element side or
    corner, the following error will appear. Bear in mind that the On
    line 1675 may change with new versions of the plugin.
 
-.. image:: ../img/walls10.png
+.. image:: ../img/Walls/walls10.png
 
 
 6. For large projects, it can be difficult to find all these locations.
@@ -124,29 +124,29 @@ Troubleshooting
 
 7. Click the Levee Lines and click the Editor Pencil.
 
-.. image:: ../img/walls11.png
+.. image:: ../img/Walls/walls11.png
 
-.. image:: ../img/walls12.png
+.. image:: ../img/Walls/walls12.png
 
 
 8. Use the Select Features Tool to select all User Levee Line features.
 
-.. image:: ../img/walls13.png
+.. image:: ../img/Walls/walls13.png
 
 9. Use the Advanced Digitizing Toolbar to Move all features. Click the
    Move Features tool.
 
-.. image:: ../img/walls14.png
+.. image:: ../img/Walls/walls14.png
 
 
 10. Zoom in on one vertex of any Levee Line feature. Click the vertex.
     Click Yes to acknowledge that all features will be moved.
 
-.. image:: ../img/walls15.png
+.. image:: ../img/Walls/walls15.png
 
 
 11. Move the mouse slightly to the southeast and click again. Save the
     edits and run the Schematize Levees again.
 
-.. image:: ../img/walls16.png
+.. image:: ../img/Walls/walls16.png
 

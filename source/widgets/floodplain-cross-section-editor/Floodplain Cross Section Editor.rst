@@ -1,5 +1,5 @@
 Floodplain Cross Section Editor
-===============================
+================================
 
 The floodplain cross section editor is used to set up the FPXSEC.DAT file.
 This section will describe how to digitize and schematize the data.
@@ -13,7 +13,7 @@ Use the editor widget to create the cross section.
 2. Digitize the cross section and fill the dialog box.
    Click OK.
 
-.. image:: image\floodp002.png
+.. image:: ../../img/Floodplain-Cross-Section-Editor/floodp002.png
 
 
 3. |floodp006|\ Click save to preserve the data. The user cross section is
@@ -24,7 +24,7 @@ Use the editor widget to create the cross section.
 4. Click Schematize to save the data.
    The schematized cross section is corrected to meet the FLO-2D criteria for Floodplain cross sections.
 
-.. image:: image\floodp003.png
+.. image:: ../../img/Floodplain-Cross-Section-Editor/floodp003.png
    :width: 6.5in
    :height: 3.37014in
 
@@ -44,12 +44,12 @@ Troubleshooting
    Place the lines in a location where all flow crosses the line.
    Do not place the line where flow is parallel to the line.
 
-.. |floodp004| image:: image\floodp004.png
+.. |floodp004| image:: ../../img/Floodplain-Cross-Section-Editor/floodp004.png
 
-.. |floodp005| image:: image\floodp005.png
+.. |floodp005| image:: ../../img/Floodplain-Cross-Section-Editor/floodp005.png
 
-.. |floodp006| image:: image\floodp006.png
+.. |floodp006| image:: ../../img/Floodplain-Cross-Section-Editor/floodp006.png
 
-.. |floodp007| image:: image\floodp007.png
+.. |floodp007| image:: ../../img/Floodplain-Cross-Section-Editor/floodp007.png
 
-.. |floodp008| image:: image\floodp008.png
+.. |floodp008| image:: ../../img/Floodplain-Cross-Section-Editor/floodp008.png

@@ -9,7 +9,7 @@ Convert Schematic Layers to User Layers
 This tool will convert imported \*.dat files to editable user layers.
 Use it after performing an Import FLO-2D \*.DAT files.
 
-.. image:: ../img/schema2user1.png
+.. image:: ../img/Schema-2-User/schema2user1.png
 
 
 1. This tool will convert imported project data into user layers so they
@@ -32,4 +32,4 @@ Use it after performing an Import FLO-2D \*.DAT files.
 
    c. Storm Drains
 
-.. image:: ../img/schema2user2.png
+.. image:: ../img/Schema-2-User/schema2user2.png

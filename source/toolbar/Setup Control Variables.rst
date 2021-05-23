@@ -6,7 +6,7 @@ Setup the FLO-2D Control Data
 
 This button allows the user to set up the control variables.
 
-.. image:: ../img/setupcontrolvariables1.png
+.. image:: ../img/Setup-Control-Variables/setupcontrolvariables1.png
 
 
 1. Click the *Set Control Parameters* Icon.
@@ -23,15 +23,15 @@ This button allows the user to set up the control variables.
 will not be written when the data is exported. The original data will be
 preserved.**
 
-.. image:: ../img/setupcontrolvariables2.png
+.. image:: ../img/Setup-Control-Variables/setupcontrolvariables2.png
 
 
 5. Numerical stability parameters are defined on the second tab.
 
-.. image:: ../img/setupcontrolvariables3.png
+.. image:: ../img/Setup-Control-Variables/setupcontrolvariables3.png
 
 
 6. Global variables are defined on the 3\ :sup:`rd` tab.
 
-.. image:: ../img/setupcontrolvariables4.png
+.. image:: ../img/Setup-Control-Variables/setupcontrolvariables4.png
 

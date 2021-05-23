@@ -15,14 +15,14 @@ Inflow Node
 
 To create a point of inflow, click the Add Point BC button on the Boundary Condition Editor widget.
 
-.. image:: image\bounda002.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda002.png
 
 Identify the inflow node by left clicking the location of the inflow node on the map.
 In this example, the inflow node is a channel inflow node.
 It is not necessary to enter the fid.
 Click *OK* to create the feature.
 
-.. image:: image\bounda003.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda003.png
 
 1. Click the Save Button to load the data into the editor.
 
@@ -30,20 +30,20 @@ Click *OK* to create the feature.
 
 3. This example inflow node will have a steady hydrograph with 100 cfs assigned to Cave Creek inflow node.
 
-.. image:: image\bounda004.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda004.png
 
 The time series inflow hydrograph is assigned in the table editor where time is in hours and discharge is cfs or cms.
 This is a clear water inflow hydrograph and no sediment concentration is assigned.
 
-.. image:: image\bounda005.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda005.png
 
 Repeat the process to add additional inflow hydrographs.
 Use the *Add* data series/table for current BC button to create a new hydrograph.
 Use the Schematize icon (shown below) to save the data to the Schematic Layers and click *Yes* to overwrite the layers.
 
-.. image:: image\bounda006.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda006.png
 
-.. image:: image\bounda007.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda007.png
 
 Outflow Boundary Conditions
 ---------------------------
@@ -64,13 +64,13 @@ the outflow nodes along the downstream boundary or any location in the project d
 
 3. Name the boundary and set the boundary conditions (Outflow type).
 
-.. image:: image\bounda008.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda008.png
 
 For multiple outflow nodes in a line, the outflow nodes should be continuous with no gaps (across diagonals).
 If the outflow nodes are stacked up (two or more elements wide), the model will generate an error message at runtime indicating that some outflow
 nodes have no access to upstream flow.
 
-.. image:: image\bounda009.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda009.png
 
 Outflow Channel
 '''''''''''''''
@@ -104,7 +104,7 @@ Select the outflow nodes along the downstream boundary to assign the hydrograph 
 
 3. Name the boundary condition and set the boundary *Outflow type* conditions as *Outflow with Hydrograph*.
 
-.. image:: image\bounda010.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda010.png
 
 Outflow with Time – Stage Hydrograph for Floodplain
 ---------------------------------------------------
@@ -120,7 +120,7 @@ Select the outflow nodes along the downstream boundary as a row of elements insi
 
 3. Name and fill the Time Series table.
 
-.. image:: image\bounda011.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda011.png
 
 There are two types of outflow time-stage conditions, one where the inflow hydrograph moves upstream and there is no outflow downstream and a second
 possible condition where after the storm surge recedes, the downstream flow resumes and flows off the grid system.
@@ -130,7 +130,7 @@ The upstream row is a time-stage outflow node.
 When the upstream water surface elevation is greater than the stage in the time-stage outflow node, the time-stage condition is turned off and the
 downstream flows goes through the time-stage outflow elements to the standard outflow nodes for the normal depth flow condition.
 
-.. image:: image\bounda012.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda012.png
 
 Outflow with Time – Stage Hydrograph for Channel
 ------------------------------------------------
@@ -149,9 +149,9 @@ The time – stage relationship can be synchronized to rainfall and watershed fl
 
 5. Name and fill the Time Series table.
 
-.. image:: image\bounda013.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda013.png
 
-.. image:: image\bounda014.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda014.png
 
 Time-Stage for Floodplain and Free Floodplain and Channel
 ---------------------------------------------------------
@@ -164,14 +164,14 @@ It can be used for two purposes.
 
 2. Set the elevation for matching the water surface elevation of an existing FEMA map.
 
-.. image:: image\bounda015.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda015.png
 
 Time-Stage for Channel and Free Floodplain and Channel
 ------------------------------------------------------
 
 This option is the same as option 7 with the condition that the stage – time table is assigned to the channel instead of the floodplain.
 
-.. image:: image\bounda016.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda016.png
 
 Channel Stage-Discharge Parameters
 ----------------------------------
@@ -180,7 +180,7 @@ This outflow option defines the discharge from a channel based on the stage usin
 Several rating curves can be assigned for multiple limiting depths.
 This system is used when there is a control or a gage at the channel with a known stage-discharge relationship.
 
-.. image:: image\bounda017.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda017.png
 
 1. Select the stage-discharge node at the end of a channel segment.
 
@@ -190,7 +190,7 @@ This system is used when there is a control or a gage at the channel with a know
 
 4. Name and fill the Q(h) parameters table.
 
-.. image:: image\bounda018.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda018.png
 
 Channel Stage-Discharge (Q(h) table)
 ------------------------------------
@@ -205,7 +205,7 @@ The final outflow option is used to define the downstream boundary with a stage-
 
 4. Name and fill the Q(h) table.
 
-.. image:: image\bounda019.png
+.. image:: ../../img/Boundary-Condition-Editor/bounda019.png
 
 Troubleshooting
 ~~~~~~~~~~~~~~~
@@ -221,11 +221,11 @@ Troubleshooting
 
 4. Saving and restarting might resolve some issues with the GeoPackage but check the layers attributes prior to restarting QGIS.
 
-.. |bounda017| image:: image\bounda017.png
-.. |bounda017| image:: image\bounda017.png
-.. |bounda020| image:: image\bounda020.png
-.. |bounda021| image:: image\bounda021.png
-.. |bounda017| image:: image\bounda017.png
-.. |bounda017| image:: image\bounda017.png
-.. |bounda017| image:: image\bounda017.png
-.. |bounda017| image:: image\bounda017.png
+.. |bounda017| image:: ../../img/Boundary-Condition-Editor/bounda017.png
+.. |bounda017| image:: ../../img/Boundary-Condition-Editor/bounda017.png
+.. |bounda020| image:: ../../img/Boundary-Condition-Editor/bounda020.png
+.. |bounda021| image:: ../../img/Boundary-Condition-Editor/bounda021.png
+.. |bounda017| image:: ../../img/Boundary-Condition-Editor/bounda017.png
+.. |bounda017| image:: ../../img/Boundary-Condition-Editor/bounda017.png
+.. |bounda017| image:: ../../img/Boundary-Condition-Editor/bounda017.png
+.. |bounda017| image:: ../../img/Boundary-Condition-Editor/bounda017.png

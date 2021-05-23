@@ -1,12 +1,12 @@
 Levee Elevation Tool
 =====================
 
-.. image:: ../img/leveetool1.png
+.. image:: ../img/Levee-Tool/leveetool1.png
  
 The *Levee Elevation* Tool will create levees, berms, walls and dams. It
 uses data from 5 sources:
 
-.. image:: ../img/leveetool2.png
+.. image:: ../img/Levee-Tool/leveetool2.png
 
 
 The method to create data from each source is outlined below.
@@ -32,10 +32,10 @@ Create Levee Lines
 
 7. Failure data is not needed at this time.
 
-.. image:: ../img/leveetool3.png
+.. image:: ../img/Levee-Tool/leveetool3.png
  
 
-.. image:: ../img/leveetool9.png
+.. image:: ../img/Levee-Tool/leveetool9.png
 
 
 Create a Levee Polygon
@@ -53,10 +53,10 @@ Create a Levee Polygon
 
 5. See `Create Levee Lines <#create-levee-lines>`__.
 
-.. image:: ../img/leveetool10.png
+.. image:: ../img/Levee-Tool/leveetool10.png
 
 
-.. image:: ../img/leveetool11.png
+.. image:: ../img/Levee-Tool/leveetool11.png
 
 Create Levee Points
 -------------------
@@ -75,16 +75,16 @@ Create Levee Points
 5. In this example, a correction was applied to a location where a
    spillway was designed.
 
-.. image:: ../img/leveetool12.png
+.. image:: ../img/Levee-Tool/leveetool12.png
  
 
-.. image:: ../img/leveetool13.png
+.. image:: ../img/Levee-Tool/leveetool13.png
   
 
 Levee from Elevation Polygon
 ----------------------------
 
-.. image:: ../img/leveetool14.png
+.. image:: ../img/Levee-Tool/leveetool14.png
 
 
 The polygon layer is also used to define a uniform elevation for a
@@ -103,16 +103,16 @@ levee.
 5. The Levee user lines will be used to set crest elevations where
    polygons are not covering the levee.
 
-.. image:: ../img/leveetool15.png
+.. image:: ../img/Levee-Tool/leveetool15.png
 
 
-.. image:: ../img/leveetool16.png
+.. image:: ../img/Levee-Tool/leveetool16.png
  
 
 *Levee from Elevation Points within Search Radius*
 
 
-.. image:: ../img/leveetool14.png
+.. image:: ../img/Levee-Tool/leveetool14.png
 
 
 1. Click the Levee Elevation Tool icon and select User elevation points
@@ -126,16 +126,16 @@ levee.
 4. If the Levee user lines is also checked, that layer will be used to
    set crest elevations where points are not connected to the levee.
 
-.. image:: ../img/leveetool17.png
+.. image:: ../img/Levee-Tool/leveetool17.png
 
 
-.. image:: ../img/leveetool16.png
+.. image:: ../img/Levee-Tool/leveetool16.png
 
 
 Levee from Levee User Lines
 ---------------------------
 
-.. image:: ../img/leveetool14.png
+.. image:: ../img/Levee-Tool/leveetool14.png
 
 
 1. Click the Levee Elevation Tool icon and select User elevation points
@@ -146,13 +146,13 @@ Levee from Levee User Lines
 
 3. The levee crest elevation is interpolated between the two points.
 
-.. image:: ../img/leveetool18.png
+.. image:: ../img/Levee-Tool/leveetool18.png
 
 
 Levee from Import External 3D Levee Lines
 -----------------------------------------
 
-.. image:: ../img/leveetool14.png
+.. image:: ../img/Levee-Tool/leveetool14.png
 
 
 1. The levee data comes from an external point text file with a \*.xyz
@@ -168,13 +168,13 @@ Levee from Import External 3D Levee Lines
    other. The direction is not important. Two levees should be separated
    by a blank line (text file carriage return).
 
-.. image:: ../img/leveetool19.png
+.. image:: ../img/Levee-Tool/leveetool19.png
 
 
 3. Call the levee data from the Levee Elevation Tool by clicking the “…”
    button under Import external 3D lines.
 
-.. image:: ../img/leveetool20.png
+.. image:: ../img/Levee-Tool/leveetool20.png
 
 
 4. Once the data is identified, click the Import 3D levee lines button.
@@ -183,5 +183,5 @@ Levee from Import External 3D Levee Lines
    Lines User Layer. Click Create Schematic Layers from User Layers to
    schematize the levee.
 
-.. image:: ../img/leveetool21.png
+.. image:: ../img/Levee-Tool/leveetool21.png
 
