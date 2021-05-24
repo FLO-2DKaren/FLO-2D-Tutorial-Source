@@ -18,7 +18,7 @@ Layers that work with this tool:
 
 -  Storm drain layers
 
-.. image:: image\flo2dinfotool002.png
+.. image:: ../img/Flo-2D-Info-Tool/flo2dinfotool002.png
 
 
 Channel Layers
@@ -34,14 +34,15 @@ Channel Layers
 
 5. In this example, the elevation raster is the y axis and the left bank length is the x axis.
 
-.. image:: image\flo2dinfotool003.png
+.. image:: ../img/Flo-2D-Info-Tool/flo2dinfotool003.png
 
 6. In this example, the water surface elevation is the y axis.
 
-.. image:: image\flo2dinfotool004.png
+.. image:: ../img/Flo-2D-Info-Tool/flo2dinfotool004.png
 
 7. To choose water surface elevation, load the data first from the HYCHAN.OUT file.
 
-.. image:: image\flo2dinfotool005.png
+.. image:: ../img/Flo-2D-Info-Tool/flo2dinfotool005.png
 
-.. image:: image\flo2dinfotool006.png
+.. image:: ../img/Flo-2D-Info-Tool/flo2dinfotool006.png
+

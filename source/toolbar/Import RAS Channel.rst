@@ -1,7 +1,7 @@
 Import RAS Channel
 =========================
 
-.. image:: ../img/importRASchannel1.png
+.. image:: ../img/Import-RAS-Channel/importRASchannel1.png
 
 1. Click the *Import RAS Geometry* icon to import channel data from a
    GeoRAS project.
@@ -10,10 +10,10 @@ Import RAS Channel
 
 3. For FLO-2D, Limit the cross sections to the bank stations.
 
-.. image:: ../img/importRASchannel2.png
+.. image:: ../img/Import-RAS-Channel/importRASchannel2.png
 
 
-.. image:: ../img/importRASchannel3.png
+.. image:: ../img/Import-RAS-Channel/importRASchannel3.png
 
 
 4. The imported RAS channel is saved to the *User Layers*.
@@ -24,5 +24,5 @@ Import RAS Channel
 6. See the `Cross Section Editor <../widgets/profile-tool/Create%20a%20Raster.html>`__ in the FLO-2D
    *Widgets* section below for further instructions.
 
-.. image:: ../img/importRASchannel4.png
+.. image:: ../img/Import-RAS-Channel/importRASchannel4.png
 
