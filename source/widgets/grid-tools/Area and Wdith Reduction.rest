@@ -1,3 +1,5 @@
+.. vim: syntax=rst
+
 Area and Width Reduction Factor – Buildings
 ===========================================
 
@@ -13,34 +15,47 @@ Use the QGIS Editing Tools *Create Polygon* tool to digitize or outline building
 Building polygons are also available in many locations from County GIS data.
 If Buildings are not available, Tax Boundary polygons are available for all cities in the USA.
 
-.. image:: ../../img/Area-and-Width-Reduction/Area002.png
-
+.. image:: media\Area002.png
+   :width: 6.5in
+   :height: 2.58333in
 
 Calculate ARF and WRF layers
 ----------------------------
 
-.. image:: ../../img/Area-and-Width-Reduction/Area003.png
+.. image:: media\Area003.png
+   :width: 4.63484in
+   :height: 1.14827in
 
 1. Click the *Evaluate Reduction Factors (ARF and WRF)* icon.
    There are two options.
    Use the Blocked Areas Layer if constructing polygons from the digitizing tools.
    Use the external polygon layer if building polygons are in another layer.
 
-.. image:: ../../img/Area-and-Width-Reduction/Area004.png
+.. image:: media\Area004.png
+   :width: 5.17644in
+   :height: 3.38499in
 
 2. Click OK and wait for the procedure to finish.
    The following message will appear and click *OK* to close it.
 
-.. image:: ../../img/Area-and-Width-Reduction/Area005.png
+.. image:: media\Area005.png
+   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML935291bf.PNG
+   :width: 2.53125in
+   :height: 1.32292in
 
 3. The ARF and WRF features are visible in the *Schematic Layers* group.
 
-.. image:: ../../img/Area-and-Width-Reduction/Area006.png
+.. image:: media\Area006.png
+   :width: 6.5in
+   :height: 2.37292in
 
 4. Click on the *Set Control Parameters* icon, and then on the *Control Variables (CONT.DAT)* tab Check on *Area Reduction Factors (ARF)* and then click
    *Save*.
 
-.. image:: ../../img/Area-and-Width-Reduction/Area007.png
+.. image:: media\Area007.png
+   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML9387199f.PNG
+   :width: 6.5in
+   :height: 5.37751in
 
 Troubleshooting
 ~~~~~~~~~~~~~~~

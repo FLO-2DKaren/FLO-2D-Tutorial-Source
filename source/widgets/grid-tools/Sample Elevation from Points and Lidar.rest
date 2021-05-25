@@ -1,3 +1,5 @@
+.. vim: syntax=rst
+
 Sample Elevation Data from Points and LiDAR
 ===========================================
 
@@ -15,7 +17,9 @@ Load Data
 2. There are many options to help sort the data.
    Select the options that reflect the desired dataset and click *add.*
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample002.png
+.. image:: media\Sample002.png
+   :width: 6.61192in
+   :height: 5.06782in
 
 Apply a Style
 -------------
@@ -35,18 +39,25 @@ The data has a default style so it isn’t very easy to view elevation.
 
 6. Classify the data (classifying the data adjustments will assist in locating erroneous data).
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample003.png
+.. image:: media\Sample003.png
+   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML2eb0f1db.PNG
+   :width: 5.38576in
+   :height: 5.57292in
 
 7. The point data style is a graduated color scheme set to the elevation scale (see figure below).
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample004.png
+.. image:: media\Sample004.png
+   :width: 6.42177in
+   :height: 2.875in
 
 Sample Data
 -----------
 
 1. Click the *Assign Elevation to Grid from Points Layer* icon to interpolate the elevation data to the grid.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample005.png
+.. image:: media\Sample005.png
+   :width: 4.44585in
+   :height: 1.53125in
 
 2. The sampling dialog box appears to select the point source, elevation field, and calculation type.
 
@@ -55,18 +66,31 @@ Sample Data
 
 4. This field can be assigned a zero value to default to the minimum search distance.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample006.png
+.. image:: media\Sample006.png
+   :alt: Graphical user interface, application Description automatically
+   generated
+   :width: 3.62455in
+   :height: 4.14531in
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample007.png
+.. image:: media\Sample007.png
+   :alt: Graphical user interface, text, application Description
+   automatically generated
+   :width: 3.79119in
+   :height: 4.33279in
 
 5. Once the calculation is complete, the following dialog is displayed.
    Click *OK* to continue.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample008.png
+.. image:: media\Sample008.png
+   :width: 2.17708in
+   :height: 1.2281in
 
 6. The elevation data is saved to the *Grid* Layer in the *Schematic Layers* group.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample009.png
+.. image:: media\Sample009.png
+   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML683e3dcb.PNG
+   :width: 6.3716in
+   :height: 3.96875in
 
 LiDAR Data
 ----------
@@ -77,27 +101,35 @@ category.
 
 1. Click the *Assign Elevation to Grid from Points Layer* icon to interpolate the elevation data to the grid.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample005.png
+.. image:: media\Sample005.png
+   :width: 4.44383in
+   :height: 1.45833in
 
 2. Select the bare earth data LiDAR data files that cover the project area.
    These are determined using the LiDAR tiles shapefile.
    Click Open.
    The LiDAR file must have a \*.txt extension.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample010.png
+.. image:: media\Sample010.png
+   :width: 6.36379in
+   :height: 6.67625in
 
 3. When the file is processing, two progress bars can be seen in QGIS.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample011.png
+.. image:: media\Sample011.png
+   :width: 6.48958in
+   :height: 5.16667in
 
 4. LiDAR data is bare earth data so categories such as buildings, bridges, overpasses are removed from the point data.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample012.png
+.. image:: media\Sample012.png
 
 5. The plugin will fill this data with a nearest neighbor patch.
    Select the first option and click ok to fill the missing data.
 
-.. image:: ../../img/Sample-Elevation-From-Points/Sample013.png
+.. image:: media\Sample013.png
+   :width: 4.77083in
+   :height: 2.89583in
 
 Troubleshooting
 ~~~~~~~~~~~~~~~
@@ -111,5 +143,9 @@ Troubleshooting
 3. If a Python error appears during the sampling, it may indicate that there is no attribute table.
    Save and reload the project into QGIS and try again.
 
-.. |Sample014| image:: ../../img/Sample-Elevation-From-Points/Sample014.png
-.. |Sample015| image:: ../../img/Sample-Elevation-From-Points/Sample015.png
+.. |Sample014| image:: media\Sample014.png
+   :width: 0.55in
+   :height: 0.55in
+.. |Sample015| image:: media\Sample015.png
+   :width: 0.45069in
+   :height: 0.53295in
