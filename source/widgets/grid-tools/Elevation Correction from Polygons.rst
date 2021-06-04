@@ -26,7 +26,8 @@ The following sections will show how to use each option in the *Users Layers Mod
 Tin from Points and Polygon
 ---------------------------
 
-1. The first option is to edit the elevation on the grid using elevation points that are contained within a polygon boundary.
+1. The first option is
+   to edit the elevation on the grid using elevation points that are contained within a polygon boundary.
 
 .. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons003.png
 
@@ -66,7 +67,8 @@ Tin from Polygon Boundary
 Elevation Polygon Attributes
 ----------------------------
 
-5. This option is used when a single known elevation correction is required.
+5. This option is used when
+   a single known elevation correction is required.
 
 .. image:: ../../img/Elevation-Correction-from-Polygons/elevationcorrectionfrompolygons008.png
 
@@ -93,14 +95,13 @@ External Layer Tab
 This section will review each option in the *External* *Layers* *Mode* tab:
 
 Correction Options
-~~~~~~~~~~~~~~~~~~
+-------------------
 
 There are several grid element correction options available in this tool.
 
 -  Select any polygon layer.
 
--  Define the geometric predicate.
-  Grid centroid or grid element.
+-  Define the geometric predicate. Grid centroid or grid element.
 
 -  Take the elevation from an attribute table.
 
@@ -115,4 +116,5 @@ Method 1 Elevation Correction
 
 This method will apply a elevation to each grid element within the polygon from the elevation field of the polygon.
 
-1. Click the Elevation Correction Tool
+1. Click the Elevation
+   Correction Tool

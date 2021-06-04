@@ -6,16 +6,18 @@ Export FLO-2D \*.DAT Files
 
 Export the project files with this button.
 
-.. image:: ../img/Export-Project/exportproject1.png
+.. image:: ../img/Buttons/exportgds.png
 
 
-1. \**\* Set the Control Data switches before running the Export tool.
-   See `Setup the FLO-2D Control Data <#_Setup_the_FLO-2D>`__ step.
-   \**\*
+#. 1. **Set the Control Data switches before running the Export tool.**
+   **See** `Setup the FLO-2D Control Data <../toolbar/Setup%20Control%20Variables.html>`__ **step.**
 
-2. Click the *GDS* *Export* icon.
 
-3. Select the components that require an export.
+#. 2. Click
+   the *GDS* *Export* icon.
+
+#. 3. Select the
+   components that require an export.
 
 **Important Note: It is not necessary to export all files every time.
 Export large files like INFIL.DAT or TOPO.DAT only when needed.**
@@ -23,9 +25,11 @@ Export large files like INFIL.DAT or TOPO.DAT only when needed.**
 .. image:: ../img/Export-Project/exportproject2.png
 
 
-4. Navigate to the project folder and click Select Folder.
+#. 4. Navigate to
+   the project folder and click Select Folder.
 
 .. image:: ../img/Export-Project/exportproject3.png
 
 
-5. Check or uncheck the files to be exported and click OK.
+#. 5. Check or uncheck the
+   files to be exported and click OK.

@@ -15,13 +15,14 @@ Divide this volume by the surface area of a grid element to determine the TOL de
 Digitize or Copy Data
 ---------------------
 
-Click the *Tolerance Areas* layer and use the editor tool to digitize the outline of the building roof area.
-This is the area that collects water.
+#. 1. Click the *Tolerance Areas* layer
+   and use the editor tool to digitize the outline of the building roof area.
+   This is the area that collects water.
 
-.. image:: ../../img/Spatial-Variable/spatia002.png
+.. image:: ../../img/Spatially-Variable/spatia002.png
 
-The roof polygons can be imported to a separate layer and pasted into the *Tolerance Areas* layer.
-In this instance, the polygons were copied from the *Blocked Areas* layer.
+#. 2. The roof polygons can be imported to a separate layer and pasted into the *Tolerance Areas* layer.
+   In this instance, the polygons were copied from the *Blocked Areas* layer.
 
 In this example the LID TOL value is unknown and must be calculated from the cistern volume and the collection area.
 Each house has a theoretical 50-gallon rain collection cistern.
@@ -32,40 +33,49 @@ For the sake of simplicity, the assumption is that the roof area and the house p
 Define the Tolerance Attribute
 ------------------------------
 
-Open the attribute table of the *Tolerance Areas* layer.
+#. 3. Open the attribute
+   table of the *Tolerance Areas* layer.
 
-.. image:: ../../img/Spatial-Variable/spatia003.png
+.. image:: ../../img/Spatially-Variable/spatia003.png
 
 
-On the attribute table window, click on the *Toggle Editing* icon, change the field to TOL, add the command to set the TOL depth (6.68 / $area) and
-click *Update All*.
-Save and close the editor tool and close the attribute table.
-This process converted the volume of the cistern to a depth over the area of each polygon.
+#. 4. On the attribute table window, click on the *Toggle Editing* icon, change the field to TOL, add the command to set the TOL depth (6.68 / $area) and
+   click *Update All*.
 
-   ..
-   image:: media/image3.png :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\spatia004.875in
+#. 5. Save and close the editor tool and close the attribute table.
+   This process converted the volume of the cistern to a depth over the area of each polygon.
+
+
+.. image:: ../../img/Spatially-Variable/spatia001.png
 
 Sample Data
 -----------
 
-1. Click the Sample Spatial Tolerance Values icon.
+#. 1. Click
+   the Sample Spatial Tolerance Values icon.
 
-.. image:: ../../img/Spatial-Variable/spatia005.png
+.. image:: ../../img/Spatially-Variable/spatia005.png
 
 
-2. Once the process is complete, Click *OK* to complete TOL the assignment.
+#. 2. Once the
+   process is complete, Click *OK* to complete TOL the assignment.
 
-.. image:: ../../img/Spatial-Variable/spatia006.png
+.. image:: ../../img/Spatially-Variable/spatia006.png
 
-3. This process has converted the volume from the polygon to the grid elements that intersect the polygon.
+#. 3. This process
+   has converted the volume from the polygon to the grid elements that intersect the polygon.
 
 Troubleshooting
+----------------
 
-1. Create the tolerance polygons if they are missing from the *Tolerance Areas* layer.
+#. 1. Create the tolerance
+   polygons if they are missing from the *Tolerance Areas* layer.
 
-2. If the *Grid* layer is empty, create a grid and try again.
+#. 2. If the *Grid* layer
+   is empty, create a grid and try again.
 
-3. If a Python error appears during the sampling process, the attribute table may be missing.
+#. 3. If a Python error appears during the sampling process, the attribute table may be missing.
    Save and reload the project into QGIS and try again.
 
-4. If the Attribute Fields: collapse, calc_arf, and calc_wrf are not filled by the user, the calculation cannot be performed.
+#. 4. If the Attribute Fields:
+   collapse, calc_arf, and calc_wrf are not filled by the user, the calculation cannot be performed.

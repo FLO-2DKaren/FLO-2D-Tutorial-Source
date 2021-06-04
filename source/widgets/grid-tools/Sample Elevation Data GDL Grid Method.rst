@@ -6,7 +6,7 @@ To interpolate the elevation to a grid layer from a using the GDAL Grid method.
 .. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample002.png
 
 Overview
-''''''''
+--------
 
 Sample Elevation
 ----------------
@@ -16,43 +16,52 @@ Sample Elevation
 
 2. Select the *Fill NODATA* option to set the elevation of empty grid elements from neighbors.
 
-3. Click Run.
+3. Click
+   Run.
 
 .. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample003.png
 
-1. Learn more about the GDAL Grid method with the help buttons.
+1. Learn more about the
+   GDAL Grid method with the help buttons.
 
-2. Click the button once to load a GDAL page with interpolation algorithm data.
+2. Click the button once
+   to load a GDAL page with interpolation algorithm data.
 
-3. Click the button again to load a GDAL grid tutorial.
+3. Click the button again
+   to load a GDAL grid tutorial.
 
 .. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample004.png
 
-4. When the interpolation process is complete, several new elevation files are written to the project elevation directory.
+4. When the interpolation process
+   is complete, several new elevation files are written to the project elevation directory.
 
-5. The clipped elevation raster to eliminate excess data.
+5. The clipped elevation raster to
+   eliminate excess data.
 
-6. The elevation csv file is used for the interpolation.
+6. The elevation csv file is used for
+   the interpolation.
 
-7. The elevation_xyz_gdalgrid.tif is sampled to the grid layer.
+7. The elevation_xyz_gdalgrid.tif
+   is sampled to the grid layer.
 
 .. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample005.png
 
-8.  A log of the interpolation process helps the user track the progress.
+8.  A log of the interpolation
+   process helps the user track the progress.
 
-9.  The user can set the CPU thread count and the memory cache allowed by the processors.
-   This ensures the computer won’t slow down while the optimized calculations are performed.
+9.  The user can set the CPU thread count
+   and the memory cache allowed by the processors. This ensures the computer won’t slow down while the optimized calculations are performed.
 
-10.
-Once the Finished Computation message appears.
-Click Close.
+10. Once the Finished Computation message
+   appears. Click Close.
 
-..
 
-.. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample006.65554in
+Check this image here:
+
+.. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample006.png
 
 Troubleshooting
-'''''''''''''''
+---------------
 
 1. This process can be slow if the project has high resolution elevation data.
    If LiDAR point data is being used, try the LiDAR processor instead.

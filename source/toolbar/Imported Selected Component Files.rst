@@ -1,20 +1,28 @@
-|import004|\ Import Selected Component Files
+Import Selected Component Files
 ==============================================
 
-1. Click the *Import GDS Files* icon.
+.. image:: ../img/Buttons/importgdsred.png
 
-2. Navigate to the FLO-2D \*.DAT files.
+#. 1. Click the
+   *Import GDS Files* icon.
 
-3. Select CONT.DAT and click *Open*.
+#. 2. Navigate to
+   the FLO-2D \*.DAT files.
 
-4. Only selected components will be added using this feature.
+#. 3. Select CONT.DAT
+   and click *Open*.
 
-5. The GeoPackage will not be overwritten.
+#. 4. Only selected
+   components will be added using this feature.
+
+#. 5. The GeoPackage
+   will not be overwritten.
 
 .. image:: ../img/Imported-Selected-Component-Files/import002.png
 
 
-6. Select the FLO-2D Components to load into the project.
+#. 6. Select the
+   FLO-2D Components to load into the project.
 
 .. image:: ../img/Imported-Selected-Component-Files/import003.png
 

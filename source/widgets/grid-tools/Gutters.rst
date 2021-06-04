@@ -2,7 +2,7 @@ Gutters
 =======
 
 Overview
-~~~~~~~~~~
+--------
 
 In the FLO-2D model, street gutters convey shallow flow using a typical
 curb and gutter cross section that has a triangular shape created by the
@@ -35,14 +35,6 @@ Sample Data
 
 .. image:: ../../img/Gutters/gutters2.png
 
-
-3. Click OK to close the calculator.
-
-.. image:: ../../img/Gutters/gutters3.png
-
-
-4. Fill out the global values table and click OK.
-
 .. image:: ../../img/Gutters/gutters4.png
 
 
@@ -55,24 +47,12 @@ Export Data
 
 .. image:: ../../img/Gutters/gutters5.png
 
-
-6. Click the data export button.
-
-
-.. image:: ../../img/Gutters/gutters6.png
-
-
 .. image:: ../../img/Gutters/gutters7.png
 
 
-Navigate to the project folder and save the \*.DAT files.
-
-**Note:** It isn’t always necessary to export every file. Some files like
-infiltration and rain get really big and take time to export. Uncheck
-files that do not need to be replaced.
 
 Troubleshooting
-~~~~~~~~~~~~~~~
+---------------
 
 1. Create the gutter polygons or gutter polylines if they are missing
    from the *Gutters Areas* layers.
@@ -80,7 +60,8 @@ Troubleshooting
 .. image:: ../../img/Gutters/gutters8.png
  
 
-2. If the *Grid* layer is empty, create a grid and try again.
+2. If the *Grid* layer is empty,
+   create a grid and try again.
 
 3. If a Python error appears during the sampling process, the attribute
    table may be missing. Save and reload the project into QGIS and try

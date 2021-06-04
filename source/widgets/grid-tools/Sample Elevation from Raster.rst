@@ -8,7 +8,7 @@ the *Sampling Grid Elevation from Raster Layer* icon.
 
 
 Overview
-~~~~~~~~~
+--------
 
 A basic understanding of a raster file is necessary to use this routine.
 A raster file is a geo-referenced image file with band data assigned to
@@ -50,7 +50,7 @@ raster.
 
 
 Troubleshooting
-~~~~~~~~~~~~~~~
+---------------
 
 1. If the project or the data is on a server, this function may fail.
    Ensure all data is on the workstation.
@@ -59,7 +59,7 @@ Troubleshooting
    the following message will be displayed. Save the raster with the
    correct CRS and make sure it has complete coverage.
 
-.. image:: ../../img/Sample-Elevation-From-Raster/sampleraster4.png
+.. image:: ../../img/Sample-Elevation-From-Raster/sampleraster5.png
 
 
 3. If the “Sample Done” box is displayed but the grid table still has
@@ -71,6 +71,6 @@ Troubleshooting
    origin, the raster realign will be inaccurate. Re-create the raster
    so that the origin and extent are not offset.
 
-.. image:: ../../img/Sample-Elevation-From-Raster/sampleelefromraster5.png
+.. image:: ../../img/Sample-Elevation-From-Raster/sampleraster6.png
 
 

@@ -27,11 +27,11 @@ User Layers
 Data is arranged as vector layers and tables in the Plugin.
 The vector layers are organized as follows:
 
--  Points
+* Points
 
--  Polylines
+* Polylines
 
--  Polygons
+* Polygons
 
 There is a layer for each FLO-2D model component that is digitized by the user and schematized into the “schematic” layers and tables.
 These layers are used to define the schematized layers that are FLO-2D format.
@@ -110,9 +110,9 @@ The *Tables* layer stores the data that is converted into the \*.DAT files.
 
 Data is written to these tables in the following methods.
 
-1. Importing from FLO-2D Project;
+#. 1. Importing from FLO-2D Project;
 
-2. Schematizing data.
+#. 2. Schematizing data.
 
 .. image:: ../img/Data-Storage/Data011.png
 
@@ -241,4 +241,4 @@ They are separate shapefiles, tables and rasters that the User imports into the 
 
 .. image:: ../img/Data-Storage/Data019.png
 
-*.*
+

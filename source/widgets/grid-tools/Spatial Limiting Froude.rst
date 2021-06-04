@@ -13,28 +13,38 @@ For further discussion on the limiting Froude numbers refer to the FLO-2D Data I
 Digitize or Copy Data
 ---------------------
 
-Select the *Froude Areas* layer and click *Toggle Editing*.
-Create or copy the polygons that represent the Froude areas to the layer and save them.
+#. 1. Select the *Froude Areas*
+   layer and click *Toggle Editing*.
+
+#. 2. Create or copy the polygons that
+   represent the Froude areas to the layer and save them.
 
 .. image:: ../../img/Spatial-Limiting-Froude/spatia002.png
+
+.. image:: ../../img/Spatial-Limiting-Froude/spatia002a.png
+
 
 Sample Data
 -----------
 
-1. Click the Sampling Froude Numbers icon.
+#. 1. Click the Sampling
+   Froude Numbers icon.
 
 .. image:: ../../img/Spatial-Limiting-Froude/spatia003.png
 
-2. Once the process is complete *OK* to close it.
+#. 2. Once the process is
+   complete *OK* to close it.
 
 .. image:: ../../img/Spatial-Limiting-Froude/spatia004.png
 
 Troubleshooting
-'''''''''''''''
+---------------
 
-1. Create the limiting Froude polygons if they are missing from the *Froude Areas* layer.
+#. 1. Create the limiting Froude
+   polygons if they are missing from the *Froude Areas* layer.
 
-2. If the *Grid* layer is empty, create a grid system and try again.
+#. 2. If the *Grid* layer is empty,
+   create a grid system and try again.
 
-3. If a Python appears during the sampling process, the attribute table may be missing.
+#. 3. If a Python appears during the sampling process, the attribute table may be missing.
    Save and reload the project into QGIS and try again.
