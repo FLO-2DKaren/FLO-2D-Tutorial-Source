@@ -5,7 +5,7 @@
 
 
 ============================================
-FLO-2D Tutorial
+FLO-2D Tutoriall
 ============================================
 
 
@@ -21,7 +21,7 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Plugin Features
+   :caption: Plugin Features:
 
    /plugin-features/Data Storage
    /plugin-features/High Definition Screen Resolution
@@ -40,7 +40,6 @@ Table of Contents
    /toolbar/Grid Info Tool
    /toolbar/Hazus Tool
    /toolbar/Import Data Files
-   /toolbar/Import GDS Data
    /toolbar/Import Geo Package
    /toolbar/Import RAS Channel
    /toolbar/Imported Selected Component Files

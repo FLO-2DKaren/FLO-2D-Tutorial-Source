@@ -12,16 +12,15 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('/Users/jasmi/Desktop/Codingintro/Repositories/FLO-2D-Tutorials'))
 
+sys.path.insert(0, os.path.abspath('/Users/jasmi/Desktop/Codingintro/Repositories/FLO-2D-Tutorials'))
 
 # -- Project information -----------------------------------------------------
 
 project = 'FLO-2D-Tutorials'
 copyright = "2021, Karen O'Brien"
 author = "Karen O'Brien"
-
-
+html_logo = 'Flo2D_logo.jpg'
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -31,30 +30,31 @@ extensions = [
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['style']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'style'
-html_theme_path = ['.']
+html_theme = 'sphinx_book_theme'
+#html_theme_path = ['style']
+html_static_path = ['style']
+html_css_files = ['static/style.css']
 
-html_sidebars = {
-    '**': [
-        'globaltoc.html',
-        'searchbox.html'
-    ]
-}
+
+
+
+
+
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['img']
+
