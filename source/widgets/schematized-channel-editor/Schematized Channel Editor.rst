@@ -1,5 +1,3 @@
-.. vim: syntax=rst
-
 Schematized Channel Editor
 ==========================
 
@@ -15,9 +13,7 @@ The data is different for each channel segment.
 Review the Channel Modeling Guidelines (FLO-2D 2018) to assign the parameters.
 The sediment transport data will not be used unless the channel option is used in the SED.DAT file.
 
-.. image:: media\Scheme002.png
-   :width: 4.56938in
-   :height: 5.26103in
+.. image:: ../../img/Schemetized-Channel-Editor/Scheme002.png
 
 Initial Conditions
 ------------------
@@ -25,10 +21,7 @@ Initial Conditions
 The global initial depth value can be set in the channel segment control data.
 This is a single value that is assigned to every cell in the channel segment when the model starts.
 
-.. image:: media\Scheme003.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML15cdbbd.PNG
-   :width: 4.22917in
-   :height: 4.83333in
+.. image:: ../../img/Schemetized-Channel-Editor/Scheme003.png
 
 Initial Water Surface Elevation
 -------------------------------
@@ -36,10 +29,7 @@ Initial Water Surface Elevation
 The initial water surface elevation is used to set the variable initial conditions.
 The values are assigned to the first and last element in a segment and interpolated to each cell in the channel at runtime.
 
-.. image:: media\Scheme004.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML1601155.PNG
-   :width: 4.20833in
-   :height: 4.83333in
+.. image:: ../../img/Schemetized-Channel-Editor/Scheme004.png
 
 Channel Geometry
 ----------------
@@ -48,10 +38,7 @@ The tabular channel data is edited in the Schematized Channel Geometry dialog bo
 This data can be edited by loading any grid element into the editor box or by editing the table directly.
 Copy paste options are active in the table editor.
 
-.. image:: media\Scheme005.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML168842c.PNG
-   :width: 6.5in
-   :height: 7.05174in
+.. image:: ../../img/Schemetized-Channel-Editor/Scheme005.png
 
 Right Bank
 ----------
@@ -59,7 +46,4 @@ Right Bank
 A right bank editor is available in the Schematic Chanel Segments dialog box.
 Edit the columns directly and click close to apply.
 
-.. image:: media\Scheme006.png
-   :alt: C:\Users\ALEJAN~1\AppData\Local\Temp\SNAGHTML169ba99.PNG
-   :width: 6.5in
-   :height: 7.05174in
+.. image:: ../../img/Schemetized-Channel-Editor/Scheme006.png

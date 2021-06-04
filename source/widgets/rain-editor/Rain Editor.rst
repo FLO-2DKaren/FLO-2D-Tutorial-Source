@@ -8,7 +8,7 @@ The rainfall editor is used to set up the RAINFALL.DAT file and the RAINCELL.DAT
 This section will describe how to set up uniform rainfall, spatially variable depth area reduction factors, and spatially and time variable rainfall.
 
 Uniform Rainfall
-~~~~~~~~~~~~~~~~
+----------------
 
 Uniform rainfall requires the total rain in inches or millimeters and a rainfall distribution.
 In this example, the total rainfall is 3 inches.
@@ -20,34 +20,50 @@ The rainfall distribution is imported from a data file.
 
 .. image:: ../../img/Rain-Editor/rained002.png
 
-|rained019|\ Select the rainfall distribution using the Folder menu. Import
-the rainfall distribution file from a set of predefined files. The files
-are installed in the FLO-2D Documentation folder. C:\users\public\public
-documents\FLO-2D Pro Documentation\flo_help\Rainfall Distributions
+#. 1. Select the rainfall
+   distribution using the Folder menu.
+
+.. image:: ../../img/Rain-Editor/rained019.png
+
+#. 2. Import the rainfall distribution file from a set of predefined files. The files
+   are installed in the FLO-2D Documentation folder.
+**C:\users\public\publicdocuments\FLO-2D Pro Documentation\flo_help\Rainfall Distributions**
 
 .. image:: ../../img/Rain-Editor/rained003.png
 
-|rained020|\ The rainfall data is imported into the FLO-2D Table Editor.
+.. image:: ../../img/Rain-Editor/rained020.png
+
+The rainfall data is imported into the FLO-2D Table Editor.
 
 .. image:: ../../img/Rain-Editor/rained004.png
 
-1. |rained021|\ Load the currently selected time series into the editor
+#. 1. Load the currently selected time series into the editor
    table.
 
-2. |rained022|\ Add a new rainfall time series to the project.
+.. image:: ../../img/Rain-Editor/rained021.png
 
-3. Open a time series data file.
+#. 2. Add a new
+   rainfall time series to the project.
 
-4. |rained023|\ Delete a time series table.
+.. image:: ../../img/Rain-Editor/rained022.png
 
-5. Rename a time series data set.
+#. 3. Open a time
+   series data file.
+
+#. 4. Delete a time
+   series table.
+
+.. image:: ../../img/Rain-Editor/rained023.png
+
+#. 5. Rename a time
+   series data set.
 
 .. image:: ../../img/Rain-Editor/rained005.png
 
-.. _section-1:
+
 
 Moving Storm
-~~~~~~~~~~~~
+-------------
 
 To simulate a moving storm cell, select a storm direction and speed.
 This data must be assigned along with isohyetal contours that represent storm intensity as depth are reductions contours.
@@ -55,7 +71,7 @@ This data must be assigned along with isohyetal contours that represent storm in
 .. image:: ../../img/Rain-Editor/rained006.png
 
 Spatially Variable Rainfall NOAA Atlas 14
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------
 
 Spatially variable rainfall data can be set up using depth area reduction factors in the RAINFALL.DAT file.
 The data format is inches (millimeters) at a point over total rainfall in inches (millimeters).
@@ -74,9 +90,11 @@ To perform the calculation, use the Area Reduction calculator.
 
 |rained024|\ |rained025|
 
-1. Click the *Area Reduction* button.
+#. 1. Click the
+   *Area Reduction* button.
 
-2. Fill the form and click OK.
+#. 2. Fill the
+   form and click OK.
 
 The raster pixels are typically 1000 by 1000 ft or larger.
 It is not necessary to average the data.
@@ -85,7 +103,7 @@ Select the maximum value to set the cell value.
 .. image:: ../../img/Rain-Editor/rained008.png
 
 Realtime Rainfall NEXRAD
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 Realtime rainfall data is computed from NEXRAD \*.ASC grid files.
 In the United States, the files are derived from calibrated radar reflectivity maps from National Oceanic and Atmospheric Administration (NOAA) and
@@ -107,7 +125,7 @@ files.*
 *\**Important Note**\**
 
 Rainfall Catalog
-~~~~~~~~~~~~~~~~
+----------------
 
 The project directory must contain all the rainfall \*.asc files and a catalog file \*.rtc.
 Both filetypes are text files.
@@ -140,7 +158,7 @@ The rainfall data will interpolate from time = 0 rainfall = 0 to the first inter
 .. image:: ../../img/Rain-Editor/rained011.png
 
 Setup Import Options
-''''''''''''''''''''
+--------------------
 
 The rainfall data does not have a specific coordinate reference system (CRS).
 Set the import options for QGIS to automatically assign all imported data with no knows CRS to the Project CRS.
@@ -153,7 +171,7 @@ Select the following options and click OK.
 .. image:: ../../img/Rain-Editor/rained013.png
 
 Import Realtime Rainfall
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 To interpolate realtime rainfall data, activate the Realtime Rainfall Editor.
 Click the Import Real Time Rainfall ASCII files.
@@ -172,7 +190,7 @@ Click OK once the process is complete.
 
 
 Export the rainfall data.
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Click Export the Rainfall Data
 
