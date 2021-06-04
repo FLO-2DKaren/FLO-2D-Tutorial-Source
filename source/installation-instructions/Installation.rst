@@ -1,50 +1,45 @@
 Installation Instructions
 =========================
 
-Document below provides details of installing QGIS and FLO-2D plugin.
+QGIS Installation – Stand Alone
+-------------------------------
 
-QGIS
-----
+Download the QGIS Installer.
+`www.flo-2d.com/qgis-plugin <http://www.flo-2d.com/qgis-plugin>`__
 
-To install QGIS, we recommend using `OSGeo4W 64 bit installer <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_.
+Run the installer and follow the installation instructions.
+Use the default for all options.
 
-During installation, select Advanced Install> **Install from Internet** > **All Users** > Path to download > **Direct Connection** > The default available download website
-
-A new window will appear to **Select Packages**. Select the following packages from the **Desktop** section:
-
-- qgis: 3.x.x
-- qgis-dev: 3.x.x
-- qgis-ltr: 3.16.x
-
-(Keep clicking on **Skip** until the latest version appears).
-
-All the dependencies will be automatically selected.
-
-For future update/upgrade, with a new release of QGIS, you can run the installer and the new packages will appear.
-
-Installing FLO-2D plugin
+Installing FLO-2D Plugin
 ------------------------
 
-Download the plugin from the FLO-2D website
+#. 1. Download the
+   plugin zipped file `www.flo-2d.com/qgis-plugin-flo-2d <http://www.flo-2d.com/qgis-plugin-flo-2d>`__
 
-https://flo-2d.com/qgis-plugin/
+#. 2. Open Manage
+   and install Plugins
 
-In QGIS, from the main menu, select **Plugins** > **Manage and Install Plugins **
+#. 3. Install the
+   plugin using the **Install from zipped file**
 
-From the left panel, select **From Zipped File**
+#. 4. The plugin
+   is installed here:
 
-**Browse** to the zipped Plugin file and load it.
+**'C:\Users\user\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\flo2d'__**
 
-Click **Install plugin**
+#. 5. In QGIS,
+   from the main menu, select **Plugins** >> Manage and Install Plugins
 
-To upgrade or switch to an older plugin, repeat the above.
+#. 6. FLO-2D plugin is listed and the toolbar will be visible.
+   Make sure it is checked.
 
-.. image:: ../img/InstallFLO-2DPlugin.gif
-	:align: center
-	:alt: Install FLO-2D Plugin
+#. 7. The plugin
+   window shows the version and change log.
 
-The plugin is installed if the toolbar appears.
+.. image:: ../img/Installation-Instructions/Instal002.png
 
-.. image:: ../img/plugin.png
-	:align: left
-	:alt: FLO-2D Plugin
+
+If your QGIS window looks like this, you have installed the plugin correctly.
+
+.. image:: ../img/Installation-Instructions/Instal003.png
+
