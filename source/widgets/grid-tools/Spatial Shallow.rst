@@ -11,10 +11,10 @@ Polygons can be applied to select individual or groups of grid elements to super
 Digitize or Copy Data
 ---------------------
 
-#. 1. Select the *Shallow-n Areas*
+1. Select the *Shallow-n Areas*
    layer and click edit.
 
-#. 2. Create or copy the polygons
+2. Create or copy the polygons
    that represent the shallow roughness areas to the layer and save them.
 
 .. image:: ../../img/Spatial-Shallow/spatia002.png
@@ -25,7 +25,7 @@ Digitize or Copy Data
 Sample Data
 -----------
 
-#. 1. Click the *Sampling Spatial Shallow-n Values*
+1. Click the *Sampling Spatial Shallow-n Values*
    icon and then *OK* once the process is complete.
 
 .. image:: ../../img/Spatial-Shallow/spatia003.png
@@ -37,11 +37,11 @@ Sample Data
 Troubleshooting
 ---------------
 
-#. 1. Create the shallow-n polygons
+1. Create the shallow-n polygons
    if they are missing from the *Shallow-n Areas* layer.
 
-#. 2. If the Grid layer is empty,
+2. If the Grid layer is empty,
    create a grid and try again.
 
-#. 3. If a Python error appears during the sampling process, the attribute table may be missing.
+3. If a Python error appears during the sampling process, the attribute table may be missing.
    Save and reload the project into QGIS and try again.

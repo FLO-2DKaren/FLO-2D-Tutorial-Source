@@ -13,27 +13,26 @@ Use the default for all options.
 Installing FLO-2D Plugin
 ------------------------
 
-#. 1. Download the
+1. Download the
    plugin zipped file `www.flo-2d.com/qgis-plugin-flo-2d <http://www.flo-2d.com/qgis-plugin-flo-2d>`__
 
-#. 2. Open Manage
+2. Open Manage
    and install Plugins
 
-#. 3. Install the
+3. Install the
    plugin using the **Install from zipped file**
 
-#. 4. The plugin
+4. The plugin
    is installed here:
+   "C:\Users\user\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\flo2d"__
 
-**'C:\Users\user\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\flo2d'__**
+5. In QGIS,
+   from the main menu, select *Plugins* >> *Manage and Install Plugins*
 
-#. 5. In QGIS,
-   from the main menu, select **Plugins** >> Manage and Install Plugins
-
-#. 6. FLO-2D plugin is listed and the toolbar will be visible.
+6. FLO-2D plugin is listed and the toolbar will be visible.
    Make sure it is checked.
 
-#. 7. The plugin
+7. The plugin
    window shows the version and change log.
 
 .. image:: ../img/Installation-Instructions/Instal002.png

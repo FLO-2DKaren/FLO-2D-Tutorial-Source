@@ -21,24 +21,24 @@ Calculate ARF and WRF layers
 
 .. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/Area003.png
 
-#. 1. Click the *Evaluate Reduction Factors (ARF and WRF)* icon.
+1. Click the *Evaluate Reduction Factors (ARF and WRF)* icon.
    There are two options.
    Use the Blocked Areas Layer if constructing polygons from the digitizing tools.
    Use the external polygon layer if building polygons are in another layer.
 
 .. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/Area004.png
 
-#. 2. Click OK and wait for the procedure to finish.
+2. Click OK and wait for the procedure to finish.
    The following message will appear and click *OK* to close it.
 
 .. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/Area005.png
 
-#. 3. The ARF and WRF features
+3. The ARF and WRF features
    are visible in the *Schematic Layers* group.
 
 .. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/Area006.png
 
-#. 4. Click on the *Set Control Parameters* icon, and then on the *Control Variables (CONT.DAT)* tab Check on *Area Reduction Factors (ARF)* and then click
+4. Click on the *Set Control Parameters* icon, and then on the *Control Variables (CONT.DAT)* tab Check on *Area Reduction Factors (ARF)* and then click
    *Save*.
 
 .. image:: ../../img/Area-and-Width-Reduction-Factor-Buildings/Area007.png
@@ -46,14 +46,14 @@ Calculate ARF and WRF layers
 Troubleshooting
 ---------------
 
-#. 1. Missing building polygons from the
+1. Missing building polygons from the
    *Blocked Areas* layer can be created.
 
-#. 2. If the *Grid* layer is empty,
+2. If the *Grid* layer is empty,
    create a grid and try again.
 
-#. 3. If a Python error appears during the sampling procedure, the attribute table may be missing.
+3. If a Python error appears during the sampling procedure, the attribute table may be missing.
    Save and reload the project and try again.
 
-#. 4. If a polygon is outside the computational domain, it might result in an error.
+4. If a polygon is outside the computational domain, it might result in an error.
    Delete buildings outside the computational domain.

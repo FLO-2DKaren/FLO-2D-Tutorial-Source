@@ -10,20 +10,20 @@ debug data files and search for data conflicts.
 .. image:: ../img/Buttons/debug.png
 
 
-#. 1. Perform
+1. Perform
    a debug run.
 
 
-#. 2. `Export
+2. `Export
    the \*.DAT Files <Export%20Project.html>`__.
 
-#. 3. Click the
+3. Click the
    Run FLO-2D button.
 
 .. image:: ../img/Debug/debug2.png
 
 
-#. 4. This will automatically trigger the FLO-2D check system performed by
+4. This will automatically trigger the FLO-2D check system performed by
    the engine FLOPRO.EXE.
 
 .. image:: ../img/Debug/debug3.png
@@ -32,14 +32,14 @@ debug data files and search for data conflicts.
 .. image:: ../img/Debug/debug4.png
 
 
-#. 5. The model will execute, perform the data checks and then
+5. The model will execute, perform the data checks and then
    automatically shut down. Every time the debug is executed, a new
    debug file with a timestamp is saved to the project folder.
 
 .. image:: ../img/Debug/debug5.png
 
 
-#. 6. Click the Error and
+6. Click the Error and
    Warning button to open the import dialog box.
 
 .. image:: ../img/Buttons/debug.png
@@ -49,14 +49,14 @@ debug data files and search for data conflicts.
 Debug
 -----
 
-#. 7. To import the Debug files, click the Import DEBUG File button. The
+7. To import the Debug files, click the Import DEBUG File button. The
    DEBUG file will have a date and timestamp to track progress.
 
 .. image:: ../img/Debug/debug7.png
 
 
 
-#. 8. The import process will include several files that can be used to
+8. The import process will include several files that can be used to
    help users review surface features such as rim elevations, depressed
    elements and channel – floodplain interface. Click Yes to load the
    Errors and Warning Dialog box and import the review files.

@@ -4,11 +4,11 @@ Data Storage
 Database Format
 ---------------
 
-The Plugin uses a [GeoPackage](`http://www.GeoPackage.org/spec/ <http://www.geopackage.org/spec/>`__) for data storage.
-It is an SQLite (http://www.sqlite.org/) database with spatial extensions for storing vector and raster data.
+The Plugin uses a [`GeoPackage <http://www.GeoPackage.org/spec/>`__] for data storage.
+It is an `SQLite <http://www.sqlite.org/>`__ database with spatial extensions for storing vector and raster data.
 The GeoPackage or \*.gpkg file is a binary file that stores data tables in SQLite format.
 SQLite is a public domain data base engine that is used and supported worldwide.
-More information about SQLite can be found at the website https://www.sqlite.org/about.html.
+More information about SQLite can be found at `the website <https://www.sqlite.org/about.html>`__.
 The GeoPackage encoding system is approved by an Open Geospatial Consortium, a standard that is deemed sustainable by the U.S.
 Library of Congress (Library of Congress, 2017).
 
@@ -58,7 +58,7 @@ Data can also be imported into these layers and tables when a project is importe
 
 .. image:: ../img/Data-Storage/Data004.png
 
-Data is written to these tables in the following methods.
+Data is written to these tables in the following methods:
 
 -  Importing from FLO-2D Project;
 
@@ -73,7 +73,7 @@ Storm Drain Layers
 
 The *Storm Drain Layers* are used to create and store data for the storm drain system.
 
-Data is written to these tables in the following methods.
+Data is written to these tables in the following methods:
 
 -  Importing from FLO-2D Project;
 
@@ -108,11 +108,11 @@ Tables
 
 The *Tables* layer stores the data that is converted into the \*.DAT files.
 
-Data is written to these tables in the following methods.
+Data is written to these tables in the following methods:
 
-#. 1. Importing from FLO-2D Project;
+- Importing from FLO-2D Project;
 
-#. 2. Schematizing data.
+- Schematizing data.
 
 .. image:: ../img/Data-Storage/Data011.png
 
@@ -121,7 +121,7 @@ Rain Tables
 
 The *Rain Tables* layer stores the data for uniform rainfall, spatially variable rainfall, and spatially and temporally variable rainfall.
 
-Data is written to these tables in the following methods.
+Data is written to these tables in the following methods:
 
 -  Importing from project;
 
@@ -139,7 +139,7 @@ Calibration Data
 The *Calibration Data* layers are point vector layers that store the water surface elevation at a known point and the time to peak water surface
 elevation at a known point.
 
-Data is written to these tables in the following methods.
+Data is written to these tables in the following methods:
 
 -  Importing from project;
 
@@ -154,7 +154,7 @@ Evaporation Tables
 
 The *Evaporation Tables* layer store spatially variable data for estimating evaporation at runtime.
 
-Data is written to these tables in the following methods.
+Data is written to these tables in the following methods:
 
 -  Importing from project;
 
@@ -168,7 +168,7 @@ Levee and Breach Tables
 The *Levee and Breach Tables* layer is used to store the prescribed breach, erosion breach, and levee fragility data tables.
 These labels are filled by the Breach Widget.
 
-Data is written to these tables in the following methods.
+Data is written to these tables in the following methods:
 
 -  Importing from project;
 
@@ -183,7 +183,7 @@ Sediment Transport Layers and Tables
 
 The *Sediment Transport* layers, and *Tables* layer store the spatial and global data for sediment transport and mudflow.
 
-The data is written to these tables in the following methods.
+The data is written to these tables in the following methods:
 
 -  Importing from project;
 
@@ -198,7 +198,7 @@ Channel Tables
 
 The *Channel Tables* layer stores data for user layers and schematic layers.
 
-The data is written to these tables in the following methods.
+The data is written to these tables in the following methods:
 
 -  Importing from project;
 
@@ -219,7 +219,7 @@ Multiple Channel Tables
 
 The Multiple Channel Tables layer stores data for user layers and schematic layers.
 
-The data is written to these tables in the following methods.
+The data is written to these tables in the following methods:
 
 -  Importing from project;
 

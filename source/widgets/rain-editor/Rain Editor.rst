@@ -20,12 +20,12 @@ The rainfall distribution is imported from a data file.
 
 .. image:: ../../img/Rain-Editor/rained002.png
 
-#. 1. Select the rainfall
+1. Select the rainfall
    distribution using the Folder menu.
 
 .. image:: ../../img/Rain-Editor/rained019.png
 
-#. 2. Import the rainfall distribution file from a set of predefined files. The files
+2. Import the rainfall distribution file from a set of predefined files. The files
    are installed in the FLO-2D Documentation folder.
 **C:\users\public\publicdocuments\FLO-2D Pro Documentation\flo_help\Rainfall Distributions**
 
@@ -37,25 +37,25 @@ The rainfall data is imported into the FLO-2D Table Editor.
 
 .. image:: ../../img/Rain-Editor/rained004.png
 
-#. 1. Load the currently selected time series into the editor
+1. Load the currently selected time series into the editor
    table.
 
 .. image:: ../../img/Rain-Editor/rained021.png
 
-#. 2. Add a new
+2. Add a new
    rainfall time series to the project.
 
 .. image:: ../../img/Rain-Editor/rained022.png
 
-#. 3. Open a time
+3. Open a time
    series data file.
 
-#. 4. Delete a time
+4. Delete a time
    series table.
 
 .. image:: ../../img/Rain-Editor/rained023.png
 
-#. 5. Rename a time
+5. Rename a time
    series data set.
 
 .. image:: ../../img/Rain-Editor/rained005.png
@@ -90,15 +90,16 @@ To perform the calculation, use the Area Reduction calculator.
 
 |rained024|\ |rained025|
 
-#. 1. Click the
+1. Click the
    *Area Reduction* button.
 
-#. 2. Fill the
+2. Fill the
    form and click OK.
 
 The raster pixels are typically 1000 by 1000 ft or larger.
 It is not necessary to average the data.
-Select the maximum value to set the cell value.
+
+3. Select the maximum value to set the cell value.
 
 .. image:: ../../img/Rain-Editor/rained008.png
 
@@ -161,30 +162,34 @@ Setup Import Options
 --------------------
 
 The rainfall data does not have a specific coordinate reference system (CRS).
-Set the import options for QGIS to automatically assign all imported data with no knows CRS to the Project CRS.
-Click Settings Options
+
+1. Set the import options for QGIS to automatically assign all imported data with no knows CRS to the Project CRS.
+
+2. Click Settings Options
 
 .. image:: ../../img/Rain-Editor/rained012.png
 
-Select the following options and click OK.
+3. Select the following options and click OK.
 
 .. image:: ../../img/Rain-Editor/rained013.png
 
 Import Realtime Rainfall
 ------------------------
 
-To interpolate realtime rainfall data, activate the Realtime Rainfall Editor.
-Click the Import Real Time Rainfall ASCII files.
+1. To interpolate realtime rainfall data, activate the Realtime Rainfall Editor.
+
+2. Click the Import Real Time Rainfall ASCII files.
 
 .. image:: ../../img/Rain-Editor/rained014.png
 
 The plugin requests the directory where the NEXRAD data is stored.
-Navigate to the correct directory and click Select Folder.
+
+3. Navigate to the correct directory and click Select Folder.
 
 .. image:: ../../img/Rain-Editor/rained015.png
   
 
-Click OK once the process is complete.
+4. Click OK once the process is complete.
 
 .. image:: ../../img/Rain-Editor/rained016.png
 
@@ -192,11 +197,11 @@ Click OK once the process is complete.
 Export the rainfall data.
 -------------------------
 
-Click Export the Rainfall Data
+1. Click Export the Rainfall Data
 
 .. image:: ../../img/Rain-Editor/rained017.png
   
-Name the storm and click Save.
+2. Name the storm and click Save.
 
 .. image:: ../../img/Rain-Editor/rained018.png
 

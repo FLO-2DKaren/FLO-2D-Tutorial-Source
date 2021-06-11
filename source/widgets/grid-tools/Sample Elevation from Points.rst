@@ -1,11 +1,9 @@
 Sample Elevation Data from Points and LiDAR
 ===========================================
 
-Elevation Points
-----------------
 
-Load Data
----------
+Load Elevation Points
+----------------------
 
 .. image:: ../../img/Buttons/addlayer.png
 
@@ -88,29 +86,30 @@ category.
    *Assign Elevation to Grid from Points Layer* icon to interpolate the elevation data to the grid.
 
 .. image:: ../../img/Sample-Elevation-From-Points/Sample005.png
-2.	Choose the Interpolate
-   from LiDAR files option and click OK.
+
+2.	Choose the Interpolate from LiDAR files option and click OK.
 
 .. image:: ../../img/Sample-Elevation-From-Points/Sample014.png
 
 3. Select the bare earth data LiDAR data files that cover the project area.
    These are determined using the LiDAR tiles shapefile.
-   Click Open.
+
+4. Click Open.
    The LiDAR file must have a \*.txt extension.
 
 .. image:: ../../img/Sample-Elevation-From-Points/Sample010.png
 
-4. When the file is processing,
+5. When the file is processing,
    two progress bars can be seen in QGIS.
 
 .. image:: ../../img/Sample-Elevation-From-Points/Sample011.png
 
-5. LiDAR data is bare earth data
+6. LiDAR data is bare earth data
    so categories such as buildings, bridges, overpasses are removed from the point data.
 
 .. image:: ../../img/Sample-Elevation-From-Points/Sample012.png
 
-6. The plugin will fill this data with a nearest neighbor patch.
+7. The plugin will fill this data with a nearest neighbor patch.
    Select the first option and click ok to fill the missing data.
 
 .. image:: ../../img/Sample-Elevation-From-Points/Sample013.png

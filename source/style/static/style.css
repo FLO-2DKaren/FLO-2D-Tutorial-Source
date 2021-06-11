@@ -89,25 +89,29 @@ div.related h3 {
   display: none;
 }
 
-/* this changes the list in the navigation bar, you can choose to have number lists in different languages*/
+/* this changes the list in the navigation bar, you can choose to have number lists in different languages
 div.related ul {
   display: inline;
-  list-style: circle;
+  list-style-type: circle;
   margin: 0;
   padding: 0;
 }
-
-/* changes how you want to display the list. Horizontally or vertically or like a list*/
+*/
+/*changes how you want to display the list. Horizontally or vertically or like a list*/
 div.related li {
-  display: inline;
-  list-style: decimal;
+  list-style-type: circle;
 }
-
-/* changes where the next|index is. */
+li::marker {
+  color: RED;
+}
+/*
+ changes where the next|index is.
 div.related li.right {
     float: right;
     margin-right: 0.1em;
 }
+*/
+
 
 /* controls the whole text on the nav bar. except the navigation bar title*/
 div.related a {
@@ -135,7 +139,7 @@ change h1 to h3 for example. Header notation is based on sphinx styling */
 div.section h2 {
   text-align: left;
   font-size: 140%;
-  padding: 10px;
+  padding: 0px;
   margin: 0;
 }
 

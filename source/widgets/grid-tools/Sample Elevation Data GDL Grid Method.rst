@@ -5,8 +5,6 @@ To interpolate the elevation to a grid layer from a using the GDAL Grid method.
 
 .. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample002.png
 
-Overview
---------
 
 Sample Elevation
 ----------------
@@ -47,13 +45,13 @@ Sample Elevation
 .. image:: ../../img/Sample-Elevation-Data-GDL-Grid-Method/Sample005.png
 
 8.  A log of the interpolation
-   process helps the user track the progress.
+    process helps the user track the progress.
 
 9.  The user can set the CPU thread count
-   and the memory cache allowed by the processors. This ensures the computer won’t slow down while the optimized calculations are performed.
+    and the memory cache allowed by the processors. This ensures the computer won’t slow down while the optimized calculations are performed.
 
 10. Once the Finished Computation message
-   appears. Click Close.
+    appears. Click Close.
 
 
 Check this image here:

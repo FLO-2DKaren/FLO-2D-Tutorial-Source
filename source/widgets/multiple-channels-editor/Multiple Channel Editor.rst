@@ -20,19 +20,19 @@ Enter the data using the QGIS vector editor in the toolbar.
 .. image:: ../../img/Multiple-Channel-Editor/mutipl004.png
 
 
-#. 1. Digitize the drainages,
+1. Digitize the drainages,
    rills or gullies in the project area.
-   |mutipl009|
+.. image:: ../../img/Multiple-Channel-Editor/mutipl009.png
 
 
 
-#. 2. Assign the spatially variable data to each line.
+2. Assign the spatially variable data to each line.
    The multiple channel lines are split into segments wherever a new channel begins or ends or when new data is required.
 
 .. image:: ../../img/Multiple-Channel-Editor/mutipl005.png
  
 
-#. 3. Save and close the editor to commit the data to the geopackage.
+3. Save and close the editor to commit the data to the geopackage.
    This will automatically write the data to the Multiple Tables and assign the grid elements.
    It also enables the Individual Multiple Channel Data button.
 

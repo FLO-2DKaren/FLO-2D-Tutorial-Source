@@ -7,13 +7,13 @@ For a step-by-step tutorial, use the QGIS Workshop Lessons or the Self-Help trai
 
 .. image:: ../../img/Storm-Drain/Storm002.png
 
-#. 1. The digitize storm drain buttons are inactive.
+1. The digitize storm drain buttons are inactive.
    It is recommended to create a storm drain network in separate storm drain shapefiles as discussed below.
 
-#. 2. the blue schematize button
+2. The blue schematize button
    is used when the storm drain system is complete and ready to convert to the FLO-2D schema layers.
 
-#. 3. The simulate storm drain
+3. The simulate storm drain
    check box will turn on the storm drain switch in the Control Variables.
 
 .. image:: ../../img/Storm-Drain/Storm003.png
@@ -26,7 +26,7 @@ Some projects have a storm drain system already developed.
 Some projects have no network and start from scratch.
 Either way, this information will serve as a template for the data needed to create a storm drain system.
 
-#. 1. Load the shapefiles
+1. Load the shapefiles
    onto the map or digitize new shapefiles with QGIS.
 
 .. image:: ../../img/Storm-Drain/Storm004.png
@@ -88,8 +88,9 @@ The fields from the attribute table are selected using the Select Components fro
 Import SWMM.inp
 ---------------
 
-An existing SWMM.inp project can be imported in a FLO-2D Surface System.
-Click on Import SWMM.inp and browse the project folder that contains the file.
+1. An existing SWMM.inp project can be imported in a FLO-2D Surface System.
+
+2. Click on Import SWMM.inp and browse the project folder that contains the file.
 
 .. image:: ../../img/Storm-Drain/Storm014.png
 
@@ -187,12 +188,12 @@ This method is better if many tables are required.
 Method 1. Create with the FLO-2D plugin
 ----------------------------------------
 
-#. 1. Set up the rating
+1. Set up the rating
    tables with the Plugin by adding a rating table to the table editor and assigning the table to the correct inlet.
 
 .. image:: ../../img/Storm-Drain/Storm025.png
 
-#. 2. Use the Inlet Editor to
+2. Use the Inlet Editor to
    assign the table to the Type 4 inlet.
 
 .. image:: ../../img/Storm-Drain/Storm026.png
@@ -200,20 +201,20 @@ Method 1. Create with the FLO-2D plugin
 Method 2. Import multiple tables
 ------------------------------------
 
-#. 1. Click the
+1. Click the
    Import Rating Table… button.
 
 .. image:: ../../img/Storm-Drain/Storm027.png
 
-#. 2. Select all of the rating
+2. Select all of the rating
    tables that match the type 4 inlets.
 
-#. 3. The plugin will load the tables
+3. The plugin will load the tables
    based on the node name and automatically assign each table.
 
 .. image:: ../../img/Storm-Drain/Storm028.png
 
-#. 4. Tables are space or tab delimited
+4. Tables are space or tab delimited
    and are created using culvert equations or HY-8.
 
 .. image:: ../../img/Storm-Drain/Storm029.png
@@ -221,12 +222,13 @@ Method 2. Import multiple tables
 External Inflow Data
 --------------------
 
-Set up the external inflow data for a storm drain node.
-Use the Inlet/Junction editor to set up external inflow parameters and data.
+1. Set up the external inflow data for a storm drain node.
+
+2. Use the Inlet/Junction editor to set up external inflow parameters and data.
 
 .. image:: ../../img/Storm-Drain/Storm030.png
 
-Use the Internal Inflow tools to define parameters and select time series data.
+3. Use the Internal Inflow tools to define parameters and select time series data.
 
 Simple parameters are used in this case.
 
