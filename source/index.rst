@@ -24,7 +24,6 @@ Table of Contents
    :caption: Plugin Features:
 
    /plugin-features/Data Storage
-   /plugin-features/High Definition Screen Resolution
    /plugin-features/Plugin Features
    /plugin-features/View Options
 .. toctree::
@@ -93,6 +92,14 @@ Table of Contents
    :caption: Workshops:
 
    /Workshops/workshop
+   /Workshops/Lesson 1
+   /Workshops/Lesson 2
+   /Workshops/Lesson 3
+   /Workshops/Lesson 4
+   /Workshops/Lesson 5
+   /Workshops/Lesson 6
+
+
 
 
 
