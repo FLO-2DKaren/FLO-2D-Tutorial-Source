@@ -265,7 +265,7 @@ ___________________________
 
 
 Lesson 1, Part 2 – Project Recovery Methods
-===========================================
+-------------------------------------------
 
 .. _overview-1:
 
@@ -380,7 +380,7 @@ ________________________
 
 
 Lesson 1, Part 3 – Hydrology, Rainfall, and Infiltration
-========================================================
+--------------------------------------------------------
 
 
 
@@ -432,7 +432,7 @@ Check these folders to ensure the data is available before starting the lesson.
 .. _step-by-step-procedure-2:
 
 Step-by-Step Procedure
-======================
+----------------------
 
 To setup a FLO-2D flood simulation use these steps.
 

@@ -55,7 +55,7 @@ Check these folders to ensure the data is available before starting the lesson.
 .. _step-by-step-procedure-3:
 
 Step-by-Step Procedure
-======================
+----------------------
 
 To setup a FLO-2D flood simulation use these steps.
 
@@ -381,10 +381,10 @@ __________________________
 7. If you are on your own, check out this video.
    Go in about halfway and find the part where we fix the left and right banks.
 
-https://www.youtube.com/watch?v=Ov1oa2HEsXs
+https://www.youtube.com/watch?v-Ov1oa2HEsXs
 
 Summary
-=======
+-------
 
 This lesson was a simple channel import.
 It used a Georeferenced HEC-RAS geometry file.

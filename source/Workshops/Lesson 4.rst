@@ -1,5 +1,5 @@
 Lesson 4 – QGIS FLO-2D Plugin Buildings, Walls and Wall Failure
-===============================================================
+================================================================
 
 .. _overview-5:
 
@@ -100,18 +100,18 @@ The **Buildings.shp** shapefile needs 3 Attributes.
 
 -  These fields represent switches to set the calculation control for each building.
 
--  Collapse = 0 will ignore building collapse settings.
+-  Collapse - 0 will ignore building collapse settings.
 
--  Collapse = 1 will apply the control for building collapse.
+-  Collapse - 1 will apply the control for building collapse.
    If building collapse is needed, look in the Data Input manual for an extra data file.
 
--  ARF = 0 will ignore the ARF calculation
+-  ARF - 0 will ignore the ARF calculation
 
--  ARF = 1 will calculate the ARF calculation
+-  ARF - 1 will calculate the ARF calculation
 
--  WRF = 0 will ignore the spatially variable WRF but apply a T line to any totally blocked cell.
+-  WRF - 0 will ignore the spatially variable WRF but apply a T line to any totally blocked cell.
 
--  WRF = 1 will calculate the spatially variable WRF and apply a T line to any totally blocked cell.
+-  WRF - 1 will calculate the spatially variable WRF and apply a T line to any totally blocked cell.
 
 2. Click the Evaluate Reduction Factors (ARF and WRF) icon.
 
@@ -239,7 +239,7 @@ __________________________
 .. _summary-2:
 
 Summary
-=======
+-------
 
 This is the completion of a tutorial for adding buildings and walls to a model that is ready to run.
 This tutorial can be applied to any project once the grid and elevation is assigned.

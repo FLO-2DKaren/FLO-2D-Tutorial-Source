@@ -1,5 +1,5 @@
 Lesson 3 – Create a Storm Drain System Using Shapefiles
-========================================================
+=======================================================
 
 .. _overview-4:
 
@@ -121,9 +121,9 @@ The shapefiles can be described as follow:
 The following data must be available in the shapefile to create the **SWMM.INP** files and the associated storm drain data files: **SWMMFLO.DAT**,
 **SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
 
-============ ==================================
+------------ ----------------------------------
 **CONDUITS** Name
-============ ==================================
+------------ ----------------------------------
 \            Upstream Inlet/Junction
 \            Downstream Inlet/Junction
 \            Inlet/Outlet Offset (not required)
@@ -141,11 +141,11 @@ The following data must be available in the shapefile to create the **SWMM.INP**
 \            Exit Loss Coef (Not required)
 \            Average Loss Coef (Not required)
 \            Flap Gate
-============ ==================================
+------------ ----------------------------------
 
-==================== ================================
+-------------------- --------------------------------
 **INLETS/JUNCTIONS** Name
-==================== ================================
+-------------------- --------------------------------
 \                    Invert Elevation
 \                    Maximum Depth
 \                    Initial Depth (Not required)
@@ -158,11 +158,11 @@ The following data must be available in the shapefile to create the **SWMM.INP**
 \                    Curb Height (Not required)
 \                    Clogging Factor (Not required)
 \                    Time for Clogging (Not required)
-==================== ================================
+-------------------- --------------------------------
 
-============ ==========================
+------------ --------------------------
 **OUTFALLS** Name
-============ ==========================
+------------ --------------------------
 \            Invert Elevation
 \            Flap Gate
 \            Allow Discharge Switch
@@ -170,7 +170,7 @@ The following data must be available in the shapefile to create the **SWMM.INP**
 \            Water Depth (Not required)
 \            Tide Curve (Not required)
 \            Time Series (Not required)
-============ ==========================
+------------ --------------------------
 
 Step 3: Select components from shapefile layer
 ______________________________________________
