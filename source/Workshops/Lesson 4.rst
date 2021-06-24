@@ -10,7 +10,9 @@ Lesson 4 will outline the process of setting up buildings and walls and defining
 This lesson can be completed after Lesson 1 is finished.
 Apply these instructions after Lesson 1, 2 or 3 are completed.
 
-.. _required-data-5:
+This video will guide you through the lesson.
+
+.. youtube:: guHbOgtpAnM
 
 Required Data
 _____________

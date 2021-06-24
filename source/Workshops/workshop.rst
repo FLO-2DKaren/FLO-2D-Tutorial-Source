@@ -217,6 +217,11 @@ The objective is to apply the FLO-2D Plugin for QGIS to create a simple overland
 details.
 
 Training resources are also available in the FLO-2D Pro Documentation.
+
+To guide you through this training,there will be short videos attached at the beginning of every lesson.
+
+.. youtube:: 72nFOmo4Scg
+
 This folder is installed on the computer under the C:\Users\Public\Documents\FLO-2D PRO Documentation.
 Training videos can also be downloaded from the FTP site.
 Email contact@flo-2d.com for more information.
@@ -229,43 +234,5 @@ Email contact@flo-2d.com for more information.
 
 
 
-.. |Worksh153| image:: ../img/Workshop/Worksh153.png
 
-.. |Worksh154| image:: ../img/Workshop/Worksh154.png
-
-.. |Worksh155| image:: ../img/Workshop/Worksh155.png
-
-.. |Worksh156| image:: ../img/Workshop/Worksh156.png
-
-.. |Worksh002| image:: ../img/Workshop/Worksh002.png
-
-.. |Worksh157| image:: ../img/Workshop/Worksh157.png
-
-.. |Worksh158| image:: ../img/Workshop/Worksh158.png
-
-.. |Worksh159| image:: ../img/Workshop/Worksh159.png
-
-.. |Worksh160| image:: ../img/Workshop/Worksh160.png
-
-.. |Worksh161| image:: ../img/Workshop/Worksh161.png
-
-.. |Worksh162| image:: ../img/Workshop/Worksh162.png
-
-.. |Worksh092| image:: ../img/Workshop/Worksh092.png
-
-.. |Worksh163| image:: ../img/Workshop/Worksh163.png
-
-.. |Worksh164| image:: ../img/Workshop/Worksh164.png
-
-.. |Worksh165| image:: ../img/Workshop/Worksh165.png
-
-.. |Worksh165| image:: ../img/Workshop/Worksh165.png
-
-.. |Worksh166| image:: ../img/Workshop/Worksh166.png
-
-.. |Worksh167| image:: ../img/Workshop/Worksh167.png
-
-.. |Worksh168| image:: ../img/Workshop/Worksh168.png
-
-.. |Worksh169| image:: ../img/Workshop/Worksh169.png
 

@@ -9,7 +9,9 @@ ________
 This lesson will outline the process of importing some shapefiles for a stormdrain system and create the INP file and associated storm drain data
 files.
 
-.. _required-data-4:
+This video will guide you through the lesson.
+
+.. youtube:: 6oTw4PnqOiI
 
 Required Data
 _____________

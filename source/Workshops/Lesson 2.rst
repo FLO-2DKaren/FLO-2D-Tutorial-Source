@@ -9,7 +9,9 @@ ________
 Complete QGIS Lesson 1 before starting this lesson.
 Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
 
-.. _required-data-3:
+This video will guide you through the lesson.
+
+.. youtube:: d2GfNh6OTWU
 
 Required Data
 _____________

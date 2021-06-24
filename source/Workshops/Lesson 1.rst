@@ -7,6 +7,10 @@ ________
 This lesson will outline the process of setting up a FLO-2D project using the Plugin for QGIS.
 Setting up the computational domain, creating a grid, interpolating elevation data and spatially variable roughness.
 
+This video will guide you through the lesson.
+
+.. youtube:: vU9qQDuZpfY
+
 Required Data
 _____________
 

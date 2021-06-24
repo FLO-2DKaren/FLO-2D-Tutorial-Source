@@ -98,6 +98,7 @@ Table of Contents
    /Workshops/Lesson 4
    /Workshops/Lesson 5
    /Workshops/Lesson 6
+   /Advance-Workshop/Advanced
 
 
 

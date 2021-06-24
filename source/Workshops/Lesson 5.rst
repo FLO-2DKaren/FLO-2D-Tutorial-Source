@@ -10,7 +10,9 @@ Lesson 5 outlines the process of setting up realtime rainfall data in the raince
 It is important to perform this tutorial on a Lesson 1 skeleton project.
 Finish Lesson 1 through Step 5 before performing the following steps.
 
-.. _required-data-6:
+This video will guide you through the lesson.
+
+.. youtube:: B1ujp_ODrKE
 
 Required Data
 _____________

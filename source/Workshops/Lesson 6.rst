@@ -10,7 +10,9 @@ Lesson 6 outlines the process of creating hydraulic structures with rating table
 This lesson needs a channel so please use the data from Lesson 2, 3, or 4 to run through this tutorial.
 Finish Lesson 2 through before performing the following steps.
 
-.. _required-data-7:
+This video will guide you through the lesson.
+
+.. youtube:: H02oR4bySw4
 
 Required Data
 _____________

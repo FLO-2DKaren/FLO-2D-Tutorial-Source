@@ -372,7 +372,7 @@ Step 2: Recover a project
 
 3. Extract the recovery files.
 
-.. image:: ../img/Advanced-Workshop/Module004.27403in
+.. image:: ../img/Advanced-Workshop/image4.png
 
 4. Change the name of the path so the file can be extracted directly to the Module 1 folder.
 
@@ -434,7 +434,7 @@ Step 4: Export the FLO-2D data
 
 7. Click Export SWMM.INP… button
 
-.. image:: ../img/Advanced-Workshop/Module014.97101in
+.. image:: ../img/Advanced-Workshop/Module014.png
 
 8. Name the file swmm.inp and click Save.
 
@@ -451,23 +451,19 @@ Step 5: Run the debug engine
 
 .. image:: ../img/Advanced-Workshop/Module017.png
 
-10.
-Correct the FLO-2D path click the Debug Run button.
+2. Correct the FLO-2D path click the Debug Run button.
 
 .. image:: ../img/Advanced-Workshop/Module018.png
 
-11.
-Click OK.
+3. Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module019.png
 
-12.
-The debug run is complete when FLO-2D windows close.
+4. The debug run is complete when FLO-2D windows close.
 
 .. image:: ../img/Advanced-Workshop/Module020.png
 
-13.
-Click Cancel to close the Run FLO-2D form.
+5. Click Cancel to close the Run FLO-2D form.
 
 .. image:: ../img/Advanced-Workshop/Module021.png
 
@@ -478,40 +474,31 @@ Step 6: Debug the project in QGIS
 
 .. image:: ../img/Advanced-Workshop/Module022.png
 
-14.
-Select Debug and click OK.
+2. Select Debug and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module023.png
 
-15.
-Navigate to the project folder.
+3. Navigate to the project folder.
 
-16.
-Select the debug file and click Open.
+4. Select the debug file and click Open.
 
 .. image:: ../img/Advanced-Workshop/Module024.png
 
-17.
-Click Yes to load the extra debug files.
+5. Click Yes to load the extra debug files.
 
 .. image:: ../img/Advanced-Workshop/Module025.png
 
-18.
-Test the filtering and navigation tools on this form.
+6. Test the filtering and navigation tools on this form.
 
-19.
-If you break it, simply reload by going back to the start of step 6.
+7. If you break it, simply reload by going back to the start of step 6.
 
-20.
-If you click on one of the *Element* cells, the map will move to that cell.
+8. If you click on one of the *Element* cells, the map will move to that cell.
 
-21.
-If you click on a *Row*, it will not move to the cell.
+9. If you click on a *Row*, it will not move to the cell.
 
-22.
-Close the form when you are sated.
+10. Close the form when you are sated.
 
-.. image:: ../img/Advanced-Workshop/Module026.28681in
+.. image:: ../img/Advanced-Workshop/Module026.png
 
 Step 7: Load the conflict table
 -------------------------------
@@ -520,16 +507,13 @@ Step 7: Load the conflict table
 
 .. image:: ../img/Advanced-Workshop/Module022.png
 
-2.
-Select Current project and click OK.
+2. Select Current project and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module027.png
 
-3.
-Select Storm Drain Inlets to see how the form filters the data.
+3. Select Storm Drain Inlets to see how the form filters the data.
 
-4.
-Click the close button when you are content.
+4. Click the close button when you are content.
 
 .. image:: ../img/Advanced-Workshop/Module028.png
 
@@ -540,25 +524,19 @@ Step 8: Load the levee table
 
 .. image:: ../img/Advanced-Workshop/Module022.png
 
-2.
-Select Levee crests and click OK.
+2. Select Levee crests and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module027.png
 
-3.
-Click Close to close the form.
-This one is not so useful.
+3. Click Close to close the form. This one is not so useful.
 
 .. image:: ../img/Advanced-Workshop/Module029.png
 
-4.
-Right click the Levee Crests layer and click Open Attribute table.
+4. Right click the Levee Crests layer and click Open Attribute table.
 
-5.
-The standard QGIS table has excellent filtering and zoom to features.
+5. The standard QGIS table has excellent filtering and zoom to features.
 
-6.
-Close the form when you are assuaged.
+6. Close the form when you are assuaged.
 
 .. image:: ../img/Advanced-Workshop/Module030.png
 
@@ -755,31 +733,25 @@ Step 8: Save, export, and run
 
 .. image:: ../img/Advanced-Workshop/Module046.png
 
-2.
-Export the data files to the Project Folder in QGIS Lesson 6 Export.
+2. Export the data files to the Project Folder in QGIS Lesson 6 Export.
 
 .. image:: ../img/Advanced-Workshop/Module047.png
 
-3.
-All GDS data files will be created in the selected project folder.
+3. All GDS data files will be created in the selected project folder.
 
 .. image:: ../img/Advanced-Workshop/Module048.png
 
 .. image:: ../img/Advanced-Workshop/Module049.png
 
-4.
-The swmm.inp file was not exported.
-Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
+4. The swmm.inp file was not exported. Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
 
 .. image:: ../img/Advanced-Workshop/Module050.png
 
-5.
-Click the *Run FLO-2D* Icon.
+5. Click the *Run FLO-2D* Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
 
-6.
-Set the Project path and the FLO-2D Engine Path and click *OK* to start the simulation.
+6. Set the Project path and the FLO-2D Engine Path and click *OK* to start the simulation.
 
 .. image:: ../img/Advanced-Workshop/Module052.png
 
@@ -854,8 +826,7 @@ Step 3: Build a new structure
 
 5. Click the east side of the structure and then click the west side of the structure.
 
-6.
-Right click to close the polyline and click OK to close the dialog.
+6. Right click to close the polyline and click OK to close the dialog.
 
 .. image:: ../img/Advanced-Workshop/Module056.png
 
@@ -943,22 +914,17 @@ Step 6: Correct invert elevation
 
 .. image:: ../img/Advanced-Workshop/Module068.png
 
-10.
-Click yes to save the changes.
+10. Click yes to save the changes.
 
 .. image:: ../img/Advanced-Workshop/Module069.png
 
-11.
-Select the User Layer Mode.
+11. Select the User Layer Mode.
 
-12.
-Click the Elevation Polygon Attributes check box.
+12. Click the Elevation Polygon Attributes check box.
 
-13.
-Click OK to perform the calculation and OK once it is finished.
+13. Click OK to perform the calculation and OK once it is finished.
 
-14.
-The cell elevation is now adjusted to the correct culvert invert.
+14. The cell elevation is now adjusted to the correct culvert invert.
 
 .. image:: ../img/Advanced-Workshop/Module070.png
 
@@ -981,27 +947,21 @@ Step 7: Save, export, and run.
 
 3. Go to the Storm Drain Widget and Export the swmm.inp file.
 
-4.
-Collapse all widgets.
+4. Collapse all widgets.
 
-5.
-Open Storm Drain widget.
+5. Open Storm Drain widget.
 
-6.
-Click Export SWMM.INP… button
+6. Click Export SWMM.INP… button
 
 .. image:: ../img/Advanced-Workshop/Module074.png
 
-7.
-Find the Module 2 Export.
+7. Find the Module 2 Export.
 
-8.
-Name the file swmm.inp and click Save.
+8. Name the file swmm.inp and click Save.
 
 .. image:: ../img/Advanced-Workshop/Module075.png
 
-9.
-Click OK to close both windows.
+9. Click OK to close both windows.
 
 .. image:: ../img/Advanced-Workshop/Module076.png
 
@@ -1412,13 +1372,12 @@ Step 6. Define the breach
 .. image:: ../img/Advanced-Workshop/Module113.png
 
 8.  Click inside the elevation field of the North direction.
-   That will turn it a different color and select it as the “fail direction”.
-   See the Pink field under the word North.
+    That will turn it a different color and select it as the “fail direction”.
+    See the Pink field under the word North.
 
 9.  Click the levee failure check box.
 
-10.
-Set the fail data and click Apply Change and Close.
+10. Set the fail data and click Apply Change and Close.
 
 .. image:: ../img/Advanced-Workshop/Module114.png
 
@@ -1539,23 +1498,19 @@ Step 10. Add a culvert
 
 9.  Go back to Step 9 and `export and run <#step-9.-export-and-run-the-model>`__ the model again.
 
-10.
-Copy the Orifice data from the Excel File.
+10. Copy the Orifice data from the Excel File.
 
 .. image:: ../img/Advanced-Workshop/Module133.png
 
-11.
-Select the first cell of the data table in QGIS and click the Paste Button.
+11. Select the first cell of the data table in QGIS and click the Paste Button.
 
 .. image:: ../img/Advanced-Workshop/Module134.png
 
-12.
-Click the Schematize Button.
+12. Click the Schematize Button.
 
 .. image:: ../img/Advanced-Workshop/Module135.png
 
-13.
-Turn on the Hydraulic Structures switch.
+13. Turn on the Hydraulic Structures switch.
 
 .. image:: ../img/Advanced-Workshop/Module136.png
 
@@ -1713,15 +1668,14 @@ Step 2. Load the hydrography map
 
 .. image:: ../img/Advanced-Workshop/Module148.png
 
-7.  Change the transparency.
+7. Change the transparency.
    Double click the layer.
 
-8.  Select the Transparency tab.
+8. Select the Transparency tab.
 
-9.  Set the opacity to 50%
+9. Set the opacity to 50%
 
-10.
-Click OK.
+10. Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module149.png
 
@@ -1819,20 +1773,15 @@ Step 8. Determine the total rainfall
 
 .. image:: ../img/Advanced-Workshop/Module158.png
 
-10.
-Save the data to the Hydrology folder.
+10. Save the data to the Hydrology folder.
 
-11.
-Set the coordinate system to EPSG 2229.
+11. Set the coordinate system to EPSG 2229.
 
-12.
-Reduce the size of the raster with the Map Canvas Extent button.
+12. Reduce the size of the raster with the Map Canvas Extent button.
 
-13.
-Add the saved file to the map.
+13. Add the saved file to the map.
 
-14.
-Click OK.
+14. Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module159.png
 
@@ -1941,14 +1890,11 @@ Step 12. Alternate infiltration method 2
 
 .. image:: ../img/Advanced-Workshop/Module169.png
 
-10.
-Collapse the FLO-2D widgets and click the Grid Tools widget.
+10. Collapse the FLO-2D widgets and click the Grid Tools widget.
 
-11.
-Click the Interpolate from Raster button.
+11. Click the Interpolate from Raster button.
 
-12.
-Fill the Elevation Sampling form and click OK to calculate and OK to close the message.
+12. Fill the Elevation Sampling form and click OK to calculate and OK to close the message.
 
 .. image:: ../img/Advanced-Workshop/Module170.png
 
@@ -2126,7 +2072,6 @@ Step 21. Save, export, and run again
 3. Part I Watershed Hydrology\Watershed Export.
 
 .. image:: ../img/Advanced-Workshop/Module089.png
-   :height: 0.35139in
 
 .. image:: ../img/Advanced-Workshop/Module192.png
 
@@ -2580,27 +2525,23 @@ Step 6. Create the breach point
 
 8.  Click the create a breach point button.
 
-9.  |Module290|\ Click the map where the breach should go and fill the table.
+.. image:: ../Advanced-Workshop/Module290.png
 
-10.
-You can choose a good location based on engineering judgment.
+9.  Click the map where the breach should go and fill the table.
 
-11.
-The data is listed in step 3, 4 and 5.
+10. You can choose a good location based on engineering judgment.
 
-12.
-Click OK to close the table.
+11. The data is listed in step 3, 4 and 5.
 
-13.
-If you mess up, Click Revert Breach Edits button and try again.
+12. Click OK to close the table.
+
+13. If you mess up, Click Revert Breach Edits button and try again.
 
 .. image:: ../img/Advanced-Workshop/Module231.png
 
-14.
-Go to the next page.
+14. Go to the next page.
 
-15.
-Complete the breach data in the widget.
+15. Complete the breach data in the widget.
 
 .. image:: ../img/Advanced-Workshop/Module232.png
 
@@ -2840,11 +2781,9 @@ Step 9. Tailings dam tool
 
 .. image:: ../img/Advanced-Workshop/Module251.png
 
-10.
-Set the graph to the blue box and Save the INFLOW.DAT file.
+10. Set the graph to the blue box and Save the INFLOW.DAT file.
 
-11.
-**Save the file to Module 7 Export.**
+11. **Save the file to Module 7 Export.**
 
 .. image:: ../img/Advanced-Workshop/Module252.png
 
@@ -2925,7 +2864,7 @@ Step 2: Import shapefiles for storm drain features
 
 2. Drag the 3 Shapefiles from Module 8 and drop the files in the map space.
 
-3. \*The shapefiles should be located inside the User Layer group.
+3. The shapefiles should be located inside the User Layer group.
 
 4. Clean up your screen a little if you want.
 
