@@ -1,8 +1,0 @@
-.. vim: syntax=rst
-
-======
-Module
-======
-
-.. toctree::
-    Module Tutorials.rest
