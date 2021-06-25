@@ -1,4 +1,4 @@
-name: Build and publish documentation
+name: Build and publish tutorial document
 
 # Controls when the action will run. 
 on:
@@ -7,8 +7,8 @@ on:
     branches: [ main ]
 
 jobs:
-  build_sphinx_documentation:
-    name: Building Sphinx documentation and uploading as an artifact
+  build_tutorial_document:
+    name: Building Sphinx tutorial document and uploading as an artifact
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +16,7 @@ jobs:
         name: Checking-out repository
   
       - uses: ammaraskar/sphinx-action@0.4
-        name: Building Sphinx documentation from source files
+        name: Building Sphinx tutorial document from the source files
         with:
           docs-folder: "./"
           build-command: "sphinx-build -b html source build"
@@ -24,12 +24,12 @@ jobs:
       - uses: actions/upload-artifact@v1
         name: Zipping and uploading HTML static files as an artifact
         with:
-          name: FLO2D_QGIS_Plugin_Documentation
+          name: FLO2D_Tutorial
           path: build/
 
-  publish_user_documentation:
-      name: Publishing user documentation
-      needs: [build_sphinx_documentation]
+  publish_tutorial_document:
+      name: Publishing tutorial document
+      needs: [build_tutorial_document]
       runs-on: ubuntu-latest
       steps:
       - uses: actions/download-artifact@v2
@@ -37,7 +37,7 @@ jobs:
           name: FLO2D_Tutorial
           path: build/
 
-      - name: Commiting documentation changes
+      - name: Commiting tutorial document changes
         run: |
           git clone https://github.com/ammaraskar/sphinx-action-test.git --branch gh-pages --single-branch gh-pages
           cp -r build/* gh-pages/
@@ -45,7 +45,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "Update documentation" -a || true
+          git commit -m "Update tutorial" -a || true
           # The above command will fail if no changes were present, so we ignore
           # the return code.
   
