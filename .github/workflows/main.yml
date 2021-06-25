@@ -1,4 +1,4 @@
-name: Build and publish user documentation
+name: Build and publish documentation
 
 # Controls when the action will run. 
 on:
