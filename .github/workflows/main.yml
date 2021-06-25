@@ -4,7 +4,7 @@ name: Build and publish documentation
 on:
   # Triggers the workflow on push only for the master branch
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   build_sphinx_documentation:
