@@ -16,7 +16,7 @@ Load Elevation Points
 .. image:: ../../img/Sample-Elevation-From-Points/Sample002.png
 
 Apply a Style
--------------
+--------------
 
 The data has a default style so it isn’t very easy to view elevation.
 
@@ -46,7 +46,7 @@ The data has a default style so it isn’t very easy to view elevation.
 .. image:: ../../img/Sample-Elevation-From-Points/Sample004.png
 
 Sample Data
------------
+------------
 
 1. Click the *Assign Elevation
    to Grid from Points Layer* icon to interpolate the elevation data to the grid.
@@ -76,7 +76,7 @@ Sample Data
 .. image:: ../../img/Sample-Elevation-From-Points/Sample009.png
 
 LiDAR Data
-----------
+-----------
 
 The LiDAR method can interpolate data from multiple files.
 It applies a simple average to the point within a cell and can patch missing LiDAR elevation from areas that are filtered from the ground data
@@ -115,7 +115,7 @@ category.
 .. image:: ../../img/Sample-Elevation-From-Points/Sample013.png
 
 Troubleshooting
----------------
+----------------
 
 1. If the elevation data is not visible, check the CRS.
    It may be necessary to transform the data into the correct CRS.

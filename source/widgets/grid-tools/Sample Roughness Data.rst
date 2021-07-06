@@ -2,7 +2,7 @@ Sample Roughness Data
 =====================
 
 Overview
---------
+---------
 
 In this task, the spatially variable manning’s roughness is calculated from a polygon shapefile.
 The polygons represent roughness associated with different LandUse categories such as building, street, grass, desert brush and many others.
@@ -21,7 +21,7 @@ This layer requires a polygon shapefile with roughness data or digitized data as
 The tool will calculate Manning’s roughness values with three different processes.
 
 Roughness Polygon Intersection
-------------------------------
+-------------------------------
 
 2. To calculate a weighted average of manning’s polygons
    to grid element polygons, use the Source Layer and Intersect cell rectangle option.
@@ -29,7 +29,7 @@ Roughness Polygon Intersection
 .. image:: ../../img/Sample-Roughness-Data/sample004.png
 
 Roughness Point Sample
-----------------------
+-----------------------
 
 3. To calculate a point sample from the centroid
    of the grid element on the manning’s polygons, use the Source Layer and Intersect cell centroid option.
