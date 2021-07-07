@@ -223,7 +223,7 @@ In part 2, the data from the previous lesson is extended with a new generalized 
 .. _required-data-2:
 
 Required Data
-=============
+--------------
 
 The required data is in Module 1 and 2
 
@@ -342,9 +342,11 @@ Step 6: Correct invert elevation
 
 4. Use the ID tool to find the invert elevation of the upstream side of the culvert.
 
-.. image:: ../img/Advanced-Workshop/Module065.png
+.. image:: ../img/Advanced-Workshop/Module064a.png
 
-5. The elevation of the culvert is 1990.29 ft.
+5. 5.	The Identify Results table shows the grid element elevation (purple arrow) and the ras-ter elevation (green arrow).
+
+.. image:: ../img/Advanced-Workshop/Module065.png
 
 6. Create a feature in the Elevation Polygon layer and assign the corrected elevation to that feature.
 
@@ -577,8 +579,10 @@ Step 3: Build the cross section data
 
 .. image:: ../img/Advanced-Workshop/Module087.png
 
-1. [CHART]The cross section data for L\ :sub:`1-2` is taken from the cross section table of Cross-Section-60 and the Bridge cross section estimated based
+1. The cross section data for L\ :sub:`1-2` is taken from the cross section table of Cross-Section-60 and the Bridge cross section estimated based
    on the geometry of the bridge.
+
+.. image:: ../img/Advanced-Workshop/step3.png
 
 ====== ====== ======
 X      6657

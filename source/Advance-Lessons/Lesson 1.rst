@@ -6,7 +6,7 @@ Module 1, Project Recovery and Debug
 This module will show you how to build a recovery point and debug a FLO-2D Data Set.
 
 Required Data
-=============
+-------------
 
 The required data is in Module 1.
 
@@ -86,6 +86,10 @@ Step 4: Export the FLO-2D data
 .. image:: ../img/Advanced-Workshop/Module010.png
 
 .. image:: ../img/Advanced-Workshop/Module011.png
+
+**Important note:**  If the image above doesn’t look like the window on your screen, you may be accessing the “Lesson 1.gpkg” in the Self-Help training packages.   Delete the old file and return to Step 3.
+"C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.gpkg".
+
 
 2. Click OK and navigate to the export folder.
    Select the folder and export.
@@ -168,7 +172,6 @@ Step 6: Debug the project in QGIS
 
 10. Close the form when you are sated.
 
-.. image:: ../img/Advanced-Workshop/Module026.png
 
 Step 7: Load the conflict table
 -------------------------------
@@ -196,7 +199,7 @@ Step 8: Load the levee table
 
 2. Select Levee crests and click OK.
 
-.. image:: ../img/Advanced-Workshop/Module027.png
+.. image:: ../img/Advanced-Workshop/Module026.png
 
 3. Click Close to close the form. This one is not so useful.
 

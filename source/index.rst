@@ -29,7 +29,14 @@ Table of Contents
    :maxdepth: 1
    :caption: Advanced Lessons:
 
-   /Advanced-Lessons/Lesson 1
+   /Advance-Lessons/Lesson 1
+   /Advance-Lessons/Lesson 2
+   /Advance-Lessons/Lesson 3
+   /Advance-Lessons/Lesson 5
+   /Advance-Lessons/Lesson 6
+   /Advance-Lessons/Lesson 7
+   /Advance-Lessons/Lesson 8
+   /Advance-Lessons/Lesson 9
 
 
 

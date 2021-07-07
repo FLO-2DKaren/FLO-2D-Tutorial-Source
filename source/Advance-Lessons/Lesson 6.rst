@@ -1,4 +1,3 @@
-
 Module 6 – Erosion Dam Breach
 =============================
 
@@ -10,7 +9,7 @@ In this instance, the reservoir is filled but the pre-reservoir elevation is kno
 .. _required-data-7:
 
 Required Data
-=============
+--------------
 
 The required data is in Module 6.
 
@@ -178,8 +177,6 @@ Step 6. Create the breach point
 
 .. image:: ../img/Advanced-Workshop/Module229.png
 
-.. image:: ../img/Advanced-Workshop/Module289.png
-
 2. Select a breach location. This location can represent a
    weak point on a dam.
 
@@ -208,7 +205,7 @@ Step 6. Create the breach point
 
 8.  Click the create a breach point button.
 
-.. image:: ../Advanced-Workshop/Module290.png
+.. image:: ../Advanced-Workshop/number8.png
 
 9.  Click the map where the breach should go and fill the table.
 
@@ -218,13 +215,13 @@ Step 6. Create the breach point
 
 12. Click OK to close the table.
 
+.. image:: ..//Advanced-Workshop/number12.png
+
 13. If you mess up, Click Revert Breach Edits button and try again.
 
 .. image:: ../img/Advanced-Workshop/Module231.png
 
-14. Go to the next page.
-
-15. Complete the breach data in the widget.
+14. Complete the breach data in the widget.
 
 .. image:: ../img/Advanced-Workshop/Module232.png
 

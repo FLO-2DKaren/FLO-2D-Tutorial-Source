@@ -8,7 +8,7 @@ In this tutorial, use QGIS and the tailings dam tool to create a tailings dam fa
 .. _required-data-8:
 
 Required Data
-=============
+-------------
 
 The required data is in Module 7.
 

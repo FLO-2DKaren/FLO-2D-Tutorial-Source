@@ -13,7 +13,7 @@ Part II will apply mudflow parameters to the watershed hydrograph.
 .. _required-data-5:
 
 Required Data
-=============
+-------------
 
 The required data is in Module 5 Watershed Mudflow Tutorial.
 This is a new project.
@@ -121,11 +121,15 @@ Step 5. Interpolate Elevation.
 Step 6. Calculate Roughness
 ---------------------------
 
-1. Click the Calculate roughness button.
+1. Check the LandSoil Layer is turned on.
 
-2. Fill the form and click OK.
+.. image:: ../img/Advanced-Workshop/step6.png
 
-3. Click OK to close the message form.
+2. Click the Calculate roughness button.
+
+3. Fill the form and click OK.
+
+4. Click OK to close the message form.
 
 .. image:: ../img/Advanced-Workshop/Module153.png
 
@@ -169,19 +173,21 @@ Step 8. Determine the total rainfall
 
 8. These pixels are rainfall in inches \* 1000.
 
-9. Right click the layer and Export the data.
+9. Use the Export option to save the data in the correct coordinate system and clipped to the project area.
+
+10. Right click the layer and Export the data.
 
 .. image:: ../img/Advanced-Workshop/Module158.png
 
-10. Save the data to the Hydrology folder.
+11. Save the data to the Hydrology folder.
 
-11. Set the coordinate system to EPSG 2229.
+12. Set the coordinate system to EPSG 2229.
 
-12. Reduce the size of the raster with the Map Canvas Extent button.
+13. Reduce the size of the raster with the Map Canvas Extent button.
 
-13. Add the saved file to the map.
+14. Add the saved file to the map.
 
-14. Click OK.
+15. Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module159.png
 
@@ -377,6 +383,8 @@ Step 17. Reload the infiltration data.
 
 4. The curve number values are now correct.
 
+5. Click the scsn field to sort the curve number from high to low to validate the range of data.
+
 .. image:: ../img/Advanced-Workshop/Module181.png
 
 Step 18. Save, export, and run
@@ -495,7 +503,7 @@ Part II will apply mudflow parameters to the watershed hydrograph.
 .. _required-data-6:
 
 Required Data
-=============
+--------------
 
 The required data is in Module 5 Part II Mudflow folder.
 This is a new project.
