@@ -141,7 +141,7 @@ Adopted Geotechnical Parameters.
 Source: Periodic Safety Review Vale TUV SUD (2017).
 
 Step 7. Foundation geotechnical data from TUV report
-----------------------------------------------------
+-----------------------------------------------------
 
 NSPT silty clay between 5 and 11 strokes
 

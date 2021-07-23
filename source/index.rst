@@ -15,6 +15,12 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
+   :caption: Installation:
+
+   Introduction
+
+.. toctree::
+   :maxdepth: 1
    :caption: Workshops:
 
    /Workshops/workshop
