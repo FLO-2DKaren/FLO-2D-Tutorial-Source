@@ -17,7 +17,7 @@ Table of Contents
    :maxdepth: 1
    :caption: Installation:
 
-   Introduction
+   /Intro/Introduction
 
 .. toctree::
    :maxdepth: 1

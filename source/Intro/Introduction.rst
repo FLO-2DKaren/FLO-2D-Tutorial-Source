@@ -8,23 +8,23 @@ an Advanced Modules course.
 
 On this page you will find all the resources and instructions needed, to successfully
 set your computer up for FLO-2D's self-guided training. Below is a video with a step by step installation guide.
-Its recommended that you follow along, to prevent any hiccups otherwise.
+It is recommended that you follow along to prevent any hiccups otherwise.
 
 .. youtube:: WKUcyMpqa6M
 
 
 Step 1: File Link
 --------------------
-Click `here <https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668>_`
+Click `here <https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668>`__
 to access all the files you'll need to download for the course.
 
 .. image:: ../img/Instructions/image1.png
 
-1. Select all
+1. Select all.
 
-2. Download
+2. Download.
 
-3. Extract all
+3. Extract all.
 
 .. image:: ../img/Instructions/image2.png
 
@@ -82,7 +82,7 @@ With QGIS installed we're going to add the FLO-2D plugin.
 
 .. image:: ../img/Instructions/image10.png
 
-3. Install Quick Map Services and Profile Tool
+3. Install Quick Map Services and Profile Tool.
 
 .. image:: ../img/Instructions/image11.png
 
@@ -96,7 +96,7 @@ You have everything you need to start the lessons. If you followed the instructi
 correctly, the lesson files should already be on your computer.
 
 To access them go to
-`C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects`
+`C:\ Users \ Public \ Documents \ FLO-2D PRO Documentation \ Example Projects`
 
 .. image:: ../img/Instructions/image9.png
 
