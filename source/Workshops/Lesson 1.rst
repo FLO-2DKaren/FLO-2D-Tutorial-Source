@@ -1,5 +1,5 @@
-Lesson 1, Part 1 – QGIS FLO-2D Plugin Getting Started
-=====================================================
+Lesson 1 Part 1 – Getting Started
+==================================
 
 Overview
 ________
@@ -268,8 +268,8 @@ ___________________________
 .. image:: ../img/Workshop/Worksh023.png
 
 
-Lesson 1, Part 2 – Project Recovery Methods
--------------------------------------------
+Lesson 1 Part 2 – Project Recovery Methods
+==========================================
 
 .. _overview-1:
 
@@ -383,8 +383,8 @@ ________________________
 .. image:: ../img/Workshop/Worksh030.png
 
 
-Lesson 1, Part 3 – Hydrology, Rainfall, and Infiltration
---------------------------------------------------------
+Lesson 1 Part 3 – Hydrology, Rainfall, and Infiltration
+=======================================================
 
 
 
