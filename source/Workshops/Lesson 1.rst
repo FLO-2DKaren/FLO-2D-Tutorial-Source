@@ -27,7 +27,7 @@ The lesson makes use of terrain elevation data, project domain, roughness data, 
 
    * - Elevation.tif
      - Digital terrain raster
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 1 PRO
+     - QGIS Lesson 1 Pro
 
    * - Project Domain.shp
      - Polygon for project domain
@@ -42,7 +42,7 @@ The lesson makes use of terrain elevation data, project domain, roughness data, 
      -
 
 
-\*\ *Project Location C:\Users\Public\Documents\FLO-2D PRO Documentation*
+Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
 
@@ -51,36 +51,24 @@ ______________________
 
 To setup a FLO-2D flood simulation use these steps.
 
-1.  Open the QGIS program;
-
+1.  Open QGIS;
 2.  Import the project domain;
-
 3.  Set up the project;
-
 4.  Create the grid;
-
 5.  Save the project
-
 6.  Assign the elevation to the grid;
-
-7.  Assign Manning’s data to the grid;
-
-8.  Assign Control variables;
-
+7.  Assign roughness data to the grid;
+8.  Assign control variables;
 9.  Save the project;
-
-10.
-Export the FLO-2D data files;
-
-11.
-Run the FLO-2D model.
+10.  Export the FLO-2D data files;
+11.  Run the FLO-2D model.
 
 Step 1: Open QGIS
 _________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
-Search the start menu and run the “QGIS Desktop” program.
+Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
 
 Click the New Project icon to load a new map.
 
@@ -92,10 +80,10 @@ _________________________________
 
 1. Open the project folder
 
-2. Drag the file **Project Domain.shp** onto the map space.
+2. Drag the file Project Domain.shp onto the map space.
    This will set the CRS to the correct EPSG code.
 
-C:\Users\Public\Documents\FLO-2D PRO Documentation \\Example Projects\QGIS Tutorials\QGIS Lesson 1\Project domain.shp
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Project domain.shp
 
 .. image:: ../img/Workshop/Worksh004.png
 
@@ -108,7 +96,7 @@ _________________________________
 1. Click the Set-up icon fill out the dialog box as shown below.
    Set the Grid cell size to 30 ft.
 
-2. Click *Create*.
+2. Click Create.
 
 .. image:: ../img/Workshop/Worksh006.png
 
@@ -116,23 +104,22 @@ _________________________________
 
 4. Name the file Lesson 1.gpkg.
 
-..
 
-   **C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1.gpkg
 
 5. Set the project CRS to Arizona Central (ft).
    Filter the list with an EPSG code: 2223.
-   Select EPSG: 2223 and click *OK.*
+   Select EPSG: 2223 and click OK.
 
 .. image:: ../img/Workshop/Worksh007.png
 
 
-6. Wait for the geopackage to write and check the accuracy of the project settings and click *OK*.
+6. Wait for the geopackage to write and check the accuracy of the project settings and click OK.
 
 Step 4: Create the grid
 _______________________
 
-1. From the Grid Tools widget, select *Create Grid*.
+1. From the Grid Tools widget, select Create Grid.
 
 .. image:: ../img/Workshop/Worksh008.png
 
@@ -157,27 +144,27 @@ ________________________
 
 2. Navigate to the Lesson folder, name the project Lesson 1.qgz and click Save.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.qgz**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1.qgz
 
 Step 6: Assign grid elevation
 _____________________________
 
 1. Import the elevation file.
-   Open the project folder and drag the **Elevation.tif** file onto the map space.
+   Open the project folder and drag the Elevation.tif file onto the map space.
 
 .. image:: ../img/Workshop/Worksh012.png
 
 
-2. To interpolate the elevation to a grid layer from a raster layer, use the *Sample Grid Elevation* icon.
+2. To interpolate the elevation to a grid layer from a raster layer, use the Sample Grid Elevation icon.
 
 .. image:: ../img/Workshop/Worksh013.png
 
 
-3. Click on the *Sample Grid Elevation* icon and enter the required data in the dialog fields and click *OK*.
+3. Click on the Sample Grid Elevation icon and enter the required data in the dialog fields and click OK.
 
-4. As shown below, when the elevation sample is complete, the Select the *Fill NoDATA* option to set the elevation of empty grid elements from neighbors.
+4. As shown below, when the elevation sample is complete, the Select the Fill NoDATA option to set the elevation of empty grid elements from neighbors.
 
-5. *Sampling Done* dialog box will appear.
+5. Sampling Done dialog box will appear.
    Close it.
 
 .. image:: ../img/Workshop/Worksh153.png
@@ -197,7 +184,7 @@ _____________________________
 .. image:: ../img/Workshop/Worksh015.png
 
 
-3. Fill the dialog box and click *OK*.
+3. Fill the dialog box and click OK.
    Once the sample is complete, the following window will appear.
    Close the window.
 
@@ -212,13 +199,13 @@ The roughness values and elevations are assigned to the grid layer in the Schema
 Step 8: Assign Control variables
 ________________________________
 
-1. Click the *Set Control Parameters* Icon.
+1. Click the Set Control Parameters Icon.
 
 .. image:: ../img/Workshop/Worksh017.png
 
 
 2. Fill the dialog box using the two figures below.
-   Save the data to the GeoPackage with the *Save* icon.
+   Save the data to the GeoPackage with the Save icon.
    The variable descriptions and instructions are presented in the Data Input Manual.
 
 .. image:: ../img/Workshop/Worksh018.png
@@ -230,7 +217,7 @@ ________________________________
 Step 9: Save the project
 ________________________
 
-1. Click the main *Save* icon on the QGIS toolbar.
+1. Click the main Save icon on the QGIS toolbar.
 
 .. image:: ../img/Workshop/Worksh020.png
 
@@ -240,30 +227,30 @@ ___________________________
 
 1. Save project, then continue to export the project data into the FLO-2D format.
 
-2. Click the *GDS Export* icon.
+2. Click the GDS Export icon.
 
 .. image:: ../img/Workshop/Worksh021.png
 
 
-3. Navigate to the project folder and click *Select* Folder.
+3. Navigate to the project folder and click Select Folder.
 
 C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Project Export
 
 Step 11: Run the simulation
 ___________________________
 
-1. Click on the *Run FLO-2D* icon.
+1. Click on the Run FLO-2D icon.
 
 .. image:: ../img/Workshop/Worksh022.png
 
 
 2. Set the FLO-2D Pro folder.
-   **C:\program files (x86)\flo-2d pro**
+   C:\\program files (x86)\\flo-2d pro
 
 3. Set the Project folder.
-   **C:\users\public\documents\flo-2d pro documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1**
+   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\
 
-4. Click *OK* to Run the simulation.
+4. Click OK to Run the simulation.
 
 .. image:: ../img/Workshop/Worksh023.png
 
@@ -296,7 +283,7 @@ The lesson has a QGIS project file, Geopackage file, FLO-2D Data Export files an
 
    * - Lesson 1.qgz
      - Digital terrain raster
-     - \\Example Projects\QGIS Tutorials\QGIS Tutorials\QGIS Lesson 1 PRO
+     - QGIS Lesson 1 PRO
 
    * - Lesson 1.gpkg
      - Polygon for project domain
@@ -307,7 +294,7 @@ The lesson has a QGIS project file, Geopackage file, FLO-2D Data Export files an
      -
 
 
-\*\ *Project Location C:\Users\Public\Documents\FLO-2D Documentation*
+Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\
 
 Check these folders to ensure the data is available before starting the lesson.
 Lesson 1, Part 1 should be completed first.
@@ -320,25 +307,19 @@ ______________________
 To create recovery backup system, follow these steps:
 
 1. Create a recovery file;
-
 2. Recover a project;
-
 3. Open project;
-
-4. Load a GeoPackage from previous FLO-2D Plugins build;
-
-5. Recover data from a corrupt GeoPackage file;
 
 Step 1: Create a recovery file
 ______________________________
 
 1. Open QGIS Lesson 1 in a File Browser.
-   Select the **Lesson 1.gpkg** and **Lesson 1.qgz** files and zip them.
+   Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
    This will create a recovery file.
 
 2. Name the zipped file.
    It is good to choose a name that identifies project progress.
-   For Example: **Lesson 1 n-value OK.zip**.
+   For Example: Lesson 1 n-value OK.zip.
 
 .. image:: ../img/Workshop/Worksh024.png
 
@@ -349,13 +330,13 @@ _________________________
 This step is used when project data is corrupt.
 If a project is not exporting data correctly or a mistake is made, use this method.
 
-1. In the Lesson 1 Folder, select **Lesson 1.gpkg** and **Lesson 1.qgz** and delete them both.
+1. In the Lesson 1 Folder, select Lesson 1.gpkg and Lesson 1.qgz and delete them both.
 
 .. image:: ../img/Workshop/Worksh025.png
 
 
 2. Extract the recovery files.
-   The example below uses **Lesson 1 Recovery Files.zip.** Either use this file or the file created in **Step 1**.
+   The example below uses Lesson 1 Recovery Files.zip. Either use this file or the file created in Step 1.
 
 .. image:: ../img/Workshop/Worksh026.png
 
@@ -386,8 +367,6 @@ ________________________
 Lesson 1 Part 3 – Hydrology, Rainfall, and Infiltration
 =======================================================
 
-
-
 Overview
 ________
 
@@ -395,8 +374,6 @@ This lesson will outline the process for setting up a rainfall runoff model usin
 infiltration data.
 This lesson is a continuation Lesson 1.
 If Lesson 1 cannot be loaded, it can be recovered from the Lesson 1 Recovery Files.zip.
-
-
 
 Required Data
 _____________
@@ -414,7 +391,7 @@ The lesson makes use of rainfall distribution, rain arf, landuse and soil data.
 
    * - SCS 24-Hr Type II
      - Rainfall Distribution Curve
-     - \\Example Projects\QGIS Tutorials\QGIS Tutorials\QGIS Lesson 1 PRO\Hydrology
+     - QGIS Lesson 1 PRO\\Hydrology
 
    * - NOAA Atlas 14
      - Rainfall depth reduction
@@ -429,7 +406,7 @@ The lesson makes use of rainfall distribution, rain arf, landuse and soil data.
      -
 
 
-\*\ *Project Location C:\Users\Public\Documents\FLO-2D PRO Documentation*
+Project location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\
 
 Check these folders to ensure the data is available before starting the lesson.
 
@@ -440,55 +417,42 @@ Step-by-Step Procedure
 
 To setup a FLO-2D flood simulation use these steps.
 
-4.  Open the QGIS program;
-
-5.  Load Lesson 1;
-
-6.  Import aerial images;
-
-7.  Assign inflow;
-
-8.  Assign rainfall;
-
-9.  Assign infiltration
-
-10.
-Check control variables;
-
-11.
-Save the project;
-
-12.
-Export the FLO-2D data files;
-
-13.
-Run the FLO-2D model.
+1.  Open the QGIS program;
+2.  Load Lesson 1;
+3.  Import aerial images;
+4.  Assign inflow;
+5.  Assign rainfall;
+6.  Assign infiltration
+7.  Check control variables;
+8.  Save the project;
+9.  Export the FLO-2D data files;
+10.  Run the FLO-2D model.
 
 .. _step-1-open-qgis-1:
 
 .. image:: ../img/Workshop/Worksh002.png
 
 Step 1: Open QGIS
-___________________________
+___________________
 
-Search the start menu and run the “QGIS Desktop” program.
+Search the start menu and run the QGIS Desktop program.
 
 Step 2: Load Lesson 1
 _____________________
 
 1. Open the project folder.
 
-2. Drag the file **Lesson 1.qgz** onto the map space.
+2. Drag the file Lesson 1.qgz onto the map space.
    If the file is missing.
    Extract it from the zipped recovery file.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.qgz**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1.qgz
 
 .. image:: ../img/Workshop/Worksh157.png
 
 .. image:: ../img/Workshop/Worksh158.png
 
-3. Click *Yes* to load the model.
+3. Click Yes to load the model.
 
 .. image:: ../img/Workshop/Worksh031.png
 
@@ -500,14 +464,14 @@ Inflow nodes are set up using the Boundary Condition Editor widget.
 
 1. Load an aerial image to help with placement.
 
-2. Use *Quick Map Services Plugin* with the *Contributed Pack* to load aerial images into the layer.
+2. Use Quick Map Services Plugin with the Contributed Pack to load aerial images into the layer.
 
 .. image:: ../img/Workshop/Worksh032.png
 
 
-*Note: If this plugin is not available, aerial images are saved to QGIS Lesson 1/Aerials folder.*
+**Note: If an internet connection is not available, aerial images are saved to QGIS Lesson 1/Aerials folder.**
 
-*Note: If you do not see the Google maps, go toQuick Map Services/Settings/More Services/Get Contributed Pack.*
+**Note: If you do not see the Google maps, go to Quick Map Services/Settings/More Services/Get Contributed Pack.**
 
 Step 4: Add inflow node
 _______________________
@@ -518,17 +482,17 @@ _______________________
 .. image:: ../img/Workshop/Worksh033.png
 
 
-2. Click the *Add point BC* icon.
+2. Click the Add point BC icon.
 
 .. image:: ../img/Workshop/Worksh034.png
 
 
-3. Click the cell indicated on the map in the following image and click *OK* to close the window.
+3. Click the cell indicated on the map in the following image and click OK to close the window.
 
 .. image:: ../img/Workshop/Worksh035.png
 
 
-4. Click *Save* to load the data into the editor.
+4. Click Save to load the data into the editor.
 
 5. Updated the BC name and the Time series name.
 
@@ -538,21 +502,21 @@ _______________________
 6. The inflow hydrograph is stored in a text file in the project folder.
    Open this file in Notepad.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\GroverBasinIfnlow 24hr 100yr.txt**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrolgoy\\Ifnlow 24hr 100yr.txt
 
 .. image:: ../img/Workshop/Worksh037.png
 
 
-**CTRL – A** will select all data.
+CTRL – A will select all data.
 
-**CTRL – C** will copy the data.
+CTRL – C will copy the data.
 
-**CTRL – W** will close the file.
+CTRL – W will close the file.
 
 .. image:: ../img/Workshop/Worksh038.png
 
 
-7. *Select* the first cell of the FLO-2D Table Editor Table and click *Paste*.
+7. Select the first cell of the FLO-2D Table Editor Table and click Paste.
 
 .. image:: ../img/Workshop/Worksh039.png
 
@@ -571,17 +535,17 @@ Step 5: Assign rainfall
 _______________________
 
 1. Import the NOAA Atlas rainfall map.
-   Open the project folder and drag the **NOAA Atlas 14 24hr 100yr.tif** file onto the map space.
+   Open the project folder and drag the NOAA Atlas 14 24hr 100yr.tif file onto the map space.
 
 .. image:: ../img/Workshop/Worksh042.png
 
 2. Uniform rainfall requires the total rain in inches or millimeters and a rainfall distribution.
-   **Set that to 3.74 Inches**.
+   Set that to 3.74 Inches.
 
 3. The rainfall distribution is in a rainfall distribution data file.
-   Click the *Import* icon and load the data file from QGIS Lesson 1.
+   Click the Import icon and load the data file from QGIS Lesson 1.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Hydrology\SCS 24-Hr Type II.DAT**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\SCS 24-Hr Type II.DAT
 
 .. image:: ../img/Workshop/Worksh043.png
 
@@ -599,11 +563,11 @@ _______________________
 
 .. image:: ../img/Workshop/Worksh162.png
 
-1. Click the *Area Reduction* icon.
+6. Click the Area Reduction icon.
 
-2. Fill the form and click OK.
+7. Fill the form and click OK.
 
-3. The raster pixels are typically 1000 by 1000 ft or larger.
+8. The raster pixels are typically 1000 by 1000 ft or larger.
    It is not necessary to average the data.
    Fill the dialog box as shown below and click OK to calucate and OK to confirm the data was written to file.
 
@@ -613,15 +577,15 @@ _______________________
 Step 6: Assign infiltration
 ___________________________
 
-1. Drag the file **Land Use.shp** onto the map space.
+1. Drag the file Land Use.shp onto the map space.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\FLO-2D Pro Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Hydrology\Land Use.shp**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\Land Use.shp
 
 .. image:: ../img/Workshop/Worksh046.png
 
-2. Drag the file **Soil.shp** onto the map space.
+2. Drag the file Soil.shp onto the map space.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\FLO-2D Pro Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Hydrology\Soil.shp**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\Soil.shp
 
 .. image:: ../img/Workshop/Worksh047.png
 
@@ -630,10 +594,10 @@ ___________________________
 .. image:: ../img/Workshop/Worksh048.png
 
 
-4. Check the **Global** **Green** **Ampt** switch and fill the global variables.
+4. Check the Global Green Ampt switch and fill the global variables.
    The Global variables will be used for any cell that is not defined by the F lines in the spatially variable data assigned to INFIL.DAT.
 
-5. Click **OK** to close.
+5. Click OK to close.
 
 .. image:: ../img/Workshop/Worksh049.png
 
@@ -655,9 +619,9 @@ ___________________________
 Step 7: Check control variables
 _______________________________
 
-1. Click the **Control** **Parameters** **Icon**.
-   Make sure the **Rain** and **Infiltration** switches are turned on.
-   Click **Save** to **Close**.
+1. Click the Control Parameters Icon.
+   Make sure the Rain and Infiltration switches are turned on.
+   Click Save to Close.
 
 .. image:: ../img/Workshop/Worksh017.png
 
@@ -683,12 +647,12 @@ __________________________
 .. image:: ../img/Workshop/Worksh021.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Project Export**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Project Export
 
 Step 10: Run the simulation
 ___________________________
 
-1. Click on the *Run FLO-2D* icon.
+1. Click on the Run FLO-2D icon.
 
 .. image:: ../img/Workshop/Worksh005.png
 
@@ -698,7 +662,7 @@ ___________________________
 
 3. Set the Project folder.
 
-**C:\users\public\documents\flo-2d pro documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1 Export**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1 Export
 
 .. image:: ../img/Workshop/Worksh054.png
 
