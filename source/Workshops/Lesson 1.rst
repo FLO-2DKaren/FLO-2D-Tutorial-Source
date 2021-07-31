@@ -7,7 +7,7 @@ ________
 This lesson will outline the process of setting up a FLO-2D project using the Plugin for QGIS.
 Setting up the computational domain, creating a grid, interpolating elevation data and spatially variable roughness.
 
-This video will guide you through the lesson.
+Step by step instructions are below and this video will add detail to the lesson.
 
 .. youtube:: vU9qQDuZpfY
 
@@ -55,7 +55,7 @@ To setup a FLO-2D flood simulation use these steps.
 2.  Import the project domain;
 3.  Set up the project;
 4.  Create the grid;
-5.  Save the project
+5.  Save the project;
 6.  Assign the elevation to the grid;
 7.  Assign roughness data to the grid;
 8.  Assign control variables;
@@ -68,12 +68,11 @@ _________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
-Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
+1. Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
 
-Click the New Project icon to load a new map.
+2. Click the New Project icon to load a new map.
 
 .. image:: ../img/Workshop/Worksh003.png
-
 
 Step 2: Import the project domain
 _________________________________
@@ -84,6 +83,8 @@ _________________________________
    This will set the CRS to the correct EPSG code.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Project domain.shp
+
+**Note:  If the image is not clear, use Firefox browser or open the image in a new tab.**
 
 .. image:: ../img/Workshop/Worksh004.png
 
@@ -124,7 +125,10 @@ _______________________
 .. image:: ../img/Workshop/Worksh008.png
 
 
-2. Select the Project Domain layer, and the Cell Size field and click OK
+2. Select the Project Domain layer, and the Cell Size field and click OK.
+
+**Note: If a shapefile is not available, Digitize the project domain in the Computational Domain Layer.**
+**Note: In order to align the grid to a raster, load the raster file into the dialog box.**
 
 .. image:: ../img/Workshop/Worksh009.png
 
@@ -162,18 +166,20 @@ _____________________________
 
 3. Click on the Sample Grid Elevation icon and enter the required data in the dialog fields and click OK.
 
-4. As shown below, when the elevation sample is complete, the Select the Fill NoDATA option to set the elevation of empty grid elements from neighbors.
+4. Sampling Done dialog box will appear once the process is complete.
+   Click OK to close it.
 
-5. Sampling Done dialog box will appear.
-   Close it.
+**Note: Use the Fill NoData option if the elevation raster is missing data such as buildings.**
+**Note: This method uses the GDAL Warp processing tool.  To learn more about GDAL Warp, visit this page:
+        https://gdal.org/programs/gdalwarp.html.**
 
 .. image:: ../img/Workshop/Worksh153.png
 .. image:: ../img/Workshop/Worksh154.png
 
-Step 7: Assign Manning’s data
+Step 7: Assign Roughness data
 _____________________________
 
-1. Import the sample roughness file.
+1. Import the shapefile.
    Open the project folder and drag the Mannings n.shp file onto the map space.
 
 .. image:: ../img/Workshop/Worksh014.png
@@ -219,22 +225,20 @@ ________________________
 
 1. Click the main Save icon on the QGIS toolbar.
 
-.. image:: ../img/Workshop/Worksh020.png
+.. image:: ../img/Workshop/Worksh011.png
 
 
 Step 10: Export the project
 ___________________________
 
-1. Save project, then continue to export the project data into the FLO-2D format.
-
-2. Click the GDS Export icon.
+1. Click the FLO-2D Data Export icon.
 
 .. image:: ../img/Workshop/Worksh021.png
 
 
 3. Navigate to the project folder and click Select Folder.
 
-C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Project Export
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Project Export
 
 Step 11: Run the simulation
 ___________________________
@@ -245,10 +249,10 @@ ___________________________
 
 
 2. Set the FLO-2D Pro folder.
-   C:\\program files (x86)\\flo-2d pro
+   C:\\Program Files (x86)\\FLO-2D Pro
 
 3. Set the Project folder.
-   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\
+   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1 Export Folder
 
 4. Click OK to Run the simulation.
 
@@ -264,6 +268,7 @@ Overview
 ________
 
 Lesson 1, Part 2 is a practical study of managing a FLO-2D project that was constructed using QGIS and the FLO-2D Plugin.
+Use this tutorial to learn how to build a recovery or backup point and recover corrupted data.
 
 .. _required-data-1:
 
@@ -282,15 +287,15 @@ The lesson has a QGIS project file, Geopackage file, FLO-2D Data Export files an
      - **Location**
 
    * - Lesson 1.qgz
-     - Digital terrain raster
+     - QGIS file
      - QGIS Lesson 1 PRO
 
    * - Lesson 1.gpkg
-     - Polygon for project domain
+     - FLO-2D GeoPackage
      -
 
    * - \*.DAT files
-     - Shapefile for spatially variable roughness
+     - FLO-2D data files
      -
 
 
@@ -308,7 +313,7 @@ To create recovery backup system, follow these steps:
 
 1. Create a recovery file;
 2. Recover a project;
-3. Open project;
+3. Open project.
 
 Step 1: Create a recovery file
 ______________________________
@@ -359,7 +364,8 @@ ________________________
 .. image:: ../img/Workshop/Worksh029.png
 
 
-3. If the project folder changes, open the project but click No on the Load Model box and Yes to load the model from the current directory.
+**Note:  If the project path changes, the plugin will recognize the path change and try to load the model from the new path.**
+**Note:  If the project path changes but an old geopackage remains in the previous path, it will be loaded and can corrupt the project.**
 
 .. image:: ../img/Workshop/Worksh030.png
 
@@ -422,7 +428,7 @@ To setup a FLO-2D flood simulation use these steps.
 3.  Import aerial images;
 4.  Assign inflow;
 5.  Assign rainfall;
-6.  Assign infiltration
+6.  Assign infiltration;
 7.  Check control variables;
 8.  Save the project;
 9.  Export the FLO-2D data files;
