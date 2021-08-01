@@ -30,27 +30,27 @@ All data is provided in the Lesson folders.
      - **Location**
 
    * - QGIS Lesson 1.gpkg
-     -
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 1
+     - FLO-2D GeoPackage
+     - \\QGIS Lesson 1
 
    * - QGIS Lesson 1.qgz
-     -
-     -
+     - QGIS file
+     - \\QGIS Lesson 1
 
    * - Grnway Inflow 24 hr100yr.txt
      - Inflow hydrograph
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 2
+     - \\QGIS Lesson 2
 
-   * - Culvert ratingtables
+   * - Culvert rating tables
      - Culvert rating tables
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 2\Hydraulic Structures
+     - \\QGIS Lesson 2\\Hydraulic Structures
 
    * - Greenway.g01
      - Channel GeoRAS file
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 2
+     - \\QGIS Lesson 2
 
 
-\*\ *Project Location C:\Users\Public\Documents\FLO-2D PRO Documentation*
+Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
 
@@ -63,15 +63,15 @@ To setup a FLO-2D flood simulation use these steps.
 
 1. Open Lesson 1;
 
-2. Import GeoRAS Channel Features;
+2. Import GeoRAS Channel;
 
 3. Schematize Channel;
 
-4. Channel In/Out Condition;
+4. Channel Boundary Condition;
 
 5. Create Culverts;
 
-6. Set up Control Parameters Export Project;
+6. Set up Control Parameters and Export Project;
 
 7. Interpolate the Channel;
 
@@ -79,24 +79,22 @@ To setup a FLO-2D flood simulation use these steps.
 
 9. Run the FLO-2D model.
 
-Step 1: Open Lesson 1 in QGIS and load the FLO-2D Plugin data
-_____________________________________________________________
+Step 1: Open Lesson 1 in QGIS
+______________________________
 
 .. image:: ../img/Workshop/Worksh092.png
-1. Search the start menu and run the “QGIS Desktop” program.
+1. Search the start menu or open the QGIS Desktop Folder and run the “QGIS Desktop” program.
 
-2. Click *Open Project* and navigate to **QGIS Lesson 1**.
-   Select **QGIS Lesson 1.qgz** and click
-
-*Open*.
+2. Click Open Project and navigate to QGIS Lesson 1.
+   Select QGIS Lesson 1.qgz and click Open.
 
 .. image:: ../img/Workshop/Worksh055.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\QGIS Lesson 1.qgz**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
 
-3. Use *Quick Map Services* to load an aerial image onto the map.
-   See **Lesson 1 - Part 2 - Step 3** for instructions.
+3. Use Quick Map Services to load an aerial image onto the map.
+   See Lesson 1 - Part 2 - Step 3 for instructions.
 
 .. image:: ../img/Workshop/Worksh056.png
 
@@ -104,20 +102,20 @@ _____________________________________________________________
 Step 2: Import GeoRAS channel features
 ______________________________________
 
-1. Click the *Import RAS* icon.
-   Open the **Greenway.g01** file.
+1. Click the Import RAS icon.
+   Open the Greenway.g01 file.
 
 .. image:: ../img/Workshop/Worksh057.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 2\Greenway.g01**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway.g01
 
-2. Check the *Bank Station* icon and click *OK*.
+2. Check the Bank Station icon and click OK.
 
 .. image:: ../img/Workshop/Worksh058.png
 
 
-3. The channel left bank and cross sections are imported into the *User Layers*.
+3. The channel left bank and cross sections are imported into the User Layers.
    The cross-section data is imported into the cross section data tables.
 
 .. image:: ../img/Workshop/Worksh059.jpeg
@@ -132,7 +130,7 @@ __________________________
 
 
 2. If the channel schematization process was successful, the following message will appear.
-   Click *Close*.
+   Click Close.
 
 .. image:: ../img/Workshop/Worksh061.png
 
@@ -143,7 +141,7 @@ _______________________________
 Inlet
 _____
 
-1. *Zoom* to the first channel element on the southeast corner of the map.
+1. Zoom to the first channel element on the southeast corner of the map.
 
 .. image:: ../img/Workshop/Worksh062.png
 
@@ -180,7 +178,7 @@ _____
 10.
 Name the timeseries GrnwayIn 100yr 24hr.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 2\Greenway Inflow 100yr 24hr.txt**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway Inflow 100yr 24hr.txt
 
 .. image:: ../img/Workshop/Worksh067.png
 
@@ -212,7 +210,7 @@ ______
 .. image:: ../img/Workshop/Worksh071.png
 
 
-5. *Shematize* the outflow conditions.
+5. Shematize the outflow conditions.
 
 .. image:: ../img/Workshop/Worksh072.png
 
@@ -229,8 +227,8 @@ The channel segments are split up to allow for the width of the roadway.
 .. image:: ../img/Workshop/Worksh074.png
 
 
-1. Open the *Stuctures Editor* drop down.
-   Click the *Add Structure* icon.
+1. Open the Stuctures Editor drop down.
+   Click the Add Structure icon.
 
 .. image:: ../img/Workshop/Worksh075.png
 
@@ -241,7 +239,7 @@ The channel segments are split up to allow for the width of the roadway.
 .. image:: ../img/Workshop/Worksh076.png
 
 
-3. Click *Save*.
+3. Click Save.
 
 .. image:: ../img/Workshop/Worksh077.png
 
@@ -263,12 +261,12 @@ The channel segments are split up to allow for the width of the roadway.
 
 -  Navigate to the Rating Tables files , select both tables and click Open.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 2\Hydraulilc Structures\\**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Hydraulilc Structures
 
 .. image:: ../img/Workshop/Worksh079.png
 
 
-5. Click *Schematize* to write the data to the schematic layers and *Save* the project.
+5. Click Schematize to write the data to the schematic layers and Save the project.
 
 .. image:: ../img/Workshop/Worksh080.png
 
@@ -279,14 +277,10 @@ The channel segments are split up to allow for the width of the roadway.
 
 .. image:: ../img/Workshop/Worksh081.png
 
-
-*
-*
-
 Step 6: Export the project
 __________________________
 
-1. Click the *Setup Control Parameters* icon.
+1. Click the Setup Control Parameters icon.
 
 .. image:: ../img/Workshop/Worksh017.png
 
@@ -295,7 +289,7 @@ __________________________
 
 3. Check the boxes for Main Channel and Hydraulic structures if needed.
 
-4. Click *Save*.
+4. Click Save.
 
 .. image:: ../img/Workshop/Worksh082.png
 
@@ -311,20 +305,20 @@ __________________________
 .. image:: ../img/Workshop/Worksh021.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 2\Lesson 2 Export**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Lesson 2 Export
 
 Step 7: Interpolate the channel
 _______________________________
 
 1. To interpolate the channel segments, export the channel data and run the interpotator.
-   In the *Cross Sections Editor* widget, click the *Create CHAN.DAT, XSEC.DAT, and CHANBANK.DAT* icon.
+   In the Cross Sections Editor widget, click the Create CHAN.DAT, XSEC.DAT, and CHANBANK.DAT icon.
 
 .. image:: ../img/Workshop/Worksh084.png
 
 
 2. Select the folder where the \*.DAT files will be saved.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 2\Lesson 2 Export**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Lesson 2 Export
 
 .. image:: ../img/Workshop/Worksh085.png
 
@@ -342,7 +336,7 @@ If this process results in an Interpolate.exe error, it is possible to move that
 
 If the interpolation is performed correctly the following message will appear.
 
-3. Click *Import CHAN.DAT and XSEC.DAT* to update the channel data in QGIS.
+3. Click Import CHAN.DAT and XSEC.DAT to update the channel data in QGIS.
 
 .. image:: ../img/Workshop/Worksh088.png
 
@@ -355,19 +349,19 @@ If the interpolation is performed correctly the following message will appear.
 Step 8: Run the simulation
 __________________________
 
-1. Click the *Run FLO-2D* Icon.
+1. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Workshop/Worksh005.png
 
 
-2. Set the *FLO-2D Folder*.
-   C:\program files (x86)\flo-2d pro
+2. Set the FLO-2D Folder.
+   C:\\program files (x86)\\flo-2d pro
 
-3. Set the *Project Folder*.
+3. Set the Project Folder.
 
-**C:\users\public\public documents\flo-2d pro documentation\Example Projects\QGIS Tutorials\QGIS Lesson 2\Lesson 2 Export**
+C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Lesson 2 Export
 
-4. Click *OK*.
+4. Click OK.
 
 .. image:: ../img/Workshop/Worksh090.png
 
@@ -388,10 +382,12 @@ https://www.youtube.com/watch?v-Ov1oa2HEsXs
 Summary
 -------
 
-This lesson was a simple channel import.
-It used a Georeferenced HEC-RAS geometry file.
-These files can be made with HEC-RAS version 5.0 or HEC GEORAS plugin for ArcGIS.
+This lesson was a simple channel import.  It used a Georeferenced HEC-RAS geometry file.
+These files can be made with HEC-RAS version 5.0 or HEC GEORAS plugin for ArcGIS or the standard RasMapper program.
+
+
 There are many ways to build channels with QGIS for FLO-2D and the other possibilities are outlined in the User’s Manual.
 
-To add more detail and components to the project such as channels, hydraulic structures, buildings, levees and stormdrains, complete the following
+
+To add more detail and components to the project such as channels, hydraulic structures, buildings, levees and storm drains, complete the following
 lessons.

@@ -127,8 +127,7 @@ _______________________
 
 2. Select the Project Domain layer, and the Cell Size field and click OK.
 
-**Note: If a shapefile is not available, Digitize the project domain in the Computational Domain Layer.**
-**Note: In order to align the grid to a raster, load the raster file into the dialog box.**
+**Note: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.  In order to align the grid to a raster, load the raster file into the dialog box.**
 
 .. image:: ../img/Workshop/Worksh009.png
 
@@ -169,9 +168,9 @@ _____________________________
 4. Sampling Done dialog box will appear once the process is complete.
    Click OK to close it.
 
-**Note: Use the Fill NoData option if the elevation raster is missing data such as buildings.**
-**Note: This method uses the GDAL Warp processing tool.  To learn more about GDAL Warp, visit this page:
-        https://gdal.org/programs/gdalwarp.html.**
+**Note: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
+Warp processing tool.  To learn more about GDAL Warp, visit this page:**
+        https://gdal.org/programs/gdalwarp.html
 
 .. image:: ../img/Workshop/Worksh153.png
 .. image:: ../img/Workshop/Worksh154.png
@@ -179,8 +178,7 @@ _____________________________
 Step 7: Assign Roughness data
 _____________________________
 
-1. Import the shapefile.
-   Open the project folder and drag the Mannings n.shp file onto the map space.
+1. Open the project folder and drag the Mannings n.shp file onto the map space.
 
 .. image:: ../img/Workshop/Worksh014.png
 
@@ -212,7 +210,10 @@ ________________________________
 
 2. Fill the dialog box using the two figures below.
    Save the data to the GeoPackage with the Save icon.
-   The variable descriptions and instructions are presented in the Data Input Manual.
+
+**Note:  The variable descriptions and additional instructions are presented in the Data Input Manual.**
+
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Data Input Manual PRO.pdf
 
 .. image:: ../img/Workshop/Worksh018.png
 
@@ -228,17 +229,24 @@ ________________________
 .. image:: ../img/Workshop/Worksh011.png
 
 
-Step 10: Export the project
+Step 10: Export the FLO-2D data files
 ___________________________
 
 1. Click the FLO-2D Data Export icon.
 
 .. image:: ../img/Workshop/Worksh021.png
 
+2. Uncheck Rain and Click OK
+
+.. image:: ../img/Workshop/Worksh170.png
 
 3. Navigate to the project folder and click Select Folder.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Project Export
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1 Export
+
+4.  Once the project is exported click OK to close the export message.
+
+.. image:: ../img/Workshop/Worksh171.png
 
 Step 11: Run the simulation
 ___________________________
@@ -318,13 +326,17 @@ To create recovery backup system, follow these steps:
 Step 1: Create a recovery file
 ______________________________
 
-1. Open QGIS Lesson 1 in a File Browser.
+1. If the QGIS is still open, save and close it.
+
+2. Open QGIS Lesson 1 in a File Browser.
    Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
    This will create a recovery file.
 
-2. Name the zipped file.
+3. Name the zipped file.
    It is good to choose a name that identifies project progress.
    For Example: Lesson 1 n-value OK.zip.
+
+4. Repeat this step after any time a Backup or Recovery Point is desired.
 
 .. image:: ../img/Workshop/Worksh024.png
 
@@ -365,6 +377,8 @@ ________________________
 
 
 **Note:  If the project path changes, the plugin will recognize the path change and try to load the model from the new path.**
+
+
 **Note:  If the project path changes but an old geopackage remains in the previous path, it will be loaded and can corrupt the project.**
 
 .. image:: ../img/Workshop/Worksh030.png
@@ -436,12 +450,10 @@ To setup a FLO-2D flood simulation use these steps.
 
 .. _step-1-open-qgis-1:
 
-.. image:: ../img/Workshop/Worksh002.png
-
 Step 1: Open QGIS
 ___________________
 
-Search the start menu and run the QGIS Desktop program.
+If the project was not opened at the end of Lesson 1, Part 2 Step 3.  Repeat that step to load the project.
 
 Step 2: Load Lesson 1
 _____________________
@@ -477,10 +489,10 @@ Inflow nodes are set up using the Boundary Condition Editor widget.
 
 **Note: If an internet connection is not available, aerial images are saved to QGIS Lesson 1/Aerials folder.**
 
-**Note: If you do not see the Google maps, go to Quick Map Services/Settings/More Services/Get Contributed Pack.**
+**Note: If QuickMapServices does not have Google maps , go to QuickMapServices/Settings/More Services/Get Contributed Pack.**
 
-Step 4: Add inflow node
-_______________________
+Step 4: Add an inflow node
+___________________________
 
 1. Zoom in on the top right corner of the project grid.
    Find the Basin Inlet feature.
@@ -524,7 +536,7 @@ CTRL – W will close the file.
 
 7. Select the first cell of the FLO-2D Table Editor Table and click Paste.
 
-.. image:: ../img/Workshop/Worksh039.png
+.. image:: ../img/Workshop/Worksh039.gif
 
 
 8. Schematize the inflow data into the schema layers.
@@ -557,25 +569,24 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 
 .. image:: ../img/Workshop/Worksh159.png
+
 .. image:: ../img/Workshop/Worksh160.png
 
 .. image:: ../img/Workshop/Worksh161.png
 
-4.The rainfall data is imported into the FLO-2D Table Editor.
+4. The rainfall data is imported into the FLO-2D Table Editor.
 
 5. To perform the depth area reduction calculation, use the Area Reduction calculator.
 
 .. image:: ../img/Workshop/Worksh044.png
 
-.. image:: ../img/Workshop/Worksh162.png
-
 6. Click the Area Reduction icon.
 
-7. Fill the form and click OK.
+.. image:: ../img/Workshop/Worksh162.png
 
-8. The raster pixels are typically 1000 by 1000 ft or larger.
+7. The raster pixels are typically 1000 by 1000 ft or larger.
    It is not necessary to average the data.
-   Fill the dialog box as shown below and click OK to calucate and OK to confirm the data was written to file.
+   Fill the dialog box as shown below and click OK to calculate and OK to confirm the data was written to file.
 
 .. image:: ../img/Workshop/Worksh045.png
 
@@ -640,20 +651,27 @@ ________________________
 
 1. Click the main Save icon on the QGIS toolbar.
 
-.. image:: ../img/Workshop/Worksh020.png
+.. image:: ../img/Workshop/Worksh011.png
 
 
-Step 9: Export the project
+Step 9: Export the FLO-2D data files
 __________________________
 
-1. Save project, then continue to export the project data into the FLO-2D format.
-   Click the GDS Export icon.
-   Navigate to the project folder and click Select Folder.
+1. Click the FLO-2D Data Export icon.
 
 .. image:: ../img/Workshop/Worksh021.png
 
+2. Uncheck Rain and Click OK
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Project Export
+.. image:: ../img/Workshop/Worksh172.png
+
+3. Navigate to the project folder and click Select Folder.
+
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1 Export
+
+4.  Once the project is exported click OK to close the export message.
+
+.. image:: ../img/Workshop/Worksh173.png
 
 Step 10: Run the simulation
 ___________________________
@@ -673,4 +691,4 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh054.png
 
 
-4. This project can be opened in the GDS and tested for accuracy.
+This is the final step of this lesson.  Make a Recovery Point/Backup and continue to Lesson 2.
