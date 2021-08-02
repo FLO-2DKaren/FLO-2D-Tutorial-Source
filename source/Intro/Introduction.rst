@@ -87,14 +87,14 @@ With QGIS installed it is time to add the FLO-2D plugin and a few other handy pl
 
 Step 6: Installation is Complete
 ---------------------------------
-Everything should now be correctly installed on the computer.  Goto Lesson 1 to begin the self-help training.
+Everything should now be correctly installed on the computer.  go to Lesson 1 to begin the self-help training.
 
 The tutorial data is here:
 `C:\ Users \ Public \ Documents \ FLO-2D PRO Documentation \ Example Projects`
 
 .. image:: ../img/Instructions/image9.png
 
-Goto Lesson 1 on on the left sidebar to start. Happy Modeling!
+go to Lesson 1 on on the left sidebar to start. Happy Modeling!
 
 
 

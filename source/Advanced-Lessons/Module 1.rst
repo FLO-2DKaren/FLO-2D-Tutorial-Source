@@ -10,16 +10,19 @@ Required Data
 
 The required data is in Module 1.
 
-============= ==================
+============= ===================
 **File**      **Content**
-============= ==================
-Lesson 1.qgz  Module 1 qgis file
-Lesson 1.gpkg Module 1 geopakage
+============= ===================
+Lesson 1.qgz  Module 1 QGIS file
+Lesson 1.gpkg Module 1 GeoPackage
 \*.tif        Elevation file
-============= ==================
+============= ===================
 
 Step 1: Create a recovery file
 ------------------------------
+
+**Note: This step discusses how to set up the backup file or recovery point.  Skip if
+these steps are already well understood.**
 
 1. Select the **Lesson 1.gpkg** and **Lesson 1.qgz** files and zip them.
    This will create a recovery file.
@@ -87,9 +90,11 @@ Step 4: Export the FLO-2D data
 
 .. image:: ../img/Advanced-Workshop/Module011.png
 
-**Important note:**  If the image above doesn’t look like the window on your screen, you may be accessing the “Lesson 1.gpkg” in the Self-Help training packages.   Delete the old file and return to Step 3.
-"C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.gpkg".
+**Important note:**  If the image above doesn’t look like the window on your screen, you may be accessing the
+“Lesson 1.gpkg” in the Self-Help training packages.   Delete the old file and return to Step 3.
 
+
+"C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.gpkg".
 
 2. Click OK and navigate to the export folder.
    Select the folder and export.
