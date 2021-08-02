@@ -100,8 +100,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh056.png
 
 
-Step 2: Import GeoRAS channel features
-______________________________________
+Step 2: Import GeoRAS Channel
+_____________________________
 
 1. Click the Import RAS icon.
    Open the Greenway.g01 file.
@@ -111,21 +111,21 @@ ______________________________________
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway.g01
 
-2. Check the Bank Station icon and click OK.
+2. Check the Bank Stations radio button and click OK.
 
 .. image:: ../img/Workshop/Worksh058.png
 
 
-3. The channel left bank and cross sections are imported into the User Layers.
+3. The channel left bank, right bank, and cross sections are imported into the User Layers.
    The cross-section data is imported into the cross section data tables.
 
-.. image:: ../img/Workshop/Worksh059.jpeg
+.. image:: ../img/Workshop/Worksh059.png
 
 
 Step 3: Schematize channel
 __________________________
 
-1. Click Schematize left banks and cross sections.
+1. Click the Schematize channels button.
 
 .. image:: ../img/Workshop/Worksh060.png
 
@@ -154,29 +154,29 @@ _____
 
 3. Add a point to the first channel cell.
 
-4. Click Save on the Widget
+4. Click Save on the Widget.
 
-5. Change the name of the inflow to GrnwayIN
+5. Change the name of the inflow to GrnwayIN.
 
-6. Set it to Defined for Channel
+6. Set it to Defined for Channel.
 
+7. Click the add a new time series button.
+
+8. Name the new time series Grnway24hr100yr.
 
 .. image:: ../img/Workshop/Worksh064.png
 
-
 .. image:: ../img/Workshop/Worksh065.png
 
+9. Open the hydrograph file from Lesson 2.  Copy the data from this file.
 
-7. Click the add a new time series button.  Copy the inflow hydrograph data from the Grnwy inflow file into the table editor.
-
-.. image:: ../img/Workshop/Worksh066.png
-
-
-9. Name the timeseries GrnwayIn 100yr 24hr.
+.. image:: ../img/Workshop/Worksh174.png
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway Inflow 100yr 24hr.txt
 
-.. image:: ../img/Workshop/Worksh067.png
+10. Place the cursor in the first cell of the FLO-2D Table Editor and click Paste.
+
+.. image:: ../img/Workshop/Worksh040.gif
 
 
 Outlet
@@ -220,54 +220,73 @@ This structure will calculate discharge through a box culvert.
 This example has a box culvert that is longer than the grid element.
 The channel segments are split up to allow for the width of the roadway.
 
+**Note:  This image shows how the culverts should look once they have been digitized**
+
 .. image:: ../img/Workshop/Worksh074.png
 
 
-1. Open the Stuctures Editor drop down.
+1. Zoom to the first culvert.
+
+.. image:: ../img/Workshop/Worksh175.png
+
+2. Open the Structures Editor.
    Click the Add Structure icon.
 
 .. image:: ../img/Workshop/Worksh075.png
 
 
-2. Digitize two culverts by clicking on the blue left bank elements that represent the beginning and end of the hydraulic structure.
-   Both structures are between the channel segments.
+3. Digitize the first culvert by clicking on the upstream left bank element and downstream left bank element of the channel.
+   Right click to complete the line and click OK to close the Structure Line attribute box.
 
-.. image:: ../img/Workshop/Worksh076.png
+.. image:: ../img/Workshop/Worksh176.png
 
 
-3. Click Save.
+4. Repeat the process on the second culvert downstream.
+
+.. image:: ../img/Workshop/Worksh177.png
+
+
+5. Click the Save Button on the Structure Editor.
 
 .. image:: ../img/Workshop/Worksh077.png
 
 
-4. Fill in the data on the Structure Editor and the Table Editor.
+6. Fill out the data for each structure.
 
 -  Name the culverts Grnway1, Grnway2
 
--  Channel to Channel
+-  Type \= Channel
 
--  Rating table
+-  Rating \= Rating table
 
 -  Tailwater condition is none.
 
--  Click the Import Rating Tables button
+.. image:: ../img/Workshop/Worksh076.png
+
+
+7.  Click the Import Rating Tables button
 
 .. image:: ../img/Workshop/Worksh078.png
 
 
--  Navigate to the Rating Tables files , select both tables and click Open.
+8.  Navigate to the Rating Tables files, select both tables and click Open.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Hydraulilc Structures
 
 .. image:: ../img/Workshop/Worksh079.png
 
 
-5. Click Schematize to write the data to the schematic layers and Save the project.
+9. Note that the data was loaded into the FLO-2D Table Editor for the active structure.
+
+.. image:: ../img/Workshop/Worksh179.png
+
+
+10. Click Schematize to write the data to the schematic layers.
 
 .. image:: ../img/Workshop/Worksh080.png
 
 
-6. The hydraululic structures are now ready.
+11. The hydraulic structures are now ready.
 
 7. If you do not see the data, refresh the tables by selecting the structure again in the widget.
 
@@ -281,8 +300,6 @@ __________________________
 .. image:: ../img/Workshop/Worksh017.png
 
 
-2. Select set control parameters.
-
 3. Check the boxes for Main Channel and Hydraulic structures if needed.
 
 4. Click Save.
@@ -291,22 +308,13 @@ __________________________
 
 
 5. This is a good point to save project.
-   Refer to Steps 9 in Lesson 1.
 
-.. image:: ../img/Workshop/Worksh083.png
-
-
-6. Export the Project to the Project Folder in QGIS Lesson 2
-
-.. image:: ../img/Workshop/Worksh021.png
-
-
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Lesson 2 Export
+.. image:: ../img/Workshop/Worksh011.png
 
 Step 7: Interpolate the channel
 _______________________________
 
-1. To interpolate the channel segments, export the channel data and run the interpotator.
+1. To interpolate the channel segments, export the channel data and run the interpolator.
    In the Cross Sections Editor widget, click the Create CHAN.DAT, XSEC.DAT, and CHANBANK.DAT icon.
 
 .. image:: ../img/Workshop/Worksh084.png
