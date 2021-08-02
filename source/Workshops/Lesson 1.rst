@@ -366,6 +366,8 @@ If a project is not exporting data correctly or a mistake is made, use this meth
 Step 3: Open the project
 ________________________
 
+.. image:: ../img/Workshop/Worksh002.png
+
 1. Open QGIS and drag Lesson 1.qgz onto the canvas the file in QGIS and Load the Project into the FLO-2D Plugin.
 
 .. image:: ../img/Workshop/Worksh028.png
@@ -453,10 +455,16 @@ To setup a FLO-2D flood simulation use these steps.
 Step 1: Open QGIS
 ___________________
 
-If the project was not opened at the end of Lesson 1, Part 2 Step 3.  Repeat that step to load the project.
+Skip this step if continuing from Part 2.
+
+.. image:: ../img/Workshop/Worksh002.png
+
+1. Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
 
 Step 2: Load Lesson 1
 _____________________
+
+Skip this step if continuing from Part 2.
 
 1. Open the project folder.
 
@@ -467,6 +475,8 @@ _____________________
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1.qgz
 
 .. image:: ../img/Workshop/Worksh157.png
+
+If the following image is not clear.  Switch to Firefox or load the image in a new tab.
 
 .. image:: ../img/Workshop/Worksh158.png
 
@@ -525,11 +535,9 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh037.png
 
 
-CTRL – A will select all data.
-
-CTRL – C will copy the data.
-
-CTRL – W will close the file.
+  CTRL – A will select all data.
+  CTRL – C will copy the data.
+  CTRL – W will close the file.
 
 .. image:: ../img/Workshop/Worksh038.png
 
@@ -661,7 +669,7 @@ __________________________
 
 .. image:: ../img/Workshop/Worksh021.png
 
-2. Uncheck Rain and Click OK
+2. Review the image and Click OK
 
 .. image:: ../img/Workshop/Worksh172.png
 
@@ -691,4 +699,4 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh054.png
 
 
-This is the final step of this lesson.  Make a Recovery Point/Backup and continue to Lesson 2.
+This is the final step of this Lesson 1.  Make a Recovery Point/Backup and continue to Lesson 2.
