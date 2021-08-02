@@ -27,7 +27,7 @@ The lesson makes use of terrain elevation data, project domain, roughness data, 
 
    * - Elevation.tif
      - Digital terrain raster
-     - QGIS Lesson 1 Pro
+     - QGIS Lesson 1
 
    * - Project Domain.shp
      - Polygon for project domain
@@ -117,6 +117,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 6. Wait for the geopackage to write and check the accuracy of the project settings and click OK.
 
+.. image:: ../img/Workshop/Worksh180.png
+
 Step 4: Create the grid
 _______________________
 
@@ -127,7 +129,8 @@ _______________________
 
 2. Select the Project Domain layer, and the Cell Size field and click OK.
 
-**Note: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.  In order to align the grid to a raster, load the raster file into the dialog box.**
+**Note: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.
+In order to align the grid to a raster, load the raster file into the dialog box.**
 
 .. image:: ../img/Workshop/Worksh009.png
 
@@ -195,7 +198,10 @@ _____________________________
 .. image:: ../img/Workshop/Worksh155.png
 .. image:: ../img/Workshop/Worksh156.png
 
-The roughness values and elevations are assigned to the grid layer in the Schematized Layers group.
+4. The roughness values and elevations are assigned to the grid layer in the Schematized Layers group.  Right click the
+   Grid layer and click Open Attribute Table to see the data.
+
+**Note:  Don't open a table for a large project >1million cells.  The data is too large to load without applying filters.**
 
 .. image:: ../img/Workshop/Worksh016.png
 
@@ -296,7 +302,7 @@ The lesson has a QGIS project file, Geopackage file, FLO-2D Data Export files an
 
    * - Lesson 1.qgz
      - QGIS file
-     - QGIS Lesson 1 PRO
+     - QGIS Lesson 1
 
    * - Lesson 1.gpkg
      - FLO-2D GeoPackage
@@ -413,7 +419,7 @@ The lesson makes use of rainfall distribution, rain arf, landuse and soil data.
 
    * - SCS 24-Hr Type II
      - Rainfall Distribution Curve
-     - QGIS Lesson 1 PRO\\Hydrology
+     - QGIS Lesson 1\\Hydrology
 
    * - NOAA Atlas 14
      - Rainfall depth reduction
@@ -455,7 +461,7 @@ To setup a FLO-2D flood simulation use these steps.
 Step 1: Open QGIS
 ___________________
 
-Skip this step if continuing from Part 2.
+**Note: Skip this step if continuing from Part 2.**
 
 .. image:: ../img/Workshop/Worksh002.png
 
@@ -464,7 +470,7 @@ Skip this step if continuing from Part 2.
 Step 2: Load Lesson 1
 _____________________
 
-Skip this step if continuing from Part 2.
+**Note: Skip this step if continuing from Part 2.**
 
 1. Open the project folder.
 
@@ -476,7 +482,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh157.png
 
-If the following image is not clear.  Switch to Firefox or load the image in a new tab.
+**Note: If the following image is not clear.  Switch to Firefox or load the image in a new tab.**
 
 .. image:: ../img/Workshop/Worksh158.png
 
@@ -490,7 +496,7 @@ ____________________________
 
 Inflow nodes are set up using the Boundary Condition Editor widget.
 
-1. Load an aerial image to help with placement.
+1. Load an aerial image to help locate features.
 
 2. Use Quick Map Services Plugin with the Contributed Pack to load aerial images into the layer.
 
@@ -499,7 +505,7 @@ Inflow nodes are set up using the Boundary Condition Editor widget.
 
 **Note: If an internet connection is not available, aerial images are saved to QGIS Lesson 1/Aerials folder.**
 
-**Note: If QuickMapServices does not have Google maps , go to QuickMapServices/Settings/More Services/Get Contributed Pack.**
+**Note: If QuickMapServices does not have Google maps, go to QuickMapServices/Settings/More Services/Get Contributed Pack.**
 
 Step 4: Add an inflow node
 ___________________________
@@ -530,14 +536,10 @@ ___________________________
 6. The inflow hydrograph is stored in a text file in the project folder.
    Open this file in Notepad.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrolgoy\\Ifnlow 24hr 100yr.txt
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\GroverBasinInflow 24hr 100yr.txt
 
 .. image:: ../img/Workshop/Worksh037.png
 
-
-  CTRL – A will select all data.
-  CTRL – C will copy the data.
-  CTRL – W will close the file.
 
 .. image:: ../img/Workshop/Worksh038.png
 
