@@ -63,17 +63,17 @@ To setup a FLO-2D flood simulation use these steps.
 
 1. Open Lesson 1;
 
-2. Import GeoRAS Channel;
+2. Import GeoRAS channel;
 
-3. Schematize Channel;
+3. Schematize channel;
 
-4. Channel Boundary Condition;
+4. Channel boundary condition;
 
-5. Create Culverts;
+5. Create culverts;
 
-6. Set up Control Parameters and Export Project;
+6. Set up control parameters and export project;
 
-7. Interpolate the Channel;
+7. Interpolate the channel;
 
 8. Import the new data;
 
@@ -82,8 +82,9 @@ To setup a FLO-2D flood simulation use these steps.
 Step 1: Open Lesson 1 in QGIS
 ______________________________
 
-.. image:: ../img/Workshop/Worksh092.png
-1. Search the start menu or open the QGIS Desktop Folder and run the “QGIS Desktop” program.
+.. image:: ../img/Workshop/Worksh002.png
+
+1. Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
 
 2. Click Open Project and navigate to QGIS Lesson 1.
    Select QGIS Lesson 1.qgz and click Open.
@@ -135,8 +136,8 @@ __________________________
 .. image:: ../img/Workshop/Worksh061.png
 
 
-Step 4: Channel in/out condtion
-_______________________________
+Step 4: Channel in/out condition
+________________________________
 
 Inlet
 _____
@@ -146,22 +147,19 @@ _____
 .. image:: ../img/Workshop/Worksh062.png
 
 
-2. Go to the next page.
-
-3. Use the Boundary Condition Editor to create the Inflow point.
+2. Use the Boundary Condition Editor to create the Inflow point.
 
 .. image:: ../img/Workshop/Worksh063.png
 
 
-4. Add a point to the first channel cell.
+3. Add a point to the first channel cell.
 
-5. Click Save on the Widget
+4. Click Save on the Widget
 
-6. Change the name of the inflow to GrnwayIN
+5. Change the name of the inflow to GrnwayIN
 
-7. Set it to Channel
+6. Set it to Defined for Channel
 
-8. Go to the next page.
 
 .. image:: ../img/Workshop/Worksh064.png
 
@@ -169,14 +167,12 @@ _____
 .. image:: ../img/Workshop/Worksh065.png
 
 
-9. Add a time series the new BC node.
-   Copy the inflow hydrograph data from the Grnwy inflow file to the table editor.
+7. Click the add a new time series button.  Copy the inflow hydrograph data from the Grnwy inflow file into the table editor.
 
 .. image:: ../img/Workshop/Worksh066.png
 
 
-10.
-Name the timeseries GrnwayIn 100yr 24hr.
+9. Name the timeseries GrnwayIn 100yr 24hr.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway Inflow 100yr 24hr.txt
 
