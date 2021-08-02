@@ -15,7 +15,7 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Installation:
+   :caption: Setup:
 
    /Intro/Introduction
 
@@ -24,7 +24,9 @@ Table of Contents
    :caption: Workshops:
 
    /Workshops/workshop
-   /Workshops/Lesson 1
+   /Workshops/Lesson 1 Part 1
+   /Workshops/Lesson 1 Part 2
+   /Workshops/Lesson 1 Part 3
    /Workshops/Lesson 2
    /Workshops/Lesson 3
    /Workshops/Lesson 4
@@ -35,26 +37,16 @@ Table of Contents
    :maxdepth: 1
    :caption: Advanced Lessons:
 
-   /Advance-Lessons/Lesson 1
-   /Advance-Lessons/Lesson 2
-   /Advance-Lessons/Lesson 3
-   /Advance-Lessons/Lesson 5
-   /Advance-Lessons/Lesson 6
-   /Advance-Lessons/Lesson 7
-   /Advance-Lessons/Lesson 8
-   /Advance-Lessons/Lesson 9
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   /Advanced-Lessons/Module 1
+   /Advanced-Lessons/Module 2 Part 1
+   /Advanced-Lessons/Module 2 Part 2
+   /Advanced-Lessons/Module 2 Part 3
+   /Advanced-Lessons/Module 3 Part 1
+   /Advanced-Lessons/Module 3 Part 2
+   /Advanced-Lessons/Module 3 Part 3
+   /Advanced-Lessons/Module 5 Part 1
+   /Advanced-Lessons/Module 5 Part 2
+   /Advanced-Lessons/Module 6
+   /Advanced-Lessons/Module 7
+   /Advanced-Lessons/Module 8
+   /Advanced-Lessons/Module 9
