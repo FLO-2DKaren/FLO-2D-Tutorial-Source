@@ -1,13 +1,10 @@
-Module 3 Part 2 – Prescribed Breach Create Levee and Breach
-===========================================================
-
+Module 3 Part 2 – Prescribed Breach - Create Levee and Breach
+==============================================================
 
 **Overview**
 
-In this tutorial, a simple dam breach with failure is created.
-In this example, the reservoir is dry and so no bathymetry or stage volume is required.
-
-.. _required-data-4:
+In this tutorial, a simple dam breach with failure is created.  Part 2 will outline the process to set up the dam, fill
+the reservoir, define the breach parameters, and run the breach simulation.
 
 Required Data
 -------------
@@ -21,9 +18,6 @@ The required data is in Module 3.
 \*.gpkg  FLO-2D Geopackage
 \*.tif   Elevation file
 ======== =================
-
-In this tutorial, a simple dam breach with failure is created.
-In this example, the reservoir is dry and so no bathymetry or stage volume is required.
 
 Step 1. Create the levee
 ------------------------

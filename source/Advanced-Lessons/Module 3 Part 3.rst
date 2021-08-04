@@ -1,5 +1,27 @@
+Module 3 Part  – Prescribed Breach - Add Detail and Troubleshoot
+================================================================
 
-Step 10. Add a culvert
+**Overview**
+
+In this tutorial, a simple dam breach with failure is created.
+In this example, the reservoir is dry and so no bathymetry or stage volume is required.
+
+Required Data
+-------------
+
+The required data is in Module 3.
+
+======== ========================
+**File** **Content**
+======== ========================
+\*.qgz   QGIS data files
+\*.gpkg  FLO-2D Geopackage
+\*.tif   Elevation file
+\*.xlsx  Hydraulic structure file
+======== ========================
+
+
+Step 1. Add a culvert
 ----------------------
 
 1. This dam is used for flood and sediment control.
@@ -29,7 +51,7 @@ Step 10. Add a culvert
 
 .. image:: ../img/Advanced-Workshop/Module132.png
 
-9.  Go back to Step 9 and `export and run <#step-9.-export-and-run-the-model>`__ the model again.
+9.  Go back to Part 2 Step 9 and `export and run <#step-9.-export-and-run-the-model>`__ the model again.
 
 10. Copy the Orifice data from the Excel File.
 
@@ -49,7 +71,7 @@ Step 10. Add a culvert
 
 .. image:: ../img/Advanced-Workshop/Module137.png
 
-Step 11. Downstream Boundary
+Step 2. Downstream Boundary
 ----------------------------
 
 1. Collapse the widgets and click the Boundary Condition Widget.
@@ -69,7 +91,7 @@ Step 11. Downstream Boundary
 .. image:: ../img/Advanced-Workshop/Module139.png
 
 
-Step 12. Common mistakes demo
+Step 3. Common mistakes demo
 -----------------------------
 
 This section will demonstrate some common mistakes that users make when building breach models:
@@ -84,8 +106,8 @@ This section will demonstrate some common mistakes that users make when building
 
 -  The breach node is on the wrong side of the levee.
 
-Bad reservoir or leaky levee component
---------------------------------------
+Step 4. Bad reservoir or leaky levee component
+-----------------------------------------------
 
 1. Collapse the widgets and click the Initial Condition Editor.
 
@@ -94,7 +116,7 @@ Bad reservoir or leaky levee component
 
 .. image:: ../img/Advanced-Workshop/Module140.png
 
-3. Repeat **Step 8** starting at Number 4.
+3. Repeat Part 2 Step 8 starting at Number 4.
 
 4. This is the result.
    The reservoir was too high so it filled the whole project.
@@ -103,8 +125,8 @@ Bad reservoir or leaky levee component
 
 .. image:: ../img/Advanced-Workshop/Module141.png
 
-Dam elevation not removed
--------------------------
+Step 5. Dam elevation not removed
+----------------------------------
 
 1. Collapse the widgets and click the Grid Tools.
 

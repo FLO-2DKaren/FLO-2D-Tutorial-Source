@@ -5,8 +5,6 @@ Module 2 Part 2 – Advanced Hydraulic Structures
 
 In part 2, the data from the previous lesson is extended with a new generalized culvert equation.
 
-.. _required-data-2:
-
 Required Data
 --------------
 
