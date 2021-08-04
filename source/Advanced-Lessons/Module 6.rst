@@ -6,8 +6,6 @@ Module 6 – Erosion Dam Breach
 In this tutorial, an erosion dam breach with failure is created.
 In this instance, the reservoir is filled but the pre-reservoir elevation is known.
 
-.. _required-data-7:
-
 Required Data
 --------------
 
@@ -20,8 +18,6 @@ The required data is in Module 6.
 \*.gpkg  FLO-2D Geopackage
 \*.tif   Grid elevation
 ======== =================
-
-.. _step-1-load-the-project-4:
 
 Step 1: Load the project
 ------------------------

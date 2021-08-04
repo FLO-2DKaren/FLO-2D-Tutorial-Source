@@ -1,17 +1,15 @@
-Module 3 Part 1 – Prescribed Breach Define Watershed
-====================================================
+Module 3 Part 1 – Prescribed Breach - Define Watershed
+=======================================================
 
 **Overview**
 
-In this tutorial, a simple dam breach with failure is created.
-In this example, the reservoir is dry and so no bathymetry or stage volume is required.
-
-.. _required-data-4:
+In this tutorial, a simple dam breach with failure is created.  Part 1 will define the watershed and apply a rainfall
+so that the design storm and rainfall can fill the basin.
 
 Required Data
 -------------
 
-The required data is in Module 3.
+The required data is in Module 3 Part 1.
 
 ======== =================
 **File** **Content**

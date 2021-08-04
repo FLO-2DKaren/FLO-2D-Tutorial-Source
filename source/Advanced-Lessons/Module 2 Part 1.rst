@@ -7,8 +7,6 @@ This tutorial outlines the process of creating hydraulic structures with rating 
 This lesson needs a channel so please use the data from QGIS Lesson 2, 3, or 4 to run through this tutorial.
 Finish Lesson 2 before performing the following steps.
 
-.. _required-data-1:
-
 Required Data
 -------------
 

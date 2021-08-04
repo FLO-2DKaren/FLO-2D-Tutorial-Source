@@ -5,8 +5,6 @@ Module 2 Part 3 – Bridge Hydraulic Structure
 
 In this tutorial, the bridge variables are added to a hydraulic structure.
 
-.. _required-data-3:
-
 Required Data
 -------------
 

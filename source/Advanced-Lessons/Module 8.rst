@@ -5,8 +5,6 @@ Module 8 – Storm Drain Shapefile Development
 
 This lesson will outline how to construct a storm drain network that is ready for FLO-2D Plugin to process.
 
-.. _required-data-9:
-
 Required Data
 --------------
 
@@ -21,8 +19,6 @@ Point shapefile    Outfalls
 \*.qgz             QGIS project from Module 8
 \*.gpkg            Geopackage file
 ================== ==========================
-
-.. _step-1-load-the-project-6:
 
 Step 1: Load the project
 ------------------------
