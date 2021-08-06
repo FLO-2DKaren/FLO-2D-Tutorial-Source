@@ -1,5 +1,5 @@
-Lesson 1 Part 2 – Project Recovery Methods
-==========================================
+Lesson 1 - Part 2 – Project Recovery Methods
+=============================================
 
 .. _overview-1:
 
