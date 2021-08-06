@@ -201,7 +201,7 @@ Step 6. Create the breach point
 
 8.  Click the create a breach point button.
 
-.. image:: ../Advanced-Workshop/number8.png
+.. image:: ../img/Advanced-Workshop/number8.png
 
 9.  Click the map where the breach should go and fill the table.
 
@@ -211,7 +211,7 @@ Step 6. Create the breach point
 
 12. Click OK to close the table.
 
-.. image:: ..//Advanced-Workshop/number12.png
+.. image:: ../img/Advanced-Workshop/number12.png
 
 13. If you mess up, Click Revert Breach Edits button and try again.
 

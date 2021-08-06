@@ -1,15 +1,13 @@
 Lesson 3 – Create a Storm Drain System Using Shapefiles
 =======================================================
 
-.. _overview-4:
-
 Overview
 ________
 
 This lesson will outline the process of importing some shapefiles for a stormdrain system and create the INP file and associated storm drain data
 files.
 
-This video will guide you through the lesson.
+This video shows the full process of this tutorial.
 
 .. youtube:: 6oTw4PnqOiI
 
@@ -74,7 +72,7 @@ To setup a FLO-2D flood simulation use these steps.
 Step 1: Open QGIS and load the FLO-2D Plugin data
 _________________________________________________
 
-.. image:: ../img/Workshop/Worksh092.png
+.. image:: ../img/Workshop/Worksh002.png
 
 
 Search the start menu and run the “QGIS Desktop” program.
@@ -113,9 +111,9 @@ The shapefiles can be described as follow:
 -  **Lesson3Conduits.shp** is a line shapefile that contains the pipes.
 
 -  **Lesson3InletsJunctions.shp** is a point shapefile that contains the Inlets and Junctions.
-  Inlets collect flow from the surface and their name should start with “I”, this is arequirement for all inlets from type 1 to 5, including manholes.
+   Inlets collect flow from the surface and their name should start with “I”, this is a requirement for all inlets from type 1 to 5, including manholes.
 
-3. Check the Atribute Tables for the layers conduits, inlets/junctions and outfalls.
+3. Check the Attribute Tables for the layers conduits, inlets/junctions and outfalls.
    To do this right click each layer and then Click Attributes Table.
 
 .. image:: ../img/Workshop/Worksh094.png

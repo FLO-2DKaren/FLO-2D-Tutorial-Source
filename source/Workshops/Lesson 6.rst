@@ -1,23 +1,21 @@
 Lesson 6 – Hydraulic Structures
 ===============================
 
-.. _overview-7:
-
 Overview
 ________
 
 Lesson 6 outlines the process of creating hydraulic structures with rating tables and generalized culvert equations.
 This lesson needs a channel so please use the data from Lesson 2, 3, or 4 to run through this tutorial.
-Finish Lesson 2 through before performing the following steps.
+Finish Lesson 2 before performing the following steps.
 
-This video will guide you through the lesson.
+This video shows the full process of this tutorial.
 
 .. youtube:: H02oR4bySw4
 
 Required Data
 _____________
 
-The lesson makes use of QGIS Lesson 2, 3 or 4 and hydraulic structure shapefile and structure data files in QGIS Lesson 6.
+The lesson makes use of QGIS Lesson 2, 3, or 4 and hydraulic structure shapefile and structure data files in QGIS Lesson 6.
 
 .. list-table::
    :widths: 33 33 33
@@ -37,16 +35,14 @@ The lesson makes use of QGIS Lesson 2, 3 or 4 and hydraulic structure shapefile 
      -
 
 
-\*\ *Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation*
+Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation
 
 Check these folders to ensure the data is available before starting the lesson.
-
-.. _step-by-step-procedure-7:
 
 Step-by-Step Procedure
 ______________________
 
-To build **HYSTRUC.DAT** following these steps.
+To build HYSTRUC.DAT following these steps.
 
 1. Open Lesson 2, 3, or 4 qgz file;
 
@@ -64,12 +60,10 @@ To build **HYSTRUC.DAT** following these steps.
 
 8. Run the simulation.
 
-.. _step-1-setup-the-project-1:
-
 Step 1: Setup the project
 _________________________
 
-.. image:: ../img/Workshop/Worksh092.png
+.. image:: ../img/Workshop/Worksh002.png
 
 
 1. Search the start menu and run the “QGIS Desktop” program.
@@ -81,17 +75,19 @@ _________________________
 Step 2: Import data
 ___________________
 
-Start by cleaning up the map space so the next layer will be easy to see.
+1. Start by cleaning up the map space so the next layer will be easy to see.
 
-1. Uncheck the User Leftbank, Right Bank Cross section layers;
+2. Uncheck the User Left Bank Lines, Right Bank Lines, and Cross Sections layers;
 
-2. Uncheck the Blocked Areas;
+3. Uncheck the Blocked Areas;
 
-3. Uncheck the Storm Drain User Layers;
+4. Uncheck the Storm Drain User Layers;
 
-4. Click the User Boundary Conditions Layer;
+5. Click the User Boundary Conditions Layer to activate this layer;
 
-5. Drag the Hydraulic Structures onto the map space.
+6. Drag the Hydraulic Structures onto the map space.
+
+**Note:  If the image is blurry, use Firefox or open the image in a new tab**
 
 .. image:: ../img/Workshop/Worksh139.png
 
@@ -105,7 +101,7 @@ __________________________________________________
 
 
 2. Select structure 130, and 131 and click Zoom map to selected rows button.
-   This will zoom your map to these two structures.
+   This will zoom the map to these two structures.
 
 .. image:: ../img/Workshop/Worksh141.png
 
@@ -116,7 +112,7 @@ __________________________________________________
 
 5. Set the Labels like the following image.
 
-6. This allows you to see which culvert you are working on.
+6. The labels help define which culvert is being used.
 
 .. image:: ../img/Workshop/Worksh142.png
 
@@ -127,11 +123,11 @@ __________________________________________________
 
 9.  Set the Symbol Layer Type to Arrow
 
-10.
-Uncheck Curved Arrows
+10. Uncheck
+    Curved Arrows
 
-11.
-This will show you the flow direction of each structure.
+11. This will
+    show the flow direction of each structure.
 
 .. image:: ../img/Workshop/Worksh143.png
 
@@ -140,7 +136,7 @@ This will show you the flow direction of each structure.
 
 13. Digitize all of the structures.
 
-14. Click the Save icon to confirm that you are finished with the digitizing tool.
+14. Click the Save icon to confirm that close the digitizing tool and load the data.
 
 .. image:: ../img/Workshop/Worksh144.png
 
@@ -163,49 +159,49 @@ Step 4: Assign the structure attributes
 
 .. image:: ../img/Workshop/Worksh164.png
 
-19. Click Save in the Structures Widget to load the data into the
-dialog box.
+1. Click Save in the Structures Widget to load the data into the
+    dialog box.
 
 **Complete the Structure Fields**
 
-20. Load the Hydraulic Structures Attribute table.
+2. Load the Hydraulic Structures Attribute table.
     The attributes will help fill out each structure table.
 
-21. Check the center button.
+3. Check the center button.
 
-22. Select the first structure.
+4. Select the first structure.
 
-23. Rename the Structure with the “A” button.
+5. Rename the Structure with the “A” button.
 
-24. Fill the Type and Rating fields
+6. Fill the Type and Rating fields
 
-25. Move to the next structure and repeat the process.
+7. Move to the next structure and repeat the process.
 
 .. image:: ../img/Workshop/Worksh146.png
 
 
-26. Schematize the structure data.
+8. Schematize the structure data.
+
 .. image:: ../img/Workshop/Worksh165.png
 
 Step 5: Assign the rating tables
 --------------------------------
 
-27. Click the Import Rating Tables button
+1. Click the Import Rating Tables button
 
 .. image:: ../img/Workshop/Worksh147.png
 
 
-Select the rating tables from the project folder.
+2. Select the rating tables from the project folder.
 
-Click open.
+3. Click open.
 
 **C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 6\Culverts Tables**
 
 .. image:: ../img/Workshop/Worksh148.png
 
 
-The data has been imported.
-If you can’t see it, switch to a different structure.
+4. The data has been imported.  Switch to another structure in the list if the table and plot does not update.
 
 .. image:: ../img/Workshop/Worksh149.png
 
@@ -225,36 +221,34 @@ Step 7: Export the data
 .. image:: ../img/Workshop/Worksh083.png
 
 
-This is a good point to save project.
-Refer to Step 9 in Lesson 1.
+1. This is a good point to save project.
+   Refer to Step 9 in Lesson 1.
 
 .. image:: ../img/Workshop/Worksh166.png
 
-Export the data files to the Project Folder in QGIS Lesson 6 Export.
+2. Export the data files to the Project Folder in QGIS Lesson 6 Export.
 
    **C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 6\Lesson 6 Export\\**
 
-All GDS data files will be created in the selected project folder.
+3. All GDS data files will be created in the selected project folder.
 
 .. image:: ../img/Workshop/Worksh167.png
 
 .. image:: ../img/Workshop/Worksh168.png
 
-The swmm.inp file was not exported.
-Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
+4. The swmm.inp file was not exported.
+   Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
 
 .. image:: ../img/Workshop/Worksh151.png
 
-
-.. _step-8-run-the-simulation-1:
 
 Step 8: Run the simulation
 --------------------------
 
 .. image:: ../img/Workshop/Worksh169.png
 
-Click the *Run FLO-2D* Icon.
+1. Click the *Run FLO-2D* Icon.
 
-Set the Project path and the FLO-2D Engine Path and click *OK* to start the simulation.
+2. Set the Project path and the FLO-2D Engine Path and click *OK* to start the simulation.
 
 .. image:: ../img/Workshop/Worksh152.png

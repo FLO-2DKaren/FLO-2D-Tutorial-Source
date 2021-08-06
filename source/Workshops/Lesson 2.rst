@@ -9,7 +9,7 @@ ________
 Complete QGIS Lesson 1 before starting this lesson.
 Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
 
-This video will guide you through the lesson.
+This video shows the full process of this tutorial.
 
 .. youtube:: d2GfNh6OTWU
 
