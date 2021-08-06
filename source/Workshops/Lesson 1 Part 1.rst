@@ -1,5 +1,5 @@
-Lesson 1 Part 1 – Getting Started
-==================================
+Lesson 1 - Part 1 – Getting Started
+====================================
 
 Overview
 ________
@@ -173,7 +173,8 @@ _____________________________
 
 **Note: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
 Warp processing tool.  To learn more about GDAL Warp, visit this page:**
-        https://gdal.org/programs/gdalwarp.html
+
+https://gdal.org/programs/gdalwarp.html
 
 .. image:: ../img/Workshop/Worksh153.png
 .. image:: ../img/Workshop/Worksh154.png
@@ -236,7 +237,7 @@ ________________________
 
 
 Step 10: Export the FLO-2D data files
-___________________________
+_____________________________________
 
 1. Click the FLO-2D Data Export icon.
 

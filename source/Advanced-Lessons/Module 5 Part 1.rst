@@ -1,5 +1,5 @@
-Module 5 Part I – Create a Watershed Model
-==========================================
+Module 5 - Part 1 – Create a Watershed Model
+=============================================
 Advanced class attendees.
 Skip this lesson.
 It is here for you to peruse.

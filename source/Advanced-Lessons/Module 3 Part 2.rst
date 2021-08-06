@@ -1,5 +1,5 @@
-Module 3 Part 2 – Prescribed Breach - Create Levee and Breach
-==============================================================
+Module 3 - Part 2 – Prescribed Breach - Create Levee and Breach
+================================================================
 
 **Overview**
 

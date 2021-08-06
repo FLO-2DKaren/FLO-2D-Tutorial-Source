@@ -1,5 +1,5 @@
-Module 5 Part 2 – Watershed Mudflow Model
-==========================================
+Module 5 - Part 2 – Watershed Mudflow Model
+============================================
 
 **Overview**
 

@@ -1,21 +1,27 @@
 Introduction
 =============
 
-Welcome to Flo-2D's self-help setup page. The purpose of the self-help kit is to get help you set up your computer with
-FLO-2D, QGIS, and the FLO-2D Plugin.  The training tutorials will guide you through the most project development using
-QGIS.  If you're interested in a more in depth tutorial of QGIS and FLO-2D, we offer
-an Advanced Modules course.
+Welcome to the FLO-2D self-help setup page. The purpose of the self-help kit is to set up a computer with:
 
-Use this page to help set up your computer and get the training data.  This short video will help you with the computer
-setup.
+- FLO-2D
+- QGIS
+- FLO-2D Plugin
+- Training Data
+
+The training tutorials will teach project development using
+QGIS.  Advanced Modules are used to teach more specific and detailed projects.
+
+This short video will show how to set up the computer.
 
 .. youtube:: WKUcyMpqa6M
 
 
 Step 1: Get the Data
 ---------------------
-Click `here <https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668>`__
-to access all the files you'll need to for FLO-2D and the self-help kit.
+
+Use this Download Link to access all **installers**, training data, and videos.
+
+https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668
 
 .. image:: ../img/Instructions/image1.png
 
@@ -90,7 +96,7 @@ Step 6: Installation is Complete
 Everything should now be correctly installed on the computer.  go to Lesson 1 to begin the self-help training.
 
 The tutorial data is here:
-`C:\ Users \ Public \ Documents \ FLO-2D PRO Documentation \ Example Projects`
+C:\ Users \ Public \ Documents \ FLO-2D PRO Documentation \ Example Projects
 
 .. image:: ../img/Instructions/image9.png
 

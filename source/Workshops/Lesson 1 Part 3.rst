@@ -1,5 +1,5 @@
-Lesson 1 Part 3 – Hydrology, Rainfall, and Infiltration
-=======================================================
+Lesson 1 - Part 3 – Hydrology, Rainfall, and Infiltration
+==========================================================
 
 Overview
 ________
@@ -271,7 +271,7 @@ ________________________
 
 
 Step 9: Export the FLO-2D data files
-__________________________
+____________________________________
 
 1. Click the FLO-2D Data Export icon.
 

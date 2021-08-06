@@ -1,5 +1,5 @@
-Module 2 Part 3 – Bridge Hydraulic Structure
-==============================================
+Module 2 - Part 3 – Bridge Hydraulic Structure
+===============================================
 
 **Overview**
 

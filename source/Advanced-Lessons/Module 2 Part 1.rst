@@ -1,5 +1,5 @@
-Module 2 Part 1 – Hydraulic Structures
-======================================
+Module 2 - Part 1 – Hydraulic Structures
+========================================
 
 **Overview**
 

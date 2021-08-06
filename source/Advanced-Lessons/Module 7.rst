@@ -1,5 +1,5 @@
 Module 7 – Tailings Dam Tool
-============================
+=============================
 
 **Overview**
 
@@ -10,37 +10,29 @@ Required Data
 
 The required data is in Module 7.
 
-======== =================
-**File** **Content**
-======== =================
-\*.qgz   QGIS data files
+======== ================= ================
+**File** **Content**       **Location**
+======== ================= ================
+\*.qgz   QGIS data files   Module 7 Folder
 \*.gpkg  FLO-2D Geopackage
 \*.xml   Tailings dam data
 \*.exe   Tailings dam tool
-======== =================
+======== ================= ================
 
 Citation List for this Tutorial:
 
-Robertson, P.
-K., de Melo, L., Williams, D.
-J., & Wilson, G.
-W.
-(2019).
+Robertson, P.K., de Melo, L., Williams, D.J., & Wilson, G.W. (2019).
 Report of the Expert Panel on the Technical Causes of the Failure of Feijão Dam I.
-Pg.
-1–71.
+Pg. 1–71.
+
 http://www.b1technicalinvestigation.com/report.html
 
 TUV SUD Bureau, Periodic Review Dam Mine Safety Stream Bean - Dam I Technical Report.
-SP-RC-117/17 Rev.
-4.
-Pg.
-1–265.
-published on May 17, 2017, Ordinance DNPM No.
-70,389 / 2017.
+SP-RC-117/17 Rev.4.Pg.1–265. published on May 17, 2017, Ordinance DNPM No. 70,389 / 2017.
+
 https://worldminetailingsfailures.org/wp-content/uploads/2019/03/TUV_SUD_2017_Periodic_Safety_Review.en_.pdf
 
-.. _step-1-load-the-project-5:
+**Note:  Copy the link into a browser if broken.**
 
 Step 1: Load the project
 ------------------------
@@ -147,7 +139,6 @@ NSPT saprolite horizon between 15 and 40 strokes
 
 Unit weight = 20 KN/m\ :sup:`3` = 2039.44 kg/m\ :sup:`3`
 
-:sup:` `
 
 Step 8. Saturated tailings depth
 --------------------------------
@@ -198,8 +189,6 @@ Step 9. Tailings dam tool
 11. **Save the file to Module 7 Export.**
 
 .. image:: ../img/Advanced-Workshop/Module252.png
-
-.. _step-7.-export-and-run-the-model-1:
 
 Step 7. Export and run the model
 --------------------------------
