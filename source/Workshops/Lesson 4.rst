@@ -10,7 +10,7 @@ Lesson 4 will outline the process of setting up buildings and walls and defining
 This lesson can be completed after Lesson 1 is finished.
 Apply these instructions after Lesson 1, 2 or 3 are completed.
 
-This video will guide you through the lesson.
+This video shows the full process of this tutorial.
 
 .. youtube:: guHbOgtpAnM
 
@@ -26,7 +26,7 @@ The lesson makes use of buildings and walls shapefiles.
 
    * - **File**
      - **Content**
-     - **Location\**
+     - **Location**
 
    * - Buildings.shp
      - Building shapefile
@@ -61,7 +61,7 @@ To setup a FLO-2D flood simulation use these steps.
 Step 1: Open project QGIS and load the FLO-2D Plugin data
 _________________________________________________________
 
-.. image:: ../img/Workshop/Worksh092.png
+.. image:: ../img/Workshop/Worksh002.png
 
 
 Search the start menu and run the “QGIS Desktop” program.

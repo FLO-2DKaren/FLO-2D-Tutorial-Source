@@ -23,7 +23,6 @@ Table of Contents
    :maxdepth: 1
    :caption: Workshops:
 
-   /Workshops/workshop
    /Workshops/Lesson 1 Part 1
    /Workshops/Lesson 1 Part 2
    /Workshops/Lesson 1 Part 3
@@ -50,3 +49,4 @@ Table of Contents
    /Advanced-Lessons/Module 7
    /Advanced-Lessons/Module 8
    /Advanced-Lessons/Module 9
+   /Advanced-Lessons/Module 10
