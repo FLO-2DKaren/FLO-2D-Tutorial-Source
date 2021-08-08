@@ -12,8 +12,7 @@ The training tutorials will teach project development using
 QGIS.  Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
 to set-up the computer.
 
-.. youtube:: WKUcyMpqa6M
-
+.. youtube:: iEK0UgJ-n7E
 
 Step 1: Get the Data
 ---------------------
@@ -72,37 +71,50 @@ Follow these instructions to set up QGIS.
 
 .. image:: ../img/Instructions/image8.png
 
+3. Open QGIS.
+
+.. image:: ../img/Workshop/Worksh002.png
+
+4. Click Settings/Options
+
+.. image:: ../img/Workshop/image13.png
+
+5. Click the CRS tab and set the options as shown below.  Use CRS from first layer added.  Use Project CRS.  Click OK to
+   close the window.
+
+.. image:: ../img/Workshop/image14.png
+
+
 Step 5: FLO-2D Plugin
 ______________________
 With QGIS installed it is time to add the FLO-2D plugin and a few other handy plugins.
 
-1. Open QGIS.
-
-2. Navigate to the plugin manager.
+1. Navigate to the plugin manager.
 
 .. image:: ../img/Instructions/image10.png
 
-3. Install Quick Map Services and Profile Tool.
+2. Install Quick Map Services and Profile Tool.
 
 .. image:: ../img/Instructions/image11.png
 
-4. Lastly install from Zip FLO-2D Pro.
+3. Lastly install from Zip FLO-2D Pro.
+   Close the Plugin Manager once everything is finished installing.
 
-.. image:: ../img/Instructions/image12.png
+.. image:: ../img/Instructions/image12.gif
 
-Step 6: Installation is Complete
----------------------------------
-Everything should now be correctly installed on the computer.  go to Lesson 1 to begin the self-help training.
+4. Add more services to Quick Map Services and eliminate unwanted maps.  Click Quick Map Services icon and click Settings.
+   On the settings window, go to More Services and click Get Contributed pack.  On the Visibility window, uncheck the
+   unwanted maps.
 
-The tutorial data is here:
-C:\ Users \ Public \ Documents \ FLO-2D PRO Documentation \ Example Projects
+.. image:: ../img/Instructions/image15.gif
+
+
+This concludes the installation and setup.  The tutorial data is here:
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
 .. image:: ../img/Instructions/image9.png
 
-go to Lesson 1 on on the left sidebar to start. Happy Modeling!
+Go to Lesson 1 Part 1 on on the left sidebar to start.
 
-
-
-
-
+Happy Modeling!
 

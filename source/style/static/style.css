@@ -102,7 +102,7 @@ div.related li {
   list-style-type: circle;
 }
 li::marker {
-  color: RED;
+  color: Blue;
 }
 /*
  changes where the next|index is.
