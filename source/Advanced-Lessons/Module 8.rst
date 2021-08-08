@@ -55,11 +55,11 @@ Step 2: Import shapefiles for storm drain features
 
 7. The shapefiles can be described as follow:
 
--  **Lesson3Outfalls.shp** is a point shapefile that contains the outfalls.
+-  Lesson3Outfalls.shp is a point shapefile that contains the outfalls.
 
--  **Lesson3Conduits.shp** is a line shapefile that contains the pipes.
+-  Lesson3Conduits.shp is a line shapefile that contains the pipes.
 
--  **Lesson3InletsJunctions.shp** is a point shapefile that contains the Inlets and Junctions.
+-  Lesson3InletsJunctions.shp is a point shapefile that contains the Inlets and Junctions.
    Inlets collect flow from the surface and their name should start with “I”, this is a requirement for all inlets from type 1 to 5, including manholes.
 
 8. Check the Attribute Tables for the layers conduits, inlets/junctions, and outfalls.
@@ -69,8 +69,8 @@ Step 2: Import shapefiles for storm drain features
 
 .. image:: ../img/Advanced-Workshop/Module262.png
 
-The following data must be available in the shapefile to create the **SWMM.INP** files and the associated storm drain data files: **SWMMFLO.DAT**,
-**SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
+The following data must be available in the shapefile to create the SWMM.INP files and the associated storm drain data files: SWMMFLO.DAT,
+SWMMOUTF.DAT and SWMMFLORT.DAT.
 
 .. image:: ../img/Advanced-Workshop/conduits.png
 
@@ -88,7 +88,7 @@ Step 3. Add missing columns to shapefiles
 
 .. image:: ../img/Advanced-Workshop/Module263.png
 
-3. Using the tables in **Step 2**, add a field or two to the shapefiles.
+3. Using the tables in Step 2, add a field or two to the shapefiles.
 
 4. In this example a new field called Geom 2 is a real or float and has 7 length and 3 precision.
 

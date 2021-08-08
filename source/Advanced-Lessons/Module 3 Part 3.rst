@@ -139,7 +139,7 @@ Step 5. Dam elevation not removed
 
 4. This procedure reset the elevation correction that was applied in Step 6 or 7.
 
-5. Export and run the model by repeating **Step 8**.
+5. Export and run the model by repeating Step 8.
 
 6. Error message appears to alert that the breach elevation is lower than the dam elevation.
    This is an indication that something is wrong.
@@ -147,6 +147,6 @@ Step 5. Dam elevation not removed
 .. image:: ../img/Advanced-Workshop/Module143.png
 
 7. There is another more subtle indication that the dam elevation was not removed.
-   In this case, the dam has not failed because the *dam elevation was not removed*.
+   In this case, the dam has not failed because the dam elevation was not removed.
 
 .. image:: ../img/Advanced-Workshop/Module144.png

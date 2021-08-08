@@ -47,7 +47,7 @@ Step 1: Select components from shapefile layer
 Step 2: Calculate the conduit node connections
 ----------------------------------------------
 
-1. Display the Storm Drain Editor widget and click on *Inlets/Junctions.*
+1. Display the Storm Drain Editor widget and click on Inlets/Junctions.
 
 2. Click the Simulate Storm Drain check box.
 
@@ -96,19 +96,19 @@ Step 4: Schematize storm drain components
 Step 5: Export SWMM.INP file
 ----------------------------
 
-1. Check the *Simulate Storm Drain* check box.
+1. Check the Simulate Storm Drain check box.
 
-2. Click on *Export SWMM.INP* button in the **Storm Drain Editor** widget.
+2. Click on Export SWMM.INP button in the Storm Drain Editor widget.
 
 .. image:: ../img/Advanced-Workshop/Module277.png
 
-3. Browse to the Project Folder and Save the **SWMM.INP** file.
+3. Browse to the Project Folder and Save the SWMM.INP file.
    The \*.INP file should be named as ‘SWMM.INP’, no other names will be read by FLO-2D model.
-   Click *Save*.
+   Click Save.
 
 .. image:: ../img/Advanced-Workshop/Module278.png
 
-4. The *Storm Drain Control Dialog* is displayed.
+4. The Storm Drain Control Dialog is displayed.
 
 5. The control parameters can be entered.
 
@@ -122,7 +122,7 @@ Step 5: Export SWMM.INP file
 .. image:: ../img/Advanced-Workshop/Module279.png
 
 9. A dialog displays stating the features that were written to the \*.INP file.
-   Click *OK*.
+   Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module280.png
 
@@ -133,9 +133,9 @@ Step 6: Export the project
 
 .. image:: ../img/Advanced-Workshop/Module281.png
 
-2. Click the *Set* *Control Variable* icon and enter the data in the FLO-2D Toolbar.
-   The following dialog will be displayed, make sure the *Storm Drain* component switch is selected.
-   Click *Save*.
+2. Click the Set Control Variable icon and enter the data in the FLO-2D Toolbar.
+   The following dialog will be displayed, make sure the Storm Drain component switch is selected.
+   Click Save.
 
 .. image:: ../img/Advanced-Workshop/Module282.png
 
@@ -151,7 +151,7 @@ Step 6: Export the project
 
 .. image:: ../img/Advanced-Workshop/Module285.png
 
-5. All GDS Data files will be created in the selected project folder, including **SWMMFLO.DAT, SWMMFLORT.DAT,** and **SWMMOUTF.DAT** files.
+5. All GDS Data files will be created in the selected project folder, including SWMMFLO.DAT, SWMMFLORT.DAT, and SWMMOUTF.DAT files.
 
 6. The following dialog will be displayed, associated storm drain data files are created when the storm drain switch has been turned ON.
 
@@ -160,7 +160,7 @@ Step 6: Export the project
 Step 7: Run the simulation
 --------------------------
 
-1. Click the *Run FLO-2D* Icon.
+1. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module287.png
 

@@ -9,9 +9,8 @@ Welcome to the FLO-2D self-help setup page. The purpose of the self-help kit is 
 - Training Data
 
 The training tutorials will teach project development using
-QGIS.  Advanced Modules are used to teach more specific and detailed projects.
-
-This short video will show how to set up the computer.
+QGIS.  Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
+to set-up the computer.
 
 .. youtube:: WKUcyMpqa6M
 

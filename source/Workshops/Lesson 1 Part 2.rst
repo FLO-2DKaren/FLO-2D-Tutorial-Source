@@ -1,15 +1,11 @@
 Lesson 1 - Part 2 – Project Recovery Methods
 =============================================
 
-.. _overview-1:
-
 Overview
 ________
 
 Lesson 1, Part 2 is a practical study of managing a FLO-2D project that was constructed using QGIS and the FLO-2D Plugin.
 Use this tutorial to learn how to build a recovery or backup point and recover corrupted data.
-
-.. _required-data-1:
 
 Required Data
 _____________
@@ -42,8 +38,6 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 
 Check these folders to ensure the data is available before starting the lesson.
 Lesson 1, Part 1 should be completed first.
-
-.. _step-by-step-procedure-1:
 
 Step-by-Step Procedure
 ______________________

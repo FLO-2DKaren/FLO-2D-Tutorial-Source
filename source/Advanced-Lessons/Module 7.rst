@@ -186,7 +186,7 @@ Step 9. Tailings dam tool
 
 10. Set the graph to the blue box and Save the INFLOW.DAT file.
 
-11. **Save the file to Module 7 Export.**
+11. Save the file to Module 7 Export.
 
 .. image:: ../img/Advanced-Workshop/Module252.png
 

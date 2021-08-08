@@ -1,8 +1,6 @@
 Lesson 4 – QGIS FLO-2D Plugin Buildings, Walls and Wall Failure
 ================================================================
 
-.. _overview-5:
-
 Overview
 ________
 
@@ -30,18 +28,15 @@ The lesson makes use of buildings and walls shapefiles.
 
    * - Buildings.shp
      - Building shapefile
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 4 PRO
+     - QGIS Lesson 4
 
    * - Walls.shp
      - Walls shapefile
      -
 
-
-\*\ *Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation*
+Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
-
-.. _step-by-step-procedure-5:
 
 Step-by-Step Procedure
 ______________________
@@ -74,9 +69,9 @@ This tutorial will continue from Lesson 3.
 .. image:: ../img/Workshop/Worksh055.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\QGIS Lesson 1.gpkg**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.gpkg
 
-1. *Click Yes* in the FLO-2D window to Load the model.
+1. Click Yes in the FLO-2D window to Load the model.
 
 .. image:: ../img/Workshop/Worksh114.png
 
@@ -88,11 +83,11 @@ The model will look as follows:
 Step 2: Assign buildings
 ________________________
 
-1. Drag the **Buildings.shp** shapefile onto the map space.
+1. Drag the Buildings.shp shapefile onto the map space.
 
 .. image:: ../img/Workshop/Worksh116.png
 
-The **Buildings.shp** shapefile needs 3 Attributes.
+The Buildings.shp shapefile needs 3 Attributes.
 
 -  Collapse Field
 
@@ -125,7 +120,7 @@ The **Buildings.shp** shapefile needs 3 Attributes.
 .. image:: ../img/Workshop/Worksh118.png
 
 
-4. Close *OK* the window.
+4. Close OK the window.
 
 .. image:: ../img/Workshop/Worksh119.png
 
@@ -133,12 +128,12 @@ The **Buildings.shp** shapefile needs 3 Attributes.
 Step 3: Assign walls
 ____________________
 
-1. *Drag* the file **Walls.shp** into the map space.
+1. Drag the file Walls.shp into the map space.
 
 .. image:: ../img/Workshop/Worksh120.png
 
 
-2. Click the *Levee Elevation Tool* from the *FLO-2D Toolbar* and click the Add Walls to User Levee Lines button.
+2. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Add Walls to User Levee Lines button.
 
 .. image:: ../img/Workshop/Worksh121.png
 
@@ -159,9 +154,9 @@ ____________________
 .. image:: ../img/Workshop/Worksh124.png
 
 
-*Note: If an error message was displayed, Move the Walls Layer to the User Layer Group.*
+**Note: If an error message was displayed, Move the Walls Layer to the User Layer Group.**
 
-6. Click the *Levee Elevation Tool* from the *FLO-2D Toolbar* and click the Create Schematic Layers from User Levees button.
+6. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Create Schematic Layers from User Levees button.
 
 .. image:: ../img/Workshop/Worksh125.png
 
@@ -189,13 +184,13 @@ __________________________
 
 The files that connect inlets and outfalls with the FLO-2D surface layer are created when the GDS Data Files are exported.
 
-1. Click the *Set Control Parameters* icon and enter the data in the FLO-2D Toolbar.
-   The following dialog will be displayed, make sure the **Area Reduction Factors** and **Levees** component switches are selected.
+1. Click the Set Control Parameters icon and enter the data in the FLO-2D Toolbar.
+   The following dialog will be displayed, make sure the Area Reduction Factors and Levees component switches are selected.
 
 .. image:: ../img/Workshop/Worksh017.png
 
 
-2. Click *Save*.
+2. Click Save.
 
 .. image:: ../img/Workshop/Worksh129.png
 
@@ -212,12 +207,12 @@ The files that connect inlets and outfalls with the FLO-2D surface layer are cre
 .. image:: ../img/Workshop/Worksh021.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 4\QGIS Lesson 4 Export**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 4\\QGIS Lesson 4 Export
 
 .. image:: ../img/Workshop/Worksh163.png
 
 All GDS Data files will be created in the selected project
-folder, including **ARF.DAT** and **LEVEE.DAT** files.
+folder, including ARF.DAT and LEVEE.DAT files.
 
 The swmm.inp file was not exported.
 Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
@@ -228,17 +223,15 @@ Copy it from Lesson 3 Export folder or export it again using the Storm Drain Edi
 Step 5: Run the simulation
 __________________________
 
-1. Click the *Run FLO-2D* Icon.
+1. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Workshop/Worksh005.png
 
 
-2. Set the Project path and the FLO-2D Engine Path and click *OK* to start the simulation.
+2. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
 .. image:: ../img/Workshop/Worksh131.png
 
-
-.. _summary-2:
 
 Summary
 -------

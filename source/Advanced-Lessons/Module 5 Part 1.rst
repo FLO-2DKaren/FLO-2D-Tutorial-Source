@@ -138,7 +138,7 @@ Step 7. Save and create a recovery point.
 
 3. Zip the \*.qgz and \*.gpkg together.
 
-4. Rename the zipped file **Part I Watershed Hydrology Elev and Man OK.zip**
+4. Rename the zipped file Part I Watershed Hydrology Elev and Man OK.zip
 
 5. Reload the project.
 
