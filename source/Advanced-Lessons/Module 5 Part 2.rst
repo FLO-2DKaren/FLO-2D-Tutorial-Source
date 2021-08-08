@@ -48,9 +48,7 @@ Step 1: Load the project
 
 .. image:: ../img/Advanced-Workshop/Module194.png
 
-\**\*
-
-**Important note:** If the project doesn’t look like the following image, you might be using the watershed model.
+**Important note: If the project does not look like the following image, you might be using the watershed model.**
 
 1. Close QGIS
 
@@ -60,7 +58,6 @@ Step 1: Load the project
 
 4. Reload the project.
 
-\**\*
 
 .. image:: ../img/Advanced-Workshop/Module195.png
 

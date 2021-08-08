@@ -44,8 +44,6 @@ Project location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 
 Check these folders to ensure the data is available before starting the lesson.
 
-.. _step-by-step-procedure-2:
-
 Step-by-Step Procedure
 ----------------------
 
@@ -61,8 +59,6 @@ To setup a FLO-2D flood simulation use these steps.
 8.  Save the project;
 9.  Export the FLO-2D data files;
 10.  Run the FLO-2D model.
-
-.. _step-1-open-qgis-1:
 
 Step 1: Open QGIS
 ___________________

@@ -29,22 +29,16 @@ All data is provided in the Lesson folders.
 
    * - Shapefiles
      - Inlets-Junctions, Outfalls and Conduits
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 3
+     - QGIS Lesson 3
 
    * - I4-37-32-26-1.txt
      - Rating Table
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 3
-
-   * -
-     -
-     -
+     - QGIS Lesson 3
 
 
-\*\ *Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation*
+Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
-
-.. _step-by-step-procedure-4:
 
 Step-by-Step Procedure
 ______________________
@@ -79,12 +73,12 @@ Search the start menu and run the “QGIS Desktop” program.
 
 Click *Open Project* and navigate to the completed Lesson 2 files.
 These may be in Lesson 1 or Lesson 2 depending on the starting point.
-Select \*\ **.qgz** and click *Open*.
+Select Lesson 1.qgz and click *Open*.
 
 .. image:: ../img/Workshop/Worksh055.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\QGIS Lesson 1.qgz**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
 
 
 Step 2: Import shapefiles for storm drain features
@@ -99,7 +93,7 @@ __________________________________________________
 
    b. Uncheck the Google Image
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 3\Storm Drain Shapefiles**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Storm Drain Shapefiles
 
 .. image:: ../img/Workshop/Worksh093.png
 
@@ -222,7 +216,7 @@ ____________________________
 2. Navigate to the I4 table with this path.
    Select the file and click Open.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 3\Storm Drain Shapefiles\I4-37-32-26-1.txt**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Storm Drain Shapefiles\\I4-37-32-26-1.txt
 
 .. image:: ../img/Workshop/Worksh102.png
 
@@ -246,9 +240,9 @@ _________________________________________
 .. image:: ../img/Workshop/Worksh105.png
 
 
-The storm drain schematized data layers have been completed and the atribute tables can be reviewed in the *Storm Drain* layers: *Inlets* and
+The storm drain schematized data layers have been completed and the attribute tables can be reviewed in the *Storm Drain* layers: *Inlets* and
 *Outfalls*.
-The storm drain components are now part of the s\ *hematized layers* in the project.
+The storm drain components are now part of the schematized layers in the project.
 
 .. image:: ../img/Workshop/Worksh106.png
 
@@ -313,7 +307,7 @@ The files that connect inlets and outfalls with the FLO-2D surface layer are cre
 .. image:: ../img/Workshop/Worksh021.png
 
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 3\Lesson 3 Export**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Lesson 3 Export
 
 5. All GDS Data files will be created in the selected project folder, including **SWMMFLO.DAT** and **SWMMOUTF.DAT** files.
 
@@ -334,22 +328,16 @@ __________________________
 
 3. Set the *FLO-2D Folder*.
 
-..
-
-   **C:\program files (x86)\flo-2d pro**
+C:\\program files (x86)\\flo-2d pro
 
 4. Set the *Project Folder*.
 
-..
-
-   **C:\users\public\public documents\flo-2d pro documentation\Example Projects\QGIS Tutorials\QGIS Lesson 3\Lesson 3 Export**
+C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Lesson 3 Export
 
 .. image:: ../img/Workshop/Worksh113.png
 
 
 5. After the storm drain model is complete, review FLO-2D Storm Drain Manual Chapter 6 for more details about reviewing results.
-
-.. _summary-1:
 
 Summary
 _______

@@ -28,14 +28,14 @@ The lesson makes use of QGIS Lesson 2, 3, or 4 and hydraulic structure shapefile
 
    * - \*.shp
      - Hydraulic Structures
-     - \\Example Projects\QGIS Tutorials\QGIS Lesson 6 PRO
+     - QGIS Lesson 6
 
    * - \*.txt
      - Culvert Tables
-     -
+     -QGIS Lesson 6\\Culvert Tables
 
 
-Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation
+Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
 
@@ -196,7 +196,7 @@ Step 5: Assign the rating tables
 
 3. Click open.
 
-**C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 6\Culverts Tables**
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 6\\Culverts Tables
 
 .. image:: ../img/Workshop/Worksh148.png
 
@@ -209,8 +209,8 @@ Step 5: Assign the rating tables
 Step 6: Schematize the data
 ---------------------------
 
-Schematize the structure data\
-.. image:: ../img/Workshop/Worksh165.png and click **Yes** to replace the data.
+Schematize the structure data
+.. image:: ../img/Workshop/Worksh165.png and click Yes to replace the data.
 
 .. image:: ../img/Workshop/Worksh150.png
 
@@ -228,7 +228,7 @@ Step 7: Export the data
 
 2. Export the data files to the Project Folder in QGIS Lesson 6 Export.
 
-   **C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 6\Lesson 6 Export\\**
+   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 6\\Lesson 6 Export
 
 3. All GDS data files will be created in the selected project folder.
 
@@ -247,8 +247,8 @@ Step 8: Run the simulation
 
 .. image:: ../img/Workshop/Worksh169.png
 
-1. Click the *Run FLO-2D* Icon.
+1. Click the Run FLO-2D Icon.
 
-2. Set the Project path and the FLO-2D Engine Path and click *OK* to start the simulation.
+2. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
 .. image:: ../img/Workshop/Worksh152.png

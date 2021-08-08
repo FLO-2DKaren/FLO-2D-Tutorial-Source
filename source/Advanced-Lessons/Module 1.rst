@@ -24,14 +24,14 @@ Step 1: Create a recovery file
 **Note: This step discusses how to set up the backup file or recovery point.  Skip if
 these steps are already well understood.**
 
-1. Select the **Lesson 1.gpkg** and **Lesson 1.qgz** files and zip them.
+1. Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
    This will create a recovery file.
 
 .. image:: ../img/Advanced-Workshop/Module002.png
 
 2. Name the zipped file.
    It is good to choose a name that identifies project progress.
-   For Example: **Lesson 1 n-value OK.zip**.
+   For Example: Lesson 1 n-value OK.zip.
 
 Step 2: Recover a project
 -------------------------
@@ -39,7 +39,7 @@ Step 2: Recover a project
 1. This step is used when project data is corrupt.
    If a project is not exporting data correctly or a mistake is made, use this recovery method.
 
-2. Select **Lesson 1.gpkg** and **Lesson 1.qgz** and delete them both.
+2. Select Lesson 1.gpkg and Lesson 1.qgz and delete them both.
 
 .. image:: ../img/Advanced-Workshop/Module003.png
 
@@ -60,7 +60,7 @@ Step 3: Open the project
 
 2. Remove unavailable layers if necessary.
    Autofind and browse works well to resolve paths.
-   \**This step depends on where the data is located and may not show up for all users.*\*
+   This step depends on where the data is located and may not show up for all users.
 
 .. image:: ../img/Advanced-Workshop/Module007.png
 
@@ -90,11 +90,11 @@ Step 4: Export the FLO-2D data
 
 .. image:: ../img/Advanced-Workshop/Module011.png
 
-**Important note:**  If the image above doesn’t look like the window on your screen, you may be accessing the
-“Lesson 1.gpkg” in the Self-Help training packages.   Delete the old file and return to Step 3.
+**Important note:  If the image above does not look like the window on your screen, you may be accessing the
+“Lesson 1.gpkg” in the Self-Help training packages.   Delete the old file and return to Step 3.**
 
 
-"C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.gpkg".
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\QGIS Lesson 1\\Lesson 1.gpkg
 
 2. Click OK and navigate to the export folder.
    Select the folder and export.
@@ -171,9 +171,9 @@ Step 6: Debug the project in QGIS
 
 7. If you break it, simply reload by going back to the start of step 6.
 
-8. If you click on one of the *Element* cells, the map will move to that cell.
+8. If you click on one of the Element cells, the map will move to that cell.
 
-9. If you click on a *Row*, it will not move to the cell.
+9. If you click on a Row, it will not move to the cell.
 
 10. Close the form when you are sated.
 

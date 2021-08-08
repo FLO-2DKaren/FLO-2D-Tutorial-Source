@@ -18,8 +18,6 @@ The required data is in Module 1 and 2
 \*.tif   Elevation file
 ======== ===========================
 
-.. _step-1-setup-the-project-1:
-
 Step 1: Setup the project
 -------------------------
 

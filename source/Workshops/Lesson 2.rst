@@ -1,8 +1,6 @@
 Lesson 2 – Channels
 ===================
 
-.. _overview-3:
-
 Overview
 ________
 
@@ -53,8 +51,6 @@ All data is provided in the Lesson folders.
 Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
-
-.. _step-by-step-procedure-3:
 
 Step-by-Step Procedure
 ----------------------

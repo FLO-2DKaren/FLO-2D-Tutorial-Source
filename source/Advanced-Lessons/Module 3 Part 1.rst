@@ -26,8 +26,6 @@ Citation List for this Tutorial:
 Tomlinson, E.M., W.D. Kappel, G. Muhlestein, D. Hulstrand, and T. Parzybok, 2013.
 Probable Maximum Precipitation Study for Arizona, Arizona Department of Water Resources, Phoenix, Arizona.
 
-.. _step-1-load-the-project-1:
-
 Step 1: Load the project
 ------------------------
 

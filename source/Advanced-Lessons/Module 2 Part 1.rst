@@ -160,7 +160,7 @@ Step 7: Schematize the data
 
 .. image:: ../img/Advanced-Workshop/Module041.png
 
-1. Schematize the structure data and click **Yes** to replace the data.
+1. Schematize the structure data and click Yes to replace the data.
 
 .. image:: ../img/Advanced-Workshop/Module045.png
 
@@ -186,10 +186,10 @@ Step 8: Save, export, and run
 
 .. image:: ../img/Advanced-Workshop/Module050.png
 
-5. Click the *Run FLO-2D* Icon.
+5. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
 
-6. Set the Project path and the FLO-2D Engine Path and click *OK* to start the simulation.
+6. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
 .. image:: ../img/Advanced-Workshop/Module052.png

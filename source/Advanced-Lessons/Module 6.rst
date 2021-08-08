@@ -186,7 +186,7 @@ Step 6. Create the breach point
 
    - Ends points
 
-3. Location is *not always* important.
+3. Location is not always important.
    For large reservoirs flooding is a function of the volume not breach parameters.
 
 4. It is important to start the breach from the correct side of the levee feature.
