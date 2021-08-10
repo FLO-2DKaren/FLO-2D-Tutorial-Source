@@ -42,7 +42,7 @@ All data is provided in the Lesson folders.
 
 Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
-..youtube:: iPdn6yWuwPA
+.. youtube:: iPdn6yWuwPA
 
 Step-by-Step Procedure
 ______________________
