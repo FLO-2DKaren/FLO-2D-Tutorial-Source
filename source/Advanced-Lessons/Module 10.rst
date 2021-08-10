@@ -35,7 +35,7 @@ All data is provided in the Lesson folders.
      - Inflow hydrograph
      - \\QGIS Lesson 2
 
-   * - Culvert rating tables
+   * - \*.txt
      - Culvert rating tables
      - \\QGIS Lesson 2\\Hydraulic Structures
 
@@ -61,15 +61,15 @@ To setup a FLO-2D flood simulation use these steps.
 
 7.  Schematize channel;
 
-8.  Interpolate channel;
+8.  Revise Bank Alignment;
 
-9.  Channel In/Out condition;
+9.  Interpolate channel;
 
-10. Create culverts;
+10.  Channel In/Out condition;
 
-11. Set up control parameters
+11. Create culverts;
 
-12. Export project;
+12. Set up control parameters and Export Project;
 
 13. Run the FLO-2D model.
 
@@ -256,9 +256,9 @@ Step 5. Complete cross section attributes
 
 2. Click the Edit pencil.
 
-3. Set the field to fcn
+3. Set the field to fcn.
 
-4. Set the n value to 0.03
+4. Set the n value to 0.03.
 
 5. Click Update All.
 
@@ -272,7 +272,7 @@ Step 5. Complete cross section attributes
 
 .. image:: ../img/Advanced-Workshop/Mod10_005.gif
 
-10. Determine the channel geometry.
+10. Methods to determine the channel geometry.
 
     a. As-built files are the first source of data but not available in all cases.
 
@@ -282,8 +282,8 @@ Step 5. Complete cross section attributes
 
     d. Measure side slope from elevation data or site visit.
 
-**Note: The real channel geometry is a mix of gabion and natural, but this tutorial also uses rectangular, trapezoidal and natural geometry to show
-the different method.**
+**Note: The real channel geometry is a mix of gabion lined and natural, but this tutorial also uses rectangular, trapezoidal
+and natural geometry to show the different method.**
 
 11. Open the following attribute tables from the Channel Tables group and fill the data.
 
@@ -324,7 +324,8 @@ Step 6: Sample elevation
 .. image:: ../img/Advanced-Workshop/Lesson025.png
 
 
-5. See that the Table and Plot now have full data for the R and T cross sections.
+5. See that the Table and Plot now have full data for the R and T cross sections.  The N type cross sections have Place
+Holder Data.
 
 .. image:: ../img/Advanced-Workshop/Mod10_007.gif
 
@@ -336,13 +337,13 @@ Step 6: Sample elevation
 
 7. Repeat this step for each Natural Type cross section.
 
-**Note: If only natural cross sections are present, all can be sampled at the same time using the Sample All button.**
+**Note: If natural cross sections are present, they can be sampled at the same time using the Sample All button.**
 
 Step 7: Schematize channel
 --------------------------
 
-**Important Note: If any of the following procedure needs to be repeated, always return to this Schematize step to reset the data before trying to
-modify anything.**
+**Important Note: If any of the following procedure needs to be repeated, always return to this Schematize step to reset
+the data before trying to modify anything.**
 
 1. Click Schematize channels.
 
@@ -358,8 +359,8 @@ modify anything.**
 Step 8: Revise Bank Alignment
 -----------------------------
 
-Channel alignment in urban projects can be important because channels are usually squeezed between features like buildings, walls, and streets.
-In this image, the left bank is on the wrong side of an urban wall.
+Channel alignment in urban projects can be important because channels are usually squeezed between features like
+buildings, walls, and streets.  In this image, the left bank is on the wrong side of an urban wall.
 
 .. image:: ../img/Advanced-Workshop/Lesson030.png
 
@@ -388,7 +389,8 @@ It is simple to make minor corrections to the left bank lines and right bank lin
 .. image:: ../img/Advanced-Workshop/Lesson034.png
 
 
-4. Click the Schematize button to reposition the Schematized Channel and click OK and Close to close the windows.
+4. Click the Schematize button to reposition the Schematized Channel and click Yes and Close to close the windows.  In
+   This case, hitting the enter button twice will be faster.
 
 .. image:: ../img/Advanced-Workshop/Lesson035.png
 
@@ -506,8 +508,8 @@ _____
 
 2. Uncheck the visibility of the User Layers Left Bank Lines, Right Bank Lines, Cross Sections.
 
-
 .. image:: ../img/Advanced-Workshop/image50.png
+
 
 3. Collapse the Cross Section Editor
 
@@ -516,6 +518,7 @@ _____
 5. Click the Add point BC button.
 
 .. image:: ../img/Advanced-Workshop/Lesson052.png
+
 
 6. Digitize a point to the first left bank channel cell and click OK.
 
@@ -547,7 +550,9 @@ _____
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway Inflow 100yr 24hr.txt
 
-.. image:: ../img/Advanced-Workshop/Lesson057.png
+14. Place the cursor in the first cell of the Table and click Paste.
+
+.. image:: ../img/Workshop/workshop040.gif
 
 
 Outlet
@@ -575,12 +580,131 @@ ______
 .. image:: ../img/Advanced-Workshop/Lesson060.png
 
 
-
 6. Click the Schematize button the outflow conditions and click OK to close the message.
 
 .. image:: ../img/Advanced-Workshop/Lesson061.png
 
 .. image:: ../img/Advanced-Workshop/Lesson062.png
+
+
+Step 11: Culverts
+__________________
+
+This structure will calculate discharge through a box culvert.
+This example has a box culvert that is longer than the grid element.
+The channel segments are split up to allow for the width of the roadway.
+
+**Note:  This image shows how the culverts should look once they have been digitized**
+
+.. image:: ../img/Workshop/Worksh074.png
+
+
+1. Zoom to the first culvert.
+
+.. image:: ../img/Workshop/Worksh175.png
+
+2. Open the Structures Editor.
+   Click the Add Structure icon.
+
+.. image:: ../img/Workshop/Worksh075.png
+
+
+3. Digitize the first culvert by clicking on the upstream left bank element and downstream left bank element of the channel.
+   Right click to complete the line and click OK to close the Structure Line attribute box.
+
+.. image:: ../img/Workshop/Worksh176.png
+
+
+4. Repeat the process on the second culvert downstream.
+
+.. image:: ../img/Workshop/Worksh177.png
+
+
+5. Click the Save Button on the Structure Editor.
+
+.. image:: ../img/Workshop/Worksh077.png
+
+
+6. Fill out the data for each structure.
+
+-  Name the culverts Grnway1, Grnway2
+
+-  Type \= Channel
+
+-  Rating \= Rating table
+
+-  Tailwater condition is none.
+
+.. image:: ../img/Workshop/Worksh076.png
+
+
+7.  Click the Import Rating Tables button
+
+.. image:: ../img/Workshop/Worksh078.png
+
+
+8.  Navigate to the Rating Tables files, select both tables and click Open.
+
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Hydraulic Structures
+
+.. image:: ../img/Workshop/Worksh079.png
+
+
+9. Note that the data was loaded into the FLO-2D Table Editor for the active structure.
+
+.. image:: ../img/Workshop/Worksh179.png
+
+
+10. Click Schematize to write the data to the schematic layers.
+
+.. image:: ../img/Workshop/Worksh080.png
+
+
+11. The hydraulic structures are now ready.
+
+12. If the table and plot did not update, refresh the tables by selecting the structure again in the widget.
+
+.. image:: ../img/Workshop/Worksh081.png
+
+
+Step 12: Export the project
+__________________________
+
+1. Click the Setup Control Parameters icon.
+
+.. image:: ../img/Workshop/Worksh017.png
+
+
+3. Check the boxes for Main Channel and Hydraulic structures if needed.
+
+4. Click Save.
+
+.. image:: ../img/Workshop/Worksh082.png
+
+
+5. This is a good point to save project.
+
+.. image:: ../img/Workshop/Worksh011.png
+
+
+Step 13: Run the simulation
+__________________________
+
+1. Click the Run FLO-2D Icon.
+
+.. image:: ../img/Workshop/Worksh005.png
+
+
+2. Set the FLO-2D Folder.
+   C:\\program files (x86)\\flo-2d pro
+
+3. Set the Project Folder.
+
+C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Lesson 2 Export
+
+4. Click OK.
+
+.. image:: ../img/Workshop/Worksh090.png
 
 
 Summary

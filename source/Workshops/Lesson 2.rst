@@ -15,8 +15,8 @@ Required Data
 _____________
 
 The lesson makes use of the original data from Lesson 1, left bank, right bank, and cross section data, and culvert rating tables.
-Start from the end of Lesson 1.
-All data is provided in the Lesson folders.
+Start from the end of Lesson 1.  All data is provided in the Lesson folders.  This lesson uses the same project and data from the
+classic QGIS Lesson 2 but it does not use HEC-RAS data.  Instead, it uses the FLO-2D Plugin channel tools.
 
 .. list-table::
    :widths: 33 33 33
@@ -39,7 +39,7 @@ All data is provided in the Lesson folders.
      - Inflow hydrograph
      - \\QGIS Lesson 2
 
-   * - Culvert rating tables
+   * - \*.txt
      - Culvert rating tables
      - \\QGIS Lesson 2\\Hydraulic Structures
 
@@ -284,7 +284,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 11. The hydraulic structures are now ready.
 
-7. If you do not see the data, refresh the tables by selecting the structure again in the widget.
+12. If the table and plot did not update, refresh the tables by selecting the structure again in the widget.
 
 .. image:: ../img/Workshop/Worksh081.png
 
