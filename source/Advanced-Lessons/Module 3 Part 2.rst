@@ -80,9 +80,9 @@ Step 2. Define the breach
 Step 3. Remove the dam elevation (method 1)
 -------------------------------------------
 
-1. Do you want to remove the entire structure? Complete Step 6.
+1. Remove the entire dam elevation structure? Complete Step 6.
 
-2. Do you want to remove a thin slice? go to Step 7 (method 2)
+2. Remove a thin slice of dam elevation? go to Step 7 (method 2)
 
 3. Highlight the Elevation Polygon Layer
 

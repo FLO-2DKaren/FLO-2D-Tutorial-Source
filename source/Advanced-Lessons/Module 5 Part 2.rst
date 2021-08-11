@@ -43,8 +43,8 @@ Step 1: Load the project
 .. image:: ../img/Advanced-Workshop/Module193.png
 
 3. Click Yes to load the model.
-   If you don’t see this window, you might need to delete the \*.gpkg in Module 5 Part I and try again.
-   The data needs to come from Part II.
+   If the specific window below does not appear, delete the \*.gpkg in Module 5 Part I and try again.  Don't forget to
+   make a recovery file first.  The data needs to come from Part II but the original GeoPackage was developed in Part I.
 
 .. image:: ../img/Advanced-Workshop/Module194.png
 

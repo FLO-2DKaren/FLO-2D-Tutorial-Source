@@ -388,7 +388,7 @@ It is simple to make minor corrections to the left bank lines and right bank lin
 .. image:: ../img/Advanced-Workshop/Lesson033.png
 
 
-3. Reposition the Left Bank Line so that it is inbetween the retaining wall and the channel.
+3. Reposition the Left Bank Line so that it is in between the retaining wall and the channel.
 
 .. image:: ../img/Advanced-Workshop/Lesson034.png
 
@@ -547,7 +547,7 @@ Inlet
 
 12. The widget should look like this.
 
-.. image:: ../img/Advanced-Workshop/Lesson055.png
+.. image:: ../img/Advanced-Workshop/Mod10_010.gif
 
 
 13. Open the hydrograph file in Notepad and copy the data.
@@ -580,7 +580,7 @@ Outlet
 .. image:: ../img/Advanced-Workshop/Lesson054.png
 
 
-4. Name the BC to GrnwyOut
+4. Name the BC to GrnwayOut
 
 5. Set the Outflow type to 3.
 
@@ -595,7 +595,7 @@ Outlet
 
 
 Step 11: Culverts
-__________________
+------------------
 
 This structure will calculate discharge through a box culvert.
 This example has a box culvert that is longer than the grid element.
@@ -675,7 +675,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 
 Step 12: Export the project
-__________________________
+----------------------------
 
 1. Click the Setup Control Parameters icon.
 
@@ -695,7 +695,7 @@ __________________________
 
 
 Step 13: Run the simulation
-__________________________
+----------------------------
 
 1. Click the Run FLO-2D Icon.
 

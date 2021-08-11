@@ -3,7 +3,7 @@ Module 1 - Project Recovery and Debug
 
 **Overview**
 
-This module will show you how to build a recovery point and debug a FLO-2D Data Set.
+This module will outline how to build a recovery point and debug a FLO-2D Data Set.
 
 Required Data
 -------------
@@ -91,7 +91,7 @@ Step 4: Export the FLO-2D data
 .. image:: ../img/Advanced-Workshop/Module011.png
 
 **Important note:  If the image above does not look like the window on your screen, you may be accessing the
-“Lesson 1.gpkg” in the Self-Help training packages.   Delete the old file and return to Step 3.**
+“Lesson 1.gpkg” in the Self-Help training packages.   Delete the file in QGIS Lesson 1 Folder and return to Step 3.**
 
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\QGIS Lesson 1\\Lesson 1.gpkg
@@ -169,13 +169,13 @@ Step 6: Debug the project in QGIS
 
 6. Test the filtering and navigation tools on this form.
 
-7. If you break it, simply reload by going back to the start of step 6.
+7. If something breaks or stops working, simply reload by going back to the start of step 6.
 
-8. If you click on one of the Element cells, the map will move to that cell.
+8. Click on one of the Element cells and the map will move to that cell.
 
-9. If you click on a Row, it will not move to the cell.
+9. Click on a Row, and the map will not change.
 
-10. Close the form when you are sated.
+10. Close the form after a content and sated feeling is achieved.
 
 
 Step 7: Load the conflict table
@@ -191,7 +191,7 @@ Step 7: Load the conflict table
 
 3. Select Storm Drain Inlets to see how the form filters the data.
 
-4. Click the close button when you are content.
+4. Click the close button upon reaching Zen.
 
 .. image:: ../img/Advanced-Workshop/Module028.png
 
@@ -214,6 +214,6 @@ Step 8: Load the levee table
 
 5. The standard QGIS table has excellent filtering and zoom to features.
 
-6. Close the form when you are assuaged.
+6. Close the form when if true mastery was achieved.
 
 .. image:: ../img/Advanced-Workshop/Module030.png

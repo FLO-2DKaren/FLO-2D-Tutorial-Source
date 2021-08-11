@@ -45,7 +45,7 @@ Step 2: Import shapefiles for storm drain features
 
 3. The shapefiles should be located inside the User Layer group.
 
-4. Clean up your screen a little if you want.
+4. Clean up the map screen a little.
 
 5. Uncheck Schema layers
 
