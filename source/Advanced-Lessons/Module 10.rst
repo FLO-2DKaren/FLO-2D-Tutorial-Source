@@ -42,6 +42,8 @@ All data is provided in the Lesson folders.
 
 Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
+This video will get through Step 9.  The second video is linked to Step 10.
+
 .. youtube:: iPdn6yWuwPA
 
 Step-by-Step Procedure
@@ -149,11 +151,11 @@ Cool digitizing features:
 
 -  Redo and undo have limited functionality and can be useful.
 
-4. Start at the beginning of the channel on the left bank looking dowstream.
+4. Start at the beginning of the channel on the left bank looking downstream.
    Click the left mouse button to create a line that runs along the left bank.
    Click the right mouse button to close the polyline and fill the attributes.
 
-5. The channel runs from east to west so the left bank looking dowstream is on the south side.
+5. The channel runs from east to west so the left bank looking downstream is on the south side.
 
 .. image:: ../img/Advanced-Workshop/Mod10_002.gif
 
@@ -186,11 +188,11 @@ Step 3: Digitize the right banks
 .. image:: ../img/Advanced-Workshop/Lesson010.png
 
 
-4. Start at the beginning of the channel on the right bank looking dowstream.
+4. Start at the beginning of the channel on the right bank looking downstream.
    Click the left mouse button to create a line that runs along the right bank.
    Click the right mouse button to close the polyline and fill the attributes.
 
-5. The channel runs from east to west so the right bank looking dowstream is on the north side.
+5. The channel runs from east to west so the right bank looking downstream is on the north side.
 
 .. image:: ../img/Advanced-Workshop/Mod10_003.gif
 
@@ -295,15 +297,15 @@ and natural geometry to show the different method.**
 
 12. Channel details:
 
-    a. Rectangular width _ 40 ft
+    a. Rectangular width = 40 ft
 
-    b. Rectangular depth _ 10 ft
+    b. Rectangular depth = 10 ft
 
-    c. Trapezoidal width _ 28 ft
+    c. Trapezoidal width = 28 ft
 
-    d. Trapezoidal depth _ 10 ft
+    d. Trapezoidal depth = 10 ft
 
-    e. Trapezoidal side slope _ 0.5
+    e. Trapezoidal side slope = 0.5
 
 .. image:: ../img/Advanced-Workshop/Mod10_006.gif
 
@@ -327,7 +329,7 @@ Step 6: Sample elevation
 
 
 5. See that the Table and Plot now have full data for the R and T cross sections.  The N type cross sections have Place
-Holder Data.
+   Holder Data.
 
 .. image:: ../img/Advanced-Workshop/Mod10_007.gif
 
@@ -500,8 +502,11 @@ correctly.**
 Step 10: Channel in/out condition
 ---------------------------------
 
+**Place Holder Video.  Replace with webinar video.**
+.. youtube:: iPdn6yWuwPA
+
 Inlet
-_____
+^^^^^^
 
 1. Zoom to the first channel element on the southeast corner of the map.
 
@@ -554,11 +559,11 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 14. Place the cursor in the first cell of the Table and click Paste.
 
-.. image:: ../img/Workshop/workshop040.gif
+.. image:: ../img/Workshop/worksh040.gif
 
 
 Outlet
-______
+^^^^^^^
 
 1. Zoom to the end of the channel.
 

@@ -1,4 +1,4 @@
-Introduction
+FLO-2D Setup
 =============
 
 Welcome to the FLO-2D self-help setup page. The purpose of the self-help kit is to set up a computer with:
