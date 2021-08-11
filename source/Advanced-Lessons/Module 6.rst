@@ -169,7 +169,7 @@ Step 6. Create the breach point
 -------------------------------
 
 1. Identify a good breach location.
-   You can choose any location you desire.
+   Choose any desired location.
 
 .. image:: ../img/Advanced-Workshop/Module229.png
 
@@ -205,7 +205,7 @@ Step 6. Create the breach point
 
 9.  Click the map where the breach should go and fill the table.
 
-10. You can choose a good location based on engineering judgment.
+10. Choose a good location based on engineering judgment.
 
 11. The data is listed in step 3, 4 and 5.
 
@@ -213,7 +213,7 @@ Step 6. Create the breach point
 
 .. image:: ../img/Advanced-Workshop/number12.png
 
-13. If you mess up, Click Revert Breach Edits button and try again.
+13. Not working? Click Revert Breach Edits button and try again.
 
 .. image:: ../img/Advanced-Workshop/Module231.png
 

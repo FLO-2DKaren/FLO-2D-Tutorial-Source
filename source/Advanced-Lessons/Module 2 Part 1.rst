@@ -61,7 +61,7 @@ Step 3: Format the data layers
 .. image:: ../img/Advanced-Workshop/Module033.png
 
 2. Select structure 130, and 131 and click Zoom map to selected rows button.
-   This will zoom your map to these two structures.
+   This will zoom the map to these two structures.
 
 .. image:: ../img/Advanced-Workshop/Module034.png
 
@@ -71,7 +71,7 @@ Step 3: Format the data layers
 
 5. Set the Labels like the following image.
 
-6. This allows you to see which culvert you are working on.
+6. This shows which culvert is active.
 
 .. image:: ../img/Advanced-Workshop/Module035.png
 
@@ -83,7 +83,7 @@ Step 3: Format the data layers
 
 10. Uncheck Curved Arrows
 
-11. This will show you the flow direction of each structure.
+11. This shows the flow direction of each structure.
 
 .. image:: ../img/Advanced-Workshop/Module036.png
 
@@ -94,7 +94,7 @@ Step 4: Build the structures into the User Layers.
 
 2. Digitize all of the structures.
 
-3. Click the Save icon to confirm that you are finished with the digitizing tool.
+3. Click the Save icon to confirm complete digitizing.
 
 .. image:: ../img/Advanced-Workshop/Module037.png
 
@@ -104,7 +104,7 @@ Step 4: Build the structures into the User Layers.
 
 5. Left click the outlet node (downstream node)
 
-6. Right Click to finish the polyine.
+6. Right Click to finish the polyline.
    Click OK to finish the feature.
 
 .. image:: ../img/Advanced-Workshop/Module038.png
@@ -151,7 +151,7 @@ Step 6: Assign the rating tables
 .. image:: ../img/Advanced-Workshop/Module043.png
 
 9. The data has been imported.
-   If you can’t see it, switch to a different structure.
+   If the table is not updated, switch to a different structure in the widget.
 
 .. image:: ../img/Advanced-Workshop/Module044.png
 
