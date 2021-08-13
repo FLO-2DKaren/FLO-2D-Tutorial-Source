@@ -559,7 +559,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 14. Place the cursor in the first cell of the Table and click Paste.
 
-.. image:: ../img/Workshop/worksh040.gif
+.. image:: ../img/Workshop/Worksh040.gif
 
 
 Outlet
