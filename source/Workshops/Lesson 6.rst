@@ -32,7 +32,8 @@ The lesson makes use of QGIS Lesson 2, 3, or 4 and hydraulic structure shapefile
 
    * - \*.txt
      - Culvert Tables
-     -QGIS Lesson 6\\Culvert Tables
+     - QGIS Lesson 6\\Culvert Tables
+
 
 
 Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example Projects\\QGIS Tutorials
