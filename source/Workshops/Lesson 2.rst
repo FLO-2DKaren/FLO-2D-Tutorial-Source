@@ -136,77 +136,93 @@ Step 4: Channel in/out condition
 ________________________________
 
 Inlet
-_____
+^^^^^
+
 
 1. Zoom to the first channel element on the southeast corner of the map.
 
-.. image:: ../img/Workshop/Worksh062.png
+.. image:: ../img/Advanced-Workshop/Lesson050.png
 
 
-2. Use the Boundary Condition Editor to create the Inflow point.
+2. Uncheck the visibility of the User Layers Left Bank Lines, Right Bank Lines, Cross Sections.
 
-.. image:: ../img/Workshop/Worksh063.png
+.. image:: ../img/Advanced-Workshop/image50.png
 
 
-3. Add a point to the first channel cell.
+3. Collapse the Cross Section Editor
 
-4. Click Save on the Widget.
+4. Expand the Boundary Condition Editor.
 
-5. Change the name of the inflow to GrnwayIN.
+5. Click the Add point BC button.
 
-6. Set it to Defined for Channel.
+.. image:: ../img/Advanced-Workshop/Lesson052.png
 
-7. Click the add a new time series button.
 
-8. Name the new time series Grnway24hr100yr.
+6. Digitize a point to the first left bank channel cell and click OK.
 
-.. image:: ../img/Workshop/Worksh064.png
+.. image:: ../img/Advanced-Workshop/Lesson053.png
 
-.. image:: ../img/Workshop/Worksh065.png
 
-9. Open the hydrograph file from Lesson 2.  Copy the data from this file.
+7. Click Save on the Widget
 
-.. image:: ../img/Workshop/Worksh174.png
+.. image:: ../img/Advanced-Workshop/Lesson054.png
+
+
+8.  Change the BC name of the inflow to GrnwayIN
+
+9.  Set Defined for to Channel
+
+10. Click Add new Time Series
+
+11. Name the new Time Series to Grnway 24hr 100yr.
+
+12. The widget should look like this.
+
+.. image:: ../img/Advanced-Workshop/Mod10_010.gif
+
+
+13. Open the hydrograph file in Notepad and copy the data.
+
+.. image:: ../img/Advanced-Workshop/Lesson056.png
+
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway Inflow 100yr 24hr.txt
 
-10. Place the cursor in the first cell of the FLO-2D Table Editor and click Paste.
+14. Place the cursor in the first cell of the Table and click Paste.
 
 .. image:: ../img/Workshop/Worksh040.gif
 
 
 Outlet
-______
+^^^^^^
 
 1. Zoom to the end of the channel.
-   Add a BC Point to the last element of the channel.
 
-.. image:: ../img/Workshop/Worksh063.png
+2. Add a BC Point to the last element of the channel.
 
-
-.. image:: ../img/Workshop/Worksh068.png
+.. image:: ../img/Advanced-Workshop/Lesson058.png
 
 
-.. image:: ../img/Workshop/Worksh069.png
+.. image:: ../img/Advanced-Workshop/Lesson059.png
 
 
-2. Save the form and set the BC type to Outflow
+3. Save the form and set the BC type to Outflow
 
-.. image:: ../img/Workshop/Worksh070.png
-
-
-3. Name the BC to GrnwyOut
-
-4. Set the type to 3.
-
-.. image:: ../img/Workshop/Worksh071.png
+.. image:: ../img/Advanced-Workshop/Lesson054.png
 
 
-5. Shematize the outflow conditions.
+4. Name the BC to GrnwayOut
 
-.. image:: ../img/Workshop/Worksh072.png
+5. Set the Outflow type to 3.
 
-.. image:: ../img/Workshop/Worksh073.png
+.. image:: ../img/Advanced-Workshop/Lesson060.png
+
+
+6. Click the Schematize button the outflow conditions and click OK to close the message.
+
+.. image:: ../img/Advanced-Workshop/Lesson061.png
+
+.. image:: ../img/Advanced-Workshop/Lesson062.png
 
 
 Step 5: Culverts
@@ -351,7 +367,7 @@ __________________________
 
 1. Click the Run FLO-2D Icon.
 
-.. image:: ../img/Workshop/Worksh005.png
+.. image:: ../img/Workshop/Worksh0052.png
 
 
 2. Set the FLO-2D Folder.

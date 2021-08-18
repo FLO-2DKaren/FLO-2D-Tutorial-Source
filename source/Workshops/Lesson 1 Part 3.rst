@@ -290,7 +290,7 @@ ___________________________
 
 1. Click on the Run FLO-2D icon.
 
-.. image:: ../img/Workshop/Worksh005.png
+.. image:: ../img/Workshop/Worksh0052.png
 
 
 2. Set the FLO-2D Pro folder.
