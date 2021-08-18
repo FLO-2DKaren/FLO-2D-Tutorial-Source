@@ -139,7 +139,7 @@ __________________________
 
 1. Click the Run FLO-2D Icon.
 
-.. image:: ../img/Workshop/Worksh005.png
+.. image:: ../img/Workshop/Worksh0052.png
 
 
 2. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.

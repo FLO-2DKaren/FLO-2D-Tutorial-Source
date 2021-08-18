@@ -682,16 +682,26 @@ Step 12: Export the project
 .. image:: ../img/Workshop/Worksh017.png
 
 
-3. Check the boxes for Main Channel and Hydraulic structures if needed.
+2. Check the boxes for Main Channel and Hydraulic structures if needed.
 
-4. Click Save.
+3. Click Save.
 
 .. image:: ../img/Workshop/Worksh082.png
 
+4. Click the Export button for the FLO-2D Data files.
+   Click OK.
 
-5. This is a good point to save project.
+.. image:: ../img/Advanced-Workshop/Module123.png
 
-.. image:: ../img/Workshop/Worksh011.png
+.. image:: ../img/Advanced-Workshop/Lesson063.png
+
+5. Select the QGIS Lesson 2 Export folder.
+
+.. image:: ../img/Advanced-Workshop/Lesson064.png
+
+6. The data is ready to run.
+
+.. image:: ../img/Advanced-Workshop/Lesson065.png
 
 
 Step 13: Run the simulation
@@ -699,7 +709,7 @@ Step 13: Run the simulation
 
 1. Click the Run FLO-2D Icon.
 
-.. image:: ../img/Workshop/Worksh005.png
+.. image:: ../img/Advanced-Workshop/Lesson066.png
 
 
 2. Set the FLO-2D Folder.
@@ -712,6 +722,11 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 4. Click OK.
 
 .. image:: ../img/Workshop/Worksh090.png
+
+
+5. This is a good point to save project.
+
+.. image:: ../img/Workshop/Worksh011.png
 
 
 Summary

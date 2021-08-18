@@ -165,8 +165,7 @@ Step 4: Assign the structure attributes
 
 **Complete the Structure Fields**
 
-2. Load the Hydraulic Structures Attribute table.
-    The attributes will help fill out each structure table.
+2. Load the Hydraulic Structures Attribute table.  The attributes will help fill out each structure table.
 
 3. Check the center button.
 
@@ -184,6 +183,7 @@ Step 4: Assign the structure attributes
 8. Schematize the structure data.
 
 .. image:: ../img/Workshop/Worksh165.png
+
 
 Step 5: Assign the rating tables
 --------------------------------
@@ -223,9 +223,9 @@ Step 7: Export the data
 
 
 1. This is a good point to save project.
-   Refer to Step 9 in Lesson 1.
 
-.. image:: ../img/Workshop/Worksh166.png
+.. image:: ../img/Workshop/Worksh021.png
+
 
 2. Export the data files to the Project Folder in QGIS Lesson 6 Export.
 
@@ -246,7 +246,7 @@ Step 7: Export the data
 Step 8: Run the simulation
 --------------------------
 
-.. image:: ../img/Workshop/Worksh169.png
+.. image:: ../img/Workshop/Worksh0052.png
 
 1. Click the Run FLO-2D Icon.
 
