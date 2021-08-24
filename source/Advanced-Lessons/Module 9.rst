@@ -58,7 +58,7 @@ Step 2: Calculate the conduit node connections
 
 .. image:: ../img/Advanced-Workshop/Module270.png
 
-Step 3: Import Rating Tables
+Step 3: Import rating tables
 ----------------------------
 
 1. Click the Import Rating Table Button

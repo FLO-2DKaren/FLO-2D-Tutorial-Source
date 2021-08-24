@@ -502,8 +502,9 @@ correctly.**
 Step 10: Channel in/out condition
 ---------------------------------
 
-**Place Holder Video.  Replace with webinar video.**
-.. youtube:: iPdn6yWuwPA
+Instructional Video
+
+.. youtube:: 8zm8ach2jpc
 
 Inlet
 ^^^^^^

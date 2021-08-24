@@ -72,7 +72,7 @@ Step 2. Load the hydrography map
 
 .. image:: ../img/Advanced-Workshop/Module149.png
 
-Step 3. Review the watershed.
+Step 3. Review the watershed
 -----------------------------
 
 1. Scan the AOI and hydrography map to see if the feature is collecting all the water from the watershed above the point
@@ -85,7 +85,7 @@ Step 3. Review the watershed.
 
 .. image:: ../img/Advanced-Workshop/Module150.png
 
-Step 4. Create the grid.
+Step 4. Create the grid
 ------------------------
 
 1. Click the create grid button.
@@ -100,7 +100,7 @@ Step 4. Create the grid.
 
 .. image:: ../img/Advanced-Workshop/Module151.png
 
-Step 5. Interpolate Elevation.
+Step 5. Interpolate Elevation
 ------------------------------
 
 1. Click the Interpolate from Raster button.
@@ -126,7 +126,7 @@ Step 6. Calculate Roughness
 
 .. image:: ../img/Advanced-Workshop/Module153.png
 
-Step 7. Save and create a recovery point.
+Step 7. Save and create a recovery point
 -----------------------------------------
 
 1. Save QGIS.
@@ -264,8 +264,8 @@ Once either method is applied, the data is easily converted to the INFIL.DAT fil
 
 .. image:: ../img/Advanced-Workshop/Module167.png
 
-Step 12. Alternate infiltration method 2
-----------------------------------------
+Alternate infiltration method 2
+________________________________
 
 1. Convert the data to Raster.
 
@@ -297,8 +297,8 @@ Step 12. Alternate infiltration method 2
 
 .. image:: ../img/Advanced-Workshop/Module170.png
 
-Step 13. Export infiltration data.
-----------------------------------
+Export infiltration data
+________________________
 
 1. Find the Grid Layer.
 
@@ -318,13 +318,13 @@ Step 13. Export infiltration data.
 
 .. image:: ../img/Advanced-Workshop/Module172.png
 
-Step 14. Recalculate the elevation.
------------------------------------
+Recalculate the elevation
+_________________________
 
 1. Repeat Step 5 (Interpolate Elevation) and return here.
 
-Step 15. Export INFIL.DAT
--------------------------
+Export INFIL.DAT
+________________
 
 1. Click the Control Variables button.
 
@@ -342,8 +342,8 @@ Step 15. Export INFIL.DAT
 
 .. image:: ../img/Advanced-Workshop/Module176.png
 
-Step 16. Format the CN data
----------------------------
+Format the CN data
+__________________
 
 1. Open both files side by side in NotePad++ or Excel
 
@@ -359,8 +359,8 @@ Step 16. Format the CN data
 
 6. Save and close INFIL.DAT.
 
-Step 17. Reload the infiltration data.
---------------------------------------
+Reload the infiltration data
+____________________________
 
 1. Click the import individual data into Schema layer button.
 
@@ -380,7 +380,7 @@ Step 17. Reload the infiltration data.
 
 .. image:: ../img/Advanced-Workshop/Module181.png
 
-Step 18. Save, export, and run
+Step 12. Save, export, and run
 ------------------------------
 
 1. This is a good point to save project.
@@ -403,7 +403,7 @@ Step 18. Save, export, and run
 
 .. image:: ../img/Advanced-Workshop/Module183.png
 
-Step 19. Map the velocity vectors and import them into QGIS
+Step 13. Map the velocity vectors and import them into QGIS
 -----------------------------------------------------------
 
 1. The first run is used to identify an area of concentrated flow and build a Floodplain Hydrograph.
@@ -440,7 +440,7 @@ Step 19. Map the velocity vectors and import them into QGIS
 
 .. image:: ../img/Advanced-Workshop/Module189.png
 
-Step 20. Create a floodplain cross section.
+Step 14. Create a floodplain cross section
 -------------------------------------------
 
 1. Zoom in to the apex of the alluvial fan.
@@ -461,7 +461,7 @@ Step 20. Create a floodplain cross section.
 
 .. image:: ../img/Advanced-Workshop/Module191.png
 
-Step 21. Save, export, and run again
+Step 15. Save, export, and run again
 ------------------------------------
 
 1. This is a good point to save project.

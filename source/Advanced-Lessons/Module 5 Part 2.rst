@@ -100,7 +100,7 @@ Step 2. Create inflow hydrograph
 
 .. image:: ../img/Advanced-Workshop/Module202.png
 
-Step 3. Assign the hydrograph to a BC node.
+Step 3. Assign the hydrograph to a BC node
 -------------------------------------------
 
 1. In QGIS, collapse the FLO-2D Widgets and click the Boundary Condition Editor widget.
@@ -121,7 +121,7 @@ Step 3. Assign the hydrograph to a BC node.
 
 .. image:: ../img/Advanced-Workshop/Module205.png
 
-Step 4. Set a global bulking factor.
+Step 4. Set a global bulking factor
 ------------------------------------
 
 1. Click the Control Variables table.
@@ -154,7 +154,7 @@ Step 5. Export and run the model
 
 .. image:: ../img/Advanced-Workshop/Module211.png
 
-Step 6. Set up the mudflow.
+Step 6. Set up the mudflow
 ---------------------------
 
 1. Open the Cv Calculator.xlsx file.
@@ -192,8 +192,8 @@ Step 6. Set up the mudflow.
 See Simulating Mudflow Guidelines to get instructions for the soil viscosity and yield stress parameters.
 These parameters are generally retrieved from laboratory studies but if no study is available, a conservative dataset of Glenwood 4 can be applied.
 
-Step 5. Export and run the *Mudflow* model
-------------------------------------------
+Step 5. Export and run the Mudflow model
+----------------------------------------
 
 1. Click the Control Variables table.
 
