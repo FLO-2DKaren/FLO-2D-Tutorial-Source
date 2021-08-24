@@ -33,7 +33,7 @@ https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668
 
 
 Step 2: FLO-2D Installer
-________________________
+------------------------
 Install FLO-2D using the following instructions.
 
 .. image:: ../img/Instructions/image3.png
@@ -95,7 +95,7 @@ Follow these instructions to set up QGIS.
 
 
 Step 5: FLO-2D Plugin
-______________________
+----------------------
 With QGIS installed it is time to add the FLO-2D plugin and a few other handy plugins.
 
 1. Navigate to the plugin manager.

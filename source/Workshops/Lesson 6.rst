@@ -41,7 +41,7 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example
 Check these folders to ensure the data is available before starting the lesson.
 
 Step-by-Step Procedure
-______________________
+-----------------------
 
 To build HYSTRUC.DAT following these steps.
 
@@ -62,7 +62,7 @@ To build HYSTRUC.DAT following these steps.
 8. Run the simulation.
 
 Step 1: Setup the project
-_________________________
+-------------------------
 
 .. image:: ../img/Workshop/Worksh002.png
 
@@ -74,7 +74,7 @@ _________________________
 3. Save the project
 
 Step 2: Import data
-___________________
+-------------------
 
 1. Start by cleaning up the map space so the next layer will be easy to see.
 
@@ -93,8 +93,8 @@ ___________________
 .. image:: ../img/Workshop/Worksh139.png
 
 
-Step 3: Build the structures into the User Layers.
-__________________________________________________
+Step 3: Build the structures into the User Layers
+--------------------------------------------------
 
 1. Open the Attributes Table on the Hydraulic Structures Layer.
 

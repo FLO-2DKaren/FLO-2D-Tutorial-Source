@@ -63,7 +63,7 @@ This bridge in Simi Valley, CA crosses Arroyo Simi at Tapo St.
 It appears to have vertical embankments and abutments.
 
 Plan view parameters
---------------------
+____________________
 
 .. image:: ../img/Advanced-Workshop/Module079.png
 
@@ -76,7 +76,7 @@ w = 5 ft measured from QGIS map
 L\ :sub:`1-2` = 177 ft measured from QGIS map
 
 Profile parameters
-------------------
+__________________
 
 .. image:: ../img/Advanced-Workshop/Module080.png
 
@@ -93,7 +93,7 @@ Average bridge deck elevation = 953.4 ft
 Deck weir length = 114 ft
 
 Bridge opening ratio
---------------------
+____________________
 
 1. Calculate M = q/Q = 0.83 = Discharge through bridge opening/pre-structure discharge)
 
@@ -106,7 +106,7 @@ Q = 10325 cfs at normal depth 8.06
 .. image:: ../img/Advanced-Workshop/Module082.png
 
 Bridge tables
--------------
+_____________
 
 This bridge is a Type I: Vertical embankments and abutments.
 
@@ -138,7 +138,7 @@ Type 1 Bridge Opening cont.
 112, Figure 4.3)
 
 Bridge variables dialog
------------------------
+_______________________
 
 1. Fill the table from the preceding instructions.
 
