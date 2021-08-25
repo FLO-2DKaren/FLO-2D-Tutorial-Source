@@ -1,5 +1,5 @@
-Module 3 - Part 3  – Prescribed Breach - Add Detail and Troubleshoot
-=====================================================================
+Prescribed Breach Part 3 - Add Detail and Troubleshoot
+=======================================================
 
 **Overview**
 

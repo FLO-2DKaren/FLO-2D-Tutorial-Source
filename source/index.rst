@@ -21,7 +21,7 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Workshops:
+   :caption: Self-Help Kit:
 
    /Workshops/Lesson 1 Part 1
    /Workshops/Lesson 1 Part 2
@@ -34,7 +34,7 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Advanced Lessons (Continue from or replace Workshop Lessons):
+   :caption: Advanced Modules:
 
    /Advanced-Lessons/Module 1
    /Advanced-Lessons/Module 2 Part 1
@@ -43,13 +43,13 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Advanced Lessons (Bridges):
+   :caption: Bridges:
 
    /Advanced-Lessons/Module 2 Part 3
 
 .. toctree::
    :maxdepth: 1
-   :caption: Advanced Lessons (Dam Breach and Mudflow):
+   :caption: Dam Breach, Tailings, Mudflow:
 
    /Advanced-Lessons/Module 3 Part 1
    /Advanced-Lessons/Module 3 Part 2
@@ -61,7 +61,7 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Advanced Lessons (Advanced Storm Drain):
+   :caption: Storm Drain:
 
    /Advanced-Lessons/Module 8
    /Advanced-Lessons/Module 9

@@ -1,11 +1,14 @@
-Module 10 - Advanced Channel Modeling
-======================================
+Channels - Urban Channel
+=========================
 
 Overview
 ________
 
 Complete QGIS Lesson 1 before starting this lesson.
-Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
+Use this training module to build an urban drainage channel by digitizing the channel components.  Finish it up by
+adding culverts to the channel, boundary conditions.  The final part of the module is to review the channel results.
+
+This module replaces Lesson 2.  Lesson 2 uses a RAS import and this one uses QGIS to build the channel from scratch.
 
 Required Data
 _____________
@@ -729,6 +732,10 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 
 .. image:: ../img/Workshop/Worksh011.png
 
+
+This final video explains how to review the channel to check if it is running correctly.
+
+.. youtube:: p8EeQ81_pmE
 
 Summary
 ________

@@ -1,5 +1,5 @@
-Module 2 - Part 2 – Advanced Hydraulic Structures
-==================================================
+Part 2 – Advanced Hydraulic Structures
+=======================================
 
 **Overview**
 
