@@ -1,9 +1,9 @@
-Module 7 – Tailings Dam Tool
-=============================
+Tailings Dam Model
+==================
 
 **Overview**
 
-In this tutorial, use QGIS and the tailings dam tool to create a tailings dam failure.
+In this tutorial, use QGIS and the tailings dam tool to create a tailings dam hydrograph and simulate a tailings dam failure.
 
 Required data
 -------------

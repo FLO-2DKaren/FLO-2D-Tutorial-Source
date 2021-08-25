@@ -1,5 +1,5 @@
-Module 1 - Project Recovery and Debug
-=====================================
+Project Recovery and Debug
+===========================
 
 **Overview**
 
