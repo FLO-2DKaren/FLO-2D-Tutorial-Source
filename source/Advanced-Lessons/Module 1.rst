@@ -1,5 +1,6 @@
 Project Recovery and Debug
 ===========================
+.. youtube:: lhDwp3cDrOc
 
 **Overview**
 
@@ -125,6 +126,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 Step 5: Run the debug engine
 ----------------------------
+
+.. youtube:: oydBNu4U3uI
 
 1. Click the Run FLO-2D button.
 
