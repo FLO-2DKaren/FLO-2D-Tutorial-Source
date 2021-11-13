@@ -86,84 +86,47 @@ Each variable is discussed in the Data Input Manual BREACH.DAT tab.
 This data may be available from the original dam construction manual or from periodical safety reports.
 Check with the dam owner, or dam safety agency for data.
 
-==== =========== ==========================================
-0.1  d50c        d50 core (mm)
-==== =========== ==========================================
-0.35 porc        porosity core ()
-120  uwc         unit weight core (lb/ft\ :sup:`3`)
-0.15 cnc         roughness n core
-33   afrc        angle of internal friction core(degrees)
-750  cohc        cohesive strength core (lb/ft\ :sup:`3`)
-50   unfcc       sediment gradient ratio
-50   d50s        d50 shell (mm)
-0.4  pors        porosity shell ()
-100  uws         unit weight shell (lb/ft\ :sup:`3`)
-0.2  cns         roughness n shell
-32   afrs        angle of internal friction shell (degrees)
-250  cohs        cohesive strength shell (lb/ft\ :sup:`3`)
-10   unfcs       sediment gradient ratio
-0    grasslength grass length downstream face (in)
-0    grasscond   grass condition downstream face (0 or 1)
-0    grassvmaxp  maximum permissible velocity (fps)
-300  d50df       d50 downstream face (mm)
-2    unfcdf      sediment gradient downstream face
-==== =========== ==========================================
+===== =========== ==========================================
+Value Variable    Description
+===== =========== ==========================================
+0.1   d50c        d50 core (mm)
+0.35  porc        porosity core
+120   uwc         unit weight core (lb/ft\ :sup:`3`)
+0.15  cnc         roughness n core
+33    afrc        angle of internal friction core(degrees)
+750   cohc        cohesive strength core (lb/ft\ :sup:`3`)
+50    unfcc       sediment gradient ratio
+50    d50s        d50 shell (mm)
+0.4   pors        porosity shell
+100   uws         unit weight shell (lb/ft\ :sup:`3`)
+0.2   cns         roughness n shell
+32    afrs        angle of internal friction shell (degrees)
+250   cohs        cohesive strength shell (lb/ft\ :sup:`3`)
+10    unfcs       sediment gradient ratio
+0     grasslength grass length downstream face (in)
+0     grasscond   grass condition downstream face (0 or 1)
+0     grassvmaxp  maximum permissible velocity (fps)
+300   d50df       d50 downstream face (mm)
+2     unfcdf      sediment gradient downstream face
+===== =========== ==========================================
 
 Step 5. Review general breach parameters
 ----------------------------------------
 
 Each variable is discussed in the Data Input Manual BREACH.DAT tab.
 
-.. _`2500`:
-
-2500:
-
-brbotwidmax
-
-Maximum width to constrict the bottom of the breach.
-
-.. _`7900`:
-
-7900:
-
-brtopwidmax
-
-Maximum width to constrict the top of the breach.
-
-.. _`1755`:
-
-1755:
-
-brbottomel
-
-start of breach elevation.
-Sensitive to instability.
-If unstable, set to 1 to 3 ft below the crest elevation.
-
-.. _`3.05`:
-
-3.05:
-
-weircoef
-
-weir coefficient
-
-.. _`1.5`:
-
-1.5:
-
-bratio
-
-Initial breach width to depth ratio.
-
-.. _`0`:
-
-0:
-
-breachtime
-
-Time the water surface elevation must last before the breach initiates.
-
+===== =========== =========================================================
+Value Variable    Description
+===== =========== =========================================================
+2500  brbotwidmax Maximum width to constrict the bottom of the breach (ft).
+7900  brtopwidmax Maximum width to constrict the top of the breach.
+1755  brbottomel  Start of breach elevation (ft).  Sensitive to instability.
+                  If unstable, set to 1 to 3 ft below the crest elevation.
+3.05  weircoef    Weir coefficient
+1.5   bratio      Initial breach width to depth ratio.
+0.0   breachtime  Time the water surface elevation must sustain before the
+                  breach will initiate (hours).
+===== =========== =========================================================
 
 Step 6. Create the breach point
 -------------------------------

@@ -112,59 +112,14 @@ The shapefiles can be described as follow:
 
 .. image:: ../img/Workshop/Worksh094.png
 
-The following data must be available in the shapefile to create the **SWMM.INP** files and the associated storm drain data files: **SWMMFLO.DAT**,
-**SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
+The following data must be available in the shapefile to create the **SWMM.INP** files and the associated storm drain
+data files: **SWMMFLO.DAT**, **SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
 
------------- ----------------------------------
-**CONDUITS** Name
------------- ----------------------------------
-\            Upstream Inlet/Junction
-\            Downstream Inlet/Junction
-\            Inlet/Outlet Offset (not required)
-\            Shape
-\            No of Barrels
-\            Max Depth (Diameter for circular)
-\            Geom 2 (Width for rectangle)
-\            Geom 3
-\            Geom 4
-\            Length
-\            Manning’s N
-\            Initial Flow (Not required)
-\            Maximum Flow (Not required)
-\            Entry Loss Coef (Not required)
-\            Exit Loss Coef (Not required)
-\            Average Loss Coef (Not required)
-\            Flap Gate
------------- ----------------------------------
+.. image:: ../img/Advanced-Workshop/conduits.png
 
--------------------- --------------------------------
-**INLETS/JUNCTIONS** Name
--------------------- --------------------------------
-\                    Invert Elevation
-\                    Maximum Depth
-\                    Initial Depth (Not required)
-\                    Surcharge Depth (Not required)
-\                    Length/Perimeter
-\                    Width/Area
-\                    Height/Sag/Surcharge Depth
-\                    Weir Coefficient
-\                    Feature (Not required)
-\                    Curb Height (Not required)
-\                    Clogging Factor (Not required)
-\                    Time for Clogging (Not required)
--------------------- --------------------------------
+.. image:: ../img/Advanced-Workshop/inlets.png
 
------------- --------------------------
-**OUTFALLS** Name
------------- --------------------------
-\            Invert Elevation
-\            Flap Gate
-\            Allow Discharge Switch
-\            Outfall Type
-\            Water Depth (Not required)
-\            Tide Curve (Not required)
-\            Time Series (Not required)
------------- --------------------------
+.. image:: ../img/Advanced-Workshop/outfalls.png
 
 Step 3: Select components from shapefile layer
 ______________________________________________

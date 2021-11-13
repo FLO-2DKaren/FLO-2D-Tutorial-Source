@@ -4,6 +4,9 @@ Tailings Dam Model
 **Overview**
 
 In this tutorial, use QGIS and the tailings dam tool to create a tailings dam hydrograph and simulate a tailings dam failure.
+The following video covers the Data Assembly Process for a Tailings Dam Study.
+
+.. youtube:: z8epzv95l4k
 
 Required data
 -------------
@@ -33,6 +36,10 @@ SP-RC-117/17 Rev.4.Pg.1–265. published on May 17, 2017, Ordinance DNPM No. 70,
 https://worldminetailingsfailures.org/wp-content/uploads/2019/03/TUV_SUD_2017_Periodic_Safety_Review.en_.pdf
 
 **Note:  Copy the link into a browser if broken.**
+
+The following video will use the tutorial steps below to create the tailings dam hydrograph and run the model.
+
+.. youtube:: KJ7NYb_YIHo
 
 Step 1: Load the project
 ------------------------
@@ -79,10 +86,10 @@ Step 3. Run the Tailings Dam Tool
 
 .. image:: ../img/Advanced-Workshop/Module243.png
 
-Step 4. Dam geometry
---------------------
+Step 4. Review Dam geometry
+----------------------------
 
-Dam Height = 70 m
+Dam Height = 86 m
 
 Downstream Slope = 1.5:1
 
@@ -97,11 +104,11 @@ Freeboard = 5m
 .. image:: ../img/Advanced-Workshop/Module245.png
 
 Figure 2.
-Dam Geometry at crest.
+Dam geometry at crest.
 Source: Periodic Safety Review Vale TUV SUD (2017).
 
-Step 5. Volume
---------------
+Step 5. Dam and Tailings Volume
+-------------------------------
 
 Volume Solids: 7.53X10^6 m\ :sup:`3`
 
@@ -115,8 +122,8 @@ Figure 3.
 Volume Curve 6.22.
 Source: Periodic Safety Review Vale TUV SUD (2017).
 
-Step 6. Geotech data
---------------------
+Step 6. Dam geotech data
+--------------------------
 
 Dam compacted Unit Weight = 19 KN/m\ :sup:`3` = 9279.43 kg/m\ :sup:`3`
 
@@ -143,7 +150,7 @@ Unit weight = 20 KN/m\ :sup:`3` = 2039.44 kg/m\ :sup:`3`
 Step 8. Saturated tailings depth
 --------------------------------
 
-Dam elevation = 942
+Dam elevation = 942 m
 
 Water depth = 20 m (max) 5 m (min)
 
@@ -158,11 +165,11 @@ Source: Periodic Safety Review Vale TUV SUD (2017).
 Step 9. Tailings dam tool
 -------------------------
 
-1. Fill the data from the previous pages.
+1. Fill the data from the previous pages.  Start with Options/Units = Metric
 
 .. image:: ../img/Advanced-Workshop/Module249.png
 
-2. Set the reservoir level to medium.
+2. On the next, Choose the Static Mode and set the Reservoir Level to Medium.
 
 3. Click the Create INFLOW.DAT button.
 
@@ -170,28 +177,92 @@ Step 9. Tailings dam tool
 
 4. Set the volume to Vrmax.
 
-5. Change the event time to 0.25 hours.
+5. Change the event time to 0.50 hours.  This variable is highly sensitive to the early hazard zone.
    The report states that in 10 min 75% of the reservoir was drained.
 
 6. Set the max concentration to 0.50 or 0.60.
-   Test sensitivity.
+   This value can be used to test sensitivity of the breach runnout and deposition.
 
 7. The inflow node is 7872.
 
-8. Click the blue graph.
-
-9. Change the tab to Sediment Concentration by Volume.
+8. Click the graph on the bottom left shown in the blue rectangle.
 
 .. image:: ../img/Advanced-Workshop/Module251.png
 
+9. Change the tab to Sediment Concentration by Volume.
+
 10. Set the graph to the blue box and Save the INFLOW.DAT file.
 
-11. Save the file to Module 7 Export.
+11. Save the INFLOW.DAT file to the **Module 7 Export** folder.
 
 .. image:: ../img/Advanced-Workshop/Module252.png
 
-Step 7. Export and run the model
+12. Save the Tailings Breach 1.xml file.
+
+.. image:: ../img/Advanced-Workshop/Module291.png
+
+13. Close the Tailings Dam Tool.
+
+Step 10. Import the inflow data
 --------------------------------
+
+1. Close the message in QGIS.
+
+.. image:: ../img/Advanced-Workshop/Module292.png
+
+2. Click the Import Components button.
+
+.. image:: ../img/Advanced-Workshop/Module293.png
+
+3. Open the CONT.DAT file.
+
+.. image:: ../img/Advanced-Workshop/Module294.png
+
+4. Uncheck Select All, check Inflow Elements and click OK.
+
+.. image:: ../img/Advanced-Workshop/Module295.png
+
+5. Click ok to close the import message.
+
+.. image:: ../img/Advanced-Workshop/Module296.png
+
+.. image:: ../img/Advanced-Workshop/Module297.png
+
+6. Click the Schematized layers to User layers conversion button.
+
+.. image:: ../img/Advanced-Workshop/Module298.png
+
+7. Check the boundary conditions box and click OK and then click ok to close the message.
+
+.. image:: ../img/Advanced-Workshop/Module299.png
+
+.. image:: ../img/Advanced-Workshop/Module300.png
+
+8. Click the Schematize button on the Boundary Condition Editor widget and then close both messages.
+
+.. image:: ../img/Advanced-Workshop/Module305.png
+
+Step 11. Set the Mud/Debris Data
+--------------------------------
+
+1. Click the Mudflow / Sediment transport button.
+
+.. image:: ../img/Advanced-Workshop/Module301.png
+
+2. Fill the dialog box as shown below and click OK.
+
+.. image:: ../img/Advanced-Workshop/Module302.png
+
+3. Click the Control Variable button.
+
+.. image:: ../img/Advanced-Workshop/Module303.png
+
+4. Select Mud/Debris from the drop down box and click Save.
+
+.. image:: ../img/Advanced-Workshop/Module304.png
+
+Step 12. Export and run the model
+---------------------------------
 
 1. Export the FLO-2D Data files.
    Click OK.
