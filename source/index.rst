@@ -65,3 +65,18 @@ Table of Contents
 
    /Advanced-Lessons/Module 8
    /Advanced-Lessons/Module 9
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Coastal Flooding Tutorial:
+
+   /Coastal-Flooding/Coastal Set-Up
+   /Coastal-Flooding/Create Grid
+   /Coastal-Flooding/Hydrology
+   /Coastal-Flooding/Boundary Conditions
+   /Coastal-Flooding/Channel
+   /Coastal-Flooding/Culverts
+   /Coastal-Flooding/Storm Drain
+   /Coastal-Flooding/Urban Features
+   /Coastal-Flooding/Run and Review
+   /Coastal-Flooding/Mapping

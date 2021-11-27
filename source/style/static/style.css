@@ -1,7 +1,6 @@
 
 @import url(html.css);
 
-
 /* Add a black background color to the top navigation bar */
 .topnav {
   overflow: hidden;
@@ -9,7 +8,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-
 }
 
 /* Style the links inside the navigation bar */
@@ -45,7 +43,7 @@
   font-size: 17px;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally*/
 @media screen and (max-width: 600px) {
   .topnav a, .topnav input[type=text] {
     float: none;
@@ -59,7 +57,8 @@
     border: 1px solid #ccc;
   }
 }
- /* Main content */
+
+/* Main content */
 .main {
   margin-top: 30px; /* Add a top margin to avoid content overlay */
 }
@@ -89,7 +88,7 @@ div.related h3 {
   display: none;
 }
 
-/* this changes the list in the navigation bar, you can choose to have number lists in different languages
+/* this changes the list in the navigation bar, you can choose to have number lists in different languages*/
 div.related ul {
   display: inline;
   list-style-type: circle;
@@ -104,8 +103,7 @@ div.related li {
 li::marker {
   color: Blue;
 }
-/*
- changes where the next|index is.
+/* changes where the next|index is.*/
 div.related li.right {
     float: right;
     margin-right: 0.1em;
@@ -125,7 +123,6 @@ div.section {
   padding: 10px 0px 0px;
   margin: 10px 0px 0px;
 }
-
 /*changes the format of the h1. So any text above or below ====== */
 div.section h1 {
   text-align: center;
@@ -134,12 +131,13 @@ div.section h1 {
   padding: 10px;
   margin: 0;
 }
+
 /*this edits the style of h2, anything with ---- above or under* so if you wanted to continue editing your headers just
 change h1 to h3 for example. Header notation is based on sphinx styling */
 div.section h2 {
   text-align: left;
   font-size: 140%;
-  padding: 0px;
+  padding: 5px;
   margin: 0;
 }
 
@@ -157,7 +155,6 @@ div.section img {
   vertical-align: left;
   padding: 0.5em 0.5em 0.5em;
   max-width: 100%;
-;
 }
 
 /* this moves the footer, this is where the Copyright is located*/
@@ -168,12 +165,12 @@ div.footer {
 }
 
 /* This is a border around the body border*/
-
 div.documentwrapper {
   float: left;
   width: 100%;
   background-color: #333333;
 }
+
 /*
 div.sphinxtopbar {
   float: left;
@@ -181,7 +178,6 @@ div.sphinxtopbar {
   margin-left: -100%;
   padding: 0px;
 }
-
 */
 
 /* this is link text, any text associated with a link will be modified*/
