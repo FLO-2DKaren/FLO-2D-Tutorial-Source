@@ -28,44 +28,44 @@ Step 1. Determine the total rainfall
 
 2. On the NOAA website, click on Florida.
 
-.. image:: ../img/coastal/hydrology001.png
+.. image:: ../img/Coastal/hydrology001.png
 
 3. To navigate to the project area, search for "Immokalee and Tamiami"
 
-.. image:: ../img/coastal/hydrology002.png
+.. image:: ../img/Coastal/hydrology002.png
 
 4. Scroll down to the table data and find the total rainfall for this area.  100yr 24hr rainfall is 12.2 inches.
 
-.. image:: ../img/coastal/hydrology003.png
+.. image:: ../img/Coastal/hydrology003.png
 
 5. Change the Tab to Supplementary Info, set the variables to 100yr, 24hr and click Submit.
 
-.. image:: ../img/coastal/hydrology004.png
+.. image:: ../img/Coastal/hydrology004.png
 
 6. The file was most likely saved to the Download folder.  Copy it to the project folder and Extract it.
    \\Coastal Training\\Project Data\\Hydrology
 
-.. image:: ../img/coastal/hydrology005.png
+.. image:: ../img/Coastal/hydrology005.png
 
 7. Click the manning_n layer near the bottom of the Layers List and drag the se100yr24ha.asc file onto the map space.
 
-.. image:: ../img/coastal/hydrology006.png
+.. image:: ../img/Coastal/hydrology006.png
 
 8. Right click the se100yr24ha layer and click Zoom to Layer.
 
-.. image:: ../img/coastal/hydrology007.png
+.. image:: ../img/Coastal/hydrology007.png
 
 9. These pixels are rainfall in inches \* 1000.
 
 10. Zoom to the Computational Domain
 
-.. image:: ../img/coastal/hydrology008.png
+.. image:: ../img/Coastal/hydrology008.png
 
 11. Use the Export option to save the data in the correct coordinate system and clipped to the Map Canvas Extent.
 
 12. Right click the layer and Export the data.
 
-.. image:: ../img/coastal/hydrology009.png
+.. image:: ../img/Coastal/hydrology009.png
 
 13. Save the data to the Hydrology folder.
 
@@ -77,7 +77,7 @@ Step 1. Determine the total rainfall
 
 17. Click OK.
 
-.. image:: ../img/coastal/hydrology010.png
+.. image:: ../img/Coastal/hydrology010.png
 
 Step 2. Sample the rainfall raster
 ----------------------------------
@@ -85,7 +85,7 @@ Step 2. Sample the rainfall raster
 1. Remove the original raster from the layers list.  It has the wrong coordinate system and cannot be used to calculate
    rainfall data.
 
-.. image:: ../img/coastal/hydrology011.png
+.. image:: ../img/Coastal/hydrology011.png
 
 3. Use the ID tool to find the peak rainfall.
 
@@ -93,14 +93,14 @@ Step 2. Sample the rainfall raster
 
 5. 12216 is 12.2 inches of rainfall.
 
-.. image:: ../img/coastal/hydrology012.png
+.. image:: ../img/Coastal/hydrology012.png
 
 Step 3. Set up the rainfall
 ----------------------------
 
 1. Collapse the FLO-2D widgets and click Rain Editor.
 
-.. image:: ../img/coastal/hydrology013.png
+.. image:: ../img/Coastal/hydrology013.png
 
 2. Enter the total rainfall.
 
@@ -110,7 +110,7 @@ Step 3. Set up the rainfall
 
 4. Check the Spatial Variation (Depth Area Reduction)
 
-.. image:: ../img/coastal/hydrology014.png
+.. image:: ../img/Coastal/hydrology014.png
 
 5. Interpolate the rainfall depth reduction factor.
 
@@ -120,7 +120,7 @@ Step 3. Set up the rainfall
 
 8. Click OK to calculate the rainARF and OK to close the message.
 
-.. image:: ../img/coastal/hydrology015.png
+.. image:: ../img/Coastal/hydrology015.png
 
 9. The rainfall is now complete.  It will be exported into the RAIN.DAT file.
 
@@ -136,14 +136,14 @@ Step 4. Simplify layers list
 4. Right click the Grouped Layers and rename them Project data or External data.  The name should be something
    that helps organize the data.
 
-.. image:: ../img/coastal/hydrology016.png
+.. image:: ../img/Coastal/hydrology016.png
 
 5. There are many tools to manage the layers list.  These can help organize data so that it is easy to find.
 
 6. Use the cursor to hover over each icon and read the tool tip.  Collapse All and the Hide Selected are two tools
    that will keep the layers list manageable.
 
-.. image:: ../img/coastal/hydrology017.png
+.. image:: ../img/Coastal/hydrology017.png
 
 
 Step 5. Calculate infiltration
@@ -151,7 +151,7 @@ Step 5. Calculate infiltration
 
 1. Collapse the FLO-2D widgets and click Infiltration Editor.
 
-.. image:: ../img/coastal/hydrology013.png
+.. image:: ../img/Coastal/hydrology013.png
 
 2. Select the new Group in the layers list and drag the file LandUse Training.shp onto the map space.
 
@@ -161,7 +161,7 @@ Step 5. Calculate infiltration
 
 \\Coastal Training\\Project Data\\Hydrology\\Green Ampt\\Soil Training.shp
 
-.. image:: ../img/coastal/hydrology018.png
+.. image:: ../img/Coastal/hydrology018.png
 
 4. From the Infiltration Editor click the Global Infiltration icon.
 
@@ -185,7 +185,7 @@ Step 5. Calculate infiltration
 **Note:  If a calculator is taking too much time, make sure the data is on the C: drive.  If the project is in a
 directory on the C: drive, and the data is in the same directory, the SQLite database manager works much faster.**
 
-.. image:: ../img/coastal/hydrology019.png
+.. image:: ../img/Coastal/hydrology019.png
 
 Step 6. Save, export, and run
 ------------------------------
@@ -196,19 +196,19 @@ Step 6. Save, export, and run
 
 2. Set up the Control Variables and click Save.
 
-.. image:: ../img/coastal/hydrology020.png
+.. image:: ../img/Coastal/hydrology020.png
 
 3. Export the project.
 
 .. image:: ../img/Advanced-Workshop/Module089.png
 
-.. image:: ../img/coastal/hydrology021.png
+.. image:: ../img/Coastal/hydrology021.png
 
 4. Save the data to the Project Folder and click OK to close the message.
 
-.. image:: ../img/coastal/hydrology022.png
+.. image:: ../img/Coastal/hydrology022.png
 
-.. image:: ../img/coastal/hydrology023.png
+.. image:: ../img/Coastal/hydrology023.png
 
 4. Click the Run FLO-2D Icon.
 
@@ -216,7 +216,7 @@ Step 6. Save, export, and run
 
 5. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
-.. image:: ../img/coastal/hydrology024.png
+.. image:: ../img/Coastal/hydrology024.png
 
 6. Let the project run and continue on to the next step.
 
@@ -234,7 +234,7 @@ Step 7: Create a backup file
    It is good to choose a name that identifies project progress.
    For Example: **Hydrology OK.zip**
 
-.. image:: ../img/coastal/hydrology025.png
+.. image:: ../img/Coastal/hydrology025.png
 
 4. Open QGIS and reload the project.
 

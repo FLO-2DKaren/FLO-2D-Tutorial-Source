@@ -45,17 +45,17 @@ Step 2: Set up the boundary polygon
 
 2. Collapse the FLO-2D widgets and click Boundary Condition Editor.
 
-.. image:: ../img/coastal/hydrology013.png
+.. image:: ../img/Coastal/hydrology013.png
 
 3. Click the polygon button and draw a polygon across the Cocohatchee outlet.
 
 4. Right click to close the polygon.  Set the type to Outflow and click OK.
 
-.. image:: ../img/coastal/bc003.png
+.. image:: ../img/Coastal/bc003.png
 
 5. Click the Boundary Condition Editor Save button.  Set the BC type to Outflow.  Set the Outflow type to 5.
 
-.. image:: ../img/coastal/bc004.png
+.. image:: ../img/Coastal/bc004.png
 
 6. In the project folder, open the storm tide text file.
 
@@ -67,15 +67,15 @@ Step 2: Set up the boundary polygon
 
 9. Press Ctrl-V to copy the data.  Press Ctrl-W to close the file.
 
-.. image:: ../img/coastal/copytide.gif
+.. image:: ../img/Coastal/copytide.gif
 
 10. Click on the first cell of the FLO-2D Table Editor and click the Paste Button.
 
-.. image:: ../img/coastal/pastetidestage.gif
+.. image:: ../img/Coastal/pastetidestage.gif
 
 11. Name the time series and click the Schematize button.
 
-.. image:: ../img/coastal/bc005.png
+.. image:: ../img/Coastal/bc005.png
 
 12. The boundary should look like this:
 
@@ -104,7 +104,7 @@ Step 3. Save, export, and run
 
 .. image:: ../img/Coastal/bc009.png
 
-.. image:: ../img/coastal/hydrology023.png
+.. image:: ../img/Coastal/hydrology023.png
 
 4. Click the Run FLO-2D Icon.
 
@@ -112,7 +112,7 @@ Step 3. Save, export, and run
 
 5. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
-.. image:: ../img/coastal/hydrology024.png
+.. image:: ../img/Coastal/hydrology024.png
 
 6. Let the project run and continue on to the next step.
 
