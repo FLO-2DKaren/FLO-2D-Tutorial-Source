@@ -131,13 +131,13 @@ Step 5: Cross sections digitize
 
 10. Digitize all 32 cross sections using process shown the following animation.  Use the red lines as guides.
 
-   a. Left click the south side
+    a. Left click the south side
 
-   b. Left click the north side
+    b. Left click the north side
 
-   c. Right click to close
+    c. Right click to close
 
-   d. Click OK to close attributes window
+    d. Click OK or use the Enter key to close attributes window
 
 .. image:: ../img/Coastal/crossection1.gif
 
@@ -179,13 +179,13 @@ Step 6. Cross section attributes
 
 5. Click Update All.
 
-8. Click Save button and turn off editor.
+6. Click Save button and turn off editor.
 
-9. Close the table.
+7. Close the table.
 
 .. image:: ../img/Coastal/chanattrib.gif
 
-10. Methods to determine the channel geometry.
+8. Methods to determine the channel geometry.
 
     a. As-built files are the first source of data but not available in all cases.
 
@@ -195,38 +195,28 @@ Step 6. Cross section attributes
 
     d. Measure side slope from elevation data or site visit.
 
-Step 7: Sample elevation
-------------------------
+Step 7: Load cross section data
+-------------------------------
 
-1. The rectangular and trapezoidal channels need bank elevation.
-   Use the Cross Section Editor widget to sample the elevation from the elevation raster.
+1. From the Cross Section Editor, choose Cross-Section-1.
 
-2. Set the Source to From Raster Layer: Elevation.
+.. image:: ../img/Coastal/chan011.png
 
-3. Click Sample bank elevation for all R, T, and V cross sections.
+2. Open the corresponding cross section text file.
 
-.. image:: ../img/Advanced-Workshop/Lesson024.png
+.. image:: ../img/Coastal/chan012.png
 
+Data Location: \\Coastal Training\\Project Data\\Channel\\Cross Section Station Elevation Files
 
-4. Click Yes to finish the process.
+3. Copy the data and close the text file.
 
-.. image:: ../img/Advanced-Workshop/Lesson025.png
+.. image:: ../img/Coastal/chan013.png
 
+4. Click the first cell of the of the FLO-2D Table Editor and click the Paste button.
 
-5. See that the Table and Plot now have full data for the R and T cross sections.  The N type cross sections have Place
-   Holder Data.
+.. image:: ../img/Coastal/chan014.png
 
-.. image:: ../img/Advanced-Workshop/Mod10_007.gif
-
-
-6. Select the first Natural cross section and click the Sample current natural cross section elevation button.
-
-.. image:: ../img/Advanced-Workshop/Lesson027.png
-
-
-7. Repeat this step for each Natural Type cross section.
-
-**Note: If natural cross sections are present, they can be sampled at the same time using the Sample All button.**
+5. Repeat this process for all 32 cross sections.
 
 Step 8: Schematize channel
 --------------------------
@@ -234,360 +224,280 @@ Step 8: Schematize channel
 **Important Note: If any of the following procedure needs to be repeated, always return to this Schematize step to reset
 the data before trying to modify anything.**
 
-1. Click Schematize channels.
+1. Click Schematize channel.
 
-.. image:: ../img/Advanced-Workshop/Lesson028.png
+.. image:: ../img/Coastal/chan015.png
 
+2. If the channel schematizing process was successful, the following messages will appear.
+   Click Yes and Close.
 
-2. If the channel schematizing process was successful, the following message will appear.
-   Click Close.
+.. image:: ../img/Coastal/chan016.png
 
-.. image:: ../img/Advanced-Workshop/Lesson029.png
-
+3. If an error message appears.  Ask the instructor for help.
 
 Step 9: Review bank alignment
 -----------------------------
 
 Channel alignment in urban projects can be important because channels are usually squeezed between features like
-buildings, walls, and streets.  In this image, the left bank is on the wrong side of an urban wall.
+buildings, walls, and streets.  In this image, the right bank right along the houses.  Recheck the banks after adding
+buildings.
 
-.. image:: ../img/Advanced-Workshop/Lesson030.png
+.. image:: ../img/Coastal/chan017.png
 
-
-Urban channels also vary widely in their design.
-This channel is not a rectangular channel or a trapezoidal channel.
-It has a stepped gabion lining along the banks.
-
-.. image:: ../img/Advanced-Workshop/Lesson031.png
-
-
-It is simple to make minor corrections to the left bank lines and right bank lines to realign the channels.
+It is simple to make minor corrections to the left bank lines, right bank lines, and cross sections to realign
+the channels.
 
 1. In the User Layers group, turn on the Editor Pencil for Left Bank Lines, Right Bank Lines, and Cross Sections.
 
-.. image:: ../img/Advanced-Workshop/Lesson032.png
-
+.. image:: ../img/Coastal/chan018.png
 
 2. Set the Vertex Tool to All Layers.
 
 .. image:: ../img/Advanced-Workshop/Lesson033.png
 
+3. Reposition the left or right bank so that it is better aligned with the right side of the channel.
 
-3. Reposition the Left Bank Line so that it is in between the retaining wall and the channel.
+.. image:: ../img/Coastal/chan019.png
 
-.. image:: ../img/Advanced-Workshop/Lesson034.png
-
-
-4. Click the Schematize button to reposition the Schematized Channel and click Yes and Close to close the windows.  In
+4. Click the Schematize button to adjust the Schematized Channel layers.  Click Yes and Close to close the windows.  In
    This case, hitting the enter button twice will be faster.
 
 .. image:: ../img/Advanced-Workshop/Lesson035.png
 
+.. image:: ../img/Coastal/chan020.png
 
-.. image:: ../img/Advanced-Workshop/Lesson036.png
+5.  Always finish by clicking the schematize button to ensure the final edits were updated.
 
-
-.. image:: ../img/Advanced-Workshop/Lesson037.png
-
-
-5. If necessary, uncheck the Center button.
-   This will keep the channel in place, so the corrections are easy to track.
-
-.. image:: ../img/Advanced-Workshop/Lesson038.png
-
-
-6. Squeezing the left bank like this means some of the bank elements might be inside the channel.
-
-7. Slight corrections can be made to Left Bank Line to ensure good bank placement.
-
-.. image:: ../img/Advanced-Workshop/Mod10_008.gif
-
-
-8. The same procedure can be used on the right bank.
-
-.. image:: ../img/Advanced-Workshop/Mod10_009.gif
-
-
-9.  Always finish by clicking the schematize button to ensure the final edits were updated.
-
-10. Once the final edits are complete, save and close the editors for the User Layers.
+6. Once the final edits are complete, save and close the editors for the User Layers.
 
 Step 10: Interpolate the channel
 --------------------------------
 
-**Natural Channel Geometry**
-
 N type channels are interpolated using the Interpolator.exe program.
 This method will outline how to call the interpolator and reload the data.
 
-**Important Note: If this process needs to be repeated for any reason, click Schematize button before repeating anything beyond this step.**
+**Important Note: If this process needs to be repeated for any reason, click Schematize button before performing this
+step.**
 
 1. Click the Create CHAN.DAT, XSEC.DAT, AND CHANBANK.DAT button.
 
-.. image:: ../img/Advanced-Workshop/Lesson044.png
+.. image:: ../img/Coastal/chan021.png
 
 2. Select the folder where the \*.DAT files will be saved.
 
-\\Coastal Training\\Project Data\\Channel Export
+Data Location: \\Coastal Training\\Project Data\\Channel Interpolate Test
 
-.. image:: ../img/Advanced-Workshop/Lesson045.png
+.. image:: ../img/Coastal/chan022.png
 
 3. The first action saves the channel data.
    Click OK to close the message.
 
-.. image:: ../img/Advanced-Workshop/Lesson046.png
+.. image:: ../img/Coastal/chan026.png
 
-4. The second action calls the Interpolate.exe program from the FLO-2D Pro folder.
+4. The second action calls the Interpolate.exe program from the FLO-2D Pro folder.  Click Interpolate.
 
-**Important Note: If this process results in an Interpolate.exe error, it is possible to move that file to another location and make sure it is named
-correctly.**
+.. image:: ../img/Coastal/chan023.png
 
-**Note: In this case only the 4 natural cross sections are used.**
-
-5. Click Interpolate.
-
-.. image:: ../img/Advanced-Workshop/Lesson047.png
-
-6. If the interpolation is performed correctly the following message will appear.
+5. If the interpolation is performed correctly the following message will appear.
    Click Import CHAN.DAT and XSEC.DAT to update the channel data in QGIS.
 
 .. image:: ../img/Advanced-Workshop/Lesson048.png
 
-7. Click the OK icon when the process is finished.
+6. Click the OK icon when the process is finished.
 
 .. image:: ../img/Advanced-Workshop/Lesson049.png
 
-Step 10: Channel in/out condition
----------------------------------
-
-Instructional Video
+Step 10: Channel boundary condition
+-----------------------------------
 
 .. youtube:: 8zm8ach2jpc
 
 Inlet
-^^^^^^
+_____
 
 1. Zoom to the first channel element on the southeast corner of the map.
 
-.. image:: ../img/Advanced-Workshop/Lesson050.png
-
+.. image:: ../img/Coastal/chan025.png
 
 2. Uncheck the visibility of the User Layers Left Bank Lines, Right Bank Lines, Cross Sections.
 
-.. image:: ../img/Advanced-Workshop/image50.png
+.. image:: ../img/Coastal/chan027.png
 
+3. Collapse the FLO-2D Widgets and expand the Boundary Condition Editor.
 
-3. Collapse the Cross Section Editor
+.. image:: ../img/Coastal/chan029.png
 
-4. Expand the Boundary Condition Editor.
+4. Click the Add point BC button, click the first left bank cell of the channel and click OK.
 
-5. Click the Add point BC button.
+.. image:: ../img/Coastal/chan028.png
 
-.. image:: ../img/Advanced-Workshop/Lesson052.png
+5. Click Save on the Widget and OK to close the message.
 
+.. image:: ../img/Coastal/chan030.png
 
-6. Digitize a point to the first left bank channel cell and click OK.
+6.  Change the BC name of the inflow to CocoIn
 
-.. image:: ../img/Advanced-Workshop/Lesson053.png
+7.  Set Defined to Channel
 
+8. Name the new Time Series to 24hr100yr.
 
-7. Click Save on the Widget
+.. image:: ../img/Coastal/chan031.png
 
-.. image:: ../img/Advanced-Workshop/Lesson054.png
+9. Open the hydrograph file in Notepad and copy the data.
 
+.. image:: ../img/Coastal/chan032.png
 
-8.  Change the BC name of the inflow to GrnwayIN
+Data Location: \\Coastal Training\\Project Data\\24hr100yrInflow.txt
 
-9.  Set Defined for to Channel
+10. Place the cursor in the first cell of the Table and click Paste.
 
-10. Click Add new Time Series
+.. image:: ../img/Coastal/chan033.png
 
-11. Name the new Time Series to Grnway 24hr 100yr.
+11. Click the Schematize button the outflow conditions and click OK to close the message.
 
-12. The widget should look like this.
-
-.. image:: ../img/Advanced-Workshop/Mod10_010.gif
-
-
-13. Open the hydrograph file in Notepad and copy the data.
-
-.. image:: ../img/Advanced-Workshop/Lesson056.png
-
-
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Greenway Inflow 100yr 24hr.txt
-
-14. Place the cursor in the first cell of the Table and click Paste.
-
-.. image:: ../img/Workshop/Worksh040.gif
-
+.. image:: ../img/Coastal/chan035.png
 
 Outlet
-^^^^^^^
+______
 
 1. Zoom to the end of the channel.
 
-2. Add a BC Point to the last element of the channel.
+2. Nothing is required in this location because the channel terminates upstream of the boundary.  It will exchange water
+   with the floodplain as the tide goes up and down.
 
-.. image:: ../img/Advanced-Workshop/Lesson058.png
+3. The following image has is an overlay of the last cross section and the tide table.
 
-
-.. image:: ../img/Advanced-Workshop/Lesson059.png
-
-
-3. Save the form and set the BC type to Outflow
-
-.. image:: ../img/Advanced-Workshop/Lesson054.png
-
-
-4. Name the BC to GrnwayOut
-
-5. Set the Outflow type to 3.
-
-.. image:: ../img/Advanced-Workshop/Lesson060.png
-
-
-6. Click the Schematize button the outflow conditions and click OK to close the message.
-
-.. image:: ../img/Advanced-Workshop/Lesson061.png
-
-.. image:: ../img/Advanced-Workshop/Lesson062.png
-
+.. image:: ../img/Coastal/chan034.png
 
 Step 11: Tide Gates
 -------------------
 
-This structure will calculate discharge through a box culvert.
-This example has a box culvert that is longer than the grid element.
-The channel segments are split up to allow for the width of the roadway.
+Two gated weirs are in the Cocohatchee canal.
 
-**Note:  This image shows how the culverts should look once they have been digitized**
+.. image:: ../img/Coastal/chan036.png
 
-.. image:: ../img/Workshop/Worksh074.png
+1. Zoom to the first tide gate COCO1 to the West.
 
-1. Zoom to the first culvert.
+.. image:: ../img/Coastal/chan037.png
 
-.. image:: ../img/Workshop/Worksh175.png
+2. Collapse the FLO-2D widgets and click Structures Editor.
 
-2. Open the Structures Editor.
-   Click the Add Structure icon.
-
-.. image:: ../img/Workshop/Worksh075.png
-
+.. image:: ../img/Coastal/chan038.png
 
 3. Digitize the first culvert by clicking on the upstream left bank element and downstream left bank element of the channel.
    Right click to complete the line and click OK to close the Structure Line attribute box.
 
-.. image:: ../img/Workshop/Worksh176.png
+.. image:: ../img/Coastal/chan039.png
 
+4. Move upstream to the East and create the second structure.
 
-4. Repeat the process on the second culvert downstream.
+.. image:: ../img/Coastal/chan040.png
 
-.. image:: ../img/Workshop/Worksh177.png
+5. Click Save on the Structure Editor.  Fill out the data for each structure.
 
-
-5. Click the Save Button on the Structure Editor.
-
-.. image:: ../img/Workshop/Worksh077.png
-
-
-6. Fill out the data for each structure.
-
--  Name the culverts Grnway1, Grnway2
+-  Name the culverts Coco1, Coco2
 
 -  Type \= Channel
 
 -  Rating \= Rating table
 
--  Tailwater condition is none.
+-  Tailwater condition is Allow Upstream Flow.
 
-.. image:: ../img/Workshop/Worksh076.png
+.. image:: ../img/Coastal/chan041.png
 
+6.  Click the Import Rating Tables button
 
-7.  Click the Import Rating Tables button
+.. image:: ../img/Coastal/chan042.png
 
-.. image:: ../img/Workshop/Worksh078.png
+7.  Navigate to the Rating Tables files, select both tables and click Open.
 
+Data Location: Coastal Training\\Project Data\\Weirs
 
-8.  Navigate to the Rating Tables files, select both tables and click Open.
+.. image:: ../img/Coastal/chan043.png
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Hydraulic Structures
+8. Note that the data was loaded into the FLO-2D Table Editor for the active structure.
 
-.. image:: ../img/Workshop/Worksh079.png
+.. image:: ../img/Coastal/chan044.png
 
+9. Click Schematize to write the data to the schematic layers.
 
-9. Note that the data was loaded into the FLO-2D Table Editor for the active structure.
+.. image:: ../img/Coastal/chan045.png
 
-.. image:: ../img/Workshop/Worksh179.png
+10. The hydraulic structures are now ready.
 
-
-10. Click Schematize to write the data to the schematic layers.
-
-.. image:: ../img/Workshop/Worksh080.png
-
-
-11. The hydraulic structures are now ready.
-
-12. If the table and plot did not update, refresh the tables by selecting the structure again in the widget.
-
-.. image:: ../img/Workshop/Worksh081.png
-
+11. If the table and plot did not update, refresh the tables by selecting the structure again in the widget.
 
 Step 12: Export the project
 ----------------------------
 
 1. Click the Setup Control Parameters icon.
 
-.. image:: ../img/Workshop/Worksh017.png
+.. image:: ../img/Coastal/chan047.png
 
+2. Check the boxes for Main Channel and Hydraulic Structures and click Save.
 
-2. Check the boxes for Main Channel and Hydraulic structures if needed.
-
-3. Click Save.
-
-.. image:: ../img/Workshop/Worksh082.png
+.. image:: ../img/Coastal/chan046.png
 
 4. Click the Export button for the FLO-2D Data files.
    Click OK.
 
-.. image:: ../img/Advanced-Workshop/Module123.png
+.. image:: ../img/Coastal/chan048.png
 
-.. image:: ../img/Advanced-Workshop/Lesson063.png
+.. image:: ../img/Coastal/chan049.png
 
-5. Select the QGIS Lesson 2 Export folder.
+5. Create a new Export folder to test the weirs and channel hydraulics
 
-.. image:: ../img/Advanced-Workshop/Lesson064.png
+.. image:: ../img/Coastal/chan050.png
 
-6. The data is ready to run.
+6. The project is ready to run.
 
-.. image:: ../img/Advanced-Workshop/Lesson065.png
-
+.. image:: ../img/Coastal/chan051.png
 
 Step 13: Run the simulation
 ----------------------------
 
 1. Click the Run FLO-2D Icon.
 
-.. image:: ../img/Advanced-Workshop/Lesson066.png
-
+.. image:: ../img/Coastal/chan054.png
 
 2. Set the FLO-2D Folder.
    C:\\program files (x86)\\flo-2d pro
 
 3. Set the Project Folder.
 
-C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Lesson 2 Export
+Data Location: Coastal Training\\Project Runs\\Weir Test\\
 
 4. Click OK.
 
-.. image:: ../img/Workshop/Worksh090.png
-
+.. image:: ../img/Coastal/chan052.png
 
 5. This is a good point to save project.
 
-.. image:: ../img/Workshop/Worksh011.png
+.. image:: ../img/Coastal/chan053.png
 
 
 This final video explains how to review the channel to check if it is running correctly.
 
 .. youtube:: p8EeQ81_pmE
 
+Step 14: Create a backup file
+-----------------------------
+
+1. Close QGIS.
+
+2. Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+   click Sent to/Compressed (zipped) folder.
+
+.. image:: ../img/Coastal/creategrid019.png
+
+3. Name the zipped file.
+   It is good to choose a name that identifies project progress.
+   For Example: **ChanOK.zip**
+
+.. image:: ../img/Coastal/chan055.png
+
+4. Open QGIS and reload the project.
+
+.. image:: ../img/Coastal/creategrid021.png
+
+5. Click yes to load the model.
