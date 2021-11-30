@@ -1,6 +1,6 @@
 Boundary Conditions
 ====================
-.. youtube::
+.. youtube:: JsD6c7VjuCQ
 
 **Overview**
 
@@ -90,7 +90,7 @@ Step 3. Save, export, and run
 
 2. It is not necessary to set Control Variables for Boundary Conditions.
 
-3. It may be necessary to close the FLO-2D Run.
+3. It may be necessary to close the previous FLO-2D Run.
 
 .. image:: ../img/Coastal/bc007.png
 
@@ -100,21 +100,19 @@ Step 3. Save, export, and run
 
 .. image:: ../img/Coastal/bc008.png
 
-4. Save the data to the Project Folder and click OK to close the message.
+5. Save the data to the Project Folder and click OK to close the message.
 
 .. image:: ../img/Coastal/bc009.png
 
-.. image:: ../img/Coastal/hydrology023.png
-
-4. Click the Run FLO-2D Icon.
+6. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
 
-5. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
+7. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
 .. image:: ../img/Coastal/hydrology024.png
 
-6. Let the project run and continue on to the next step.
+8. Let the project run and continue on to the next step.
 
 Step 4: Create a backup file
 ----------------------------
