@@ -24,7 +24,7 @@ All data is provided in the Lesson folders.
 
 Data Location:  \\Coastal Training\\Project Data\\Channel
 
-.. youtube:: iPdn6yWuwPA
+.. youtube:: ezubMQuwNKU
 
 Step 1: Prepare the map
 ------------------------
@@ -198,6 +198,8 @@ Step 6. Cross section attributes
 Step 7: Load cross section data
 -------------------------------
 
+.. youtube:: Di5yDHg1fUk
+
 1. From the Cross Section Editor, choose Cross-Section-1.
 
 .. image:: ../img/Coastal/chan011.png
@@ -272,6 +274,7 @@ the channels.
 
 Step 10: Interpolate the channel
 --------------------------------
+.. youtube:: 5CrrcZATtxk
 
 N type channels are interpolated using the Interpolator.exe program.
 This method will outline how to call the interpolator and reload the data.
@@ -307,7 +310,7 @@ Data Location: \\Coastal Training\\Project Data\\Channel Interpolate Test
 
 .. image:: ../img/Advanced-Workshop/Lesson049.png
 
-Step 10: Channel boundary condition
+Step 11: Channel boundary condition
 -----------------------------------
 
 .. youtube:: 8zm8ach2jpc
@@ -369,7 +372,7 @@ ______
 
 .. image:: ../img/Coastal/chan034.png
 
-Step 11: Tide Gates
+Step 12: Tide Gates
 -------------------
 
 Two gated weirs are in the Cocohatchee canal.
@@ -427,7 +430,7 @@ Data Location: Coastal Training\\Project Data\\Weirs
 
 11. If the table and plot did not update, refresh the tables by selecting the structure again in the widget.
 
-Step 12: Export the project
+Step 13: Export the project
 ----------------------------
 
 1. Click the Setup Control Parameters icon.
@@ -453,7 +456,7 @@ Step 12: Export the project
 
 .. image:: ../img/Coastal/chan051.png
 
-Step 13: Run the simulation
+Step 14: Run the simulation
 ----------------------------
 
 1. Click the Run FLO-2D Icon.
@@ -475,12 +478,7 @@ Data Location: Coastal Training\\Project Runs\\Weir Test\\
 
 .. image:: ../img/Coastal/chan053.png
 
-
-This final video explains how to review the channel to check if it is running correctly.
-
-.. youtube:: p8EeQ81_pmE
-
-Step 14: Create a backup file
+Step 15: Create a backup file
 -----------------------------
 
 1. Close QGIS.
@@ -501,3 +499,5 @@ Step 14: Create a backup file
 .. image:: ../img/Coastal/creategrid021.png
 
 5. Click yes to load the model.
+
+.. youtube:: lLwSBP_Y-ZY
