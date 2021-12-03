@@ -2,8 +2,6 @@ Culverts
 ========
 **THIS MODULE IS UNDER CONSTRUCTION.  DO NOT USE THIS TUTORIAL**
 
-.. youtube:: lhDwp3cDrOc
-
 **Overview**
 
 This tutorial outlines the process of creating hydraulic structures with generalized culvert equations.
@@ -11,15 +9,15 @@ This tutorial outlines the process of creating hydraulic structures with general
 Required Data
 -------------
 
-The required data is in the Coastal Training Folder
-
 ============= =====================
 **File**      **Content**
 ============= =====================
 \*.shp         Culvert Data
 ============= =====================
 
-Check these folders to ensure the data is available before starting the lesson.
+Data Location: \\Coastal Training\\Project Data\\Culverts
+
+.. youtube:: lhDwp3cDrOc
 
 Step 1: Import data
 -------------------
@@ -28,134 +26,85 @@ Start by cleaning up the map space so the next layer will be easy to see.
 
 1. Uncheck the User Left bank, Right Bank Cross section layers.
 
-2. Uncheck the Blocked Areas.
+2. Check the Elevation Layer.
 
-3. Uncheck the Storm Drain User Layers.
+3. Click the Boundary Condition Points Layer to activate it.  It is in the User Layers Group.
 
-4. Click the User Boundary Conditions Layer.
+4. Drag the Culvert Data.shp onto the map space.
 
-5. Click the Elevation Layer to activate that layer.
-
-6. Drag the Culvert Data.shp onto the map space.
-
-.. image:: ../img/Coastal/culvert001.png
+.. image:: ../img/Coastal/culv001.png
 
 Step 2: Format the data layers
 ------------------------------
 
-1. Open the Attributes Table on the Culvert Data Layer.
+1. Double click the Culvert Data layer
 
-.. image:: ../img/Advanced-Workshop/Module033.png
+2. Change the symbology to Arrow.
 
-2. Select structure 130, and 131 and click Zoom map to selected rows button.
-   This will zoom the map to these two structures.
+3. Set the Labels to structname.
 
-.. image:: ../img/Advanced-Workshop/Module034.png
+.. image:: ../img/Coastal/culv002.png
 
-3. Label the Hydraulic Structures Layer.
+4. This helps identify the structure and show the flow direction.
 
-4. Double click the Hydraulic Structures layer
+.. image:: ../img/Coastal/culv003.png
 
-5. Set the Labels like the following image.
-
-6. This shows which culvert is active.
-
-.. image:: ../img/Advanced-Workshop/Module035.png
-
-7. Change the layer Symbology
-
-8. Change the selector to Symbology
-
-9. Set the Symbol Layer Type to Arrow
-
-10. Uncheck Curved Arrows
-
-11. This shows the flow direction of each structure.
-
-.. image:: ../img/Advanced-Workshop/Module036.png
-
-Step 4: Build the structures into the User Layers.
+Step 3: Build the structures into the User Layers.
 --------------------------------------------------
 
 1. Use the Structure Editor to add all of the new structures.
 
-2. Digitize all of the structures.
+2. Collapse the Widgets, open the Structures Editor, and click the Add a Structure button.
 
-3. Click the Save icon to confirm complete digitizing.
-
-.. image:: ../img/Advanced-Workshop/Module037.png
+.. image:: ../img/Coastal/culv004.png
 
 **Digitizing process:**
 
-4. Left click the inlet node (upstream node)
+3. Left click the inlet node (upstream node)
 
-5. Left click the outlet node (downstream node)
+4. Left click the outlet node (downstream node)
 
-6. Right Click to finish the polyline.
-   Click OK to finish the feature.
+5. Right Click to finish the polyline.
+   Click OK to close the attribute window.
 
-.. image:: ../img/Advanced-Workshop/Module038.png
+6. Watch the gif for a cycle.  Notice how the inlet and outlet position try to take advantage of the cells with the
+   lower elevations.  The positioning is not perfect.  It is aligned to the cell that most closely represents the invert.
 
-Step 5: Assign the structure attributes
+.. image:: ../img/Coastal/addculverts.gif
+
+Step 4: Assign the structure attributes
 ---------------------------------------
 
-.. image:: ../img/Advanced-Workshop/Module039.png
+1. Click Save in the Structures Widget and check the center box.
 
-1. Click Save in the Structures Widget to load the data into the dialog box.
+.. image:: ../img/Coastal/culv006.png
 
-**Complete the Structure Fields**
+2. Open the Culvert Data attribute table.
+   The attributes will help fill out the data for each structure.
 
-2. Load the Hydraulic Structures Attribute table.
-   The attributes will help fill out each structure table.
+.. image:: ../img/Coastal/culv005.png
 
-3. Check the center button.
+3. Use the table to complete the structure data in the Widget.
 
-4. Select the first structure.
+4. If the following image is not clear, right click it
+   and open it in a new tab.  The tutorials have better resolution using Firefox browser.
 
-5. Rename the Structure with the “A” button.
+.. image:: ../img/Coastal/culv007.png
 
-6. Fill the Type and Rating fields
+5. For Culvert Equations, extra data is needed in the Table Editor.  If the following image is not clear, right click it
+   and open it in a new tab.
 
-7. Move to the next structure and repeat the process.
+.. image:: ../img/Coastal/culv008.png
 
-.. image:: ../img/Advanced-Workshop/Module040.png
+6. Schematize the structure data and click Yes to replace the data.
 
-.. image:: ../img/Advanced-Workshop/Module041.png
-
-8. Schematize the structure data.
-
-Step 6: Assign the rating tables
---------------------------------
-
-1. Click the Import Rating Tables button
-
-.. image:: ../img/Advanced-Workshop/Module042.png
-
-7. Select the rating tables from the project folder.
-
-8. Click open.
-
-.. image:: ../img/Advanced-Workshop/Module043.png
-
-9. The data has been imported.
-   If the table is not updated, switch to a different structure in the widget.
-
-.. image:: ../img/Advanced-Workshop/Module044.png
-
-Step 7: Schematize the data
----------------------------
-
-.. image:: ../img/Advanced-Workshop/Module041.png
-
-1. Schematize the structure data and click Yes to replace the data.
-
+.. image:: ../img/Coastal/culv009.png
 .. image:: ../img/Advanced-Workshop/Module045.png
 
-Step 8: Save, export, and run
------------------------------
+Step 6: Save, and export
+-------------------------
 
 1. This is a good point to save project.
-   Refer to Step 9 in Lesson 1.
 
 .. image:: ../img/Advanced-Workshop/Module046.png
 
@@ -163,20 +112,32 @@ Step 8: Save, export, and run
 
 .. image:: ../img/Advanced-Workshop/Module047.png
 
-3. All GDS data files will be created in the selected project folder.
+3. All data files will be created in the selected project folder.
 
-.. image:: ../img/Advanced-Workshop/Module048.png
+.. image:: ../img/Coastal/culv010.png
 
-.. image:: ../img/Advanced-Workshop/Module049.png
+.. image:: ../img/Coastal/culv011.png
 
-4. The swmm.inp file was not exported. Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
+Step 7: Create a backup file
+----------------------------
 
-.. image:: ../img/Advanced-Workshop/Module050.png
+1. Close QGIS.
 
-5. Click the Run FLO-2D Icon.
+2. Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+   click Sent to/Compressed (zipped) folder.
 
-.. image:: ../img/Advanced-Workshop/Module051.png
+.. image:: ../img/Coastal/creategrid019.png
 
-6. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
+3. Name the zipped file.
+   It is good to choose a name that identifies project progress.
+   For Example: **CulvertsOK.zip**
 
-.. image:: ../img/Advanced-Workshop/Module052.png
+.. image:: ../img/Coastal/culv012.png
+
+4. Open QGIS and reload the project.
+
+.. image:: ../img/Coastal/creategrid021.png
+
+5. Click yes to load the model.
+
+.. image:: ../img/Coastal/creategrid022.png
