@@ -1,6 +1,5 @@
 Channel
 =======
-**THIS MODULE IS UNDER CONSTRUCTION.  DO NOT USE THIS TUTORIAL**
 
 **Overview**
 
@@ -468,7 +467,7 @@ Step 14: Run the simulation
 
 3. Set the Project Folder.
 
-Data Location: Coastal Training\\Project Runs\\Weir Test\\
+Data Location: \\Coastal Training\\Project Runs\\Weir Test\\
 
 4. Click OK.
 

@@ -87,11 +87,11 @@ Step 2. Sample the rainfall raster
 
 .. image:: ../img/Coastal/hydrology011.png
 
-3. Use the ID tool to find the peak rainfall.
+2. Use the ID tool to find the peak rainfall.
 
-4. In this case, the lightest color is the highest rainfall.
+3. In this case, the lightest color is the highest rainfall.
 
-5. 12216 is 12.2 inches of rainfall.
+4. 12216 is 12.2 inches of rainfall.
 
 .. image:: ../img/Coastal/hydrology012.png
 
