@@ -1,6 +1,5 @@
 Culverts
 ========
-**THIS MODULE IS UNDER CONSTRUCTION.  DO NOT USE THIS TUTORIAL**
 
 **Overview**
 
@@ -17,7 +16,7 @@ Required Data
 
 Data Location: \\Coastal Training\\Project Data\\Culverts
 
-.. youtube:: lhDwp3cDrOc
+.. youtube:: zv5fN8_JQ0I
 
 Step 1: Import data
 -------------------
