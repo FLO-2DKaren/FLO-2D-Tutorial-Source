@@ -1,6 +1,5 @@
 Boundary Conditions
 ====================
-.. youtube:: JsD6c7VjuCQ
 
 **Overview**
 
@@ -18,6 +17,8 @@ The required data is in project data folder.
 ============= ===================
 
 Data Location:  \\Coastal Training\\Project Data\\Boundary Conditions
+
+.. youtube:: JsD6c7VjuCQ
 
 Step 1: Prepare the map
 -----------------------
