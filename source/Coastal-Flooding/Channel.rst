@@ -371,7 +371,7 @@ ______
 
 .. image:: ../img/Coastal/chan034.png
 
-Step 12: Tide Gates
+Step 12: Tide gates
 -------------------
 
 Two gated weirs are in the Cocohatchee canal.

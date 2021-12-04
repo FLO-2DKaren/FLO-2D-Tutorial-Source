@@ -18,6 +18,8 @@ Point shapefile    Outfalls
 
 Data Location:  \\Coastal Training\\Project Data\\Storm Drain
 
+.. youtube:: 9bmYrG-x1Mg
+
 Step 1: Import shapefiles for storm drain features
 --------------------------------------------------
 
@@ -67,3 +69,4 @@ Step 2. Add missing columns to shapefiles
 6. This is the end of the lesson. Keep adding fields until the class continues.
    It’s OK to leave them blank because they won’t be used in the next module.
 
+.. youtube:: 6qKJzeUFuCg
