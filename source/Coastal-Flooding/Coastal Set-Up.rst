@@ -1,11 +1,10 @@
 Coastal Set-Up
 ==============
-.. youtube:: qTTvXkl9Bmk
 
 **Overview**
 
 This module will outline how to Set-Up QGIS in order to facilitate the following modules.  If you get stuck, please see
-the video above.  It may have steps that were missed in the instructions below.
+the video below.  It may have steps that were missed in the instructions.
 
 Required Data
 -------------
@@ -21,6 +20,7 @@ The following data is required for this module.
 
 Data Location:  \\Coastal Training\\
 
+.. youtube:: qTTvXkl9Bmk
 
 Step 1: Create a Quick Access Link
 ----------------------------------
