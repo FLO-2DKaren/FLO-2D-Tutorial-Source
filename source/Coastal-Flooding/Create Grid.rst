@@ -1,6 +1,5 @@
 Create a Grid
 =============
-.. youtube:: nyX01bFoUBA
 
 **Overview**
 
@@ -21,6 +20,8 @@ The required data is in the Coastal Training Folder.
 ============= ===================
 
 Data Location:  \\Coastal Training\\Project Data\\AOI
+
+.. youtube:: nyX01bFoUBA
 
 Step 1: Set up the FLO-2D project
 ---------------------------------
