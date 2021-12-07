@@ -60,7 +60,7 @@ Step 2: Set up the boundary polygon
 
 6. In the project folder, open the storm tide text file.
 
-\\Coastal Training\\Project Data\\Boundary Conditions\\Storm Tide Cocohatche 100yr 24hr.txt
+\\Coastal Training\\Project Data\\Boundary Conditions\\Simple Tide Table.txt
 
 7. Place the mouse cursor at the beginning of the line with 0.000 hours.
 

@@ -197,6 +197,8 @@ Step 6. Save, export, and run
 
 2. Set up the Control Variables and click Save.
 
+.. image:: ../img/Coastal/chan047.png
+
 .. image:: ../img/Coastal/hydrology020.png
 
 3. Export the project.
