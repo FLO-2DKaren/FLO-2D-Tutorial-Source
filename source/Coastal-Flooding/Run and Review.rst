@@ -16,49 +16,165 @@ maxplot.exe        Simple mapping tool
 
 Data Location:  \\Coastal Training\\Project Data\\Project Export Folder
 
-.. youtube:: Jc8zF4Sn3IM
+.. youtube::
 
 Step 1. Error logging files
 ----------------------------
 
-ERROR.CHK
+These files are reviewed in NotePad or QGIS.  They log errors, warnings, and general data
+for every simulation. The files are located i the Project Export Folder.
 
-STORM DRAIN ERROR.CHK
+- ERROR.CHK
 
-DEBUG ???.OUT
+- STORM DRAIN ERROR.CHK
+
+- DEBUG_datetime.OUT
 
 Step 2. General review files
 ----------------------------
 
-SUMMARY.OUT
+The general review files give information about the overall grade of a simulation.
 
-VELTIMEFP.OUT
+- SUMMARY.OUT: Data about the health of a simulation.  Volume conservation, timestep, computation
+  time etc.
 
-TIME.OUT
+- VELTIMEFP.OUT: 1000 highest velocities sorted by velocity.  Use this file to look for surging.
 
-SUPER.OUT
+- TIME.OUT: Finds the grid elements that control the timestep.  Sticky grid elements slow
+  the simulation down.
 
-ROUGH.OUT
+- SUPER.OUT: List of super critical grid elements.
 
-EVACUATEDFP.OUT
+- ROUGH.OUT: List of grid elements with n-value adjustments.
+
+- EVACUATEDFP.OUT: List of cells that dried out over a timestep.  If a cell dries out, it could
+  indicate instability.
 
 Step 3. Channel review files
 ----------------------------
 
-CHANMAX.OUT
+- CHANMAX.OUT: List of maximum channel cross section hydraulics. It is easy to scan this list for
+  discharge values that are out of range.
 
-VELTIMEC.OUT
+- VELTIMEC.OUT: List of top 1000 channel elements sorted by high velocity.  Quick check for
+  excessive velocity.
 
-CHANBANKEL.CHK
+- CHANBANKEL.CHK: This is a list of cells that have a difference between the cross section
+  elevation and the left or right bank floodplain elevation.  It may indicate that the
+  channel alignment is off or the cross section is wrong.
 
-CHVOLUME.OUT
+- CHVOLUME.OUT: A list of channel cross section hydraulics and mass balance.  If the channel
+  has a volume error, it will be listed in the last column.
 
 Step 4. Structure review files
 ------------------------------
 
-HYDROSTRUCT.OUT
+- HYDROSTRUCT.OUT: Quick review of the discharge through a structure.  Look for anomalies like
+  high flow rates or surging.
 
-HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT
+- HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT: Warnings of potential error in the HYSTRUC.DAT file.
 
-REVISED_RATING_TABLES.OUT
+- REVISED_RATING_TABLES.OUT: If flow accelerates through a structure, this file will recommend
+  a slight change to the rating table.
 
+Step 5. MAXPLOT
+---------------
+
+1. From QGIS click the drop down button next to the Run FLO-2D button and choose Maxplot.
+
+.. image:: ../img/Coastal/rev001.png
+
+2. Set the executable folder to FLO-2D Pro.
+
+3. Set the project folder to the last place where you have a completed run.
+
+.. image:: ../img/Coastal/rev002.png
+
+4. Maxplot can plot many simple maps and it can calculate the difference between two files.
+
+.. image:: ../img/Coastal/rev003.png
+
+5. Choose any plot to see the results.
+
+.. image:: ../img/Coastal/rev004.png
+
+6. Try a few different plots to see how Maxplot works.
+
+7. Maxplot will only plot data from results files like this one.  This is an example of the
+   file maximum floodplain depths DEPFP.OUT.
+
+.. image:: ../img/Coastal/rev005.png
+
+8. Close Maxplot.
+
+Step 6. HYDROG
+--------------
+
+1. From QGIS click the drop down button next to the Run FLO-2D button and choose Hydrog.
+
+.. image:: ../img/Coastal/rev006.png
+
+2. Set the executable folder to FLO-2D Pro.
+
+3. Set the project folder to the last place where you have a completed run.
+
+.. image:: ../img/Coastal/rev007.png
+
+4. Hydrog can plot and computer hydraulics for channel cross sections and floodplain cross sections.
+
+.. image:: ../img/Coastal/rev008.png
+
+5. Select the Plot Channel Cross Sections option.
+
+.. image:: ../img/Coastal/rev009.png
+
+6. Choose the first cross section to plot.
+
+.. image:: ../img/Coastal/rev010.png
+
+7. The hydrograph for that channel cross section is plotted and the upstream downstream buttons are used to
+   go to a new cross section.
+
+.. image:: ../img/Coastal/rev011.png
+
+8. Close Hydrog.
+
+Step 7. PROFILES
+----------------
+
+1. From QGIS click the drop down button next to the Run FLO-2D button and choose Profiles.
+
+.. image:: ../img/Coastal/rev012.png
+
+2. Set the executable folder to FLO-2D Pro.
+
+3. Set the project folder to the last place where you have a completed run.
+
+.. image:: ../img/Coastal/rev013.png
+
+4. Profiles is used to review the bed, bank and water surface elevation.  It can also review and edit cross section
+   station data, and profiles of channels.
+
+5. Choose the View Profiles Button.
+
+.. image:: ../img/Coastal/rev014.png
+
+6. The plot shows the max water surface for the channel.
+
+.. image:: ../img/Coastal/rev015.png
+
+7. Profiles can also be used to view cross section data.  Click the View Segment Bed Slope and
+   then click View Local Reach.  Then click the mouse somewhere near the profile.
+
+.. image:: ../img/Coastal/viewlocalreach.gif
+
+8. Click View/Edit Xsection Data button and then click the XSEC button on the new window.
+
+.. image:: ../img/Coastal/rev016.png
+
+9. This opens a cross section editor program.  It is better to use the QGIS channel tools but
+   these are still available.
+
+.. image:: ../img/Coastal/rev017.png
+
+10. Close Profiles.
