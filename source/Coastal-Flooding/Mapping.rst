@@ -13,8 +13,6 @@ Required Data
 
 Data Location:  \\Coastal Training\\Project Data\\Project Export Folder
 
-.. youtube:: Jc8zF4Sn3IM
-
 Step 1. Simplify map
 --------------------
 
