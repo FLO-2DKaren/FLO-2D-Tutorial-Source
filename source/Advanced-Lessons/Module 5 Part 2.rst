@@ -48,16 +48,16 @@ Step 1: Load the project
 
 .. image:: ../img/Advanced-Workshop/Module194.png
 
-**Important note: If the project does not look like the following image, you might be using the watershed model.**
+.. note::
+   If the project does not look like the following image, you might be using the watershed model.
 
-1. Close QGIS
+   1. Close QGIS
 
-2. Delete the \*.qgz and \*.gpkg in Part I and Part II folder.
+   2. Delete the \*.qgz and \*.gpkg in Part I and Part II folder.
 
-3. Extract the Module 5 Mudflow Part II Recovery.zip
+   3. Extract the Module 5 Mudflow Part II Recovery.zip
 
-4. Reload the project.
-
+   4. Reload the project.
 
 .. image:: ../img/Advanced-Workshop/Module195.png
 
@@ -124,6 +124,13 @@ Step 3. Assign the hydrograph to a BC node
 Step 4. Set a global bulking factor
 ------------------------------------
 
+.. note::
+   The global sediment concentration uniformly bulks the inflow water discharge hydrograph
+   (inflow volume).  Bulking factor BF = 1./(1.- Cv).
+
+   This initial method is a simple way to estimate the bulking due to normal sediment entrainment in an alluvial rainfall
+   event.
+
 1. Click the Control Variables table.
 
 .. image:: ../img/Advanced-Workshop/Module206.png
@@ -142,7 +149,7 @@ Step 5. Export and run the model
 
 .. image:: ../img/Advanced-Workshop/Module208.png
 
-2. Select the Module 5\Part II Mudflow\Mudflow Export folder.
+2. Select the Module 5\\Part II Mudflow\\Bulking Factor Export.
 
 .. image:: ../img/Advanced-Workshop/Module209.png
 
@@ -154,8 +161,30 @@ Step 5. Export and run the model
 
 .. image:: ../img/Advanced-Workshop/Module211.png
 
-Step 6. Set up the mudflow
----------------------------
+Step 6. Setup the Mudflow Parameters
+------------------------------------
+
+.. note::
+   The mudflow model is different from the Bulking Factor model.  It requires mudflow parameters for SED.DAT and
+   INFLOW.DAT.
+
+1. Mudflow data is saved to the SED.DAT file.  Use the following images to set it up in QGIS.
+
+.. image:: ../img/Advanced-Workshop/Module216.png
+
+.. image:: ../img/Advanced-Workshop/Module216a.png
+
+.. image:: ../img/Advanced-Workshop/Module217.png
+
+.. note::
+   See Simulating Mudflow Guidelines to get instructions for the soil viscosity and yield stress parameters.
+   The mudflow viscosity and yield stress (coefficient and exponent regression) parameters are generated from a
+   laboratory viscometer analysis.  Commercial viscometers are available for this purpose (see AMETEK Brookfield
+   viscometers).  If no laboratory data is available, the Glenwood #4 sample data in the Mudflow Guidelines represents
+   a field mudflow similar to wet cement.
+
+Step 7. Set up the mudflow hydrograph
+-------------------------------------
 
 1. Open the Cv Calculator.xlsx file.
 
@@ -181,18 +210,7 @@ Step 6. Set up the mudflow
 
 .. image:: ../img/Advanced-Workshop/Module205.png
 
-8. The SED.DAT file is also required but QGIS cannot make it right now.
-   it is not a difficult file to create.
-   The GDS or any Text Editor can make it.
-
-.. image:: ../img/Advanced-Workshop/Module216.png
-
-.. image:: ../img/Advanced-Workshop/Module217.png
-
-See Simulating Mudflow Guidelines to get instructions for the soil viscosity and yield stress parameters.
-These parameters are generally retrieved from laboratory studies but if no study is available, a conservative dataset of Glenwood 4 can be applied.
-
-Step 5. Export and run the Mudflow model
+Step 8. Export and run the Mudflow model
 ----------------------------------------
 
 1. Click the Control Variables table.
@@ -208,9 +226,9 @@ Step 5. Export and run the Mudflow model
 
 .. image:: ../img/Advanced-Workshop/Module123.png
 
-.. image:: ../img/Advanced-Workshop/Module208.png
+.. image:: ../img/Advanced-Workshop/Module208a.png
 
-4. Select the Module 5\Part II Mudflow\Cv0.55 folder.
+4. Select the Module 5\\Part II Mudflow\\Cv0.55 folder.
 
 .. image:: ../img/Advanced-Workshop/Module219.png
 
