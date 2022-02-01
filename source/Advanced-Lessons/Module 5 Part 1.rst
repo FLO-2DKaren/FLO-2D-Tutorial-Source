@@ -45,32 +45,49 @@ Step 1: Load the project
 Step 2. Load the hydrography map
 --------------------------------
 
-1. Click the Open Data Source Manager button.
+1. Open this website: https://apps.nationalmap.gov/services/
+
+2. Click on the Theme Overlays button.
+
+3. Find the National Hydrography Dataset.
+
+4. Right click the WMS/WMTS link and click Copy Link Address.
+
+.. image:: ../img/Advanced-Workshop/GetHydroData.gif
+
+5. Click the Open Data Source Manager button.
 
 .. image:: ../img/Advanced-Workshop/Module147.png
 
-2. Select the WMS/WMTS tab.
+6. Select the WMS/WMTS tab and click New.
 
-3. Choose Hydrography layer.
+.. image:: ../img/Advanced-Workshop/Module306.png
 
-4. Connect the data.
+7. Enter the name and paste the URL into the top two boxes and click OK.
 
-5. Select the desired map layers.
+.. image:: ../img/Advanced-Workshop/Module307.png
 
-6. Click Add.
+8. Click Connect.
+9. Select 4 flowlines.
+10. Set the Image Encoding to PNG.
+11. If the CRS is not set, set it to EPSG 4326.
+12. Name the data Flow Line and click Add.
 
-.. image:: ../img/Advanced-Workshop/Module148.png
+.. image:: ../img/Advanced-Workshop/Module308.png
 
-7. Change the transparency.
-   Double click the layer.
+13.  Click close to close the Data Source Manager.
 
-8. Select the Transparency tab.
+14. Double click the Flow Directions Layer.
 
-9. Set the opacity to 50%
+15. Click Transparency and set the Opacity to 50%.
 
-10. Click OK.
+.. image:: ../img/Advanced-Workshop/Module309.png
 
-.. image:: ../img/Advanced-Workshop/Module149.png
+16. Doubleclick the Elevation layer and click Symbology.
+
+17. Set the Render to Hillshade and click OK.
+
+.. image:: ../img/Advanced-Workshop/Module310.png
 
 Step 3. Review the watershed
 -----------------------------
@@ -166,32 +183,10 @@ Step 8. Determine the total rainfall
 
 8. These pixels are rainfall in inches \* 1000.
 
-9. Use the Export option to save the data in the correct coordinate system and clipped to the project area.
-
-10. Right click the layer and Export the data.
-
-.. image:: ../img/Advanced-Workshop/Module158.png
-
-11. Save the data to the Hydrology folder.
-
-12. Set the coordinate system to EPSG 2229.
-
-13. Reduce the size of the raster with the Map Canvas Extent button.
-
-14. Add the saved file to the map.
-
-15. Click OK.
-
-.. image:: ../img/Advanced-Workshop/Module159.png
-
 Step 9. Sample the rainfall raster
 ----------------------------------
 
-1. Remove the original raster from the layers list.
-
-2. Move the raster to the bottom of the map.
-
-3. Use the ID tool to find the peak rainfall.
+1. Use the ID tool to find the peak rainfall.
 
 .. image:: ../img/Advanced-Workshop/Module160.png
 
@@ -210,7 +205,7 @@ Step 10. Set up the rainfall
 
 3. Select or create a rainfall distribution.
 
-   - C:\Users\Public\Documents\FLO-2D PRO Documentation\Rainfall Distributions
+   - C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions
 
 4. Check the Spatial Variation (Depth Area Reduction)
 
@@ -226,8 +221,25 @@ Step 10. Set up the rainfall
 
 .. image:: ../img/Advanced-Workshop/Module163.png
 
-Step 11. Calculate infiltration
--------------------------------
+Step 11. Generate the curve number data
+----------------------------------------
+
+1. If necessary, add the Plugin Curve Number Generator.
+
+.. image:: ../img/Advanced-Workshop/Module311.png
+
+2. Open the Curve Number Generator.
+
+.. image:: ../img/Advanced-Workshop/Module312.png
+
+3.  Set the Area Boundary to Grid.  Check the boxes and click OK.
+
+.. image:: ../img/Advanced-Workshop/Module313.png
+
+4. Click Close when it is finished.
+
+Step 12. Calculate the infiltration
+------------------------------------
 
 1. Click the collapse FLO-2D Widgets button and click the Infiltration Editor Widget.
 
@@ -243,149 +255,22 @@ Step 11. Calculate infiltration
 
 .. image:: ../img/Advanced-Workshop/Module165.png
 
-A scan of the Curve Number field indicates that the infiltration calculation was not correct.
+6. Review the Curve Number field to make sure the curve number data is as expected.
 
 .. image:: ../img/Advanced-Workshop/Module166.png
 
-Normally, the Curve Number calculator is used to calculate the SCS Curve Number for each cell.
-The LandSoil shapefile that was provided for this project has good data but bad geometry.
-It is so bad that the QGIS Fix Geometry tools cannot fix it.
-This happens with complex shapefiles.
-For example, there are hundreds of duplicated features.
-The following ID click shows that there are 4 duplicate features in this specific spot.
-Two alternate methods can be applied to calculate the infiltration.
-Once either method is applied, the data is easily converted to the INFIL.DAT file.
-
-1. Point sample the layer using the n value calculator.
-   No averaging applied.
-
-2. Convert the data to a raster and interpolate it.
-   Weighted average applied.
-
-.. image:: ../img/Advanced-Workshop/Module167.png
-
-Alternate infiltration method 2
-________________________________
-
-1. Convert the data to Raster.
-
-2. Open the Processing Toolbox and search Rasterize.
-
-.. image:: ../img/Advanced-Workshop/Module168.png
-
-3. Click the Rasterize (vector to raster)
-
-4. Set the Input layer to LandSoil
-
-5. Set the Field to CN
-
-6. Output size = Georeferenced Units
-
-7. Resolution = 25ft
-
-8. Output Extent = AOI Layer
-
-9. Click Run
-
-.. image:: ../img/Advanced-Workshop/Module169.png
-
-10. Collapse the FLO-2D widgets and click the Grid Tools widget.
-
-11. Click the Interpolate from Raster button.
-
-12. Fill the Elevation Sampling form and click OK to calculate and OK to close the message.
-
-.. image:: ../img/Advanced-Workshop/Module170.png
-
-Export infiltration data
-________________________
-
-1. Find the Grid Layer.
-
-2. Right click it and click Export / Save Features As.
-
-.. image:: ../img/Advanced-Workshop/Module171.png
-
-3. Set the format to CSV.
-
-4. Save the file to Hydrology\CurveNumberGrid.csv.
-
-5. The coordinates are EPSG 2229.
-
-6. The only necessary fields are fid and elevation.
-
-7. Click OK to create the data.
-
-.. image:: ../img/Advanced-Workshop/Module172.png
-
-Recalculate the elevation
-_________________________
-
-1. Repeat Step 5 (Interpolate Elevation) and return here.
-
-Export INFIL.DAT
-________________
-
-1. Click the Control Variables button.
-
-.. image:: ../img/Advanced-Workshop/Module173.png
-
-2. Turn on the Infiltration switch, fill the form and click Save.
-
-.. image:: ../img/Advanced-Workshop/Module174.png
-
-3. Click the Export button.
-
-.. image:: ../img/Advanced-Workshop/Module175.png
-
-4. Save the data to the Hydrology folder.
-
-.. image:: ../img/Advanced-Workshop/Module176.png
-
-Format the CN data
-__________________
-
-1. Open both files side by side in NotePad++ or Excel
-
-2. Set up the new CN data in the proper format.
-
-3. Number of spaces between data is not important.
-
-4. Block mode in Notepad is Alt-Click and then Shift-Alt-Click the end of the file.
-
-.. image:: ../img/Advanced-Workshop/Module177.png
-
-5. The final step is to replace the data on the left with the data on the right.
-
-6. Save and close INFIL.DAT.
-
-Reload the infiltration data
-____________________________
-
-1. Click the import individual data into Schema layer button.
-
-.. image:: ../img/Advanced-Workshop/Module178.png
-
-2. Choose the cont.dat file and click Open.
-
-.. image:: ../img/Advanced-Workshop/Module179.png
-
-3. Make sure the only option is Infiltration and click OK and click OK to close the message.
-
-.. image:: ../img/Advanced-Workshop/Module180.png
-
-4. The curve number values are now correct.
-
-5. Click the scsn field to sort the curve number from high to low to validate the range of data.
-
-.. image:: ../img/Advanced-Workshop/Module181.png
-
-Step 12. Save, export, and run
+Step 13. Save, export, and run
 ------------------------------
 
 1. This is a good point to save project.
 
 .. image:: ../img/Advanced-Workshop/Module046.png
+
+2. Set the Control Variables and click Save.
+
+.. image:: ../img/Advanced-Workshop/Module314.png
+
+.. image:: ../img/Advanced-Workshop/Module315.png
 
 2. Export the data files to the Project Folder in Advanced Class Folder
 
@@ -401,9 +286,9 @@ Step 12. Save, export, and run
 
 5. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
-.. image:: ../img/Advanced-Workshop/Module183.png
+.. image:: ../img/Advanced-Workshop/Module316.png
 
-Step 13. Map the velocity vectors and import them into QGIS
+Step 14. Map the velocity vectors and import them into QGIS
 -----------------------------------------------------------
 
 1. The first run is used to identify an area of concentrated flow and build a Floodplain Hydrograph.
@@ -427,7 +312,7 @@ Step 13. Map the velocity vectors and import them into QGIS
 
 6. Find the FLPLAIN.DAT and click Open.
 
-.. image:: ../img/Advanced-Workshop/Module187.png
+.. image:: ../img/Advanced-Workshop/Module187a.png
 
 7. Plot the Velocity Vector Map.
    Scale factor = 1.
@@ -440,7 +325,7 @@ Step 13. Map the velocity vectors and import them into QGIS
 
 .. image:: ../img/Advanced-Workshop/Module189.png
 
-Step 14. Create a floodplain cross section
+Step 15. Create a floodplain cross section
 -------------------------------------------
 
 1. Zoom in to the apex of the alluvial fan.
@@ -461,7 +346,7 @@ Step 14. Create a floodplain cross section
 
 .. image:: ../img/Advanced-Workshop/Module191.png
 
-Step 15. Save, export, and run again
+Step 16. Save, export, and run again
 ------------------------------------
 
 1. This is a good point to save project.
@@ -482,4 +367,4 @@ Step 15. Save, export, and run again
 
 5. Correct the paths and click OK to start the simulation.
 
-.. image:: ../img/Advanced-Workshop/Module183.png
+.. image:: ../img/Advanced-Workshop/Module316.png

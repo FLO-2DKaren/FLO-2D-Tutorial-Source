@@ -12,7 +12,7 @@ The training tutorials will teach project development using
 QGIS.  Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
 to set-up the computer.
 
-.. youtube:: iEK0UgJ-n7E
+.. youtube:: GF1LZqU6cdc
 
 Step 1: Get the Data
 ---------------------
