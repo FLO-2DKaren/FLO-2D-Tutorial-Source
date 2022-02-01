@@ -7,6 +7,8 @@ In this tutorial, create a watershed model to estimate the runoff for a mudflow 
 Part I will set up the watershed rainfall runoff model.
 Part II will apply mudflow parameters to the watershed hydrograph.
 
+.. youtube:: F6W15Ln_Ew4
+
 Required Data
 --------------
 
