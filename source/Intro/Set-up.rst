@@ -27,7 +27,7 @@ https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668
 
 2. Download.
 
-3. The files may be zipped into "file.zip"  Extract them into a safe location.
+3. The files are zipped into "file.zip"  Extract them into a safe location.
 
 .. image:: ../img/Instructions/image2.png
 
@@ -54,6 +54,21 @@ Install FLO-2D using the following instructions.
 4. Choose NO for silent, and finish installing with the default settings.
 
 .. image:: ../img/Instructions/image6.png
+
+5. If running a new install, check all options.  If running an update, uncheck Map Objects and EPA SWMM.
+
+.. image:: ../img/Instructions/image15.png
+
+6. Click next and Install to run the installer.
+
+.. image:: ../img/Instructions/image16.png
+
+7. If an error appears related to the DAO35.EXE, run the installer again but uncheck
+   Map Objects.
+
+8. The last embedded installation package may cause a restart.
+
+.. image:: ../img/Instructions/image17.png
 
 
 Step 3: Documentation Installer

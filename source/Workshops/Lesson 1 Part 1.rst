@@ -84,7 +84,7 @@ _________________________________
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Project domain.shp
 
-**Note:  If the image is not clear, use Firefox browser or open the image in a new tab.**
+.. note::  If the image is not clear, use Firefox browser or open the image in a new tab.
 
 .. image:: ../img/Workshop/Worksh004.png
 
@@ -129,8 +129,8 @@ _______________________
 
 2. Select the Project Domain layer, and the Cell Size field and click OK.
 
-**Note: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.
-In order to align the grid to a raster, load the raster file into the dialog box.**
+.. note:: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.
+          In order to align the grid to a raster, load the raster file into the dialog box.
 
 .. image:: ../img/Workshop/Worksh009.png
 
@@ -171,13 +171,12 @@ _____________________________
 4. Sampling Done dialog box will appear once the process is complete.
    Click OK to close it.
 
-**Note: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
-Warp processing tool.  To learn more about GDAL Warp, visit this page:**
+.. note:: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
+          Warp processing tool.  To learn more about GDAL Warp, visit this page:
 
 https://gdal.org/programs/gdalwarp.html
 
 .. image:: ../img/Workshop/Worksh153.png
-.. image:: ../img/Workshop/Worksh154.png
 
 Step 7: Assign Roughness data
 _____________________________
@@ -202,7 +201,7 @@ _____________________________
 4. The roughness values and elevations are assigned to the grid layer in the Schematized Layers group.  Right click the
    Grid layer and click Open Attribute Table to see the data.
 
-**Note:  Don't open a table for a large project >1million cells.  The data is too large to load without applying filters.**
+.. note::  Don't open a table for a large project >1million cells.  The data is too large to load without applying filters.
 
 .. image:: ../img/Workshop/Worksh016.png
 
@@ -218,7 +217,7 @@ ________________________________
 2. Fill the dialog box using the two figures below.
    Save the data to the GeoPackage with the Save icon.
 
-**Note:  The variable descriptions and additional instructions are presented in the Data Input Manual.**
+.. note::  The variable descriptions and additional instructions are presented in the Data Input Manual.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Data Input Manual PRO.pdf
 

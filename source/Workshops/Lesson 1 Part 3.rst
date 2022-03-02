@@ -63,28 +63,24 @@ To setup a FLO-2D flood simulation use these steps.
 Step 1: Open QGIS
 ___________________
 
-**Note: Skip this step if continuing from Part 2.**
+1. Search the start menu or open the QGIS file folder and run the QGIS Desktop program.
+   The version should be QGIS 3.18.2
 
 .. image:: ../img/Workshop/Worksh002.png
-
-1. Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
 
 Step 2: Load Lesson 1
 _____________________
 
-**Note: Skip this step if continuing from Part 2.**
-
 1. Open the project folder.
 
 2. Drag the file Lesson 1.qgz onto the map space.
-   If the file is missing.
-   Extract it from the zipped recovery file.
+   If the file is missing extract it from the zipped recovery file.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1.qgz
 
 .. image:: ../img/Workshop/Worksh157.png
 
-**Note: If the following image is not clear.  Switch to Firefox or load the image in a new tab.**
+.. note:: If the following image is fuzzy.  Switch to Firefox or load the image in a new tab.
 
 .. image:: ../img/Workshop/Worksh158.png
 
@@ -96,8 +92,6 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 Step 3: Import aerial images
 ____________________________
 
-Inflow nodes are set up using the Boundary Condition Editor widget.
-
 1. Load an aerial image to help locate features.
 
 2. Use Quick Map Services Plugin with the Contributed Pack to load aerial images into the layer.
@@ -105,9 +99,10 @@ Inflow nodes are set up using the Boundary Condition Editor widget.
 .. image:: ../img/Workshop/Worksh032.png
 
 
-**Note: If an internet connection is not available, aerial images are saved to QGIS Lesson 1/Aerials folder.**
+.. note:: If an internet connection is not available, aerial images are saved to QGIS Lesson 1/Aerials folder.
 
-**Note: If QuickMapServices does not have Google maps, go to QuickMapServices/Settings/More Services/Get Contributed Pack.**
+.. note:: If QuickMapServices does not have Google maps, go to QuickMapServices/Settings/More Services/Get Contributed
+          Pack.
 
 Step 4: Add an inflow node
 ___________________________
@@ -164,44 +159,50 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 Step 5: Assign rainfall
 _______________________
 
-1. Import the NOAA Atlas rainfall map.
-   Open the project folder and drag the NOAA Atlas 14 24hr 100yr.tif file onto the map space.
+1. Collapse all FLO-2D Widgets and Expand the Rain Editor.
 
-.. image:: ../img/Workshop/Worksh042.png
+.. image:: ../img/Workshop/Worksh181.png
 
-2. Uniform rainfall requires the total rain in inches or millimeters and a rainfall distribution.
-   Set that to 3.74 Inches.
+2. Check Simulate rainfall and add 3.74 inches to the total inflow box.  Check the Building Rain box.
 
-3. The rainfall distribution is in a rainfall distribution data file.
-   Click the Import icon and load the data file from QGIS Lesson 1.
+3. Click the Import icon and load the data file from QGIS Lesson 1 or from the Rainfall Distribution Folder.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\SCS 24-Hr Type II.DAT
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions\\SCS 24-Hr Type II.DAT
 
 .. image:: ../img/Workshop/Worksh043.png
-
 
 .. image:: ../img/Workshop/Worksh159.png
 
 .. image:: ../img/Workshop/Worksh160.png
 
-.. image:: ../img/Workshop/Worksh161.png
-
 4. The rainfall data is imported into the FLO-2D Table Editor.
 
-5. To perform the depth area reduction calculation, use the Area Reduction calculator.
+.. image:: ../img/Workshop/Worksh161.png
+
+5. Import the NOAA Atlas rainfall map.
+   Open the project folder and drag the NOAA Atlas 14 24hr 100yr.tif file onto the map space.
+
+.. image:: ../img/Workshop/Worksh042.png
+
+6. To perform the depth area reduction calculation, use the Area Reduction calculator.
 
 .. image:: ../img/Workshop/Worksh044.png
 
-6. Click the Area Reduction icon.
+7. Click the Area Reduction icon.
 
 .. image:: ../img/Workshop/Worksh162.png
 
-7. The raster pixels are typically 1000 by 1000 ft or larger.
+8. The raster pixels are typically 1000 by 1000 ft or larger.
    It is not necessary to average the data.
    Fill the dialog box as shown below and click OK to calculate and OK to confirm the data was written to file.
 
 .. image:: ../img/Workshop/Worksh045.png
 
+.. note::  This rainfall method is only valid for small watersheds.  If a larger watershed is modeled, a spatially
+           variable rainfall method may be applied to different sub-watersheds because each watershed will have a
+           different total rainfall value and FLO-2D needs the overall total for the whole watershed.  See local
+           hydrology guidelines for more information.
 
 Step 6: Assign infiltration
 ___________________________
@@ -291,7 +292,6 @@ ___________________________
 1. Click on the Run FLO-2D icon.
 
 .. image:: ../img/Workshop/Worksh0052.png
-
 
 2. Set the FLO-2D Pro folder.
    C:\program files (x86)\flo-2d pro
