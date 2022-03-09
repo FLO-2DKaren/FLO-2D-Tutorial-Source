@@ -123,7 +123,9 @@ ___________________________
 .. image:: ../img/Workshop/Worksh035.png
 
 
-4. Click Save to load the data into the editor.
+4. Click Save to load the data into the editor.  Click OK to close the message.
+
+.. image:: ../img/Workshop/Worksh183.png
 
 5. Updated the BC name and the Time series name.
 
@@ -156,8 +158,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh041.png
 
 
-Step 5: Assign rainfall
-_______________________
+Step 5: Assign uniform rainfall
+_______________________________
 
 1. Collapse all FLO-2D Widgets and Expand the Rain Editor.
 
@@ -172,44 +174,57 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions\\
 
 .. image:: ../img/Workshop/Worksh043.png
 
-.. image:: ../img/Workshop/Worksh159.png
-
 .. image:: ../img/Workshop/Worksh160.png
+
+.. image:: ../img/Workshop/Worksh159.png
 
 4. The rainfall data is imported into the FLO-2D Table Editor.
 
 .. image:: ../img/Workshop/Worksh161.png
 
-5. Import the NOAA Atlas rainfall map.
-   Open the project folder and drag the NOAA Atlas 14 24hr 100yr.tif file onto the map space.
+.. note:: This assigns uniform rainfall to every grid element.  The rainfall is added to the grid as a depth over time.
+          The depth is interpolated linearly for every timestep that falls between data points in the Rainfall time
+          series table.
 
-.. image:: ../img/Workshop/Worksh042.png
-
-6. To perform the depth area reduction calculation, use the Area Reduction calculator.
-
-.. image:: ../img/Workshop/Worksh044.png
-
-7. Click the Area Reduction icon.
-
-.. image:: ../img/Workshop/Worksh162.png
-
-8. The raster pixels are typically 1000 by 1000 ft or larger.
-   It is not necessary to average the data.
-   Fill the dialog box as shown below and click OK to calculate and OK to confirm the data was written to file.
-
-.. image:: ../img/Workshop/Worksh045.png
+Step 6: Apply depth area reduction
+___________________________________
 
 .. note::  This rainfall method is only valid for small watersheds.  If a larger watershed is modeled, a spatially
            variable rainfall method may be applied to different sub-watersheds because each watershed will have a
            different total rainfall value and FLO-2D needs the overall total for the whole watershed.  See local
            hydrology guidelines for more information.
 
-Step 6: Assign infiltration
+1. Select the Project Data Group in the Layers List.
+
+.. image:: ../img/Workshop/Worksh184.png
+
+2. Import the NOAA Atlas rainfall map.
+   Open the project folder and drag the NOAA Atlas 14 24hr 100yr.tif file onto the map space.
+
+.. image:: ../img/Workshop/Worksh042.png
+
+3. To perform the depth area reduction calculation, use the Area Reduction calculator.
+
+.. image:: ../img/Workshop/Worksh044.png
+
+4. Click the Area Reduction icon.
+
+.. image:: ../img/Workshop/Worksh162.png
+
+5. The raster pixels are typically 1000 by 1000 ft or larger.
+   It is not necessary to average the data.
+   Fill the dialog box as shown below and click OK to calculate and OK to confirm the data was written to file.
+
+.. image:: ../img/Workshop/Worksh045.png
+
+Step 7: Assign infiltration
 ___________________________
 
 1. Drag the file Land Use.shp onto the map space.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\Land Use.shp
+
+.. note:: The map will look different every time a layer is loaded.  The colors QGIS uses are random.
 
 .. image:: ../img/Workshop/Worksh046.png
 
@@ -246,7 +261,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh052.png
 
 
-Step 7: Check control variables
+Step 8: Check control variables
 _______________________________
 
 1. Click the Control Parameters Icon.
@@ -259,7 +274,7 @@ _______________________________
 .. image:: ../img/Workshop/Worksh053.png
 
 
-Step 8: Save the project
+Step 9: Save the project
 ________________________
 
 1. Click the main Save icon on the QGIS toolbar.
@@ -267,8 +282,8 @@ ________________________
 .. image:: ../img/Workshop/Worksh011.png
 
 
-Step 9: Export the FLO-2D data files
-____________________________________
+Step 10: Export the FLO-2D data files
+______________________________________
 
 1. Click the FLO-2D Data Export icon.
 
@@ -286,7 +301,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh173.png
 
-Step 10: Run the simulation
+Step 11: Run the simulation
 ___________________________
 
 1. Click on the Run FLO-2D icon.

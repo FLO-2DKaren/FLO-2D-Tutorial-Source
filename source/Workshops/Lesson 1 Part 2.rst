@@ -73,13 +73,13 @@ ______________________________
 
 1. If the QGIS is still open, save and close it.
 
-2. Open QGIS Lesson 1 in a File Browser.
+2. Find QGIS Lesson 1 in a File Browser.
    Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
    This will create a recovery file.
 
 3. Name the zipped file.
    It is good to choose a name that identifies project progress.
-   For Example: Lesson 1 n-value OK.zip.
+   For Example: Lesson 1 Part 1 Complete.zip.
 
 4. Repeat this step after any time a Backup or Recovery Point is desired.
 
@@ -89,7 +89,8 @@ ______________________________
 Step 3: Recover a project
 _________________________
 
-.. note::  Don't complete this step unless a project is corrupted.
+.. note::  Don't complete this step unless a project is corrupted.  A corrupted project means the user cannot continue
+           with steps of a lesson.
 
 1. In the Lesson 1 Folder, select Lesson 1.gpkg and Lesson 1.qgz and delete them both.
 
@@ -112,7 +113,7 @@ ________________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
-1. Open QGIS and drag Lesson 1.qgz onto the canvas the file in QGIS and Load the Project into the FLO-2D Plugin.
+1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
 .. image:: ../img/Workshop/Worksh028.png
 

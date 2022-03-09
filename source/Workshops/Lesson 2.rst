@@ -57,7 +57,7 @@ Step-by-Step Procedure
 
 To setup a FLO-2D flood simulation use these steps.
 
-1. Open Lesson 1;
+1. Open Lesson 1 and prep the map layers;
 
 2. Import GeoRAS channel;
 
@@ -80,20 +80,23 @@ ______________________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
-1. Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
+1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
-2. Click Open Project and navigate to QGIS Lesson 1.
-   Select QGIS Lesson 1.qgz and click Open.
+.. image:: ../img/Workshop/Worksh028.png
 
-.. image:: ../img/Workshop/Worksh055.png
+2. Click Yes to load the plugin.
 
+.. image:: ../img/Workshop/Worksh029.png
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
 
-3. Use Quick Map Services to load an aerial image onto the map.
-   See Lesson 1 - Part 2 - Step 3 for instructions.
+3. If necessary add an aerial image to the map.  See Lesson 1 - Part 2 - Step 3 for instructions.
 
 .. image:: ../img/Workshop/Worksh056.png
+
+4. Organize the map layers to facilitate the next steps.  Uncheck Infiltration Layers and any unused Project Data Layers.
+
+.. image:: ../img/Workshop/Worksh185.png
 
 
 Step 2: Import GeoRAS Channel
@@ -232,7 +235,7 @@ This structure will calculate discharge through a box culvert.
 This example has a box culvert that is longer than the grid element.
 The channel segments are split up to allow for the width of the roadway.
 
-**Note:  This image shows how the culverts should look once they have been digitized**
+.. note::  This image shows how the culverts should look once they have been digitized
 
 .. image:: ../img/Workshop/Worksh074.png
 
@@ -241,21 +244,25 @@ The channel segments are split up to allow for the width of the roadway.
 
 .. image:: ../img/Workshop/Worksh175.png
 
-2. Open the Structures Editor.
+2. Collapse all FLO-2D Widgets.  Open the Structures Editor.
    Click the Add Structure icon.
 
-.. image:: ../img/Workshop/Worksh075.png
+.. image:: ../img/Workshop/Worksh186.png
 
 
-3. Digitize the first culvert by clicking on the upstream left bank element and downstream left bank element of the channel.
-   Right click to complete the line and click OK to close the Structure Line attribute box.
+3. Digitize the first culvert
 
-.. image:: ../img/Workshop/Worksh176.png
+    - Left click the upstream left bank.
+    - Left click the downstream left bank.
+    - Right click to complete the line.
+    - Click OK to complete the structure
+
+.. image:: ../img/Workshop/addstructure.gif
 
 
 4. Repeat the process on the second culvert downstream.
 
-.. image:: ../img/Workshop/Worksh177.png
+.. image:: ../img/Workshop/addstructure2.gif
 
 
 5. Click the Save Button on the Structure Editor.
@@ -304,26 +311,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh081.png
 
-Step 6: Export the project
-__________________________
-
-1. Click the Setup Control Parameters icon.
-
-.. image:: ../img/Workshop/Worksh017.png
-
-
-3. Check the boxes for Main Channel and Hydraulic structures if needed.
-
-4. Click Save.
-
-.. image:: ../img/Workshop/Worksh082.png
-
-
-5. This is a good point to save project.
-
-.. image:: ../img/Workshop/Worksh011.png
-
-Step 7: Interpolate the channel
+Step 6: Interpolate the channel
 _______________________________
 
 1. To interpolate the channel segments, export the channel data and run the interpolator.
@@ -339,20 +327,17 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh085.png
 
 
-The first action saves the channel data.
-
 .. image:: ../img/Workshop/Worksh086.png
 
 
-The second action calls the Interpolate.exe program from the FLO-2D Pro folder.
-If this process results in an Interpolate.exe error, it is possible to move that file to another location and make sure it is named correctly.
+.. note:: If this process results in an Interpolate.exe error, it is possible to move that Interpolate.exe to another
+          location.  Sometimes this file is locked by admin rights because it is in the Program Files (x86) directory.
 
 .. image:: ../img/Workshop/Worksh087.png
 
 
-If the interpolation is performed correctly the following message will appear.
-
-3. Click Import CHAN.DAT and XSEC.DAT to update the channel data in QGIS.
+3. If the interpolation is performed correctly the following message will appear.  Click Import CHAN.DAT and XSEC.DAT to
+   update the channel data in QGIS.
 
 .. image:: ../img/Workshop/Worksh088.png
 
@@ -362,8 +347,36 @@ If the interpolation is performed correctly the following message will appear.
 .. image:: ../img/Workshop/Worksh089.png
 
 
-Step 8: Run the simulation
+Step 7: Export the project
 __________________________
+
+1. Click the Setup Control Parameters icon.
+
+.. image:: ../img/Workshop/Worksh017.png
+
+
+3. Check the boxes for Main Channel and Hydraulic structures if needed.
+
+4. Click Save.
+
+.. image:: ../img/Workshop/Worksh082.png
+
+5. Click the Export Data button.
+
+.. image:: ../img/Workshop/Worksh021.png
+
+6. Navigate to the project and click Select Folder.
+
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\QGIS Lesson 2 Export
+
+.. image:: ../img/Workshop/Worksh187.png
+
+7. If all files were written correctly, the following message will appear.  Click OK to close it.
+
+.. image:: ../img/Workshop/Worksh188.png
+
+Step 8: Start a test run
+_________________________
 
 1. Click the Run FLO-2D Icon.
 
@@ -390,20 +403,33 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 6. If you are in a live class, Open and read the Error.CHK file in Notepad or Notepad++ and wait for the instructor.
    We will fix this as a group.
 
-7. If you are on your own, check out this video.
-   Go in about halfway and find the part where we fix the left and right banks.
+7. If you are on your own, check out this video.  It will show you how to fix the error.
 
-https://www.youtube.com/watch?v-Ov1oa2HEsXs
+.. youtube:: rhdmcXE-gyw
+
+Step 9: Create a recovery file
+______________________________
+
+1. If the QGIS is still open, save and close it.
+
+2. Find QGIS Lesson 1 in a File Browser.
+   Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
+   This will create a recovery file.
+
+3. Name the zipped file.
+   It is good to choose a name that identifies project progress.
+   For Example: Lesson 2 Complete.zip.
+
+4. Repeat this step after any time a Backup or Recovery Point is desired.
+
+.. image:: ../img/Workshop/Worksh024.png
 
 Summary
--------
+_______
 
 This lesson was a simple channel import.  It used a Georeferenced HEC-RAS geometry file.
-These files can be made with HEC-RAS version 5.0 or HEC GEORAS plugin for ArcGIS or the standard RasMapper program.
+These files can be made with HEC-RAS version 5.xx, or HECGEORAS plugin for ArcGIS.
 
 
-There are many ways to build channels with QGIS for FLO-2D and the other possibilities are outlined in the User’s Manual.
-
-
-To add more detail and components to the project such as channels, hydraulic structures, buildings, levees and storm drains, complete the following
-lessons.
+There are many ways to build channels with QGIS for FLO-2D and the other possibilities are outlined in the Advanced
+Tutorials.  You can see these on the left hand table of contents.
