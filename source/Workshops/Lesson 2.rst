@@ -75,8 +75,8 @@ To setup a FLO-2D flood simulation use these steps.
 
 9. Run the FLO-2D model.
 
-Step 1: Open Lesson 1 in QGIS
-______________________________
+Step 1: Open QGIS and load the project
+______________________________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
