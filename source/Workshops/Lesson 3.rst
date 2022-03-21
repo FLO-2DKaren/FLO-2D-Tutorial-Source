@@ -4,9 +4,10 @@ Lesson 3 – Create a Storm Drain System Using Shapefiles
 Overview
 ________
 
-This lesson will outline the process to create a storm drain network for FLO-2D.
+This lesson will outline the process to create a storm drain network for FLO-2D.  This is the quick version.  It is
+better for learning QGIS and FLO-2D Plugin operations.  For advanced storm drain modeling, see the Advanced Lessons.
 
-.. youtube:: 6oTw4PnqOiI
+.. youtube:: x-SlOV4-bHI
 
 Required Data
 _____________

@@ -7,6 +7,8 @@ ________
 Think of this as making a backup of a document.  It is a simple method to protect the data in case something goes wrong
 in the next lessons.  Once a user gains more experience, this method won't be as important.
 
+.. youtube:: RkHTA2kJPk8
+
 Required Data
 _____________
 

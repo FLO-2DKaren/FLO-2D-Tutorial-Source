@@ -9,6 +9,8 @@ infiltration data.
 This lesson is a continuation Lesson 1.
 If Lesson 1 cannot be loaded, it can be recovered from the Lesson 1 Recovery Files.zip.
 
+.. youtube:: DyBcK-Bf8wA
+
 Required Data
 _____________
 
