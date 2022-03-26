@@ -154,7 +154,7 @@ ____________________
 .. image:: ../img/Workshop/Worksh124.png
 
 
-**Note: If an error message was displayed, Move the Walls Layer to the User Layer Group.**
+.. note:: If an error message was displayed, Move the Walls Layer to the User Layer Group.
 
 6. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Create Schematic Layers from User Levees button.
 
