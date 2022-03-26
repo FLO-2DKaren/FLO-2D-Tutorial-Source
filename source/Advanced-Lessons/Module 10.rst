@@ -70,15 +70,15 @@ To setup a FLO-2D flood simulation use these steps.
 
 7.  Schematize channel;
 
-8.  Revise Bank Alignment;
+8.  Revise bank alignment;
 
 9.  Interpolate channel;
 
-10.  Channel In/Out condition;
+10.  Channel boundary conditions;
 
 11. Create culverts;
 
-12. Set up control parameters and Export Project;
+12. Set up control parameters and export project;
 
 13. Run the FLO-2D model.
 
@@ -142,19 +142,20 @@ Step 2: Digitize the left banks
 .. image:: ../img/Advanced-Workshop/Lesson010.png
 
 
-Cool digitizing features:
+.. note::
+         Cool digitizing features:
 
--  Use the scroll wheel to zoom in and out.
+         -  Use the scroll wheel to zoom in and out.
 
--  Click the scroll wheel to pan while in editing mode.
+         -  Click the scroll wheel to pan while in editing mode.
 
--  Use the delete key to delete the last point clicked.
+         -  Use the delete key to delete the last point clicked.
 
--  Esc key will cancel polyline.
+         -  Esc key will cancel polyline.
 
--  The point won’t drop until the mouse button is released.
+         -  The point won’t drop until the mouse button is released.
 
--  Redo and undo have limited functionality and can be useful.
+         -  Redo and undo have limited functionality and can be useful.
 
 4. Start at the beginning of the channel on the left bank looking downstream.
    Click the left mouse button to create a line that runs along the left bank.
@@ -365,7 +366,7 @@ the data before trying to modify anything.**
 .. image:: ../img/Advanced-Workshop/Lesson029.png
 
 
-Step 8: Revise Bank Alignment
+Step 8: Revise bank alignment
 -----------------------------
 
 Channel alignment in urban projects can be important because channels are usually squeezed between features like
@@ -435,7 +436,7 @@ It is simple to make minor corrections to the left bank lines and right bank lin
 Step 9: Interpolate the channel
 -------------------------------
 
-In this project, use two interpolator because there are rectangular, trapezoidal, and natural channels.
+In this project, use two interpolators because there are rectangular, trapezoidal, and natural channels.
 
 **Rectangular and Trapezoidal**
 
@@ -504,8 +505,8 @@ correctly.**
 .. image:: ../img/Advanced-Workshop/Lesson049.png
 
 
-Step 10: Channel in/out condition
----------------------------------
+Step 10: Channel boundary condition
+------------------------------------
 
 Instructional Video
 
@@ -607,7 +608,7 @@ This structure will calculate discharge through a box culvert.
 This example has a box culvert that is longer than the grid element.
 The channel segments are split up to allow for the width of the roadway.
 
-**Note:  This image shows how the culverts should look once they have been digitized**
+.. note::  This image shows how the culverts should look once they have been digitized.
 
 .. image:: ../img/Workshop/Worksh074.png
 

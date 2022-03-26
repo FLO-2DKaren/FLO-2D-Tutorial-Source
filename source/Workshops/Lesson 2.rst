@@ -7,6 +7,9 @@ ________
 Complete QGIS Lesson 1 before starting this lesson.
 Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
 
+.. note:: This lesson uses an HEC-RAS import.  Alternate channel development methods are included in the advanced
+          tutorials and coastal tutorials.  It is not necessary to have a RAS channel.
+
 This video shows the full process of this tutorial.
 
 .. youtube:: d2GfNh6OTWU
@@ -45,15 +48,14 @@ classic QGIS Lesson 2 but it does not use HEC-RAS data.  Instead, it uses the FL
 
    * - Greenway.g01
      - Channel GeoRAS file
-     - \\QGIS Lesson 2
-
+     - \\QGIS Lesson 2\\HEC-RAS Channel
 
 Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
 
 Step-by-Step Procedure
-----------------------
+______________________
 
 To setup a FLO-2D flood simulation use these steps.
 
@@ -63,17 +65,17 @@ To setup a FLO-2D flood simulation use these steps.
 
 3. Schematize channel;
 
-4. Channel boundary condition;
+4. Channel boundary conditions;
 
 5. Create culverts;
 
-6. Set up control parameters and export project;
+6. Interpolate the channel;
 
-7. Interpolate the channel;
+7. Export the project;
 
-8. Import the new data;
+8. Test Run and fix the channel bank.
 
-9. Run the FLO-2D model.
+9. Final run and recovery point.
 
 Step 1: Open QGIS and load the project
 ______________________________________
@@ -135,11 +137,11 @@ __________________________
 .. image:: ../img/Workshop/Worksh061.png
 
 
-Step 4: Channel in/out condition
-________________________________
+Step 4: Channel boundary condition
+___________________________________
 
 Inlet
-^^^^^
+-----
 
 
 1. Zoom to the first channel element on the southeast corner of the map.
@@ -197,7 +199,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 
 Outlet
-^^^^^^
+------
 
 1. Zoom to the end of the channel.
 
@@ -347,8 +349,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh089.png
 
 
-Step 7: Export the project
-__________________________
+7. Export the project
+_____________________
 
 1. Click the Setup Control Parameters icon.
 
@@ -375,8 +377,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh188.png
 
-Step 8: Start a test run
-_________________________
+Step 8: Test run and fix the channel bank
+__________________________________________
 
 1. Click the Run FLO-2D Icon.
 
@@ -407,20 +409,38 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 
 .. youtube:: rhdmcXE-gyw
 
-Step 9: Create a recovery file
-______________________________
+Step 9: Final run and recovery point
+____________________________________
 
-1. If the QGIS is still open, save and close it.
+1. Click the Run FLO-2D Icon.
 
-2. Find QGIS Lesson 1 in a File Browser.
+.. image:: ../img/Workshop/Worksh0052.png
+
+
+2. Set the FLO-2D Folder.
+   C:\\program files (x86)\\flo-2d pro
+
+3. Set the Project Folder.
+
+C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Lesson 2 Export
+
+4. Click OK.
+
+.. image:: ../img/Workshop/Worksh090.png.
+
+5. If the run still has errors, repeat Step 8.  If the run starts, let it run.
+
+6. Save and close QGIS.
+
+7. Find QGIS Lesson 1 in a File Browser.
    Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
    This will create a recovery file.
 
-3. Name the zipped file.
+8. Name the zipped file.
    It is good to choose a name that identifies project progress.
    For Example: Lesson 2 Complete.zip.
 
-4. Repeat this step after any time a Backup or Recovery Point is desired.
+9. Repeat this step after any time a Backup or Recovery Point is desired.
 
 .. image:: ../img/Workshop/Worksh024.png
 
