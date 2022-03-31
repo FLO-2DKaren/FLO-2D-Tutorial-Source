@@ -1,4 +1,4 @@
-Lesson 1 - Part 1 – Getting Started
+Lesson 1 Part 1 – Getting Started
 ====================================
 
 Overview

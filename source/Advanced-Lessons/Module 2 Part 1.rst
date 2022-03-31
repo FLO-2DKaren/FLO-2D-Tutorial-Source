@@ -24,7 +24,7 @@ Lesson 1.gpkg Module 2 GeoPackage
 Check these folders to ensure the data is available before starting the lesson.
 
 Step 1: Setup the project
--------------------------
+_________________________
 
 1. Start with the project from Lesson 2, 3, or 4 Complete.
 
@@ -37,7 +37,7 @@ Step 1: Setup the project
 .. image:: ../img/Advanced-Workshop/Module031.png
 
 Step 2: Import data
--------------------
+____________________
 
 Start by cleaning up the map space so the next layer will be easy to see.
 
@@ -51,10 +51,12 @@ Start by cleaning up the map space so the next layer will be easy to see.
 
 5. Drag the Hydraulic Structures onto the map space.
 
+.. note:: If the image is blurry, use Firefox or open the image in a new tab.
+
 .. image:: ../img/Advanced-Workshop/Module032.png
 
 Step 3: Format the data layers
-------------------------------
+______________________________
 
 1. Open the Attributes Table on the Hydraulic Structures Layer.
 
@@ -65,30 +67,30 @@ Step 3: Format the data layers
 
 .. image:: ../img/Advanced-Workshop/Module034.png
 
-3. Label the Hydraulic Structures Layer.
+**Label the Hydraulic Structures layer.**
 
-4. Double click the Hydraulic Structures layer
+3. Double click the Hydraulic Structures layer
 
-5. Set the Labels like the following image.
+4. Set the Labels like the following image.
 
-6. This shows which culvert is active.
+5. This shows which culvert is being reviewed.
 
 .. image:: ../img/Advanced-Workshop/Module035.png
 
-7. Change the layer Symbology
+**Change the layer Symbology**
 
-8. Change the selector to Symbology
+6. Change the tab to Symbology
 
-9. Set the Symbol Layer Type to Arrow
+7. Set the Symbol Layer Type to Arrow
 
-10. Uncheck Curved Arrows
+8. Uncheck Curved Arrows
 
-11. This shows the flow direction of each structure.
+9. This shows the flow direction of each structure.
 
 .. image:: ../img/Advanced-Workshop/Module036.png
 
-Step 4: Build the structures into the User Layers.
---------------------------------------------------
+Step 4: Build the culverts into the User Layers Structure Lines
+________________________________________________________________
 
 1. Use the Structure Editor to add all of the new structures.
 
@@ -100,45 +102,43 @@ Step 4: Build the structures into the User Layers.
 
 **Digitizing process:**
 
-4. Left click the inlet node (upstream node)
+  - Left click the inlet node (upstream node)
 
-5. Left click the outlet node (downstream node)
+  - Left click the outlet node (downstream node)
 
-6. Right Click to finish the polyline.
-   Click OK to finish the feature.
+  - Right Click to finish the polyine.
+
+  - Click OK to finish the feature.
 
 .. image:: ../img/Advanced-Workshop/Module038.png
 
 Step 5: Assign the structure attributes
----------------------------------------
-
-.. image:: ../img/Advanced-Workshop/Module039.png
-
-1. Click Save in the Structures Widget to load the data into the dialog box.
+_______________________________________
 
 **Complete the Structure Fields**
 
-2. Load the Hydraulic Structures Attribute table.
+1. Load the Hydraulic Structures Attribute table.
    The attributes will help fill out each structure table.
 
-3. Check the center button.
+2. Check the center button.
 
-4. Select the first structure.
+3. Select the first structure.
 
-5. Rename the Structure with the “A” button.
+4. Rename the Structure with the “A” button.
 
-6. Fill the Type and Rating fields
+5. Fill the Type and Rating fields
 
-7. Move to the next structure and repeat the process.
+6. Move to the next structure and repeat the process.
 
 .. image:: ../img/Advanced-Workshop/Module040.png
 
+
+7. Schematize the structure data.
+
 .. image:: ../img/Advanced-Workshop/Module041.png
 
-8. Schematize the structure data.
-
 Step 6: Assign the rating tables
---------------------------------
+_________________________________
 
 1. Click the Import Rating Tables button
 
@@ -156,7 +156,7 @@ Step 6: Assign the rating tables
 .. image:: ../img/Advanced-Workshop/Module044.png
 
 Step 7: Schematize the data
----------------------------
+____________________________
 
 .. image:: ../img/Advanced-Workshop/Module041.png
 
@@ -165,7 +165,7 @@ Step 7: Schematize the data
 .. image:: ../img/Advanced-Workshop/Module045.png
 
 Step 8: Save, export, and run
------------------------------
+______________________________
 
 1. This is a good point to save project.
    Refer to Step 9 in Lesson 1.

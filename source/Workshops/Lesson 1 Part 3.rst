@@ -1,12 +1,12 @@
-Lesson 1 - Part 3 – Hydrology, Rainfall, and Infiltration
-==========================================================
+Lesson 1 Part 3 – Hydrology
+===========================
 
 Overview
 ________
 
 This lesson will outline the process for setting up a rainfall runoff model using a 24-hour 100yr storm and rainfall data and spatially variable
 infiltration data.
-This lesson is a continuation Lesson 1.
+
 If Lesson 1 cannot be loaded, it can be recovered from the Lesson 1 Recovery Files.zip.
 
 .. youtube:: DyBcK-Bf8wA

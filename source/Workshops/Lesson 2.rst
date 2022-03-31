@@ -12,7 +12,7 @@ Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
 
 This video shows the full process of this tutorial.
 
-.. youtube:: d2GfNh6OTWU
+.. youtube:: 74a07-wH3Gw
 
 Required Data
 _____________
@@ -82,19 +82,23 @@ ______________________________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
+
 1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
 .. image:: ../img/Workshop/Worksh028.png
 
+
 2. Click Yes to load the plugin.
 
 .. image:: ../img/Workshop/Worksh029.png
+
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
 
 3. If necessary add an aerial image to the map.  See Lesson 1 - Part 2 - Step 3 for instructions.
 
 .. image:: ../img/Workshop/Worksh056.png
+
 
 4. Organize the map layers to facilitate the next steps.  Uncheck Infiltration Layers and any unused Project Data Layers.
 
@@ -142,7 +146,6 @@ ___________________________________
 
 Inlet
 -----
-
 
 1. Zoom to the first channel element on the southeast corner of the map.
 
@@ -227,6 +230,7 @@ Outlet
 
 .. image:: ../img/Advanced-Workshop/Lesson061.png
 
+
 .. image:: ../img/Advanced-Workshop/Lesson062.png
 
 
@@ -245,6 +249,7 @@ The channel segments are split up to allow for the width of the roadway.
 1. Zoom to the first culvert.
 
 .. image:: ../img/Workshop/Worksh175.png
+
 
 2. Collapse all FLO-2D Widgets.  Open the Structures Editor.
    Click the Add Structure icon.
@@ -313,6 +318,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh081.png
 
+
 Step 6: Interpolate the channel
 _______________________________
 
@@ -363,9 +369,11 @@ _____________________
 
 .. image:: ../img/Workshop/Worksh082.png
 
+
 5. Click the Export Data button.
 
 .. image:: ../img/Workshop/Worksh021.png
+
 
 6. Navigate to the project and click Select Folder.
 
@@ -373,9 +381,11 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh187.png
 
+
 7. If all files were written correctly, the following message will appear.  Click OK to close it.
 
 .. image:: ../img/Workshop/Worksh188.png
+
 
 Step 8: Test run and fix the channel bank
 __________________________________________
@@ -428,6 +438,7 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 
 .. image:: ../img/Workshop/Worksh090.png.
 
+
 5. If the run still has errors, repeat Step 8.  If the run starts, let it run.
 
 6. Save and close QGIS.
@@ -443,6 +454,7 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 9. Repeat this step after any time a Backup or Recovery Point is desired.
 
 .. image:: ../img/Workshop/Worksh024.png
+
 
 Summary
 _______

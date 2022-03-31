@@ -1,12 +1,11 @@
 Lesson 6 – Hydraulic Structures
 ===============================
 
-Overview
-________
+**Overview**
 
 Lesson 6 outlines the process of creating hydraulic structures with rating tables and generalized culvert equations.
-This lesson needs a channel so please use the data from Lesson 2, 3, or 4 to run through this tutorial.
-Finish Lesson 2 before performing the following steps.
+This lesson needs a channel so please use the data from QGIS Lesson 2, 3, or 4 to run through this tutorial.
+
 
 This video shows the full process of this tutorial.
 
@@ -41,7 +40,7 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example
 Check these folders to ensure the data is available before starting the lesson.
 
 Step-by-Step Procedure
------------------------
+_______________________
 
 To build HYSTRUC.DAT following these steps.
 
@@ -57,12 +56,12 @@ To build HYSTRUC.DAT following these steps.
 
 6. Schematize the data;
 
-7. Export and
+7. Export and project;
 
 8. Run the simulation.
 
 Step 1: Setup the project
--------------------------
+_________________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
@@ -74,7 +73,7 @@ Step 1: Setup the project
 3. Save the project
 
 Step 2: Import data
--------------------
+____________________
 
 1. Start by cleaning up the map space so the next layer will be easy to see.
 
@@ -88,105 +87,103 @@ Step 2: Import data
 
 6. Drag the Hydraulic Structures onto the map space.
 
-**Note:  If the image is blurry, use Firefox or open the image in a new tab**
+.. note:: If the image is blurry, use Firefox or open the image in a new tab.
 
 .. image:: ../img/Workshop/Worksh139.png
 
 
-Step 3: Build the structures into the User Layers
---------------------------------------------------
+Step 3: Format the data layers
+______________________________
 
 1. Open the Attributes Table on the Hydraulic Structures Layer.
 
-.. image:: ../img/Workshop/Worksh140.png
-
+.. image:: ../img/Advanced-Workshop/Module033.png
 
 2. Select structure 130, and 131 and click Zoom map to selected rows button.
    This will zoom the map to these two structures.
 
-.. image:: ../img/Workshop/Worksh141.png
+.. image:: ../img/Advanced-Workshop/Module034.png
 
+**Label the Hydraulic Structures layer.**
 
-3. Label the Hydraulic Structures Layer.
+3. Double click the Hydraulic Structures layer
 
-4. Double click the Hydraulic Structures layer
+4. Set the Labels like the following image.
 
-5. Set the Labels like the following image.
+5. This shows which culvert is being reviewed.
 
-6. The labels help define which culvert is being used.
+.. image:: ../img/Advanced-Workshop/Module035.png
 
-.. image:: ../img/Workshop/Worksh142.png
+**Change the layer Symbology**
 
+6. Change the tab to Symbology
 
-7.  Change the layer Symbology
+7. Set the Symbol Layer Type to Arrow
 
-8.  Change the selector to Symbology
+8. Uncheck Curved Arrows
 
-9.  Set the Symbol Layer Type to Arrow
+9. This shows the flow direction of each structure.
 
-10. Uncheck
-    Curved Arrows
+.. image:: ../img/Advanced-Workshop/Module036.png
 
-11. This will
-    show the flow direction of each structure.
+Step 4: Build the culverts into the User Layers Structure Lines
+________________________________________________________________
 
-.. image:: ../img/Workshop/Worksh143.png
+1. Use the Structure Editor to add all of the new structures.
 
+2. Digitize all of the structures.
 
-12. Use the Structure Editor to add all of the new structures.
+3. Click the Save icon to confirm that close the digitizing tool and load the data.
 
-13. Digitize all of the structures.
-
-14. Click the Save icon to confirm that close the digitizing tool and load the data.
-
-.. image:: ../img/Workshop/Worksh144.png
+.. image:: ../img/Advanced-Workshop/Module037.png
 
 
 **Digitizing process:**
 
-15. Left click the inlet node (upstream node)
+  - Left click the inlet node (upstream node)
 
-16. Left click the outlet node (downstream node)
+  - Left click the outlet node (downstream node)
 
-17. Right Click to finish the polyine.
+  - Right Click to finish the polyine.
 
-18. Click OK to finish the feature.
+  - Click OK to finish the feature.
 
 .. image:: ../img/Workshop/Worksh145.png
 
 
-Step 4: Assign the structure attributes
----------------------------------------
+4. Click Save in the Structures Widget to load the data into the dialog box.
 
-.. image:: ../img/Workshop/Worksh164.png
+.. image:: ../img/Advanced-Workshop/Module039.png
 
-1. Click Save in the Structures Widget to load the data into the
-    dialog box.
+
+Step 5: Assign the structure attributes
+_______________________________________
 
 **Complete the Structure Fields**
 
-2. Load the Hydraulic Structures Attribute table.  The attributes will help fill out each structure table.
+1. Load the Hydraulic Structures Attribute table.
+   The attributes will help fill out each structure table.
 
-3. Check the center button.
+2. Check the center button.
 
-4. Select the first structure.
+3. Select the first structure.
 
-5. Rename the Structure with the “A” button.
+4. Rename the Structure with the “A” button.
 
-6. Fill the Type and Rating fields
+5. Fill the Type and Rating fields
 
-7. Move to the next structure and repeat the process.
+6. Move to the next structure and repeat the process.
 
-.. image:: ../img/Workshop/Worksh146.png
-
-
-8. Schematize the structure data.
-
-.. image:: ../img/Workshop/Worksh165.png
+.. image:: ../img/Advanced-Workshop/Module040.png
 
 
-Step 5: Assign the rating tables
---------------------------------
+7. Schematize the structure data.
+
+.. image:: ../img/Advanced-Workshop/Module041.png
+
+
+Step 6: Assign the rating tables
+_________________________________
 
 1. Click the Import Rating Tables button
 
@@ -207,8 +204,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh149.png
 
 
-Step 6: Schematize the data
----------------------------
+Step 7: Schematize the data
+___________________________
 
 Schematize the structure data
 .. image:: ../img/Workshop/Worksh165.png and click Yes to replace the data.
@@ -216,8 +213,8 @@ Schematize the structure data
 .. image:: ../img/Workshop/Worksh150.png
 
 
-Step 7: Export the data
------------------------
+Step 8: Export the data
+_______________________
 
 .. image:: ../img/Workshop/Worksh083.png
 
@@ -243,8 +240,8 @@ Step 7: Export the data
 .. image:: ../img/Workshop/Worksh151.png
 
 
-Step 8: Run the simulation
---------------------------
+Step 9: Run the simulation
+___________________________
 
 .. image:: ../img/Workshop/Worksh0052.png
 
