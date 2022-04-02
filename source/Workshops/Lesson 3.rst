@@ -50,23 +50,21 @@ To setup a FLO-2D flood simulation use these steps.
 
 1. Open QGIS and load the project;
 
-2. Import shapefiles for storm drain;
+2. Import the storm drain shapefiles;
 
-3. Select components from storm drain shapefiles;
+3. Select storm drain fields from the shapefiles;
 
-4. Assign the conduit node connections;
+4. Assign the link node connections;
 
 5. Import rating tables;
 
-6. Set up the pump;
+6. Set up the pump data;
 
 7. Schematize storm drain data;
 
-8. Export swmm.inp file;
+8. Export the project data;
 
-9. Export project data;
-
-10. Run the simulation.
+9. Run the simulation.
 
 Step 1: Open QGIS and load the project
 ______________________________________
@@ -91,17 +89,21 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh189.png
 
-.. warning:: The next step may require extra data and an update.  If you would like to try the lesson with pumps,
+.. warning:: The next step may require extra data and a plugin update.  If you would like to try the lesson with pumps,
              download the new data and update the plugin with this link:
-             https://flo-2d.sharefile.com/d-sd19055844ea84fccbbb782e33872c53a
+             https://flo-2d.sharefile.com/d-scaa3099c74544a6d9e70b1012e906d84
 
              If you would like to try the lesson without pumps, simply ignore instructions related to pumps.
 
-Step 2: Import shapefiles for storm drain features
-__________________________________________________
+Step 2: Import the storm drain shapefiles
+__________________________________________
 
-1. Grab the \*.shp files from QGIS Lesson 3\\Storm Drain Shapefiles and drop the files in the map space.
-   The shapefiles should be located inside the project layer in the layer panel.
+1. Click the Boundary Condition Points layer in the User Layers Group.
+
+2. Drag the \*.shp files from QGIS Lesson 3 folder and drop the files in the map space.
+   The shapefiles should be located in the User Layers group.
+
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Storm Drain Shapefiles\\With pump
 
 .. note:: If your data doesn't have pumps, simply use the shapefiles in Lesson 3\\Storm Drain Shapefiles
 
@@ -120,12 +122,14 @@ The shapefiles info:
 -  **Lesson3Pumps.shp** is a polyline shapefile that contains the pumps.
 
 3. Check the Attribute Tables for the new layers.
-   To do this right click each layer and then Click Attributes Table.
+   To do this right click any storm drain layer and then click Attributes Table.
 
 .. image:: ../img/Workshop/Worksh094.png
 
 The following data must be available in the shapefile to create the **SWMM.INP** files and the associated storm drain
 data files: **SWMMFLO.DAT**, **SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
+
+\* The asterisk means the data in the fields will be overwritten by the link node calculator.
 
 .. image:: ../img/Advanced-Workshop/conduits.png
 
@@ -135,10 +139,10 @@ data files: **SWMMFLO.DAT**, **SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
 
 .. image:: ../img/Advanced-Workshop/pumps.png
 
-Step 3: Select components from shapefile layer
-______________________________________________
+Step 3: Select storm drain fields from the shapefiles
+_____________________________________________________
 
-1. Display the Storm Drain Editor widget and click the Select components from shapefile layer button.
+1. Expand the Storm Drain Editor widget and click the Select components from shapefile layer button.
 
 .. image:: ../img/Workshop/Worksh095.png
 
@@ -159,23 +163,27 @@ ______________________________________________
 .. image:: ../img/Workshop/Worksh098a.png
 
 
-3. Once all features are assigned in the drop-down menu, then click on *Assign Selected Inlets/Junctions, Outfalls and
-   Conduits* to create the data structures of the Storm Drain Components.  The following message will be displayed.
+3. Once all features are selected in the drop-down menus, click *Assign Selected Inlets/Junctions, Outfalls and
+   Conduits* to create the data structures of the Storm Drain Components.
+
+4. The following message will be displayed.
    Click *OK*.
 
 .. image:: ../img/Workshop/Worksh099.png
 
 
-Step 4: Assign the conduit node connections
-____________________________________________
+Step 4: Assign the link node connections
+_________________________________________
 
-1. Display the Storm Drain Editor widget and click on *Inlets/Junctions.*
+1. Click the Simulate storm drain checkbox.
 
-2. Click the Simulate storm drain checkbox.
+2. Click the Auto-assign link nodes button and select Conduits.
 
-3. Click the Auto-assign conduits nodes button.
+3. Repeat the process for Pumps.
 
 .. image:: ../img/Workshop/Worksh100.png
+
+.. image:: ../img/Workshop/Worksh100a.png
 
 
 Step 5: Import rating tables
@@ -195,6 +203,10 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh103.png
 
+4. No error was reported.  If an error was detected because one Type 4 inlet didn't match a selected text file, it would be reported to this file:
+
+.. image:: ../img/Workshop/Worksh103a.png
+
 
 Step 6: Set up the pump data
 ____________________________
@@ -211,9 +223,15 @@ ____________________________
 
 .. image:: ../img/Workshop/Worksh101a.png
 
-5. Apply a uniform rating table.
+5. Apply a rating table.
 
 .. image:: ../img/Workshop/Worksh101b.png
+
+6. Pump instructions can be found in the EPA SWMM 5.0 Help Document
+
+.. image:: ../img/Workshop/Worksh101c.png
+
+C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\EPA SWMM 5.0\\EPA SWMM 5.0 Help
 
 Step 7: Schematize storm drain components
 _________________________________________
@@ -229,62 +247,27 @@ _________________________________________
 .. image:: ../img/Workshop/Worksh105.png
 
 
-The storm drain schematized data layers have been completed.  The storm drain components are now part of the schematized
-layers in the project.
+3. The storm drain schematized data layers have been completed.  The storm drain components are now part of the
+   schematized layers in the project.
 
 .. image:: ../img/Workshop/Worksh106.png
 
 
-Step 8: Export SWMM.INP file
-____________________________
-
-1. Make sure the switch *Simulate Storm Drain* is selected.
-   Click the *Export SWMM.INP* button in the **Storm Drain Editor** widget.
-
-.. image:: ../img/Workshop/Worksh107.png
-
-
-2. Browse to the Project Folder and Save the **SWMM.INP** file.
-   The \*.INP file should be named as ‘SWMM.INP’, no other names will be read by FLO-2D model.
-   Click *Save*.
-
-.. image:: ../img/Workshop/Worksh108.png
-
-
-3. The *Storm Drain Control Dialog* is displayed.
-   The control parameters must be entered.
-   All gray out data in the control dialog is hardwired.
-
-4. The data is default for FLO-2D. The report_step can be set to any desired value.
-
-.. image:: ../img/Workshop/Worksh109.png
-
-
-5. A dialog displays presenting the features that were written to the SWMM.INP file.
-   Click *OK*.
-
-.. image:: ../img/Workshop/Worksh110.png
-
-
-Step 9: Export the project
+Step 8: Export the project
 __________________________
 
-The files that connect inlets and outfalls with the FLO-2D surface layer are created when the GDS Data Files are
-exported.
+1. Click the Set Control Variable icon.
 
-1. Click the *Set* *Control Variable* icon and enter the data in the FLO-2D Toolbar.
-   The following dialog will be displayed, make sure the *Storm Drain* component switch is selected.
 
 .. image:: ../img/Workshop/Worksh017.png
 
 
-2. Click *Save*.
+2. Verify the data and Click Save.
 
 .. image:: ../img/Workshop/Worksh111.png
 
 
 3. This is a good point to save project.
-   Refer to Steps 9 in Lesson 1.
 
 .. image:: ../img/Workshop/Worksh083.png
 
@@ -296,15 +279,32 @@ exported.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Lesson 3 Export
 
-5. All GDS Data files will be created in the selected project folder, including **SWMMFLO.DAT** and **SWMMOUTF.DAT** files.
+5. Click OK to export the main project data files.
 
-6. The following dialog will be displayed, associated storm drain data files are created when the storm drain switch
+.. image:: ../img/Workshop/Worksh021b.png
+
+6. Save the swmm.inp file with the next dialog.  Make sure the path is still Lesson 3 Export.
+
+.. image:: ../img/Workshop/Worksh021c.png
+
+
+7. Check the .INP control variables and click OK.
+
+.. image:: ../img/Workshop/Worksh021d.png
+
+
+8. These are the storm drain components that were written to the swmm.inp file.
+
+.. image:: ../img/Workshop/Worksh021e.png
+
+
+9. The final dialog will be displayed.  The associated storm drain data files are created when the storm drain switch
    has been turned ON.
 
-.. image:: ../img/Workshop/Worksh112.png
+.. image:: ../img/Workshop/Worksh021f.png
 
 
-Step 10: Run the simulation
+Step 9: Run the simulation
 ____________________________
 
 1. Click the Run FLO-2D Icon.
