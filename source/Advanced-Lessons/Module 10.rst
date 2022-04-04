@@ -1,8 +1,8 @@
 Channels - Urban Channel
 =========================
 
-Overview
-________
+**Overview**
+
 
 Complete QGIS Lesson 1 before starting this lesson.
 Use this training module to build an urban drainage channel by digitizing the channel components.  Finish it up by
@@ -11,7 +11,6 @@ adding culverts to the channel, boundary conditions.  The final part of the modu
 This module replaces Lesson 2.  Lesson 2 uses a RAS import and this one uses QGIS to build the channel from scratch.
 
 Required Data
-_____________
 
 The lesson makes use of the original data from Lesson 1, left bank, right bank, and cross section data, and culvert
 rating tables.
@@ -83,7 +82,7 @@ To setup a FLO-2D flood simulation use these steps.
 13. Run the FLO-2D model.
 
 Step 1: Open Lesson 1 in QGIS
------------------------------
+__________________________________________
 
 1. Search the start menu and run the “QGIS Desktop” program.
 
@@ -123,9 +122,9 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 
 Step 2: Digitize the left banks
--------------------------------
+__________________________________________
 
-**Note: Digitize the lines from upstream to downstream.**
+.. note:: Digitize the lines from upstream to downstream.
 
 1. Zoom in on the upstream channel segment in the southeast corner of the map.
 
@@ -165,6 +164,7 @@ Step 2: Digitize the left banks
 
 .. image:: ../img/Advanced-Workshop/Mod10_002.gif
 
+
 6. Repeat this process for the next two segments.
    The final left banks should look something like the following image.
 
@@ -177,7 +177,7 @@ Step 2: Digitize the left banks
 
 
 Step 3: Digitize the right banks
---------------------------------
+__________________________________________
 
 1. Zoom in on the upstream channel segment in the southeast corner of the map.
 
@@ -215,9 +215,10 @@ Step 3: Digitize the right banks
 
 
 Step 4: Digitize the cross sections
------------------------------------
+__________________________________________
 
-**Important Note: Try to digitize the cross sections in order from upstream to downstream.**
+.. note:: Try to digitize the cross sections in order from upstream to downstream.
+
 
 1. Zoom in on the upstream channel segment in the southeast corner of the map.
 
@@ -236,13 +237,13 @@ Step 4: Digitize the cross sections
 
 The first cross section has important restrictions.
 
--  The line must cross the left bank line
+  - The line must cross the left bank line
 
--  The line must start in the same cell as the left bank line.
+  - The line must start in the same cell as the left bank line.
 
--  The line must cross the right bank line.
+  - The line must cross the right bank line.
 
--  The line must start in the same cell as the right bank line.
+ - The line must start in the same cell as the right bank line.
 
 4. Digitize the first cross section.
    Click the left side first and then the right side.
@@ -259,8 +260,9 @@ The first cross section has important restrictions.
 
 .. image:: ../img/Advanced-Workshop/Lesson021.png
 
+
 Step 5. Complete cross section attributes
------------------------------------------
+__________________________________________
 
 1. Right click the Cross Sections layer and click Open Attribute Table.
 
@@ -282,6 +284,7 @@ Step 5. Complete cross section attributes
 
 .. image:: ../img/Advanced-Workshop/Mod10_005.gif
 
+
 10. Methods to determine the channel geometry.
 
     a. As-built files are the first source of data but not available in all cases.
@@ -292,8 +295,8 @@ Step 5. Complete cross section attributes
 
     d. Measure side slope from elevation data or site visit.
 
-**Note: The real channel geometry is a mix of gabion lined and natural, but this tutorial also uses rectangular, trapezoidal
-and natural geometry to show the different method.**
+.. note:: The real channel geometry is a mix of gabion lined and natural, but this tutorial also uses rectangular,
+          trapezoidal and natural geometry to show the different method.
 
 11. Open the following attribute tables from the Channel Tables group and fill the data.
 
@@ -317,7 +320,7 @@ and natural geometry to show the different method.**
 
 
 Step 6: Sample elevation
-------------------------
+__________________________________________
 
 1. The rectangular and trapezoidal channels need bank elevation.
    Use the Cross Section Editor widget to sample the elevation from the elevation raster.
@@ -347,13 +350,13 @@ Step 6: Sample elevation
 
 7. Repeat this step for each Natural Type cross section.
 
-**Note: If natural cross sections are present, they can be sampled at the same time using the Sample All button.**
+.. note::  If natural cross sections are present, they can be sampled at the same time using the Sample All button.
 
 Step 7: Schematize channel
---------------------------
+__________________________________________
 
-**Important Note: If any of the following procedure needs to be repeated, always return to this Schematize step to reset
-the data before trying to modify anything.**
+.. note::  Important Note: If any of the following procedure needs to be repeated, always return to this Schematize step to reset
+           the data before trying to modify anything.
 
 1. Click Schematize channels.
 
@@ -367,39 +370,39 @@ the data before trying to modify anything.**
 
 
 Step 8: Revise bank alignment
------------------------------
+__________________________________________
 
-Channel alignment in urban projects can be important because channels are usually squeezed between features like
-buildings, walls, and streets.  In this image, the left bank is on the wrong side of an urban wall.
+1. Channel alignment in urban projects can be important because channels are usually squeezed between features like
+   buildings, walls, and streets.  In this image, the left bank is on the wrong side of an urban wall.
 
 .. image:: ../img/Advanced-Workshop/Lesson030.png
 
 
-Urban channels also vary widely in their design.
-This channel is not a rectangular channel or a trapezoidal channel.
-It has a stepped gabion lining along the banks.
+2. Urban channels also vary widely in their design.
+   This channel is not a rectangular channel or a trapezoidal channel.
+   It has a stepped gabion lining along the banks.
 
 .. image:: ../img/Advanced-Workshop/Lesson031.png
 
 
-It is simple to make minor corrections to the left bank lines and right bank lines to realign the channels.
+3. It is simple to make minor corrections to the left bank lines and right bank lines to realign the channels.
 
-1. In the User Layers group, turn on the Editor Pencil for Left Bank Lines, Right Bank Lines, and Cross Sections.
+4. In the User Layers group, turn on the Editor Pencil for Left Bank Lines, Right Bank Lines, and Cross Sections.
 
 .. image:: ../img/Advanced-Workshop/Lesson032.png
 
 
-2. Set the Vertex Tool to All Layers.
+5. Set the Vertex Tool to All Layers.
 
 .. image:: ../img/Advanced-Workshop/Lesson033.png
 
 
-3. Reposition the Left Bank Line so that it is in between the retaining wall and the channel.
+6. Reposition the Left Bank Line so that it is in between the retaining wall and the channel.
 
 .. image:: ../img/Advanced-Workshop/Lesson034.png
 
 
-4. Click the Schematize button to reposition the Schematized Channel and click Yes and Close to close the windows.  In
+7. Click the Schematize button to reposition the Schematized Channel and click Yes and Close to close the windows.  In
    This case, hitting the enter button twice will be faster.
 
 .. image:: ../img/Advanced-Workshop/Lesson035.png
@@ -411,34 +414,35 @@ It is simple to make minor corrections to the left bank lines and right bank lin
 .. image:: ../img/Advanced-Workshop/Lesson037.png
 
 
-5. If necessary, uncheck the Center button.
+8. If necessary, uncheck the Center button.
    This will keep the channel in place, so the corrections are easy to track.
 
 .. image:: ../img/Advanced-Workshop/Lesson038.png
 
 
-6. Squeezing the left bank like this means some of the bank elements might be inside the channel.
+9. Squeezing the left bank like this means some of the bank elements might be inside the channel.
 
-7. Slight corrections can be made to Left Bank Line to ensure good bank placement.
+10. Slight corrections can be made to Left Bank Line to ensure good bank placement.
 
 .. image:: ../img/Advanced-Workshop/Mod10_008.gif
 
 
-8. The same procedure can be used on the right bank.
+11. The same procedure can be used on the right bank.
 
 .. image:: ../img/Advanced-Workshop/Mod10_009.gif
 
 
-9.  Always finish by clicking the schematize button to ensure the final edits were updated.
+12.  Always finish by clicking the schematize button to ensure the final edits were updated.
 
-10. Once the final edits are complete, save and close the editors for the User Layers.
+13. Once the final edits are complete, save and close the editors for the User Layers.
 
 Step 9: Interpolate the channel
--------------------------------
+__________________________________________
 
 In this project, use two interpolators because there are rectangular, trapezoidal, and natural channels.
 
-**Rectangular and Trapezoidal**
+Rectangular and Trapezoidal
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 R and T type channels are interpolated using the Interpolate bed elevation data button.
 
@@ -457,12 +461,14 @@ R and T type channels are interpolated using the Interpolate bed elevation data 
 .. image:: ../img/Advanced-Workshop/Lesson043.png
 
 
-**Natural**
+Natural
+^^^^^^^^
 
 N type channels are interpolated using the Interpolator.exe program.
 This method will outline how to call the interpolator and reload the data.
 
-**Important Note: If this process needs to be repeated for any reason, click Schematize button before repeating anything beyond this step.**
+.. note:: If this process needs to be repeated for any reason, click Schematize button before repeating
+          anything beyond this step.
 
 1. Click the Create CHAN.DAT, XSEC.DAT, AND CHANBANK.DAT button.
 
@@ -484,10 +490,10 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 4. The second action calls the Interpolate.exe program from the FLO-2D Pro folder.
 
-**Important Note: If this process results in an Interpolate.exe error, it is possible to move that file to another location and make sure it is named
-correctly.**
+.. note:: If this process results in an Interpolate.exe error, it is possible to move that file to another location and
+          make sure it is named correctly.
 
-**Note: In this case only the 4 natural cross sections are used.**
+          In this case only the 4 natural cross sections are used.
 
 5. Click Interpolate.
 
@@ -506,7 +512,7 @@ correctly.**
 
 
 Step 10: Channel boundary condition
-------------------------------------
+__________________________________________
 
 Instructional Video
 
@@ -602,7 +608,7 @@ Outlet
 
 
 Step 11: Culverts
-------------------
+_____________________
 
 This structure will calculate discharge through a box culvert.
 This example has a box culvert that is longer than the grid element.
@@ -623,8 +629,8 @@ The channel segments are split up to allow for the width of the roadway.
 .. image:: ../img/Workshop/Worksh075.png
 
 
-3. Digitize the first culvert by clicking on the upstream left bank element and downstream left bank element of the channel.
-   Right click to complete the line and click OK to close the Structure Line attribute box.
+3. Digitize the first culvert by clicking on the upstream left bank element and downstream left bank element of the
+   channel.  Right click to complete the line and click OK to close the Structure Line attribute box.
 
 .. image:: ../img/Workshop/Worksh176.png
 
@@ -682,7 +688,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 
 Step 12: Export the project
-----------------------------
+__________________________________________
 
 1. Click the Setup Control Parameters icon.
 
@@ -695,16 +701,20 @@ Step 12: Export the project
 
 .. image:: ../img/Workshop/Worksh082.png
 
+
 4. Click the Export button for the FLO-2D Data files.
    Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module123.png
 
+
 .. image:: ../img/Advanced-Workshop/Lesson063.png
+
 
 5. Select the QGIS Lesson 2 Export folder.
 
 .. image:: ../img/Advanced-Workshop/Lesson064.png
+
 
 6. The data is ready to run.
 
@@ -712,7 +722,7 @@ Step 12: Export the project
 
 
 Step 13: Run the simulation
-----------------------------
+__________________________________________
 
 1. Click the Run FLO-2D Icon.
 
@@ -739,6 +749,7 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 This final video explains how to review the channel to check if it is running correctly.
 
 .. youtube:: p8EeQ81_pmE
+
 
 Summary
 ________

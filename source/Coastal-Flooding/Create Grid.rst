@@ -7,7 +7,6 @@ This module will outline how create a grid using QGIS, FLO-2D Plugin and project
 roughness to the grid.
 
 Required Data
--------------
 
 The required data is in the Coastal Training Folder.
 
@@ -23,8 +22,9 @@ Data Location:  \\Coastal Training\\Project Data\\AOI
 
 .. youtube:: nyX01bFoUBA
 
+
 Step 1: Set up the FLO-2D project
----------------------------------
+__________________________________
 
 .. image:: ../img/Coastal/creategrid001.png
 
@@ -55,7 +55,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Coasta
 .. image:: ../img/Coastal/creategrid004.png
 
 Step 2: Create the grid
------------------------
+______________________________
 
 1. From the Grid Tools widget, select Create Grid.
 
@@ -66,8 +66,9 @@ Step 2: Create the grid
 
 .. image:: ../img/Coastal/creategrid006.png
 
-**Note: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.
-In order to align the grid to a raster, load the raster file into the dialog box.**
+
+.. note:: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.
+          In order to align the grid to a raster, load the raster file into the dialog box.
 
 3. Click OK to close.
    The grid is complete.
@@ -76,7 +77,7 @@ In order to align the grid to a raster, load the raster file into the dialog box
 
 
 Step 3: Save the project
--------------------------
+______________________________
 
 1. Click the main Save button on the QGIS toolbar.
 
@@ -88,13 +89,14 @@ Step 3: Save the project
 \\Coastal Training\\Coastal Project.qgz
 
 Step 4: Assign grid elevation
-------------------------------
+______________________________
 
 1. Uncheck the Project Area of Interest Layer.
 
 2. Click the Computational Domain Layer
 
 .. image:: ../img/Coastal/creategrid011.png
+
 
 3. Import the elevation file.
    Open the project folder and drag the Elevation Raster.tif file onto the map space.
@@ -119,16 +121,19 @@ Step 4: Assign grid elevation
 7. Sampling Done dialog box will appear once the process is complete.
    Click OK to close it.
 
-**Note: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
-Warp processing tool.  To learn more about GDAL Warp, visit this page:**
+.. note:: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
+          Warp processing tool.  To learn more about GDAL Warp, visit this page:**
 
 https://gdal.org/programs/gdalwarp.html
 
 .. image:: ../img/Coastal/creategrid012.png
+
+
 .. image:: ../img/Workshop/Worksh154.png
 
+
 Step 5: Assign Roughness data
-------------------------------
+______________________________
 
 1. Open the project folder and drag the Mannings_n.shp file onto the map space.
 
@@ -144,6 +149,7 @@ Step 5: Assign Roughness data
 
 .. image:: ../img/Coastal/creategrid015.png
 
+
 4. Once the sample is complete, the following window will appear.
    Close the window.
 
@@ -155,11 +161,13 @@ Step 5: Assign Roughness data
    area of the grid.
 
 .. image:: ../img/Coastal/creategrid017.png
+
+
 .. image:: ../img/Coastal/creategrid018.png
 
 
 Step 6: Assign Control Variables
----------------------------------
+_________________________________
 
 1. Click the Set Control Parameters Button.
 
@@ -169,7 +177,8 @@ Step 6: Assign Control Variables
 2. Fill the dialog box using the two figures below.
    Save the data to the GeoPackage with the Save button.
 
-**Note:  The variable descriptions and additional instructions are presented in the Data Input Manual.**
+.. note::  The variable descriptions and additional instructions are presented in the Data Input Manual.
+
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Data Input Manual PRO.pdf
 
@@ -180,14 +189,15 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\flo_help\\Manuals\\Data 
 
 
 Step 7: Save the project
--------------------------
+______________________________
 
 1. Click the main Save button on the QGIS toolbar.
 
 .. image:: ../img/Workshop/Worksh011.png
 
+
 Step 8: Create a backup file
-----------------------------
+______________________________
 
 1. Close QGIS.
 
@@ -196,22 +206,20 @@ Step 8: Create a backup file
 
 .. image:: ../img/Coastal/creategrid019.png
 
+
 3. Name the zipped file.
    It is good to choose a name that identifies project progress.
    For Example: Elevation and nvalue OK.zip
 
 .. image:: ../img/Coastal/creategrid020.png
 
+
 4. Open QGIS and reload the project.
 
 .. image:: ../img/Coastal/creategrid021.png
 
+
 5. Click yes to load the model.
 
 .. image:: ../img/Coastal/creategrid022.png
-
-
-
-
-
 

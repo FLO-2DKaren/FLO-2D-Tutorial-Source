@@ -7,7 +7,6 @@ In this tutorial, a simple dam breach with failure is created.  Part 1 will defi
 so that the design storm and rainfall can fill the basin.
 
 Required Data
--------------
 
 The required data is in Module 3 Part 1.
 
@@ -27,7 +26,7 @@ Tomlinson, E.M., W.D. Kappel, G. Muhlestein, D. Hulstrand, and T. Parzybok, 2013
 Probable Maximum Precipitation Study for Arizona, Arizona Department of Water Resources, Phoenix, Arizona.
 
 Step 1: Load the project
-------------------------
+________________________
 
 1. Start with the project from Module 3 Prescribed Breach
 
@@ -37,20 +36,24 @@ Step 1: Load the project
 
 .. image:: ../img/Advanced-Workshop/Module094.png
 
+
 4. Click Yes to load the model.
 
 .. image:: ../img/Advanced-Workshop/Module095.png
 
+
 Step 2. Load the aerial and hydrography
----------------------------------------
+_______________________________________
 
 1. Click the Quick Map Services button and add a Google Map
 
 .. image:: ../img/Advanced-Workshop/Module096.png
 
+
 2. Click the Data Source Manager button and add a WMS/WMTS dataset.
 
 .. image:: ../img/Advanced-Workshop/Module097.png
+
 
 3. Select the Hydrograph
 
@@ -62,12 +65,14 @@ Step 2. Load the aerial and hydrography
 
 .. image:: ../img/Advanced-Workshop/Module098.png
 
+
 7. If the layer comes in white, set the transparency to 50% Global Opacity.
 
 .. image:: ../img/Advanced-Workshop/Module099.png
 
+
 Step 3. Review hydrology
-------------------------
+_________________________
 
 Dam breach models will typically utilize the Probable Maximum Precipitation (PMP).
 The data for these studies are typically created at the state or county level.
@@ -80,13 +85,14 @@ area.
 
 .. image:: ../img/Advanced-Workshop/Module100.png
 
-(Source: Figure 10.7 and table 10.1 pg.
-111 PMP Study for Arizona)
+
+(Source: Figure 10.7 and table 10.1 pg. 111 PMP Study for Arizona)
 
 This value is used in the Uniform Rainfall editor along with the Maricopa 6-Hr P1 rainfall distribution curve.
 This hydrology model is used to fill the reservoir or even get a high-water level for the dam.
 
 .. image:: ../img/Advanced-Workshop/Module101.png
+
 
 Infiltration can also be applied to the watershed.
 In this example, a simplified set of polygons are used to define Green-Ampt Infiltration.
@@ -96,8 +102,9 @@ See the Global and Spatial variables below.
 
 .. image:: ../img/Advanced-Workshop/Module102.png
 
+
 Step 4. Set up the reservoir
-----------------------------
+______________________________
 
 1. Collapse the widgets.
 
@@ -105,9 +112,11 @@ Step 4. Set up the reservoir
 
 .. image:: ../img/Advanced-Workshop/Module103.png
 
+
 3. Click the create a reservoir button and click anywhere upstream of the dam.
 
 .. image:: ../img/Advanced-Workshop/Module104.png
+
 
 4. Click the Save button and Schematize button to complete the Reservoir.
 
@@ -116,3 +125,4 @@ Step 4. Set up the reservoir
 6. FLO-2D fills any contiguous cell to the prescribed water surface elevation.
 
 .. image:: ../img/Advanced-Workshop/Module105.png
+

@@ -6,7 +6,6 @@ Storm Drain - Shapefile Development
 This lesson will outline how to construct a storm drain network that is ready for FLO-2D Plugin to process.
 
 Required Data
---------------
 
 The required data is in Module 8.
 
@@ -21,7 +20,7 @@ Point shapefile    Outfalls
 ================== ==========================
 
 Step 1: Load the project
-------------------------
+_______________________________________
 
 1. Start with the project from Module 8.
 
@@ -32,12 +31,14 @@ Step 1: Load the project
 
 .. image:: ../img/Advanced-Workshop/Module258.png
 
+
 4. Click Yes to load the model.
 
 .. image:: ../img/Advanced-Workshop/Module259.png
 
+
 Step 2: Import shapefiles for storm drain features
---------------------------------------------------
+__________________________________________________
 
 1. Select the Layer Boundary Condition Points
 
@@ -53,6 +54,7 @@ Step 2: Import shapefiles for storm drain features
 
 .. image:: ../img/Advanced-Workshop/Module260.png
 
+
 7. The shapefiles can be described as follow:
 
 -  Lesson3Outfalls.shp is a point shapefile that contains the outfalls.
@@ -67,20 +69,24 @@ Step 2: Import shapefiles for storm drain features
 
 .. image:: ../img/Advanced-Workshop/Module261.png
 
+
 .. image:: ../img/Advanced-Workshop/Module262.png
+
 
 The following data must be available in the shapefile to create the SWMM.INP files and the associated storm drain data files: SWMMFLO.DAT,
 SWMMOUTF.DAT and SWMMFLORT.DAT.
 
 .. image:: ../img/Advanced-Workshop/conduits.png
 
+
 .. image:: ../img/Advanced-Workshop/inlets.png
+
 
 .. image:: ../img/Advanced-Workshop/outfalls.png
 
 
 Step 3. Add missing columns to shapefiles
------------------------------------------
+___________________________________________
 
 1. Open the attributes for any storm drain shapefile.
 
@@ -88,16 +94,18 @@ Step 3. Add missing columns to shapefiles
 
 .. image:: ../img/Advanced-Workshop/Module263.png
 
+
 3. Using the tables in Step 2, add a field or two to the shapefiles.
 
 4. In this example a new field called Geom 2 is a real or float and has 7 length and 3 precision.
 
 5. See how the length and precision works.
-   I cannot add more than 4 number places or 3 decimal places.
+   No more than 4 number places or 3 decimal places can be entered.
 
 6. Length is the total length (not including “.”) of the number and precision is the number of decimals.
 
 .. image:: ../img/Advanced-Workshop/Module264.png
+
 
 7. This is the end of the lesson.
    Keep adding fields until the class continues.

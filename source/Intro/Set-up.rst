@@ -23,6 +23,7 @@ https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668
 
 .. image:: ../img/Instructions/image1.png
 
+
 1. Select all.
 
 2. Download.
@@ -55,13 +56,16 @@ Install FLO-2D using the following instructions.
 
 .. image:: ../img/Instructions/image6.png
 
+
 5. If running a new install, check all options.  If running an update, uncheck Map Objects and EPA SWMM.
 
-.. image:: ../img/Instructions/image15.png
+.. image:: ../img/Instructions/image15.gif
+
 
 6. Click next and Install to run the installer.
 
 .. image:: ../img/Instructions/image16.png
+
 
 7. If an error appears related to the DAO35.EXE, run the installer again but uncheck
    Map Objects.

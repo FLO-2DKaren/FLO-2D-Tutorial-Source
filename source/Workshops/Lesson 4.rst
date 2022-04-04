@@ -4,13 +4,13 @@ Lesson 4 – QGIS FLO-2D Plugin Buildings, Walls and Wall Failure
 Overview
 ________
 
-Lesson 4 will outline the process of setting up buildings and walls and defining wall failure parameters in a FLO-2D project using the Plugin for QGIS.
-This lesson can be completed after Lesson 1 is finished.
-Apply these instructions after Lesson 1, 2 or 3 are completed.
+Lesson 4 will outline the process of setting up buildings and walls and defining wall failure parameters in a FLO-2D
+project using the Plugin for QGIS.  Apply these instructions after Lesson 1, 2 or 3 are completed.
 
 This video shows the full process of this tutorial.
 
 .. youtube:: guHbOgtpAnM
+
 
 Required Data
 _____________
@@ -69,46 +69,38 @@ This tutorial will continue from Lesson 3.
 .. image:: ../img/Workshop/Worksh055.png
 
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.gpkg
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
 
 1. Click Yes in the FLO-2D window to Load the model.
 
 .. image:: ../img/Workshop/Worksh114.png
 
 
-The model will look as follows:
-
-.. image:: ../img/Workshop/Worksh115.png
-
 Step 2: Assign buildings
 ________________________
+
+.. note:: The video at the top of this tutorial shows how to remove, add or modify the building polygons.
+
 
 1. Drag the Buildings.shp shapefile onto the map space.
 
 .. image:: ../img/Workshop/Worksh116.png
 
+
 The Buildings.shp shapefile needs 3 Attributes.
 
--  Collapse Field
+.. image:: ../img/Workshop/Worksh116a.png
 
--  ARF Field
 
--  WRF Field
+These fields represent switches to set the calculation control for each building.
 
--  These fields represent switches to set the calculation control for each building.
-
--  Collapse - 0 will ignore building collapse settings.
-
--  Collapse - 1 will apply the control for building collapse.
+-  Collapse = 0 will ignore building collapse settings.
+-  Collapse = 1 will apply the control for building collapse.
    If building collapse is needed, look in the Data Input manual for an extra data file.
-
--  ARF - 0 will ignore the ARF calculation
-
--  ARF - 1 will calculate the ARF calculation
-
--  WRF - 0 will ignore the spatially variable WRF but apply a T line to any totally blocked cell.
-
--  WRF - 1 will calculate the spatially variable WRF and apply a T line to any totally blocked cell.
+-  ARF = 0 will ignore the ARF calculation.
+-  ARF = 1 will calculate the ARF calculation.
+-  WRF = 0 will ignore the spatially variable WRF but apply a T line to any totally blocked cell.
+-  WRF = 1 will calculate the spatially variable WRF and apply a T line to any totally blocked cell.
 
 2. Click the Evaluate Reduction Factors (ARF and WRF) icon.
 
@@ -125,15 +117,31 @@ The Buildings.shp shapefile needs 3 Attributes.
 .. image:: ../img/Workshop/Worksh119.png
 
 
+5. The new layers show ARFs and Blocked Areas Polygons.
+
+.. image:: ../img/Workshop/Worksh119a.png
+
+
 Step 3: Assign walls
 ____________________
 
-1. Drag the file Walls.shp into the map space.
+.. note:: The video at the top of this tutorial shows how to add, delete, or modify wall polylines.
+
+
+1. Clean the map.  Uncheck Buildings (user layer) and ARF/WRF (schema layer).  This will improve map loading speed.
+
+2. Click Boundary Condition Points in the User Layer group.  Drag the file Walls.shp into the map space.
 
 .. image:: ../img/Workshop/Worksh120.png
 
 
-2. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Add Walls to User Levee Lines button.
+3. If the walls are hard to see, make an adjustment to the symbology properties.  Double click Walls layer to open the
+   properties window.
+
+.. image:: ../img/Workshop/Worksh120a.png
+
+
+4. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Add Walls to User Levee Lines button.
 
 .. image:: ../img/Workshop/Worksh121.png
 
@@ -141,14 +149,14 @@ ____________________
 .. image:: ../img/Workshop/Worksh122.png
 
 
-3. Set the wall elevation and failure fields and click Add Walls to User Levee Lines.
+5. Set the wall elevation and failure fields and click Add Walls to User Levee Lines.
 
-4. Uncheck Levee Failure
+6. Check Levee Failure
 
 .. image:: ../img/Workshop/Worksh123.png
 
 
-5. The levees were added to the user layer.
+7. The levees were added to the user layer.
    Click OK.
 
 .. image:: ../img/Workshop/Worksh124.png
@@ -156,33 +164,36 @@ ____________________
 
 .. note:: If an error message was displayed, Move the Walls Layer to the User Layer Group.
 
-6. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Create Schematic Layers from User Levees button.
+
+8. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Create Schematic Layers from User Levees button.
 
 .. image:: ../img/Workshop/Worksh125.png
 
 
-7. In this case, only levee lines are used.
+9. In this case, only levee lines are used.
    Uncheck elevation polygons if it is checked.
 
 .. image:: ../img/Workshop/Worksh126.png
 
 
-8. Duplicate levees were identified.
-   Remove them by clicking Yes.
+10. Duplicate levees were identified.
+    Remove them by clicking Yes.
 
 .. image:: ../img/Workshop/Worksh127.png
 
 
-9. Once the process is complete, the following image will appear.
-   Click OK to close it.
+11. Once the process is complete, the following image will appear.  Click OK to close it.
 
 .. image:: ../img/Workshop/Worksh128.png
 
 
+12.  The FLO-2D walls are shown by the red cutoff marks.  Visually inspecting them can help QC the data.
+
+.. image:: ../img/Workshop/Worksh128a.png
+
+
 Step 4: Export the project
 __________________________
-
-The files that connect inlets and outfalls with the FLO-2D surface layer are created when the GDS Data Files are exported.
 
 1. Click the Set Control Parameters icon and enter the data in the FLO-2D Toolbar.
    The following dialog will be displayed, make sure the Area Reduction Factors and Levees component switches are selected.
@@ -196,8 +207,6 @@ The files that connect inlets and outfalls with the FLO-2D surface layer are cre
 
 
 3. This is a good point to save the project.
-   Refer to Steps 9 in Lesson
-   1.
 
 .. image:: ../img/Workshop/Worksh083.png
 
@@ -211,11 +220,8 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh163.png
 
-All GDS Data files will be created in the selected project
-folder, including ARF.DAT and LEVEE.DAT files.
 
-The swmm.inp file was not exported.
-Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
+5. Complete the export by saving the swmm.inp file and clicking through all the remaining messages.
 
 .. image:: ../img/Workshop/Worksh130.png
 

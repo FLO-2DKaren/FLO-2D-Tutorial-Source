@@ -7,7 +7,6 @@ In this tutorial, an erosion dam breach with failure is created.
 In this instance, the reservoir is filled but the pre-reservoir elevation is known.
 
 Required Data
---------------
 
 The required data is in Module 6.
 
@@ -20,7 +19,7 @@ The required data is in Module 6.
 ======== =================
 
 Step 1: Load the project
-------------------------
+_______________________________________
 
 1. We are finished with the previous project.
    Save and close it.
@@ -34,12 +33,14 @@ Step 1: Load the project
 
 .. image:: ../img/Advanced-Workshop/Module222.png
 
+
 5. Click Yes to load the model.
 
 .. image:: ../img/Advanced-Workshop/Module223.png
 
+
 Step 2: Initial conditions reservoir
-------------------------------------
+_______________________________________
 
 1. An initial condition is set to fill the reservoir when FLO-2D PRO.exe initiates the simulation.
 
@@ -53,10 +54,12 @@ Step 2: Initial conditions reservoir
 
 .. image:: ../img/Advanced-Workshop/Module224.png
 
+
 6. Place a reservoir node anywhere within the reservoir area and fill the form.
    Click ok to close the data.
 
 .. image:: ../img/Advanced-Workshop/Module225.png
+
 
 7. Click the Save button and the Schematize button on the widget.
 
@@ -64,8 +67,9 @@ Step 2: Initial conditions reservoir
 
 .. image:: ../img/Advanced-Workshop/Module226.png
 
+
 Step 3: Review dam geometry
----------------------------
+_______________________________________
 
 Crest width = 32 ft
 
@@ -77,10 +81,12 @@ Core slope = 0.5
 
 .. image:: ../img/Advanced-Workshop/Module227.png
 
+
 .. image:: ../img/Advanced-Workshop/Module228.png
 
+
 Step 4. Review dam material
----------------------------
+_______________________________________
 
 Each variable is discussed in the Data Input Manual BREACH.DAT tab.
 This data may be available from the original dam construction manual or from periodical safety reports.
@@ -111,7 +117,7 @@ Value Variable    Description
 ===== =========== ==========================================
 
 Step 5. Review general breach parameters
-----------------------------------------
+__________________________________________
 
 Each variable is discussed in the Data Input Manual BREACH.DAT tab.
 
@@ -129,12 +135,13 @@ Value Variable    Description
 ===== =========== =========================================================
 
 Step 6. Create the breach point
--------------------------------
+_______________________________________
 
 1. Identify a good breach location.
    Choose any desired location.
 
 .. image:: ../img/Advanced-Workshop/Module229.png
+
 
 2. Select a breach location. This location can represent a
    weak point on a dam.
@@ -149,6 +156,8 @@ Step 6. Create the breach point
 
    - Ends points
 
+   - Piezometer measurements
+
 3. Location is not always important.
    For large reservoirs flooding is a function of the volume not breach parameters.
 
@@ -158,6 +167,7 @@ Step 6. Create the breach point
 
 .. image:: ../img/Advanced-Workshop/Module230.png
 
+
 6.  Click collapse FLO-2D widgets button.
 
 7.  Click the Levees and Breach Editor widget.
@@ -165,6 +175,7 @@ Step 6. Create the breach point
 8.  Click the create a breach point button.
 
 .. image:: ../img/Advanced-Workshop/number8.png
+
 
 9.  Click the map where the breach should go and fill the table.
 
@@ -176,38 +187,46 @@ Step 6. Create the breach point
 
 .. image:: ../img/Advanced-Workshop/number12.png
 
+
 13. Not working? Click Revert Breach Edits button and try again.
 
 .. image:: ../img/Advanced-Workshop/Module231.png
+
 
 14. Complete the breach data in the widget.
 
 .. image:: ../img/Advanced-Workshop/Module232.png
 
+
 Step 7. Export and run the model
---------------------------------
+_______________________________________
 
 1. Export the FLO-2D Data files.
    Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module123.png
 
+
 .. image:: ../img/Advanced-Workshop/Module233.png
+
 
 2. Select the Module 6 Export folder.
 
 .. image:: ../img/Advanced-Workshop/Module234.png
 
+
 3. The data is ready to run.
 
 .. image:: ../img/Advanced-Workshop/Module235.png
+
 
 4. Correct the paths and click OK to start the simulation.
 
 .. image:: ../img/Advanced-Workshop/Module236.png
 
+
 Step 8. Review the data
------------------------
+_______________________________________
 
 1. These are the 3 data files that were created.
 

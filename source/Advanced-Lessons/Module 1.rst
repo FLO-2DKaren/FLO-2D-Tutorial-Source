@@ -2,12 +2,12 @@ Project Recovery and Debug
 ===========================
 .. youtube:: lhDwp3cDrOc
 
+
 **Overview**
 
 This module will outline how to build a recovery point and debug a FLO-2D Data Set.
 
 Required Data
--------------
 
 The required data is in Module 1.
 
@@ -30,6 +30,7 @@ these steps are already well understood.**
 
 .. image:: ../img/Advanced-Workshop/Module002.png
 
+
 2. Name the zipped file.
    It is good to choose a name that identifies project progress.
    For Example: Lesson 1 n-value OK.zip.
@@ -44,13 +45,16 @@ Step 2: Recover a project
 
 .. image:: ../img/Advanced-Workshop/Module003.png
 
+
 3. Extract the recovery files.
 
 .. image:: ../img/Advanced-Workshop/image4.png
 
+
 4. Change the name of the path so the file can be extracted directly to the Module 1 folder.
 
 .. image:: ../img/Advanced-Workshop/Module005.png
+
 
 Step 3: Open the project
 ------------------------
@@ -59,16 +63,19 @@ Step 3: Open the project
 
 .. image:: ../img/Advanced-Workshop/Module006.png
 
+
 2. Remove unavailable layers if necessary.
    Autofind and browse works well to resolve paths.
    This step depends on where the data is located and may not show up for all users.
 
 .. image:: ../img/Advanced-Workshop/Module007.png
 
+
 3. Click Yes to load the plugin.
    In this case the project path changed but FLO-2D helps find it.
 
 .. image:: ../img/Advanced-Workshop/Module008.png
+
 
 This is the complete project, but some layers are turned off.
 
@@ -82,6 +89,7 @@ This is the complete project, but some layers are turned off.
 
 .. image:: ../img/Advanced-Workshop/Module009.png
 
+
 Step 4: Export the FLO-2D data
 ------------------------------
 
@@ -89,10 +97,12 @@ Step 4: Export the FLO-2D data
 
 .. image:: ../img/Advanced-Workshop/Module010.png
 
+
 .. image:: ../img/Advanced-Workshop/Module011.png
 
-**Important note:  If the image above does not look like the window on your screen, you may be accessing the
-“Lesson 1.gpkg” in the Self-Help training packages.   Delete the file in QGIS Lesson 1 Folder and return to Step 3.**
+.. note::  If the image above does not look like the window on your screen, you may be accessing the
+           “Lesson 1.gpkg” in the Self-Help training packages.   Delete the file in QGIS Lesson 1
+           Folder and return to Step 3.
 
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\QGIS Lesson 1\\Lesson 1.gpkg
@@ -102,9 +112,11 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Advanced-Workshop/Module012.png
 
+
 3. Close the message.
 
 .. image:: ../img/Advanced-Workshop/Module013.png
+
 
 4. Go to the Storm Drain Widget and Export the swmm.inp file.
 
@@ -116,38 +128,47 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Advanced-Workshop/Module014.png
 
+
 8. Name the file swmm.inp and click Save.
 
 .. image:: ../img/Advanced-Workshop/Module015.png
 
+
 9. Click OK to close both windows.
 
 .. image:: ../img/Advanced-Workshop/Module016.png
+
 
 Step 5: Run the debug engine
 ----------------------------
 
 .. youtube:: oydBNu4U3uI
 
+
 1. Click the Run FLO-2D button.
 
 .. image:: ../img/Advanced-Workshop/Module017.png
+
 
 2. Correct the FLO-2D path click the Debug Run button.
 
 .. image:: ../img/Advanced-Workshop/Module018.png
 
+
 3. Click OK.
 
 .. image:: ../img/Advanced-Workshop/Module019.png
+
 
 4. The debug run is complete when FLO-2D windows close.
 
 .. image:: ../img/Advanced-Workshop/Module020.png
 
+
 5. Click Cancel to close the Run FLO-2D form.
 
 .. image:: ../img/Advanced-Workshop/Module021.png
+
 
 Step 6: Debug the project in QGIS
 ---------------------------------
@@ -156,9 +177,11 @@ Step 6: Debug the project in QGIS
 
 .. image:: ../img/Advanced-Workshop/Module022.png
 
+
 2. Select Debug and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module023.png
+
 
 3. Navigate to the project folder.
 
@@ -166,9 +189,11 @@ Step 6: Debug the project in QGIS
 
 .. image:: ../img/Advanced-Workshop/Module024.png
 
+
 5. Click Yes to load the extra debug files.
 
 .. image:: ../img/Advanced-Workshop/Module025.png
+
 
 6. Test the filtering and navigation tools on this form.
 
@@ -188,15 +213,18 @@ Step 7: Load the conflict table
 
 .. image:: ../img/Advanced-Workshop/Module022.png
 
+
 2. Select Current project and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module027.png
+
 
 3. Select Storm Drain Inlets to see how the form filters the data.
 
 4. Click the close button upon reaching Zen.
 
 .. image:: ../img/Advanced-Workshop/Module028.png
+
 
 Step 8: Load the levee table
 ----------------------------
@@ -205,13 +233,16 @@ Step 8: Load the levee table
 
 .. image:: ../img/Advanced-Workshop/Module022.png
 
+
 2. Select Levee crests and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module026.png
 
+
 3. Click Close to close the form. This one is not so useful.
 
 .. image:: ../img/Advanced-Workshop/Module029.png
+
 
 4. Right click the Levee Crests layer and click Open Attribute table.
 
@@ -220,3 +251,4 @@ Step 8: Load the levee table
 6. Close the form when if true mastery was achieved.
 
 .. image:: ../img/Advanced-Workshop/Module030.png
+

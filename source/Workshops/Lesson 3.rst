@@ -7,7 +7,7 @@ ________
 This lesson will outline the process to create a storm drain network for FLO-2D.  This is the quick version.  It is
 better for learning QGIS and FLO-2D Plugin operations.  For advanced storm drain modeling, see the Advanced Lessons.
 
-.. youtube:: x-SlOV4-bHI
+.. youtube:: SArfBrC0U9A
 
 Required Data
 _____________
@@ -71,13 +71,16 @@ ______________________________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
+
 1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
 .. image:: ../img/Workshop/Worksh028.png
 
+
 2. Click Yes to load the plugin.
 
 .. image:: ../img/Workshop/Worksh029.png
+
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
 
@@ -85,9 +88,11 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh056.png
 
+
 4. Organize the map layers to facilitate the next steps.  Uncheck Channel User Layers and any unused Project Data Layers.
 
 .. image:: ../img/Workshop/Worksh189.png
+
 
 .. warning:: The next step may require extra data and a plugin update.  If you would like to try the lesson with pumps,
              download the new data and update the plugin with this link:
@@ -109,6 +114,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh093.png
 
+
 The shapefiles info:
 
 -  **Lesson3InletsJunctions.shp** is a point shapefile that contains the Inlets and Junctions.
@@ -126,6 +132,7 @@ The shapefiles info:
 
 .. image:: ../img/Workshop/Worksh094.png
 
+
 The following data must be available in the shapefile to create the **SWMM.INP** files and the associated storm drain
 data files: **SWMMFLO.DAT**, **SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
 
@@ -133,11 +140,15 @@ data files: **SWMMFLO.DAT**, **SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
 
 .. image:: ../img/Advanced-Workshop/conduits.png
 
+
 .. image:: ../img/Advanced-Workshop/inlets.png
+
 
 .. image:: ../img/Advanced-Workshop/outfalls.png
 
+
 .. image:: ../img/Advanced-Workshop/pumps.png
+
 
 Step 3: Select storm drain fields from the shapefiles
 _____________________________________________________
@@ -156,6 +167,7 @@ _____________________________________________________
 
 
 .. image:: ../img/Workshop/Worksh098.png
+
 
 .. note:: If the project does not have pumps, click *Unselect all Pump Fields* and then click *Assign Selected Fields*.
 
@@ -203,6 +215,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh103.png
 
+
 4. No error was reported.  If an error was detected because one Type 4 inlet didn't match a selected text file, it would be reported to this file:
 
 .. image:: ../img/Workshop/Worksh103a.png
@@ -212,6 +225,7 @@ Step 6: Set up the pump data
 ____________________________
 
 .. note:: Not using pumps? Skip this step.
+
 
 1. Click the Add pump curve button.
 
@@ -223,13 +237,16 @@ ____________________________
 
 .. image:: ../img/Workshop/Worksh101a.png
 
+
 5. Apply a rating table.
 
 .. image:: ../img/Workshop/Worksh101b.png
 
+
 6. Pump instructions can be found in the EPA SWMM 5.0 Help Document
 
 .. image:: ../img/Workshop/Worksh101c.png
+
 
 C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\EPA SWMM 5.0\\EPA SWMM 5.0 Help
 
@@ -282,6 +299,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 5. Click OK to export the main project data files.
 
 .. image:: ../img/Workshop/Worksh021b.png
+
 
 6. Save the swmm.inp file with the next dialog.  Make sure the path is still Lesson 3 Export.
 

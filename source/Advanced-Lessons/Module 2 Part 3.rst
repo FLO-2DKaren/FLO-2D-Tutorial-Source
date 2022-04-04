@@ -6,7 +6,6 @@ Bridge Hydraulic Structure
 In this tutorial, the bridge variables are added to a hydraulic structure.
 
 Required Data
--------------
 
 The required data is in Module 2 Bridge Tutorial.
 This is a new project.
@@ -40,7 +39,7 @@ Jimmy S. O'Brien
 See Tutorial Folder
 
 Step 1: Load the project
-------------------------
+________________________
 
 1. Start with the project from Module 2 Bridge Tutorial
 
@@ -52,7 +51,7 @@ Step 1: Load the project
 .. image:: ../img/Advanced-Workshop/Module078.png
 
 Step 2: Define the bridge variables and coefficients
-----------------------------------------------------
+_____________________________________________________
 
 Bridge variables and coefficients are defined by the USGS method for calculating discharge through a bridge.
 Hamill defines this approach in his book on bridge hydraulics (1999).
@@ -63,7 +62,7 @@ This bridge in Simi Valley, CA crosses Arroyo Simi at Tapo St.
 It appears to have vertical embankments and abutments.
 
 Plan view parameters
-____________________
+---------------------
 
 .. image:: ../img/Advanced-Workshop/Module079.png
 
@@ -76,7 +75,7 @@ w = 5 ft measured from QGIS map
 L\ :sub:`1-2` = 177 ft measured from QGIS map
 
 Profile parameters
-__________________
+------------------
 
 .. image:: ../img/Advanced-Workshop/Module080.png
 
@@ -93,7 +92,7 @@ Average bridge deck elevation = 953.4 ft
 Deck weir length = 114 ft
 
 Bridge opening ratio
-____________________
+--------------------
 
 1. Calculate M = q/Q = 0.83 = Discharge through bridge opening/pre-structure discharge)
 
@@ -103,10 +102,12 @@ Q = 10325 cfs at normal depth 8.06
 
 .. image:: ../img/Advanced-Workshop/Module081.png
 
+
 .. image:: ../img/Advanced-Workshop/Module082.png
 
+
 Bridge tables
-_____________
+-------------
 
 This bridge is a Type I: Vertical embankments and abutments.
 
@@ -128,17 +129,19 @@ No submergence at 100 yr discharge.
 
 .. image:: ../img/Advanced-Workshop/Module083.jpg
 
+
 Type 1 Bridge Opening (from Hamill, 1999; p.
 111, Figure 4.3)
 
 .. image:: ../img/Advanced-Workshop/Module084.jpg
+
 
 Type 1 Bridge Opening cont.
 (from Hamill, 1999; p.
 112, Figure 4.3)
 
 Bridge variables dialog
-_______________________
+-----------------------
 
 1. Fill the table from the preceding instructions.
 
@@ -151,14 +154,16 @@ _______________________
 .. image:: ../img/Advanced-Workshop/Module086.png
 
 Step 3: Build the cross section data
-------------------------------------
+_____________________________________
 
 .. image:: ../img/Advanced-Workshop/Module087.png
+
 
 1. The cross section data for L\ :sub:`1-2` is taken from the cross section table of Cross-Section-60 and the Bridge cross section estimated based
    on the geometry of the bridge.
 
 .. image:: ../img/Advanced-Workshop/step3.png
+
 
 ====== ====== ======
 X      6657
@@ -209,26 +214,33 @@ X      6657
 
 .. image:: ../img/Advanced-Workshop/Module088.png
 
-Step 4: Save, export and run.
------------------------------
+
+Step 4: Save, export and run
+_____________________________
 
 1. This is a good point to save project.
 
 .. image:: ../img/Advanced-Workshop/Module046.png
 
+
 2. Export the data files to the Project Folder in Module 2\Bridge Tutorial\Bridge Tutorial Export.
 
 .. image:: ../img/Advanced-Workshop/Module089.png
 
+
 .. image:: ../img/Advanced-Workshop/Module090.png
+
 
 .. image:: ../img/Advanced-Workshop/Module091.png
 
+
 .. image:: ../img/Advanced-Workshop/Module092.png
+
 
 3. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
+
 
 4. Correct the paths and click OK to start the simulation.
 

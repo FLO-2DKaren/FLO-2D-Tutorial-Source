@@ -14,6 +14,7 @@ This video shows the full process of this tutorial.
 
 .. youtube:: 74a07-wH3Gw
 
+
 Required Data
 _____________
 
@@ -436,7 +437,7 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 
 4. Click OK.
 
-.. image:: ../img/Workshop/Worksh090.png.
+.. image:: ../img/Workshop/Worksh090.png
 
 
 5. If the run still has errors, repeat Step 8.  If the run starts, let it run.
