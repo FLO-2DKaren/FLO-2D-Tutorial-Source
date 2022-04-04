@@ -2,7 +2,6 @@ Storm Drain Setup
 =================
 
 Required Data
---------------
 
 ================== ==========================
 **File**           **Content**
@@ -18,7 +17,7 @@ Data Location:  \\Coastal Training\\Project Data\\Storm Drain
 .. youtube:: Jc8zF4Sn3IM
 
 Step 1: Select components from shapefile
-----------------------------------------
+__________________________________________
 
 1. Collapse the widgets, select the Storm Drain Editor.
 
@@ -44,7 +43,7 @@ Step 1: Select components from shapefile
 .. image:: ../img/Coastal/sd011.png
 
 Step 2: Calculate the conduit node connections
-----------------------------------------------
+_______________________________________________
 
 1. Click the Auto-assign conduits nodes button.
    This step will fill the upstream and downstream node connections between conduits.
@@ -58,7 +57,7 @@ Step 2: Calculate the conduit node connections
 .. image:: ../img/Coastal/sd012.png
 
 Step 3: Import rating tables
-----------------------------
+____________________________
 
 1. Click the Import Rating Table button
 
@@ -75,7 +74,7 @@ Data Location: \\Coastal Training\\Project Data\\Storm drain\\Type 4 Rating Tabl
 .. image:: ../img/Coastal/sd016.png
 
 Step 4: Schematize storm drain components
------------------------------------------
+___________________________________________
 
 1. Click on Schematize Storm Drain Components in the Storm Drain Editor widget.
 
@@ -98,7 +97,7 @@ Step 4: Schematize storm drain components
 .. image:: ../img/Coastal/sd020.png
 
 Step 5: Export SWMM.INP file
-----------------------------
+____________________________
 
 1. Click on Export SWMM.INP button in the Storm Drain Editor widget.
 
@@ -131,7 +130,7 @@ Step 5: Export SWMM.INP file
 .. image:: ../img/Coastal/sd023.png
 
 Step 6: Export the project
---------------------------
+____________________________
 
 1. Export the rest of the FLO-2D data files including the new storm drain files.
 
@@ -144,7 +143,7 @@ Step 6: Export the project
 .. image:: ../img/Coastal/sd026.png
 
 Step 7: Run the simulation
-----------------------------
+____________________________
 
 1. Click the Run FLO-2D Icon.
 
@@ -166,7 +165,7 @@ Data Location: \\Coastal Training\\Project Runs\\Storm Drain Test
 .. image:: ../img/Coastal/chan053.png
 
 Step 8: Create a backup file
------------------------------
+____________________________
 
 1. Close QGIS.
 

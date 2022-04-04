@@ -68,11 +68,13 @@ _________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
+
 1. Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
 
 2. Click the New Project icon to load a new map.
 
 .. image:: ../img/Workshop/Worksh003.png
+
 
 Step 2: Import the project domain
 _________________________________
@@ -94,12 +96,14 @@ _________________________________
 
 .. image:: ../img/Workshop/Worksh005.png
 
+
 1. Click the Set-up icon fill out the dialog box as shown below.
    Set the Grid cell size to 30 ft.
 
 2. Click Create.
 
 .. image:: ../img/Workshop/Worksh006.png
+
 
 3. Save the geopackage file to the project folder.
 
@@ -119,6 +123,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh180.png
 
+
 Step 4: Create the grid
 _______________________
 
@@ -133,6 +138,7 @@ _______________________
           In order to align the grid to a raster, load the raster file into the dialog box.
 
 .. image:: ../img/Workshop/Worksh009.png
+
 
 3. Click OK to close.
    The grid is complete.
@@ -178,6 +184,7 @@ https://gdal.org/programs/gdalwarp.html
 
 .. image:: ../img/Workshop/Worksh153.png
 
+
 Step 7: Assign Roughness data
 _____________________________
 
@@ -197,6 +204,7 @@ _____________________________
 
 .. image:: ../img/Workshop/Worksh155.png
 .. image:: ../img/Workshop/Worksh156.png
+
 
 4. The roughness values and elevations are assigned to the grid layer in the Schematized Layers group.  Right click the
    Grid layer and click Open Attribute Table to see the data.
@@ -242,9 +250,11 @@ _____________________________________
 
 .. image:: ../img/Workshop/Worksh021.png
 
+
 2. Uncheck Rain and Click OK
 
 .. image:: ../img/Workshop/Worksh170.png
+
 
 3. Navigate to the project folder and click Select Folder.
 
@@ -253,6 +263,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 4.  Once the project is exported click OK to close the export message.
 
 .. image:: ../img/Workshop/Worksh171.png
+
 
 Step 11: Run the simulation
 ___________________________

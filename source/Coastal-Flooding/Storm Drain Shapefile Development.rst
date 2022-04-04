@@ -6,7 +6,6 @@ Storm Drain - Shapefile Development
 This lesson will outline how to construct a storm drain network that is ready for FLO-2D Plugin to process.
 
 Required Data
---------------
 
 ================== ==========================
 **File**           **Content**
@@ -21,7 +20,7 @@ Data Location:  \\Coastal Training\\Project Data\\Storm Drain
 .. youtube:: 9bmYrG-x1Mg
 
 Step 1: Import shapefiles for storm drain features
---------------------------------------------------
+________________________________________________________
 
 1. Select the Boundary Condition Points Layer in the User Layer Group.
 
@@ -48,7 +47,7 @@ Step 1: Import shapefiles for storm drain features
 .. image:: ../img/Advanced-Workshop/outfalls.png
 
 Step 2. Add missing columns to shapefiles
------------------------------------------
+__________________________________________
 
 1. Open the attributes for any storm drain shapefile.
 
@@ -70,3 +69,4 @@ Step 2. Add missing columns to shapefiles
    It’s OK to leave them blank because they won’t be used in the next module.
 
 .. youtube:: 6qKJzeUFuCg
+

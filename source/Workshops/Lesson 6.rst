@@ -11,6 +11,7 @@ This video shows the full process of this tutorial.
 
 .. youtube:: H02oR4bySw4
 
+
 Required Data
 _____________
 
@@ -89,6 +90,7 @@ ____________________
 
 .. note:: If the image is blurry, use Firefox or open the image in a new tab.
 
+
 .. image:: ../img/Workshop/Worksh139.png
 
 
@@ -99,10 +101,12 @@ ______________________________
 
 .. image:: ../img/Advanced-Workshop/Module033.png
 
+
 2. Select structure 130, and 131 and click Zoom map to selected rows button.
    This will zoom the map to these two structures.
 
 .. image:: ../img/Advanced-Workshop/Module034.png
+
 
 **Label the Hydraulic Structures layer.**
 
@@ -113,6 +117,7 @@ ______________________________
 5. This shows which culvert is being reviewed.
 
 .. image:: ../img/Advanced-Workshop/Module035.png
+
 
 **Change the layer Symbology**
 
@@ -125,6 +130,7 @@ ______________________________
 9. This shows the flow direction of each structure.
 
 .. image:: ../img/Advanced-Workshop/Module036.png
+
 
 Step 4: Build the culverts into the User Layers Structure Lines
 ________________________________________________________________
@@ -207,8 +213,10 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 Step 7: Schematize the data
 ___________________________
 
-Schematize the structure data
-.. image:: ../img/Workshop/Worksh165.png and click Yes to replace the data.
+Schematize the structure data and click Yes to replace the data.
+
+.. image:: ../img/Workshop/Worksh165.png
+
 
 .. image:: ../img/Workshop/Worksh150.png
 
@@ -226,13 +234,15 @@ _______________________
 
 2. Export the data files to the Project Folder in QGIS Lesson 6 Export.
 
-   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 6\\Lesson 6 Export
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 6\\Lesson 6 Export
 
 3. All GDS data files will be created in the selected project folder.
 
 .. image:: ../img/Workshop/Worksh167.png
 
+
 .. image:: ../img/Workshop/Worksh168.png
+
 
 4. The swmm.inp file was not exported.
    Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
@@ -245,8 +255,10 @@ ___________________________
 
 .. image:: ../img/Workshop/Worksh0052.png
 
+
 1. Click the Run FLO-2D Icon.
 
 2. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
 .. image:: ../img/Workshop/Worksh152.png
+

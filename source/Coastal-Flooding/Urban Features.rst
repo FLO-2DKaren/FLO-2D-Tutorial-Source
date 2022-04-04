@@ -2,7 +2,6 @@ Urban Features
 ==============
 
 Required Data
--------------
 
 ============= =====================
 **File**      **Content**
@@ -15,7 +14,7 @@ Data Location: \\Coastal Training\\Project Data\\Buildings
 .. youtube:: ef-xygMwiSs
 
 Step 1: Load buildings
------------------------
+_______________________
 
 1. Click the Project Data Group.
 
@@ -32,7 +31,7 @@ The Building shapefile requires 3 Attributes.
 -  WRF field; 0 = no width reduction, 1 = assign width reduction
 
 Step 2: Prepare the map
------------------------
+____________________________
 
 1. Uncheck the Grid layer.
 
@@ -43,7 +42,7 @@ Step 2: Prepare the map
 4. Uncheck the Outfalls, Inlet Junctions, and Conduits in the User Layers group.
 
 Step 3: Digitize in empty missing polygons
--------------------------------------------
+____________________________________________
 
 1. Click the Building Polygon layer.
 
@@ -114,7 +113,7 @@ Step 3: Digitize in empty missing polygons
 .. image:: ../img/Coastal/bldg012.png
 
 Step 3: Assign buildings
-------------------------
+____________________________
 
 1. Collapse the widgets and select the Grid Tools.
 

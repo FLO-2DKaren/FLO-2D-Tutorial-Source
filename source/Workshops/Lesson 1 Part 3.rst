@@ -47,7 +47,7 @@ Project location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 Check these folders to ensure the data is available before starting the lesson.
 
 Step-by-Step Procedure
-----------------------
+______________________
 
 To setup a FLO-2D flood simulation use these steps.
 
@@ -70,6 +70,7 @@ ___________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
+
 Step 2: Load Lesson 1
 _____________________
 
@@ -82,9 +83,11 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh157.png
 
+
 .. note:: If the following image is fuzzy.  Switch to Firefox or load the image in a new tab.
 
 .. image:: ../img/Workshop/Worksh158.png
+
 
 3. Click Yes to load the model.
 
@@ -129,6 +132,7 @@ ___________________________
 
 .. image:: ../img/Workshop/Worksh183.png
 
+
 5. Updated the BC name and the Time series name.
 
 .. image:: ../img/Workshop/Worksh036.png
@@ -167,6 +171,7 @@ _______________________________
 
 .. image:: ../img/Workshop/Worksh181.png
 
+
 2. Check Simulate rainfall and add 3.74 inches to the total inflow box.  Check the Building Rain box.
 
 3. Click the Import icon and load the data file from QGIS Lesson 1 or from the Rainfall Distribution Folder.
@@ -176,13 +181,17 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions\\
 
 .. image:: ../img/Workshop/Worksh043.png
 
+
 .. image:: ../img/Workshop/Worksh160.png
 
+
 .. image:: ../img/Workshop/Worksh159.png
+
 
 4. The rainfall data is imported into the FLO-2D Table Editor.
 
 .. image:: ../img/Workshop/Worksh161.png
+
 
 .. note:: This assigns uniform rainfall to every grid element.  The rainfall is added to the grid as a depth over time.
           The depth is interpolated linearly for every timestep that falls between data points in the Rainfall time
@@ -200,24 +209,29 @@ ___________________________________
 
 .. image:: ../img/Workshop/Worksh184.png
 
+
 2. Import the NOAA Atlas rainfall map.
    Open the project folder and drag the NOAA Atlas 14 24hr 100yr.tif file onto the map space.
 
 .. image:: ../img/Workshop/Worksh042.png
 
+
 3. To perform the depth area reduction calculation, use the Area Reduction calculator.
 
 .. image:: ../img/Workshop/Worksh044.png
 
+
 4. Click the Area Reduction icon.
 
 .. image:: ../img/Workshop/Worksh162.png
+
 
 5. The raster pixels are typically 1000 by 1000 ft or larger.
    It is not necessary to average the data.
    Fill the dialog box as shown below and click OK to calculate and OK to confirm the data was written to file.
 
 .. image:: ../img/Workshop/Worksh045.png
+
 
 Step 7: Assign infiltration
 ___________________________
@@ -230,11 +244,13 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh046.png
 
+
 2. Drag the file Soil.shp onto the map space.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\Soil.shp
 
 .. image:: ../img/Workshop/Worksh047.png
+
 
 3. From the Infiltration Editor click the Global Infiltration icon.
 
@@ -291,9 +307,11 @@ ______________________________________
 
 .. image:: ../img/Workshop/Worksh021.png
 
+
 2. Review the image and Click OK
 
 .. image:: ../img/Workshop/Worksh172.png
+
 
 3. Navigate to the project folder and click Select Folder.
 
@@ -303,12 +321,14 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 .. image:: ../img/Workshop/Worksh173.png
 
+
 Step 11: Run the simulation
 ___________________________
 
 1. Click on the Run FLO-2D icon.
 
 .. image:: ../img/Workshop/Worksh0052.png
+
 
 2. Set the FLO-2D Pro folder.
    C:\program files (x86)\flo-2d pro

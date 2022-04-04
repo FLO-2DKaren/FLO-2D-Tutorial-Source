@@ -8,7 +8,6 @@ This lesson needs a channel so please use the data from QGIS Lesson 2, 3, or 4 t
 Finish Lesson 2 before performing the following steps.
 
 Required Data
--------------
 
 The required data is in Module 1 and 2.
 
@@ -36,6 +35,7 @@ _________________________
 
 .. image:: ../img/Advanced-Workshop/Module031.png
 
+
 Step 2: Import data
 ____________________
 
@@ -53,7 +53,9 @@ Start by cleaning up the map space so the next layer will be easy to see.
 
 .. note:: If the image is blurry, use Firefox or open the image in a new tab.
 
+
 .. image:: ../img/Advanced-Workshop/Module032.png
+
 
 Step 3: Format the data layers
 ______________________________
@@ -62,10 +64,12 @@ ______________________________
 
 .. image:: ../img/Advanced-Workshop/Module033.png
 
+
 2. Select structure 130, and 131 and click Zoom map to selected rows button.
    This will zoom the map to these two structures.
 
 .. image:: ../img/Advanced-Workshop/Module034.png
+
 
 **Label the Hydraulic Structures layer.**
 
@@ -76,6 +80,7 @@ ______________________________
 5. This shows which culvert is being reviewed.
 
 .. image:: ../img/Advanced-Workshop/Module035.png
+
 
 **Change the layer Symbology**
 
@@ -89,6 +94,7 @@ ______________________________
 
 .. image:: ../img/Advanced-Workshop/Module036.png
 
+
 Step 4: Build the culverts into the User Layers Structure Lines
 ________________________________________________________________
 
@@ -99,6 +105,7 @@ ________________________________________________________________
 3. Click the Save icon to confirm complete digitizing.
 
 .. image:: ../img/Advanced-Workshop/Module037.png
+
 
 **Digitizing process:**
 
@@ -111,6 +118,7 @@ ________________________________________________________________
   - Click OK to finish the feature.
 
 .. image:: ../img/Advanced-Workshop/Module038.png
+
 
 Step 5: Assign the structure attributes
 _______________________________________
@@ -137,6 +145,7 @@ _______________________________________
 
 .. image:: ../img/Advanced-Workshop/Module041.png
 
+
 Step 6: Assign the rating tables
 _________________________________
 
@@ -144,25 +153,30 @@ _________________________________
 
 .. image:: ../img/Advanced-Workshop/Module042.png
 
+
 7. Select the rating tables from the project folder.
 
 8. Click open.
 
 .. image:: ../img/Advanced-Workshop/Module043.png
 
+
 9. The data has been imported.
    If the table is not updated, switch to a different structure in the widget.
 
 .. image:: ../img/Advanced-Workshop/Module044.png
+
 
 Step 7: Schematize the data
 ____________________________
 
 .. image:: ../img/Advanced-Workshop/Module041.png
 
+
 1. Schematize the structure data and click Yes to replace the data.
 
 .. image:: ../img/Advanced-Workshop/Module045.png
+
 
 Step 8: Save, export, and run
 ______________________________
@@ -172,24 +186,31 @@ ______________________________
 
 .. image:: ../img/Advanced-Workshop/Module046.png
 
+
 2. Export the data files to the Project Folder in QGIS Lesson 6 Export.
 
 .. image:: ../img/Advanced-Workshop/Module047.png
+
 
 3. All GDS data files will be created in the selected project folder.
 
 .. image:: ../img/Advanced-Workshop/Module048.png
 
+
 .. image:: ../img/Advanced-Workshop/Module049.png
+
 
 4. The swmm.inp file was not exported. Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.
 
 .. image:: ../img/Advanced-Workshop/Module050.png
 
+
 5. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
 
+
 6. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
 .. image:: ../img/Advanced-Workshop/Module052.png
+

@@ -2,7 +2,6 @@ Review Results
 ==============
 
 Required Data
---------------
 
 ================== ============================
 **File**           **Content**
@@ -16,10 +15,8 @@ maxplot.exe        Simple mapping tool
 
 Data Location:  \\Coastal Training\\Project Data\\Project Export Folder
 
-.. youtube::
-
 Step 1. Error logging files
-----------------------------
+____________________________
 
 These files are reviewed in NotePad or QGIS.  They log errors, warnings, and general data
 for every simulation. The files are located i the Project Export Folder.
@@ -31,7 +28,7 @@ for every simulation. The files are located i the Project Export Folder.
 - DEBUG_datetime.OUT
 
 Step 2. General review files
-----------------------------
+____________________________
 
 The general review files give information about the overall grade of a simulation.
 
@@ -51,7 +48,7 @@ The general review files give information about the overall grade of a simulatio
   indicate instability.
 
 Step 3. Channel review files
-----------------------------
+____________________________
 
 - CHANMAX.OUT: List of maximum channel cross section hydraulics. It is easy to scan this list for
   discharge values that are out of range.
@@ -67,7 +64,7 @@ Step 3. Channel review files
   has a volume error, it will be listed in the last column.
 
 Step 4. Structure review files
-------------------------------
+________________________________
 
 - HYDROSTRUCT.OUT: Quick review of the discharge through a structure.  Look for anomalies like
   high flow rates or surging.
@@ -78,7 +75,7 @@ Step 4. Structure review files
   a slight change to the rating table.
 
 Step 5. MAXPLOT
----------------
+____________________________
 
 1. From QGIS click the drop down button next to the Run FLO-2D button and choose Maxplot.
 
@@ -108,7 +105,7 @@ Step 5. MAXPLOT
 8. Close Maxplot.
 
 Step 6. HYDROG
---------------
+____________________________
 
 1. From QGIS click the drop down button next to the Run FLO-2D button and choose Hydrog.
 
@@ -140,7 +137,7 @@ Step 6. HYDROG
 8. Close Hydrog.
 
 Step 7. PROFILES
-----------------
+____________________________
 
 1. From QGIS click the drop down button next to the Run FLO-2D button and choose Profiles.
 

@@ -14,7 +14,7 @@ Required Data
 Data Location:  \\Coastal Training\\Project Data\\Project Export Folder
 
 Step 1. Simplify map
---------------------
+_____________________
 
 1. Uncheck unnecessary layers like Grid and Elevation, and Google Hybrid.
 
@@ -29,12 +29,14 @@ Step 1. Simplify map
 
 .. image:: ../img/Coastal/managelayers2.gif
 
+
 Step 2. Import results from mesh tool
--------------------------------------
+______________________________________
 
 1. Click the Data Management button.
 
 .. image:: ../img/Coastal/map002.png
+
 
 2. Select the Mesh option.
 
@@ -44,10 +46,11 @@ Step 2. Import results from mesh tool
 
 .. image:: ../img/Coastal/datamanagermesh.gif
 
+
 5. Drag the Depth Layer and drop it into the Results Group.
 
 Step 3. Load the Layer Style panel
------------------------------------
+____________________________________
 
 1. Dock the layer styling panel with the FLO-2D widgets.
 
@@ -61,8 +64,9 @@ Step 3. Load the Layer Style panel
 
 .. image:: ../img/Coastal/map003.png
 
+
 Step 4. Modify the depth layer style
-------------------------------------
+________________________________________
 
 1. Click the Style tab on the Layer Styling Panel.
 
@@ -77,3 +81,4 @@ Step 4. Modify the depth layer style
 6. Check Clip out of Range Values.
 
 .. image:: ../img/Coastal/depthstyle.gif
+

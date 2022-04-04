@@ -7,7 +7,6 @@ In this tutorial, a simple dam breach with failure is created.
 In this example, the reservoir is dry and so no bathymetry or stage volume is required.
 
 Required Data
--------------
 
 The required data is in Module 3.
 
@@ -22,7 +21,7 @@ The required data is in Module 3.
 
 
 Step 1. Add a culvert
-----------------------
+______________________
 
 1. This dam is used for flood and sediment control.
    It has a perforated riser inlet to allow solids to settle and clear water to flow through the culvert.
@@ -32,11 +31,13 @@ Step 1. Add a culvert
 
 .. image:: ../img/Advanced-Workshop/Module129.png
 
+
 3. In this case a head reference elevation can be used so that the water must achieve a specific elevaton before the culvert will allow discharge.
 
 4. Using the ID tool on the elevation raster shows that the ground elevation is 1373.22 ft.
 
 .. image:: ../img/Advanced-Workshop/Module130.png
+
 
 5. Estimating that the feature is around waist high means we can use a head reference elevation of 1376 ft for this inlet.
 
@@ -47,9 +48,11 @@ Step 1. Add a culvert
 
 .. image:: ../img/Advanced-Workshop/Module131.png
 
+
 8. Finish the data in the Widget.
 
 .. image:: ../img/Advanced-Workshop/Module132.png
+
 
 9.  Go back to Part 2 Step 9 and `export and run <#step-9.-export-and-run-the-model>`__ the model again.
 
@@ -57,22 +60,27 @@ Step 1. Add a culvert
 
 .. image:: ../img/Advanced-Workshop/Module133.png
 
+
 11. Select the first cell of the data table in QGIS and click the Paste Button.
 
 .. image:: ../img/Advanced-Workshop/Worksh001.gif
+
 
 12. Click the Schematize Button.
 
 .. image:: ../img/Advanced-Workshop/Module135.png
 
+
 13. Turn on the Hydraulic Structures switch.
 
 .. image:: ../img/Advanced-Workshop/Module136.png
 
+
 .. image:: ../img/Advanced-Workshop/Module137.png
 
+
 Step 2. Downstream Boundary
-----------------------------
+___________________________
 
 1. Collapse the widgets and click the Boundary Condition Widget.
 
@@ -88,11 +96,12 @@ Step 2. Downstream Boundary
 
 .. image:: ../img/Advanced-Workshop/Module138.png
 
+
 .. image:: ../img/Advanced-Workshop/Module139.png
 
 
 Step 3. Common mistakes demo
------------------------------
+_____________________________
 
 This section will demonstrate some common mistakes that users make when building breach models:
 
@@ -107,7 +116,7 @@ This section will demonstrate some common mistakes that users make when building
 -  The breach node is on the wrong side of the levee.
 
 Step 4. Bad reservoir or leaky levee component
------------------------------------------------
+________________________________________________
 
 1. Collapse the widgets and click the Initial Condition Editor.
 
@@ -115,6 +124,7 @@ Step 4. Bad reservoir or leaky levee component
    This is 2ft higher than the dam.
 
 .. image:: ../img/Advanced-Workshop/Module140.png
+
 
 3. Repeat Part 2 Step 8 starting at Number 4.
 
@@ -124,6 +134,7 @@ Step 4. Bad reservoir or leaky levee component
 5. Don’t forget to set the elevation back before exiting from QGIS.
 
 .. image:: ../img/Advanced-Workshop/Module141.png
+
 
 Step 5. Dam elevation not removed
 ----------------------------------
@@ -137,6 +148,7 @@ Step 5. Dam elevation not removed
 
 .. image:: ../img/Advanced-Workshop/Module142.png
 
+
 4. This procedure reset the elevation correction that was applied in Step 6 or 7.
 
 5. Export and run the model by repeating Step 8.
@@ -146,7 +158,9 @@ Step 5. Dam elevation not removed
 
 .. image:: ../img/Advanced-Workshop/Module143.png
 
+
 7. There is another more subtle indication that the dam elevation was not removed.
    In this case, the dam has not failed because the dam elevation was not removed.
 
 .. image:: ../img/Advanced-Workshop/Module144.png
+

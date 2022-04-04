@@ -8,7 +8,6 @@ Part 1 will set up the watershed rainfall runoff model.
 Part II will apply mudflow parameters to the watershed hydrograph.
 
 Required Data
--------------
 
 The required data is in Module 5 Watershed Mudflow Tutorial.
 This is a new project.
@@ -27,7 +26,7 @@ Please save and close the previous QGIS.
 ======== ====================== ==========
 
 Step 1: Load the project
-------------------------
+_________________________
 
 1. Start with the project from Module 5 Part I Watershed Hydrology.
 
@@ -38,12 +37,14 @@ Step 1: Load the project
 
 .. image:: ../img/Advanced-Workshop/Module145.png
 
+
 4. Click yes to load the model.
 
 .. image:: ../img/Advanced-Workshop/Module146.png
 
+
 Step 2. Load the hydrography map
---------------------------------
+_________________________________
 
 1. Open this website: https://apps.nationalmap.gov/services/
 
@@ -55,17 +56,21 @@ Step 2. Load the hydrography map
 
 .. image:: ../img/Advanced-Workshop/GetHydroData.gif
 
+
 5. Click the Open Data Source Manager button.
 
 .. image:: ../img/Advanced-Workshop/Module147.png
+
 
 6. Select the WMS/WMTS tab and click New.
 
 .. image:: ../img/Advanced-Workshop/Module306.png
 
+
 7. Enter the name and paste the URL into the top two boxes and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module307.png
+
 
 8. Click Connect.
 9. Select 4 flowlines.
@@ -75,6 +80,7 @@ Step 2. Load the hydrography map
 
 .. image:: ../img/Advanced-Workshop/Module308.png
 
+
 13.  Click close to close the Data Source Manager.
 
 14. Double click the Flow Directions Layer.
@@ -83,14 +89,16 @@ Step 2. Load the hydrography map
 
 .. image:: ../img/Advanced-Workshop/Module309.png
 
+
 16. Doubleclick the Elevation layer and click Symbology.
 
 17. Set the Render to Hillshade and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module310.png
 
+
 Step 3. Review the watershed
------------------------------
+_______________________________________
 
 1. Scan the AOI and hydrography map to see if the feature is collecting all the water from the watershed above the point
    of concentration where the mudflow is most likely to occur.
@@ -102,8 +110,9 @@ Step 3. Review the watershed
 
 .. image:: ../img/Advanced-Workshop/Module150.png
 
+
 Step 4. Create the grid
-------------------------
+_______________________________________
 
 1. Click the create grid button.
 
@@ -117,8 +126,9 @@ Step 4. Create the grid
 
 .. image:: ../img/Advanced-Workshop/Module151.png
 
+
 Step 5. Interpolate Elevation
-------------------------------
+_______________________________________
 
 1. Click the Interpolate from Raster button.
 
@@ -128,12 +138,14 @@ Step 5. Interpolate Elevation
 
 .. image:: ../img/Advanced-Workshop/Module152.png
 
+
 Step 6. Calculate Roughness
----------------------------
+_______________________________________
 
 1. Check the LandSoil Layer is turned on.
 
 .. image:: ../img/Advanced-Workshop/step6.png
+
 
 2. Click the Calculate roughness button.
 
@@ -143,8 +155,9 @@ Step 6. Calculate Roughness
 
 .. image:: ../img/Advanced-Workshop/Module153.png
 
+
 Step 7. Save and create a recovery point
------------------------------------------
+_________________________________________
 
 1. Save QGIS.
 
@@ -157,7 +170,7 @@ Step 7. Save and create a recovery point
 5. Reload the project.
 
 Step 8. Determine the total rainfall
-------------------------------------
+_______________________________________
 
 1. In an internet browser, go here: https://hdsc.nws.noaa.gov/hdsc/pfds/
 
@@ -165,15 +178,18 @@ Step 8. Determine the total rainfall
 
 .. image:: ../img/Advanced-Workshop/Module154.png
 
+
 3. Scroll down to the table data and change the Tab to Supplementary Information.
 
 4. Change PF in GIS Format to 10yr, 3-hr and click submit.
 
 .. image:: ../img/Advanced-Workshop/Module155.png
 
+
 5. Extract the new data into the project/Hydrology folder.
 
 .. image:: ../img/Advanced-Workshop/Module156.png
+
 
 6. Click the User Layers Group.
 
@@ -181,23 +197,24 @@ Step 8. Determine the total rainfall
 
 .. image:: ../img/Advanced-Workshop/Module157.png
 
+
 8. These pixels are rainfall in inches \* 1000.
 
 Step 9. Sample the rainfall raster
-----------------------------------
+_______________________________________
 
 1. Use the ID tool to find the peak rainfall.
 
 .. image:: ../img/Advanced-Workshop/Module160.png
 
-4. In this case, the lightest color is the highest rainfall.
 
-5. 2.98 inches.
+4. In this case, the lightest color is the highest rainfall.  2.98 inches.
 
 .. image:: ../img/Advanced-Workshop/Module161.png
 
+
 Step 10. Set up the rainfall
-----------------------------
+_______________________________________
 
 1. Collapse the FLO-2D widgets and click Rain Editor.
 
@@ -211,6 +228,7 @@ Step 10. Set up the rainfall
 
 .. image:: ../img/Advanced-Workshop/Module162.png
 
+
 5. Interpolate the rainfall depth reduction factor.
 
 6. Click the AR button.
@@ -221,25 +239,29 @@ Step 10. Set up the rainfall
 
 .. image:: ../img/Advanced-Workshop/Module163.png
 
+
 Step 11. Generate the curve number data
-----------------------------------------
+_________________________________________
 
 1. If necessary, add the Plugin Curve Number Generator.
 
 .. image:: ../img/Advanced-Workshop/Module311.png
 
+
 2. Open the Curve Number Generator.
 
 .. image:: ../img/Advanced-Workshop/Module312.png
+
 
 3.  Set the Area Boundary to Grid.  Check the boxes and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module313.png
 
+
 4. Click Close when it is finished.
 
 Step 12. Calculate the infiltration
-------------------------------------
+_______________________________________
 
 1. Click the collapse FLO-2D Widgets button and click the Infiltration Editor Widget.
 
@@ -249,28 +271,34 @@ Step 12. Calculate the infiltration
 
 .. image:: ../img/Advanced-Workshop/Module164.png
 
+
 4. Click the Calculate SCS CN button
 
 5. Fill the form and click OK to calculate and OK to close the message.
 
 .. image:: ../img/Advanced-Workshop/Module165.png
 
+
 6. Review the Curve Number field to make sure the curve number data is as expected.
 
 .. image:: ../img/Advanced-Workshop/Module166.png
 
+
 Step 13. Save, export, and run
-------------------------------
+_______________________________________
 
 1. This is a good point to save project.
 
 .. image:: ../img/Advanced-Workshop/Module046.png
 
+
 2. Set the Control Variables and click Save.
 
 .. image:: ../img/Advanced-Workshop/Module314.png
 
+
 .. image:: ../img/Advanced-Workshop/Module315.png
+
 
 2. Export the data files to the Project Folder in Advanced Class Folder
 
@@ -278,18 +306,21 @@ Step 13. Save, export, and run
 
 .. image:: ../img/Advanced-Workshop/Module089.png
 
+
 .. image:: ../img/Advanced-Workshop/Module182.png
+
 
 4. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
+
 
 5. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
 
 .. image:: ../img/Advanced-Workshop/Module316.png
 
 Step 14. Map the velocity vectors and import them into QGIS
------------------------------------------------------------
+____________________________________________________________
 
 1. The first run is used to identify an area of concentrated flow and build a Floodplain Hydrograph.
 
@@ -297,27 +328,33 @@ Step 14. Map the velocity vectors and import them into QGIS
 
 .. image:: ../img/Advanced-Workshop/Module184.png
 
+
 3. Run Mapper.
 
 .. image:: ../img/Advanced-Workshop/Module185.png
 
+
 4. Set the paths and click OK.
 
 .. image:: ../img/Advanced-Workshop/Module186.png
+
 
 5. Load the data into Mapper.
    Click File/Read FLO-2D results.
 
 .. image:: ../img/Advanced-Workshop/Module187.png
 
-6. Find the FLPLAIN.DAT and click Open.
+
+6. Find the FPLAIN.DAT and click Open.
 
 .. image:: ../img/Advanced-Workshop/Module187a.png
+
 
 7. Plot the Velocity Vector Map.
    Scale factor = 1.
 
 .. image:: ../img/Advanced-Workshop/Module188.png
+
 
 8. Close Mapper.
 
@@ -325,12 +362,14 @@ Step 14. Map the velocity vectors and import them into QGIS
 
 .. image:: ../img/Advanced-Workshop/Module189.png
 
+
 Step 15. Create a floodplain cross section
--------------------------------------------
+___________________________________________
 
 1. Zoom in to the apex of the alluvial fan.
 
 .. image:: ../img/Advanced-Workshop/Module190.png
+
 
 2. Click the Digitize Floodplain Cross Section button.
 
@@ -346,12 +385,14 @@ Step 15. Create a floodplain cross section
 
 .. image:: ../img/Advanced-Workshop/Module191.png
 
+
 Step 16. Save, export, and run again
-------------------------------------
+_______________________________________
 
 1. This is a good point to save project.
 
 .. image:: ../img/Advanced-Workshop/Module046.png
+
 
 2. Export the data files to the Project Folder in Advanced Class Folder
 
@@ -359,12 +400,16 @@ Step 16. Save, export, and run again
 
 .. image:: ../img/Advanced-Workshop/Module089.png
 
+
 .. image:: ../img/Advanced-Workshop/Module192.png
+
 
 4. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
 
+
 5. Correct the paths and click OK to start the simulation.
 
 .. image:: ../img/Advanced-Workshop/Module316.png
+

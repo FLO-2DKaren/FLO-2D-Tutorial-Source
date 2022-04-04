@@ -70,6 +70,7 @@ ________________________________
 
 .. image:: ../img/Workshop/maplayers.gif
 
+
 Step 2: Create a recovery file
 ______________________________
 
@@ -115,6 +116,7 @@ ________________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
+
 1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
 .. image:: ../img/Workshop/Worksh028.png
@@ -131,5 +133,6 @@ ________________________
 
 .. note:: If the project path changes but an old geopackage remains in the previous path, it will be loaded and can
           corrupt the project.
+
 
 .. image:: ../img/Workshop/Worksh030.png
