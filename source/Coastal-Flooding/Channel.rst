@@ -91,7 +91,7 @@ ______________________________
 Step 5: Cross sections digitize
 _________________________________
 
-**Important Note: Digitize the cross sections in order from upstream to downstream.**
+.. note:: Digitize the cross sections in order from upstream to downstream.
 
 1. Zoom in on the southeast corner of the map.
 
@@ -240,8 +240,8 @@ Data Location: \\Coastal Training\\Project Data\\Channel\\Cross Section Station 
 Step 8: Schematize channel
 ______________________________
 
-**Important Note: If any of the following procedure needs to be repeated, always return to this Schematize step to reset
-the data before trying to modify anything.**
+.. note:: If any of the following procedure needs to be repeated, always return to this Schematize step to reset
+          the data before trying to modify anything.
 
 1. Click Schematize channel.
 
@@ -304,8 +304,8 @@ _________________________________
 N type channels are interpolated using the Interpolator.exe program.
 This method will outline how to call the interpolator and reload the data.
 
-**Important Note: If this process needs to be repeated for any reason, click Schematize button before performing this
-step.**
+.. note:: If this process needs to be repeated for any reason, click Schematize button before performing this
+          step.
 
 1. Click the Create CHAN.DAT, XSEC.DAT, AND CHANBANK.DAT button.
 
@@ -344,7 +344,7 @@ Data Location: \\Coastal Training\\Project Data\\Channel Interpolate Test
 Step 11: Channel boundary condition
 ___________________________________
 
-.. youtube:: 8zm8ach2jpc
+.. youtube:: 5CrrcZATtxk
 
 Inlet
 ^^^^^
@@ -467,7 +467,7 @@ Data Location: Coastal Training\\Project Data\\Weirs
 .. image:: ../img/Coastal/chan043.png
 
 
-8. Note that the data was loaded into the FLO-2D Table Editor for the active structure.
+8. The data was loaded into the FLO-2D Table Editor for the active structure.
 
 .. image:: ../img/Coastal/chan044.png
 

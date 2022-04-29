@@ -1,44 +1,56 @@
 Coastal Set-Up
 ==============
 
-Get the Data:  https://flo-2d.sharefile.com/d-s70082745e4c8400cb4a966fca21b906e
-
 **Overview**
 
-This module will outline how to Set-Up QGIS in order to facilitate the following modules.  If you get stuck, please see
-the video below.  It may have steps that were missed in the instructions.
+Please use these instructions to get your computer ready for the Coastal Urban Modeling training class.
 
-Required Data
-
-The following data is required for this module.
-
-============= ========================
-**File**      **Content**
-============= ========================
-\*.zip        FLO-2D Plugin Update
-\*.shp        Project Area of Interest
-============= ========================
-
-Data Location:  \\Coastal Training\\
+**Regular Class Setup.**
 
 .. youtube:: qTTvXkl9Bmk
 
-Step 1: Create a Quick Access Link
+**ASFPM Workshop Setup.**
+
+.. youtube:: tTvmjdDRnzw
+
+Step 1: Run the Installers
 ___________________________________
 
-1. Open Microsoft Explorer
+Run through the FLO-2D Setup using the following link.  Then return here and go to Step 2.
 
-2. Navigate to C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects
+https://documentation.flo-2d.com/Intro/Set-up.html
 
-3. Drag Coastal Training to the Quick Access area on the sidebar.
+.. Note:: Admin rights are required to set up the computers.  Please get assistance from your IT.  Please reply to the
+          class notification email or use the contact form to get help from Karen O'Brien.
+          https://flo-2d.com/contact/
 
-4. Note the small timestamp on the lower right hand corner of the animation.  Wait for it to restart if this animation
-   is confusing.
+Step 2: Set up the Coastal Training Project
+____________________________________________
+
+1. Use this link to download the project data for the ASFPM Workshop.
+
+https://flo-2d.sharefile.com/d-s3fe663fd0cb540b9b18261681b627d10
+
+Step 3: Create a Quick Access Link
+___________________________________
+
+1. Prepare the computer with the class data.  This will help keep everyone on the same page as we run through the lessons.
+
+2. Open Microsoft Explorer
+
+3. Navigate to C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects
+
+4. Create a folder called Coastal Training add it to the to the Quick Access area on the sidebar.
+
+5. Review the animated gif for help.  Keep your eye on the timestamp to see when it restarts.
 
 .. image:: ../img/Coastal/quickaccess.gif
 
 
-Step 2: Open QGIS
+6. Move the Class data from the Download folder into the Coastal Training Folder.
+
+
+Step 3: Open QGIS
 ____________________
 
 1. Open QGIS.
@@ -57,7 +69,7 @@ ____________________
 .. image:: ../img/Instructions/image14.png
 
 
-Step 3: Add Plugins
+Step 4: Add Plugins
 ______________________________
 
 Add the FLO-2D plugin and a few other handy plugins.
@@ -67,7 +79,7 @@ Add the FLO-2D plugin and a few other handy plugins.
 .. image:: ../img/Instructions/image10.png
 
 
-2. Install **Quick Map Services** and **Profile Tool**.
+2. Install **Quick Map Services** and **Profile Tool** and **Curve Number Generator**
 
 .. image:: ../img/Coastal/addplugin.gif
 
@@ -84,27 +96,43 @@ Add the FLO-2D plugin and a few other handy plugins.
 
 .. image:: ../img/Instructions/image15.gif
 
-Step 4: Load the Project Domain
-________________________________
+.. note:: ASFPM class Skip Step 5.  Everyone else do Skip Step 6.
+
+Step 5: Load the Project AOI into QGIS
+________________________________________
 
 1. Open Coastal Training project folder.
    C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Coastal Training\\Project Data\\AOI
 
-2. Drag the Project Area of Interest shapefile onto the map space.
+2. Drag the AOI.shp file onto the map space.
 
 .. image:: ../img/Coastal/setup001.png
 
 
-3. Click OK to apply the coordinate system.  The coordinate system for this project is
-   NAD 83 High Accuracy Reference Network (HARN) Florida East with units of US ft.
+3. Note the coordinate system is now set to EPSG 2881.
 
 .. image:: ../img/Coastal/setup002.png
 
+Step 6: ASFPM Workshop Method Load the Project into QGIS
+__________________________________________________________
 
-4. The project CRS EPSG 2881 is now applied to the map.
+1. Open Coastal Training project folder.
+   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Coastal Training\\Project Data\\Coastal
+   Training.qgz
 
-.. image:: ../img/Coastal/setup003.png
+2. Drag the \*.qgz file onto the map space.
+
+.. image:: ../img/Coastal/setup004.png
 
 
-Please continue to Load the Data into QGIS.
+3. Click Yes to Load the Model.
 
+.. image:: ../img/Coastal/setup005.png
+
+
+4. The map should look like this.
+
+.. image:: ../img/Coastal/setup006.png
+
+7. ASFPM Class.  The next lesson is Hydrology starting at Step 3.
+https://documentation.flo-2d.com/Coastal-Flooding/Hydrology.html#step-3-set-up-the-rainfall

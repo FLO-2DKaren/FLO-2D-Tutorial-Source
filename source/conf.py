@@ -10,15 +10,14 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
+import sys, os
 
 sys.path.insert(0, os.path.abspath("..."))
 
 # -- Project information -----------------------------------------------------
 
 project = "FLO-2D Tutorials"
-copyright = "2021, Karen O'Brien"
+copyright = "2022, Karen O'Brien"
 author = "Karen O'Brien"
 html_logo = "Flo2D_logo.jpg"
 # -- General configuration ---------------------------------------------------
@@ -26,7 +25,7 @@ html_logo = "Flo2D_logo.jpg"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinxcontrib.yt"]
+extensions = ['sphinxcontrib.yt', 'docxbuilder']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["style"]
@@ -46,6 +45,17 @@ html_theme = "sphinx_book_theme"
 html_static_path = ["style"]
 html_css_files = ["static/style.css"]
 
+# -- Options for DOCX output ------------------------------------------------
+
+docx_documents = [
+    ('index', 'FLO-2D Tutorials.docx', {
+         'title': 'FLO-2D Plugin for QGIS Tutorials',
+         'created': 'Karen O\'Brien',
+         'subject': 'Sphinx builder extension',
+         'keywords': ['sphinx']
+     }, True),
+]
+docx_pagebreak_before_section = 1
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
