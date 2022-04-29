@@ -162,7 +162,7 @@ ____________________
 .. image:: ../img/Workshop/Worksh124.png
 
 
-.. note:: If an error message was displayed, Move the Walls Layer to the User Layer Group.
+.. note:: If an error message was displayed, move the Walls Layer to the User Layer Group.
 
 
 8. Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Create Schematic Layers from User Levees button.
@@ -190,6 +190,10 @@ ____________________
 12.  The FLO-2D walls are shown by the red cutoff marks.  Visually inspecting them can help QC the data.
 
 .. image:: ../img/Workshop/Worksh128a.png
+
+13. Turn on levee failure by clicking the prescribed failure checkbox on the Levee Failure Widget.
+
+.. image:: ../img/Workshop/Worksh128b.png
 
 
 Step 4: Export the project

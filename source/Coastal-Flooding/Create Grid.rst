@@ -121,10 +121,10 @@ ______________________________
 7. Sampling Done dialog box will appear once the process is complete.
    Click OK to close it.
 
-.. note:: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
-          Warp processing tool.  To learn more about GDAL Warp, visit this page:**
+.. note:: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the
+          GDAL Warp processing tool.  To learn more about GDAL Warp, visit this page:
 
-https://gdal.org/programs/gdalwarp.html
+          https://gdal.org/programs/gdalwarp.html
 
 .. image:: ../img/Coastal/creategrid012.png
 
@@ -132,7 +132,7 @@ https://gdal.org/programs/gdalwarp.html
 .. image:: ../img/Workshop/Worksh154.png
 
 
-Step 5: Assign Roughness data
+Step 5: Assign roughness data
 ______________________________
 
 1. Open the project folder and drag the Mannings_n.shp file onto the map space.

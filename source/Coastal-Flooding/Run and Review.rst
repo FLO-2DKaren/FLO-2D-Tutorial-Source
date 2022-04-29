@@ -19,7 +19,7 @@ Step 1. Error logging files
 ____________________________
 
 These files are reviewed in NotePad or QGIS.  They log errors, warnings, and general data
-for every simulation. The files are located i the Project Export Folder.
+for every simulation. The files are located in the Project Export Folder.
 
 - ERROR.CHK
 
@@ -38,27 +38,36 @@ The general review files give information about the overall grade of a simulatio
 - VELTIMEFP.OUT: 1000 highest velocities sorted by velocity.  Use this file to look for surging.
 
 - TIME.OUT: Finds the grid elements that control the timestep.  Sticky grid elements slow
-  the simulation down.
+  the simulation down.  If a grid element has more than 1000 timestep adjustments, it can be modified so that it no longer
+  exceeds the stability criteria.  Slope adjustment, roughness adjustment, review total area of the grid element.  If
+  grid element is an inflow node, increase spatial tol to 0.1 and roughness to 0.200.
 
-- SUPER.OUT: List of super critical grid elements.
+- SUPER.OUT: List of super critical grid elements.  If a grid element is listed and it is not likely to go super critical
+  check the slope and roughness.  Make an elevation adjustment or add a spatial tol = 0.1ft.  If the grid element is
+  likely to go super critical, leave it alone.
 
-- ROUGH.OUT: List of grid elements with n-value adjustments.
+- ROUGH.OUT: List of grid elements with n-value adjustments.  Review for any unusual grid element n-value adjustment.
+  Review the slope and add a spatial tol = 0.1 if the adjustments are too excessive.
 
-- EVACUATEDFP.OUT: List of cells that dried out over a timestep.  If a cell dries out, it could
-  indicate instability.
+- EVACUATEDFP.OUT: List of grid elements that dried out over a timestep.  If a grid element dries out during flooding,
+  it could indicate instability.  Check for ponding, slope, roughness.  Increase the roughness value, raised depressed
+  grid elements, use a spatial tol = 0.1 ft, adjust the slope slightly.
 
 Step 3. Channel review files
 ____________________________
 
 - CHANMAX.OUT: List of maximum channel cross section hydraulics. It is easy to scan this list for
-  discharge values that are out of range.
+  discharge values that are out of range.  If a discharge is well out of range, it could be instability.  Channel
+  instability is corrected by making better transitions between cross sections that are change rapidly.
 
 - VELTIMEC.OUT: List of top 1000 channel elements sorted by high velocity.  Quick check for
-  excessive velocity.
+  excessive velocity.  If velocities are excessive, review roughness values, slope, transitional areas.  Look for surging.
 
-- CHANBANKEL.CHK: This is a list of cells that have a difference between the cross section
-  elevation and the left or right bank floodplain elevation.  It may indicate that the
-  channel alignment is off or the cross section is wrong.
+- CHANBANKEL.CHK: This is a list of grid elements that have a difference between the cross section
+  elevation and the left or right bank floodplain elevation.  It may indicate that the channel alignment is off or the
+  cross section is wrong.  FLO-2D will address bank elevation differences by setting the grid element elevation along
+  the bank to the same elevation in the cross section data.  It is only necessary to correct elevations that cause
+  a perched channel or a channel that is embedded deep into the grid.
 
 - CHVOLUME.OUT: A list of channel cross section hydraulics and mass balance.  If the channel
   has a volume error, it will be listed in the last column.
@@ -67,12 +76,16 @@ Step 4. Structure review files
 ________________________________
 
 - HYDROSTRUCT.OUT: Quick review of the discharge through a structure.  Look for anomalies like
-  high flow rates or surging.
+  high flow rates or surging.  If flow through a structure is surging or evacuating the inlet, check the elevation around
+  the inlet to make sure the water can get to the inlet.  Check the rating table or structure data.  It should not be
+  allowing more flow than can move through the structure at a given depth.  Add more data to the rating table at the
+  lower depths.
 
-- HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT: Warnings of potential error in the HYSTRUC.DAT file.
+- HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT: Warnings of potential error in the HYSTRUC.DAT file.  Follow the instructions
+  in the file to correct the warnings if necessary.
 
 - REVISED_RATING_TABLES.OUT: If flow accelerates through a structure, this file will recommend
-  a slight change to the rating table.
+  a slight change to the rating table.  It is just a suggestion and only implemented if the table is changed.
 
 Step 5. MAXPLOT
 ____________________________
