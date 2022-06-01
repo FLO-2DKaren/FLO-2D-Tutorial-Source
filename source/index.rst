@@ -56,6 +56,7 @@ Table of Contents
    /Advanced-Lessons/Module 3 Part 3
    /Advanced-Lessons/Module 5 Part 1
    /Advanced-Lessons/Module 5 Part 2
+   /Advanced-Lessons/Module 5 Part 3
    /Advanced-Lessons/Module 6
    /Advanced-Lessons/Module 7
 
