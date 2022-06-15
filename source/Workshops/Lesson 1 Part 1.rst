@@ -60,7 +60,7 @@ _________________
 
 
 Step 2: Import the project domain
-_________________________________
+__________________________________
 
 1. Open the project folder
 

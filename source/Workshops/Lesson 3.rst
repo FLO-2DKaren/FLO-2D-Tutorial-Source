@@ -42,29 +42,6 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example
 
 Check these folders to ensure the data is available before starting the lesson.
 
-Step-by-Step Procedure
-______________________
-
-To setup a FLO-2D flood simulation use these steps.
-
-1. Open QGIS and load the project;
-
-2. Import the storm drain shapefiles;
-
-3. Select storm drain fields from the shapefiles;
-
-4. Assign the link node connections;
-
-5. Import rating tables;
-
-6. Set up the pump data;
-
-7. Schematize storm drain data;
-
-8. Export the project data;
-
-9. Run the simulation.
-
 Step 1: Open QGIS and load the project
 ______________________________________
 

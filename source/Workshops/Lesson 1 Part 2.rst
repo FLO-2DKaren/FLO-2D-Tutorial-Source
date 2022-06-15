@@ -2,7 +2,7 @@ Lesson 1 Part 2 – Project Recovery Methods
 =============================================
 
 Overview
-________
+_________
 
 Think of this as making a backup of a document.  It is a simple method to protect the data in case something goes wrong
 in the next lessons.  Once a user gains more experience, this method won't be as important.

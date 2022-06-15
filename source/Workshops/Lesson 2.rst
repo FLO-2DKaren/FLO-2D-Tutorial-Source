@@ -2,7 +2,7 @@ Lesson 2 – Channels
 ===================
 
 Overview
-________
+_________
 
 Complete QGIS Lesson 1 before starting this lesson.
 Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
