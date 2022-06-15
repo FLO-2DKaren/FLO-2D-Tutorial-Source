@@ -10,6 +10,9 @@ Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
 .. note:: This lesson uses an HEC-RAS import.  Alternate channel development methods are included in the advanced
           tutorials and coastal tutorials.  It is not necessary to have a RAS channel.
 
+          `Channel Development Tutorial <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html>`_ is the
+          advanced lesson for this project.
+
 This video shows the full process of this tutorial.
 
 .. youtube:: 74a07-wH3Gw
@@ -55,29 +58,6 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 
 Check these folders to ensure the data is available before starting the lesson.
 
-Step-by-Step Procedure
-______________________
-
-To setup a FLO-2D flood simulation use these steps.
-
-1. Open Lesson 1 and prep the map layers;
-
-2. Import GeoRAS channel;
-
-3. Schematize channel;
-
-4. Channel boundary conditions;
-
-5. Create culverts;
-
-6. Interpolate the channel;
-
-7. Export the project;
-
-8. Test Run and fix the channel bank.
-
-9. Final run and recovery point.
-
 Step 1: Open QGIS and load the project
 ______________________________________
 
@@ -86,17 +66,17 @@ ______________________________________
 
 1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
-.. image:: ../img/Workshop/Worksh028.png
+.. image:: ../img/Workshop/Worksh157.png
 
 
 2. Click Yes to load the plugin.
 
-.. image:: ../img/Workshop/Worksh029.png
+.. image:: ../img/Workshop/Worksh031.png
 
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
 
-3. If necessary add an aerial image to the map.  See Lesson 1 - Part 2 - Step 3 for instructions.
+3. If necessary add an aerial image to the map.  See `Lesson 1 - Part 2 - Step 3 <https://documentation.flo-2d.com/Workshops/Lesson%201%20Part%203.html#step-3-import-aerial-images>`_ for instructions.
 
 .. image:: ../img/Workshop/Worksh056.png
 
@@ -106,7 +86,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh185.png
 
 
-Step 2: Import GeoRAS Channel
+Step 2: Import GeoRAS channel
 _____________________________
 
 1. Click the Import RAS icon.
@@ -260,10 +240,10 @@ The channel segments are split up to allow for the width of the roadway.
 
 3. Digitize the first culvert
 
-    - Left click the upstream left bank.
-    - Left click the downstream left bank.
-    - Right click to complete the line.
-    - Click OK to complete the structure
+   - Left click the upstream left bank.
+   - Left click the downstream left bank.
+   - Right click to complete the line.
+   - Click OK to complete the structure
 
 .. image:: ../img/Workshop/addstructure.gif
 
@@ -280,13 +260,10 @@ The channel segments are split up to allow for the width of the roadway.
 
 6. Fill out the data for each structure.
 
--  Name the culverts Grnway1, Grnway2
-
--  Type \= Channel
-
--  Rating \= Rating table
-
--  Tailwater condition is none.
+   -  Name the culverts Grnway1, Grnway2
+   -  Type \= Channel
+   -  Rating \= Rating table
+   -  Tailwater condition is none
 
 .. image:: ../img/Workshop/Worksh076.png
 

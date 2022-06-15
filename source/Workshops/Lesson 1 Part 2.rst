@@ -36,20 +36,10 @@ The lesson has a QGIS project file, Geopackage file, FLO-2D Data Export files an
      -
 
 
-Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\
+Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
 Lesson 1, Part 1 should be completed first.
-
-Step-by-Step Procedure
-______________________
-
-To create recovery backup system, follow these steps:
-
-1. Organize the map layers;
-2. Create a recovery file;
-3. Recover a project;
-4. Open project.
 
 Step 1: Organize the map layers
 ________________________________
@@ -119,12 +109,12 @@ ________________________
 
 1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
-.. image:: ../img/Workshop/Worksh028.png
+.. image:: ../img/Workshop/Worksh157.png
 
 
 2. Click Yes to load the plugin.
 
-.. image:: ../img/Workshop/Worksh029.png
+.. image:: ../img/Workshop/Worksh158.png
 
 
 .. note:: If the project path changes, the plugin will recognize the path change and try to load the model from the new

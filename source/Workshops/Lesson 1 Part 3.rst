@@ -42,31 +42,15 @@ The lesson makes use of rainfall distribution, rain arf, landuse and soil data.
      -
 
 
-Project location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\
+Project location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
 Check these folders to ensure the data is available before starting the lesson.
-
-Step-by-Step Procedure
-______________________
-
-To setup a FLO-2D flood simulation use these steps.
-
-1.  Open the QGIS program;
-2.  Load Lesson 1;
-3.  Import aerial images;
-4.  Assign inflow;
-5.  Assign rainfall;
-6.  Assign infiltration;
-7.  Check control variables;
-8.  Save the project;
-9.  Export the FLO-2D data files;
-10.  Run the FLO-2D model.
 
 Step 1: Open QGIS
 ___________________
 
 1. Search the start menu or open the QGIS file folder and run the QGIS Desktop program.
-   The version should be QGIS 3.18.2
+   The version should be QGIS 3.22 or later.
 
 .. image:: ../img/Workshop/Worksh002.png
 
@@ -177,6 +161,7 @@ _______________________________
 3. Click the Import icon and load the data file from QGIS Lesson 1 or from the Rainfall Distribution Folder.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\SCS 24-Hr Type II.DAT
+
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions\\SCS 24-Hr Type II.DAT
 
 .. image:: ../img/Workshop/Worksh043.png
@@ -236,47 +221,39 @@ ___________________________________
 Step 7: Assign infiltration
 ___________________________
 
-1. Drag the file Land Use.shp onto the map space.
+1. Drag the file Land Use.shp and Soil.shp onto the map space.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\Land Use.shp
+
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\Soil.shp
 
 .. note:: The map will look different every time a layer is loaded.  The colors QGIS uses are random.
 
 .. image:: ../img/Workshop/Worksh046.png
 
 
-2. Drag the file Soil.shp onto the map space.
-
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Hydrology\\Soil.shp
-
-.. image:: ../img/Workshop/Worksh047.png
-
-
-3. From the Infiltration Editor click the Global Infiltration icon.
+2. From the Infiltration Editor click the Global Infiltration icon.
 
 .. image:: ../img/Workshop/Worksh048.png
 
 
-4. Check the Global Green Ampt switch and fill the global variables.
+3. Check the Global Green Ampt switch and fill the global variables.
    The Global variables will be used for any cell that is not defined by the F lines in the spatially variable data assigned to INFIL.DAT.
 
-5. Click OK to close.
+4. Click OK to close.
 
 .. image:: ../img/Workshop/Worksh049.png
 
 
-6. On the Infiltration Editor click Calculate Green-Ampt.
+5. On the Infiltration Editor click Calculate Green-Ampt.
 
 .. image:: ../img/Workshop/Worksh050.png
 
 
-7. Specify the attributes as shown in the following image and click OK.
+6. Specify the attributes as shown in the following image and click OK.
    The calculation process will take 1 to 5 min for this project.
 
 .. image:: ../img/Workshop/Worksh051.png
-
-
-.. image:: ../img/Workshop/Worksh052.png
 
 
 Step 8: Check control variables
@@ -337,7 +314,7 @@ ___________________________
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Lesson 1 Export
 
-.. image:: ../img/Workshop/Worksh054.png
+.. image:: ../img/Workshop/Worksh023.png
 
 
 This is the final step of this Lesson 1.  Make a Recovery Point/Backup and continue to Lesson 2.

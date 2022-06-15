@@ -73,12 +73,12 @@ ______________________________________
 
 1. Open QGIS and drag Lesson 1.qgz onto the map space the file in QGIS and Load the Project into the FLO-2D Plugin.
 
-.. image:: ../img/Workshop/Worksh028.png
+.. image:: ../img/Workshop/Worksh157.png
 
 
 2. Click Yes to load the plugin.
 
-.. image:: ../img/Workshop/Worksh029.png
+.. image:: ../img/Workshop/Worksh158.png
 
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz

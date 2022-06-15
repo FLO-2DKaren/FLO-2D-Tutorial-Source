@@ -46,30 +46,13 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 
 Check these folders to ensure the data is available before starting the lesson.
 
-Step-by-Step Procedure
-______________________
-
-To setup a FLO-2D flood simulation use these steps.
-
-1.  Open QGIS;
-2.  Import the project domain;
-3.  Set up the project;
-4.  Create the grid;
-5.  Save the project;
-6.  Assign the elevation to the grid;
-7.  Assign roughness data to the grid;
-8.  Assign control variables;
-9.  Save the project;
-10.  Export the FLO-2D data files;
-11.  Run the FLO-2D model.
-
 Step 1: Open QGIS
 _________________
 
 .. image:: ../img/Workshop/Worksh002.png
 
 
-1. Search the start menu and run the QGIS Desktop program.  The version should be QGIS 3.18.2
+1. Search the start menu and run the QGIS Desktop program.  Look for QGIS version 3.22 or higher.
 
 2. Click the New Project icon to load a new map.
 
@@ -180,7 +163,7 @@ _____________________________
 .. note:: Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the GDAL
           Warp processing tool.  To learn more about GDAL Warp, visit this page:
 
-https://gdal.org/programs/gdalwarp.html
+          https://gdal.org/programs/gdalwarp.html
 
 .. image:: ../img/Workshop/Worksh153.png
 
@@ -209,7 +192,8 @@ _____________________________
 4. The roughness values and elevations are assigned to the grid layer in the Schematized Layers group.  Right click the
    Grid layer and click Open Attribute Table to see the data.
 
-.. note::  Don't open a table for a large project >1million cells.  The data is too large to load without applying filters.
+.. note::  Don't open a table for a large project >1 million cells.  The data is too large to load
+           without applying filters.
 
 .. image:: ../img/Workshop/Worksh016.png
 
