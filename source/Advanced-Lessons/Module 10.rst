@@ -235,7 +235,7 @@ Step 5: Complete cross section attributes
 __________________________________________
 
 .. note:: Want to try this lesson with a trapezoidal channel?  Go to
-          `Step 5T <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-5t-fill-trapezoidal-cross-section-attributes>`_below.
+          `Step 5T <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-5t-fill-trapezoidal-cross-section-attributes>`_ below.
 
 1. Right click the **Cross Sections** layer in the User Layers Group and click Open Attribute Table.
 
