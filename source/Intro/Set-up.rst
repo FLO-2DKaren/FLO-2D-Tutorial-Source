@@ -59,7 +59,7 @@ Install FLO-2D using the following instructions.
 
 5. If running a new install, check all options.  If running an update, uncheck Map Objects and EPA SWMM.
 
-.. image:: ../img/Instructions/image15.gif
+.. image:: ../img/Instructions/image15.png
 
 
 6. Click next and Install to run the installer.

@@ -133,7 +133,8 @@ Inlet
 .. image:: ../img/Advanced-Workshop/Lesson050.png
 
 
-2. Uncheck the visibility of the User Layers Left Bank Lines, Right Bank Lines, Cross Sections.
+2. Group the Channel layers.  Select Left Bank Lines, Right Bank Lines, Cross Sections and No Exchange Channel Areas.
+   Right click the group and group them into Channels.  Uncheck the Channels group.
 
 .. image:: ../img/Advanced-Workshop/image50.png
 
@@ -275,12 +276,13 @@ The channel segments are split up to allow for the width of the roadway.
 
 8.  Navigate to the Rating Tables files, select both tables and click Open.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Hydraulilc Structures
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 2\\Hydraulic Structures
 
 .. image:: ../img/Workshop/Worksh079.png
 
 
-9. Note that the data was loaded into the FLO-2D Table Editor for the active structure.
+9. The data was loaded into the FLO-2D Table Editor for the active structure.  If it isn't showing, select the structure
+   from the dropdown menu to update the table and plot.
 
 .. image:: ../img/Workshop/Worksh179.png
 
@@ -385,7 +387,8 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 .. image:: ../img/Workshop/Worksh090.png
 
 
-5. If an error message appears, open the error.chk file from the project directory.
+5. If an error message appears, open the error.chk file from the project directory.  If no error message appears,
+   let the simulation run and create the backup file shown in Step 9.6.
 
 .. image:: ../img/Workshop/Worksh091.png
 

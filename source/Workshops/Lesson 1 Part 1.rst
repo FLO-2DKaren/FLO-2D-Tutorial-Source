@@ -120,6 +120,8 @@ _______________________
 .. note:: If a shapefile is not available, digitize the project domain in the Computational Domain Layer.
           In order to align the grid to a raster, load the raster file into the dialog box.
 
+          C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\Elevation.tif
+
 .. image:: ../img/Workshop/Worksh009.png
 
 
