@@ -789,5 +789,5 @@ prismatic channel interpolator.
 
 .. image:: ../img/Advanced-Workshop/Lesson043.png
 
-5. Return to `Step 10 <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-10-revise-bank-alignment>`_
+5. Return to `Step 10 <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-10-channel-boundary-condition>`_
    to finish the lesson.
