@@ -241,7 +241,7 @@ __________________________________________
 
 2. Click the Edit pencil.
 
-3. Set the field to fcn.
+3. Set the field to fcn and click Update All.
 
 4. Set the n value to 0.035.
 
