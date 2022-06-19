@@ -234,7 +234,8 @@ __________________________________________
 Step 5: Complete cross section attributes
 __________________________________________
 
-.. note:: Want to try this lesson with a trapezoidal channel?  Go to `Step 5 <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-5T-Fill-trapezoidal-cross-section-attributes>`_. below.
+.. note:: Want to try this lesson with a trapezoidal channel?  Go to
+          `Step 5T <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-5t-fill-trapezoidal-cross-section-attributes>`_below.
 
 1. Right click the **Cross Sections** layer in the User Layers Group and click Open Attribute Table.
 
@@ -729,12 +730,12 @@ _____________________________________________
    confined by the intersection of the bank line and the cross section line.
 
 
-.. image:: ../img/Advanced-Workshop/Mod10_009.png
+.. image:: ../img/Advanced-Workshop/mod10_009.png
 
 7. Modify the bank line or cross section line using the node tool to reposition the sample line. Then resample the bank
    elevation data.
 
-.. image:: ../img/Advanced-Workshop/Mod10_010.png
+.. image:: ../img/Advanced-Workshop/mod10_010.png
 
 Step 7: Revise the transition geometry
 ________________________________________
@@ -743,11 +744,11 @@ The cross section geometry is not perfectly uniform.  It transitions into culver
 
 1. Find the cross sections that need to be adjusted.  Measure the geometry and edit the width and side slope.
 
-.. image:: ../img/Advanced-Workshop/Mod10_011.png
+.. image:: ../img/Advanced-Workshop/mod10_011.png
 
 2. Repeat this process for any cross section that needs to be edited.
 
-.. image:: ../img/Advanced-Workshop/Mod10_012.png
+.. image:: ../img/Advanced-Workshop/mod10_012.png
 
 
 Step 8T: Schematize trapezoidal channel
