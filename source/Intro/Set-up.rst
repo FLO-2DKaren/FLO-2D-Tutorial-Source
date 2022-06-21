@@ -3,9 +3,9 @@ FLO-2D Setup
 
 Welcome to the FLO-2D self-help setup page. The purpose of the self-help kit is to set up a computer with:
 
-- FLO-2D
-- QGIS
-- FLO-2D Plugin
+- FLO-2D Software package
+- QGIS stand alone installer
+- Plugins FLO-2D, QuickMapServices, ProfileTool, CurveNumberGenerator
 - Training Data
 
 The training tutorials will teach project development using
@@ -35,7 +35,7 @@ https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668
 
 Step 2: FLO-2D Installer
 ------------------------
-Install FLO-2D using the following instructions.
+Install FLO-2D using the following instructions.  Admin Rights Required.
 
 .. image:: ../img/Instructions/image3.png
 
@@ -70,16 +70,16 @@ Install FLO-2D using the following instructions.
 7. If an error appears related to the DAO35.EXE, run the installer again but uncheck
    Map Objects.
 
-8. The last embedded installation package may cause a restart.
+8. The last embedded installation package may trigger a restart.
 
 .. image:: ../img/Instructions/image17.png
 
 
 Step 3: Documentation Installer
 --------------------------------
-Use these instructions to install the FLO-2D Plugin documentation.
+Use these instructions to install the FLO-2D Plugin documentation.  Admin Rights Not Required.
 
-1. Run the installer.
+1. Run the installer.  FLO-2D Plugin Documentation Installer.exe
 
 2. Default settings are fine, click Close to finish.
 

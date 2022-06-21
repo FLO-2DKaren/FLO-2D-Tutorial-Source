@@ -3,7 +3,7 @@ Module 2 Part 2 – Advanced Hydraulic Structures
 
 **Overview**
 
-In part 2, the data from the previous lesson is extended with a new generalized culvert equation.
+This tutorial will illustrate how to use QGIS table editor and the FLO-2D plugin to manage and edit culvert data.
 
 Required Data
 
@@ -12,9 +12,10 @@ The required data is in Module 1 and 2
 ======== ===========================
 **File** **Content**
 ======== ===========================
-\*.qgz   Project files from Module 1
-\*.gpkg  Geopackage from Module 1
+\*.qgz   QGIS Project files
+\*.gpkg  Geopackage
 \*.tif   Elevation file
+\*.shp   Culvert shapefiles
 ======== ===========================
 
 .. youtube:: 5XFkNQ6z8Oc
@@ -22,178 +23,154 @@ The required data is in Module 1 and 2
 Step 1: Setup the project
 __________________________
 
-1. Start with the project from Module 1 Lesson 1.qgz.
-   This is the completed project from the previous class.
-   FLO-2D Self-Help.
+Get the data: https://flo-2d.sharefile.com/d-s05913b9b6c0149c1a93cec4fe52d7bb5
 
-2. Open QGIS and drag the lesson 1.qgz file into the project.
+1. Download and extract the data from the link above.
+
+2. Open QGIS and drag the lesson 1d.qgz file into the project.
 
 3. Save the project.
 
 .. image:: ../img/Advanced-Workshop/Module031.png
 
 
-Step 2: Simplify the map
-_________________________
+Step 2: Review culvert 009
+____________________________________
 
-1. Turn off unnecessary layers
+1. Zoom to the northeast basin as shown by the yellow box.
 
-   - Blocked Areas
-
-   - Storm drain conduits
-
-   - Storm drain nodes
-
-   - Storm Drain group
-
-   - Levee Lines
-
-.. image:: ../img/Advanced-Workshop/Module053.png
-
-
-Step 3: Build a new structure
-______________________________
-
-1. Zoom to the northwest basin as shown by the yellow box.
-
-2. Find the culvert in the green box.
+2. Find the culvert.
 
 .. image:: ../img/Advanced-Workshop/Module054.png
 
 
-3. Open the Structures widget.
+3. Turn on the Elevation layer and set the elevation style to hillshade.  If the elevation layer is missing, load it
+   from lesson 1.
 
-4. Click the Digitize polyline tools.
-
-.. image:: ../img/Advanced-Workshop/Module055.png
-
-
-5. Click the east side of the structure and then click the west side of the structure.
-
-6. Right click to close the polyline and click OK to close the dialog.
-
-.. image:: ../img/Advanced-Workshop/Module056.png
+.. image:: ../img/Advanced-Workshop/culv001.png
 
 
-Step 4: Measure the culvert length
-___________________________________
+4. Notice the blue polygon.  It covers the centroid of the grid.  The gif shows how to build one.  This polygon is used
+   identify the grid that needs an elevation correction.  It can be more than one but in this case 1 is sufficient.
 
-1. Click the measure tool.
-
-.. image:: ../img/Advanced-Workshop/Module057.png
+.. image:: ../img/Advanced-Workshop/culv002.gif
 
 
-2. Measure the length of the culvert from the upstream headwall to the downstream headwall.
+5. The elevation correction will be applied in a later step.  Step 2.4 sets shows how to set up the correction.
 
-.. image:: ../img/Advanced-Workshop/Module058.png
+6. Click the measure tool and measure the length of the culvert.
 
+.. image:: ../img/Advanced-Workshop/culv003.png
 
-3. Click the Save button and enter the data into culvert.
+7. Review the culvert geometry.
 
-.. image:: ../img/Advanced-Workshop/Module059.png
+   - Circular pipe culvert
+   - 48" diameter
+   - 3 barrels
+   - Square headwall
 
+.. image:: ../img/Advanced-Workshop/culv004.png
 
-Step 5: Complete the structure data and schematize
+Step 3: Complete the structure data
 ___________________________________________________
 
-1. Fill the remaining data in the FLO-2D Table Editor.
-   Use the Data Input Manual to learn the parameters.
+1. Select CULV_009 in the structure editor.
 
-.. image:: ../img/Advanced-Workshop/Module060.png
+   - Rating = Culvert equation
+   - Length = 252ft
+   - Diameter = 4ft
+
+.. image:: ../img/Advanced-Workshop/culv005.png
 
 
-2. Typec = 1 box
+2. TYPEC = 2 circular pipe.
 
 .. image:: ../img/Advanced-Workshop/Module061.png
 
 
-3. Typeen = 1
+3. TYPEEN = 1 square edge with headwall.
 
-.. image:: ../img/Advanced-Workshop/Module062.png
-
-
-4. Culvertn = 0.020
+4. CULVERTN = 0.018
 
 5. KE = 0.50
 
-6. Cubase = 8ft
+.. image:: ../img/Advanced-Workshop/culv006.png
 
-7. Finish the structure by clicking the schematize button.
-
-.. image:: ../img/Advanced-Workshop/Module063.png
+source: Hydraulic Design of Highway Culverts - HDS-5-Third Edition
 
 
-Step 6: Correct invert elevation
-_________________________________
+6. CUBASE = 0ft
 
-1. Select the Google Satellite layer.
+7. MULTBARRELS = 3
 
-2. Drag the elevation file onto the map.
-
-3. The Elevation.tif file is in Module 2 or QGIS Lesson 1.
-
-.. image:: ../img/Advanced-Workshop/Module064.png
+.. image:: ../img/Advanced-Workshop/culv007.png
 
 
-4. Use the ID tool to find the invert elevation of the upstream side of the culvert.
+Step 4: Review culvert 122
+____________________________________
 
-.. image:: ../img/Advanced-Workshop/Module064a.png
+1. Check the Center box and change the structure to CULV_122.
 
+.. image:: ../img/Advanced-Workshop/culv008.png
 
-5. The Identify Results table shows the grid element elevation (purple arrow) and the ras-ter elevation (green arrow).
+2. The map is centered on the CULV_122.
 
-.. image:: ../img/Advanced-Workshop/Module065.png
+3. In this culvert, the elevation polygon was applied to the whole basin.
 
+4. Note how the blue polygon covers the centroid of the cells that will be modified.  This correction is applied to the
+   attenuation basin and the stilling basin.
 
-6. Create a feature in the Elevation Polygon layer and assign the corrected elevation to that feature.
-
-   - Select the elevation polygon layer.
-
-   - Click edit pencil and the Add Polygon Feature button.
-
-.. image:: ../img/Advanced-Workshop/Module066.png
+.. image:: ../img/Advanced-Workshop/culv009.png
 
 
-- Add a polygon to the grid that needs adjustment.
+5. The culvert has a stilling basin just upstream with a levee applied to control the water surface.  The grid element
+   elevation is set to min by the blue polygon and the levee elevation is set to the crest of the weir.  The water will
+   flow over the levee and fill the stilling basin before it flows through the culvert.
 
-- Right click to close the polygon and fill the form.
+6. The levee elevation is 1396.48ft.
 
-- It is only necessary to cover the centroid with this polygon.
+7. The culvert length 100ft.
 
-- Click OK to close the form.
+.. image:: ../img/Advanced-Workshop/culv010.png
 
-.. image:: ../img/Advanced-Workshop/Module067.png
+8. The entrance type is box culvert with wingwalls 30 to 70 degrees.
+
+.. image:: ../img/Advanced-Workshop/culv011a.png
+
+Step 5: Complete the structure data
+___________________________________________________
+
+1. Select CULV_122.
+
+   - Rating = Culvert equation
+   - Length = 100ft
+   - Diameter = 5ft
+
+.. image:: ../img/Advanced-Workshop/culv008a.png
+
+7. The culvert dimensions
+
+   - TYPEC = 1 Box culvert
+   - TYPEEN = 1 Wingwall 30 to 70 Square Head at Crown
+   - CULVERTN = 0.018
+   - KE = 0.4
+   - CUBASE = 8ft
+   - MULTBARRELS = 1
+
+.. image:: ../img/Advanced-Workshop/culv012.png
 
 
-7. Collapse the FLO-2D Widgets.
-
-8. Open the Grid widget.
-
-9. Click the Correction Tool
-
-.. image:: ../img/Advanced-Workshop/Module068.png
-
-
-10. Click yes to save the changes.
-
-.. image:: ../img/Advanced-Workshop/Module069.png
-
-
-11. Select the User Layer Mode.
-
-12. Click the Elevation Polygon Attributes check box.
-
-13. Click OK to perform the calculation and OK once it is finished.
-
-14. The cell elevation is now adjusted to the correct culvert invert.
-
-.. image:: ../img/Advanced-Workshop/Module070.png
-
-
-Step 7: Save, export, and run.
+Step 6: Save, export, and run.
 ______________________________
 
-1. This is a good point to save project.
+.. note:: The accompanying YouTube video shows several more advanced ideas for modeling culverts.
+
+            - Advanced channel culvert modeling
+            - Simple storm drain
+            - When to use tailwater switches.
+            - How to use the head reference elevation.
+
+1. Save the project.
 
 .. image:: ../img/Advanced-Workshop/Module046.png
 
@@ -212,35 +189,14 @@ ______________________________
 .. image:: ../img/Advanced-Workshop/Module073.png
 
 
-3. Go to the Storm Drain Widget and Export the swmm.inp file.
-
-4. Collapse all widgets.
-
-5. Open Storm Drain widget.
-
-6. Click Export SWMM.INP… button
-
-.. image:: ../img/Advanced-Workshop/Module074.png
-
-
-7. Find the Module 2 Export.
-
-8. Name the file swmm.inp and click Save.
-
-.. image:: ../img/Advanced-Workshop/Module075.png
-
-
-9. Click OK to close both windows.
-
-.. image:: ../img/Advanced-Workshop/Module076.png
-
-
-10. Click the Run FLO-2D Icon.
+2. Click the Run FLO-2D Icon.
 
 .. image:: ../img/Advanced-Workshop/Module051.png
 
 
-11. Correct the Paths and click OK to start the simulation.
+3. Click OK to start the simulation.
 
 .. image:: ../img/Advanced-Workshop/Module077.png
+
+.. note:: The end of the YouTube video will cover hydraulic structure review.
 
