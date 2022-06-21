@@ -20,6 +20,14 @@ The required data is in Module 1 and 2
 
 .. youtube:: 5XFkNQ6z8Oc
 
+.. note:: The accompanying YouTube video shows several more advanced ideas for modeling culverts.  The tutorial focus is
+          on the generalized culvert equation.
+
+          - Advanced channel culvert modeling
+          - Simple storm drain
+          - When to use tailwater switches.
+          - How to use the head reference elevation.
+
 Step 1: Setup the project
 __________________________
 

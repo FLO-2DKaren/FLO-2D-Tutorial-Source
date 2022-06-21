@@ -90,7 +90,7 @@ Step 4: QGIS Installer
 ----------------------
 Follow these instructions to set up QGIS.
 
-1. Double click the QGIS-OSGeo4W-3.18.2-1.exe file.
+1. Double click the QGIS-OSGeo4W-3.22.7-1.msi file.
 
 2. Finish installing with the default settings.
 
