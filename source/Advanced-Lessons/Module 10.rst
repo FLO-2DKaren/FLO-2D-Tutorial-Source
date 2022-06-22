@@ -52,7 +52,7 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 
 This video will get through Step 9.  The second video is linked to Step 10.
 
-.. youtube:: iPdn6yWuwPA
+.. youtube:: I1nBGB0c1LQ
 
 Step 1: Open Lesson 1 Part 3 in QGIS
 __________________________________________
@@ -434,7 +434,7 @@ __________________________________________
 
 Instructional Video
 
-.. youtube:: 8zm8ach2jpc
+.. youtube:: l1Ph2BjPGpo
 
 Inlet
 ^^^^^^
@@ -663,10 +663,11 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 
 .. image:: ../img/Workshop/Worksh011.png
 
+Here's a link to the `channel checklist <https://flo-2d.sharefile.com/d-sf161ce13698147cdae31d09b7a1c1dd7L>`_
 
 This final video explains how to review the channel to check if it is running correctly.
 
-.. youtube:: p8EeQ81_pmE
+.. youtube:: shtqYasu_Qo
 
 
 Trapezoidal Channel
@@ -737,7 +738,7 @@ _____________________________________________
 
 .. image:: ../img/Advanced-Workshop/mod10_010.png
 
-Step 7: Revise the transition geometry
+Step 7T: Revise the transition geometry
 ________________________________________
 
 The cross section geometry is not perfectly uniform.  It transitions into culverts and toward the end of the channel.
@@ -791,3 +792,5 @@ prismatic channel interpolator.
 
 5. Return to `Step 10 <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-10-channel-boundary-condition>`_
    to finish the lesson.
+
+.. youtube:: c3zQSBr4nUE
