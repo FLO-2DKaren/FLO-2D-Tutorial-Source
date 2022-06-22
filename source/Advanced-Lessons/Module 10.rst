@@ -673,6 +673,8 @@ This final video explains how to review the channel to check if it is running co
 Trapezoidal Channel
 _____________________
 
+.. youtube:: c3zQSBr4nUE
+
 Step 5T: Fill trapezoidal cross section attributes
 __________________________________________________
 
@@ -792,5 +794,3 @@ prismatic channel interpolator.
 
 5. Return to `Step 10 <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-10-channel-boundary-condition>`_
    to finish the lesson.
-
-.. youtube:: c3zQSBr4nUE
