@@ -24,19 +24,13 @@ All data is provided in the Lesson folders.
      - **Content**
      - **Location**
 
-   * - Shapefiles without pump
+   * - Shapefiles
      - Inlets-Junctions, Outfalls, and Conduits
-     - QGIS Lesson 3\\Storm Drain Shapefiles\\Without pump
-
-   * - Shapefiles with pump
-     - Inlets-Junctions, Outfalls, Conduits, and Pumps
-     - QGIS Lesson 3\\Storm Drain Shapefiles\\With pump
+     - QGIS Lesson 3\\Basic Storm Drain Shapefiles\
 
    * - I4-37-32-26-1.txt
      - Rating Table
-     - QGIS Lesson 3\\Storm Drain Shapefiles
-
-
+     - QGIS Lesson 3\\Basic Storm Drain Shapefiles
 
 Project Location C:\\Users\\Public\\Documents\\FLO-2D Pro Documentation\\Example Projects\\QGIS Tutorials
 
@@ -58,75 +52,46 @@ ______________________________________
 .. image:: ../img/Workshop/Worksh158.png
 
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 1\\QGIS Lesson 1.qgz
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS
+Lesson 1\\QGIS Lesson 1.qgz
 
 3. If necessary add an aerial image to the map.  See Lesson 1 - Part 2 - Step 3 for instructions.
 
 .. image:: ../img/Workshop/Worksh056.png
 
 
-4. Organize the map layers to facilitate the next steps.  Uncheck Channel User Layers and any unused Project Data Layers.
+4. Organize the map layers to facilitate the next steps.  It is OK to group user layers.  Notice
+   the Not Used group for layers that are not required by this project.
+
+.. warning:: Do not remove layers that are part of the geopackage.  It may break the geopackage layout and corrupt the
+             data files.
 
 .. image:: ../img/Workshop/Worksh189.png
 
 
-.. warning:: The next step may require extra data and a plugin update.  If you would like to try the lesson with pumps,
-             download the new data and update the plugin with this link:
-             https://flo-2d.sharefile.com/d-scaa3099c74544a6d9e70b1012e906d84
-
-             If you would like to try the lesson without pumps, simply ignore instructions related to pumps.
-
 Step 2: Import the storm drain shapefiles
 __________________________________________
 
-1. Click the Boundary Condition Points layer in the User Layers Group.
+1. Click User Layers Group.
 
 2. Drag the \*.shp files from QGIS Lesson 3 folder and drop the files in the map space.
    The shapefiles should be located in the User Layers group.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Storm Drain Shapefiles\\With pump
-
-.. note:: If your data doesn't have pumps, simply use the shapefiles in Lesson 3\\Storm Drain Shapefiles
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\
+Basic Storm Drain Shapefiles
 
 .. image:: ../img/Workshop/Worksh093.png
 
 
-The shapefiles info:
+.. important:: For a detailed description of the shapefile features and attributes, go to |attributes|
 
--  **Lesson3InletsJunctions.shp** is a point shapefile that contains the Inlets and Junctions.
-   Inlets collect flow from the surface and their name should start with “I”, this is a requirement for all inlets from
-   type 1 to 5, including manholes.
+.. |attributes| raw:: html
 
--  **Lesson3Outfalls.shp** is a point shapefile that contains the outfalls.
-
--  **Lesson3Conduits.shp** is a polyline shapefile that contains the pipes.
-
--  **Lesson3Pumps.shp** is a polyline shapefile that contains the pumps.
-
-3. Check the Attribute Tables for the new layers.
-   To do this right click any storm drain layer and then click Attributes Table.
-
-.. image:: ../img/Workshop/Worksh094.png
+   <a href="https://documentation.flo-2d.com/Advanced-Lessons/Module%208.html#step-3-review-the-storm-drain-attributes"
+   target="_blank">Storm Drain - Shapefile Overview</a>
 
 
-The following data must be available in the shapefile to create the **SWMM.INP** files and the associated storm drain
-data files: **SWMMFLO.DAT**, **SWMMOUTF.DAT** and **SWMMFLORT.DAT**.
-
-\* The asterisk means the data in the fields will be overwritten by the link node calculator.
-
-.. image:: ../img/Advanced-Workshop/conduits.png
-
-
-.. image:: ../img/Advanced-Workshop/inlets.png
-
-
-.. image:: ../img/Advanced-Workshop/outfalls.png
-
-
-.. image:: ../img/Advanced-Workshop/pumps.png
-
-
-Step 3: Select storm drain fields from the shapefiles
+Step 3: Select component fields from the shapefiles
 _____________________________________________________
 
 1. Expand the Storm Drain Editor widget and click the Select components from shapefile layer button.
@@ -135,6 +100,8 @@ _____________________________________________________
 
 
 2. Use the Editor to assign the Inlets/Junctions parameters from the shapefile to the attribute table.
+
+.. note:: Skip Pumps, Weirs, and Orifice fields for now.
 
 .. image:: ../img/Workshop/Worksh096.png
 
@@ -145,14 +112,8 @@ _____________________________________________________
 .. image:: ../img/Workshop/Worksh098.png
 
 
-.. note:: If the project does not have pumps, click *Unselect all Pump Fields* and then click *Assign Selected Fields*.
-
-
-.. image:: ../img/Workshop/Worksh098a.png
-
-
-3. Once all features are selected in the drop-down menus, click *Assign Selected Inlets/Junctions, Outfalls and
-   Conduits* to create the data structures of the Storm Drain Components.
+3. Once all features are selected in the drop-down menus, click **Assign Selected Inlets/Junctions, Outfalls and
+   Conduits** to create the data structures of the Storm Drain Components.
 
 4. The following message will be displayed.
    Click *OK*.
@@ -166,8 +127,6 @@ _________________________________________
 1. Click the Simulate storm drain checkbox.
 
 2. Click the Auto-assign link nodes button and select Conduits.
-
-3. Repeat the process for Pumps.
 
 .. image:: ../img/Workshop/Worksh100.png
 
@@ -185,50 +144,24 @@ ____________________________
 2. Navigate to the I4 table with this path.
    Select the file and click Open.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Storm Drain Shapefiles\\I4-37-32-26-1.txt
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\
+Storm Drain Shapefiles\\I4-37-32-26-1.txt
 
 3. The table was imported and assigned to the correct inlet node.
 
 .. image:: ../img/Workshop/Worksh103.png
 
 
-4. No error was reported.  If an error was detected because one Type 4 inlet didn't match a selected text file, it
+4. If an error was detected because one Type 4 inlet didn't match a selected text file, it
    would be reported to this file:
 
 .. image:: ../img/Workshop/Worksh103a.png
 
+.. warning:: If a Python error pops up because the Rating Table Warnings file can't be written, simply perform this
+             step again.
 
-Step 6: Set up the pump data
-____________________________
-
-.. note:: Not using pumps? Skip this step.
-
-
-1. Click the Add pump curve button.
-
-2. Name the Pump "P1".
-
-3. Set the Pump Type to Pump4.
-
-4. Add a description. (not required)
-
-.. image:: ../img/Workshop/Worksh101a.png
-
-
-5. Apply a rating table.
-
-.. image:: ../img/Workshop/Worksh101b.png
-
-
-6. Pump instructions can be found in the EPA SWMM 5.0 Help Document
-
-.. image:: ../img/Workshop/Worksh101c.png
-
-
-C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\EPA SWMM 5.0\\EPA SWMM 5.0 Help
-
-Step 7: Schematize storm drain components
-_________________________________________
+Step 6: Schematize the storm drain components
+_______________________________________________________
 
 1. Click on Schematize Storm Drain Components in the Storm Drain Editor widget.
 
@@ -247,7 +180,7 @@ _________________________________________
 .. image:: ../img/Workshop/Worksh106.png
 
 
-Step 8: Export the project
+Step 7: Export the project
 __________________________
 
 1. Click the Set Control Variable icon.
@@ -299,7 +232,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 .. image:: ../img/Workshop/Worksh021f.png
 
 
-Step 9: Run the simulation
+Step 8: Run the simulation
 ____________________________
 
 1. Click the Run FLO-2D Icon.
@@ -315,7 +248,8 @@ C:\\program files (x86)\\flo-2d pro
 
 4. Set the *Project Folder*.
 
-C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\Lesson 3 Export
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials\\QGIS Lesson 3\\
+QGIS Lesson 3 Export
 
 .. image:: ../img/Workshop/Worksh113.png
 
@@ -323,9 +257,23 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 5. After the storm drain model is complete, review FLO-2D Storm Drain Manual Chapter 6 for more details about reviewing
    results.
 
+Step 9. Storm drain project recovery point
+_____________________________________________
+
+1. Save all layers that may be in editing mode, save the project, close QGIS.
+
+2. Find Lesson 1 qgz and gpkg in a File Browser.  Select zip them.  This will create a recovery point with the simple
+   storm drain.
+
+3. Reload the project in QGIS.
+
+.. important:: If you can't remember how to do this step, go to
+               `Lesson 1 Part 2 <https://documentation.flo-2d.com/Workshops/Lesson%201%20Part%202.html#step-2-create
+               -a-recovery-file>`_.
+
 Summary
 _______
 
 This is the completion of a full storm drain model using the FLO-2D model along with digital terrain elevation data and
 an inflow hydrograph, rain, and boundary conditions from Lesson 1 and 2.  This lesson has demonstrated how to create the
-storm drain system by using shapefiles for conduits, pumps, inlets/junctions and outfalls.
+storm drain system by using shapefiles for conduits, inlets/junctions, and outfalls.
