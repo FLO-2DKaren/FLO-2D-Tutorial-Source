@@ -1,4 +1,4 @@
-Lesson 4 – QGIS FLO-2D Plugin Buildings, Walls and Wall Failure
+Lesson 4 – Buildings, Walls and Wall Failure
 ================================================================
 
 Overview
