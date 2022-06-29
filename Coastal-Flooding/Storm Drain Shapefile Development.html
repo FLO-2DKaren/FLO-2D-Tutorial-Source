@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Storm Drain - Shapefile Development &#8212; FLO-2D Tutorials  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Storm Drain Setup" href="Storm%20Drain%20Setup.html" />
+    <link rel="prev" title="Culverts" href="Culverts.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/Flo2D_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">FLO-2D Tutorials  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Setup:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Intro/Set-up.html">
+   FLO-2D Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Self-Help Kit:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">
+   Lesson 1 Part 1 – Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">
+   Lesson 1 Part 2 – Project Recovery Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">
+   Lesson 1 Part 3 – Hydrology
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%202.html">
+   Lesson 2 – Channels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%203.html">
+   Lesson 3 – Create a Storm Drain System Using Shapefiles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%204.html">
+   Lesson 4 – Buildings, Walls and Wall Failure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%205.html">
+   Lesson 5 – Realtime Rainfall Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%206.html">
+   Lesson 6 – Hydraulic Structures
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced Modules:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%201.html">
+   Project Recovery and Debug
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">
+   Part 1 – Hydraulic Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">
+   Module 2 Part 2 – Advanced Hydraulic Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%2010.html">
+   Channels - Urban Channel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bridges:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">
+   Bridge Hydraulic Structure
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Dam Breach, Tailings, Mudflow:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">
+   Prescribed Breach Part 1 - Watershed
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">
+   Prescribed Breach Part 2 - Define Dam and Breach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">
+   Prescribed Breach Part 3 - Add Detail and Troubleshoot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">
+   Mudflow Part 1 - Create a Watershed Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">
+   Mudflow Part 2 - Mudflow Parameters and Hydrograph
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">
+   Mudflow Part 3 - Improve Time of Concentration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%206.html">
+   Dam Breach - Erosion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%207.html">
+   Tailings Dam Model
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Storm Drain:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%208.html">
+   Lesson 3 Advanced - Review Shapefiles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Advanced-Lessons/Module%209.html">
+   Lesson 3 Advanced - Storm drain Network
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Coastal Flooding Tutorial:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Coastal%20Set-Up.html">
+   Coastal Set-Up
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Create%20Grid.html">
+   Create a Grid
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Hydrology.html">
+   Hydrology
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Boundary%20Conditions.html">
+   Boundary Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Channel.html">
+   Channel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Culverts.html">
+   Culverts
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Storm Drain - Shapefile Development
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Storm%20Drain%20Setup.html">
+   Storm Drain Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Urban%20Features.html">
+   Urban Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Run%20and%20Review.html">
+   Review Results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Mapping.html">
+   Mapping Results
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Coastal-Flooding/Storm Drain Shapefile Development.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-import-shapefiles-for-storm-drain-features">
+   Step 1: Import shapefiles for storm drain features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-add-missing-columns-to-shapefiles">
+   Step 2. Add missing columns to shapefiles
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Storm Drain - Shapefile Development</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-import-shapefiles-for-storm-drain-features">
+   Step 1: Import shapefiles for storm drain features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-add-missing-columns-to-shapefiles">
+   Step 2. Add missing columns to shapefiles
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="storm-drain-shapefile-development">
+<h1>Storm Drain - Shapefile Development<a class="headerlink" href="#storm-drain-shapefile-development" title="Permalink to this headline">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>This lesson will outline how to construct a storm drain network that is ready for FLO-2D Plugin to process.</p>
+<p>Required Data</p>
+<table class="table">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Point shapefile</p></td>
+<td><p>Inlets Junctions</p></td>
+</tr>
+<tr class="row-odd"><td><p>Polyline shapefile</p></td>
+<td><p>Conduits</p></td>
+</tr>
+<tr class="row-even"><td><p>Point shapefile</p></td>
+<td><p>Outfalls</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location:  \Coastal Training\Project Data\Storm Drain</p>
+<iframe width="640" height="360" style="margin-bottom: 25px" src="https://www.youtube.com/embed/9bmYrG-x1Mg" frameborder="0" allowfullscreen="1">&nbsp;</iframe><section id="step-1-import-shapefiles-for-storm-drain-features">
+<h2>Step 1: Import shapefiles for storm drain features<a class="headerlink" href="#step-1-import-shapefiles-for-storm-drain-features" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Select the Boundary Condition Points Layer in the User Layer Group.</p></li>
+<li><p>Drag the 3 Shapefiles onto the map space.</p></li>
+<li><p>Uncheck Schema layers and the Google layer.</p></li>
+</ol>
+<img alt="../_images/sd001.png" src="../_images/sd001.png" />
+<ol class="arabic simple" start="4">
+<li><p>Check the Attribute Tables for the layers <strong>conduits, inlets junctions, and outfalls</strong>.
+To do this right click each layer and then Click Attributes Table.</p></li>
+</ol>
+<img alt="../_images/sd002.png" src="../_images/sd002.png" />
+<img alt="../_images/sd003.png" src="../_images/sd003.png" />
+<ol class="arabic simple" start="5">
+<li><p>The following data tables may be found in the shapefile attributes.  Some data is required and some data
+can be skipped.</p></li>
+</ol>
+<img alt="../_images/conduits.png" src="../_images/conduits.png" />
+<img alt="../_images/inlets.png" src="../_images/inlets.png" />
+<img alt="../_images/outfalls.png" src="../_images/outfalls.png" />
+</section>
+<section id="step-2-add-missing-columns-to-shapefiles">
+<h2>Step 2. Add missing columns to shapefiles<a class="headerlink" href="#step-2-add-missing-columns-to-shapefiles" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the attributes for any storm drain shapefile.</p></li>
+<li><p>Click the Edit pencil and the Add Field button.</p></li>
+</ol>
+<img alt="../_images/sd004.png" src="../_images/sd004.png" />
+<ol class="arabic simple" start="3">
+<li><p>Using the tables in Step 2, add a field or two to the shapefiles.</p></li>
+<li><p>In this example a new field called Flap Gate is an integer with 1 length.</p></li>
+</ol>
+<img alt="../_images/sd005.png" src="../_images/sd005.png" />
+<ol class="arabic simple" start="5">
+<li><p>If a real number field is created, the Length and Precision variables can help keep the number precision in check.</p></li>
+</ol>
+<img alt="../_images/sd006.png" src="../_images/sd006.png" />
+<ol class="arabic simple" start="6">
+<li><p>This is the end of the lesson. Keep adding fields until the class continues.
+It’s OK to leave them blank because they won’t be used in the next module.</p></li>
+</ol>
+<iframe width="640" height="360" style="margin-bottom: 25px" src="https://www.youtube.com/embed/6qKJzeUFuCg" frameborder="0" allowfullscreen="1">&nbsp;</iframe></section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Culverts.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Culverts</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Storm%20Drain%20Setup.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Storm Drain Setup</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Karen O'Brien<br/>
+  
+      &copy; Copyright 2022, Karen O&#39;Brien.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

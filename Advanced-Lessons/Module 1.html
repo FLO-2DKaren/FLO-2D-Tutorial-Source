@@ -1,0 +1,818 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Project Recovery and Debug &#8212; FLO-2D Tutorials  documentation</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Part 1 – Hydraulic Structures" href="Module%202%20Part%201.html" />
+    <link rel="prev" title="Lesson 6 – Hydraulic Structures" href="../Workshops/Lesson%206.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/Flo2D_logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">FLO-2D Tutorials  documentation</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Setup:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Intro/Set-up.html">
+   FLO-2D Setup
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Self-Help Kit:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">
+   Lesson 1 Part 1 – Getting Started
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">
+   Lesson 1 Part 2 – Project Recovery Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">
+   Lesson 1 Part 3 – Hydrology
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%202.html">
+   Lesson 2 – Channels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%203.html">
+   Lesson 3 – Create a Storm Drain System Using Shapefiles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%204.html">
+   Lesson 4 – Buildings, Walls and Wall Failure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%205.html">
+   Lesson 5 – Realtime Rainfall Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Workshops/Lesson%206.html">
+   Lesson 6 – Hydraulic Structures
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Advanced Modules:
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Project Recovery and Debug
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%202%20Part%201.html">
+   Part 1 – Hydraulic Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%202%20Part%202.html">
+   Module 2 Part 2 – Advanced Hydraulic Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%2010.html">
+   Channels - Urban Channel
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Bridges:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%202%20Part%203.html">
+   Bridge Hydraulic Structure
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Dam Breach, Tailings, Mudflow:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%203%20Part%201.html">
+   Prescribed Breach Part 1 - Watershed
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%203%20Part%202.html">
+   Prescribed Breach Part 2 - Define Dam and Breach
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%203%20Part%203.html">
+   Prescribed Breach Part 3 - Add Detail and Troubleshoot
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%205%20Part%201.html">
+   Mudflow Part 1 - Create a Watershed Model
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%205%20Part%202.html">
+   Mudflow Part 2 - Mudflow Parameters and Hydrograph
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%205%20Part%203.html">
+   Mudflow Part 3 - Improve Time of Concentration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%206.html">
+   Dam Breach - Erosion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%207.html">
+   Tailings Dam Model
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Storm Drain:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%208.html">
+   Lesson 3 Advanced - Review Shapefiles
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Module%209.html">
+   Lesson 3 Advanced - Storm drain Network
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Coastal Flooding Tutorial:
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">
+   Coastal Set-Up
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">
+   Create a Grid
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Hydrology.html">
+   Hydrology
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">
+   Boundary Conditions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Channel.html">
+   Channel
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Culverts.html">
+   Culverts
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">
+   Storm Drain - Shapefile Development
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">
+   Storm Drain Setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">
+   Urban Features
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">
+   Review Results
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Coastal-Flooding/Mapping.html">
+   Mapping Results
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Advanced-Lessons/Module 1.rst.txt"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.rst</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-create-a-recovery-file">
+   Step 1: Create a recovery file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-recover-a-project">
+   Step 2: Recover a project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3-open-the-project">
+   Step 3: Open the project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-4-export-the-flo-2d-data">
+   Step 4: Export the FLO-2D data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-5-run-the-debug-engine">
+   Step 5: Run the debug engine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-6-debug-the-project-in-qgis">
+   Step 6: Debug the project in QGIS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-7-load-the-conflict-table">
+   Step 7: Load the conflict table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-8-load-the-levee-table">
+   Step 8: Load the levee table
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Project Recovery and Debug</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-1-create-a-recovery-file">
+   Step 1: Create a recovery file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-2-recover-a-project">
+   Step 2: Recover a project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-3-open-the-project">
+   Step 3: Open the project
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-4-export-the-flo-2d-data">
+   Step 4: Export the FLO-2D data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-5-run-the-debug-engine">
+   Step 5: Run the debug engine
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-6-debug-the-project-in-qgis">
+   Step 6: Debug the project in QGIS
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-7-load-the-conflict-table">
+   Step 7: Load the conflict table
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#step-8-load-the-levee-table">
+   Step 8: Load the levee table
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section id="project-recovery-and-debug">
+<h1>Project Recovery and Debug<a class="headerlink" href="#project-recovery-and-debug" title="Permalink to this headline">#</a></h1>
+<iframe width="640" height="360" style="margin-bottom: 25px" src="https://www.youtube.com/embed/lhDwp3cDrOc" frameborder="0" allowfullscreen="1">&nbsp;</iframe><p><strong>Overview</strong></p>
+<p>This module will outline how to build a recovery point and debug a FLO-2D Data Set.</p>
+<p>Required Data</p>
+<p>The required data is in Module 1.</p>
+<table class="table">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lesson 1.qgz</p></td>
+<td><p>Module 1 QGIS file</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lesson 1.gpkg</p></td>
+<td><p>Module 1 GeoPackage</p></td>
+</tr>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Elevation file</p></td>
+</tr>
+</tbody>
+</table>
+<section id="step-1-create-a-recovery-file">
+<h2>Step 1: Create a recovery file<a class="headerlink" href="#step-1-create-a-recovery-file" title="Permalink to this headline">#</a></h2>
+<p><strong>Note: This step discusses how to set up the backup file or recovery point.  Skip if
+these steps are already well understood.</strong></p>
+<ol class="arabic simple">
+<li><p>Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
+This will create a recovery file.</p></li>
+</ol>
+<img alt="../_images/Module002.png" src="../_images/Module002.png" />
+<ol class="arabic simple" start="2">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: Lesson 1 n-value OK.zip.</p></li>
+</ol>
+</section>
+<section id="step-2-recover-a-project">
+<h2>Step 2: Recover a project<a class="headerlink" href="#step-2-recover-a-project" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>This step is used when project data is corrupt.
+If a project is not exporting data correctly or a mistake is made, use this recovery method.</p></li>
+<li><p>Select Lesson 1.gpkg and Lesson 1.qgz and delete them both.</p></li>
+</ol>
+<img alt="../_images/Module003.png" src="../_images/Module003.png" />
+<ol class="arabic simple" start="3">
+<li><p>Extract the recovery files.</p></li>
+</ol>
+<img alt="../_images/image4.png" src="../_images/image4.png" />
+<ol class="arabic simple" start="4">
+<li><p>Change the name of the path so the file can be extracted directly to the Module 1 folder.</p></li>
+</ol>
+<img alt="../_images/Module005.png" src="../_images/Module005.png" />
+</section>
+<section id="step-3-open-the-project">
+<h2>Step 3: Open the project<a class="headerlink" href="#step-3-open-the-project" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open QGIS and drag Lesson 1.qgz onto the canvas the file in QGIS and Load the Project into the FLO-2D Plugin.</p></li>
+</ol>
+<img alt="../_images/Module006.png" src="../_images/Module006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Remove unavailable layers if necessary.
+Autofind and browse works well to resolve paths.
+This step depends on where the data is located and may not show up for all users.</p></li>
+</ol>
+<img alt="../_images/Module007.png" src="../_images/Module007.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click Yes to load the plugin.
+In this case the project path changed but FLO-2D helps find it.</p></li>
+</ol>
+<img alt="../_images/Module008.png" src="../_images/Module008.png" />
+<p>This is the complete project, but some layers are turned off.</p>
+<ol class="arabic simple" start="4">
+<li><p>Turn on the following layers:</p>
+<ul class="simple">
+<li><p>Storm Drain</p></li>
+<li><p>Blocked Areas</p></li>
+<li><p>Storm drain conduits</p></li>
+</ul>
+</li>
+</ol>
+<img alt="../_images/Module009.png" src="../_images/Module009.png" />
+</section>
+<section id="step-4-export-the-flo-2d-data">
+<h2>Step 4: Export the FLO-2D data<a class="headerlink" href="#step-4-export-the-flo-2d-data" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Export Button</p></li>
+</ol>
+<img alt="../_images/Module010.png" src="../_images/Module010.png" />
+<img alt="../_images/Module011.png" src="../_images/Module011.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the image above does not look like the window on your screen, you may be accessing the
+“Lesson 1.gpkg” in the Self-Help training packages.   Delete the file in QGIS Lesson 1
+Folder and return to Step 3.</p>
+</div>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS TutorialsQGIS Lesson 1\Lesson 1.gpkg</p>
+<ol class="arabic simple" start="2">
+<li><p>Click OK and navigate to the export folder.
+Select the folder and export.</p></li>
+</ol>
+<img alt="../_images/Module012.png" src="../_images/Module012.png" />
+<ol class="arabic simple" start="3">
+<li><p>Close the message.</p></li>
+</ol>
+<img alt="../_images/Module013.png" src="../_images/Module013.png" />
+<ol class="arabic simple" start="4">
+<li><p>Go to the Storm Drain Widget and Export the swmm.inp file.</p></li>
+<li><p>Collapse all widgets.</p></li>
+<li><p>Open Storm Drain widget.</p></li>
+<li><p>Click Export SWMM.INP… button</p></li>
+</ol>
+<img alt="../_images/Module014.png" src="../_images/Module014.png" />
+<ol class="arabic simple" start="8">
+<li><p>Name the file swmm.inp and click Save.</p></li>
+</ol>
+<img alt="../_images/Module015.png" src="../_images/Module015.png" />
+<ol class="arabic simple" start="9">
+<li><p>Click OK to close both windows.</p></li>
+</ol>
+<img alt="../_images/Module016.png" src="../_images/Module016.png" />
+</section>
+<section id="step-5-run-the-debug-engine">
+<h2>Step 5: Run the debug engine<a class="headerlink" href="#step-5-run-the-debug-engine" title="Permalink to this headline">#</a></h2>
+<iframe width="640" height="360" style="margin-bottom: 25px" src="https://www.youtube.com/embed/oydBNu4U3uI" frameborder="0" allowfullscreen="1">&nbsp;</iframe><ol class="arabic simple">
+<li><p>Click the Run FLO-2D button.</p></li>
+</ol>
+<img alt="../_images/Module017.png" src="../_images/Module017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Correct the FLO-2D path click the Debug Run button.</p></li>
+</ol>
+<img alt="../_images/Module018.png" src="../_images/Module018.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click OK.</p></li>
+</ol>
+<img alt="../_images/Module019.png" src="../_images/Module019.png" />
+<ol class="arabic simple" start="4">
+<li><p>The debug run is complete when FLO-2D windows close.</p></li>
+</ol>
+<img alt="../_images/Module020.png" src="../_images/Module020.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Cancel to close the Run FLO-2D form.</p></li>
+</ol>
+<img alt="../_images/Module021.png" src="../_images/Module021.png" />
+</section>
+<section id="step-6-debug-the-project-in-qgis">
+<h2>Step 6: Debug the project in QGIS<a class="headerlink" href="#step-6-debug-the-project-in-qgis" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the debug button.</p></li>
+</ol>
+<img alt="../_images/Module022.png" src="../_images/Module022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select Debug and click OK.</p></li>
+</ol>
+<img alt="../_images/Module023.png" src="../_images/Module023.png" />
+<ol class="arabic simple" start="3">
+<li><p>Navigate to the project folder.</p></li>
+<li><p>Select the debug file and click Open.</p></li>
+</ol>
+<img alt="../_images/Module024.png" src="../_images/Module024.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Yes to load the extra debug files.</p></li>
+</ol>
+<img alt="../_images/Module025.png" src="../_images/Module025.png" />
+<ol class="arabic simple" start="6">
+<li><p>Test the filtering and navigation tools on this form.</p></li>
+<li><p>If something breaks or stops working, simply reload by going back to the start of step 6.</p></li>
+<li><p>Click on one of the Element cells and the map will move to that cell.</p></li>
+<li><p>Click on a Row, and the map will not change.</p></li>
+<li><p>Close the form after a content and sated feeling is achieved.</p></li>
+</ol>
+</section>
+<section id="step-7-load-the-conflict-table">
+<h2>Step 7: Load the conflict table<a class="headerlink" href="#step-7-load-the-conflict-table" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the debug button.</p></li>
+</ol>
+<img alt="../_images/Module022.png" src="../_images/Module022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select Current project and click OK.</p></li>
+</ol>
+<img alt="../_images/Module027.png" src="../_images/Module027.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select Storm Drain Inlets to see how the form filters the data.</p></li>
+<li><p>Click the close button upon reaching Zen.</p></li>
+</ol>
+<img alt="../_images/Module028.png" src="../_images/Module028.png" />
+</section>
+<section id="step-8-load-the-levee-table">
+<h2>Step 8: Load the levee table<a class="headerlink" href="#step-8-load-the-levee-table" title="Permalink to this headline">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the debug button.</p></li>
+</ol>
+<img alt="../_images/Module022.png" src="../_images/Module022.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select Levee crests and click OK.</p></li>
+</ol>
+<img alt="../_images/Module026.png" src="../_images/Module026.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click Close to close the form. This one is not so useful.</p></li>
+</ol>
+<img alt="../_images/Module029.png" src="../_images/Module029.png" />
+<ol class="arabic simple" start="4">
+<li><p>Right click the Levee Crests layer and click Open Attribute table.</p></li>
+<li><p>The standard QGIS table has excellent filtering and zoom to features.</p></li>
+<li><p>Close the form when if true mastery was achieved.</p></li>
+</ol>
+<img alt="../_images/Module030.png" src="../_images/Module030.png" />
+</section>
+</section>
+
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../Workshops/Lesson%206.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lesson 6 – Hydraulic Structures</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Module%202%20Part%201.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Part 1 – Hydraulic Structures</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Karen O'Brien<br/>
+  
+      &copy; Copyright 2022, Karen O&#39;Brien.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
