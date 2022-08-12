@@ -52,7 +52,7 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 
 This video will get through Step 9.  The second video is linked to Step 10.
 
-.. youtube:: I1nBGB0c1LQ
+.. youtube:: lrYwqe_0Y0c
 
 Step 1: Open Lesson 1 Part 3 in QGIS
 __________________________________________
@@ -380,7 +380,7 @@ __________________________________________
 Step 9: Interpolate cross section data
 ________________________________________
 
-N type channels are interpolated using the Interpolator.exe program.
+N type channels are interpolated using the INTERPOLATE.EXE program.
 This method will outline how to call the interpolator and reload the data.
 
 .. warning:: If this process needs to be repeated, click the Schematize button before repeating
@@ -406,7 +406,7 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 4. The second action calls the Interpolate.exe program from the FLO-2D Pro folder.
 
-.. note:: If this process results in an Interpolate.exe error, it is possible to move that file to another location and
+.. note:: If this process results in an INTERPOLATE.EXE error, it is possible to move that file to another location and
           make sure it is named correctly.
 
           If Interpolate.exe is missing from the FLO-2D Pro folder, get it here:
@@ -663,7 +663,9 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 
 .. image:: ../img/Workshop/Worksh011.png
 
-Here's a link to the `channel checklist <https://flo-2d.sharefile.com/d-sf161ce13698147cdae31d09b7a1c1dd7L>`_
+Here's a link to the `channel checklist <https://flo-2d.sharefile.com/d-s0a23a86268f8401a85db1d582e997619>`_
+
+Sorry for the Name and Email request on that link.  Trying to eliminate bot downloads.
 
 This final video explains how to review the channel to check if it is running correctly.
 
