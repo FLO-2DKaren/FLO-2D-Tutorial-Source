@@ -17,9 +17,9 @@ to set-up the computer.
 Step 1: Get the Data
 ---------------------
 
-Use this Download Link to access all **installers**, training data, and videos.
+Use this Download Link to access all **installers**, and training data.
 
-https://flo-2d.sharefile.com/d-s4888578b704c46138c9dd5e39f4b8668
+https://flo-2d.sharefile.com/d-s54699ab39a084ea3b6a321c816b2881e
 
 .. image:: ../img/Instructions/image1.png
 
