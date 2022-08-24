@@ -7,7 +7,7 @@ Please use these instructions to get your computer ready for the 2022 FMA Storm 
 
 **FMA 2022 Workshop Setup.**
 
-.. youtube:: tTvmjdDRnzw
+.. youtube:: sTDCm6NX1Pw
 
 Step 1: Get the Data
 ___________________________________
@@ -100,7 +100,7 @@ Follow these instructions to set up QGIS.
 .. image:: ../img/Instructions/image8.png
 
 
-3. Open QGIS.
+3. Open QGIS.  **This step should be completed on the User Account not the Admin Account.**
 
 .. image:: ../img/Workshop/Worksh002.png
 
@@ -130,7 +130,7 @@ With QGIS installed it is time to add the FLO-2D plugin and a few other handy pl
 .. image:: ../img/Instructions/image11.png
 
 
-3. Lastly install from Zip FLO-2D Pro.
+3. Install from Zip is used for the FLO-2D Plugin.  Your plugin name may not match the animation below.
    Close the Plugin Manager once everything is finished installing.
 
 .. image:: ../img/Instructions/image12.gif
@@ -155,7 +155,7 @@ ___________________________________
 
 5. Review the animated gif for help.  Keep your eye on the timestamp to see when it restarts.
 
+6. Move the Class data from the Download folder into the Coastal Training Folder.
+
 .. image:: ../img/Coastal/quickaccess.gif
 
-
-6. Move the Class data from the Download folder into the Coastal Training Folder.

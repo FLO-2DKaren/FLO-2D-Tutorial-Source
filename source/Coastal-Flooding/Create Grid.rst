@@ -26,31 +26,37 @@ Data Location:  \\Coastal Training\\Project Data\\AOI
 Step 1: Set up the FLO-2D project
 __________________________________
 
+1. Open QGIS 3.22.xx.
+
+2. Drag the Project Area of Interest shapefile onto the map.
+
+C:\\user\\public\\public document\\FLO-2D Pro Documentation\\Example Projects\\Coastal Training\\Project Data\\AOI
+
+.. image:: ../img/Coastal/aoi.png
+
+3. Click the Set-up button.
+
 .. image:: ../img/Coastal/creategrid001.png
 
-
-1. Click the Set-up button fill out the dialog box as shown below.
-   Set the Grid cell size to 20 ft.
-
-2. Click Create.
+4. Click create.
 
 .. image:: ../img/Coastal/creategrid002.png
 
 
-3. Save the geopackage file to the project folder.
+5. Save the geopackage file to the project folder.
 
-4. Name the file Coastal Project.gpkg.
+6. Name the file Coastal Project.gpkg.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Coastal Training
 
-5. Set the project CRS to Florida East HARN USft.
+7. Set the project CRS to Florida East HARN USft.
    Filter the list with an EPSG code: 2881.
    Select EPSG: 2881 and click OK.
 
 .. image:: ../img/Coastal/creategrid003.png
 
 
-6. Wait for the geopackage to write and check the accuracy of the project settings and click OK.
+8. Wait for the geopackage to write and check the accuracy of the project settings and click OK.
 
 .. image:: ../img/Coastal/creategrid004.png
 
@@ -106,7 +112,7 @@ ______________________________
 .. image:: ../img/Coastal/creategrid009.png
 
 
-4. Move the elevation raster layer to the bottom of the layers list and click it.
+4. Move the elevation raster layer to the bottom of the layers list and click it to activate the Elevation layer.
 
 .. image:: ../img/Coastal/moveelevationtobottom.gif
 
