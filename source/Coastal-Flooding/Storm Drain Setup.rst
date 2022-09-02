@@ -69,7 +69,12 @@ Data Location: \\Coastal Training\\Project Data\\Storm drain\\Type 4 Rating Tabl
 
 .. image:: ../img/Coastal/sd014.png
 
-3. The table was imported and assigned to the correct inlet nodes.  Click OK to close the message.
+3. If an error message appears, the path was not rectified and the rating table check file was not written.
+   Repeat opening the files and the path will be fixed.
+
+.. image:: ../img/Coastal/sd016a.png
+
+4. The table was imported and assigned to the correct inlet nodes.  Click OK to close the message.
 
 .. image:: ../img/Coastal/sd016.png
 
@@ -85,14 +90,16 @@ ___________________________________________
 
 .. image:: ../img/Coastal/sd018.png
 
-3. The storm drain schematized data layers have been completed and the attribute tables can be reviewed in the Storm
-   Drain layers: Inlets and Outfalls.
-
-4. The storm drain components are now part of the schematized layers in the project.
+3. The storm drain components are now part of the schematized layers in the project.
 
 .. image:: ../img/Coastal/sd019.png
 
-5. Individual Inlets, Junctions, Outfalls and Conduits can be viewed and edited in the various dialog boxes.
+4. Individual Inlets, Junctions, Outfalls and Conduits can be viewed and edited in the various dialog boxes.
+
+.. image:: ../img/Coastal/sd020a.png
+
+5. The dialog boxes allow the user to select any node or link and review or edit it's variables.  The box also
+   automatically pans the map to the node or link that is selected.
 
 .. image:: ../img/Coastal/sd020.png
 
