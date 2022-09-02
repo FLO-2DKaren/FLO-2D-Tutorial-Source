@@ -163,6 +163,12 @@ ______________________________
 .. image:: ../img/Coastal/hydrology017.png
 
 
+7. Layers can be grouped into like groups to simplify the layers list.  A tidy layers list makes finding data easier.
+   Take a moment to group data into a well organized system.
+
+.. image:: ../img/Coastal/hydrology017a.png
+
+
 Step 5. Calculate infiltration
 ______________________________
 

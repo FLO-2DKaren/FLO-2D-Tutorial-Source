@@ -24,14 +24,11 @@ __________________________
 
 1. Uncheck the following layers:
 
-- Infiltration Layers
-- Soil Training
-- LandUse Training
+   - Infiltration Layers
+   - Soil Training
+   - LandUse Training
 
 2. Check Elevation Raster
-
-.. image:: ../img/Coastal/managelayers.gif
-
 
 3. Double click the Elevation Raster layer.  Set the symbology to Hillshade and click OK.
 
@@ -41,7 +38,7 @@ __________________________
 Step 2: Set up the boundary polygon
 ____________________________________
 
-1. Use the mouse wheel to zoom to the West side of the project where the water leaves the map.
+1. Use the mouse wheel to zoom to the west side of the project where the water leaves the grid.
 
 .. image:: ../img/Coastal/bc002.png
 

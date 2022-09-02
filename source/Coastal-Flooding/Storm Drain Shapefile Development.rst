@@ -22,15 +22,13 @@ Data Location:  \\Coastal Training\\Project Data\\Storm Drain
 Step 1: Import shapefiles for storm drain features
 ________________________________________________________
 
-1. Select the Boundary Condition Points Layer in the User Layer Group.
+1. Select the Storm Drain Group in the User Layer Group.
 
 2. Drag the 3 Shapefiles onto the map space.
 
-3. Uncheck Schema layers and the Google layer.
-
 .. image:: ../img/Coastal/sd001.png
 
-4. Check the Attribute Tables for the layers **conduits, inlets junctions, and outfalls**.
+4. Check the Attribute Tables for the layers **Conduits, Inlets Junctions, and Outfalls**.
    To do this right click each layer and then Click Attributes Table.
 
 .. image:: ../img/Coastal/sd002.png

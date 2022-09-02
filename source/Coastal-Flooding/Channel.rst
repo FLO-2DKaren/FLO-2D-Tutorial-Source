@@ -43,7 +43,7 @@ _________________________
 Step 2: Load the data
 ______________________________
 
-1. Click the Project Data group.
+1. Click the Channel group in the User Layers.
 
 2. Drag the channel shapefiles onto the map.
 
@@ -53,17 +53,17 @@ ______________________________
 Step 3: Left bank digitize
 ______________________________
 
-1. Go to the Project Data Group.  Click the Left Bank layer.
+1. Click the newly imported Left Bank layer. It will be copied into the official layer.
 
-2. Click the select features tool and drag the mouse over the channel to select the line.
+2. Click the select features tool and drag the mouse over the left bank feature to select the line.
 
 3. Ctrl-C will copy the line.
 
-4. Go to the User Layers Group.  Click the Left Bank Lines.
+4. Click the official Left Bank Lines.
 
 5. Click the Edit Pencil button and Ctrl-V to paste the line into the Left Bank Lines layer.
 
-6. Save the User Bank Lines layer and untoggle the Editor Pencil.
+6. Save the Left Bank Lines layer and untoggle the Editor Pencil.
 
 7. Watch the animated image for a demo.
 
@@ -73,13 +73,13 @@ ______________________________
 Step 4: Right bank digitize
 ______________________________
 
-1. Go to the Project Data Group.  Click the Right Bank layer.
+1. Click the newly imported Right Bank layer.  It will be copied into the official layer.
 
-2. Click the select features tool and drag the mouse over the channel to select the line.
+2. Click the select features tool and drag the mouse over the right bank feature to select the line.
 
 3. Ctrl-C will copy the line.
 
-4. Go to the User Layers Group.  Click the Right Bank Lines.
+4. Click the official Right Bank Lines.
 
 5. Click the Edit button and Ctrl-V to paste the line into the Right Bank Lines layer.
 
@@ -125,13 +125,13 @@ _________________________________
 
 8. The first cross section has important restrictions.
 
--  The line must cross the left bank line
+   -  The line must cross the left bank line
 
--  The line must start in the same cell as the left bank line.
+   -  The line must start in the same cell as the left bank line.
 
--  The line must cross the right bank line.
+   -  The line must cross the right bank line.
 
--  The line must start in the same cell as the right bank line.
+   -  The line must start in the same cell as the right bank line.
 
 9. Click the Add Cross Section Lines button on the Cross Section Editor.
 
@@ -153,19 +153,19 @@ _________________________________
 
 11. Handy digitizing features:
 
-- Left click to drop a point.  Right click to close a polyline
+    - Left click to drop a point.  Right click to close a polyline
 
-- Rotate the scroll wheel to zoom in and out.
+    - Rotate the scroll wheel to zoom in and out.
 
-- Click and hold the scroll wheel to pan while in editing mode.
+    - Click and hold the scroll wheel to pan while in editing mode.
 
-- Use the delete key to delete the last point created.
+    - Use the delete key to delete the last point created.
 
-- Use the Esc key to cancel the polyline.
+    - Use the Esc key to cancel the polyline.
 
-- The point won’t drop until the mouse button is released.
+    - The point won’t drop until the mouse button is released.
 
-- Redo and undo have limited functionality and can be useful.
+    - Redo and undo have limited functionality and can be useful.
 
 
 12. Once the last cross section is complete.  Click the Save icon on the Cross Sections Editor.
@@ -173,7 +173,11 @@ _________________________________
 .. image:: ../img/Coastal/chan009.png
 
 
-13. The final cross sections should look like something like this:
+13. Remove the unofficial channel layers from the layers list.  Right click them and click Remove.
+
+.. image:: ../img/Coastal/chan010a.png
+
+14. The final cross sections should look like something like this:
 
 .. image:: ../img/Coastal/chan010.png
 
@@ -198,15 +202,15 @@ __________________________________
 .. image:: ../img/Coastal/chanattrib.gif
 
 
-8. Methods to determine the channel geometry.
+8. Methods to determine the urban channel geometry.
 
-    a. As-built files are the first source of data but not available in all cases.
+   a. As-built files are the first source of data but not available in all cases.
 
-    b. Measure the width with QGIS measure tool.
+   b. Survey channel cross sections.
 
-    c. Measure depth from elevation or site visit.
+   c. Sample elevation data from a LiDAR raster. (This method only works if the channels are emtpy.)
 
-    d. Measure side slope from elevation data or site visit.
+   d. Measure and estimate channel geometry with QGIS tools.
 
 Step 7: Load cross section data
 _________________________________
@@ -225,7 +229,7 @@ _________________________________
 
 Data Location: \\Coastal Training\\Project Data\\Channel\\Cross Section Station Elevation Files
 
-3. Copy the data and close the text file.
+3. Copy the data and close the text file.  Tip: Hold down the Ctrl key and press A C W keys.
 
 .. image:: ../img/Coastal/chan013.png
 
@@ -241,7 +245,7 @@ Step 8: Schematize channel
 ______________________________
 
 .. note:: If any of the following procedure needs to be repeated, always return to this Schematize step to reset
-          the data before trying to modify anything.
+          the data before trying to modify anything.  It is a reset button and it is very important.
 
 1. Click Schematize channel.
 
@@ -299,10 +303,11 @@ the channels.
 
 Step 10: Interpolate the channel
 _________________________________
-.. youtube:: 5CrrcZATtxk
 
 N type channels are interpolated using the Interpolator.exe program.
 This method will outline how to call the interpolator and reload the data.
+
+.. youtube:: 5CrrcZATtxk
 
 .. note:: If this process needs to be repeated for any reason, click Schematize button before performing this
           step.
@@ -343,6 +348,9 @@ Data Location: \\Coastal Training\\Project Data\\Channel Interpolate Test
 
 Step 11: Channel boundary condition
 ___________________________________
+
+The boundary condition for this channel include a hydrograph at the upstream side and a tide stage control at the
+downstream side.
 
 .. youtube:: 5CrrcZATtxk
 
@@ -388,7 +396,7 @@ Inlet
 .. image:: ../img/Coastal/chan032.png
 
 
-Data Location: \\Coastal Training\\Project Data\\24hr100yrInflow.txt
+Data Location: \\Coastal Training\\Project Data\\Boundary Conditions\\24hr100yrInflow.txt
 
 10. Place the cursor in the first cell of the Table and click Paste.
 
@@ -439,18 +447,23 @@ Two gated weirs are in the Cocohatchee canal.
 
 4. Move upstream to the East and create the second structure.
 
+.. note:: Pan while editing: Use the arrow keys or click and drag the map with the mouse wheel.
+
+          Zoom while editing: Roll the mouse wheel to zoom.
+
+
 .. image:: ../img/Coastal/chan040.png
 
 
 5. Click Save on the Structure Editor.  Fill out the data for each structure.
 
--  Name the culverts Coco1, Coco2
+   -  Name the culverts Coco1, Coco2
 
--  Type \= Channel
+   -  Type \= Channel
 
--  Rating \= Rating table
+   -  Rating \= Rating table
 
--  Tailwater condition is Allow Upstream Flow.
+   -  Tailwater condition is Allow Upstream Flow.
 
 .. image:: ../img/Coastal/chan041.png
 
@@ -467,7 +480,7 @@ Data Location: Coastal Training\\Project Data\\Weirs
 .. image:: ../img/Coastal/chan043.png
 
 
-8. The data was loaded into the FLO-2D Table Editor for the active structure.
+8. The data was loaded into the FLO-2D Table Editor for the active structure.  Select a structure to refresh the plot.
 
 .. image:: ../img/Coastal/chan044.png
 
@@ -478,8 +491,6 @@ Data Location: Coastal Training\\Project Data\\Weirs
 
 
 10. The hydraulic structures are now ready.
-
-11. If the table and plot did not update, refresh the tables by selecting the structure again in the widget.
 
 Step 13: Export the project
 ______________________________
@@ -503,7 +514,7 @@ ______________________________
 .. image:: ../img/Coastal/chan049.png
 
 
-5. Create a new Export folder to test the weirs and channel hydraulics
+5. Create a new Export folder to test the weirs and channel hydraulics.
 
 .. image:: ../img/Coastal/chan050.png
 

@@ -28,7 +28,7 @@ Start by cleaning up the map space so the next layer will be easy to see.
 
 2. Check the Elevation Layer.
 
-3. Click the Boundary Condition Points Layer to activate it.  It is in the User Layers Group.
+3. Click the Structure Lines layer to activate it.  It is in the User Layers Group.
 
 4. Drag the Culvert Data.shp onto the map space.
 
@@ -91,16 +91,16 @@ ___________________________________________
 .. image:: ../img/Coastal/culv005.png
 
 
-3. Use the table to complete the structure data in the Widget.
+3. Use the following Image or the attribute table to fill out the culvert variables.
 
 4. If the following image is not clear, right click it
-   and open it in a new tab.  The tutorials have better resolution using Firefox browser.
+   and open it in a new tab.
 
 .. image:: ../img/Coastal/culv007.png
 
 
 5. For Culvert Equations, extra data is needed in the Table Editor.  If the following image is not clear, right click it
-   and open it in a new tab.
+   and open it in a new tab. The new plugin also has a Mult_Barrel option.  Set Mutl_Barrel to 1.
 
 .. image:: ../img/Coastal/culv008.png
 
