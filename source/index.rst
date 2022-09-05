@@ -39,7 +39,6 @@ Table of Contents
    /Advanced-Lessons/Module 1
    /Advanced-Lessons/Module 2 Part 1
    /Advanced-Lessons/Module 2 Part 2
-   /Advanced-Lessons/Module 10
 
 .. toctree::
    :maxdepth: 1
@@ -62,10 +61,19 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Storm Drain:
+   :caption: Advanced Channel:
+
+   /Advanced-Lessons/Module 10
+   /Advanced-Lessons/Module 12
+   /Advanced-Lessons/Module 13
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Advanced Storm Drain:
 
    /Advanced-Lessons/Module 8
    /Advanced-Lessons/Module 9
+   /Advanced-Lessons/Module 11
 
 .. toctree::
    :maxdepth: 1
