@@ -1,12 +1,12 @@
-Lesson 2 Advanced - Urban Channel
-===================================
+Lesson 2 Advanced - Trapezoidal Channel
+============================================
 
 **Overview**
 
 
 Complete QGIS Lesson 1 before starting this lesson.
-Use this training module to build an urban drainage channel by digitizing the channel components.  Finish it up by
-adding culverts to the channel, boundary conditions.  The final part of the module is to review the channel results.
+This module is similar to the Advanced Urban Channel.  The only difference is that it applies a Trapezoidal Geometry
+instead of a natural channel geometry.
 
 This module replaces Lesson 2.  Lesson 2 uses a RAS import and this one uses QGIS to build the channel from scratch.
 
@@ -231,66 +231,88 @@ __________________________________________
 .. image:: ../img/Advanced-Workshop/Lesson021.png
 
 
-Step 5: Complete cross section attributes
-__________________________________________
+.. youtube:: c3zQSBr4nUE
 
-1. Right click the **Cross Sections** layer in the User Layers Group and click Open Attribute Table.
+Step 5: Fill trapezoidal cross section attributes
+__________________________________________________
 
-2. Click the Edit pencil.
+1. Open the Cross Sections attribute table from the User Layers Group.
 
-3. Set the field to fcn and click Update All.
+2. Change the fcn column to 0.035 to set the roughness value.
 
-4. Set the n value to 0.035.
+3. Change the Type to 'T' and apply to all cross sections.
 
-.. image:: ../img/Advanced-Workshop/Mod10_011.gif
+4. Name the cross sections in groups depending on what channel segment they belong to.
 
-5. Click Update All.
-
-6. Name the cross sections.
-
-7. Click Save button and turn off editor.
-
-8. Close the table.
-
-.. image:: ../img/Advanced-Workshop/Mod10_001.png
-
-9. It is OK to group the User Layers into a more organized system.  Don't remove any layers.
-
-.. image:: ../img/Advanced-Workshop/mod10_006.png
+.. image:: ../img/Advanced-Workshop/mod10_007.png
 
 
-Step 6: Sample station elevation
-_________________________________
+5. Use the roller wheel on the mouse to scroll down the list of cross sections.  This will trigger the geometry table
+   to be filled.
 
-1. Select the first Natural cross section and click the Sample current natural cross section elevation button.
-
-.. image:: ../img/Advanced-Workshop/Lesson027.png
+.. image:: ../img/Advanced-Workshop/mod10_013.gif
 
 
-2. Repeat this step for each Natural Type cross section.
+6. Open the User cross section (user_chan_t) data from the Channels group.  Fill the missing data.  Bank data will be
+   automatically filled later.
 
-.. image:: ../img/Advanced-Workshop/Mod10_012.gif
+   - Trapezoidal width = 28 ft
+
+   - Trapezoidal depth = 10 ft
+
+   - Trapezoidal side slope = 0.5
+
+.. image:: ../img/Advanced-Workshop/mod10_008.png
+
+Step 6. Sample bank elevation (Trapezoidal)
+_____________________________________________
+
+1. The trapezoidal channels need bank elevation.
+   Use the Cross Section Editor widget to sample the elevation from the elevation raster.
+
+2. Set the Source to From Raster Layer: Elevation.
+
+3. Click Sample bank elevation for all R, T, and V cross sections.
+
+.. image:: ../img/Advanced-Workshop/Lesson024.png
 
 
-3. If a cross section is not sampled correctly, the plot will indicate a bad bank alignment.  The sample limits are
+4. Click Yes to finish the process.
+
+.. image:: ../img/Advanced-Workshop/Lesson025.png
+
+
+5. See that the Table and Plot now have full data for the R and T cross sections.
+
+.. image:: ../img/Advanced-Workshop/Mod10_007.gif
+
+
+6. If a cross section bank is not sampled correctly, the plot will indicate a bad bank elevation. The sample limits are
    confined by the intersection of the bank line and the cross section line.
 
-.. image:: ../img/Advanced-Workshop/mod10_003.png
 
+.. image:: ../img/Advanced-Workshop/mod10_009.png
 
-4. Modify the bank line or cross section line using the node tool to reposition the sample line.  Then resample the
+7. Modify the bank line or cross section line using the node tool to reposition the sample line. Then resample the bank
    elevation data.
 
-.. image:: ../img/Advanced-Workshop/mod10_004.png
+.. image:: ../img/Advanced-Workshop/mod10_010.png
+
+Step 7: Revise the transition geometry
+________________________________________
+
+The cross section geometry is not perfectly uniform.  It transitions into culverts and toward the end of the channel.
+
+1. Find the cross sections that need to be adjusted.  Measure the geometry and edit the width and side slope.
+
+.. image:: ../img/Advanced-Workshop/mod10_011.png
+
+2. Repeat this process for any cross section that needs to be edited.
+
+.. image:: ../img/Advanced-Workshop/mod10_012.png
 
 
-5. After the final cross section is sampled correctly, save the Left Bank Line, Right Bank Lines, and Cross Sections
-   user layers.
-
-.. image:: ../img/Advanced-Workshop/mod10_005.png
-
-
-Step 7: Schematize channel
+Step 8: Schematize trapezoidal channel
 __________________________________________
 
 .. warning::  The schematize button is a great reset button.  If any channel modification is required, click the
@@ -298,14 +320,38 @@ __________________________________________
 
 1. Click Schematize channels.
 
-.. image:: ../img/Advanced-Workshop/Lesson028.png
+.. image:: ../img/Advanced-Workshop/mod10_013.png
 
 
 2. If the channel schematizing process was successful, the following message will appear.
    Click Close.
 
-.. image:: ../img/Advanced-Workshop/Lesson029.png
+.. image:: ../img/Advanced-Workshop/mod10_014.png
 
+.. note::  If the banks need to be modified, follow `Step 8 <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-8-revise-bank-alignment>`_
+
+Step 9: Interpolate the channel
+__________________________________________
+
+There are two different interpolators because there are prismatic (R, T), and natural (N) channel types.  This step uses the
+prismatic channel interpolator.
+
+1. Click the Interpolate bed elevation data button.  This button only works for R, T, and V type channels.
+
+.. image:: ../img/Advanced-Workshop/Lesson041.png
+
+
+2. Click OK.
+
+.. image:: ../img/Advanced-Workshop/Lesson042.png
+
+
+3. This process will apply a linear interpolation to the trapezoidal type channel data between User Cross Sections.
+
+.. image:: ../img/Advanced-Workshop/Lesson043.png
+
+5. Return to `Step 10 <https://documentation.flo-2d.com/Advanced-Lessons/Module%2010.html#step-10-channel-boundary-condition>`_
+   to finish the lesson.
 
 Step 8: Revise bank alignment
 __________________________________________
@@ -667,4 +713,5 @@ Sorry for the Name and Email request on that link.  Trying to eliminate bot down
 This final video explains how to review the channel to check if it is running correctly.
 
 .. youtube:: shtqYasu_Qo
+
 
