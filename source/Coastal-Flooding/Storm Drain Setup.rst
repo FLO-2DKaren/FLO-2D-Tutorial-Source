@@ -103,6 +103,9 @@ ___________________________________________
 
 .. image:: ../img/Coastal/sd020.png
 
+.. image:: ../img/Coastal/sd020b.png
+
+
 Step 5: Export SWMM.INP file
 ____________________________
 

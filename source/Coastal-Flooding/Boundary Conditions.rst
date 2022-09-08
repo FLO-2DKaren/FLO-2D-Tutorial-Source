@@ -68,25 +68,28 @@ ____________________________________
 
 8. Press Ctrl-Shift End on the keyboard to select all data to the end of the file.
 
-9. Press Ctrl-V to copy the data.  Press Ctrl-W to close the file.
+9. Press Ctrl-C to copy the data.  Press Ctrl-W to close the file.
 
 .. image:: ../img/Coastal/copytide.gif
 
 
 10. Click on the first cell of the FLO-2D Table Editor and click the Paste Button.
 
+11. Set the first stage to -3ft.  This will allow the boundary to fill slowly and help prevent instability.
+
 .. image:: ../img/Coastal/pastetidestage.gif
 
 
-11. Name the time series and click the Schematize button.
+12. Name the time series and click the Schematize button.
 
 .. image:: ../img/Coastal/bc005.png
 
 
-12. The boundary should look like this:
+13. The boundary should look like this:
 
 .. image:: ../img/Coastal/bc006.png
 
+14. This data will be saved to the OUTFLOW.DAT file.
 
 Step 3. Save, export, and run
 ______________________________

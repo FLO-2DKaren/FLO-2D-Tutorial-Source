@@ -32,7 +32,7 @@ _____________________________________
 .. image:: ../img/Coastal/hydrology001.png
 
 
-3. To navigate to the project area, search for "Immokalee and Tamiami"
+3. To navigate to the project area, search for "Immokalee and Tamiami 34110"
 
 .. image:: ../img/Coastal/hydrology002.png
 
@@ -48,6 +48,7 @@ _____________________________________
 
 
 6. The file was most likely saved to the Download folder.  Copy it to the project folder and Extract it.
+
    \\Coastal Training\\Project Data\\Hydrology
 
 .. image:: ../img/Coastal/hydrology005.png
@@ -71,21 +72,20 @@ _____________________________________
 
 
 11. Use the Export option to save the data in the correct coordinate system and clipped to the Map Canvas Extent.
-
-12. Right click the layer and Export the data.
+    Right click the layer and Export the data.
 
 .. image:: ../img/Coastal/hydrology009.png
 
 
-13. Save the data to the Hydrology folder.
+12. Select the Hydrology folder to save the data.
 
-14. Set the coordinate system to EPSG 2881.
+13. Set the coordinate system to EPSG 2881.
 
-15. Reduce the size of the raster with the Map Canvas Extent button.
+14. Click the Map Canvas Extent button to clip the new raster to the project area.
 
-16. Add the saved file to the map.
+15. Check add the saved file to the map.
 
-17. Click OK.
+16. Click OK.
 
 .. image:: ../img/Coastal/hydrology010.png
 
@@ -118,7 +118,7 @@ ______________________________
 
 2. Enter the total rainfall.
 
-3. Select a rainfall distribution.
+3. Select a rainfall distribution with the Folder button.
 
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions\\SCS 24-Hr Type II
 
@@ -127,18 +127,16 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions\\
 .. image:: ../img/Coastal/hydrology014.png
 
 
-5. Interpolate the rainfall depth reduction factor.
+5. To interpolate the rainfall depth reduction factor, click the AR button on the bottom of the rain editor widget.
 
-6. Click the AR button.
+6. Fill the form.
 
-7. Fill the form.
-
-8. Click OK to calculate the rainARF and OK to close the message.
+7. Click OK to calculate the rainARF and OK to close the message.
 
 .. image:: ../img/Coastal/hydrology015.png
 
 
-9. The rainfall is now complete.  It will be exported into the RAIN.DAT file.
+8. The rainfall is now complete.  It will be exported into the RAIN.DAT file.
 
 Step 4. Simplify layers list
 ______________________________

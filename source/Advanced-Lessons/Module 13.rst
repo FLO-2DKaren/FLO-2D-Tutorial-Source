@@ -47,4 +47,22 @@ This video explains how to review the channel to check if it is running correctl
 Step 1: Open the Channel Checklist
 __________________________________________
 
-1.
+1. Open the Reviewer's Checklist in Excel or Google Sheets.
+
+Excel Spreadsheet |ExcelChk|.
+
+.. |ExcelChk| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-se485d1efcd46409db1b0ebc94002b2cc"
+   target="_blank">Download</a>
+
+Google Spreadsheet |Googlechk|.
+
+.. |Googlechk| raw:: html
+
+   <a href="https://docs.google.com/spreadsheets/d/1yGAyYajBAmsADhhQStI50epvbzebAXrx0LeWNkmuX4Y/edit?usp=sharing"
+   target="_blank">Download</a>
+
+2. Find the Channel tab.
+
+.. image:: ../img/Advanced-Workshop/chanrev/chanrev.PNG

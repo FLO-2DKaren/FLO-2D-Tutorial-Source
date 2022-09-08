@@ -345,6 +345,8 @@ Data Location: \\Coastal Training\\Project Data\\Channel Interpolate Test
 
 .. image:: ../img/Advanced-Workshop/Lesson049.png
 
+7. The channel is now complete.  The data will be saved to the CHAN.DAT, CHANBANK.DAT, and XSEC.DAT files.
+
 
 Step 11: Channel boundary condition
 ___________________________________
@@ -382,7 +384,7 @@ Inlet
 .. image:: ../img/Coastal/chan030.png
 
 
-6.  Change the BC name of the inflow to CocoIn
+6.  Check the Inflow radio button and change the BC name of the inflow to CocoIn
 
 7.  Set Defined to Channel
 
@@ -403,10 +405,11 @@ Data Location: \\Coastal Training\\Project Data\\Boundary Conditions\\24hr100yrI
 .. image:: ../img/Coastal/chan033.png
 
 
-11. Click the Schematize button the outflow conditions and click OK to close the message.
+11. Click the Schematize button the boundary conditions and click OK to close the message.
 
 .. image:: ../img/Coastal/chan035.png
 
+12. The inflow boundary is now complete. The data will be saved to the INFLOW.DAT file.
 
 Outlet
 ^^^^^^
@@ -490,7 +493,7 @@ Data Location: Coastal Training\\Project Data\\Weirs
 .. image:: ../img/Coastal/chan045.png
 
 
-10. The hydraulic structures are now ready.
+10. The hydraulic structures are now ready.  The data will be saved to the HYSTRUCT.DAT file.
 
 Step 13: Export the project
 ______________________________
