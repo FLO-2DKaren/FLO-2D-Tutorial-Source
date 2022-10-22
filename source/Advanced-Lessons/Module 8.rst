@@ -174,7 +174,7 @@ ___________________________________________
              shapefile.  Zip the shapefile into a safe backup folder.  QGIS has a nasty habit of rearranging attribute
              data.
 
-.. note:: This step is an for outlining the process only.  All fields are present in the lesson shapefiles.
+.. note:: This step is for outlining the process only.  All fields are present in the lesson shapefiles.
 
 1. Open the attributes for any storm drain shapefile.
 

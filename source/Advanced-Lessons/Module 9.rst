@@ -1,4 +1,4 @@
-Lesson 3 Advanced - Storm drain Network
+Lesson 3 Advanced - Storm Drain Network
 ============================================
 
 **Overview**
