@@ -48,16 +48,21 @@ Table of Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Dam Breach, Tailings, Mudflow:
+   :caption: Dam Breach Topics:
 
    /Advanced-Lessons/Module 3 Part 1
    /Advanced-Lessons/Module 3 Part 2
    /Advanced-Lessons/Module 3 Part 3
+   /Advanced-Lessons/Module 6
+   /Advanced-Lessons/Module 7
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Mudflow Modeling:
+
    /Advanced-Lessons/Module 5 Part 1
    /Advanced-Lessons/Module 5 Part 2
    /Advanced-Lessons/Module 5 Part 3
-   /Advanced-Lessons/Module 6
-   /Advanced-Lessons/Module 7
 
 .. toctree::
    :maxdepth: 1
@@ -65,7 +70,6 @@ Table of Contents
 
    /Advanced-Lessons/Module 10
    /Advanced-Lessons/Module 12
-   /Advanced-Lessons/Module 13
 
 .. toctree::
    :maxdepth: 1
@@ -73,7 +77,6 @@ Table of Contents
 
    /Advanced-Lessons/Module 8
    /Advanced-Lessons/Module 9
-   /Advanced-Lessons/Module 11
 
 .. toctree::
    :maxdepth: 1
