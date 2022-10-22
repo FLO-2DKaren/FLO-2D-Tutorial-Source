@@ -10,7 +10,7 @@ adding culverts to the channel, boundary conditions.  The final part of the modu
 
 This module replaces Lesson 2.  Lesson 2 uses a RAS import and this one uses QGIS to build the channel from scratch.
 
-Required Data
+**Required Data**
 
 The lesson makes use of the original data from Lesson 1, left bank, right bank, and cross section data, and culvert
 rating tables.

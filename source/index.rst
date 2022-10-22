@@ -93,3 +93,10 @@ Table of Contents
    /Coastal-Flooding/Urban Features
    /Coastal-Flooding/Run and Review
    /Coastal-Flooding/Mapping
+
+.. toctree::
+   :maxdepth: 1
+   :caption: AFMA Extra Tutorial:
+
+   /AFMA/Channel Termination
+   /AFMA/Channel Confluence
