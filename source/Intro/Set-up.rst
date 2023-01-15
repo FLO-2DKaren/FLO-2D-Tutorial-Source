@@ -1,25 +1,30 @@
 FLO-2D Setup
 =============
 
-Welcome to the FLO-2D self-help setup page. The purpose of the self-help kit is to set up a computer with:
+Welcome to the FLO-2D self-help setup page. Get a computer ready for FLO-2D with:
 
 - FLO-2D Software package
 - QGIS stand alone installer
 - Plugins FLO-2D, QuickMapServices, ProfileTool, CurveNumberGenerator
 - Training Data
 
-The training tutorials will teach project development using
-QGIS.  Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
+The training tutorials will teach project development usingFLO-2D and QGIS.
+Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
 to set-up the computer.
 
-.. youtube:: GF1LZqU6cdc
+.. youtube:: F3RPHbCkHqo
 
 Step 1: Get the Data
 ---------------------
 
 Use this Download Link to access all **installers**, and training data.
 
-https://flo-2d.sharefile.com/d-s54699ab39a084ea3b6a321c816b2881e
+|Setup_Download|
+
+.. |Setup_Download| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-sb08e3b79a7634f6c843c85f7af3d2564" target="_blank">Download Setup</a>
+
 
 .. image:: ../img/Instructions/image1.png
 
@@ -47,7 +52,7 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 .. image:: ../img/Instructions/image4.png
 
 
-3. Extract the file and run the installer.
+3. Double click the Setup file to run the installer.
 
 .. image:: ../img/Instructions/image5.png
 
