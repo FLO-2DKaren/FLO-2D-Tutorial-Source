@@ -8,7 +8,7 @@ Welcome to the FLO-2D self-help setup page. Get a computer ready for FLO-2D with
 - Plugins FLO-2D, QuickMapServices, ProfileTool, CurveNumberGenerator
 - Training Data
 
-The training tutorials will teach project development usingFLO-2D and QGIS.
+The training tutorials will teach project development using FLO-2D and QGIS.
 Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
 to set-up the computer.
 
@@ -153,5 +153,199 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 Go to Lesson 1 Part 1 on on the left sidebar to start.
 
-Happy Modeling!
+Troubleshooting Installation
+------------------------------
 
+If something isn't working, do not uninstall FLO-2D.  That is rarely a correct way to fix the installation.
+Find some help below or email FLO-2D via the |Contact-Form| for support.
+
+.. |Contact-Form| raw:: html
+
+   <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a>
+
+Starting in 2022, the FLO-2D engine uses 4 distribution packages.  These installers are embedded into the FLO-2D Pro
+Setup.exe.  If one of the embedded installers fails or is skipped, it may be necessary troubleshoot the issue.
+This guide can help fix common issues.
+
+HDF5
+_____
+
+1. HDF5 installer will not edit the system path if the system path is too long. During the FLO-2D installation, the
+   following fault may appear.  Close the message to continue the installation.
+
+.. image:: ../img/Instructions/image18.png
+
+
+2. If the path is not added to the system variables, it may be necessary to add some hdf5 dll files to the FLO-2D Pro
+   folder.  Copy them from here:
+
+   - C:\\Program Files\\HDF_Group\\HDF5\\1.8.12\\bin
+
+   Paste them here:
+
+   - C:\\Program Files (x86)\\FLO-2D PRO
+   - C:\\Program Files (x86)\\FLO-2D PRO\\Run for Project Folder.
+
+.. image:: ../img/Instructions/image23.png
+
+
+Intel Packages
+______________
+
+1. IntelOneAPI support packages are used to create FLOPRO.EXE and are needed to run the model and optimize runtime by
+   splitting the processing onto multiple cores.
+
+2. If the drivers are not installed or updated correctly FLOPRO.EXE cannot run.
+
+3. FLOPRO.exe cannot find libio dlls.  When this occurs, it will be necessary to run the INTEL C++ and Intel
+   Fortran packages.  The missing files might be named:
+
+   - libiomp5md.dll
+   - libmmd.dll
+   - libmmdd.dll
+   - libifcoremdd.dll
+   - libifportmd.dll
+
+4. The fault message might look like this:
+
+.. image:: ../img/Instructions/image25.png
+
+
+5. It may also look like this:
+
+.. image:: ../img/Instructions/image26.png
+
+
+
+6. Correct this issue by running **Intel cpp 2022.2.0.3790.msi** and **Intel fortran 2022.2.0.3790.msi**.  They will
+   require admin rights.  |intellink|
+
+.. |intellink| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the installers here.</a>
+
+
+7. If the error message still appears find and remove the
+   following files:
+
+   - C:\\Program Files (x86)\\FLO-2D Pro\\libio5md.dll
+   - C:\\Program Files (x86)\\FLO-2D Pro\\Run for Project Folder\\libio5md.dll
+   - C:\\Windows\\System 32\\libio5md.dll
+   - C:\\Windows\\SysWOW\\libio5md.dll
+
+Visual Studio Packages
+_______________________
+
+1. Microsoft Visual Studio 2019 is the platform used build the FLO-2D model.  Visual Studio redistributable packages
+   are required. If the Visual Studio Redist embedded installer failed or skipped,
+   it may be necessary to run it again.  This installer requires Admin rights.
+   |visualclink|
+
+.. |visualclink| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-s3e38b0b9e0f94c4bb5d546b955e0495a" target="_blank">Download the installer here.</a>
+
+
+2. The fault will be an error message about a missing msvcp120.dll or msvcp140.dll or something similar.  As the Visual
+   Studio version changes, the dlls file name changes.
+
+.. image:: ../img/Instructions/image27.png
+
+
+3. For example, this computer has many different redistributable packages.  Any software built with Visual Studio
+   should add the required dll to the computer.  If that process fails, it may be necessary to install the packages
+   from the VCredist_x64 or x86 installers.
+
+.. image:: ../img/Instructions/image22.png
+
+
+4. FLOPRO.exe Build 22 uses the 2015 - 2019 version of Visual Studio.
+
+5. FLOPRO.exe Build 14 thru Build 21 uses
+   version 2013 of Visual Studio.  The older FLO-2D Builds require the 64-bit and 32-bit packages.
+
+   Older redistributable packages can be downloaded from Microsoft:
+   |oldVClink|
+
+.. |oldVClink| raw:: html
+
+   <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft msvcp redistributable installers.</a>
+
+Call FLOPRO.exe from QGIS
+___________________________
+
+1. Run a simulation from QGIS using the Run FLO-2D Button.
+
+2. QGIS message states the the model started but nothing happens.  FLOPRO.exe does not start.
+
+.. image:: ../img/Instructions/image21.png
+
+3. This fault seems to be related to QGIS permissions or perhaps an intel compatibility issue.  FLO-2D staff is actively
+   seeking a solution but the quick fix is to set up the FLOPRO.exe and its support dlls in the project folder.
+
+4. Copy the files from C:\Program Files (x86)\FLO-2D Pro\Run for Project Folder. Paste them into the Project Folder and
+   double click FLOPRO.exe to start the simulation.
+
+.. image:: ../img/Instructions/image24.png
+
+
+GDS and Mapper
+_______________
+
+GDS and Mapper are written in Visual Basic code.  Visual basic has been obsolete code for more than a decade.
+Because of SysWOW (System Windows on Windows), old programs can be used but are challenging to install.
+Some computers won't have any issues and others simply will not run GDS and Mapper because things like
+Microsoft Data Access (MDAC) and Data Access Objects (DAO) will not load or be recognized by the computer.
+
+FLO-2D solved this issue by upgrading to QGIS and the FLO-2D Plugin.  If you still want to
+use GDS or Mapper and you get missing dll failures or struggle to use GDS processors, this section may help.
+
+1. GDS might not be connected to it's MapObjects dlls.  These are the objects that do things like load images, load
+   tables, intersect shapefiles, and create the grid.  The fault will look like this:
+
+.. image:: ../img/Instructions/gdsfault01.png
+
+2. If this fault shows up, delete the contents of this folder and run the FLO-2D Pro Setup Installer - MapObjects section again.
+
+   C:\\Program Files(x86)\\Common Files\\ESRI
+
+   Don't worry, these old files are not used by ArcGIS Desktop or ArcGIS Pro.
+
+3. GDS might give an error message when the user tries to set up a new project using Define Working Region....
+   A path correction will fix this fault.  When a new project doesn't have a project path, it tries to write data
+   to the C:\\Program Filex(x86)\\FLO-2D Pro path.  This path is protected by Admin Rights.
+
+.. image:: ../img/Instructions/gdsfault03.png
+
+4. The error message that appears states something about admin rights or permissions.  Correct it by applying a project
+   path in GDS\\Tools\\Options\\Directory Paths
+
+.. image:: ../img/Instructions/gdsfault04.png
+
+5. GDS and Mapper may have overflow or out of memory error messages.  This is not a correctable fault.
+   They are both 32-bit programs and have limitations related to the memory they can use.  This varies by computer
+   and by screen size so if you get this fault on one computer, it may not show up on an older computer.
+
+.. image:: ../img/Instructions/gdsfault05.png
+
+
+5. GDS and Mapper default settings are for computers in the USA.  It may be necessary to adjust the number separator.
+   If an error message appears about the number separator, use the Control Panel\\Clock and Region\\Additional Settings
+   to set the decimal separator to a ".".  International users might want to use QGIS so this is not necessary.
+
+.. image:: ../img/Instructions/gdsfault06.png
+
+6. Sometimes the Microsoft Data Access program doesn't install correctly and GDS cannot find the MDAC dlls.
+   It may be possible to reinstall the MDAC setup program.
+   |GDSPatch|
+
+.. |GDSPatch| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-sca2c917fcb9d424091e9faa8272b29b8" target="_blank">Download GDS Patch.</a>
+
+7. GDS Tutorials are no longer part of the FLO-2D Pro Setup.  To get the GDS and Mapper Tutorials, Run this installer:
+   |GDStutorials|
+
+.. |GDStutorials| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-s6907dafe3ebc4abab8aa6ad4df386a2c" target="_blank">Download GDS Tutorials.</a>

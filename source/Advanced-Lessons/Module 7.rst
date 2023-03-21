@@ -31,8 +31,12 @@ http://www.b1technicalinvestigation.com/report.html
 
 TUV SUD Bureau, Periodic Review Dam Mine Safety Stream Bean - Dam I Technical Report.
 SP-RC-117/17 Rev.4.Pg.1–265. published on May 17, 2017, Ordinance DNPM No. 70,389 / 2017.
+|TUV|
 
-https://worldminetailingsfailures.org/wp-content/uploads/2019/03/TUV_SUD_2017_Periodic_Safety_Review.en_.pdf
+.. |TUV| raw:: html
+
+   <a href="https://worldminetailingsfailures.org/wp-content/uploads/2019/03/TUV_SUD_2017_Periodic_Safety_Review.en_.pdf" target="_blank">Download Report.</a>
+
 
 **Note:  Copy the link into a browser if broken.**
 
