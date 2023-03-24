@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath("..."))
 project = "FLO-2D Tutorials"
 copyright = "2022, Karen O'Brien"
 author = "Karen O'Brien"
-html_logo = "Flo2D_logo.jpg"
+html_logo = "FLO-2D_logo.jpg"
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
