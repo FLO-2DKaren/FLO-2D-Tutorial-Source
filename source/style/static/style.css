@@ -185,12 +185,13 @@ div.sphinxtopbar {
 a{
   font-size: 17px;
   text-decoration: none;
-  color: #070001;
+  color: blue;
+  font-weight: bold;
 }
 
 /* When you hover over a link, this function will change its style*/
 a:hover{
-  color: goldenrod;
+  color: pink;
   font-weight: bold;
 }
 
