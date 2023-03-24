@@ -155,7 +155,7 @@ section img{
   margin: 2px 2px 2px;
   vertical-align: left;
   padding: 0.5em 0.5em 0.5em;
-  max-width: 100%;
+  max-width: 600px;
 }
 
 /* this moves the footer, this is where the Copyright is located*/
@@ -182,18 +182,19 @@ div.sphinxtopbar {
 */
 
 /* this is link text, any text associated with a link will be modified*/
-a{
+/*a{
   font-size: 17px;
   text-decoration: none;
   color: blue;
-  font-weight: bold;
-}
+*/
 
 /* When you hover over a link, this function will change its style*/
-a:hover{
+/*a:hover{
+
   color: pink;
   font-weight: bold;
 }
+*/
 
 /*this makes the body to the side
 div.bodywrapper {
