@@ -186,13 +186,15 @@ div.sphinxtopbar {
   font-size: 17px;
   text-decoration: none;
   color: blue;
-}*/
+*/
 
 /* When you hover over a link, this function will change its style*/
 /*a:hover{
+
   color: pink;
   font-weight: bold;
-}*/
+}
+*/
 
 /*this makes the body to the side
 div.bodywrapper {
