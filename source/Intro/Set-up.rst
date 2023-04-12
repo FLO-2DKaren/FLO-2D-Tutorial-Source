@@ -213,7 +213,7 @@ ______________
 
 5. It may also look like this:
 
-.. image:: ../img/Instructions/image26.png
+.. image:: ../img/Instructions/image26.PNG
 
 
 6. Correct this issue by running **Intel cpp 2022.2.0.3790.msi** and **Intel fortran 2022.2.0.3790.msi**.  They will
