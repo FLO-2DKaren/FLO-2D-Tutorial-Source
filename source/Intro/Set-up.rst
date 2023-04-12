@@ -216,21 +216,20 @@ ______________
 .. image:: ../img/Instructions/image26.PNG
 
 
-6. Correct this issue by running **Intel cpp 2022.2.0.3790.msi** and **Intel fortran 2022.2.0.3790.msi**.  They will
-   require admin rights.  |intellink|
-
-.. |intellink| raw:: html
-
-   <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the installers here.</a>
-
-
-7. These dlls should be removed by the FLO-2D installer.  Sometimes one or more files are still on the computer.  If the error 
-   message still appears find and remove the following files:
+6. These dlls should be removed by the FLO-2D installer.  Sometimes one or more of these files are are not removed.  If the error 
+   message from 4. appears, find and remove the following files:
 
    - C:\\Program Files (x86)\\FLO-2D Pro\\libio5md.dll
    - C:\\Program Files (x86)\\FLO-2D Pro\\Run for Project Folder\\libio5md.dll
    - C:\\Windows\\System 32\\libio5md.dll
    - C:\\Windows\\SysWOW64\\libio5md.dll
+   
+7. If the fault still appears, correct it by running **Intel cpp 2022.2.0.3790.msi** and **Intel fortran 2022.2.0.3790.msi**.  They will
+   require admin rights.  |intellink|
+
+.. |intellink| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the installers here.</a>
    
 
 Visual Studio Packages
@@ -249,7 +248,7 @@ _______________________
 2. The fault will be an error message about a missing msvcp120.dll or msvcp140.dll or something similar.  As the Visual
    Studio version changes, the dlls file name changes.
 
-.. image:: ../img/Instructions/image27.png
+.. image:: ../img/Instructions/image27.PNG
 
 
 3. For example, this computer has many different redistributable packages.  Any software built with Visual Studio
