@@ -216,7 +216,6 @@ ______________
 .. image:: ../img/Instructions/image26.png
 
 
-
 6. Correct this issue by running **Intel cpp 2022.2.0.3790.msi** and **Intel fortran 2022.2.0.3790.msi**.  They will
    require admin rights.  |intellink|
 
@@ -225,13 +224,14 @@ ______________
    <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the installers here.</a>
 
 
-7. If the error message still appears find and remove the
-   following files:
+7. These dlls should be removed by the FLO-2D installer.  Sometimes one or more files are still on the computer.  If the error 
+   message still appears find and remove the following files:
 
    - C:\\Program Files (x86)\\FLO-2D Pro\\libio5md.dll
    - C:\\Program Files (x86)\\FLO-2D Pro\\Run for Project Folder\\libio5md.dll
    - C:\\Windows\\System 32\\libio5md.dll
-   - C:\\Windows\\SysWOW\\libio5md.dll
+   - C:\\Windows\\SysWOW64\\libio5md.dll
+   
 
 Visual Studio Packages
 _______________________
