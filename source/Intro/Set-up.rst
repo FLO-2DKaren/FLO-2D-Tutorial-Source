@@ -1,7 +1,7 @@
 FLO-2D Setup
 =============
 
-Welcome to the FLO-2D self-help setup page. Get a computer ready for FLO-2D with:
+Welcome to the FLO-2D setup page. Get a computer ready for FLO-2D with:
 
 - FLO-2D Software package
 - QGIS stand alone installer
@@ -23,7 +23,7 @@ Use this Download Link to access all **installers**, and training data.
 
 .. |Setup_Download| raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-sb08e3b79a7634f6c843c85f7af3d2564" target="_blank">Download Setup</a>
+   <a href="https://flo-2d.sharefile.com/d-sb08e3b79a7634f6c843c85f7af3d2564" target="_blank">Click Here to Download</a>
 
 
 .. image:: ../img/Instructions/image1.png
@@ -51,23 +51,66 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 
 .. image:: ../img/Instructions/image4.png
 
+New Installation
+____________________
+
+.. Note:: If this is a new installation, please continue.  If it is an update, please skip to the Update Installation
+       section.
+
+1. Double click the Setup file to run the installer.
+
+.. image:: ../img/Instructions/image5.png
+
+
+2. Choose No for silent, and finish installing with the default settings.
+
+.. image:: ../img/Instructions/image6.png
+
+
+3. If running a new install, check all options.  If running an update, cancel the installation and go to the
+   Update Installation section.
+
+.. image:: ../img/Instructions/image15a.png
+
+
+4. Click Next and Install to run the installer.
+
+.. image:: ../img/Instructions/image16.png
+
+
+5. If an error appears related to the DAO35.EXE, run the installer again but uncheck
+   Map Objects.
+
+6. The last embedded installation package may trigger a restart.
+
+.. image:: ../img/Instructions/image17.png
+
+Update Installation
+______________________
+
+1. Remove old files.  Delete the FLO-2D PRO Folder C:\\Program Files (x86)\\FLO-2D PRO
+
+2. Rename or delete the FLO-2D PRO Documentation folder. C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation
+
+.. Note:: Some users save their project to the Documentation folder.  Do not accidentally delete projects that may be
+          needed in the future.
 
 3. Double click the Setup file to run the installer.
 
 .. image:: ../img/Instructions/image5.png
 
 
-4. Choose NO for silent, and finish installing with the default settings.
+4. Choose No for silent, and finish installing with the default settings.
 
 .. image:: ../img/Instructions/image6.png
 
 
-5. If running a new install, check all options.  If running an update, uncheck Map Objects and EPA SWMM.
+5. If running an update, uncheck Map Objects and EPA SWMM.
 
-.. image:: ../img/Instructions/image15.png
+.. image:: ../img/Instructions/image15b.png
 
 
-6. Click next and Install to run the installer.
+6. Click Next and Install to run the installer.
 
 .. image:: ../img/Instructions/image16.png
 
@@ -95,7 +138,7 @@ Step 4: QGIS Installer
 ----------------------
 Follow these instructions to set up QGIS.
 
-1. Double click the QGIS-OSGeo4W-3.22.7-1.msi file.
+1. Double click the QGIS-OSGeo4W-3.22.9.msi file.
 
 2. Finish installing with the default settings.
 
@@ -127,7 +170,7 @@ With QGIS installed it is time to add the FLO-2D plugin and a few other handy pl
 .. image:: ../img/Instructions/image10.png
 
 
-2. Install Quick Map Services and Profile Tool.
+2. Install Quick Map Services and Profile Tool, and Curve Number Generator.
 
 .. image:: ../img/Instructions/image11.png
 
@@ -153,8 +196,35 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 
 Go to Lesson 1 Part 1 on on the left sidebar to start.
 
-Troubleshooting Installation
-------------------------------
+Step 6. Installation Test
+---------------------------
+
+1. Test FLO-2D engine by running a model from a project folder.  Copy the Run for Project files from
+
+   C:\\Program Files (x86)\\FLO-2D PRO\\Run for Project Folder
+
+.. image:: ../img/Instructions/installtest01.png
+
+2. Paste the files into any project folder with \*.DAT files like Barn.
+
+   C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Example Projects\\Barn Mudflow
+
+.. image:: ../img/Instructions/installtest02.png
+
+3. Double click FLOPRO.EXE to start a test run.
+
+4. If the computer is activated with the professional version, this message will appear.
+
+.. image:: ../img/Instructions/installtest03.png
+
+5. If the computer isn't activated, this message will appear.
+
+.. image:: ../img/Instructions/installtest04.png
+
+6. Any other message might need some troubleshooting.  Find the related issue below.
+
+Troubleshooting
+-----------------
 
 If something isn't working, do not uninstall FLO-2D.  That is rarely a correct way to fix the installation.
 Find some help below or email FLO-2D via the |Contact-Form| for support.
@@ -179,7 +249,7 @@ _____
 2. If the path is not added to the system variables, it may be necessary to add some hdf5 dll files to the FLO-2D Pro
    folder.  Copy them from here:
 
-   - C:\\Program Files\\HDF_Group\\HDF5\\1.8.12\\bin
+   - C:\\Program Files\\HDF_Group\\HDF5\\1.8.11\\bin
 
    Paste them here:
 
@@ -192,12 +262,11 @@ _____
 Intel Packages
 ______________
 
-1. IntelOneAPI support packages are used to create FLOPRO.EXE and are needed to run the model and optimize runtime by
-   splitting the processing onto multiple cores.
+1. IntelOneAPI support packages are used to compile FLOPRO.EXE and are needed to run the model.
 
 2. If the drivers are not installed or updated correctly FLOPRO.EXE cannot run.
 
-3. FLOPRO.exe cannot find libio dlls.  When this occurs, it will be necessary to run the INTEL C++ and Intel
+3. FLOPRO.exe cannot find libio dlls.  When this occurs, it will be necessary to run the Intel
    Fortran packages.  The missing files might be named:
 
    - libiomp5md.dll
@@ -216,20 +285,21 @@ ______________
 .. image:: ../img/Instructions/image26.PNG
 
 
-6. These dlls should be removed by the FLO-2D installer.  Sometimes one or more of these files are are not removed.  If the error 
+6. Older files might be on the computer if the update process wasn't followed.  These dlls should be removed by the
+   FLO-2D installer.  Sometimes one or more of these files are are not removed.  If the error
    message from 4. appears, find and remove the following files:
 
    - C:\\Program Files (x86)\\FLO-2D Pro\\libio5md.dll
    - C:\\Program Files (x86)\\FLO-2D Pro\\Run for Project Folder\\libio5md.dll
    - C:\\Windows\\System 32\\libio5md.dll
    - C:\\Windows\\SysWOW64\\libio5md.dll
-   
-7. If the fault still appears, correct it by running **Intel cpp 2022.2.0.3790.msi** and **Intel fortran 2022.2.0.3790.msi**.  They will
-   require admin rights.  |intellink|
+
+7. If the fault still appears, correct it by running **Intel cpp 2022.2.0.3790.msi** and
+   **Intel fortran 2022.2.0.3790.msi**.  They will require admin rights.  |intellink|
 
 .. |intellink| raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the installers here.</a>
+   <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the Intel Installers Here.</a>
    
 
 Visual Studio Packages
@@ -245,8 +315,8 @@ _______________________
    <a href="https://flo-2d.sharefile.com/d-s3e38b0b9e0f94c4bb5d546b955e0495a" target="_blank">Download the installer here.</a>
 
 
-2. The fault will be an error message about a missing msvcp120.dll or msvcp140.dll or something similar.  As the Visual
-   Studio version changes, the dlls file name changes.
+2. Microsoft Visual Studio 13 is used for the Storm Drain engine.  The fault will be an error message about a missing
+   msvcp120.dll or msvcp140.dll or something similar.  As the Visual Studio version changes, the dlls file name changes.
 
 .. image:: ../img/Instructions/image27.PNG
 
