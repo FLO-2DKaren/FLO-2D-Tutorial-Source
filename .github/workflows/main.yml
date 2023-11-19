@@ -34,7 +34,7 @@ jobs:
         run: |
           python -c "import sys; print(sys.path)"
 
-      - uses: ammaraskar/sphinx-action@0.4
+      - uses: ammaraskar/sphinx-action@latest_version
         name: Building Sphinx tutorial document from the source files
         with:
           docs-folder: "./"
