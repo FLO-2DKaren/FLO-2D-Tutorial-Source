@@ -25,7 +25,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install sphinx sphinxcontrib-youtube  # Add sphinxcontrib-youtube here
 
-  
+      - name: Print Installed Packages
+        run: |
+          python -m pip list
+
+      - name: Print Python Path
+        run: |
+          python -c "import sys; print(sys.path)"
+
       - uses: ammaraskar/sphinx-action@0.4
         name: Building Sphinx tutorial document from the source files
         with:
