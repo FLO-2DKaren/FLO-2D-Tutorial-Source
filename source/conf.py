@@ -27,7 +27,7 @@ html_logo = "FLO-2D_logo.jpg"
 # ones.
 # use with docx building extensions = ['sphinxcontrib.yt','docxbuilder']
 # command is make docx
-extensions = ['sphinxcontrib.yt']
+extensions = ['sphinxcontrib-youtube']
 #extensions = ['sphinxcontrib.yt','docxbuilder']
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["style"]
