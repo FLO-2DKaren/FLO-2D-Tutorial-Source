@@ -1,4 +1,4 @@
 sphinx_rtd_theme
-sphinxcontrib.yt
+sphinxcontrib-youtube
 sphinx-book-theme
 sphinx-docxbuilder
