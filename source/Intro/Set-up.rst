@@ -23,7 +23,7 @@ Use this Download Link to access all **installers**, and training data.
 
 .. |Setup_Download| raw:: html
 
-   <a href="https://flo-2d.sharefile.com/d-sb08e3b79a7634f6c843c85f7af3d2564" target="_blank">Click Here to Download</a>
+   <a href="https://flo-2d.sharefile.com/d-s872384bd61524bf3b695612d1f158a78" target="_blank">Click Here to Download</a>
 
 
 .. image:: ../img/Instructions/image1.png
@@ -138,7 +138,7 @@ Step 4: QGIS Installer
 ----------------------
 Follow these instructions to set up QGIS.
 
-1. Double click the QGIS-OSGeo4W-3.22.9.msi file.
+1. Double click the QGIS-OSGeo4W-3.28.11-1.msi file.
 
 2. Finish installing with the default settings.
 
