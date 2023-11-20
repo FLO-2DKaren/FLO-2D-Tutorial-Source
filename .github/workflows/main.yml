@@ -42,12 +42,6 @@ jobs:
           sphinx-build -b html source build
         shell: bash
 
-#      - uses: ammaraskar/sphinx-action@0.4
-#        name: Building Sphinx tutorial document from the source files
-#        with:
-#          docs-folder: "./"
-#          build-command: "sphinx-build -b html source build"
-  
       - uses: actions/upload-artifact@v1
         name: Zipping and uploading HTML static files as an artifact
         with:
