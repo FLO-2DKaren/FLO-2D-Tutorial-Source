@@ -12,14 +12,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         name: Checking-out repository
 
-      - uses: ammaraskar/sphinx-action@0.4
-        name: Building Sphinx tutorial document from the source files
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          docs-folder: "./"
-          build-command: "sphinx-build -b html source build"
+          python-version: 3.9  # Use the version of Python you need
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install sphinx sphinxcontrib-youtube  # Add sphinxcontrib-youtube here
+
+      - name: Make Sphinx Html
+        run: |
+          make html
+
+#      - uses: ammaraskar/sphinx-action@0.4
+#        name: Building Sphinx tutorial document from the source files
+#        with:
+#          docs-folder: "./"
+#          build-command: "sphinx-build -b html source build"
   
       - uses: actions/upload-artifact@v1
         name: Zipping and uploading HTML static files as an artifact
