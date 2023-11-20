@@ -29,9 +29,9 @@ jobs:
         run: |      
           python -c "import sys; print(sys.path)"
 
-      - name: Import Youtube Package
+      - name: Install youtube to correct path
         run: |          
-          python -c "import sphinxcontrib.youtube"
+          /opt/hostedtoolcache/Python/3.9.18/x64/bin/python3.9 -m pip install --upgrade sphinxcontrib-youtube
 
       - name: Build Sphinx Documentation
         run: |
