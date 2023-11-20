@@ -32,6 +32,11 @@ jobs:
           Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
           LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
 
+      - name: Add site-packages to sys.path
+        run: |
+          echo "::add-path::/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages"
+        shell: bash
+  
       - name: Build Sphinx Documentation
         run: |
           sphinx-build -b html source build
