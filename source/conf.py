@@ -25,6 +25,7 @@ html_logo = "FLO-2D_logo.jpg"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
+extensions = ["sphinxcontrib-youtube"]
 # command is make docx
 #extensions = ['sphinxcontrib-youtube']
 # Add any paths that contain templates here, relative to this directory.
