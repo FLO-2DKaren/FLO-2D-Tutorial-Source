@@ -28,6 +28,9 @@ jobs:
       - name: Check Install
         run: |      
           python -c "import sys; print(sys.path)"
+
+      - name: Import Youtube Package
+        run: |          
           python -c "import sphinxcontrib.youtube"
 
       - name: Build Sphinx Documentation
