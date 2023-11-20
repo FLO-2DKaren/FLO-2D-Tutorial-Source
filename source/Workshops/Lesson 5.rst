@@ -10,7 +10,9 @@ Finish Lesson 1 through Step 5 before performing the following steps.
 
 This video shows the full process of this tutorial.
 
-.. youtube:: B1ujp_ODrKE
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/B1ujp_ODrKE" frameborder="0" allowfullscreen></iframe>
 
 
 Required Data

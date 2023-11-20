@@ -20,7 +20,9 @@ The required data is in the Coastal Training Folder.
 
 Data Location:  \\Coastal Training\\Project Data\\AOI
 
-.. youtube:: nyX01bFoUBA
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nyX01bFoUBA" frameborder="0" allowfullscreen></iframe>
 
 
 Step 1: Set up the FLO-2D project

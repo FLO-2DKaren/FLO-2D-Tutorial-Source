@@ -7,9 +7,12 @@ Lesson 3 – Create a Storm Drain System Using Shapefiles
 This lesson will outline the process to create a storm drain network for FLO-2D.  This is the quick version.  It is
 better for learning QGIS and FLO-2D Plugin operations.  For advanced storm drain modeling, see the Advanced Lessons.
 
-.. youtube:: SArfBrC0U9A
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SArfBrC0U9A" frameborder="0" allowfullscreen></iframe>
 
 Required Data
+_____________
 
 Start this lesson from the end of Lesson 2.
 It requires the channels and culverts.

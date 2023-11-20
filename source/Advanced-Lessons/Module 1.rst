@@ -1,13 +1,15 @@
 Project Recovery and Debug
 ===========================
-.. youtube:: lhDwp3cDrOc
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lhDwp3cDrOc" frameborder="0" allowfullscreen></iframe>
 
 
 **Overview**
 
 This module will outline how to build a recovery point and debug a FLO-2D Data Set.
 
-Required Data
+**Required Data**
 
 The required data is in Module 1.
 

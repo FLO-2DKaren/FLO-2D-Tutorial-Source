@@ -5,7 +5,7 @@ Boundary Conditions
 
 This module will outline how to add a storm tide to the boundary of the project.
 
-Required Data
+**Required Data**
 
 The required data is in project data folder.
 
@@ -17,7 +17,9 @@ The required data is in project data folder.
 
 Data Location:  \\Coastal Training\\Project Data\\Boundary Conditions
 
-.. youtube:: JsD6c7VjuCQ
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/JsD6c7VjuCQ" frameborder="0" allowfullscreen></iframe>
 
 Step 1: Prepare the map
 __________________________

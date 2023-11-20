@@ -3,11 +3,12 @@ Coastal Set-Up
 
 **Overview**
 
-Please use these instructions to get your computer ready for the 2022 FMA Storm Surge Modeling Workshop.
+Please use these instructions to get your computer ready for Coastal Training Package.
 
-**FMA 2022 Workshop Setup.**
 
-.. youtube:: sTDCm6NX1Pw
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sTDCm6NX1Pw" frameborder="0" allowfullscreen></iframe>
 
 Step 1: Get the Data
 ___________________________________

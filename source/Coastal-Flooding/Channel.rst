@@ -22,7 +22,10 @@ All data is provided in the Lesson folders.
 
 Data Location:  \\Coastal Training\\Project Data\\Channel
 
-.. youtube:: ezubMQuwNKU
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ezubMQuwNKU" frameborder="0" allowfullscreen></iframe>
+
 
 Step 1: Prepare the map
 _________________________

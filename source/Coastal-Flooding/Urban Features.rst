@@ -11,7 +11,10 @@ Required Data
 
 Data Location: \\Coastal Training\\Project Data\\Buildings
 
-.. youtube:: ef-xygMwiSs
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ef-xygMwiSs" frameborder="0" allowfullscreen></iframe>
+
 
 Step 1: Load buildings
 _______________________

@@ -16,7 +16,9 @@ Required Data
 
 Data Location: \\Coastal Training\\Project Data\\Culverts
 
-.. youtube:: zv5fN8_JQ0I
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zv5fN8_JQ0I" frameborder="0" allowfullscreen></iframe>
 
 
 Step 1: Import data

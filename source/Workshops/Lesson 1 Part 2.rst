@@ -7,7 +7,9 @@ _________
 Think of this as making a backup of a document.  It is a simple method to protect the data in case something goes wrong
 in the next lessons.  Once a user gains more experience, this method won't be as important.
 
-.. youtube:: RkHTA2kJPk8
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RkHTA2kJPk8" frameborder="0" allowfullscreen></iframe>
 
 Required Data
 _____________
@@ -59,6 +61,26 @@ ________________________________
 7. This GIF image will show an animation of the process.
 
 .. image:: ../img/Workshop/maplayers.gif
+
+8. Simplify the Layers Groups.
+
+9. Select the Boundary layers.  Right click and click Group Selected.  Name the group Boundary.
+
+.. image:: ../img/Workshop/maplayers001.png
+
+10. Select the Channel layers.  Right click the layers and click Group Selected.  Name the group channel.
+
+11. Select the Storm Drain layers.  Right click the layers and click Group Selected.  Name the group Storm Drain.
+
+.. image:: ../img/Workshop/maplayers002.png
+
+12. Select less commonly used layers and group them as Not Used.
+
+.. image:: ../img/Workshop/maplayers003.png
+
+13. Select the less commonly used tables and group them as Tables Not Used.
+
+.. image:: ../img/Workshop/maplayers004.png
 
 
 Step 2: Create a recovery file
@@ -121,8 +143,8 @@ ________________________
           path.
 
 
-.. note:: If the project path changes but an old geopackage remains in the previous path, it will be loaded and can
-          corrupt the project.
+.. warning:: If the project path changes but an old geopackage remains in the previous path, it will be loaded and can
+             corrupt the project.  Delete old gpkg and qgz files that may corrupt the project.
 
 
 .. image:: ../img/Workshop/Worksh030.png
