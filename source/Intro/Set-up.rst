@@ -12,7 +12,10 @@ The training tutorials will teach project development using FLO-2D and QGIS.
 Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
 to set-up the computer.
 
-.. youtube:: F3RPHbCkHqo
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/F3RPHbCkHqo" frameborder="0" allowfullscreen></iframe>
+
 
 Step 1: Get the Data
 ---------------------
