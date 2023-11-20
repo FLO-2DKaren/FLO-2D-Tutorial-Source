@@ -13,7 +13,7 @@
 import sys, os
 
 # sys.path.insert(0, os.path.abspath("..."))
-sys.path.insert(0, os.path.abspath('/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages'))
+sys.path.append('/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages')
 
 # -- Project information -----------------------------------------------------
 
