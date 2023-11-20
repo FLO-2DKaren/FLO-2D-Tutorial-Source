@@ -9,7 +9,9 @@ infiltration data.
 
 If Lesson 1 cannot be loaded, it can be recovered from the Lesson 1 Recovery Files.zip.
 
-.. youtube:: DyBcK-Bf8wA
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DyBcK-Bf8wA" frameborder="0" allowfullscreen></iframe>
 
 Required Data
 _____________

@@ -9,7 +9,9 @@ Setting up the computational domain, creating a grid, interpolating elevation da
 
 Step by step instructions are below and this video will add detail to the lesson.
 
-.. youtube:: TO331jqrcrc
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TO331jqrcrc" frameborder="0" allowfullscreen></iframe>
 
 Required Data
 _____________
@@ -129,6 +131,7 @@ _______________________
    The grid is complete.
 
 .. image:: ../img/Workshop/Worksh010.png
+.. image:: ../img/Workshop/Worksh010a.png
 
 
 Step 5: Save the project
@@ -268,3 +271,9 @@ ___________________________
 4. Click OK to Run the simulation.
 
 .. image:: ../img/Workshop/Worksh023.png
+
+.. warning:: If the simulation does not start, close the Run FLO-2D Model window and copy the contents of the
+             Run for Project Folder into the Project Folder and double click flopro.exe to start the simulation.
+             Open the following image in a new tab if it is not clear.
+
+.. image:: ../img/Workshop/Worksh028a.gif

@@ -9,7 +9,9 @@ This lesson needs a channel so please use the data from QGIS Lesson 2, 3, or 4 t
 
 This video shows the full process of this tutorial.
 
-.. youtube:: H02oR4bySw4
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/H02oR4bySw4" frameborder="0" allowfullscreen></iframe>
 
 
 Required Data

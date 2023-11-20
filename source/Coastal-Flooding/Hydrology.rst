@@ -19,7 +19,9 @@ The required data is in the Coastal Training Folder.
 
 Data Location: \\Coastal Training\\Project Data\\Hydrology
 
-.. youtube:: MP_pQuUtI08
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MP_pQuUtI08" frameborder="0" allowfullscreen></iframe>
 
 
 Step 1. Determine the total rainfall

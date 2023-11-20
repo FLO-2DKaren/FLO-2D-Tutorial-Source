@@ -14,7 +14,10 @@ Point shapefile    Outfall
 
 Data Location:  \\Coastal Training\\Project Data\\Storm Drain
 
-.. youtube:: Jc8zF4Sn3IM
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Jc8zF4Sn3IM" frameborder="0" allowfullscreen></iframe>
+
 
 Step 1: Select components from shapefile
 __________________________________________

@@ -9,7 +9,9 @@ project using the Plugin for QGIS.  Apply these instructions after Lesson 1, 2 o
 
 This video shows the full process of this tutorial.
 
-.. youtube:: guHbOgtpAnM
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/guHbOgtpAnM" frameborder="0" allowfullscreen></iframe>
 
 
 Required Data

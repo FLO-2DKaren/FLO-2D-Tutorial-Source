@@ -15,7 +15,9 @@ Use Lesson 2 to build an urban drainage channel and add culverts to the channel.
 
 This video shows the full process of this tutorial.
 
-.. youtube:: 74a07-wH3Gw
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/74a07-wH3Gw" frameborder="0" allowfullscreen></iframe>
 
 
 Required Data

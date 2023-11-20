@@ -6,9 +6,11 @@ Tailings Dam Model
 In this tutorial, use QGIS and the tailings dam tool to create a tailings dam hydrograph and simulate a tailings dam failure.
 The following video covers the Data Assembly Process for a Tailings Dam Study.
 
-.. youtube:: z8epzv95l4k
+.. raw:: html
 
-Required data
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/z8epzv95l4k" frameborder="0" allowfullscreen></iframe>
+
+**Required data**
 
 The required data is in Module 7.
 
