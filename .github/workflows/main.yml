@@ -32,9 +32,9 @@ jobs:
           Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.18/x64
           LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.18/x64/lib
 
-      - name: Set PYTHONPATH
+      - name: Install sphinxcontrib-youtube
         run: |
-          echo "PYTHONPATH=$PYTHONPATH:/opt/hostedtoolcache/Python/3.9.18/x64/lib/python3.9/site-packages" >> $GITHUB_ENV
+          /opt/hostedtoolcache/Python/3.9.18/x64/bin/python3.9 -m pip install sphinxcontrib-youtube
         shell: bash
   
       - name: Build Sphinx Documentation
