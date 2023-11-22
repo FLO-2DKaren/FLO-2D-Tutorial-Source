@@ -44,7 +44,9 @@ SP-RC-117/17 Rev.4.Pg.1–265. published on May 17, 2017, Ordinance DNPM No. 70,
 
 The following video will use the tutorial steps below to create the tailings dam hydrograph and run the model.
 
-.. youtube:: KJ7NYb_YIHo
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KJ7NYb_YIHo" frameborder="0" allowfullscreen></iframe>
 
 
 Step 1: Load the project

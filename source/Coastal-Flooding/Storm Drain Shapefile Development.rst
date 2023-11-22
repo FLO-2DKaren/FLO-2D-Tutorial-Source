@@ -69,5 +69,6 @@ __________________________________________
 6. This is the end of the lesson. Keep adding fields until the class continues.
    It’s OK to leave them blank because they won’t be used in the next module.
 
-.. youtube:: 6qKJzeUFuCg
+.. raw:: html
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6qKJzeUFuCg" frameborder="0" allowfullscreen></iframe>
