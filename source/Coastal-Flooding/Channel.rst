@@ -218,7 +218,9 @@ __________________________________
 Step 7: Load cross section data
 _________________________________
 
-.. youtube:: Di5yDHg1fUk
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Di5yDHg1fUk" frameborder="0" allowfullscreen></iframe>
 
 1. From the Cross Section Editor, choose Cross-Section-1.
 
@@ -310,7 +312,9 @@ _________________________________
 N type channels are interpolated using the Interpolator.exe program.
 This method will outline how to call the interpolator and reload the data.
 
-.. youtube:: 5CrrcZATtxk
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5CrrcZATtxk" frameborder="0" allowfullscreen></iframe>
 
 .. note:: If this process needs to be repeated for any reason, click Schematize button before performing this
           step.
@@ -357,7 +361,9 @@ ___________________________________
 The boundary condition for this channel include a hydrograph at the upstream side and a tide stage control at the
 downstream side.
 
-.. youtube:: 5CrrcZATtxk
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5CrrcZATtxk" frameborder="0" allowfullscreen></iframe>
 
 Inlet
 ^^^^^
@@ -579,5 +585,6 @@ ______________________________
 
 5. Click yes to load the model.
 
-.. youtube:: lLwSBP_Y-ZY
+.. raw:: html
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lLwSBP_Y-ZY" frameborder="0" allowfullscreen></iframe>

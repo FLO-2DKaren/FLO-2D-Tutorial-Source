@@ -144,7 +144,9 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS T
 Step 5: Run the debug engine
 ----------------------------
 
-.. youtube:: oydBNu4U3uI
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oydBNu4U3uI" frameborder="0" allowfullscreen></iframe>
 
 
 1. Click the Run FLO-2D button.

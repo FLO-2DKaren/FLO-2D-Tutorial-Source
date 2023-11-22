@@ -17,10 +17,72 @@ to set-up the computer.
     <iframe width="560" height="315" src="https://www.youtube.com/embed/F3RPHbCkHqo" frameborder="0" allowfullscreen></iframe>
 
 
-Step 1: Get the Data
----------------------
+Step 1: Download the FLO-2D Pro Installer
+-------------------------------------------
 
-Use this Download Link to access all **installers**, and training data.
+FLO-2D Pro Subscribers should log into Sharefile and download the software and activator from their
+FLO-2D Tech Support Account.
+
+|ProSetup_Download|
+
+.. |ProSetup_Download| raw:: html
+
+   <a href="https://flo-2d.sharefile.com/" target="_blank">Sharefile Login</a>
+
+Basic users should fill the Basic Download Form to access the limited free version of the software.
+
+|Basic_Download|
+
+.. |Basic_Download| raw:: html
+
+   <a href="https://flo-2d.com/flo-2d-basic/" target="_blank">Basic Download Form</a>
+
+Once the software is downloaded.  Go to Step 2.
+
+
+Step 2: FLO-2D Installer
+------------------------
+Install FLO-2D using the following instructions.  Admin Rights Required.
+
+.. image:: ../img/Instructions/image3.png
+
+
+1. Right click zipped file to access properties.
+
+2. Unblock the file if necessary.
+
+.. image:: ../img/Instructions/image41.png
+
+
+3. Double click the Setup file to run the installer.
+
+.. image:: ../img/Instructions/image5.png
+
+
+4. If FLO-2D is already installed, this installer will remove the FLO-2D Pro folder and rename the
+   FLO-2D Documentation folder.
+
+.. image:: ../img/Instructions/image6.png
+
+
+5. If running a new install, check all options.  If running an update, cancel the installation and go to the
+   Update Installation section.
+
+.. image:: ../img/Instructions/image15a.png
+
+
+6. Click Next and Install to run the installer.
+
+.. image:: ../img/Instructions/image16.png
+
+
+7. The two final installers are embedded Microsoft Visual C++ packages.  They install silently,
+   but may trigger a restart.
+
+Step 3: Get QGIS and FLO-2D Plugin
+-----------------------------------
+
+Use this Download Link to access the **installers**, and training data.
 
 |Setup_Download|
 
@@ -39,92 +101,6 @@ Use this Download Link to access all **installers**, and training data.
 3. The files are zipped into "file.zip"  Extract them into a safe location.
 
 .. image:: ../img/Instructions/image2.png
-
-
-Step 2: FLO-2D Installer
-------------------------
-Install FLO-2D using the following instructions.  Admin Rights Required.
-
-.. image:: ../img/Instructions/image3.png
-
-
-1. Right click zipped file to access properties.
-
-2. Unblock the file if necessary.
-
-.. image:: ../img/Instructions/image4.png
-
-New Installation
-____________________
-
-.. Note:: If this is a new installation, please continue.  If it is an update, please skip to the Update Installation
-       section.
-
-1. Double click the Setup file to run the installer.
-
-.. image:: ../img/Instructions/image5.png
-
-
-2. Choose No for silent, and finish installing with the default settings.
-
-.. image:: ../img/Instructions/image6.png
-
-
-3. If running a new install, check all options.  If running an update, cancel the installation and go to the
-   Update Installation section.
-
-.. image:: ../img/Instructions/image15a.png
-
-
-4. Click Next and Install to run the installer.
-
-.. image:: ../img/Instructions/image16.png
-
-
-5. If an error appears related to the DAO35.EXE, run the installer again but uncheck
-   Map Objects.
-
-6. The last embedded installation package may trigger a restart.
-
-.. image:: ../img/Instructions/image17.png
-
-Update Installation
-______________________
-
-1. Remove old files.  Delete the FLO-2D PRO Folder C:\\Program Files (x86)\\FLO-2D PRO
-
-2. Rename or delete the FLO-2D PRO Documentation folder. C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation
-
-.. Note:: Some users save their project to the Documentation folder.  Do not accidentally delete projects that may be
-          needed in the future.
-
-3. Double click the Setup file to run the installer.
-
-.. image:: ../img/Instructions/image5.png
-
-
-4. Choose No for silent, and finish installing with the default settings.
-
-.. image:: ../img/Instructions/image6.png
-
-
-5. If running an update, uncheck Map Objects and EPA SWMM.
-
-.. image:: ../img/Instructions/image15b.png
-
-
-6. Click Next and Install to run the installer.
-
-.. image:: ../img/Instructions/image16.png
-
-
-7. If an error appears related to the DAO35.EXE, run the installer again but uncheck
-   Map Objects.
-
-8. The last embedded installation package may trigger a restart.
-
-.. image:: ../img/Instructions/image17.png
-
 
 Step 3: Documentation Installer
 --------------------------------
