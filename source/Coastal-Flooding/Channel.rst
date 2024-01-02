@@ -20,7 +20,7 @@ All data is provided in the Lesson folders.
 \*.txt   Tide gate tables
 ======== ======================
 
-Data Location:  \\Coastal Training\\Project Data\\Channel
+Data Location:  \\Coastal 2D Training\\Project Data\\Channel
 
 .. raw:: html
 
@@ -45,6 +45,9 @@ _________________________
 
 Step 2: Load the data
 ______________________________
+
+.. Important:: The imported data is used as templates to move the class along and reduce errors.  These templates are not
+               needed in general.  The channels can be built directly into the User Channel Layers.
 
 1. Click the Channel group in the User Layers.
 
@@ -103,7 +106,13 @@ _________________________________
 
 2. Uncheck the Grid layer in the Schematized Layers Group.
 
-3. Go to the Project Data group and double click the Cross Sections layer.
+.. image:: ../img/Coastal/chan004a.png
+
+
+3. Go to the Channel Data group and double click the *imported* Cross Sections layer.
+
+.. image:: ../img/Coastal/chan004b.png
+
 
 4. Click Symbology and Click Simple Line.  Set the color to red and the stroke width to 1.  Click OK to close the
    window.
@@ -116,7 +125,9 @@ _________________________________
 .. image:: ../img/Coastal/chan008.png
 
 
-6. Click the eye tool and set the active layer to Cross Sections.  Set the snapping group to Advanced.
+6. Click the Config button and set it to Advanced Configuration.
+
+7. Click the eye button and set the active layer to Cross Sections.
 
 .. image:: ../img/Coastal/snappingoptions.gif
 
@@ -211,7 +222,7 @@ __________________________________
 
    b. Survey channel cross sections.
 
-   c. Sample elevation data from a LiDAR raster. (This method only works if the channels are emtpy.)
+   c. Sample elevation data from a LiDAR raster. (This method only works if the channels are dry.)
 
    d. Measure and estimate channel geometry with QGIS tools.
 
@@ -232,7 +243,7 @@ _________________________________
 .. image:: ../img/Coastal/chan012.png
 
 
-Data Location: \\Coastal Training\\Project Data\\Channel\\Cross Section Station Elevation Files
+Data Location: \\Coastal 2D Training\\Project Data\\Channel\\Cross Section Station Elevation Files
 
 3. Copy the data and close the text file.  Tip: Hold down the Ctrl key and press A C W keys.
 
@@ -326,7 +337,7 @@ This method will outline how to call the interpolator and reload the data.
 
 2. Select the folder where the \*.DAT files will be saved.
 
-Data Location: \\Coastal Training\\Project Data\\Channel Interpolate Test
+Data Location: \\Coastal 2D Training\\Project Data\\Channel Interpolate Test
 
 .. image:: ../img/Coastal/chan022.png
 
@@ -407,7 +418,7 @@ Inlet
 .. image:: ../img/Coastal/chan032.png
 
 
-Data Location: \\Coastal Training\\Project Data\\Boundary Conditions\\24hr100yrInflow.txt
+Data Location: \\Coastal 2D Training\\Project Data\\Boundary Conditions\\24hr100yrInflow.txt
 
 10. Place the cursor in the first cell of the Table and click Paste.
 
@@ -487,7 +498,7 @@ Two gated weirs are in the Cocohatchee canal.
 
 7.  Navigate to the Rating Tables files, select both tables and click Open.
 
-Data Location: Coastal Training\\Project Data\\Weirs
+Data Location: Coastal 2D Training\\Project Data\\Weirs
 
 .. image:: ../img/Coastal/chan043.png
 
@@ -548,7 +559,7 @@ ______________________________
    C:\\program files (x86)\\flo-2d pro
 
 3. Set the Project Folder.
-   \\Coastal Training\\Project Runs\\Weir Test\\
+   \\Coastal 2D Training\\Project Runs\\Weir Test\\
 
 4. Click OK.
 

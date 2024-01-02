@@ -400,7 +400,9 @@ C:\\users\\public\\public documents\\flo-2d pro documentation\\Example Projects\
 
 7. If you are on your own, check out this video.  It will show you how to fix the error.
 
-.. youtube:: rhdmcXE-gyw
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rhdmcXE-gyw" frameborder="0" allowfullscreen></iframe>
 
 Step 9: Final run and recovery point
 ____________________________________
