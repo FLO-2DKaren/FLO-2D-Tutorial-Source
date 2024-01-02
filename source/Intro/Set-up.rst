@@ -216,6 +216,12 @@ Starting in 2022, the FLO-2D engine uses 4 distribution packages.  These install
 Setup.exe.  If one of the embedded installers fails or is skipped, it may be necessary troubleshoot the issue.
 This guide can help fix common issues.
 
+Port a Geopackage
+__________________
+
+If an older project is loaded into a new geopackage, a warning will appear to alert the user that it needs to be updated.
+For Plugin version 115, this video shows the correct way to port
+
 HDF5
 _____
 

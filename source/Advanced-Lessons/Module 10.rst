@@ -52,7 +52,9 @@ Project Location C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example
 
 This video will get through Step 9.  The second video is linked to Step 10.
 
-.. youtube:: lrYwqe_0Y0c
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lrYwqe_0Y0c" frameborder="0" allowfullscreen></iframe>
 
 Step 1: Open Lesson 1 Part 3 in QGIS
 __________________________________________
@@ -431,7 +433,9 @@ __________________________________________
 
 Instructional Video
 
-.. youtube:: l1Ph2BjPGpo
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l1Ph2BjPGpo" frameborder="0" allowfullscreen></iframe>
 
 Inlet
 ^^^^^^
@@ -666,5 +670,7 @@ Sorry for the Name and Email request on that link.  Trying to eliminate bot down
 
 This final video explains how to review the channel to check if it is running correctly.
 
-.. youtube:: shtqYasu_Qo
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/shtqYasu_Qo" frameborder="0" allowfullscreen></iframe>
 

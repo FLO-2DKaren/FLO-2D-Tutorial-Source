@@ -8,7 +8,7 @@ roughness to the grid.
 
 Required Data
 
-The required data is in the Coastal Training Folder.
+The required data is in the Coastal 2D Training Folder.
 
 ============= ===================
 **File**      **Content**
@@ -18,7 +18,7 @@ The required data is in the Coastal Training Folder.
 \*.shp        Manning_n
 ============= ===================
 
-Data Location:  \\Coastal Training\\Project Data\\AOI
+Data Location:  \\Coastal 2D Training\\Project Data\\AOI
 
 .. raw:: html
 
@@ -28,11 +28,11 @@ Data Location:  \\Coastal Training\\Project Data\\AOI
 Step 1: Set up the FLO-2D project
 __________________________________
 
-1. Open QGIS 3.22.xx.
+1. Open QGIS 3.22.9 or newer.
 
 2. Drag the Project Area of Interest shapefile onto the map.
 
-C:\\user\\public\\public document\\FLO-2D Pro Documentation\\Example Projects\\Coastal Training\\Project Data\\AOI
+C:\\user\\public\\public document\\FLO-2D Pro Documentation\\Example Projects\\Coastal 2D Training\\Project Data\\AOI
 
 .. image:: ../img/Coastal/aoi.png
 
@@ -49,7 +49,7 @@ C:\\user\\public\\public document\\FLO-2D Pro Documentation\\Example Projects\\C
 
 6. Name the file Coastal Project.gpkg.
 
-C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Coastal Training
+C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Coastal 2D Training
 
 7. Set the project CRS to Florida East HARN USft.
    Filter the list with an EPSG code: 2881.
@@ -94,7 +94,7 @@ ______________________________
 
 2. Navigate to the coastal folder, name the project Coastal Project.qgz and click Save.
 
-\\Coastal Training\\Coastal Project.qgz
+\\Coastal 2D Training\\Coastal Project.qgz
 
 Step 4: Assign grid elevation
 ______________________________
@@ -109,7 +109,7 @@ ______________________________
 3. Import the elevation file.
    Open the project folder and drag the Elevation Raster.tif file onto the map space.
 
-\\Coastal Training\\Project Data\\AOI\\Elevation Raster.tif
+\\Coastal 2D Training\\Project Data\\AOI\\Elevation Raster.tif
 
 .. image:: ../img/Coastal/creategrid009.png
 
@@ -159,7 +159,7 @@ ______________________________
 
 
 4. Once the sample is complete, the following window will appear.
-   Close the window.
+   Close the window.  It is OK if your time is different from the time in the following image.
 
 .. image:: ../img/Coastal/creategrid016.png
 

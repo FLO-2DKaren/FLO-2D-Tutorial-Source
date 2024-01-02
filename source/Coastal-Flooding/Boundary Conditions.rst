@@ -15,7 +15,7 @@ The required data is in project data folder.
 \*.txt        Tide table
 ============= ===================
 
-Data Location:  \\Coastal Training\\Project Data\\Boundary Conditions
+Data Location:  \\Coastal 2D Training\\Project Data\\Boundary Conditions
 
 .. raw:: html
 
@@ -26,7 +26,6 @@ __________________________
 
 1. Uncheck the following layers:
 
-   - Infiltration Layers
    - Soil Training
    - LandUse Training
 
@@ -41,6 +40,7 @@ Step 2: Set up the boundary polygon
 ____________________________________
 
 1. Use the mouse wheel to zoom to the west side of the project where the water leaves the grid.
+   Roll the mouse wheel in and out to zoom.  Click the mouse wheel to drag the map.
 
 .. image:: ../img/Coastal/bc002.png
 
@@ -62,22 +62,22 @@ ____________________________________
 .. image:: ../img/Coastal/bc004.png
 
 
-6. In the project folder, open the storm tide text file.
+6. In the project folder, open the storm tide text file in NotePad.
 
-\\Coastal Training\\Project Data\\Boundary Conditions\\Simple Tide Table.txt
+\\Coastal 2D Training\\Project Data\\Boundary Conditions\\Simple Tide Table.txt
 
-7. Place the mouse cursor at the beginning of the line with 0.000 hours.
+7. Ctrl-A will select all of the data.
 
-8. Press Ctrl-Shift End on the keyboard to select all data to the end of the file.
+8. Ctrl-C will copy the data.
 
-9. Press Ctrl-C to copy the data.  Press Ctrl-W to close the file.
+9. Press Ctrl-W will close the file.
 
 .. image:: ../img/Coastal/copytide.gif
 
 
 10. Click on the first cell of the FLO-2D Table Editor and click the Paste Button.
 
-11. Set the first stage to -3ft.  This will allow the boundary to fill slowly and help prevent instability.
+11. Set the first stage to -3.5ft.  This will allow the boundary to fill slowly and help prevent instability.
 
 .. image:: ../img/Coastal/pastetidestage.gif
 
@@ -103,12 +103,12 @@ ______________________________
 
 2. It is not necessary to set Control Variables for Boundary Conditions.
 
-3. It may be necessary to close the previous FLO-2D Run.
+3. If the project is still running, close it.
 
-.. image:: ../img/Coastal/bc007.png
+.. image:: ../img/Coastal/bc011.png
 
 
-4. Export the project.
+4. Export the data files.
 
 .. image:: ../img/Advanced-Workshop/Module089.png
 
@@ -121,17 +121,12 @@ ______________________________
 .. image:: ../img/Coastal/bc009.png
 
 
-6. Click the Run FLO-2D Icon.
+6. Run the model.  It isn't necessary to apply Run Settings this time.  The Export button updated the settings.
 
-.. image:: ../img/Advanced-Workshop/Module051.png
-
-
-7. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
-
-.. image:: ../img/Coastal/hydrology024.png
+.. image:: ../img/Coastal/runengine.png
 
 
-8. Let the project run and continue on to the next step.
+7. Let the project run and continue on to the next step.
 
 Step 4: Create a backup file
 ______________________________

@@ -91,12 +91,6 @@ Table of Contents
    /Coastal-Flooding/Storm Drain Shapefile Development
    /Coastal-Flooding/Storm Drain Setup
    /Coastal-Flooding/Urban Features
+   /Coastal-Flooding/Mitigation Design
    /Coastal-Flooding/Run and Review
    /Coastal-Flooding/Mapping
-
-.. toctree::
-   :maxdepth: 1
-   :caption: AFMA Extra Tutorial:
-
-   /AFMA/Channel Termination
-   /AFMA/Channel Confluence

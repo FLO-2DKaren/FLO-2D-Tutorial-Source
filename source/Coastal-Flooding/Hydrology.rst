@@ -7,7 +7,7 @@ In this module, learn how to retrieve data from NOAA to create rainfall and calc
 
 Required Data
 
-The required data is in the Coastal Training Folder.
+The required data is in the Coastal 2D Training Folder.
 
 ======== ====================== =======================
 **File** **Content**            Location
@@ -17,7 +17,7 @@ The required data is in the Coastal Training Folder.
 \*.asc   NOAA rainfall data     NOAA Website
 ======== ====================== =======================
 
-Data Location: \\Coastal Training\\Project Data\\Hydrology
+Data Location: \\Coastal 2D Training\\Project Data\\Hydrology
 
 .. raw:: html
 
@@ -26,6 +26,9 @@ Data Location: \\Coastal Training\\Project Data\\Hydrology
 
 Step 1. Determine the total rainfall
 _____________________________________
+
+.. Important:: If taking this training in a Live Class, skip to Step 3.  The live class will have less time to complete
+               the hydrology tutorial.
 
 1. In an internet browser right click this link and open it in a new tab. https://hdsc.nws.noaa.gov/hdsc/pfds/
 
@@ -51,7 +54,7 @@ _____________________________________
 
 6. The file was most likely saved to the Download folder.  Copy it to the project folder and Extract it.
 
-   \\Coastal Training\\Project Data\\Hydrology
+   \\Coastal 2D Training\\Project Data\\Hydrology
 
 .. image:: ../img/Coastal/hydrology005.png
 
@@ -129,16 +132,18 @@ C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Rainfall Distributions\\
 .. image:: ../img/Coastal/hydrology014.png
 
 
-5. To interpolate the rainfall depth reduction factor, click the AR button on the bottom of the rain editor widget.
+5. Skip to Step 4 if participating in Live Training.
 
-6. Fill the form.
+6. To interpolate the rainfall depth reduction factor, click the AR button on the bottom of the rain editor widget.
 
-7. Click OK to calculate the rainARF and OK to close the message.
+7. Fill the form.
+
+8. Click OK to calculate the rainARF and OK to close the message.
 
 .. image:: ../img/Coastal/hydrology015.png
 
 
-8. The rainfall is now complete.  It will be exported into the RAIN.DAT file.
+9. The rainfall is now complete.  It will be exported into the RAIN.DAT file.
 
 Step 4. Simplify layers list
 ______________________________
@@ -172,18 +177,21 @@ ______________________________
 Step 5. Calculate infiltration
 ______________________________
 
+.. Note:: This tutorial shows how to use Green-Ampt infiltration.  SCS, and Horton can also be applied with
+          the calculator.  SCS can be calculated from a shapefile or a raster.
+
 1. Collapse the FLO-2D widgets and click Infiltration Editor.
 
 .. image:: ../img/Coastal/hydrology013.png
 
 
-2. Select the new Group in the layers list and drag the file LandUse Training.shp onto the map space.
+2. Select the Project Data group in the layers list and drag the file LandUse Training.shp onto the map space.
 
-\\Coastal Training\\Project Data\\Hydrology\\Green Ampt\\LandUse Training.shp
+\\Coastal 2D Training\\Project Data\\Hydrology\\Green Ampt\\LandUse Training.shp
 
 3. Drag the file Soil Training.shp onto the map space.
 
-\\Coastal Training\\Project Data\\Hydrology\\Green Ampt\\Soil Training.shp
+\\Coastal 2D Training\\Project Data\\Hydrology\\Green Ampt\\Soil Training.shp
 
 .. image:: ../img/Coastal/hydrology018.png
 
@@ -193,8 +201,9 @@ ______________________________
 .. image:: ../img/Workshop/Worksh048.png
 
 
-5. Check the Global Green Ampt switch.  These global values will be replaced by spatial data so it is not necessary
-   to complete this data unless uniform infiltration is used.
+5. Check the Global Green Ampt switch.  For a description of how these variables are used, please see the
+   INFIL.DAT section of the Data Input Manual.  Note that the soil depth solution will not be used if the
+   global soil depth is 0.00.
 
 6. Click OK to close.
 
@@ -207,13 +216,16 @@ ______________________________
 
 
 8. Specify the attributes as shown in the following image and click OK.
-   The calculation process should take less than 1 minute to complete because this project is small.
+   The calculation process should take less than a couple of minutes to complete because this project is small.
 
-.. note::  If a calculator is taking too much time, make sure the data is on the C: drive.  If the project is in a
-           directory on the C: drive, and the data is in the same directory, the SQLite database manager works much
-           faster.
+.. note::  The Green-Ampt calculator was modified in 2023 and extra potential Green-Ampt sources are now available.  In
+           this example, the 2021 method is used so DTHETA, and PSIF, and Vegetation cover are not required.
 
 .. image:: ../img/Coastal/hydrology019.png
+
+.. note::  If a calculator is taking too long, make sure the data is on the C: drive.  If the project is in a
+           directory on the C: drive, and the data is in the same directory, the SQLite database manager works much
+           faster.
 
 
 Step 6. Save, export, and run
@@ -248,17 +260,30 @@ ______________________________
 .. image:: ../img/Coastal/hydrology023.png
 
 
-4. Click the Run FLO-2D Icon.
-
-.. image:: ../img/Advanced-Workshop/Module051.png
-
-
-5. Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.
+5. Use the Run Settings to set the Project path and the FLO-2D Engine Path.
 
 .. image:: ../img/Coastal/hydrology024.png
 
 
-6. Let the project run and continue on to the next step.
+6. Run the model.
+
+.. image:: ../img/Coastal/runengine.png
+
+
+- The blue message with the Professional License means this computer has a valid activator turned on.
+- Once the time lines appear, that means the initial data tests have passes.
+- The file path can be found at the bottom of the run window.
+
+.. image:: ../img/Coastal/hydrology026.png
+
+
+7. Let the project run and continue on to the next step.
+
+.. important::  If an error message appears, use the snipping tool to get a screenshot of the error message.
+                Review the error.chk file.  If help is required, ask the class instructor for help.
+                If working through tutorials independently, email both the image and error message to
+                FLO-2D tech support for help.  Most error messages are resolved quickly.
+
 
 Step 7: Create a backup file
 ______________________________

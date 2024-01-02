@@ -161,9 +161,49 @@ ______________________________________
 .. image:: ../img/Workshop/weir3.png
 
 
-Step 8: Schematize the storm drain components
-_________________________________________________
+Step 8: Add external inflows
+______________________________
 
+1. Open the Inlet/Outlet Node editor.
+
+.. image:: ../img/Advanced-Workshop/inletinflow.png
+
+
+2. Find the inlet I3-38-32-2 and load it in the Dialog Box.
+
+3. Check the External inflow checkbox and click the adjacent button.
+
+.. image:: ../img/Advanced-Workshop/inletinflow1.png
+
+
+4. Click the browse button next to the Time Series field on the Inlet/Junction dialog box.
+
+.. image:: ../img/Advanced-Workshop/inletinflow2.png
+
+
+5. Fill the table with the following data and click Save.
+
+.. image:: ../img/Advanced-Workshop/inletinflow3.png
+
+
+6. Click save on the updated Inlet/Junction dialog box.
+
+.. image:: ../img/Advanced-Workshop/inletinflow4.png
+
+
+7. Click the final Save button on the larger dialog box.
+
+.. image:: ../img/Advanced-Workshop/inletinflow5.png
+
+
+8. The final message alerts the user that the process completed without error but the schematized button is required to
+   trigger the data table update.
+
+.. image:: ../img/Advanced-Workshop/inletinflow6.png
+
+
+Step 9: Schematize the storm drain components
+_________________________________________________
 1. Click on Schematize Storm Drain Components in the Storm Drain Editor widget.
 
 .. image:: ../img/Workshop/Worksh104.png
@@ -181,7 +221,7 @@ _________________________________________________
 .. image:: ../img/Workshop/Worksh106.png
 
 
-Step 9: Export the project
+Step 10: Export the project
 ______________________________________
 
 1. Click the Set Control Variable icon.
@@ -234,7 +274,7 @@ Export Advanced
 
 .. image:: ../img/Workshop/Worksh021f.png
 
-Step 10: Set up the storage unit data
+Step 11: Set up the storage unit data
 ______________________________________
 
 .. note:: The plugin cannot make a storage unit yet.  This step will be finished in EPA SWMM GUI.  The tutorial will be
@@ -269,7 +309,7 @@ ______________________________________
 .. image:: ../img/Workshop/stunit006.png
 
 
-Step 11: Run the simulation
+Step 12: Run the simulation
 ______________________________________
 
 1. Click the Run FLO-2D Icon.

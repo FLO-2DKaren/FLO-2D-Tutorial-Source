@@ -50,7 +50,13 @@ Advanced Storm Drain Shapefiles
 
 .. image:: ../img/Workshop/Worksh093a.png
 
-3. Open the attribute table for any of the storm drain layers to review the attributes.
+
+3. Do all feature editing and attribute work in the External Layers not the System layers.
+
+.. image:: ../img/Workshop/Worksh093c.png
+
+
+4. Open the attribute table for any of the storm drain layers to review the attributes.
 
 .. image:: ../img/Workshop/Worksh093b.png
 
@@ -200,3 +206,31 @@ ___________________________________________
 
 .. image:: ../img/Advanced-Workshop/Module264a.png
 
+Step 6. Outfall Overview
+___________________________
+
+1. Free
+
+2. Bubble-up
+
+3. Fixed stage
+
+4. Tidal stage
+
+5. Flapgate
+
+6. Channel
+
+7. Allow Q
+
+
+Step 7. Type 4 Overview
+__________________________
+
+1. Feature Switch
+
+2. Vertical
+
+3. Horizontal
+
+4. Flapgate

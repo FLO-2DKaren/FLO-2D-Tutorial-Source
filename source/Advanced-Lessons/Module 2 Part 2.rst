@@ -18,7 +18,9 @@ The required data is in Module 1 and 2
 \*.shp   Culvert shapefiles
 ======== ===========================
 
-.. youtube:: 5XFkNQ6z8Oc
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5XFkNQ6z8Oc" frameborder="0" allowfullscreen></iframe>
 
 .. note:: The accompanying YouTube video shows several more advanced ideas for modeling culverts.  The tutorial focus is
           on the generalized culvert equation.
