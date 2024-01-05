@@ -23,11 +23,6 @@ author = "Karen O'Brien"
 html_logo = "FLO-2D_logo.jpg"
 # -- General configuration ---------------------------------------------------
 
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-# command is make docx
-# extensions = [sphinxdocx???]
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["style"]
 
@@ -42,11 +37,15 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # a list of builtin themes.
 #
 html_theme = "sphinx_book_theme"
-# html_theme_path = ["style"]
 html_static_path = ["style"]
 html_css_files = ["static/style.css"]
 
 # -- Options for DOCX output ------------------------------------------------
+
+extensions = [
+    # other extensions...
+    'sphinx.ext.intersphinx',
+]
 
 docx_documents = [
     ('index', 'FLO-2D Tutorials.docx', {

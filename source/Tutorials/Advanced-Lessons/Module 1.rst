@@ -24,8 +24,8 @@ Lesson 1.gpkg Module 1 GeoPackage
 Step 1: Create a recovery file
 ------------------------------
 
-**Note: This step discusses how to set up the backup file or recovery point.  Skip if
-these steps are already well understood.**
+.. Note:: This step discusses how to set up the backup file or recovery point.  Skip if
+          these steps are already well understood.
 
 1. Select the Lesson 1.gpkg and Lesson 1.qgz files and zip them.
    This will create a recovery file.
