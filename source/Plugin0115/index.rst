@@ -1,7 +1,5 @@
-.. _plugin1_manual:
-
-FLO-2D Plugin v0.115 User Manual
-==================================
+FLO-2D Plugin Version 0.115.0
+=============================
 
 .. toctree::
    :maxdepth: 1
