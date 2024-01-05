@@ -9,7 +9,7 @@ Simplify data preparation for grids, channels, initial conditions, boundary cond
 .. toctree::
    :hidden:
    :maxdepth: 1
-   :caption: Widgets (Grid Tools)
+   :caption: Widgets
 
    pre-processing-tools/Pre-Processing Tools
    grid-tools/Create a Grid
