@@ -44,36 +44,36 @@ Step 2: FLO-2D Installer
 ------------------------
 Install FLO-2D using the following instructions.  Admin Rights Required.
 
-.. image:: ../img/Instructions/image3.png
+.. image:: img/Instructions/image3.png
 
 
 1. Right click zipped file to access properties.
 
 2. Unblock the file if necessary.
 
-.. image:: ../img/Instructions/image41.png
+.. image:: img/Instructions/image41.png
 
 
 3. Double click the Setup file to run the installer.
 
-.. image:: ../img/Instructions/image5.png
+.. image:: img/Instructions/image5.png
 
 
 4. If FLO-2D is already installed, this installer will remove the FLO-2D Pro folder and rename the
    FLO-2D Documentation folder.
 
-.. image:: ../img/Instructions/image6.png
+.. image:: img/Instructions/image6.png
 
 
 5. If running a new install, check all options.  If running an update, cancel the installation and go to the
    Update Installation section.
 
-.. image:: ../img/Instructions/image15a.png
+.. image:: img/Instructions/image15a.png
 
 
 6. Click Next and Install to run the installer.
 
-.. image:: ../img/Instructions/image16.png
+.. image:: img/Instructions/image16.png
 
 
 7. The two final installers are embedded Microsoft Visual C++ packages.  They install silently,
@@ -91,7 +91,7 @@ Use this Download Link to access the **installers**, and training data.
    <a href="https://flo-2d.sharefile.com/d-s872384bd61524bf3b695612d1f158a78" target="_blank">Click Here to Download</a>
 
 
-.. image:: ../img/Instructions/image1.png
+.. image:: img/Instructions/image1.png
 
 
 1. Select all.
@@ -100,7 +100,7 @@ Use this Download Link to access the **installers**, and training data.
 
 3. The files are zipped into "file.zip"  Extract them into a safe location.
 
-.. image:: ../img/Instructions/image2.png
+.. image:: img/Instructions/image2.png
 
 Step 3: Documentation Installer
 --------------------------------
@@ -110,7 +110,7 @@ Use these instructions to install the FLO-2D Plugin documentation.  Admin Rights
 
 2. Default settings are fine, click Close to finish.
 
-.. image:: ../img/Instructions/image7.png
+.. image:: img/Instructions/image7.png
 
 
 Step 4: QGIS Installer
@@ -121,23 +121,23 @@ Follow these instructions to set up QGIS.
 
 2. Finish installing with the default settings.
 
-.. image:: ../img/Instructions/image8.png
+.. image:: img/Instructions/image8.png
 
 
 3. Open QGIS.
 
-.. image:: ../img/Workshop/Worksh002.png
+.. image:: img/Instructions/Worksh002.png
 
 
 4. Click Settings/Options
 
-.. image:: ../img/Instructions/image13.png
+.. image:: img/Instructions/image13.png
 
 
 5. Click the CRS tab and set the options as shown below.  Use CRS from first layer added.  Use Project CRS.  Click OK to
    close the window.
 
-.. image:: ../img/Instructions/image14.png
+.. image:: img/Instructions/image14.png
 
 
 Step 5: FLO-2D Plugin
@@ -146,31 +146,31 @@ With QGIS installed it is time to add the FLO-2D plugin and a few other handy pl
 
 1. Navigate to the plugin manager.
 
-.. image:: ../img/Instructions/image10.png
+.. image:: img/Instructions/image10.png
 
 
 2. Install Quick Map Services and Profile Tool, and Curve Number Generator.
 
-.. image:: ../img/Instructions/image11.png
+.. image:: img/Instructions/image11.png
 
 
 3. Lastly install from Zip FLO-2D Pro.
    Close the Plugin Manager once everything is finished installing.
 
-.. image:: ../img/Instructions/image12.gif
+.. image:: img/Instructions/image12.gif
 
 
 4. Add more services to Quick Map Services and eliminate unwanted maps.  Click Quick Map Services icon and click Settings.
    On the settings window, go to More Services and click Get Contributed pack.  On the Visibility window, uncheck the
    unwanted maps.
 
-.. image:: ../img/Instructions/image15.gif
+.. image:: img/Instructions/image15.gif
 
 
 This concludes the installation and setup.  The tutorial data is here:
 C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\QGIS Tutorials
 
-.. image:: ../img/Instructions/image9.png
+.. image:: img/Instructions/image9.png
 
 
 Go to Lesson 1 Part 1 on on the left sidebar to start.
@@ -182,23 +182,23 @@ Step 6. Installation Test
 
    C:\\Program Files (x86)\\FLO-2D PRO\\Run for Project Folder
 
-.. image:: ../img/Instructions/installtest01.png
+.. image:: img/Instructions/installtest01.png
 
 2. Paste the files into any project folder with \*.DAT files like Barn.
 
    C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Example Projects\\Barn Mudflow
 
-.. image:: ../img/Instructions/installtest02.png
+.. image:: img/Instructions/installtest02.png
 
 3. Double click FLOPRO.EXE to start a test run.
 
 4. If the computer is activated with the professional version, this message will appear.
 
-.. image:: ../img/Instructions/installtest03.png
+.. image:: img/Instructions/installtest03.png
 
 5. If the computer isn't activated, this message will appear.
 
-.. image:: ../img/Instructions/installtest04.png
+.. image:: img/Instructions/installtest04.png
 
 6. Any other message might need some troubleshooting.  Find the related issue below.
 
@@ -228,7 +228,7 @@ _____
 1. HDF5 installer will not edit the system path if the system path is too long. During the FLO-2D installation, the
    following fault may appear.  Close the message to continue the installation.
 
-.. image:: ../img/Instructions/image18.png
+.. image:: img/Instructions/image18.png
 
 
 2. If the path is not added to the system variables, it may be necessary to add some hdf5 dll files to the FLO-2D Pro
@@ -241,7 +241,7 @@ _____
    - C:\\Program Files (x86)\\FLO-2D PRO
    - C:\\Program Files (x86)\\FLO-2D PRO\\Run for Project Folder.
 
-.. image:: ../img/Instructions/image23.png
+.. image:: img/Instructions/image23.png
 
 
 Intel Packages
@@ -262,12 +262,12 @@ ______________
 
 4. The fault message might look like this:
 
-.. image:: ../img/Instructions/image25.png
+.. image:: img/Instructions/image25.png
 
 
 5. It may also look like this:
 
-.. image:: ../img/Instructions/image26.PNG
+.. image:: img/Instructions/image26.PNG
 
 
 6. Older files might be on the computer if the update process wasn't followed.  These dlls should be removed by the
@@ -303,14 +303,14 @@ _______________________
 2. Microsoft Visual Studio 13 is used for the Storm Drain engine.  The fault will be an error message about a missing
    msvcp120.dll or msvcp140.dll or something similar.  As the Visual Studio version changes, the dlls file name changes.
 
-.. image:: ../img/Instructions/image27.PNG
+.. image:: img/Instructions/image27.PNG
 
 
 3. For example, this computer has many different redistributable packages.  Any software built with Visual Studio
    should add the required dll to the computer.  If that process fails, it may be necessary to install the packages
    from the VCredist_x64 or x86 installers.
 
-.. image:: ../img/Instructions/image22.png
+.. image:: img/Instructions/image22.png
 
 
 4. FLOPRO.exe Build 22 uses the 2015 - 2019 version of Visual Studio.
@@ -332,7 +332,7 @@ ___________________________
 
 2. QGIS message states the the model started but nothing happens.  FLOPRO.exe does not start.
 
-.. image:: ../img/Instructions/image21.png
+.. image:: img/Instructions/image21.png
 
 3. This fault seems to be related to QGIS permissions or perhaps an intel compatibility issue.  FLO-2D staff is actively
    seeking a solution but the quick fix is to set up the FLOPRO.exe and its support dlls in the project folder.
@@ -340,7 +340,7 @@ ___________________________
 4. Copy the files from C:\Program Files (x86)\FLO-2D Pro\Run for Project Folder. Paste them into the Project Folder and
    double click FLOPRO.exe to start the simulation.
 
-.. image:: ../img/Instructions/image24.png
+.. image:: img/Instructions/image24.png
 
 
 GDS and Mapper
@@ -357,7 +357,7 @@ use GDS or Mapper and you get missing dll failures or struggle to use GDS proces
 1. GDS might not be connected to it's MapObjects dlls.  These are the objects that do things like load images, load
    tables, intersect shapefiles, and create the grid.  The fault will look like this:
 
-.. image:: ../img/Instructions/gdsfault01.png
+.. image:: img/Instructions/gdsfault01.png
 
 2. If this fault shows up, delete the contents of this folder and run the FLO-2D Pro Setup Installer - MapObjects section again.
 
@@ -369,25 +369,25 @@ use GDS or Mapper and you get missing dll failures or struggle to use GDS proces
    A path correction will fix this fault.  When a new project doesn't have a project path, it tries to write data
    to the C:\\Program Filex(x86)\\FLO-2D Pro path.  This path is protected by Admin Rights.
 
-.. image:: ../img/Instructions/gdsfault03.png
+.. image:: img/Instructions/gdsfault03.png
 
 4. The error message that appears states something about admin rights or permissions.  Correct it by applying a project
    path in GDS\\Tools\\Options\\Directory Paths
 
-.. image:: ../img/Instructions/gdsfault04.png
+.. image:: img/Instructions/gdsfault04.png
 
 5. GDS and Mapper may have overflow or out of memory error messages.  This is not a correctable fault.
    They are both 32-bit programs and have limitations related to the memory they can use.  This varies by computer
    and by screen size so if you get this fault on one computer, it may not show up on an older computer.
 
-.. image:: ../img/Instructions/gdsfault05.png
+.. image:: img/Instructions/gdsfault05.png
 
 
 5. GDS and Mapper default settings are for computers in the USA.  It may be necessary to adjust the number separator.
    If an error message appears about the number separator, use the Control Panel\\Clock and Region\\Additional Settings
    to set the decimal separator to a ".".  International users might want to use QGIS so this is not necessary.
 
-.. image:: ../img/Instructions/gdsfault06.png
+.. image:: img/Instructions/gdsfault06.png
 
 6. Sometimes the Microsoft Data Access program doesn't install correctly and GDS cannot find the MDAC dlls.
    It may be possible to reinstall the MDAC setup program.

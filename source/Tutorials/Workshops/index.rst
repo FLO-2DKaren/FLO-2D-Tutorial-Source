@@ -1,5 +1,8 @@
-Workshops
-=============
+Self-Help Kit
+===============
+
+The Self-Help Kit focuses on fundamental aspects of initiating and executing a FLO-2D project,
+these lessons establish a solid foundation for beginners.
 
 .. toctree::
    :hidden:

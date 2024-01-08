@@ -16,6 +16,11 @@ the model results. The user is encouraged to read this manual to become familiar
 FLO-2D Plugin features. The user can keep current on the FLO-2D model and processor program updates,
 training and other modeling news at the website: www.flo-2d.com.
 
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   Setup/Set-up
 
 .. toctree::
    :hidden:
