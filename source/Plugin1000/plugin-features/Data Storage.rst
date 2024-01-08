@@ -4,7 +4,7 @@ Data Storage
 Database Format
 ---------------
 
-The Plugin uses a [`GeoPackage <http://www.GeoPackage.org/spec/>`__] for data storage.
+The Plugin uses a `GeoPackage <http://www.GeoPackage.org/spec/>`__ for data storage.
 It is a `SQLite <http://www.sqlite.org/>`__ database with spatial extensions for storing vector and raster data.
 The GeoPackage or \*.gpkg file is a binary file that stores data tables in SQLite format.
 SQLite is a public domain data base engine that is used and supported worldwide.

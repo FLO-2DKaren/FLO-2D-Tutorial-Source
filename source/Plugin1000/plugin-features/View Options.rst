@@ -11,7 +11,7 @@ For QT Creator Windows
 
 If the data in Widgets and Dialog Boxes is squeezed or not readable, set the Environmental Variables for QT Creator scaling factor, on the
 Advanced tab of the System Properties window, following the figures shown below.
-Set the Environmental Variablesfor the System not the user.
+Set the Environmental Variables for the System not the user.
 
 Open Control Panel and search for System Properties.
 Click the Environmental Variables button.
@@ -40,7 +40,7 @@ Plugin Toolbar
 The FLO-2D Plugin toolbar is located on the QGIS toolbar lower tier.
 If the toolbar is missing, follow the FLO-2D Plugin installation instructions or use the View menu to load it onto the QGIS Toolbar menu.
 
-.. image:: ../img/View-Options/View006.png
+.. image:: ../img/Buttons/tools.png
 
 Plugin Layers
 -------------
@@ -66,7 +66,7 @@ FLO-2D Grid Info Panel
 The FLO-2D Grid Info button is used with the FLO-2D Grid Info Panel.
 Click the button and then click any cell to fill the grid element information.
 
-.. image:: ../img/View-Options/View009.png
+.. image:: ../img/Buttons/gridinfo.png
 
 Enter a grid element number and click the Eye button.
 The map will zoom to that element and highlight it with yellow.
@@ -79,7 +79,7 @@ FLO-2D Widgets
 The editor widget is used to digitize the User Layers.
 If the windows are missing, show them using the View>Panels>FLO-2D Panel.
 
-.. image:: ../img/View-Options/View010.png
+.. image:: ../img/Widgets/widgets.png
 
 This panel can be docked along with the QGIS Processing Tools Panel.
 

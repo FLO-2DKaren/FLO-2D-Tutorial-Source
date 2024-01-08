@@ -1,7 +1,7 @@
 Widgets
 =========
 
-Enhance your FLO-2D modeling with the FLO-2D Plugin widgets suite.
+The FLO-2D Plugin widgets suite is used to enhance the FLO-2D modeling.
 Simplify data preparation for grids, channels, initial conditions, boundary conditions, storm drains, and more.
 
 .. image:: ../img/Widgets/widgets.png

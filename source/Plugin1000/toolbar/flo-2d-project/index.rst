@@ -1,6 +1,9 @@
 FLO-2D Project
 =================
 
+The FLO-2D project button serves to initiate a new project, open an existing one, and utilize the GeoPackage Management
+tool for external layer management within the user's GeoPackage.
+
 .. toctree::
    :hidden:
    :maxdepth: 1
