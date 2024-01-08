@@ -3,6 +3,7 @@ Toolbar
 
 .. toctree::
    :maxdepth: 1
+   :hidden:
    :caption: Plugin Features
 
    FLO-2D Toolbar

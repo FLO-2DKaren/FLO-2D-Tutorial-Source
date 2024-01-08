@@ -12,4 +12,3 @@ FLO-2D Plugin Version 0.115.0
    toolbar/index
    widgets/index
    post-development-grid-modification/Post Development Grid Modification
-   References

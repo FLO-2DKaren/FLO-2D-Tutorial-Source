@@ -12,7 +12,7 @@ complex alluvial fan topography and roughness, split channel flows, mud/debris f
 Its primary application is for urban flood simulation with buildings, streets, walls and storm drains.
 
 The FLO-2D Plugin will provide complete GIS integration for generating the FLO-2D data files and mapping
-the model results. The user is encouraged to read this manual to become familiar with the overall
+the model results. The user is encouraged to read this documentation to become familiar with the overall
 FLO-2D Plugin features. The user can keep current on the FLO-2D model and processor program updates,
 training and other modeling news at the website: www.flo-2d.com.
 
@@ -20,22 +20,8 @@ training and other modeling news at the website: www.flo-2d.com.
    :hidden:
    :maxdepth: 1
 
-   Setup/Set-up
-
-.. toctree::
-   :hidden:
-   :maxdepth: 4
-
+   Setup/index
    Plugin1000/index
-
-.. toctree::
-   :hidden:
-   :maxdepth: 3
-
    Plugin0115/index
-
-.. toctree::
-   :hidden:
-   :maxdepth: 3
-
    Tutorials/index
+   References

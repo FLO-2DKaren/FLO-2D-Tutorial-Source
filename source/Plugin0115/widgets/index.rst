@@ -2,6 +2,7 @@ Widgets
 =========
 
 .. toctree::
+   :hidden:
    :maxdepth: 1
    :caption: Widgets
 
