@@ -237,7 +237,9 @@ External data can be grouped and saved on the map just like the standard data th
 External Layers are not part of the GeoPackage.
 They are separate shapefiles, tables and rasters that the User imports into the map.
 
-**Note: External layers are not part of the GeoPackage so they must be kept with the Project Folder if the data is transferred to a different computer**
+.. Note:: External layers are not part of the GeoPackage so they must be kept with the Project Folder if the data is
+          transferred to a different computer.  This is not the case for FLO-2D Plugin v1.0.0 and on.  See the new
+          documentation for that version.
 
 .. image:: ../img/Data-Storage/Data019.png
 

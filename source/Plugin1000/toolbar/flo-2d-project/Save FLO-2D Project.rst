@@ -34,4 +34,5 @@ in a faster and smaller GeoPackage but if the paths change the external data mus
 .. image:: ../../img/Save-FLO-2D-Project/saveproject001.png
 
 .. note:: The current version only supports vectors and rasters to be saved to the geopackage. CSV files and basemaps
-          are not allowed.
+          are not allowed.  If a basemap or other file is loaded, it may still be able to save in the QGZ storage table
+          that is packaged in the GeoPackage.

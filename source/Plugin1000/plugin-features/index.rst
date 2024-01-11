@@ -14,12 +14,15 @@ List of Additional Plugins
 
 Other helpful Plugins include:
 
--  Profile tool
+- FLO-2D Rasterizor
+- FLO-2D MapCrafter
+- Profile tool
+- Quick Map Services
+- Curve Number Generator
 
--  Quick Map Service
 
 .. note:: For QuickMapService, it is necessary to install and add maps.
-          Click on the QuickMapServices button>Settings>More Services> Get Contributed Pack> Save.
+          Click on the QuickMapServices button > Settings > More Services > Get Contributed Pack> Save.
 
 .. toctree::
    :hidden:
