@@ -22,7 +22,6 @@ to set-up the computer.
    :maxdepth: 1
 
    FLO-2D Pro
-   FLO-2D Activation Instructions
    QGIS and FLO-2D Plugin
    Port a GeoPackage
    GDS and Mapper Install Instructions

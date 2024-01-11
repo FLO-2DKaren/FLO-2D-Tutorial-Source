@@ -16,32 +16,34 @@ can tackle any diverse flooding problem including:
 - Tailings dam failure and volume prediction
 - Flood insurance studies
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3xvNGsB69tY" frameborder="0" allowfullscreen></iframe>
+
 Step 1: Download the FLO-2D Pro Installer
 -------------------------------------------
 
-FLO-2D Pro Subscribers should log into Sharefile and download the software and activator from their
+FLO-2D Pro Subscribers should log into FLO-2D.ShareFile.com and download the software and activator from their
 FLO-2D Tech Support Account.
 
 |ProSetup_Download|
 
 .. |ProSetup_Download| raw:: html
 
-   <a href="https://flo-2d.sharefile.com/" target="_blank">Sharefile Login</a>
+   <a href="https://flo-2d.sharefile.com/" target="_blank">ShareFile Login</a>
 
-Basic users should fill the Basic Download Form to access the limited free version of the software.
+Go to FLO-2D Pro Update >> FLO-2D Pro Installer >> Build 23 and download the file FLO-2D-Setup 2023.exe.  Watch the
+video for more detailed instructions.
 
-|Basic_Download|
+.. image:: img/Instructions/inst001.png
 
-.. |Basic_Download| raw:: html
-
-   <a href="https://flo-2d.com/flo-2d-basic/" target="_blank">Basic Download Form</a>
-
-Step 2: FLO-2D Installer
-------------------------
+Step 2: Run the Installer
+----------------------------
 
 Install FLO-2D using the following instructions.  Admin Rights Required.
 
 .. image:: img/Instructions/image3.png
+
 
 1. Right click zipped file to access properties.
 
@@ -49,14 +51,17 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 
 .. image:: img/Instructions/image41.png
 
+
 3. Double click the Setup file to run the installer.
 
 .. image:: img/Instructions/image5.png
+
 
 4. If FLO-2D is already installed, this installer will remove the FLO-2D Pro folder and rename the
    FLO-2D Documentation folder.
 
 .. image:: img/Instructions/image6.png
+
 
 5. If running a new install, check all options.  If running an update, cancel the installation and go to the
    Update Installation section.
@@ -65,6 +70,7 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 
 .. important:: For a proper installation, ensure that **ALL** components are installed
 
+
 6. Click Next and Install to run the installer.
 
 .. image:: img/Instructions/image16.png
@@ -72,3 +78,21 @@ Install FLO-2D using the following instructions.  Admin Rights Required.
 
 7. The two final installers are embedded Microsoft Visual C++ packages.  They install silently,
    but may trigger a restart.
+
+Step 2: Run the Activator
+----------------------------
+
+The activator is stored in the FLO-2D.ShareFile.com account. It requires Admin Rights to run.
+
+1. Download and run the activator.
+
+.. image:: img/Instructions/inst002.png
+
+2. Activation lasts 1 year past the purchase date.
+
+.. image:: img/Instructions/inst003.png
+
+3. FLO-2D uses a site license.  It can be installed and activated on any computer in the office that holds the
+   license.  The license agreement is saved to the Documentation folder along with the rest of the FLO-2D Documentation.
+
+C:\users\user\public\documents\FLO-2D Pro Documentation

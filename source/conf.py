@@ -44,7 +44,6 @@ html_css_files = ["_static/style.css"]
 
 extensions = [
     # other extensions...
-    'sphinx.ext.intersphinx',
 ]
 
 docx_documents = [

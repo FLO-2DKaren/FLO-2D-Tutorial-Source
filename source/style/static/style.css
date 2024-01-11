@@ -82,7 +82,6 @@ div.related {
   clear: page;
 }
 
-
 /* this changes the spacing and location of the title in the navigation bar */
 div.related h3 {
   display: none;
@@ -95,7 +94,7 @@ div.related ul {
   margin: 0;
   padding: 0;
 }
-*/
+
 /*changes how you want to display the list. Horizontally or vertically or like a list*/
 div.related li {
   list-style-type: circle;
@@ -103,13 +102,12 @@ div.related li {
 li::marker {
   color: Blue;
 }
+
 /* changes where the next|index is.*/
 div.related li.right {
     float: right;
     margin-right: 0.1em;
 }
-*/
-
 
 /* controls the whole text on the nav bar. except the navigation bar title*/
 div.related a {
@@ -123,11 +121,12 @@ div.section {
   padding: 10px 0px 0px;
   margin: 10px 0px 0px;
 }
+
 /*changes the format of the h1. So any text above or below ====== */
 div.section h1 {
   text-align: center;
-  font-size: actual;
-  border-bottom: 5px lightpink #090500;
+  font-size: inherit;
+  border-bottom: 5px #090500;
   padding: 10px;
   margin: 0;
 }
@@ -151,11 +150,12 @@ div.section p {
 
 /* This sets requirements for your images, for example you can bound it to limits or minimums. */
 div.section img,
-section img{
-  margin: 2px 2px 2px;
-  vertical-align: left;
-  padding: 0.5em 0.5em 0.5em;
+section img {
+  margin: 2px; /* You can adjust the margin if needed */
+  padding: 25px; /* Set the desired padding */
   max-width: 600px;
+  display: block; /* Ensure images are treated as block elements */
+  margin-left: 0; /* Align the image to the left */
 }
 
 /* this moves the footer, this is where the Copyright is located*/
@@ -172,32 +172,3 @@ div.documentwrapper {
   background-color: #333333;
 }
 
-/*
-div.sphinxtopbar {
-  float: left;
-  width: 220px;
-  margin-left: -100%;
-  padding: 0px;
-}
-*/
-
-/* this is link text, any text associated with a link will be modified*/
-/*a{
-  font-size: 17px;
-  text-decoration: none;
-  color: blue;
-*/
-
-/* When you hover over a link, this function will change its style*/
-/*a:hover{
-
-  color: pink;
-  font-weight: bold;
-}
-*/
-
-/*this makes the body to the side
-div.bodywrapper {
-  margin: 0 0 0 220px;
-}
-*/
