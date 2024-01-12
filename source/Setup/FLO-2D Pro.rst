@@ -26,6 +26,9 @@ Step 1: Download the FLO-2D Pro Installer
 FLO-2D Pro Subscribers should log into FLO-2D.ShareFile.com and download the software and activator from their
 FLO-2D Tech Support Account.
 
+.. Important:: If you need access to your tech support account.  Please use the contact page.
+               https://flo-2d.com/contact/
+
 |ProSetup_Download|
 
 .. |ProSetup_Download| raw:: html
