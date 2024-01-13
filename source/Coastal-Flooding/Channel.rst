@@ -6,19 +6,19 @@ Channel
 Use this training module to build an urban drainage channel by digitizing the channel components.  Finish it up by
 adding tide gates and boundary conditions to the channel.
 
-Required Data
+**Required Data**
 
 All data is provided in the Lesson folders.
 
-======== ======================
+======== ========================
 **File** **Content**
-======== ======================
-\*.shp   Left bank
-\*.shp   Right bank
-\*.shp   Cross sections
+======== ========================
+\*.shp   Left bank template
+\*.shp   Right bank template
+\*.shp   Cross sections template
 \*.shp   Points
 \*.txt   Tide gate tables
-======== ======================
+======== ========================
 
 Data Location:  \\Coastal 2D Training\\Project Data\\Channel
 
@@ -42,6 +42,14 @@ _________________________
 
 .. image:: ../img/Coastal/chan001.png
 
+3. Simplify the layers list by collapsing unused groups and unchecking schematic layers.
+
+.. image:: ../img/Coastal/chan0013.png
+
+.. important:: The aerial image and LiDAR map help define the left and right bank lines and help determine where cross
+               sections are required.  Sometimes the LiDAR map is better and other times the Aerial is better.  Use
+               both to help determine the best placement.
+
 
 Step 2: Load the data
 ______________________________
@@ -51,7 +59,7 @@ ______________________________
 
 1. Click the Channel group in the User Layers.
 
-2. Drag the channel shapefiles onto the map.
+2. Drag the channel template shapefiles onto the map.
 
 .. image:: ../img/Coastal/chan002.png
 
@@ -59,43 +67,133 @@ ______________________________
 Step 3: Left bank digitize
 ______________________________
 
-1. Click the newly imported Left Bank layer. It will be copied into the official layer.
+.. important:: Normally to digitize a channel, you would select the Left Bank Lines layer and add a channel feature to it.
+               That process is too slow and complex for this class. We will use a simplified method to reduce errors and time.
+               The following animation shows the full process.  Open it in a new tab to study the method.
 
-2. Click the select features tool and drag the mouse over the left bank feature to select the line.
+.. image:: ../img/Coastal/makeleftbank.gif
 
-3. Ctrl-C will copy the line.
+1. Please proceed with a faster method to keep on schedule.
 
-4. Click the official Left Bank Lines.
+2. Click the Left Bank Template layer. It will be copied into the official layer.
 
-5. Click the Edit Pencil button and Ctrl-V to paste the line into the Left Bank Lines layer.
+3. Select the channel line using the select with rectangle button.  Drag a rectangle over the channel lines to select the line.
 
-6. Save the Left Bank Lines layer and untoggle the Editor Pencil.
+.. image:: ../img/Coastal/chan0034.png
 
-7. Watch the animated image for a demo.
+4. Ctrl-c to copy the line feature.
+
+5. Click the official Left Bank Lines layer.
+
+6. Click the Edit Pencil button and Ctrl-v to paste the line into the Left Bank Lines layer.
+
+7. Save the Left Bank Lines layer and un-toggle the Editor Pencil.
+
+.. image:: ../img/Coastal/chan0037.png
+
+8. Click the de-select all button to reset the select tool.
+
+.. image:: ../img/Coastal/chan0038.png
+
+9. Watch the animated image for a demo.
 
 .. image:: ../img/Coastal/copyleftbank.gif
+
+
+.. important:: Remember, this copy paste method is used to keep the class on schedule.  In your future projects, you can add a
+               feature to the Left Bank layer instead of using the copy paste method.  The Advanced Channel Lesson on the left
+               sidebar shows a more detailed explanation of channel development.
 
 
 Step 4: Right bank digitize
 ______________________________
 
-1. Click the newly imported Right Bank layer.  It will be copied into the official layer.
+.. important:: Normally, you would build a right bank line just like a left bank line.  Again, that process will slow
+               the class down too much.  It is demonstrated in the following animation but please follow the simpler
+               steps below.
+               Open it in a new tab to study the method.
 
-2. Click the select features tool and drag the mouse over the right bank feature to select the line.
+.. image:: ../img/Coastal/makerightbank.gif
 
-3. Ctrl-C will copy the line.
 
-4. Click the official Right Bank Lines.
+1. Please proceed with a faster method to keep on schedule.
 
-5. Click the Edit button and Ctrl-V to paste the line into the Right Bank Lines layer.
+2. Click the Right Bank Template layer. It will be copied into the official layer.
 
-6. Save the Right Bank Lines layer and untoggle the Editor Pencil.
+3. Select the channel line using the Select button.  Drag a rectangle over the channel lines to select the line.
+
+.. image:: ../img/Coastal/chan0043.png
+
+
+4. Ctrl-C to copy the line.
+
+5. Click the official Right Bank Lines.
+
+6. Click the Edit button and Ctrl-v to paste the line into the Right Bank Lines layer.
+
+7. Save the Right Bank Lines layer and un-toggle the Editor Pencil.
+
+.. image:: ../img/Coastal/chan0047.png
+
+
+8. Watch the animation to see the process.
 
 .. image:: ../img/Coastal/copyrightbank.gif
 
 
-Step 5: Cross sections digitize
-_________________________________
+8. De-select all features and uncheck the left and right bank templates.
+
+.. image:: ../img/Coastal/chan003a.png
+
+
+Step 5: Cross sections - fast method
+________________________________________
+
+.. Important:: Cross section editing takes time.  **Step 5 fast method** is used for this class.  **Step 5 digitize method**
+               is to illustrate the process for your own projects.
+
+1. Collapse the FLO-2D widgets.
+
+2. Open the Cross Section Editor widget.
+
+3. Click the Digitize Cross Sections button.
+
+.. image:: ../img/Coastal/chan0051.png
+
+
+4. Click the Cross Sections Template layer.
+
+5. Click the Select All features button.
+
+6. Ctrl-c to copy all of the cross sections.
+
+.. image:: ../img/Coastal/chan0054.png
+
+
+7. Click the Cross Sections layer.
+
+8. Ctrl-v to paste the cross section lines into the layer.
+
+.. image:: ../img/Coastal/chan0055.png
+
+
+9. Click the Save button on the Cross Section Editor widget.
+
+10. Note the cross sections loaded into the widget.
+
+11. De-select all of the features.
+
+.. image:: ../img/Coastal/chan0058.png
+
+12. Watch the animation to see the process.
+
+.. image:: ../img/Coastal/copycrosssection.gif
+
+Step 5: Cross sections - digitize method
+________________________________________
+
+.. important:: This is the method you would use to create cross sections on your own channel.  It has more
+               details and instructions.  Review it but please use the fast method for the live class.
 
 .. note:: Digitize the cross sections in order from upstream to downstream.
 
@@ -104,12 +202,12 @@ _________________________________
 .. image:: ../img/Coastal/chan004.png
 
 
-2. Uncheck the Grid layer in the Schematized Layers Group.
+2. Un-check the Grid layer in the Schematized Layers Group.  If the Schematized group is un-checked, skip this.
 
 .. image:: ../img/Coastal/chan004a.png
 
 
-3. Go to the Channel Data group and double click the *imported* Cross Sections layer.
+3. Go to the Channels group and double click the Cross Sections Template layer.
 
 .. image:: ../img/Coastal/chan004b.png
 
@@ -129,7 +227,7 @@ _________________________________
 
 7. Click the eye button and set the active layer to Cross Sections.
 
-.. image:: ../img/Coastal/snappingoptions.gif
+.. image:: ../img/Coastal/chan0557.png
 
 
 7. Collapse the FLO-2D widgets and click Cross Sections Editor.
@@ -139,7 +237,7 @@ _________________________________
 
 8. The first cross section has important restrictions.
 
-   -  The line must cross the left bank line
+   -  The line must cross the left bank line.
 
    -  The line must start in the same cell as the left bank line.
 
@@ -152,42 +250,41 @@ _________________________________
 .. image:: ../img/Coastal/chan007.png
 
 
-10. Digitize all 32 cross sections using process shown the following animation.  Use the red lines as guides.
+10. Digitize all 24 cross sections using process shown the following animation.  Use the red lines as guides.
 
-    a. Left click the south side
+    a. Left click the south side (left bank).
 
-    b. Left click the north side
+    b. Left click the north side (right bank).
 
-    c. Right click to close
+    c. Right click to close the line.
 
-    d. Click OK or use the Enter key to close attributes window
+    d. Click OK or use the Enter key to close attributes window.
 
 .. image:: ../img/Coastal/crossection1.gif
 
 
-11. Handy digitizing features:
+11. Handy digitizing tools:
 
-    - Left click to drop a point.  Right click to close a polyline
+    - Left click to drop a point.  Right click to close a polyline or polygon.
 
     - Rotate the scroll wheel to zoom in and out.
 
     - Click and hold the scroll wheel to pan while in editing mode.
 
-    - Use the delete key to delete the last point created.
+    - Use the delete key to delete the last vertex created.
 
-    - Use the Esc key to cancel the polyline.
+    - Use the Esc key to cancel the polyline or polygon.
 
     - The point won’t drop until the mouse button is released.
 
-    - Redo and undo have limited functionality and can be useful.
-
+    - Redo and undo have limited functionality and can be useful.  Ctrl-z to undo.
 
 12. Once the last cross section is complete.  Click the Save icon on the Cross Sections Editor.
 
-.. image:: ../img/Coastal/chan009.png
+.. image:: ../img/Coastal/chan009a.png
 
 
-13. Remove the unofficial channel layers from the layers list.  Right click them and click Remove.
+13. Remove the channel templates from the layers list.  Right click them and click Remove.
 
 .. image:: ../img/Coastal/chan010a.png
 
@@ -199,32 +296,33 @@ _________________________________
 Step 6. Cross section attributes
 __________________________________
 
-1. Go to the User layers group.  Right click the Cross Sections layer and click Open Attribute Table.
+1. The widget can be used to edit the attributes of the cross sections but that method is slow. Sometimes it is
+   faster to use the attribute table editor.
 
-2. Click the Edit pencil.
+.. image:: ../img/Coastal/chan0061.png
 
-3. Set the field to fcn.
+2. Go to the User layers group.  Right click the Cross Sections layer and click Open Attribute Table.
 
-4. Set the n value to 0.03.
+.. image:: ../img/Coastal/chan0062.png
 
-5. Click Update All.
+3. Click the Edit pencil.
 
-6. Click Save button and turn off editor.
+4. Set the field to fcn.
 
-7. Close the table.
+5. Set the n value to 0.035.
 
-.. image:: ../img/Coastal/chanattrib.gif
+6. Click Update All.
 
+.. image:: ../img/Coastal/chan0066.png
 
-8. Methods to determine the urban channel geometry.
+7. Click Save button
 
-   a. As-built files are the first source of data but not available in all cases.
+8. Un-toggle the editor pencil.
 
-   b. Survey channel cross sections.
+9. Close the table.
 
-   c. Sample elevation data from a LiDAR raster. (This method only works if the channels are dry.)
+.. image:: ../img/Coastal/chan0069.png
 
-   d. Measure and estimate channel geometry with QGIS tools.
 
 Step 7: Load cross section data
 _________________________________
@@ -232,6 +330,16 @@ _________________________________
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Di5yDHg1fUk" frameborder="0" allowfullscreen></iframe>
+
+.. important:: The video discusses cross section development.  Methods to determine the urban channel geometry.
+
+               a. As-built files are the first source of data but not available in all cases.
+
+               b. Survey channel cross sections.
+
+               c. Sample elevation data from a LiDAR raster. (This method only works if the channels are dry.)
+
+               d. Measure and estimate channel geometry with QGIS tools.
 
 1. From the Cross Section Editor, choose Cross-Section-1.
 
@@ -255,7 +363,12 @@ Data Location: \\Coastal 2D Training\\Project Data\\Channel\\Cross Section Stati
 .. image:: ../img/Coastal/chan014.png
 
 
-5. Repeat this process for all 32 cross sections.
+5. Repeat this process for all 24 cross sections.
+
+6. Use the mouse roller to scroll through each cross section to see that it has correct data.
+
+.. image:: ../img/Coastal/chan0076.png
+
 
 Step 8: Schematize channel
 ______________________________
