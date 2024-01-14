@@ -24,7 +24,7 @@ Data Location:  \\Coastal 2D Training\\Project Data\\Channel
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ezubMQuwNKU" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XZ6STBmGsWE" frameborder="0" allowfullscreen></iframe>
 
 
 Step 1: Prepare the map
@@ -329,7 +329,7 @@ _________________________________
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Di5yDHg1fUk" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/IPgd1tO6LC8" frameborder="0" allowfullscreen></iframe>
 
 .. important:: The video discusses cross section development.  Methods to determine the urban channel geometry.
 
@@ -438,7 +438,7 @@ This method will outline how to call the interpolator and reload the data.
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5CrrcZATtxk" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kmKWwtY_3n8" frameborder="0" allowfullscreen></iframe>
 
 .. note:: If this process needs to be repeated for any reason, click Schematize button before performing this
           step.
@@ -487,7 +487,7 @@ downstream side.
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/5CrrcZATtxk" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/h-TRq1kY_3w" frameborder="0" allowfullscreen></iframe>
 
 Inlet
 ^^^^^
@@ -560,13 +560,22 @@ Outlet
 Step 12: Test Run
 ______________________________
 
+.. important:: The video shows how to find and fix channel errors but the class project will run without errors.  Review
+               the video if you have time but skip it if you don't.
+
 The test run will help determine if the channel is set up correctly.  There are a handful of common errors with channel
-modeling.
+modeling.  This video will show how to find and fix these 3 common errors.
 
 - Banks too close together.
-- Last cross section needs to be lower than it's upstream neighbor to be an outfall.
+- Boundary cross sections are too high.  Invert elevations do not allow downstream flow.
+- A bank element is inside the channel.
 
 These are reported in an the file **ERROR.CHK**.  If they exist, the model can't run.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/bEkNmYHvX4Q" frameborder="0" allowfullscreen></iframe>
+
 
 1. Set the control Parameters and click save.  Turn on the channel switch and turn of the rainfall for this test.
 
@@ -589,15 +598,20 @@ These are reported in an the file **ERROR.CHK**.  If they exist, the model can't
 .. image:: ../img/Coastal/chan0125.png
 
 
+
 Step 13: Tide gates
 ______________________________
 
-Two gated weirs are in the Cocohatchee canal.
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/zbDq3bpzpX8" frameborder="0" allowfullscreen></iframe>
+
+Two gated weirs are in the Cocohatchee channel.  Coco1 is further west and Coco2 is close to the east boundary.
 
 .. image:: ../img/Coastal/chan036.png
 
 
-1. Zoom to the first tide gate COCO1 to the West.
+1. Zoom the map to Coco1.
 
 .. image:: ../img/Coastal/chan037.png
 
@@ -607,36 +621,64 @@ Two gated weirs are in the Cocohatchee canal.
 .. image:: ../img/Coastal/chan038.png
 
 
-3. Digitize the first culvert by clicking on the upstream left bank element and downstream left bank element of the
-   channel.  Right click to complete the line and click OK to close the Structure Line attribute box.
+3. Digitize the first culvert.
+
+   1. Click the Create Structure button.
+
+   2. Click the upstream left bank element.
+
+   3. Click the downstream left bank element.
+
+   4. Right click to close the line.
+
+   5. Click OK to close the feature attributes.
 
 .. image:: ../img/Coastal/chan039.png
 
 
-4. Move upstream to the East and create the second structure.
+4. Move upstream to the Coco2 and create the second structure.
 
-.. note:: Pan while editing: Use the arrow keys or click and drag the map with the mouse wheel.
+.. image:: ../img/Coastal/chan040a.png
 
-          Zoom while editing: Roll the mouse wheel to zoom.
 
+.. note:: Roll the wheel to zoom.  Use the Arrow Keys or click and drag the wheel to pan.
 
 .. image:: ../img/Coastal/chan040.png
 
 
-5. Click Save on the Structure Editor.  Fill out the data for each structure.
+5. Finish the structures in the Structure Editor widget.
 
-   -  Name the culverts Coco1, Coco2
+Coco1
 
-   -  Type \= Channel
+   1.  Save the Structures.
 
-   -  Rating \= Rating table
+   2. Click the center button
 
-   -  Tailwater condition is Allow Upstream Flow.
+   3. Select Structure1 and change the name. Coco1
 
-.. image:: ../img/Coastal/chan041.png
+   4.  Type \= Channel
+
+   5.  Rating \= Rating table
+
+   6.  Tailwater condition is Allow Upstream Flow.
+
+.. image:: ../img/Coastal/chancoco1.png
+
+Coco2
+
+   1. Select Structure2 and change the name. Coco2
+
+   2.  Type \= Channel
+
+   3.  Rating \= Rating table
+
+   4.  Tailwater condition is Allow Upstream Flow.
+
+.. image:: ../img/Coastal/chancoco2.png
 
 
 6.  Click the Import Rating Tables button
+
 
 .. image:: ../img/Coastal/chan042.png
 
@@ -648,7 +690,9 @@ Data Location: Coastal 2D Training\\Project Data\\Weirs
 .. image:: ../img/Coastal/chan043.png
 
 
-8. The data was loaded into the FLO-2D Table Editor for the active structure.  Select a structure to refresh the plot.
+8. The data was loaded into the FLO-2D Table Editor for the active structure.
+
+.. important:: It may not be obvious that the data as imported.  Select a structure in the widget to refresh the plot.
 
 .. image:: ../img/Coastal/chan044.png
 
@@ -668,26 +712,27 @@ ______________________________
 .. image:: ../img/Coastal/chan047.png
 
 
-2. Check the boxes for Main Channel and Hydraulic Structures and click Save.
+2. Check the boxes for Main Channel, Rainfall, and Hydraulic Structures and click Save.
 
 .. image:: ../img/Coastal/chan046.png
 
 
-4. Click the Export button for the FLO-2D Data files.
-   Click OK.
+3. Click the Export button for the FLO-2D Data files.
 
 .. image:: ../img/Coastal/chan048.png
 
 
-.. image:: ../img/Coastal/chan049.png
-
-
-5. Create a new Export folder to test the weirs and channel hydraulics.
+4. Create a new Export folder to test the weirs and channel hydraulics.
 
 .. image:: ../img/Coastal/chan050.png
 
 
-6. The project is ready to run.
+5. Click OK to to export the data.
+
+.. image:: ../img/Coastal/chan049.png
+
+
+6. Click OK again to close the message. The project is ready to run.
 
 .. image:: ../img/Coastal/chan051.png
 
@@ -700,13 +745,8 @@ ______________________________
 .. image:: ../img/Coastal/chan054.png
 
 
-2. Set the FLO-2D Folder.
-   C:\\program files (x86)\\flo-2d pro
-
-3. Set the Project Folder.
-   \\Coastal 2D Training\\Project Runs\\Weir Test\\
-
-4. Click OK.
+4. The model should start with no error messages.  If you see an error message.  Check ERROR.CHK. Ask for help from
+   an instructor or by email.
 
 .. image:: ../img/Coastal/chan052.png
 
@@ -740,6 +780,9 @@ ______________________________
 
 
 5. Click yes to load the model.
+
+.. important:: The following video is a little old but it is still a good channel review.  Use it but ignore references
+               to QGIS 3.18.  This tutorial uses QGIS 3.28.11 or so.
 
 .. raw:: html
 
