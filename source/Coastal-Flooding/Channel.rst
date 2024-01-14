@@ -557,7 +557,39 @@ Outlet
 .. image:: ../img/Coastal/chan034.png
 
 
-Step 12: Tide gates
+Step 12: Test Run
+______________________________
+
+The test run will help determine if the channel is set up correctly.  There are a handful of common errors with channel
+modeling.
+
+- Banks too close together.
+- Last cross section needs to be lower than it's upstream neighbor to be an outfall.
+
+These are reported in an the file **ERROR.CHK**.  If they exist, the model can't run.
+
+1. Set the control Parameters and click save.  Turn on the channel switch and turn of the rainfall for this test.
+
+.. image:: ../img/Coastal/chan0121.png
+
+
+2. Export the project into the Channel Interpolation Test folder.
+
+.. image:: ../img/Coastal/chan0122.png
+
+.. image:: ../img/Coastal/chan0123.png
+
+
+3. Click the Run FLO-2D Icon.
+
+.. image:: ../img/Coastal/chan0124.png
+
+4. As anticipated, the error warning appears.  Follow the video to see how to review the error.
+
+.. image:: ../img/Coastal/chan0125.png
+
+
+Step 13: Tide gates
 ______________________________
 
 Two gated weirs are in the Cocohatchee canal.
@@ -628,7 +660,7 @@ Data Location: Coastal 2D Training\\Project Data\\Weirs
 
 10. The hydraulic structures are now ready.  The data will be saved to the HYSTRUCT.DAT file.
 
-Step 13: Export the project
+Step 14: Export the project
 ______________________________
 
 1. Click the Setup Control Parameters icon.
@@ -660,7 +692,7 @@ ______________________________
 .. image:: ../img/Coastal/chan051.png
 
 
-Step 14: Run the simulation
+Step 15: Run the simulation
 ______________________________
 
 1. Click the Run FLO-2D Icon.
@@ -684,7 +716,7 @@ ______________________________
 .. image:: ../img/Coastal/chan053.png
 
 
-Step 15: Create a backup file
+Step 16: Create a backup file
 ______________________________
 
 1. Close QGIS.
