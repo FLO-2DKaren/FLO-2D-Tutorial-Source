@@ -16,6 +16,8 @@ Required Data
 
 Data Location: \\Coastal Training\\Project Data\\Culverts
 
+**NEED TO CHANGE THE YOUTUBE LINK**
+
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/zv5fN8_JQ0I" frameborder="0" allowfullscreen></iframe>
@@ -53,67 +55,129 @@ ______________________________
 
 .. image:: ../img/Coastal/culv003.png
 
-
 Step 3: Build the structures into the User Layers.
 ____________________________________________________________
 
-1. Use the Structure Editor to add all of the new structures.
+.. important:: On FLO-2D, the Culvert must be created from upstream (higher elevation) to downstream (lower elevation).
+               It is possible to check the elevations using the Grid Info Tool.
+
+               .. image:: ../img/Coastal/culv026.png
+
+               .. image:: ../img/Coastal/culv027.png
+
+1. Use the Structure Editor to add the new structures.
 
 2. Collapse the Widgets, open the Structures Editor, and click the Add a Structure button.
 
 .. image:: ../img/Coastal/culv004.png
 
-
 **Digitizing process:**
 
-3. Left click the inlet node (upstream node)
+3. Look for the Culvert #15 (CU15)
 
-4. Left click the outlet node (downstream node)
+4. Left click the inlet node (upstream node)
 
-5. Right Click to finish the polyline.
+5. Left click the outlet node (downstream node)
+
+6. Right Click to finish the polyline.
    Click OK to close the attribute window.
 
-6. Watch the gif for a cycle.  Notice how the inlet and outlet position try to take advantage of the cells with the
-   lower elevations.  The positioning is not perfect.  It is aligned to the cell that most closely represents the invert.
+.. image:: ../img/Coastal/culv013.png
 
-.. image:: ../img/Coastal/addculverts.gif
+7. Click save on the widget to save and load the recently added data to the widget
 
+.. image:: ../img/Coastal/culv014.png
+
+.. important:: Utilize the Widget save button to save and load data into the Widget. Please note that using the QGIS
+               save button adds the data but does not populate it into the Widget. If the QGIS save button was used,
+               click on edit and save again using the Widget button to ensure the data is populated.
+
+**Copy process:**
+
+8. In order to speed up the live class, click on the Culvert Data layer and select the other 4 culverts
+
+.. image:: ../img/Coastal/culv015.png
+
+9. Culverts that are selected will be highlighted with a yellow color.
+
+.. image:: ../img/Coastal/culv016.png
+
+10. Use the Ctrl + C command to copy the selected Culverts from the Culvert Data layer.
+    Select the Structure Lines layer, click on the Toggle Editing button and paste the Culverts using Ctrl + V.
+
+.. image:: ../img/Coastal/culv017.png
+
+11. Click save on the widget to save and load the recently added data to the widget
+
+.. image:: ../img/Coastal/culv018.png
 
 Step 4: Assign the structure attributes
 ___________________________________________
 
-1. Click Save in the Structures Widget and check the center box.
+1. Check the center box.
 
 .. image:: ../img/Coastal/culv006.png
 
+2. To identify the Culvert Name, zoom into the selected feature. If the center checkbox is checked, it will be marked in red.
 
-2. Open the Culvert Data attribute table.
-   The attributes will help fill out the data for each structure.
+.. image:: ../img/Coastal/culv019.png
 
-.. image:: ../img/Coastal/culv005.png
+3. Start filling up all the data based on the following tables and figures.
 
+.. image:: ../img/Coastal/culv020.png
 
-3. Use the following Image or the attribute table to fill out the culvert variables.
+.. image:: ../img/Coastal/culv021.png
 
-4. If the following image is not clear, right click it
-   and open it in a new tab.
+.. image:: ../img/Coastal/culv022.png
 
-.. image:: ../img/Coastal/culv007.png
+.. note::
 
+    - **TYPEC**
 
-5. For Culvert Equations, extra data is needed in the Table Editor.  If the following image is not clear, right click it
-   and open it in a new tab. The new plugin also has a Mult_Barrel option.  Set Mutl_Barrel to 1.
+      - type 1: box culvert
+      - type 2: pipe culvert
 
-.. image:: ../img/Coastal/culv008.png
+    - **TYPEEN**
 
+      - *BOX entrance:*
 
-6. Schematize the structure data and click Yes to replace the data.
+        - type 1: wingwall flare 30 to 75 degrees
+        - type 2: wingwall flare 90 or 15 degrees
+        - type 3: wingwall flare 0 degrees
+
+      - *PIPE entrance:*
+
+        - type 1: square edge with headwall
+        - type 2: socket end with headwall
+        - type 3: socket end projecting
+
+    - **CULVERTN**
+
+      - Culvert Manning’s roughness coefficient. Default = 0.03.
+
+    - **KE**
+
+      - Culvert entrance loss coefficient.
+
+    - **CUBASE**
+
+      - Flow width (ft or m) of box culvert for TYPEC = 1. For a circular culvert, CUBASE = 0.
+
+.. seealso:: From Hydraulic Design of Highway Culverts - HDS-5-Third Edition
+
+    .. image:: ../img/Coastal/culv028.png
+
+4. Schematize the structure data and click Yes to replace the data.
 
 .. image:: ../img/Coastal/culv009.png
 
-
 .. image:: ../img/Advanced-Workshop/Module045.png
 
+.. note:: To verify the added data, it is possible to open the attribute table of the Hydraulics Structures layer and the Culvert Equations table within the Hydraulic Structures group.
+
+    .. image:: ../img/Coastal/culv024.png
+
+    .. image:: ../img/Coastal/culv025.png
 
 Step 6: Save, and export
 ______________________________
