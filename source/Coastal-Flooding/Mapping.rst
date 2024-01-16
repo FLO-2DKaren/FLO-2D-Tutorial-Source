@@ -1,6 +1,10 @@
 Mapping Results
 ===============
 
+**Overview**
+
+This tutorial outlines the process of mapping the FLO-2D results.
+
 Required Data
 
 ================== ==========================
@@ -15,33 +19,43 @@ Data Location:  \\Coastal Training\\Project Data\\Project Export Folder
 Step 1. Simplify map
 _____________________
 
-1. Uncheck unnecessary layers like Grid and Elevation, and Google Hybrid.
+1. Uncheck unnecessary layers like Grid, Elevation, and the user added layers (e.g. Culvert Data, Storm Drain...). Uncheck the following groups:
 
-2. Set up the layers.
+- Schematic Layers
 
-- Collapse all layers
+- Hydraulic Structures
 
-- Click the Layers Styling button.
+- Storm Drain
 
-- Right click the Layers area and create a
-  new Group called Results.
-
-.. image:: ../img/Coastal/managelayers2.gif
+.. image:: ../img/Coastal/map017.png
 
 
-Step 5. Import a map with Rasterizor
+Step 2. Rasterizor
 _____________________________________
 
-1. Review files that can be loaded
+Rasterizor is a quick mapping tool for FLO-2D output files.
+The files should have a standard format with 4 columns ge, x, y, n.
+These are grid element number, x coordinate, y coordinate, and n is the mapped value.
+It could be water surface elevation, depth, velocity or time to depth.
 
-2. Load a file
+1. Open Rasterizor
+
+.. image:: ../img/Coastal/map018.png
+
+2.
 
 3. Load an alternate file
 
 4. Create a difference map
 
-Step 6. MapCrafter
+Step 3. MapCrafter
 ____________________
+
+FLO-2D MapCrafter is designed to transform FLO-2D output files into comprehensive visualizations.
+It generates flood maps for single-phase simulations, sediment maps, mudflow maps, and two-phase simulation flood maps.
+Additionally, MapCrafter goes beyond by creating hazard maps, highlighting areas with elevated risks based on
+FLO-2D simulations, aiding in risk management. The plugin also streamlines the QGIS layout manager process by
+automatically generating templates for easy customization.
 
 Todo:
 
