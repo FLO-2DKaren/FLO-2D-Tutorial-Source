@@ -191,7 +191,7 @@ Maps the maximum channel velocity based on the VELOC.OUT file
                It is recommended to explore additional mapping options based on the user's specific needs.
 
 Step 4. MapCrafter Layouts
-------------------------------
+_______________________________
 
 The latest MapCrafter version comes with FLO-2D Layouts, a tool that automatizes the creation of QGIS maps by using pre-defined map layouts.
 
