@@ -28,7 +28,7 @@ ______________________________
 
 Start by cleaning up the map space so the next layer will be easy to see.
 
-1. Uncheck the User Left bank, Right Bank Cross section layers.
+1. Uncheck the User Left bank, Right Bank, Cross Sections layers.
 
 2. Check the Elevation Layer.
 
@@ -73,7 +73,8 @@ ____________________________________________________________
 
 **Digitizing process:**
 
-3. Look for the Culvert #15 (CU15)
+3. Locate Culvert #15 (CU15) on the right portion of the map, near the channel.
+   In this Culvert, the water flows in the south-north direction.
 
 4. Left click the inlet node (upstream node)
 
