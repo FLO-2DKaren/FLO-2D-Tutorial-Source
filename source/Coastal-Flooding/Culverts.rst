@@ -5,8 +5,7 @@ Culverts
 
 This tutorial outlines the process of creating hydraulic structures with generalized culvert equations.
 
-Required Data
--------------
+**Required Data**
 
 ============= =====================
 **File**      **Content**
@@ -26,7 +25,7 @@ ______________________________
 
 Start by cleaning up the map space so the next layer will be easy to see.
 
-1. Uncheck the User Left bank, Right Bank Cross section layers.
+1. Uncheck the User Channel Group.
 
 2. Check the Elevation Layer.
 

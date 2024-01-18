@@ -51,5 +51,21 @@ ___________________________________
 
 6. Move the Class data from the Download folder into the Coastal Training Folder.
 
+.. image:: ../img/Coastal/quickaccess.png
+
+See this animation if the instructions are vague.  Open it in a new tab if it isn't easily visible.
+
 .. image:: ../img/Coastal/quickaccess.gif
+
+
+Step 4: Add helpful plugins
+_______________________________
+
+1. Open the Plugin Manager.  Add any plugin with a red arrow if necessary.
+
+.. note:: If the following image is hard to see, open it in a new tab.
+
+.. image:: ../img/Coastal/setup007.png
+
+
 
