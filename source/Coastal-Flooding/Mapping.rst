@@ -99,10 +99,8 @@ It could be water surface elevation, depth, velocity or time to depth.
 
         .. image:: ../img/Coastal/map029.png
 
-NEED TO DO THE DIFFERENCE
-
-Step 3. MapCrafter
-____________________
+Step 3. MapCrafter - Flood Maps
+_________________________________
 
 FLO-2D MapCrafter is designed to transform FLO-2D output files into comprehensive visualizations.
 It generates flood maps for single-phase simulations, sediment maps, mudflow maps, and two-phase simulation flood maps.
@@ -190,7 +188,97 @@ Maps the maximum channel velocity based on the VELOC.OUT file
                The examples provided here are just a demonstration of some results that can be mapped.
                It is recommended to explore additional mapping options based on the user's specific needs.
 
-Step 4. MapCrafter Layouts
+Step 4. MapCrafter - Hazard Maps
+____________________________________
+
+1. Open MapCrafter
+
+.. image:: ../img/Coastal/map030.png
+
+2. Select the Run/Export Folder.
+
+.. image:: ../img/Coastal/map031.png
+
+4. Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation. Click on Create maps.
+
+.. image:: ../img/Coastal/map050.png
+
+.. note:: The USBR (United States Bureau Reclamation) Hazard map follows the criteria described in the
+          Downstream Hazard Classification Guidelines (USBR, 1988). MapCrafter allows the user to select
+          five hazard mapping classification systems: Houses, Mobile Homes, Vehicles, Adults, and Children.
+          Each of these hazard mapping options define the hazard based on Danger zone curves that are
+          separated into High Danger Zone, Judgement Zone and Low Danger Zone.
+          The danger zones are curves that define a relationship between depth and velocity.
+
+          .. image:: ../img/Coastal/map051.png
+
+..  important:: The Hazard maps are generated for the entire project domain.
+                It is not meaningful to assess House Hazard in regions without houses
+                (e.g., waterbodies, channels, grasslands). The same applies to all hazard maps.
+                Engineering judgment must be employed to identify areas more susceptible
+                to the specific type of flood damages.
+
+**HOUSES HAZARD**
+
+Houses Hazard Map is focused on permanent residences attached to foundations
+and worksite areas, including facilities that contain workers on a daily basis.
+This includes farm operations, oil and gas operations,
+sand and gravel operations, and fish hatcheries
+
+.. image:: ../img/Coastal/map052.png
+
+.. tip:: Increase transparency in the Hazard layer to facilitate the analysis and visualization.
+
+- HIGH DANGER ZONE (RED): Occupants of most houses are in danger from floodwater.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.
+- LOW DANGER ZONE (BLUE): Occupants of most houses are not seriously in danger from flood water.
+
+**Mobile Houses Hazard**
+
+Mobile Houses are typically located in flood plains due to zoning
+requirements in many areas, creating a very dangerous situation for
+occupants of mobile homes, as they are very susceptible to movement
+from relatively small floods.
+
+.. image:: ../img/Coastal/map053.png
+
+- HIGH DANGER ZONE (RED): Occupants of almost any size mobile home are in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.
+- LOW DANGER ZONE (BLUE): Occupants of almost any size mobile home are not seriously in danger from flood water.
+
+**Vehicles Hazard**
+
+Vehicles Hazard is focused on the possibility for loss
+of life to motorists and pedestrians.
+
+.. image:: ../img/Coastal/map054.png
+
+- HIGH DANGER ZONE (RED): Occupants of almost any size passenger vehicle are in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
+- LOW DANGER ZONE (BLUE): Occupants of almost any size passenger vehicle are not seriously in danger from flood water.
+
+**Adults Hazard**
+
+In Adults Hazard Map, an adult is considered any human over 5 feet (150 cm) tall and weighing over
+120 pounds (54 kg).
+
+.. image:: ../img/Coastal/map055.png
+
+- HIGH DANGER ZONE (RED): Almost any size adult is in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
+- LOW DANGER ZONE (BLUE): Almost any size adult is not seriously threatened by flood water.
+
+**Children Hazard**
+
+The Children Hazard map represents a more conservative classification compared to the Adults Hazard Map.
+
+.. image:: ../img/Coastal/map056.png
+
+- HIGH DANGER ZONE (RED): Almost any size child is in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
+- LOW DANGER ZONE (BLUE): Almost any size child (excluding infants) is not seriously threatened by flood water.
+
+Step 5. MapCrafter - Layouts
 _______________________________
 
 The latest MapCrafter version comes with FLO-2D Layouts, a tool that automatizes the creation of QGIS maps by using pre-defined map layouts.
