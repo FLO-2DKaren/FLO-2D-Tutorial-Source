@@ -99,8 +99,6 @@ It could be water surface elevation, depth, velocity or time to depth.
 
         .. image:: ../img/Coastal/map029.png
 
-NEED TO DO THE DIFFERENCE
-
 Step 3. MapCrafter
 ____________________
 
