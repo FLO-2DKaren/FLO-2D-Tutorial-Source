@@ -27,9 +27,9 @@ ______________________________
 
 Start by cleaning up the map space so the next layer will be easy to see.
 
-1. Uncheck the User Left bank, Right Bank, Cross Sections layers.
+1. Uncheck the Channels group.
 
-2. Check the Elevation Layer.
+2. Check the Elevation Layer to run on the elevation map.
 
 3. Click the Structure Lines layer to activate it.  It is in the User Layers Group.
 
@@ -41,7 +41,7 @@ Start by cleaning up the map space so the next layer will be easy to see.
 Step 2: Format the data layers
 ______________________________
 
-1. Double click the Culvert Data layer
+1. Double click the Culvert Data layer.
 
 2. Change the symbology to Arrow.
 
@@ -58,7 +58,9 @@ Step 3: Build the structures into the User Layers.
 ____________________________________________________________
 
 .. important:: On FLO-2D, the Culvert must be created from upstream (higher elevation) to downstream (lower elevation).
-               It is possible to check the elevations using the Grid Info Tool.
+               It is possible to check the elevations using the Grid Info Tool.  The grid element elevation is used as
+               the invert elevation of the culvert.  If elevation corrections are needed, review the Advanced
+               Hydraulic Structures lesson for the methods.  It is found on the left sidebar.
 
                .. image:: ../img/Coastal/culv026.png
 
@@ -102,12 +104,12 @@ ____________________________________________________________
 
 .. image:: ../img/Coastal/culv016.png
 
-10. Use the Ctrl + C command to copy the selected Culverts from the Culvert Data layer.
-    Select the Structure Lines layer, click on the Toggle Editing button and paste the Culverts using Ctrl + V.
+10. Use the Ctrl + c command to copy the selected Culverts from the Culvert Data layer.
+    Select the Structure Lines layer, click on the Toggle Editing button and paste the Culverts using Ctrl + v.
 
 .. image:: ../img/Coastal/culv017.png
 
-11. Click save on the widget to save and load the recently added data to the widget
+11. Click save on the widget to save and load the recently added data to the widget.
 
 .. image:: ../img/Coastal/culv018.png
 
@@ -187,7 +189,7 @@ ______________________________
 .. image:: ../img/Advanced-Workshop/Module046.png
 
 
-2. Export the data files to the Project Folder in QGIS Lesson 6 Export.
+2. Export the data files to the Culvert Test folder.
 
 .. image:: ../img/Advanced-Workshop/Module047.png
 
@@ -198,6 +200,8 @@ ______________________________
 
 
 .. image:: ../img/Coastal/culv011.png
+
+.. image:: ../img/Coastal/culv011a.png
 
 
 Step 7: Create a backup file

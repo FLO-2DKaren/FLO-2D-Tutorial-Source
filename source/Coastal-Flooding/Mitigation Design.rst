@@ -72,32 +72,7 @@ _______________________________
           raster so it does not have selectable attributes like a vector layer.  It is still helpful for map browsing.
 
 
-Step 3. Identify Infrastructure
-_________________________________
-
-1. Identify 3 locations of critical infrastructure.
-
-- Safety corridor
-- Hospital
-- Fire department
-- Evacuation point
-- Potential temporary settlement
-
-2. Add the 3 locations to the Mitigation Polygon layer.
-
-   1. Select the Mitigation Polygon layer.
-
-   2. Click the Edit Pencil.
-
-   3. Click the Add Polygon button.
-
-   4. Draw a polygon around the locations you find.
-
-   5. Close the polygon and click OK to close the message window.
-
-.. image:: ../img/Coastal/mit032.png
-
-Step 4. Run OSM Downloader
+Step 3. Run OSM Downloader
 _______________________________
 
 1. Right click the blank area at the bottom of the layers list.
@@ -122,9 +97,44 @@ _______________________________
 
 .. image:: ../img/Coastal/osm005.png
 
+Step 4. Open Data Connection
+________________________________
+
+.. note:: ArcGIS Online services can be loaded into QGIS maps.  This allows users to connect to data
+   that is hosted on local, state, and federal government sites.
+
+1. Click Layers >> Add Layer >> Add ArcGIS REST Server Layer.
+
+.. image:: ../img/Coastal/mit041.png
+
+2. Click the Load button and find the Open Data Connection.xml file in the Mitigation folder.
+
+.. image:: ../img/Coastal/mit043.png
+
+3. Click Select All and Import.
+
+.. image:: ../img/Coastal/mit044.png
+
+4. Any of these layers can be added to the map.
+
+.. image:: ../img/Coastal/mit045.png
+
+.. image:: ../img/Coastal/mit047.png
+
+5. Any new REST connection can be created even if it requires authentication.
+
+.. image:: ../img/Coastal/mit046.png
+
 
 Step 5. Modify Highway 41
 ______________________________
+
+.. note:: Now that some data loading methods have been identified, proceed with some simple mitigation
+    changes.  Before and after rasters can show if the mitigation methods help control flooding.
+
+.. warning:: Any mitigation change can relieve flooding locally while increasing flooding in other areas.
+   Always use a project area that is large enough to show potential flood changes downstream or away from
+   the mitigation location.
 
 1. Collapse the OSM Download group and uncheck it.
 
@@ -152,21 +162,66 @@ ______________________________
 Step 6. Improve a culvert
 ____________________________
 
-1. Select culvert ....
+1. Select culvert 10.
 
-2. Change the width to 4 ft and multiple barrels to 3.
+2. Change the width to 5 ft and multiple barrels to 3.
 
 3. Click the Schematize Culverts button.
+
+.. image:: ../img/Coastal/mit063.png
 
 Step 7. Coco1 Pump
 ____________________________
 
 1. Select Coco1.
 
-2. Add a pump to this system by modifying the rating table with a steady hydrograph.
+2. Add a pump to this system by modifying the rating table.
 
-3. Add 100 cfs to the depths above 5ft.
+3. Assume the pump uses a steady flow of 100 cfs.
 
-Step 8. Export and run
+.. note:: If a larger pump is used, any value can be applied
+   to match the discharge of the pump plus the discharge of the flow through
+   the gated weir.
+
+4. Add 100 cfs to the depths above 5ft.  This means the pump will turn on at 5 ft of depth.
+
+.. image:: ../img/Coastal/mit073.png
+
+.. important:: Since step 6 and 7 didn't change the position of a culvert, the Schematize button
+    is not needed.  The tables were automatically updated when the data was modified in the
+    widget and table editor.
+
+Step 8. Save and export
 ________________________
 
+1. This is a good point to save project.
+
+.. image:: ../img/Advanced-Workshop/Module046.png
+
+
+2. Export the data files to the Mitigation Test folder.
+
+.. image:: ../img/Advanced-Workshop/Module047.png
+
+
+3. All data files will be created in the selected project folder.
+
+.. image:: ../img/Coastal/mit081.png
+
+.. image:: ../img/Coastal/mit082.png
+
+4. It is not necessary to schematize the storm drain system since no work was
+   added to the storm drain.  Click Yes to continue.
+
+.. image:: ../img/Coastal/mit083.png
+
+5. No changes are needed for this project.  Click OK to continue and close the next
+   few messages.
+
+.. image:: ../img/Coastal/mit084.png
+
+.. image:: ../img/Coastal/mit085.png
+
+.. image:: ../img/Coastal/mit086.png
+
+6. The project has now been exported.

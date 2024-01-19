@@ -1,7 +1,12 @@
 Storm Drain Setup
 =================
 
-Required Data
+**Overview**
+
+This lesson will outline the process to convert a set of storm drain shapefiles into a storm drain
+system that will work with a FLO-2D model.
+
+**Required Data**
 
 ================== ==========================
 **File**           **Content**
@@ -60,9 +65,9 @@ _______________________________________________
 .. image:: ../img/Coastal/sd012.png
 
 Step 3: Import rating tables
-____________________________
+_______________________________
 
-1. Click the Import Rating Table button
+1. Click the Import Rating Table button.
 
 .. image:: ../img/Coastal/sd015.png
 
@@ -109,49 +114,40 @@ ___________________________________________
 .. image:: ../img/Coastal/sd020b.png
 
 
-Step 5: Export SWMM.INP file
-____________________________
-
-1. Click on Export SWMM.INP button in the Storm Drain Editor widget.
-
-.. image:: ../img/Advanced-Workshop/Module277.png
-
-2. Browse to the Project Export Folder.  Create a new folder called Storm Drain Test
-
-3. Save the SWMM.INP file.
-   The \*.INP file should be named as ‘SWMM.INP’, no other names will be read by FLO-2D model.
-   Click Save.
-
-.. image:: ../img/Coastal/sd021.png
-
-3. The Storm Drain Control Dialog is displayed.
-
-4. The control parameters can be entered.
-
-5. The time, date, flow units and other data are hardwired from the FLO-2D surface Control Dialog.
-
-6. All gray out data in the control dialog is hardwired.
-
-7. The data is default for FLO-2D.
-   The report_step can be set to any desired value.
-
-.. image:: ../img/Coastal/sd022.png
-
-8. A dialog displays stating the features that were written to the \*.INP file.
-   Click OK.
-
-.. image:: ../img/Coastal/sd023.png
-
 Step 6: Export the project
 ____________________________
 
-1. Export the rest of the FLO-2D data files including the new storm drain files.
+1. Export the FLO-2D data files including the new storm drain files.
 
 .. image:: ../img/Coastal/sd027.png
-.. image:: ../img/Coastal/sd024.png
+
 .. image:: ../img/Coastal/sd025.png
 
-3. The remaining data files have been exported.
+.. image:: ../img/Coastal/sd024.png
+
+2. The Storm Drain was schematized in Step 4. Click Yes to proceed.
+
+.. image:: ../img/Coastal/sd024a.png
+
+3. Be careful to set the export folder for the swmm.inp to the Storm Drain Export folder.  Its path will likely
+   need to be modified when it is exported.
+
+.. image:: ../img/Coastal/sd024b.png
+
+4. The control data for the storm drain is set before the swmm.inp file is saved.
+
+.. important::   There are some important things to define with respect to the time fields.  If tide data or time series data is
+   used, the time fields should be synchronized to the times in the corresponding groups of the swmm.inp file.
+   The end time should be set to the start time plus the total run time of the FLO-2D simulation.  If it is not,
+   the simulation will have an error and will likely fail at the end of the run.
+
+.. image:: ../img/Coastal/sd024c.png
+
+5. The following image shows the number of storm drain features that were exported.  Click OK to close the message.
+
+.. image:: ../img/Coastal/sd024d.png
+
+6. The remaining data files have been exported.  Click OK to close the message.
 
 .. image:: ../img/Coastal/sd026.png
 
