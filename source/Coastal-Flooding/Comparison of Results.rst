@@ -3,7 +3,8 @@ Comparison of Results
 
 **Overview**
 
-In this module, learn how to compare FLO-2D results using Rasterizor.
+In this module, the outcomes of various simulations conducted within the ACUNE+ Project are presented and analyzed.
+Discussions and result mapping utilizing Rasterizor and MapCrafter are also included.
 
 Required Data
 
@@ -47,8 +48,8 @@ it is more effective to maintain a distinct QGIS project specifically for FLO-2D
 
 .. image:: ../img/Coastal/comp005.png
 
-Step 2. Add the Storm Drain Layer and basemap
-____________________________________________________
+Step 2. Storm Drain engine comparison
+______________________________________
 
 The initial comparison will focus on models with and without the storm drain for different return periods.
 
@@ -64,56 +65,48 @@ The initial comparison will focus on models with and without the storm drain for
 
 .. image:: ../img/Coastal/comp011.png
 
-.. note:: Increase the line thickness in the symbology settings to enhance the visibility of the storm drains.
+.. hint:: Increase the line thickness in the symbology settings to enhance the visibility of the storm drains.
 
-Step 3. Create the Depth Maps for 10 years scenarios
-________________________________________________________
+3. Create a folder under the Coastal 2D Training directory called Comparison of Results.
 
-Rasterizor can be utilized to generate comparisons between two rasters,
-allowing users to identify areas with significant differences between two datasets.
+Compare the 10 years scenarios
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. note:: The results presented in this lesson may differ from those generated throughout the entire training.
-          However, it's crucial to note that this lesson is primarily for demonstration purposes,
-          and the actual results are not of paramount importance.
-          The emphasis lies in understanding the process of conducting comparisons.
+Let's use the 10-year return period scenario to compare depth changes between the two simulations.
+While other variables can be used for comparison,
+for the sake of time, let's focus on using maximum depth as the comparison variable for this return period.
 
-1. Create a folder under the Coastal 2D Training directory called Comparison of Results.
-
-2. Open Rasterizor and create the Depth Max for the 10 years scenario.
+1. Open Rasterizor and create the Depth Max for the 10 years scenario.
    The DEPTH.OUT file is located on the Subdomain 1 Design Storm 10 Yrs folder.
 
 .. image:: ../img/Coastal/comp006.png
 
-3. Open Rasterizor and create the Depth Max for the 10 years scenario without the storm drain.
+2. Open Rasterizor and create the Depth Max for the 10 years scenario without the storm drain.
    The DEPTH.OUT file is located on the Subdomain 1 Design Storm 10 Yrs NO SD folder.
 
 .. image:: ../img/Coastal/comp007.png
-
-Step 3. Compare the 10 years scenarios
-___________________________________________
 
 Differences between the two rasters can be visually identified.
 However, accurately visualizing and quantifying the significance of these differences can be challenging.
 To address this, let's employ the Rasterizor comparison tool to achieve a clearer visualization of these differences
 
-1. Click on the Rasterizor Compare Outputs.
+3. Click on the Rasterizor Compare Outputs.
    Select the two raster previously generated and fill the data as follows.
 
 .. image:: ../img/Coastal/comp008.png
 
-2. Drag the storm drain layer on top of the comparison raster.
+4. Drag the storm drain layer on top of the comparison raster.
 
-3. This tool computes the difference between raster values, presenting the results using a color ramp ranging from
-   blue (indicating negative differences) to green (representing small differences) and
-   red (highlighting positive differences).
+.. note:: This tool computes the difference between raster values, presenting the results using a color ramp ranging from
+          blue (indicating negative differences) to green (representing small differences) and
+          red (highlighting positive differences).
 
 .. image:: ../img/Coastal/comp012.png
 
 .. important:: The order of input rasters influences how the resulting comparison raster maps the differences.
-               Rasterizor subtracts the second raster from the first, indicating that,
-               when compared to the first raster, negative differences (blues)
-               represent higher values on the second raster, while positive differences
-               (reds) signify lower values on the second raster.
+               Rasterizor subtracts the second raster from the first, indicating that negative differences (blues)
+               represent lower values on the first raster, while positive differences
+               (reds) signify higher values on the first raster.
 
 The northern section of the project exhibits a less dense storm drain system,
 resulting in more green areas indicating fewer differences.
@@ -124,91 +117,79 @@ Zoom in to the southern portion and analyze the following image.
 .. image:: ../img/Coastal/comp013.png
 
 The blue pixels represent a reduction in depth when the storm drain was added to the project area,
-while red pixels indicate an increase in depth.
-The storm drain system effectively removes water from streets or ponds (blues),
-but it can discharge excess water into certain detention ponds (reds).
+while red pixels indicate an increase in depth. In the previous picture,
+it is evident that the storm drain system effectively removed water from streets (blue areas)
+and discharged the collected water into a detention pond (red areas).
+See the aerial image of the area for a clearer understanding.
 
-4. Create a group called '10 Years' on the QGIS Layer Tree to organize the results.
+.. image:: ../img/Coastal/comp026.png
+
+5. Create a group called '10 Years' on the QGIS Layer Tree to organize the results.
    Select the three rasters, Right Click, Group Selected, and name it 10 Years.
 
 .. image:: ../img/Coastal/comp014.png
 
 .. image:: ../img/Coastal/comp015.png
 
+Compare the 20 years scenarios
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Step 4. Create the Depth Maps for 20 years scenarios
-________________________________________________________
+Let's use the 20-years to compare velocity changes between the two simulations.
 
-1. Open Rasterizor and create the Depth Max for the 20 years scenario.
-   The DEPTH.OUT file is located on the Subdomain 1 Design Storm 20 Yrs folder.
+1. Open Rasterizor and create the Max Velocity for the 20 years scenario.
+   The VELFP.OUT file is located on the Subdomain 1 Design Storm 20 Yrs folder.
 
 .. image:: ../img/Coastal/comp016.png
 
-2. Open Rasterizor and create the Depth Max for the 20 years scenario without the storm drain.
-   The DEPTH.OUT file is located on the Subdomain 1 Design Storm 20 Yrs NO SD folder.
+2. Open Rasterizor and create the Max Velocity for the 20 years scenario without the storm drain.
+   The VELFP.OUT file is located on the Subdomain 1 Design Storm 20 Yrs NO SD folder.
 
 .. image:: ../img/Coastal/comp017.png
 
-
-Step 5. Compare the 20 years scenarios
-___________________________________________
-
-1. Click on the Rasterizor Compare Outputs.
+3. Click on the Rasterizor Compare Outputs tab.
    Select the two raster previously generated and fill the data as follows.
 
 .. image:: ../img/Coastal/comp018.png
 
 .. note:: Ensure to reorganize the layers, placing the Storm Drain layer on top for better visualization.
 
-2. Zoom into the same area analyzed in the 10-year scenario and assess the differences.
+4. Zoom into a storm drain system
 
 .. image:: ../img/Coastal/comp019.png
 
-3. Group the 20-years rasters into their own group.
+It is noticeable that near the storm drain, more red pixels are present.
+This is attributed to the accelerated flow entering the storm drain system,
+exhibiting higher velocity compared to the simulation without the storm drain system.
 
-Step 6. Create the Depth Maps for 50 years scenarios
-______________________________________________________
+5. Group the 20-years rasters into their own group.
 
-1. Open Rasterizor and create the Depth Max for the 50 years scenario.
-   The DEPTH.OUT file is located on the Subdomain 1 Design Storm 50 Yrs folder.
+Compare the 50 years scenarios
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Let's use another result for the 50-years scenario: Time to Peak. This variable represents the
+time of occurrence of the maximum depth.
+
+1. Open Rasterizor and create the Time to Peak for the 50 years scenario.
+   The TIMETOPEAK.OUT file is located on the Subdomain 1 Design Storm 50 Yrs folder.
 
 .. image:: ../img/Coastal/comp020.png
 
-2. Open Rasterizor and create the Depth Max for the 50 years scenario without the storm drain.
-   The DEPTH.OUT file is located on the Subdomain 1 Design Storm 50 Yrs NO SD folder.
+2. Open Rasterizor and create the Time to Peak for the 50 years scenario without the storm drain.
+   The TIMETOPEAK.OUT file is located on the Subdomain 1 Design Storm 50 Yrs NO SD folder.
 
 .. image:: ../img/Coastal/comp021.png
 
-Step 7. Compare the 50 years scenarios
-___________________________________________
-
-1. Click on the Rasterizor Compare Outputs.
+3. Click on the Rasterizor Compare Outputs.
    Select the two raster previously generated and fill the data as follows.
 
 .. image:: ../img/Coastal/comp022.png
 
-.. note:: Ensure to reorganize the layers, placing the Storm Drain layer on top for better visualization.
-
-2. Zoom into the same area analyzed in the 10-year and 20-year scenario and assess the differences.
+4. Zoom into the southern portion of the project area.
 
 .. image:: ../img/Coastal/comp023.png
 
-3. Group the 50-years rasters into their own group.
+The blue areas represent a reduction on the time to peak. This is because the storm drain quickly drains the water
+from the streets. Without a storm drain, water may need to flow overland or through natural drainage paths,
+taking longer to reach the peak flow. The storm drain system efficiently removes water,
+reducing the time it takes for the flow to reach its maximum.
 
-Step 8. Comparison between return periods
-____________________________________________
-
-The comparison between utilizing or not utilizing the storm drain engine is more meaningful within the same return period.
-By comparing the results of two return periods, it becomes possible to identify critical points in the watershed and
-determine where engineering solutions should be prioritized.
-Let's examine the key differences between the 10-year and 50-year return periods.
-
-1. Select the 10-years and 50-years depth rasters for comparison
-
-.. image:: ../img/Coastal/comp024.png
-
-The areas with a more pronounced blue color indicate higher depth differences.
-According to the comparison raster, estuary regions will experience a higher water level during more intense rainfalls.
-This observation also holds true for some detention ponds within the project area.
-
-.. image:: ../img/Coastal/comp025.png
