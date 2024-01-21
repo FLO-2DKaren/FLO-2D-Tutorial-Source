@@ -193,3 +193,105 @@ from the streets. Without a storm drain, water may need to flow overland or thro
 taking longer to reach the peak flow. The storm drain system efficiently removes water,
 reducing the time it takes for the flow to reach its maximum.
 
+Step 3. Hazard Maps
+____________________
+
+1. Open MapCrafter
+
+.. image:: ../img/Coastal/haz006.png
+
+2. Select the Subdomain 1 Design Storm 50 Yrs scenario as FLO-2D Export Folder,
+   Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation
+
+.. image:: ../img/Coastal/haz007.png
+
+.. note:: The USBR (United States Bureau Reclamation) Hazard map follows the criteria described in the
+          Downstream Hazard Classification Guidelines (USBR, 1988). MapCrafter allows the user to select
+          five hazard mapping classification systems: Houses, Mobile Homes, Vehicles, Adults, and Children.
+          Each of these hazard mapping options define the hazard based on Danger zone curves that are
+          separated into High Danger Zone, Judgement Zone and Low Danger Zone.
+          The danger zones are curves that define a relationship between depth and velocity.
+
+          .. image:: ../img/Coastal/haz014.png
+
+3. Click on Create maps and wait for the process to complete.
+   The maps are added on their own group on the QGIS Layer Tree.
+
+.. image:: ../img/Coastal/haz008.png
+
+4. Use Quick Map Services to load an aerial image onto the map.
+
+.. image:: ../img/Advanced-Workshop/Lesson005.png
+
+.. image:: ../img/Coastal/chan003.png
+
+..  important:: The Hazard maps are generated for the entire project domain.
+                It is not meaningful to assess House Hazard in regions without houses
+                (e.g., waterbodies, channels, grasslands). The same applies to all hazard maps.
+                Engineering judgment must be employed to identify areas more susceptible
+                to the specific type of flood damages.
+
+Step 3. Houses Hazard
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Houses Hazard Map is focused on permanent residences attached to foundations
+and worksite areas, including facilities that contain workers on a daily basis.
+This includes farm operations, oil and gas operations,
+sand and gravel operations, and fish hatcheries
+
+.. image:: ../img/Coastal/haz009.png
+
+.. tip:: Increase transparency in the Hazard layer to facilitate the analysis and visualization.
+
+- HIGH DANGER ZONE (RED): Occupants of most houses are in danger from floodwater.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.
+- LOW DANGER ZONE (BLUE): Occupants of most houses are not seriously in danger from flood water.
+
+Step 4. Mobile Houses Hazard
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Mobile Houses are typically located in flood plains due to zoning
+requirements in many areas, creating a very dangerous situation for
+occupants of mobile homes, as they are very susceptible to movement
+from relatively small floods.
+
+.. image:: ../img/Coastal/haz010.png
+
+- HIGH DANGER ZONE (RED): Occupants of almost any size mobile home are in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.
+- LOW DANGER ZONE (BLUE): Occupants of almost any size mobile home are not seriously in danger from flood water.
+
+Step 5. Vehicles Hazard
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vehicles Hazard is focused on the possibility for loss
+of life to motorists and pedestrians.
+
+.. image:: ../img/Coastal/haz011.png
+
+- HIGH DANGER ZONE (RED): Occupants of almost any size passenger vehicle are in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
+- LOW DANGER ZONE (BLUE): Occupants of almost any size passenger vehicle are not seriously in danger from flood water.
+
+Step 6. Adults Hazard
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+In Adults Hazard Map, an adult is considered any human over 5 feet (150 cm) tall and weighing over
+120 pounds (54 kg).
+
+.. image:: ../img/Coastal/haz012.png
+
+- HIGH DANGER ZONE (RED): Almost any size adult is in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
+- LOW DANGER ZONE (BLUE): Almost any size adult is not seriously threatened by flood water.
+
+Step 7. Children Hazard
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The Children Hazard map represents a more conservative classification compared to the Adults Hazard Map.
+
+.. image:: ../img/Coastal/haz013.png
+
+- HIGH DANGER ZONE (RED): Almost any size child is in danger from flood water.
+- JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
+- LOW DANGER ZONE (BLUE): Almost any size child (excluding infants) is not seriously threatened by flood water.
