@@ -34,7 +34,8 @@ it is more effective to maintain a distinct QGIS project specifically for FLO-2D
 
 .. image:: ../img/Coastal/comp001.png
 
-2. Set the project CRS to Florida East HARN USft.
+2. Locate the Current CRS button on the bottom right of QGIS.
+   Set the project CRS to Florida East HARN USft.
    Filter the list with an EPSG code: 2881.
    Select EPSG: 2881 and click OK.
 
@@ -73,15 +74,13 @@ Compare the 10 years scenarios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Let's use the 10-year return period scenario to compare depth changes between the two simulations.
-While other variables can be used for comparison,
-for the sake of time, let's focus on using maximum depth as the comparison variable for this return period.
 
-1. Open Rasterizor and create the Depth Max for the 10 years scenario.
+1. Open Rasterizor and create the Depth Max for the 10-years scenario.
    The DEPTH.OUT file is located on the Subdomain 1 Design Storm 10 Yrs folder.
 
 .. image:: ../img/Coastal/comp006.png
 
-2. Open Rasterizor and create the Depth Max for the 10 years scenario without the storm drain.
+2. Open Rasterizor and create the Depth Max for the 10-years scenario without the storm drain.
    The DEPTH.OUT file is located on the Subdomain 1 Design Storm 10 Yrs NO SD folder.
 
 .. image:: ../img/Coastal/comp007.png
@@ -119,7 +118,7 @@ Zoom in to the southern portion and analyze the following image.
 The blue pixels represent a reduction in depth when the storm drain was added to the project area,
 while red pixels indicate an increase in depth. In the previous picture,
 it is evident that the storm drain system effectively removed water from streets (blue areas)
-and discharged the collected water into a detention pond (red areas).
+and discharged the collected water into a detention pond (red areas) elevating its water level.
 See the aerial image of the area for a clearer understanding.
 
 .. image:: ../img/Coastal/comp026.png
@@ -136,12 +135,12 @@ Compare the 20 years scenarios
 
 Let's use the 20-years to compare velocity changes between the two simulations.
 
-1. Open Rasterizor and create the Max Velocity for the 20 years scenario.
+1. Open Rasterizor and create the Max Velocity for the 20-years scenario.
    The VELFP.OUT file is located on the Subdomain 1 Design Storm 20 Yrs folder.
 
 .. image:: ../img/Coastal/comp016.png
 
-2. Open Rasterizor and create the Max Velocity for the 20 years scenario without the storm drain.
+2. Open Rasterizor and create the Max Velocity for the 20-years scenario without the storm drain.
    The VELFP.OUT file is located on the Subdomain 1 Design Storm 20 Yrs NO SD folder.
 
 .. image:: ../img/Coastal/comp017.png
@@ -153,11 +152,11 @@ Let's use the 20-years to compare velocity changes between the two simulations.
 
 .. note:: Ensure to reorganize the layers, placing the Storm Drain layer on top for better visualization.
 
-4. Zoom into a storm drain system
+4. Zoom into a portion of the storm drain system.
 
 .. image:: ../img/Coastal/comp019.png
 
-It is noticeable that near the storm drain, more red pixels are present.
+It is noticeable that near the storm drain inlets, more red pixels are present.
 This is attributed to the accelerated flow entering the storm drain system,
 exhibiting higher velocity compared to the simulation without the storm drain system.
 
@@ -166,15 +165,16 @@ exhibiting higher velocity compared to the simulation without the storm drain sy
 Compare the 50 years scenarios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Let's use another result for the 50-years scenario: Time to Peak. This variable represents the
+Let's use another type of
+result for the 50-years scenario: Time to Peak. This variable represents the
 time of occurrence of the maximum depth.
 
-1. Open Rasterizor and create the Time to Peak for the 50 years scenario.
+1. Open Rasterizor and create the Time to Peak for the 50-years scenario.
    The TIMETOPEAK.OUT file is located on the Subdomain 1 Design Storm 50 Yrs folder.
 
 .. image:: ../img/Coastal/comp020.png
 
-2. Open Rasterizor and create the Time to Peak for the 50 years scenario without the storm drain.
+2. Open Rasterizor and create the Time to Peak for the 50-years scenario without the storm drain.
    The TIMETOPEAK.OUT file is located on the Subdomain 1 Design Storm 50 Yrs NO SD folder.
 
 .. image:: ../img/Coastal/comp021.png
@@ -196,12 +196,16 @@ reducing the time it takes for the flow to reach its maximum.
 Step 3. Hazard Maps
 ____________________
 
-1. Open MapCrafter
+MapCrafter creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
+aiding in risk management.
+
+1. Open MapCrafter.
 
 .. image:: ../img/Coastal/haz006.png
 
-2. Select the Subdomain 1 Design Storm 50 Yrs scenario as FLO-2D Export Folder,
-   Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation
+2. Choose the 'Subdomain 1 Design Storm 50 Yrs' scenario as the FLO-2D Export Folder
+   since this scenario is considered the most critical.
+   Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation.
 
 .. image:: ../img/Coastal/haz007.png
 
