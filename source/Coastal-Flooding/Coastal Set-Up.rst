@@ -10,30 +10,50 @@ Please use these instructions to get your computer ready for Coastal Training Pa
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/sTDCm6NX1Pw" frameborder="0" allowfullscreen></iframe>
 
-Step 1: Get the Data
+Step 1: Admin Installation
 ___________________________________
 
-.. Note:: Use the FLO-2D Setup page on the top left of the side bar.  Install FLO-2D Setup, QGIS, and the plugins and
-          then return to this step.
+1. Find the email that has the data link.  Log In to flo-2d.sharefile.com to get the data.
 
-|Setup_Download|
+.. image:: ../img/Coastal/setup009.png
 
-.. |Setup_Download| raw:: html
+2. Download all 5 files.
 
-   <a href="https://flo-2d.sharefile.com/d-sc8150c9f75804766875d9a4ff7db0dd0" target="_blank">Click Here to Download</a>
+.. image:: ../img/Coastal/setup008.png
 
-.. image:: ../img/Coastal/coastalsetup001.png
+3. Extract the files into a safe folder.
+
+.. image:: ../img/Coastal/setup010.png
+
+4. Start running the installers almost sequentially.  Use Default settings for all installers.
+
+.. image:: ../img/Coastal/setup011.png
+
+5. Watch the video if you have questions.
+
+.. image:: ../img/Coastal/setup012.png
 
 
-Step 2: Coastal Workshop Data Installer
-________________________________________
-Use these instructions to install the Workshop data.  Admin Rights Not Required.
+Step 2: Test the installation
+_______________________________
 
-1. Run the installer.  Coastal Training Setup.exe
+1. Copy the FLO-2D engine and its dlls.
 
-2. Default settings are fine, click Close to finish.
+File location: C:\\Program Files (x86)\\FLO-2D PRO\\Run for Project Folder
 
-.. image:: ../img/Coastal/coastalsetup003.png
+.. image:: ../img/Coastal/setup013.png
+
+2. Open Barn Mudflow folder and paste the files in that folder.
+
+File location: C:\\Users\\Public\\Documents\\FLO-2D PRO Documentation\\Example Projects\\Examples\\Barn Mudflow
+
+3. Doubleclick FLOPRO.EXE.
+
+.. image:: ../img/Coastal/setup014.png
+
+4. If this message appears, the test passed.  Close the run.
+
+.. image:: ../img/Coastal/setup015.png
 
 
 Step 3: Create a Quick Access Link
@@ -58,14 +78,55 @@ See this animation if the instructions are vague.  Open it in a new tab if it is
 .. image:: ../img/Coastal/quickaccess.gif
 
 
-Step 4: Add helpful plugins
+Step 4: Setup QGIS
 _______________________________
 
-1. Open the Plugin Manager.  Add any plugin with a red arrow if necessary.
+.. warning:: Message to IT.  This step will only work if you are logged into the computer as the Student.  We will do
+   this in class as a group so you can skip this step.
+
+1. Load QGIS
+
+.. image:: ../img/Coastal/setup016.png
+
+2. Close the Browser Panel or dock it with the Layers Panel.  The video shows how to dock it.
+
+.. image:: ../img/Coastal/setup017.png
+
+3. Set the CRS options as shown in the following image.
+
+.. image:: ../img/Coastal/setup018.png
+
+Step 5: Add Plugins to QGIS
+___________________________________
+
+1. Open the Plugin Manager.
+
+.. image:: ../img/Coastal/setup019.png
+
+2. Add the FLO-2D Plugin v115.  Use Install from Zip option.
+
+.. image:: ../img/Coastal/setup020.png
+
+3. Add all other plugins using the normal plugin installation method from the All Group.
 
 .. note:: If the following image is hard to see, open it in a new tab.
 
 .. image:: ../img/Coastal/setup007.png
 
+
+Step 6: Add Quick Map Services
+___________________________________
+
+1. Open the Quick Map Services Settings.
+
+2. Go to the More Services tab and Get Contributed Pack
+
+.. image:: ../img/Coastal/setup021.png
+
+3. Uncheck all visible items and turn on Google, ESRI, and OSM.
+
+.. image:: ../img/Coastal/setup022.png
+
+4. That concludes the setup tutorial.
 
 
