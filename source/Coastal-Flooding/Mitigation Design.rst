@@ -35,6 +35,10 @@ if potential designs are successful.  Mitigation methods can include:
 
 Data Location:  \\Coastal Training\\Project Data\\Mitigation Design
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kLSV8-NA8R8" frameborder="0" allowfullscreen></iframe>
+
 Step 1. Load the data
 ______________________
 
