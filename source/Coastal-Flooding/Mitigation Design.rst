@@ -10,7 +10,7 @@ if potential designs are successful.  Mitigation methods can include:
 
 - Protect critical infrastructure
 
-- Raise roadway, seawalls, and Jetties
+- Raise roadway, seawalls, and jetties
 
 - Improve culverts, tide gates, and pumps
 
@@ -28,7 +28,7 @@ if potential designs are successful.  Mitigation methods can include:
 ================== ============================
 **File**           **Content**
 ================== ============================
-\*.shp             US 41 Centerline
+\*.shp             Highway Centerline
 \*.shp             Mitigation Polygon
 \*.tif             Elevation
 ================== ============================
@@ -97,7 +97,7 @@ _______________________________
 
 .. image:: ../img/Coastal/osm005.png
 
-Step 4. Open Data Connection
+Step 4. Open data connection
 ________________________________
 
 .. note:: ArcGIS Online services can be loaded into QGIS maps.  This allows users to connect to data
@@ -130,7 +130,7 @@ Step 5. Modify Highway 41
 ______________________________
 
 .. note:: Now that some data loading methods have been identified, proceed with some simple mitigation
-    changes.  Before and after rasters can show if the mitigation methods help control flooding.
+    changes.
 
 .. warning:: Any mitigation change can relieve flooding locally while increasing flooding in other areas.
    Always use a project area that is large enough to show potential flood changes downstream or away from
@@ -157,12 +157,42 @@ ______________________________
 .. image:: ../img/Coastal/mit0057.png
 
 .. note:: This is a simple way to raise grid element elevation.  It uses a correction tool to add or subtract elevation
-          from a group of cells that are within buffer
+          from a group of cells that are within buffer.
 
-Step 6. Improve a culvert
+Step 6. Reset channel elevation
+__________________________________
+
+1. Zoom to the end of the channel and click the Mitigation Polygon Layer.
+
+2. Click the Select button.
+
+3. Select the Polygon that covers the end of the channel.
+
+.. image:: ../img/Coastal/mit091.png
+
+4. Collapse the Widgets and open Grid Tools.
+
+5. Click the Correct Grid Elevation button.
+
+.. image:: ../img/Coastal/mit092.png
+
+6. Fill the form as shown below and click OK.
+
+.. image:: ../img/Coastal/mit093.png
+
+7. Close the message when the grid elevation correction is complete.
+
+
+.. image:: ../img/Coastal/mit094.png
+
+.. note:: This step can set or re-set the elevation of grid elements within a polygon.  Use it to correct elevation for
+    new grading or new basin design.  Use it to correct elevation along a channel or at a headwall.
+    It is a very versatile tool.
+
+Step 7. Improve a culvert
 ____________________________
 
-1. Select culvert 10.
+1. Select culvert CU10.
 
 2. Change the width to 5 ft and multiple barrels to 3.
 
@@ -170,7 +200,7 @@ ____________________________
 
 .. image:: ../img/Coastal/mit063.png
 
-Step 7. Coco1 Pump
+Step 8. Coco1 pump
 ____________________________
 
 1. Select Coco1.
@@ -191,7 +221,7 @@ ____________________________
     is not needed.  The tables were automatically updated when the data was modified in the
     widget and table editor.
 
-Step 8. Save and export
+Step 9. Save and export
 ________________________
 
 1. This is a good point to save project.
