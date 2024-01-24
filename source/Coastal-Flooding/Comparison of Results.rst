@@ -14,12 +14,15 @@ The required data is in the Coastal 2D Training Folder.
 **File** **Content**                            Location
 ======================== ====================================== =====================================
 \\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Project Data\\Comparison of Results\\
+\\Elevation.tif          Elevation Raster                       Project Data\\AOI\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs NO SC  Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 20 Yrs        Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 20 Yrs NO SC  Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 50 Yrs        Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 50 Yrs NO SC  Scenarios\\
+\\*.OUT                  100 Yrs Subd 1 RAIN NO SS              Scenarios\\
+\\*.OUT                  100 Yrs Subd 1 RAIN SS                 Scenarios\\
 ======================== ====================================== =====================================
 
 Data Location: \\Coastal 2D Training\\Scenarios
@@ -184,7 +187,64 @@ reducing the time it takes for the flow to reach its maximum.
 
 4. Group the 50-years rasters into their own group.
 
-Step 3. Hazard Maps
+Step 3. Storm Surge Impact
+______________________________
+
+In this lesson, the impact of incorporating Storm Surge in a FLO-2D simulation is explored.
+Storm surge is the abnormal rise in seawater level during a storm,
+measured as the height of the water above the normal predicted astronomical tide.
+
+1. Uncheck all layers but the Aerial Image (Google Hybrid/Satellite). Drag the Elevation raster to the project.
+
+.. image:: ../img/Coastal/comp027.png
+
+2. Open Rasterizor and create the Maximum WSE for the 100-years scenario considering the Storm Surge.
+   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 RAIN SS.
+
+.. image:: ../img/Coastal/comp028.png
+
+3. Open Rasterizor and create the Maximum WSE for the 100-years scenario without considering the Storm Surge.
+   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 RAIN NO SS.
+
+.. image:: ../img/Coastal/comp029.png
+
+4. Right click on the Elevation Raster and click on Zoom to Layer.
+
+5. Uncheck the recently created Max WSE 100 years SS and Max WSE 100 years NO SS.
+
+6. Select the Profile Tool on the QGIS toolbar.
+
+.. image:: ../img/Coastal/comp030.png
+
+7. Select the Max WSE 100 years SS and click on add layer on the Profile Tool. Repeat this process for
+   Max WSE 100 years NO SS and Elevation.
+
+.. image:: ../img/Coastal/comp031.png
+
+8. Change the Layers colors by double clicking on the red square at the left of the Layer's name.
+
+- Max WSE 100 years SS: Dark blue
+- Max WSE 100 years NO SS: Light blue
+- Elevation: Red
+
+.. image:: ../img/Coastal/comp032.png
+
+9. Create a profile line on the floodplain as the following image.
+
+.. image:: ../img/Coastal/comp033.png
+
+The Profile Tool displays the Maximum Water Surface Elevation for scenarios with and without Storm Surge,
+providing a basis for comparison. The graph indicates a substantial increase in the maximum water surface elevation
+(exceeding 4 feet) when the Storm Surge is taken into account, compared to the scenario without it. Notably,
+this profile is situated approximately 2 miles from the ocean.
+The impact is more pronounced in areas closer to the ocean,
+emphasizing the crucial role of modeling Storm Surge in coastal regions.
+
+
+Step 4. Mitigation Maps
+___________________________
+
+Step 5. Hazard Maps
 ____________________
 
 MapCrafter creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
