@@ -10,16 +10,17 @@ Required Data
 
 The required data is in the Coastal 2D Training Folder.
 
-======== ====================================== ===========
+======================== ====================================== =====================================
 **File** **Content**                            Location
-======== ====================================== ===========
-\*.OUT   Subdomain 1 Design Storm 10 Yrs        Scenarios\
-\*.OUT   Subdomain 1 Design Storm 10 Yrs NO SC  Scenarios\
-\*.OUT   Subdomain 1 Design Storm 20 Yrs        Scenarios\
-\*.OUT   Subdomain 1 Design Storm 20 Yrs NO SC  Scenarios\
-\*.OUT   Subdomain 1 Design Storm 50 Yrs        Scenarios\
-\*.OUT   Subdomain 1 Design Storm 50 Yrs NO SC  Scenarios\
-======== ====================================== ===========
+======================== ====================================== =====================================
+\\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Project Data\\Comparison of Results\\
+\\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Scenarios\\
+\\*.OUT                  Subdomain 1 Design Storm 10 Yrs NO SC  Scenarios\\
+\\*.OUT                  Subdomain 1 Design Storm 20 Yrs        Scenarios\\
+\\*.OUT                  Subdomain 1 Design Storm 20 Yrs NO SC  Scenarios\\
+\\*.OUT                  Subdomain 1 Design Storm 50 Yrs        Scenarios\\
+\\*.OUT                  Subdomain 1 Design Storm 50 Yrs NO SC  Scenarios\\
+======================== ====================================== =====================================
 
 Data Location: \\Coastal 2D Training\\Scenarios
 
@@ -94,34 +95,26 @@ To address this, let's employ the Rasterizor comparison tool to achieve a cleare
 
 .. image:: ../img/Coastal/comp008.png
 
-4. Drag the storm drain layer on top of the comparison raster.
-
-.. note:: This tool computes the difference between raster values, presenting the results using a color ramp ranging from
-          blue (indicating negative differences) to green (representing small differences) and
-          red (highlighting positive differences).
+4. Drag the storm drain layer on top of the comparison raster and uncheck the Depth rasters.
 
 .. image:: ../img/Coastal/comp012.png
+
+This tool computes the difference between raster values, presenting the results using a color ramp ranging from
+blue (indicating negative differences) to red (highlighting positive differences).
 
 .. important:: The order of input rasters influences how the resulting comparison raster maps the differences.
                Rasterizor subtracts the second raster from the first, indicating that negative differences (blues)
                represent lower values on the first raster, while positive differences
                (reds) signify higher values on the first raster.
 
-The northern section of the project exhibits a less dense storm drain system,
-resulting in more green areas indicating fewer differences.
+The northern section of the project exhibits a less dense storm drain system, resulting in fewer differences.
 Conversely, the southern portion displays a denser storm drain system and a higher prevalence of blues and reds,
 indicating greater disparities between the two simulations.
-Zoom in to the southern portion and analyze the following image.
-
-.. image:: ../img/Coastal/comp013.png
 
 The blue pixels represent a reduction in depth when the storm drain was added to the project area,
-while red pixels indicate an increase in depth. In the previous picture,
+while red pixels indicate an increase in depth. In the zoomed area,
 it is evident that the storm drain system effectively removed water from streets (blue areas)
 and discharged the collected water into a detention pond (red areas) elevating its water level.
-See the aerial image of the area for a clearer understanding.
-
-.. image:: ../img/Coastal/comp026.png
 
 5. Create a group called '10 Years' on the QGIS Layer Tree to organize the results.
    Select the three rasters, Right Click, Group Selected, and name it 10 Years.
@@ -152,15 +145,13 @@ Let's use the 20-years to compare velocity changes between the two simulations.
 
 .. note:: Ensure to reorganize the layers, placing the Storm Drain layer on top for better visualization.
 
-4. Zoom into a portion of the storm drain system.
-
-.. image:: ../img/Coastal/comp019.png
-
 It is noticeable that near the storm drain inlets, more red pixels are present.
 This is attributed to the accelerated flow entering the storm drain system,
 exhibiting higher velocity compared to the simulation without the storm drain system.
 
-5. Group the 20-years rasters into their own group.
+.. image:: ../img/Coastal/comp019.png
+
+4. Group the 20-years rasters into their own group.
 
 Compare the 50 years scenarios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -184,14 +175,14 @@ time of occurrence of the maximum depth.
 
 .. image:: ../img/Coastal/comp022.png
 
-4. Zoom into the southern portion of the project area.
-
-.. image:: ../img/Coastal/comp023.png
-
 The blue areas represent a reduction on the time to peak. This is because the storm drain quickly drains the water
 from the streets. Without a storm drain, water may need to flow overland or through natural drainage paths,
 taking longer to reach the peak flow. The storm drain system efficiently removes water,
 reducing the time it takes for the flow to reach its maximum.
+
+.. image:: ../img/Coastal/comp023.png
+
+4. Group the 50-years rasters into their own group.
 
 Step 3. Hazard Maps
 ____________________
