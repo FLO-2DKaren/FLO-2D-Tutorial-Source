@@ -254,7 +254,7 @@ aiding in risk management.
 
 .. image:: ../img/Coastal/haz006.png
 
-2. Choose the 'Subdomain 1 Design Storm 50 Yrs' scenario as the FLO-2D Export Folder
+2. Choose the '100 Yrs Subd 1 RAIN SS' scenario as the FLO-2D Export Folder
    since this scenario is considered the most critical.
    Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation.
 
@@ -274,12 +274,6 @@ aiding in risk management.
 
 .. image:: ../img/Coastal/haz008.png
 
-4. Use Quick Map Services to load an aerial image onto the map.
-
-.. image:: ../img/Advanced-Workshop/Lesson005.png
-
-.. image:: ../img/Coastal/chan003.png
-
 ..  important:: The Hazard maps are generated for the entire project domain.
                 It is not meaningful to assess House Hazard in regions without houses
                 (e.g., waterbodies, channels, grasslands). The same applies to all hazard maps.
@@ -292,7 +286,9 @@ Step 3. Houses Hazard
 Houses Hazard Map is focused on permanent residences attached to foundations
 and worksite areas, including facilities that contain workers on a daily basis.
 This includes farm operations, oil and gas operations,
-sand and gravel operations, and fish hatcheries
+sand and gravel operations, and fish hatcheries.
+
+1. Review the complete hazard raster and zoom in on Vanderbilt Beach for a more detailed examination.
 
 .. image:: ../img/Coastal/haz009.png
 
@@ -310,6 +306,10 @@ requirements in many areas, creating a very dangerous situation for
 occupants of mobile homes, as they are very susceptible to movement
 from relatively small floods.
 
+1. Examine the same area as in the previous step.
+   This hazard map is more conservative than the Houses Hazard map,
+   given the increased impact of small floods on mobile homes
+
 .. image:: ../img/Coastal/haz010.png
 
 - HIGH DANGER ZONE (RED): Occupants of almost any size mobile home are in danger from flood water.
@@ -321,6 +321,8 @@ Step 5. Vehicles Hazard
 
 Vehicles Hazard is focused on the possibility for loss
 of life to motorists and pedestrians.
+
+1. Zoom into Naples Park. In this area, specific regions are designated as judgment zones for vehicles.
 
 .. image:: ../img/Coastal/haz011.png
 
@@ -334,6 +336,9 @@ Step 6. Adults Hazard
 In Adults Hazard Map, an adult is considered any human over 5 feet (150 cm) tall and weighing over
 120 pounds (54 kg).
 
+1. Zoom into the Tarpon Cove Yacht \& Racquet Club.
+   The neighborhood near the mangrove is situated in a high danger zone according to the USBR Adults Hazard Mapping.
+
 .. image:: ../img/Coastal/haz012.png
 
 - HIGH DANGER ZONE (RED): Almost any size adult is in danger from flood water.
@@ -344,6 +349,9 @@ Step 7. Children Hazard
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Children Hazard map represents a more conservative classification compared to the Adults Hazard Map.
+
+1. Zoom into the southeast of the project domain.
+   Significant areas of judgment zones for children are identified in this region.
 
 .. image:: ../img/Coastal/haz013.png
 
