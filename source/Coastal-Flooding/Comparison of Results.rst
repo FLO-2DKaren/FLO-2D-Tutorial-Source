@@ -14,6 +14,7 @@ The required data is in the Coastal 2D Training Folder.
 **File** **Content**                            Location
 ======================== ====================================== =====================================
 \\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Project Data\\Comparison of Results\\
+\\Naples Streets.shp     Naples Streets                         Project Data\\Comparison of Results\\
 \\Elevation.tif          Elevation Raster                       Project Data\\AOI\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs NO SC  Scenarios\\
@@ -21,8 +22,10 @@ The required data is in the Coastal 2D Training Folder.
 \\*.OUT                  Subdomain 1 Design Storm 20 Yrs NO SC  Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 50 Yrs        Scenarios\\
 \\*.OUT                  Subdomain 1 Design Storm 50 Yrs NO SC  Scenarios\\
-\\*.OUT                  100 Yrs Subd 1 RAIN NO SS              Scenarios\\
-\\*.OUT                  100 Yrs Subd 1 RAIN SS                 Scenarios\\
+\\*.OUT                  100 Yrs Subd 1 baseline                Scenarios\\
+\\*.OUT                  100 Yrs Subd 1 NO SS                   Scenarios\\
+\\*.OUT                  100 Yrs Subd 1 NO RAIN                 Scenarios\\
+\\*.OUT                  100 Yrs Subd 1 NO INFILTRATION         Scenarios\\
 ======================== ====================================== =====================================
 
 Data Location: \\Coastal 2D Training\\Scenarios
@@ -53,10 +56,12 @@ it is more effective to maintain a distinct QGIS project specifically for FLO-2D
 
 .. image:: ../img/Coastal/comp005.png
 
-Step 2. Storm Drain engine comparison
-______________________________________
+Step 2. Storm Drain (FLO-2D Rasterizor Plugin)
+_________________________________________________________________
 
-The initial comparison will focus on models with and without the storm drain for different return periods.
+In this step, we'll explore the distinctions between models with and without the storm drain engine,
+taking into account different return periods. Our investigation will encompass maximum depth (DEPTH.OUT),
+maximum velocity (VELFP.OUT), and time to peak (TIMETOPEAK.OUT) results
 
 1. Drag and drop the Storm Drain layer into the project.
 
@@ -187,65 +192,203 @@ reducing the time it takes for the flow to reach its maximum.
 
 4. Group the 50-years rasters into their own group.
 
-Step 3. Storm Surge Impact
-______________________________
+Step 3. Explore symbology options
+_____________________________________
 
-In this lesson, the impact of incorporating Storm Surge in a FLO-2D simulation is explored.
-Storm surge is the abnormal rise in seawater level during a storm,
-measured as the height of the water above the normal predicted astronomical tide.
+The default symbology provided by Rasterizor is not the only way to represent the results.
+Let's explore the advanced symbology options available in QGIS.
 
-1. Uncheck all layers but the Aerial Image (Google Hybrid/Satellite). Drag the Elevation raster to the project.
+1. Select the previously generated Depth 10 years.
+
+.. image:: ../img/Coastal/comp039.png
+
+2. Right click on the raster, go to properties, select the symbology tab. Set the symbology exactly as the following
+   image.
+
+.. image:: ../img/Coastal/comp040.png
+
+.. note:: This symbology categorizes the depth intervals into user-defined classes.
+          Feel free to modify these classes as per your requirements.
+
+.. image:: ../img/Coastal/comp041.png
+
+3. A useful symbology involves removing depth values less than 0.5 ft. On the symbology tab, add another class using
+   the green plus button. Set the value to 0.5. Double click on the color, set it to white and full transparent.
+
+.. image:: ../img/Coastal/comp042.png
+
+.. important:: Even with transparency, the selected color will be used in the interpolation.
+               Therefore, choose a meaningful color to represent the cut-off depth values.
+
+4. Navigate to the Transparency tab and apply a 75% transparency.
+   This will enable a clearer visualization of the aerial image beneath the raster.
+
+.. image:: ../img/Coastal/comp043.png
+
+.. image:: ../img/Coastal/comp044.png
+
+Step 4. Flood Components (QGIS Profile Tool Plugin)
+________________________________________________________
+
+Each Flood Component simulated using FLO-2D has a substantial impact on the flood depth.
+In this step, the QGIS Profile Tool Plugin will be used to evaluate the reduction in the flood depth when each
+flood component is deactivated. The scenarios analyzed in this step are:
+
+- Baseline scenario: All Flood Components activated
+- No SS: Storm Surge deactivated
+- No Infiltration: Infiltration deactivated
+- No Rain: Rainfall deactivated
+
+.. note:: All of these scenarios are based on the future year 2040 considering high rainfall.
+
+1. Uncheck all layers and drag the Subdomain 1 Elevation raster to the project.
 
 .. image:: ../img/Coastal/comp027.png
 
-2. Open Rasterizor and create the Maximum WSE for the 100-years scenario considering the Storm Surge.
-   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 RAIN SS.
+2. Open Rasterizor and create the Maximum WSE for the 100-years scenario considering all flood drivers.
+   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 Baseline.
 
-.. image:: ../img/Coastal/comp028.png
+.. image:: ../img/Coastal/comp034.png
 
-3. Open Rasterizor and create the Maximum WSE for the 100-years scenario without considering the Storm Surge.
-   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 RAIN NO SS.
+3. Create the Maximum WSE for the 100-years scenario without considering Storm Surge.
+   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 NO SS.
 
-.. image:: ../img/Coastal/comp029.png
+.. image:: ../img/Coastal/comp035.png
 
-4. Right click on the Elevation Raster and click on Zoom to Layer.
+4. Create the Maximum WSE for the 100-years scenario without considering Rainfall.
+   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 NO RAIN.
 
-5. Uncheck the recently created Max WSE 100 years SS and Max WSE 100 years NO SS.
+.. image:: ../img/Coastal/comp036.png
 
-6. Select the Profile Tool on the QGIS toolbar.
+5. Create the Maximum WSE for the 100-years scenario without considering Infiltration.
+   The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 NO INFILTRATION.
+
+.. image:: ../img/Coastal/comp037.png
+
+6. Right click on the Elevation Raster and click on Zoom to Layer.
+
+7. Select the Profile Tool on the QGIS toolbar.
 
 .. image:: ../img/Coastal/comp030.png
 
-7. Select the Max WSE 100 years SS and click on add layer on the Profile Tool. Repeat this process for
-   Max WSE 100 years NO SS and Elevation.
+8. Select the Subdomain 1 Elevation and click on add layer on the Profile Tool. Repeat this process for
+   WSE baseline, WSE NO SS, WSE NO RAINFALL, and WSE NO INFILTRATION.
 
 .. image:: ../img/Coastal/comp031.png
 
-8. Change the Layers colors by double clicking on the red square at the left of the Layer's name.
+9. Change the Layers colors by double clicking on the red square at the left of the Layer's name.
 
-- Max WSE 100 years SS: Dark blue
-- Max WSE 100 years NO SS: Light blue
+- WSE baseline: Dark blue
+- WSE NO SS: Purple
+- WSE NO RAINFALL: Black
+- WSE NO INFILTRATION: Dark Green
 - Elevation: Red
+
+.. tip:: Use dark colors for a better visualization.
 
 .. image:: ../img/Coastal/comp032.png
 
-9. Create a profile line on the floodplain as the following image.
+10. Uncheck the recently created WSE baseline, WSE NO SS, WSE NO RAINFALL, and WSE NO INFILTRATION.
+
+11. Zoom into the southwest of the project domain and create a profile line on the floodplain as the following image.
+
+.. image:: ../img/Coastal/comp038.png
 
 .. image:: ../img/Coastal/comp033.png
 
-The Profile Tool displays the Maximum Water Surface Elevation for scenarios with and without Storm Surge,
-providing a basis for comparison. The graph indicates a substantial increase in the maximum water surface elevation
-(exceeding 4 feet) when the Storm Surge is taken into account, compared to the scenario without it. Notably,
-this profile is situated approximately 2 miles from the ocean.
-The impact is more pronounced in areas closer to the ocean,
-emphasizing the crucial role of modeling Storm Surge in coastal regions.
+The QGIS Profile Tool shows raster pixel values along a designated line, serving as an effective means for comparing
+diverse data types. Examining the elevation data (red line), distinct features emerge. An elevated region near the ocean
+is followed by the estuary and another elevated area near the buildings. In the baseline scenario,
+accounting for all flood drivers, a water surface elevation (WSE) of approximately 7.82 ft is predicted.
+When infiltration is deactivated, the WSE remains consistent in this region. Upon deactivating rainfall,
+a reduction of approximately 0.4 ft in WSE is observed compared to the baseline scenario.
+The most substantial difference occurs when the Storm Surge is deactivated, resulting in a notable reduction of 5.53 ft.
 
+.. note:: Utilize the QGIS Profile Tool in various sections of the project domain to evaluate
+          the variations across different scenarios.
 
-Step 4. Mitigation Maps
-___________________________
+12. Group the layers (except Subdomain 1 Elevation) into their own group called '100 years'.
 
-Step 5. Hazard Maps
-____________________
+.. important:: The compound flood is a nonlinear process. This means that each compound,
+               when activated, will influence the other compounds.
+               This lesson is for demonstration purposes to showcase the impact of each flood driver
+
+Step 5. Mitigation ()
+____________________________________________________
+
+In this lesson, the mitigation scenarios will be explored.
+
+Mangrove Restoration and Enhancement
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+One mitigation scenario is to consider mangrove restoration and enhancement.
+Mangrove forest, specifically the roots, trunks and canopy,
+increases roughness and decreases the storm surge flooding and wave propagation.
+This scenario is based on the WARMER-mangrove model
+(`Kevin J Buffington, 2023 <https://www.usgs.gov/data/elevation-and-mangrove-cover-projections-under-sea-level-rise-scenarios-jn-ding-darling>`_).
+A higher vegetation density and extension is simulated increasing the Manning n.
+
+Elevation of US Highway 41
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Another mitigation scenario is the elevation of US Highway 41 by 3 ft.
+This modification allows the highway to be safely used for emergency services and evacuation.
+Elevating a highway can also act as a barrier to prevent flooding in critical areas,
+such as hospitals and other emergency services.
+
+1. Uncheck all layers and groups except for Google Satellite.
+
+2. Open Rasterizor and create the Maximum Depth for the 100-years scenario considering an elevation of the US Highway 41.
+   The DEPTH.OUT file is located on the Design Storm 100 Yrs Subd 2 Elev US 41 Raise.
+
+.. image:: ../img/Coastal/comp045.png
+
+3. Drag the Naples Streets into the map.
+
+.. image:: ../img/Coastal/comp046.png
+
+.. note:: This shapefile does not encompass all the roads within the project domain.
+          However, it contains sufficient street data to fulfill the objectives of this lesson.
+
+4. Clip the Depth Elev US 41 raster with the Naples Streets shapefile. Select the Clip Raster by Mask layer function.
+
+.. image:: ../img/Coastal/comp047.png
+
+5. Fill the data as the image bellow and click Run.
+
+.. image:: ../img/Coastal/comp048.png
+
+6. Uncheck the Naples Streets layer.
+
+7. Utilize the Raster Calculator to identify regions on the streets where the water depth is less than 0.25 ft.
+
+.. image:: ../img/Coastal/comp049.png
+
+8. Fill the data as the image bellow and click OK.
+
+.. image:: ../img/Coastal/comp050.png
+
+.. note:: The expression used - IF("Depth Elev US 41 Clipped@1" < 0.25, 1, 0) - evaluates all pixels with a
+          depth less than 0.25 ft and sets these pixels to 1. All other pixels are set to 0.
+
+9. Right click on the newly created raster and click on properties. Select the symbology tab and fill the symbology as
+   follows.
+
+.. image:: ../img/Coastal/comp051.png
+
+10. Analyze the Depth Elev US 41 Streets.
+
+.. image:: ../img/Coastal/comp052.png
+
+In this scenario, the US Highway 41 was elevated by 3 ft.
+The green areas on the streets represent a maximum depth less than 0.25 ft,
+indicating situations where any vehicle can cross.
+The red areas represent streets where the maximum depth is greater than 0.25 ft,
+indicating situations where it may be difficult for a vehicle to cross.
+This map clearly shows that the elevated US Highway 41 can be safely used for emergency services and evacuation.
+
+Step 6. Hazard Maps (FLO-2D MapCrafter Plugin)
+________________________________________________
 
 MapCrafter creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
 aiding in risk management.
@@ -254,8 +397,8 @@ aiding in risk management.
 
 .. image:: ../img/Coastal/haz006.png
 
-2. Choose the '100 Yrs Subd 1 RAIN SS' scenario as the FLO-2D Export Folder
-   since this scenario is considered the most critical.
+2. Choose the '100 Yrs Subd 1 baseline' scenario as the FLO-2D Export Folder
+   since this scenario considers all flood drivers.
    Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation.
 
 .. image:: ../img/Coastal/haz007.png
