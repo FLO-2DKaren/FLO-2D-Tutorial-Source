@@ -4,28 +4,30 @@ Comparison of Results
 **Overview**
 
 In this module, the outcomes of various simulations conducted within the ACUNE+ Project are presented and analyzed.
-Discussions and result mapping utilizing Rasterizor and MapCrafter are also included.
+Discussions and result mapping utilizing Rasterizor, MapCrafter, and many other QGIS tools are also included.
 
 Required Data
 
-The required data is in the Coastal 2D Training Folder.
+The required data is in the Scenarios Subfolder.
 
 ======================== ====================================== =====================================
 **File** **Content**                            Location
 ======================== ====================================== =====================================
-\\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Project Data\\Comparison of Results\\
-\\Naples Streets.shp     Naples Streets                         Project Data\\Comparison of Results\\
-\\Elevation.tif          Elevation Raster                       Project Data\\AOI\\
-\\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Scenarios\\
-\\*.OUT                  Subdomain 1 Design Storm 10 Yrs NO SC  Scenarios\\
-\\*.OUT                  Subdomain 1 Design Storm 20 Yrs        Scenarios\\
-\\*.OUT                  Subdomain 1 Design Storm 20 Yrs NO SC  Scenarios\\
-\\*.OUT                  Subdomain 1 Design Storm 50 Yrs        Scenarios\\
-\\*.OUT                  Subdomain 1 Design Storm 50 Yrs NO SC  Scenarios\\
-\\*.OUT                  100 Yrs Subd 1 baseline                Scenarios\\
-\\*.OUT                  100 Yrs Subd 1 NO SS                   Scenarios\\
-\\*.OUT                  100 Yrs Subd 1 NO RAIN                 Scenarios\\
-\\*.OUT                  100 Yrs Subd 1 NO INFILTRATION         Scenarios\\
+\\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Storm Drain\\
+\\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Storm Drain\\
+\\*.OUT                  Subdomain 1 Design Storm 10 Yrs NO SC  Storm Drain\\
+\\*.OUT                  Subdomain 1 Design Storm 20 Yrs        Storm Drain\\
+\\*.OUT                  Subdomain 1 Design Storm 20 Yrs NO SC  Storm Drain\\
+\\*.OUT                  Subdomain 1 Design Storm 50 Yrs        Storm Drain\\
+\\*.OUT                  Subdomain 1 Design Storm 50 Yrs NO SC  Storm Drain\\
+\\Elevation.tif          Elevation Raster                       Flood Components\\
+\\*.OUT                  100 Yrs Subd 1 baseline                Flood Components\\
+\\*.OUT                  100 Yrs Subd 1 NO SS                   Flood Components\\
+\\*.OUT                  100 Yrs Subd 1 NO RAIN                 Flood Components\\
+\\*.OUT                  100 Yrs Subd 1 NO INFILTRATION         Flood Components\\
+\\Naples Streets.shp     Naples Streets                         Mitigation\\
+\\*.OUT                  Design Storm 100 Yrs Subd 2 Elev US 41 Mitigation\\
+\\*.OUT                  100 Yrs Subd 1 Baseline                Hazard Maps\\
 ======================== ====================================== =====================================
 
 Data Location: \\Coastal 2D Training\\Scenarios
@@ -313,7 +315,7 @@ The most substantial difference occurs when the Storm Surge is deactivated, resu
                when activated, will influence the other compounds.
                This lesson is for demonstration purposes to showcase the impact of each flood driver
 
-Step 5. Mitigation ()
+Step 5. Mitigation (QGIS Raster Calculator)
 ____________________________________________________
 
 In this lesson, the mitigation scenarios will be explored.
@@ -386,6 +388,8 @@ indicating situations where any vehicle can cross.
 The red areas represent streets where the maximum depth is greater than 0.25 ft,
 indicating situations where it may be difficult for a vehicle to cross.
 This map clearly shows that the elevated US Highway 41 can be safely used for emergency services and evacuation.
+
+1. Group the layers generated in this lesson in a group called 'US Highway 41'
 
 Step 6. Hazard Maps (FLO-2D MapCrafter Plugin)
 ________________________________________________
