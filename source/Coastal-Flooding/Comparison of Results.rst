@@ -30,6 +30,11 @@ The required data is in the Scenarios Subfolder.
 \\*.OUT                  MR-Design 100 YRS High Manning         Mitigation\\
 \\Naples Streets.shp     Naples Streets                         Mitigation\\
 \\*.OUT                  Design Storm 100 Yrs Subd 2 Elev US 41 Mitigation\\
+\\*.OUT                  F2100_10AEP_High836SLR                 Future Scenarios\\
+\\*.OUT                  F2100_10AEP_Low128SLR                  Future Scenarios\\
+\\*.OUT                  F2100_10AEP_Med377SLR                  Future Scenarios\\
+\\*.OUT                  F2060_10AEP_Med177SLR                  Future Scenarios\\
+\\*.OUT                  F2030_10AEP_Med072SLR                  Future Scenarios\\
 \\*.OUT                  100 Yrs Subd 1 Baseline                Hazard Maps\\
 ======================== ====================================== =====================================
 
@@ -233,10 +238,16 @@ Let's explore the advanced symbology options available in QGIS.
 
 .. image:: ../img/Coastal/comp044.png
 
+.. important:: Changing the symbology does not alter the raster results;
+               it only affects the way they are visually presented.
+               If a user wishes to modify the actual results in a raster (such as removing lower or higher outliers),
+               the Raster Calculator must be used.
+
 Step 4. Flood Components
 ____________________________
 
 Each Flood Component simulated using FLO-2D has a substantial impact on the flood depth.
+It is essential to note that compound flood is a non-linear process, implying that one process will influence the other.
 In this step, the QGIS Profile Tool Plugin will be used to evaluate the reduction in the flood depth when each
 flood component is deactivated. The scenarios analyzed in this step are:
 
@@ -396,13 +407,17 @@ stormwater systems during heavy rainfall events mitigating flooding in downstrea
 .. important:: It is possible to achieve the same visualization using the symbology tab or Rasterizor.
                However, the goal of this lesson is to demonstrate various methods for exploring FLO-2D results.
 
+13. Group the layers generated in this lesson in a group called 'Mangrove'
+
 Elevation of US Highway 41
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Another mitigation scenario is the elevation of US Highway 41 by 3 ft.
 This modification allows the highway to be safely used for emergency services and evacuation.
-Elevating a highway can also act as a barrier to prevent flooding in critical areas,
-such as hospitals and other emergency services.
+Elevating a highway can serve as a protective measure, preventing flooding in crucial areas such as hospitals and other
+emergency services. Additionally, the approach demonstrated in this section could be applied to identify other roads
+or highways with sufficient elevation to avoid flooding and, consequently, be utilized for emergency services and
+evacuation.
 
 1. Uncheck all layers and groups except for Google Satellite.
 
@@ -450,7 +465,7 @@ such as hospitals and other emergency services.
 
 In this scenario, the US Highway 41 was elevated by 3 ft.
 The green areas on the streets represent a maximum depth less than 0.25 ft,
-indicating situations where any vehicle can cross.
+indicating situations where any vehicle can safely cross.
 The red areas represent streets where the maximum depth is greater than 0.25 ft,
 indicating situations where it may be difficult for a vehicle to cross.
 This map clearly shows that the elevated US Highway 41 can be safely used for emergency services and evacuation.
@@ -460,12 +475,147 @@ This map clearly shows that the elevated US Highway 41 can be safely used for em
 Step 6. Future Scenarios
 ________________________
 
-Low, Medium, and High Sea Level Rise conditions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In this step, the water level predictions in future scenarios will be evaluated.
 
-Water Level Predictions in
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2100: Low, Medium, and High Sea Level Rise conditions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+The sea water level predictions for 2100 consider three scenarios: high, medium, and low.
+In this section, the differences between these three scenarios will be assessed. A 100 years return period is used in
+the simulations. The three sea water level values are:
+
+- Low: 1.28 ft
+- Medium: 3.77 ft
+- High: 8.36 ft
+
+1. Open Rasterizor and create the Maximum Water Surface Elevation for the three sea water levels rise considering
+   the 100-years scenario. The MAXWSELEV.OUT files are located on the F2100_10AEP_High836SLR, F2100_10AEP_Low128SLR, and
+   F2100_10AEP_Med377SLR.
+
+.. image:: ../img/Coastal/comp060.png
+
+2. Check the Subdomain 1 Elevation used on the Flood Components section and drag it to the top of the layer tree.
+
+.. tip:: If you lose the Subdomain 1 Elevation layer, simply add it again to the map canvas by dragging and dropping it.
+
+3. Let's use the QGIS Profile Tool Plugin again to compare the differences between these three scenarios.
+
+.. image:: ../img/Coastal/comp030.png
+
+8. Select the Subdomain 1 Elevation and click on add layer on the Profile Tool. Repeat this process for
+   F2100_10AEP_High836SLR, F2100_10AEP_Low128SLR, and F2100_10AEP_Med377SLR
+
+9. Change the Layers colors by double clicking on the red square at the left of the Layer's name.
+
+- F2100_10AEP_High836SLR: Red
+- F2100_10AEP_Low128SLR: Green
+- F2100_10AEP_Med377SLR: Orange
+- Subdomain 1 Elevation: Brown
+
+.. image:: ../img/Coastal/comp061.png
+
+10. Create a profile plot of the three scenarios over the 111th Avenue North (Immokalee Rd).
+
+.. image:: ../img/Coastal/comp062.png
+
+In this plot, it is evident that the bridge is completely submerged in the High Sea Level Rise scenario but
+is not overtopped in the other scenarios (see the area under the green square).
+This plot also illustrates that the impact of the storm surge ceases near Livingston Rd.
+
+11. Create another plot on the Bonita Beach Rd SW.
+
+.. image:: ../img/Coastal/comp063.png
+
+The bridge is also overtopped in the High Sea Level simulation (green square)
+but not in the medium and low sea water level scenarios.
+Another notable observation is that the Low Sea Level Rise flooding recedes just after West Av,
+while the other scenarios still predict flooding in this area.
+
+12. Create a plot over the Bay Colony Dr.
+
+.. image:: ../img/Coastal/comp064.png
+
+This plot is oriented in the north-south direction and clearly indicates that the entire road is flooded.
+All three scenarios predict flooding, with the low sea level rise anticipating a water depth of around 11 ft,
+while the high sea level rise forecasts a water depth of approximately 21.4 ft.
+
+13. Group the layers generated in this lesson in a group called 'Sea Level Rise'
+
+Flooded Areas in 2030, 2060
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+In this section, the areas flooded by more than 1 ft will be mapped and calculated to estimate the
+area percentage increment between the 2030 and 2060 scenarios.
+
+1. Open Rasterizor and create the Maximum Depth for the 2030 scenario.
+   The DEPTH.OUT file is located on the F2030_10AEP_Med072SLR.
+
+.. image:: ../img/Coastal/comp065.png
+
+2. Open the Raster Calculator and add the following expression: IF("Depth 2030@1" >= 1, "Depth 2030@1", -9999).
+
+.. image:: ../img/Coastal/comp071.png
+
+.. note:: This raster contains only depth values greater than 1 ft. Users can modify this threshold as needed.
+
+2. Vectorize the Depth 2030 by following the figures below.
+
+.. image:: ../img/Coastal/comp066.png
+
+.. image:: ../img/Coastal/comp067.png
+
+3. Wait the process to finish, right click on the vector layer, go to Open Attribute Table. Select the Select Features Using
+   an Expression and select all features with DN = -9999.
+
+.. image:: ../img/Coastal/comp069.png
+
+.. note:: The DN = -9999 are all features containing depth values less than 1 ft.
+
+4. Delete all these features by toggling the edit mode and clicking on delete selected features.
+
+.. image:: ../img/Coastal/comp072.png
+
+5. Click Delete Features on the message and exit the edit mode to save this modification.
+
+.. image:: ../img/Coastal/comp073.png
+
+5. Use the dissolve algorithm to join all features into one.
+
+.. image:: ../img/Coastal/comp074.png
+
+.. image:: ../img/Coastal/comp075.png
+
+6. Wait the process to finish. Right click on the dissolved vector and Open Attribute Table.
+
+7. Open the Field Calculator, set the Output Field Name as area and type as decimal.
+   Fill the expression (\&area) and click OK.
+
+.. image:: ../img/Coastal/comp076.png
+
+8. A new field is added to the Attribute Table with the area of the feature.
+
+.. image:: ../img/Coastal/comp077.png
+
+9. Redo steps 1-8 for the DEPTH.OUT located on the F2060_10AEP_Med072SLR.
+
+10. The two vectors will look like this:
+
+.. image:: ../img/Coastal/comp078.png
+
+.. tip:: Add the layer with the higher flooded area to the bottom of the layers with lower flooded areas.
+
+Zooming into specific areas reveals a larger flooded area in the 2060 scenario compared to 2030.
+
+11. Compare the inundated areas greater than 1 ft between the two scenarios.
+
+- 2030: 38,628,891.980 ft^2
+- 2060: 40,631,510.310 ft^2
+
+.. image:: ../img/Coastal/comp079.png
+
+- **Percentage increase: 5.2 \%**
+
+12. Group the layers generated in this lesson in a group called 'Flooded Areas'
 
 Step 7. Hazard Maps
 _________________________
