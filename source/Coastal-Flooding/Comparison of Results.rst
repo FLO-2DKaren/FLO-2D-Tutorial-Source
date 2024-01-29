@@ -11,7 +11,7 @@ Required Data
 The required data is in the Scenarios Subfolder.
 
 ======================== ====================================== =====================================
-**File** **Content**                            Location
+**File**                 **Content**                            **Location**
 ======================== ====================================== =====================================
 \\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Storm Drain\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Storm Drain\\
@@ -25,6 +25,9 @@ The required data is in the Scenarios Subfolder.
 \\*.OUT                  100 Yrs Subd 1 NO SS                   Flood Components\\
 \\*.OUT                  100 Yrs Subd 1 NO RAIN                 Flood Components\\
 \\*.OUT                  100 Yrs Subd 1 NO INFILTRATION         Flood Components\\
+\\WARMER.tif             Warmer raster                          Mitigation\\
+\\*.OUT                  MR-Design 100 YRS                      Mitigation\\
+\\*.OUT                  MR-Design 100 YRS High Manning         Mitigation\\
 \\Naples Streets.shp     Naples Streets                         Mitigation\\
 \\*.OUT                  Design Storm 100 Yrs Subd 2 Elev US 41 Mitigation\\
 \\*.OUT                  100 Yrs Subd 1 Baseline                Hazard Maps\\
@@ -58,12 +61,13 @@ it is more effective to maintain a distinct QGIS project specifically for FLO-2D
 
 .. image:: ../img/Coastal/comp005.png
 
-Step 2. Storm Drain (FLO-2D Rasterizor Plugin)
-_________________________________________________________________
+Step 2. Storm Drain
+____________________
 
 In this step, we'll explore the distinctions between models with and without the storm drain engine,
 taking into account different return periods. Our investigation will encompass maximum depth (DEPTH.OUT),
-maximum velocity (VELFP.OUT), and time to peak (TIMETOPEAK.OUT) results
+maximum velocity (VELFP.OUT), and time to peak (TIMETOPEAK.OUT) results. The FLO-2D Rasterizor Plugin will
+be utilized to assess the differences.
 
 1. Drag and drop the Storm Drain layer into the project.
 
@@ -229,8 +233,8 @@ Let's explore the advanced symbology options available in QGIS.
 
 .. image:: ../img/Coastal/comp044.png
 
-Step 4. Flood Components (QGIS Profile Tool Plugin)
-________________________________________________________
+Step 4. Flood Components
+____________________________
 
 Each Flood Component simulated using FLO-2D has a substantial impact on the flood depth.
 In this step, the QGIS Profile Tool Plugin will be used to evaluate the reduction in the flood depth when each
@@ -315,10 +319,10 @@ The most substantial difference occurs when the Storm Surge is deactivated, resu
                when activated, will influence the other compounds.
                This lesson is for demonstration purposes to showcase the impact of each flood driver
 
-Step 5. Mitigation (QGIS Raster Calculator)
-____________________________________________________
+Step 5. Mitigation Alternatives
+__________________________________
 
-In this lesson, the mitigation scenarios will be explored.
+In this lesson, mitigation scenarios will be explored using the QGIS Raster Calculator.
 
 Mangrove Restoration and Enhancement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -329,6 +333,68 @@ increases roughness and decreases the storm surge flooding and wave propagation.
 This scenario is based on the WARMER-mangrove model
 (`Kevin J Buffington, 2023 <https://www.usgs.gov/data/elevation-and-mangrove-cover-projections-under-sea-level-rise-scenarios-jn-ding-darling>`_).
 A higher vegetation density and extension is simulated increasing the Manning n.
+
+1. Uncheck all layers and groups except for Google Satellite.
+
+2. Drag the WARMER raster to the map canvas. Each pixel value represents a land use pattern:
+
+- 1: Water bodies
+- 2: Mangrove
+- 3: Salt Marsh
+- 4: Fresh Marsh
+- 5: Cypress
+- 6: Upland Forest
+
+.. image:: ../img/Coastal/comp059.png
+
+3. Open Rasterizor and create the Maximum Depth for the 100-years scenario with original manning.
+   The DEPTH.OUT file is located on MR-Design 100 YRS.
+
+.. image:: ../img/Coastal/comp053.png
+
+4. Open Rasterizor and create the Maximum Depth for the 100-years scenario with high manning.
+   The DEPTH.OUT file is located on MR-Design 100 YRS High Manning.
+
+.. image:: ../img/Coastal/comp054.png
+
+7. Utilize the Raster Calculator to identify regions where depth changes are more significant.
+
+.. image:: ../img/Coastal/comp049.png
+
+8. Fill the data as the image bellow and click OK.
+
+.. image:: ../img/Coastal/comp055.png
+
+.. note:: The expression IF(ABS("Depth MG@1" - "Depth MG High@1") > 0.1, "Depth MG@1" - "Depth MG High@1", -9999)
+          indicates that only difference values greater than absolute 0.1 will be added to the new raster,
+          while values different than that will be assigned as NO DATA (-9999).
+
+9. Once the raster is created, right click on the raster, go to Properties and select the Transparency tab. Set -9999
+   as additional NO DATA value and click apply.
+
+.. image:: ../img/Coastal/comp056.png
+
+10. Go to the symbology tab and fill the data as the following figure.
+
+.. image:: ../img/Coastal/comp057.png
+
+11. The resulting raster will only display areas where the differences are either greater or smaller than 0.1 and -0.1 ft.
+
+.. image:: ../img/Coastal/comp058.png
+
+12. Compare the recently generated raster with the WARMER raster.
+
+Mangroves act as natural barriers that help reduce the energy of incoming waves and storm surges.
+The dense root systems and complex vegetation structure of mangroves dissipate wave energy,
+which in turn reduces the force of storm surges.
+This protective function can help prevent coastal erosion and minimize flooding in contiguous urban areas.
+Furthermore, the intricate root systems of mangroves slow down the movement of water,
+allowing for better absorption and storage of excess rainwater.
+Increasing the areal distribution of mangrove forests will reduce flood waters entering
+stormwater systems during heavy rainfall events mitigating flooding in downstream urban areas.
+
+.. important:: It is possible to achieve the same visualization using the symbology tab or Rasterizor.
+               However, the goal of this lesson is to demonstrate various methods for exploring FLO-2D results.
 
 Elevation of US Highway 41
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -389,12 +455,22 @@ The red areas represent streets where the maximum depth is greater than 0.25 ft,
 indicating situations where it may be difficult for a vehicle to cross.
 This map clearly shows that the elevated US Highway 41 can be safely used for emergency services and evacuation.
 
-1. Group the layers generated in this lesson in a group called 'US Highway 41'
+11. Group the layers generated in this lesson in a group called 'US Highway 41'
 
-Step 6. Hazard Maps (FLO-2D MapCrafter Plugin)
-________________________________________________
+Step 6. Future Scenarios
+________________________
 
-MapCrafter creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
+Low, Medium, and High Sea Level Rise conditions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Water Level Predictions in
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Step 7. Hazard Maps
+_________________________
+
+FLO-2D MapCrafter Plugin creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
 aiding in risk management.
 
 1. Open MapCrafter.
