@@ -617,7 +617,55 @@ Zooming into specific areas reveals a larger flooded area in the 2060 scenario c
 
 12. Group the layers generated in this lesson in a group called 'Flooded Areas'
 
-Step 7. Hazard Maps
+Step 7. Channel Analysis
+____________________________
+
+In this step, the channel hydraulics will be evaluated utilizing the Hurricane Irma Scenario.
+
+1. Uncheck all layers and groups except for Google Satellite.
+
+2. Open MapCrafter and select the Subdomain 1 Hurricane Irma.
+
+3. Under the Site Characteristics group, check the Ground Elevation. Under the Channel group,
+   check Maximum Channel Depth and Maximum Channel Velocity. Click on Create Maps.
+
+.. image:: ../img/Coastal/comp080.png
+
+.. note:: MapCrafter generates a subfolder named "MapCrafter" within the selected Export Folder where the maps will be
+          saved. Users can modify this as needed.
+
+4. Open the Profile Tool and add the Ground Elevation, Maximum Channel Depth, and Maximum Channel velocity to the plot.
+   Select red color for Ground Elevation, blue do Maximum Channel Depth, and green for Maximum Channel Velocity.
+
+.. image:: ../img/Coastal/comp081.png
+
+5. Uncheck the rasters and zoom into the Palm River Blvd Bridge over the Cocohatchee Canal.
+
+6. Create a profile plot on the west-east direction.
+
+.. image:: ../img/Coastal/comp082.png
+
+- The first hydraulic structure (1) exhibits a significant step of approximately 4 ft in the ground elevation (red).
+  This results in a decrease in Maximum Depth (blue) along with an increase in Maximum Velocity (green).
+
+- The second hydraulic structure (2) is a bridge. The bridge columns acts as a constriction
+  in the channel, narrowing the available space for water flow. This constriction leads to an increase in
+  flow velocity. As the flow accelerates through the bridge columns,
+  there is a temporary reduction in the depth of the channel. Beyond the bridge, where the channel
+  expands, the flow velocity decreases, allowing the depth of the channel to recover.
+
+- At the last hydraulic structure (3), the ground elevation exhibits a notable step,
+  indicating a change in the topography. In the approach to this structure,
+  there is a minor reduction in flow velocity accompanied by an increase in channel depth.
+  As the water encounters the hydraulic structure, which involves a constriction in channel width,
+  the flow accelerates, resulting in a decrease in channel depth.
+  This acceleration is consistent with the principles of open-channel hydraulics,
+  where constrictions lead to increased flow velocities. Following the structure,
+  there is a subsequent increase in flow velocity and a corresponding decrease in channel depth,
+  eventually returning to normal flow conditions in the channel
+
+
+Step 8. Hazard Maps
 _________________________
 
 FLO-2D MapCrafter Plugin creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
@@ -653,7 +701,7 @@ aiding in risk management.
                 Engineering judgment must be employed to identify areas more susceptible
                 to the specific type of flood damages.
 
-Step 3. Houses Hazard
+Houses Hazard
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Houses Hazard Map is focused on permanent residences attached to foundations
@@ -671,7 +719,7 @@ sand and gravel operations, and fish hatcheries.
 - JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.
 - LOW DANGER ZONE (BLUE): Occupants of most houses are not seriously in danger from flood water.
 
-Step 4. Mobile Houses Hazard
+Mobile Houses Hazard
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Mobile Houses are typically located in flood plains due to zoning
@@ -689,7 +737,7 @@ from relatively small floods.
 - JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.
 - LOW DANGER ZONE (BLUE): Occupants of almost any size mobile home are not seriously in danger from flood water.
 
-Step 5. Vehicles Hazard
+Vehicles Hazard
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Vehicles Hazard is focused on the possibility for loss
@@ -703,7 +751,7 @@ of life to motorists and pedestrians.
 - JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
 - LOW DANGER ZONE (BLUE): Occupants of almost any size passenger vehicle are not seriously in danger from flood water.
 
-Step 6. Adults Hazard
+Adults Hazard
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 In Adults Hazard Map, an adult is considered any human over 5 feet (150 cm) tall and weighing over
@@ -718,7 +766,7 @@ In Adults Hazard Map, an adult is considered any human over 5 feet (150 cm) tall
 - JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.
 - LOW DANGER ZONE (BLUE): Almost any size adult is not seriously threatened by flood water.
 
-Step 7. Children Hazard
+Children Hazard
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 The Children Hazard map represents a more conservative classification compared to the Adults Hazard Map.
