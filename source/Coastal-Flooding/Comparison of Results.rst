@@ -13,7 +13,7 @@ The required data is in the Scenarios Subfolder.
 ======================== ====================================== =====================================
 **File**                 **Content**                            **Location**
 ======================== ====================================== =====================================
-\\*.OUT                  Subdomain 1 Hurricane Ian              Plotting FLO-2D Results \\
+\\*.OUT                  Subdomain 1 Hurricane Ian              Plotting FLO-2D Results\\
 \\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Storm Drain\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Storm Drain\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs NO SC  Storm Drain\\
@@ -80,7 +80,8 @@ providing a quick and efficient way to analyze and present FLO-2D simulation out
 
 .. image:: ../img/Coastal/haz006.png
 
-2. Choose the 'Subdomain 1 Hurricane Ian' scenario as the FLO-2D Export Folder. Under the Basic group,
+2. Choose the 'Subdomain 1 Hurricane Ian' scenario as the FLO-2D Export Folder.
+   This scenario is located under the Plotting FLO-2D Results. Under the Basic group,
    select Maximum Depth and click on Create Maps.
 
 .. image:: ../img/Coastal/comp083.png
@@ -151,7 +152,7 @@ Let's explore advanced symbology options available in QGIS.
 .. important:: Even with transparency, the selected color will be used in the interpolation.
                Therefore, choose a meaningful color to represent the cut-off depth values.
 
-4. Navigate to the Transparency tab and apply a 75% transparency.
+4. Navigate to the Transparency tab and apply a 50% transparency.
    This will enable a clearer visualization of the aerial image beneath the raster.
 
 .. image:: ../img/Coastal/comp043.png
