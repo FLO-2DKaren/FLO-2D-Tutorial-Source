@@ -13,6 +13,7 @@ The required data is in the Scenarios Subfolder.
 ======================== ====================================== =====================================
 **File**                 **Content**                            **Location**
 ======================== ====================================== =====================================
+\\*.OUT                  Subdomain 1 Hurricane Ian              Plotting FLO-2D Results\\
 \\Storm Drain Sub 1.shp  Storm Drain Sub 1                      Storm Drain\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs        Storm Drain\\
 \\*.OUT                  Subdomain 1 Design Storm 10 Yrs NO SC  Storm Drain\\
@@ -35,11 +36,11 @@ The required data is in the Scenarios Subfolder.
 \\*.OUT                  F2100_10AEP_Med377SLR                  Future Scenarios\\
 \\*.OUT                  F2060_10AEP_Med177SLR                  Future Scenarios\\
 \\*.OUT                  F2030_10AEP_Med072SLR                  Future Scenarios\\
+\\*.OUT                  Subdomain 1 Hurricane Irma             Channel Analysis\\
 \\*.OUT                  100 Yrs Subd 1 Baseline                Hazard Maps\\
 ======================== ====================================== =====================================
 
 Data Location: \\Coastal 2D Training\\Scenarios
-
 
 Step 1. Create a review project
 _____________________________________
@@ -66,7 +67,106 @@ it is more effective to maintain a distinct QGIS project specifically for FLO-2D
 
 .. image:: ../img/Coastal/comp005.png
 
-Step 2. Storm Drain
+4. Create a folder under the Coastal 2D Training directory called Comparison of Results.
+
+Step 2. Plotting FLO-2D results
+_________________________________
+
+The FLO-2D MapCrafter Plugin facilitates the visualization and plotting of various FLO-2D results within the QGIS environment.
+This plugin creates detailed plots and layouts directly on the QGIS Map Canvas,
+providing a quick and efficient way to analyze and present FLO-2D simulation outcomes.
+
+1. Open MapCrafter.
+
+.. image:: ../img/Coastal/haz006.png
+
+2. Choose the 'Subdomain 1 Hurricane Ian' scenario as the FLO-2D Export Folder.
+   This scenario is located under the Plotting FLO-2D Results. Under the Basic group,
+   select Maximum Depth and click on Create Maps.
+
+.. image:: ../img/Coastal/comp083.png
+
+3. Use Quick Map Services to load an aerial image onto the map.
+
+.. image:: ../img/Advanced-Workshop/Lesson005.png
+
+.. image:: ../img/Coastal/chan003.png
+
+4. Check the MAXIMUM_DEPTH raster.
+
+.. image:: ../img/Coastal/comp092.png
+
+5. Open MapCrafter again and select the FLO-2D Layouts tab. Fill the data as the image below and click on Open Selected Layout.
+
+.. image:: ../img/Coastal/comp084.png
+
+6. Select the map and adjust the grid by removing the 1 km grid and enabling the 5 km grid.
+
+.. image:: ../img/Coastal/comp085.png
+
+.. image:: ../img/Coastal/comp086.png
+
+7. Add a legend to the right side of the Map and adjust the scale to 1:80,000.
+
+.. image:: ../img/Coastal/comp087.png
+
+.. note:: Users can further customize and enhance the map using various features available in QGIS.
+          However, exploring these advanced features for creating high-quality maps goes beyond the scope of this lesson.
+
+8. Click on Export to PDF and save to the Comparison of Results Folder.
+
+.. image:: ../img/Coastal/comp088.png
+
+.. image:: ../img/Coastal/comp089.png
+
+.. image:: ../img/Coastal/comp090.png
+
+9. Open the pdf with your preferred pdf reader.
+
+.. image:: ../img/Coastal/comp091.png
+
+Step 3. Advanced symbology options
+_____________________________________
+
+Let's explore advanced symbology options available in QGIS.
+
+1. Select the previously generated MAXIMUM_DEPTH raster.
+
+.. image:: ../img/Coastal/comp039.png
+
+2. Right click on the raster, go to properties, select the symbology tab. Set the symbology exactly as the following
+   image.
+
+.. image:: ../img/Coastal/comp040.png
+
+.. note:: This symbology categorizes the depth intervals into user-defined classes.
+          Feel free to modify these classes as per your requirements.
+
+.. image:: ../img/Coastal/comp041.png
+
+3. A useful symbology involves removing depth values less than 0.5 ft. On the symbology tab, add another class using
+   the green plus button. Set the value to 0.5. Double click on the color, set it to white and full transparent.
+
+.. image:: ../img/Coastal/comp042.png
+
+.. important:: Even with transparency, the selected color will be used in the interpolation.
+               Therefore, choose a meaningful color to represent the cut-off depth values.
+
+4. Navigate to the Transparency tab and apply a 50% transparency.
+   This will enable a clearer visualization of the aerial image beneath the raster.
+
+.. image:: ../img/Coastal/comp043.png
+
+.. image:: ../img/Coastal/comp044.png
+
+.. important:: Changing the symbology does not alter the raster results;
+               it only affects the way they are visually presented.
+               If a user wishes to modify the actual results in a raster (such as removing lower or higher outliers),
+               the Raster Calculator must be used.
+
+5. Collapse the FLO-2D MapCrafter group and uncheck it.
+
+Step 4. Storm Drain
 ____________________
 
 In this step, we'll explore the distinctions between models with and without the storm drain engine,
@@ -74,21 +174,11 @@ taking into account different return periods. Our investigation will encompass m
 maximum velocity (VELFP.OUT), and time to peak (TIMETOPEAK.OUT) results. The FLO-2D Rasterizor Plugin will
 be utilized to assess the differences.
 
-1. Drag and drop the Storm Drain layer into the project.
+1. Drag and drop the Storm Drain layer into the project and move it to the top.
 
 .. image:: ../img/Coastal/comp010.png
 
-2. Use Quick Map Services to load an aerial image onto the map.
-
-.. image:: ../img/Advanced-Workshop/Lesson005.png
-
-.. image:: ../img/Coastal/chan003.png
-
-.. image:: ../img/Coastal/comp011.png
-
 .. hint:: Increase the line thickness in the symbology settings to enhance the visibility of the storm drains.
-
-3. Create a folder under the Coastal 2D Training directory called Comparison of Results.
 
 Compare the 10 years scenarios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -140,7 +230,7 @@ and discharged the collected water into a detention pond (red areas) elevating i
 
 .. image:: ../img/Coastal/comp014.png
 
-.. image:: ../img/Coastal/comp015.png
+6. Uncheck the 10 Years group.
 
 Compare the 20 years scenarios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -203,47 +293,7 @@ reducing the time it takes for the flow to reach its maximum.
 
 4. Group the 50-years rasters into their own group.
 
-Step 3. Explore symbology options
-_____________________________________
-
-The default symbology provided by Rasterizor is not the only way to represent the results.
-Let's explore the advanced symbology options available in QGIS.
-
-1. Select the previously generated Depth 10 years.
-
-.. image:: ../img/Coastal/comp039.png
-
-2. Right click on the raster, go to properties, select the symbology tab. Set the symbology exactly as the following
-   image.
-
-.. image:: ../img/Coastal/comp040.png
-
-.. note:: This symbology categorizes the depth intervals into user-defined classes.
-          Feel free to modify these classes as per your requirements.
-
-.. image:: ../img/Coastal/comp041.png
-
-3. A useful symbology involves removing depth values less than 0.5 ft. On the symbology tab, add another class using
-   the green plus button. Set the value to 0.5. Double click on the color, set it to white and full transparent.
-
-.. image:: ../img/Coastal/comp042.png
-
-.. important:: Even with transparency, the selected color will be used in the interpolation.
-               Therefore, choose a meaningful color to represent the cut-off depth values.
-
-4. Navigate to the Transparency tab and apply a 75% transparency.
-   This will enable a clearer visualization of the aerial image beneath the raster.
-
-.. image:: ../img/Coastal/comp043.png
-
-.. image:: ../img/Coastal/comp044.png
-
-.. important:: Changing the symbology does not alter the raster results;
-               it only affects the way they are visually presented.
-               If a user wishes to modify the actual results in a raster (such as removing lower or higher outliers),
-               the Raster Calculator must be used.
-
-Step 4. Flood Components
+Step 5. Flood Components
 ____________________________
 
 Each Flood Component simulated using FLO-2D has a substantial impact on the flood depth.
@@ -258,7 +308,7 @@ flood component is deactivated. The scenarios analyzed in this step are:
 
 .. note:: All of these scenarios are based on the future year 2040 considering high rainfall.
 
-1. Uncheck all layers and drag the Subdomain 1 Elevation raster to the project.
+1. Uncheck all layers but the Google Hybrid and drag the Subdomain 1 Elevation raster to the project.
 
 .. image:: ../img/Coastal/comp027.png
 
@@ -307,7 +357,7 @@ flood component is deactivated. The scenarios analyzed in this step are:
 
 10. Uncheck the recently created WSE baseline, WSE NO SS, WSE NO RAINFALL, and WSE NO INFILTRATION.
 
-11. Zoom into the southwest of the project domain and create a profile line on the floodplain as the following image.
+11. Zoom into the southwest of the project domain and create a profile line (west-east) on the floodplain as the following image.
 
 .. image:: ../img/Coastal/comp038.png
 
@@ -324,13 +374,13 @@ The most substantial difference occurs when the Storm Surge is deactivated, resu
 .. note:: Utilize the QGIS Profile Tool in various sections of the project domain to evaluate
           the variations across different scenarios.
 
-12. Group the layers (except Subdomain 1 Elevation) into their own group called '100 years'.
+12. Group the layers (except Subdomain 1 Elevation) into their own group called '100 years' an uncheck this group.
 
 .. important:: The compound flood is a nonlinear process. This means that each compound,
                when activated, will influence the other compounds.
                This lesson is for demonstration purposes to showcase the impact of each flood driver
 
-Step 5. Mitigation Alternatives
+Step 6. Mitigation Alternatives
 __________________________________
 
 In this lesson, mitigation scenarios will be explored using the QGIS Raster Calculator.
@@ -345,7 +395,7 @@ This scenario is based on the WARMER-mangrove model
 (`Kevin J Buffington, 2023 <https://www.usgs.gov/data/elevation-and-mangrove-cover-projections-under-sea-level-rise-scenarios-jn-ding-darling>`_).
 A higher vegetation density and extension is simulated increasing the Manning n.
 
-1. Uncheck all layers and groups except for Google Satellite.
+1. Uncheck all layers and groups except for Google Hybrid.
 
 2. Drag the WARMER raster to the map canvas. Each pixel value represents a land use pattern:
 
@@ -390,6 +440,7 @@ A higher vegetation density and extension is simulated increasing the Manning n.
 .. image:: ../img/Coastal/comp057.png
 
 11. The resulting raster will only display areas where the differences are either greater or smaller than 0.1 and -0.1 ft.
+    To enhance visualization, uncheck all other layers except for Google Hybrid.
 
 .. image:: ../img/Coastal/comp058.png
 
@@ -419,47 +470,49 @@ emergency services. Additionally, the approach demonstrated in this section coul
 or highways with sufficient elevation to avoid flooding and, consequently, be utilized for emergency services and
 evacuation.
 
-1. Uncheck all layers and groups except for Google Satellite.
+1. Uncheck all layers and groups except for Google Hybrid.
 
 2. Open Rasterizor and create the Maximum Depth for the 100-years scenario considering an elevation of the US Highway 41.
    The DEPTH.OUT file is located on the Design Storm 100 Yrs Subd 2 Elev US 41 Raise.
 
 .. image:: ../img/Coastal/comp045.png
 
-3. Drag the Naples Streets into the map.
+3. Right click on the Depth Elev US 41 and click on Zoom to Layer(s).
+
+4. Drag the Naples Streets into the map.
 
 .. image:: ../img/Coastal/comp046.png
 
 .. note:: This shapefile does not encompass all the roads within the project domain.
           However, it contains sufficient street data to fulfill the objectives of this lesson.
 
-4. Clip the Depth Elev US 41 raster with the Naples Streets shapefile. Select the Clip Raster by Mask layer function.
+5. Clip the Depth Elev US 41 raster with the Naples Streets shapefile. Select the Clip Raster by Mask layer function.
 
 .. image:: ../img/Coastal/comp047.png
 
-5. Fill the data as the image bellow and click Run.
+6. Fill the data as the image bellow and click Run.
 
 .. image:: ../img/Coastal/comp048.png
 
-6. Uncheck the Naples Streets layer.
+7. Uncheck the Naples Streets layer.
 
-7. Utilize the Raster Calculator to identify regions on the streets where the water depth is less than 0.25 ft.
+8. Utilize the Raster Calculator to identify regions on the streets where the water depth is less than 0.25 ft.
 
 .. image:: ../img/Coastal/comp049.png
 
-8. Fill the data as the image bellow and click OK.
+9. Fill the data as the image bellow and click OK.
 
 .. image:: ../img/Coastal/comp050.png
 
 .. note:: The expression used - IF("Depth Elev US 41 Clipped@1" < 0.25, 1, 0) - evaluates all pixels with a
           depth less than 0.25 ft and sets these pixels to 1. All other pixels are set to 0.
 
-9. Right click on the newly created raster and click on properties. Select the symbology tab and fill the symbology as
-   follows.
+10. Right click on the newly created raster and click on properties. Select the symbology tab and fill the symbology as
+    follows.
 
 .. image:: ../img/Coastal/comp051.png
 
-10. Analyze the Depth Elev US 41 Streets.
+11. Analyze the Depth Elev US 41 Streets.
 
 .. image:: ../img/Coastal/comp052.png
 
@@ -470,9 +523,9 @@ The red areas represent streets where the maximum depth is greater than 0.25 ft,
 indicating situations where it may be difficult for a vehicle to cross.
 This map clearly shows that the elevated US Highway 41 can be safely used for emergency services and evacuation.
 
-11. Group the layers generated in this lesson in a group called 'US Highway 41'
+12. Group the layers generated in this lesson in a group called 'US Highway 41'
 
-Step 6. Future Scenarios
+Step 7. Future Scenarios
 ________________________
 
 In this step, the water level predictions in future scenarios will be evaluated.
@@ -498,7 +551,8 @@ the simulations. The three sea water level values are:
 
 .. tip:: If you lose the Subdomain 1 Elevation layer, simply add it again to the map canvas by dragging and dropping it.
 
-3. Let's use the QGIS Profile Tool Plugin again to compare the differences between these three scenarios.
+3. Let's use the QGIS Profile Tool Plugin again to compare the differences between these three scenarios. Remove any layer
+   that was previously added to the QGIS Profile Tool Plugin.
 
 .. image:: ../img/Coastal/comp030.png
 
@@ -510,11 +564,11 @@ the simulations. The three sea water level values are:
 - F2100_10AEP_High836SLR: Red
 - F2100_10AEP_Low128SLR: Green
 - F2100_10AEP_Med377SLR: Orange
-- Subdomain 1 Elevation: Brown
+- Subdomain 1 Elevation: Black
 
 .. image:: ../img/Coastal/comp061.png
 
-10. Create a profile plot of the three scenarios over the 111th Avenue North (Immokalee Rd).
+10. Create a profile plot of the three scenarios over the 111th Avenue North (Immokalee Rd) from west to east.
 
 .. image:: ../img/Coastal/comp062.png
 
@@ -539,10 +593,10 @@ This plot is oriented in the north-south direction and clearly indicates that th
 All three scenarios predict flooding, with the low sea level rise anticipating a water depth of around 11 ft,
 while the high sea level rise forecasts a water depth of approximately 21.4 ft.
 
-13. Group the layers generated in this lesson in a group called 'Sea Level Rise'
+13. Group the layers generated in this lesson in a group called 'Sea Level Rise' and uncheck the group.
 
 Flooded Areas in 2030, 2060
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this section, the areas flooded by more than 1 ft will be mapped and calculated to estimate the
 area percentage increment between the 2030 and 2060 scenarios.
@@ -615,14 +669,14 @@ Zooming into specific areas reveals a larger flooded area in the 2060 scenario c
 
 - **Percentage increase: 5.2 \%**
 
-12. Group the layers generated in this lesson in a group called 'Flooded Areas'
+12. Group the layers generated in this lesson in a group called 'Flooded Areas' and uncheck it.
 
-Step 7. Channel Analysis
+Step 8. Channel Analysis
 ____________________________
 
 In this step, the channel hydraulics will be evaluated utilizing the Hurricane Irma Scenario.
 
-1. Uncheck all layers and groups except for Google Satellite.
+1. Uncheck all layers and groups except for Google Hybrid.
 
 2. Open MapCrafter and select the Subdomain 1 Hurricane Irma.
 
@@ -634,7 +688,8 @@ In this step, the channel hydraulics will be evaluated utilizing the Hurricane I
 .. note:: MapCrafter generates a subfolder named "MapCrafter" within the selected Export Folder where the maps will be
           saved. Users can modify this as needed.
 
-4. Open the Profile Tool and add the Ground Elevation, Maximum Channel Depth, and Maximum Channel velocity to the plot.
+4. Check the FLO-2D MapCrafter group and move it to top. Open the Profile Tool and remove existing layers. Add the Ground Elevation,
+   Maximum Channel Depth, and Maximum Channel velocity to the plot.
    Select red color for Ground Elevation, blue do Maximum Channel Depth, and green for Maximum Channel Velocity.
 
 .. image:: ../img/Coastal/comp081.png
@@ -665,7 +720,7 @@ In this step, the channel hydraulics will be evaluated utilizing the Hurricane I
   eventually returning to normal flow conditions in the channel
 
 
-Step 8. Hazard Maps
+Step 9. Hazard Maps
 _________________________
 
 FLO-2D MapCrafter Plugin creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
