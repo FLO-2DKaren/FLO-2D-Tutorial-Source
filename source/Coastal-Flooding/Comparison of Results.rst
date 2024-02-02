@@ -393,7 +393,7 @@ Mangrove forest, specifically the roots, trunks and canopy,
 increases roughness and decreases the storm surge flooding and wave propagation.
 This scenario is based on the WARMER-mangrove model
 (`Kevin J Buffington, 2023 <https://www.usgs.gov/data/elevation-and-mangrove-cover-projections-under-sea-level-rise-scenarios-jn-ding-darling>`_).
-A higher vegetation density and extension is simulated increasing the Manning n.
+A higher vegetation density and extension is simulated increasing the Manning Roughness.
 
 1. Uncheck all layers and groups except for Google Hybrid.
 
@@ -408,55 +408,51 @@ A higher vegetation density and extension is simulated increasing the Manning n.
 
 .. image:: ../img/Coastal/comp059.png
 
-3. Open Rasterizor and create the Maximum Depth for the 100-years scenario with original manning.
-   The DEPTH.OUT file is located on MR-Design 100 YRS.
+3. Open Rasterizor and create the Maximum Velocity for the 100-years scenario with original manning.
+   The VELFP.OUT file is located on MR-Design 100 YRS.
 
 .. image:: ../img/Coastal/comp053.png
 
-4. Open Rasterizor and create the Maximum Depth for the 100-years scenario with high manning.
-   The DEPTH.OUT file is located on MR-Design 100 YRS High Manning.
+4. Now, create the Maximum Velocity for the 100-years scenario with high manning.
+   The VELFP.OUT file is located on MR-Design 100 YRS High Manning.
 
 .. image:: ../img/Coastal/comp054.png
 
-7. Utilize the Raster Calculator to identify regions where depth changes are more significant.
+5. Adjust the symbology for both raster layers to exclude velocities below 0.5. Refer to the image below for guidance.
 
-.. image:: ../img/Coastal/comp049.png
+.. image:: ../img/Coastal/comp096.png
 
-8. Fill the data as the image bellow and click OK.
+6. Visually compare both raster layers.
 
-.. image:: ../img/Coastal/comp055.png
+.. image:: ../img/Coastal/comp097.png
 
-.. note:: The expression IF(ABS("Depth MG@1" - "Depth MG High@1") > 0.1, "Depth MG@1" - "Depth MG High@1", -9999)
-          indicates that only difference values greater than absolute 0.1 will be added to the new raster,
-          while values different than that will be assigned as NO DATA (-9999).
-
-9. Once the raster is created, right click on the raster, go to Properties and select the Transparency tab. Set -9999
-   as additional NO DATA value and click apply.
-
-.. image:: ../img/Coastal/comp056.png
-
-10. Go to the symbology tab and fill the data as the following figure.
-
-.. image:: ../img/Coastal/comp057.png
-
-11. The resulting raster will only display areas where the differences are either greater or smaller than 0.1 and -0.1 ft.
-    To enhance visualization, uncheck all other layers except for Google Hybrid.
-
-.. image:: ../img/Coastal/comp058.png
-
-12. Compare the recently generated raster with the WARMER raster.
-
+The most significant differences are found where the Manning Roughness was changed (see the WARMER raster).
 Mangroves act as natural barriers that help reduce the energy of incoming waves and storm surges.
 The dense root systems and complex vegetation structure of mangroves dissipate wave energy,
 which in turn reduces the force of storm surges.
 This protective function can help prevent coastal erosion and minimize flooding in contiguous urban areas.
-Furthermore, the intricate root systems of mangroves slow down the movement of water,
+The intricate root systems of mangroves slow down the velocity of water,
 allowing for better absorption and storage of excess rainwater.
 Increasing the areal distribution of mangrove forests will reduce flood waters entering
 stormwater systems during heavy rainfall events mitigating flooding in downstream urban areas.
 
-.. important:: It is possible to achieve the same visualization using the symbology tab or Rasterizor.
-               However, the goal of this lesson is to demonstrate various methods for exploring FLO-2D results.
+7. Let's use the QGIS Profile Tool to quantify the velocity reduction on the estuary. Add the two velocity rasters
+   to the QGIS Profile Tool and change their colors as the following figure.
+
+.. image:: ../img/Coastal/comp098.png
+
+8. Create a profile plot over the estuary area and compare the results.
+
+.. image:: ../img/Coastal/comp099.png
+
+
+This plot illustrates the impact of elevated Manning roughness in the simulation.
+The green line represents the original Manning velocity,
+while the blue line corresponds to the simulation with increased Manning roughness.
+The plot indicates that raising the Manning roughness results in a decrease in velocity by approximately
+0.20 ft/s in the depicted area of the estuary.
+Similar patterns may be observed in other sections of the estuary within this simulation.
+Feel free to further explore the results within these scenarios.
 
 13. Group the layers generated in this lesson in a group called 'Mangrove'
 
@@ -523,7 +519,30 @@ The red areas represent streets where the maximum depth is greater than 0.25 ft,
 indicating situations where it may be difficult for a vehicle to cross.
 This map clearly shows that the elevated US Highway 41 can be safely used for emergency services and evacuation.
 
-12. Group the layers generated in this lesson in a group called 'US Highway 41'
+12. Let's assess the effect of elevating US Highway 41 on the Maximum Depths.
+    Open Rasterizor and create the Maximum Depth raster for the 100-years scenario.
+    The DEPTH.OUT file is located on the Design Storm 100 Yrs Subd 2.
+
+.. image:: ../img/Coastal/comp093.png
+
+13. Use the Rasterizor Compare Output tool to evaluate the differences.
+
+.. image:: ../img/Coastal/comp094.png
+
+14. Uncheck all layers but Google Hybrid and evaluate the resulting raster.
+    Zoom into the southern portion of the Subdomain 2.
+
+.. image:: ../img/Coastal/comp095.png
+
+In the southern portion of the previous image,
+an increase is evident on the right side of US Highway 41 when the highway is elevated.
+Conversely, in the northern portion, a reduction is observed on the left side of US Highway 41.
+This phenomenon is attributed to the highway acting as a barrier to the flow. Consequently,
+when implementing such an approach, it is crucial to consider the impact on flow patterns.
+The inclusion of culverts or other hydraulic structures may be necessary
+if this effect is not aligned with the design objectives.
+
+15. Group the layers generated in this lesson in a group called 'US Highway 41'
 
 Step 7. Future Scenarios
 ________________________
@@ -671,56 +690,7 @@ Zooming into specific areas reveals a larger flooded area in the 2060 scenario c
 
 12. Group the layers generated in this lesson in a group called 'Flooded Areas' and uncheck it.
 
-Step 8. Channel Analysis
-____________________________
-
-In this step, the channel hydraulics will be evaluated utilizing the Hurricane Irma Scenario.
-
-1. Uncheck all layers and groups except for Google Hybrid.
-
-2. Open MapCrafter and select the Subdomain 1 Hurricane Irma.
-
-3. Under the Site Characteristics group, check the Ground Elevation. Under the Channel group,
-   check Maximum Channel Depth and Maximum Channel Velocity. Click on Create Maps.
-
-.. image:: ../img/Coastal/comp080.png
-
-.. note:: MapCrafter generates a subfolder named "MapCrafter" within the selected Export Folder where the maps will be
-          saved. Users can modify this as needed.
-
-4. Check the FLO-2D MapCrafter group and move it to top. Open the Profile Tool and remove existing layers. Add the Ground Elevation,
-   Maximum Channel Depth, and Maximum Channel velocity to the plot.
-   Select red color for Ground Elevation, blue do Maximum Channel Depth, and green for Maximum Channel Velocity.
-
-.. image:: ../img/Coastal/comp081.png
-
-5. Uncheck the rasters and zoom into the Palm River Blvd Bridge over the Cocohatchee Canal.
-
-6. Create a profile plot on the west-east direction.
-
-.. image:: ../img/Coastal/comp082.png
-
-- The first hydraulic structure (1) exhibits a significant step of approximately 4 ft in the ground elevation (red).
-  This results in a decrease in Maximum Depth (blue) along with an increase in Maximum Velocity (green).
-
-- The second hydraulic structure (2) is a bridge. The bridge columns acts as a constriction
-  in the channel, narrowing the available space for water flow. This constriction leads to an increase in
-  flow velocity. As the flow accelerates through the bridge columns,
-  there is a temporary reduction in the depth of the channel. Beyond the bridge, where the channel
-  expands, the flow velocity decreases, allowing the depth of the channel to recover.
-
-- At the last hydraulic structure (3), the ground elevation exhibits a notable step,
-  indicating a change in the topography. In the approach to this structure,
-  there is a minor reduction in flow velocity accompanied by an increase in channel depth.
-  As the water encounters the hydraulic structure, which involves a constriction in channel width,
-  the flow accelerates, resulting in a decrease in channel depth.
-  This acceleration is consistent with the principles of open-channel hydraulics,
-  where constrictions lead to increased flow velocities. Following the structure,
-  there is a subsequent increase in flow velocity and a corresponding decrease in channel depth,
-  eventually returning to normal flow conditions in the channel
-
-
-Step 9. Hazard Maps
+Step 8. Hazard Maps
 _________________________
 
 FLO-2D MapCrafter Plugin creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
