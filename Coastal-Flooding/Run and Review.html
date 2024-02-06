@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Review Results &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Run and Review';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mapping Results" href="Mapping.html" />
+    <link rel="prev" title="Mitigation Design" href="Mitigation%20Design.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Run and Review.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Review Results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-error-logging-files">Step 1. Error logging files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-general-review-files">Step 2. General review files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-channel-review-files">Step 3. Channel review files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-structure-review-files">Step 4. Structure review files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-maxplot">Step 5. MAXPLOT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-hydrog">Step 6. HYDROG</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-profiles">Step 7. PROFILES</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="review-results">
+<h1>Review Results<a class="headerlink" href="#review-results" title="Link to this heading">#</a></h1>
+<p>Required Data</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.out</p></td>
+<td><p>FLO-2D output files</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.chk</p></td>
+<td><p>Debugging files</p></td>
+</tr>
+<tr class="row-even"><td><p>profiles.exe</p></td>
+<td><p>Channel profile program</p></td>
+</tr>
+<tr class="row-odd"><td><p>hydrog.exe</p></td>
+<td><p>Channel hydrograph program</p></td>
+</tr>
+<tr class="row-even"><td><p>maxplot.exe</p></td>
+<td><p>Simple mapping tool</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location:  \Coastal Training\Project Data\Project Export Folder</p>
+<section id="step-1-error-logging-files">
+<h2>Step 1. Error logging files<a class="headerlink" href="#step-1-error-logging-files" title="Link to this heading">#</a></h2>
+<p>These files are reviewed in NotePad or QGIS.  They log errors, warnings, and general data
+for every simulation. The files are located in the Project Export Folder.</p>
+<ul class="simple">
+<li><p>ERROR.CHK</p></li>
+<li><p>STORM DRAIN ERROR.CHK</p></li>
+<li><p>DEBUG_datetime.OUT</p></li>
+</ul>
+</section>
+<section id="step-2-general-review-files">
+<h2>Step 2. General review files<a class="headerlink" href="#step-2-general-review-files" title="Link to this heading">#</a></h2>
+<p>The general review files give information about the overall grade of a simulation.</p>
+<ul class="simple">
+<li><p>SUMMARY.OUT: Data about the health of a simulation.  Volume conservation, timestep, computation
+time etc.</p></li>
+<li><p>VELTIMEFP.OUT: 1000 highest velocities sorted by velocity.  Use this file to look for surging.</p></li>
+<li><p>TIME.OUT: Finds the grid elements that control the timestep.  Sticky grid elements slow
+the simulation down.  If a grid element has more than 1000 timestep adjustments, it can be modified so that it no longer
+exceeds the stability criteria.  Slope adjustment, roughness adjustment, review total area of the grid element.  If
+grid element is an inflow node, increase spatial tol to 0.1 and roughness to 0.200.</p></li>
+<li><p>SUPER.OUT: List of super critical grid elements.  If a grid element is listed and it is not likely to go super critical
+check the slope and roughness.  Make an elevation adjustment or add a spatial tol = 0.1ft.  If the grid element is
+likely to go super critical, leave it alone.</p></li>
+<li><p>ROUGH.OUT: List of grid elements with n-value adjustments.  Review for any unusual grid element n-value adjustment.
+Review the slope and add a spatial tol = 0.1 if the adjustments are too excessive.</p></li>
+<li><p>EVACUATEDFP.OUT: List of grid elements that dried out over a timestep.  If a grid element dries out during flooding,
+it could indicate instability.  Check for ponding, slope, roughness.  Increase the roughness value, raised depressed
+grid elements, use a spatial tol = 0.1 ft, adjust the slope slightly.</p></li>
+</ul>
+</section>
+<section id="step-3-channel-review-files">
+<h2>Step 3. Channel review files<a class="headerlink" href="#step-3-channel-review-files" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>CHANMAX.OUT: List of maximum channel cross section hydraulics. It is easy to scan this list for
+discharge values that are out of range.  If a discharge is well out of range, it could be instability.  Channel
+instability is corrected by making better transitions between cross sections that are change rapidly.</p></li>
+<li><p>VELTIMEC.OUT: List of top 1000 channel elements sorted by high velocity.  Quick check for
+excessive velocity.  If velocities are excessive, review roughness values, slope, transitional areas.  Look for surging.</p></li>
+<li><p>CHANBANKEL.CHK: This is a list of grid elements that have a difference between the cross section
+elevation and the left or right bank floodplain elevation.  It may indicate that the channel alignment is off or the
+cross section is wrong.  FLO-2D will address bank elevation differences by setting the grid element elevation along
+the bank to the same elevation in the cross section data.  It is only necessary to correct elevations that cause
+a perched channel or a channel that is embedded deep into the grid.</p></li>
+<li><p>CHVOLUME.OUT: A list of channel cross section hydraulics and mass balance.  If the channel
+has a volume error, it will be listed in the last column.</p></li>
+</ul>
+</section>
+<section id="step-4-structure-review-files">
+<h2>Step 4. Structure review files<a class="headerlink" href="#step-4-structure-review-files" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>HYDROSTRUCT.OUT: Quick review of the discharge through a structure.  Look for anomalies like
+high flow rates or surging.  If flow through a structure is surging or evacuating the inlet, check the elevation around
+the inlet to make sure the water can get to the inlet.  Check the rating table or structure data.  It should not be
+allowing more flow than can move through the structure at a given depth.  Add more data to the rating table at the
+lower depths.</p></li>
+<li><p>HYDRAULIC STRUCTURE_RUNTIME WARNINGS.OUT: Warnings of potential error in the HYSTRUC.DAT file.  Follow the instructions
+in the file to correct the warnings if necessary.</p></li>
+<li><p>REVISED_RATING_TABLES.OUT: If flow accelerates through a structure, this file will recommend
+a slight change to the rating table.  It is just a suggestion and only implemented if the table is changed.</p></li>
+</ul>
+</section>
+<section id="step-5-maxplot">
+<h2>Step 5. MAXPLOT<a class="headerlink" href="#step-5-maxplot" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>From QGIS click the drop down button next to the Run FLO-2D button and choose Maxplot.</p></li>
+</ol>
+<img alt="../_images/rev001.png" src="../_images/rev001.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the executable folder to FLO-2D Pro.</p></li>
+<li><p>Set the project folder to the last place where you have a completed run.</p></li>
+</ol>
+<img alt="../_images/rev002.png" src="../_images/rev002.png" />
+<ol class="arabic simple" start="4">
+<li><p>Maxplot can plot many simple maps and it can calculate the difference between two files.</p></li>
+</ol>
+<img alt="../_images/rev003.png" src="../_images/rev003.png" />
+<ol class="arabic simple" start="5">
+<li><p>Choose any plot to see the results.</p></li>
+</ol>
+<img alt="../_images/rev004.png" src="../_images/rev004.png" />
+<ol class="arabic simple" start="6">
+<li><p>Try a few different plots to see how Maxplot works.</p></li>
+<li><p>Maxplot will only plot data from results files like this one.  This is an example of the
+file maximum floodplain depths DEPFP.OUT.</p></li>
+</ol>
+<img alt="../_images/rev005.png" src="../_images/rev005.png" />
+<ol class="arabic simple" start="8">
+<li><p>Close Maxplot.</p></li>
+</ol>
+</section>
+<section id="step-6-hydrog">
+<h2>Step 6. HYDROG<a class="headerlink" href="#step-6-hydrog" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>From QGIS click the drop down button next to the Run FLO-2D button and choose Hydrog.</p></li>
+</ol>
+<img alt="../_images/rev006.png" src="../_images/rev006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the executable folder to FLO-2D Pro.</p></li>
+<li><p>Set the project folder to the last place where you have a completed run.</p></li>
+</ol>
+<img alt="../_images/rev007.png" src="../_images/rev007.png" />
+<ol class="arabic simple" start="4">
+<li><p>Hydrog can plot and computer hydraulics for channel cross sections and floodplain cross sections.</p></li>
+</ol>
+<img alt="../_images/rev008.png" src="../_images/rev008.png" />
+<ol class="arabic simple" start="5">
+<li><p>Select the Plot Channel Cross Sections option.</p></li>
+</ol>
+<img alt="../_images/rev009.png" src="../_images/rev009.png" />
+<ol class="arabic simple" start="6">
+<li><p>Choose the first cross section to plot.</p></li>
+</ol>
+<img alt="../_images/rev010.png" src="../_images/rev010.png" />
+<ol class="arabic simple" start="7">
+<li><p>The hydrograph for that channel cross section is plotted and the upstream downstream buttons are used to
+go to a new cross section.</p></li>
+</ol>
+<img alt="../_images/rev011.png" src="../_images/rev011.png" />
+<ol class="arabic simple" start="8">
+<li><p>Close Hydrog.</p></li>
+</ol>
+</section>
+<section id="step-7-profiles">
+<h2>Step 7. PROFILES<a class="headerlink" href="#step-7-profiles" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>From QGIS click the drop down button next to the Run FLO-2D button and choose Profiles.</p></li>
+</ol>
+<img alt="../_images/rev012.png" src="../_images/rev012.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the executable folder to FLO-2D Pro.</p></li>
+<li><p>Set the project folder to the last place where you have a completed run.</p></li>
+</ol>
+<img alt="../_images/rev013.png" src="../_images/rev013.png" />
+<ol class="arabic simple" start="4">
+<li><p>Profiles is used to review the bed, bank and water surface elevation.  It can also review and edit cross section
+station data, and profiles of channels.</p></li>
+<li><p>Choose the View Profiles Button.</p></li>
+</ol>
+<img alt="../_images/rev014.png" src="../_images/rev014.png" />
+<ol class="arabic simple" start="6">
+<li><p>The plot shows the max water surface for the channel.</p></li>
+</ol>
+<img alt="../_images/rev015.png" src="../_images/rev015.png" />
+<ol class="arabic simple" start="7">
+<li><p>Profiles can also be used to view cross section data.  Click the View Segment Bed Slope and
+then click View Local Reach.  Then click the mouse somewhere near the profile.</p></li>
+</ol>
+<img alt="../_images/viewlocalreach.gif" src="../_images/viewlocalreach.gif" />
+<ol class="arabic simple" start="8">
+<li><p>Click View/Edit Xsection Data button and then click the XSEC button on the new window.</p></li>
+</ol>
+<img alt="../_images/rev016.png" src="../_images/rev016.png" />
+<ol class="arabic simple" start="9">
+<li><p>This opens a cross section editor program.  It is better to use the QGIS channel tools but
+these are still available.</p></li>
+</ol>
+<img alt="../_images/rev017.png" src="../_images/rev017.png" />
+<ol class="arabic simple" start="10">
+<li><p>Close Profiles.</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Mitigation%20Design.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Mitigation Design</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Mapping.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mapping Results</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-error-logging-files">Step 1. Error logging files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-general-review-files">Step 2. General review files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-channel-review-files">Step 3. Channel review files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-structure-review-files">Step 4. Structure review files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-maxplot">Step 5. MAXPLOT</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-hydrog">Step 6. HYDROG</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-profiles">Step 7. PROFILES</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,777 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lesson 1 Part 3 – Hydrology &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Workshops/Lesson 1 Part 3';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson 2 – Channels" href="Lesson%202.html" />
+    <link rel="prev" title="Lesson 1 Part 2 – Project Recovery Methods" href="Lesson%201%20Part%202.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Workshops/Lesson 1 Part 3.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lesson 1 Part 3 – Hydrology</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-data">Required Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-qgis">Step 1: Open QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-lesson-1">Step 2: Load Lesson 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-import-aerial-images">Step 3: Import aerial images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-an-inflow-node">Step 4: Add an inflow node</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-assign-uniform-rainfall">Step 5: Assign uniform rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-apply-depth-area-reduction">Step 6: Apply depth area reduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-assign-infiltration">Step 7: Assign infiltration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-check-control-variables">Step 8: Check control variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-save-the-project">Step 9: Save the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-export-the-flo-2d-data-files">Step 10: Export the FLO-2D data files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-run-the-simulation">Step 11: Run the simulation</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lesson-1-part-3-hydrology">
+<h1>Lesson 1 Part 3 – Hydrology<a class="headerlink" href="#lesson-1-part-3-hydrology" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>This lesson will outline the process for setting up a rainfall runoff model using a 24-hour 100yr storm and rainfall data and spatially variable
+infiltration data.</p>
+<p>If Lesson 1 cannot be loaded, it can be recovered from the Lesson 1 Recovery Files.zip.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DyBcK-Bf8wA" frameborder="0" allowfullscreen></iframe></section>
+<section id="required-data">
+<h2>Required Data<a class="headerlink" href="#required-data" title="Link to this heading">#</a></h2>
+<p>The lesson makes use of rainfall distribution, rain arf, landuse and soil data.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File</strong></p></td>
+<td><p><strong>Content</strong></p></td>
+<td><p><strong>Location</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>SCS 24-Hr Type II</p></td>
+<td><p>Rainfall Distribution Curve</p></td>
+<td><p>QGIS Lesson 1\Hydrology</p></td>
+</tr>
+<tr class="row-odd"><td><p>NOAA Atlas 14</p></td>
+<td><p>Rainfall depth reduction</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Land use.shp</p></td>
+<td><p>Shapefile for land use</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Soil.shp</p></td>
+<td><p>Shapefile for soil type</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Project location C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials</p>
+<p>Check these folders to ensure the data is available before starting the lesson.</p>
+</section>
+<section id="step-1-open-qgis">
+<h2>Step 1: Open QGIS<a class="headerlink" href="#step-1-open-qgis" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Search the start menu or open the QGIS file folder and run the QGIS Desktop program.
+The version should be QGIS 3.22 or later.</p></li>
+</ol>
+<img alt="../_images/Worksh002.png" src="../_images/Worksh002.png" />
+</section>
+<section id="step-2-load-lesson-1">
+<h2>Step 2: Load Lesson 1<a class="headerlink" href="#step-2-load-lesson-1" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the project folder.</p></li>
+<li><p>Drag the file Lesson 1.qgz onto the map space.
+If the file is missing extract it from the zipped recovery file.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1.qgz</p>
+<img alt="../_images/Worksh157.png" src="../_images/Worksh157.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the following image is fuzzy.  Switch to Firefox or load the image in a new tab.</p>
+</div>
+<img alt="../_images/Worksh158.png" src="../_images/Worksh158.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click Yes to load the model.</p></li>
+</ol>
+<img alt="../_images/Worksh031.png" src="../_images/Worksh031.png" />
+</section>
+<section id="step-3-import-aerial-images">
+<h2>Step 3: Import aerial images<a class="headerlink" href="#step-3-import-aerial-images" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Load an aerial image to help locate features.</p></li>
+<li><p>Use Quick Map Services Plugin with the Contributed Pack to load aerial images into the layer.</p></li>
+</ol>
+<img alt="../_images/Worksh032.png" src="../_images/Worksh032.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an internet connection is not available, aerial images are saved to QGIS Lesson 1/Aerials folder.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If QuickMapServices does not have Google maps, go to QuickMapServices/Settings/More Services/Get Contributed
+Pack.</p>
+</div>
+</section>
+<section id="step-4-add-an-inflow-node">
+<h2>Step 4: Add an inflow node<a class="headerlink" href="#step-4-add-an-inflow-node" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Zoom in on the top right corner of the project grid.
+Find the Basin Inlet feature.</p></li>
+</ol>
+<img alt="../_images/Worksh033.png" src="../_images/Worksh033.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Add point BC icon.</p></li>
+</ol>
+<img alt="../_images/Worksh034.png" src="../_images/Worksh034.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the cell indicated on the map in the following image and click OK to close the window.</p></li>
+</ol>
+<img alt="../_images/Worksh035.png" src="../_images/Worksh035.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Save to load the data into the editor.  Click OK to close the message.</p></li>
+</ol>
+<img alt="../_images/Worksh183.png" src="../_images/Worksh183.png" />
+<ol class="arabic simple" start="5">
+<li><p>Updated the BC name and the Time series name.</p></li>
+</ol>
+<img alt="../_images/Worksh036.png" src="../_images/Worksh036.png" />
+<ol class="arabic simple" start="6">
+<li><p>The inflow hydrograph is stored in a text file in the project folder.
+Open this file in Notepad.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Hydrology\GroverBasinInflow 24hr 100yr.txt</p>
+<img alt="../_images/Worksh037.png" src="../_images/Worksh037.png" />
+<img alt="../_images/Worksh038.png" src="../_images/Worksh038.png" />
+<ol class="arabic simple" start="7">
+<li><p>Select the first cell of the FLO-2D Table Editor Table and click Paste.</p></li>
+</ol>
+<img alt="../_images/Worksh039.gif" src="../_images/Worksh039.gif" />
+<ol class="arabic simple" start="8">
+<li><p>Schematize the inflow data into the schema layers.</p></li>
+</ol>
+<img alt="../_images/Worksh040.png" src="../_images/Worksh040.png" />
+<ol class="arabic simple" start="9">
+<li><p>Click OK.</p></li>
+</ol>
+<img alt="../_images/Worksh041.png" src="../_images/Worksh041.png" />
+</section>
+<section id="step-5-assign-uniform-rainfall">
+<h2>Step 5: Assign uniform rainfall<a class="headerlink" href="#step-5-assign-uniform-rainfall" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Collapse all FLO-2D Widgets and Expand the Rain Editor.</p></li>
+</ol>
+<img alt="../_images/Worksh181.png" src="../_images/Worksh181.png" />
+<ol class="arabic simple" start="2">
+<li><p>Check Simulate rainfall and add 3.74 inches to the total inflow box.  Check the Building Rain box.</p></li>
+<li><p>Click the Import icon and load the data file from QGIS Lesson 1 or from the Rainfall Distribution Folder.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Hydrology\SCS 24-Hr Type II.DAT</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Rainfall Distributions\SCS 24-Hr Type II.DAT</p>
+<img alt="../_images/Worksh043.png" src="../_images/Worksh043.png" />
+<img alt="../_images/Worksh160.png" src="../_images/Worksh160.png" />
+<img alt="../_images/Worksh159.png" src="../_images/Worksh159.png" />
+<ol class="arabic simple" start="4">
+<li><p>The rainfall data is imported into the FLO-2D Table Editor.</p></li>
+</ol>
+<img alt="../_images/Worksh161.png" src="../_images/Worksh161.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This assigns uniform rainfall to every grid element.  The rainfall is added to the grid as a depth over time.
+The depth is interpolated linearly for every timestep that falls between data points in the Rainfall time
+series table.</p>
+</div>
+</section>
+<section id="step-6-apply-depth-area-reduction">
+<h2>Step 6: Apply depth area reduction<a class="headerlink" href="#step-6-apply-depth-area-reduction" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This rainfall method is only valid for small watersheds.  If a larger watershed is modeled, a spatially
+variable rainfall method may be applied to different sub-watersheds because each watershed will have a
+different total rainfall value and FLO-2D needs the overall total for the whole watershed.  See local
+hydrology guidelines for more information.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Select the Project Data Group in the Layers List.</p></li>
+</ol>
+<img alt="../_images/Worksh184.png" src="../_images/Worksh184.png" />
+<ol class="arabic simple" start="2">
+<li><p>Import the NOAA Atlas rainfall map.
+Open the project folder and drag the NOAA Atlas 14 24hr 100yr.tif file onto the map space.</p></li>
+</ol>
+<img alt="../_images/Worksh042.png" src="../_images/Worksh042.png" />
+<ol class="arabic simple" start="3">
+<li><p>To perform the depth area reduction calculation, use the Area Reduction calculator.</p></li>
+</ol>
+<img alt="../_images/Worksh044.png" src="../_images/Worksh044.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Area Reduction icon.</p></li>
+</ol>
+<img alt="../_images/Worksh162.png" src="../_images/Worksh162.png" />
+<ol class="arabic simple" start="5">
+<li><p>The raster pixels are typically 1000 by 1000 ft or larger.
+It is not necessary to average the data.
+Fill the dialog box as shown below and click OK to calculate and OK to confirm the data was written to file.</p></li>
+</ol>
+<img alt="../_images/Worksh045.png" src="../_images/Worksh045.png" />
+</section>
+<section id="step-7-assign-infiltration">
+<h2>Step 7: Assign infiltration<a class="headerlink" href="#step-7-assign-infiltration" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Drag the file Land Use.shp and Soil.shp onto the map space.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Hydrology\Land Use.shp</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Hydrology\Soil.shp</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The map will look different every time a layer is loaded.  The colors QGIS uses are random.</p>
+</div>
+<img alt="../_images/Worksh046.png" src="../_images/Worksh046.png" />
+<ol class="arabic simple" start="2">
+<li><p>From the Infiltration Editor click the Global Infiltration icon.</p></li>
+</ol>
+<img alt="../_images/Worksh048.png" src="../_images/Worksh048.png" />
+<ol class="arabic simple" start="3">
+<li><p>Check the Global Green Ampt switch and fill the global variables.
+The Global variables will be used for any cell that is not defined by the F lines in the spatially variable data assigned to INFIL.DAT.</p></li>
+<li><p>Click OK to close.</p></li>
+</ol>
+<img alt="../_images/Worksh049.png" src="../_images/Worksh049.png" />
+<ol class="arabic simple" start="5">
+<li><p>On the Infiltration Editor click Calculate Green-Ampt.</p></li>
+</ol>
+<img alt="../_images/Worksh050.png" src="../_images/Worksh050.png" />
+<ol class="arabic simple" start="6">
+<li><p>Specify the attributes as shown in the following image and click OK.
+The calculation process will take 1 to 5 min for this project.</p></li>
+</ol>
+<img alt="../_images/Worksh051.png" src="../_images/Worksh051.png" />
+</section>
+<section id="step-8-check-control-variables">
+<h2>Step 8: Check control variables<a class="headerlink" href="#step-8-check-control-variables" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Control Parameters Icon.
+Make sure the Rain and Infiltration switches are turned on.
+Click Save to Close.</p></li>
+</ol>
+<img alt="../_images/Worksh017.png" src="../_images/Worksh017.png" />
+<img alt="../_images/Worksh053.png" src="../_images/Worksh053.png" />
+</section>
+<section id="step-9-save-the-project">
+<h2>Step 9: Save the project<a class="headerlink" href="#step-9-save-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the main Save icon on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../_images/Worksh011.png" src="../_images/Worksh011.png" />
+</section>
+<section id="step-10-export-the-flo-2d-data-files">
+<h2>Step 10: Export the FLO-2D data files<a class="headerlink" href="#step-10-export-the-flo-2d-data-files" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the FLO-2D Data Export icon.</p></li>
+</ol>
+<img alt="../_images/Worksh021.png" src="../_images/Worksh021.png" />
+<ol class="arabic simple" start="2">
+<li><p>Review the image and Click OK</p></li>
+</ol>
+<img alt="../_images/Worksh172.png" src="../_images/Worksh172.png" />
+<ol class="arabic simple" start="3">
+<li><p>Navigate to the project folder and click Select Folder.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\QGIS Lesson 1 Export</p>
+<ol class="arabic simple" start="4">
+<li><p>Once the project is exported click OK to close the export message.</p></li>
+</ol>
+<img alt="../_images/Worksh173.png" src="../_images/Worksh173.png" />
+</section>
+<section id="step-11-run-the-simulation">
+<h2>Step 11: Run the simulation<a class="headerlink" href="#step-11-run-the-simulation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click on the Run FLO-2D icon.</p></li>
+</ol>
+<img alt="../_images/Worksh0052.png" src="../_images/Worksh0052.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the FLO-2D Pro folder.
+C:program files (x86)flo-2d pro</p></li>
+<li><p>Set the Project folder.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\Lesson 1 Export</p>
+<img alt="../_images/Worksh023.png" src="../_images/Worksh023.png" />
+<p>This is the final step of this Lesson 1.  Make a Recovery Point/Backup and continue to Lesson 2.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lesson%201%20Part%202.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lesson 1 Part 2 – Project Recovery Methods</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lesson%202.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lesson 2 – Channels</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-data">Required Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-qgis">Step 1: Open QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-lesson-1">Step 2: Load Lesson 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-import-aerial-images">Step 3: Import aerial images</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-add-an-inflow-node">Step 4: Add an inflow node</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-assign-uniform-rainfall">Step 5: Assign uniform rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-apply-depth-area-reduction">Step 6: Apply depth area reduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-assign-infiltration">Step 7: Assign infiltration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-check-control-variables">Step 8: Check control variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-save-the-project">Step 9: Save the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-export-the-flo-2d-data-files">Step 10: Export the FLO-2D data files</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-run-the-simulation">Step 11: Run the simulation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1416 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Comparison of Results &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Comparison of Results';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Mapping Results" href="Mapping.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Comparison of Results.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Comparison of Results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-review-project">Step 1. Create a review project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-plotting-flo-2d-results">Step 2. Plotting FLO-2D results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-advanced-symbology-options">Step 3. Advanced symbology options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-storm-drain">Step 4. Storm Drain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-10-years-scenarios">Compare the 10 years scenarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-20-years-scenarios">Compare the 20 years scenarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-50-years-scenarios">Compare the 50 years scenarios</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-flood-components">Step 5. Flood Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-mitigation-alternatives">Step 6. Mitigation Alternatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mangrove-restoration-and-enhancement">Mangrove Restoration and Enhancement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation-of-us-highway-41">Elevation of US Highway 41</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-future-scenarios">Step 7. Future Scenarios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#low-medium-and-high-sea-level-rise-conditions">2100: Low, Medium, and High Sea Level Rise conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flooded-areas-in-2030-2060">Flooded Areas in 2030, 2060</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-hazard-maps">Step 8. Hazard Maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#houses-hazard">Houses Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-houses-hazard">Mobile Houses Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles-hazard">Vehicles Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adults-hazard">Adults Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#children-hazard">Children Hazard</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="comparison-of-results">
+<h1>Comparison of Results<a class="headerlink" href="#comparison-of-results" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>In this module, the outcomes of various simulations conducted within the ACUNE+ Project are presented and analyzed.
+Discussions and result mapping utilizing Rasterizor, MapCrafter, and many other QGIS tools are also included.</p>
+<p>Required Data</p>
+<p>The required data is in the Scenarios Subfolder.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+<th class="head"><p><strong>Location</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Hurricane Ian</p></td>
+<td><p>Plotting FLO-2D Results\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\Storm Drain Sub 1.shp</p></td>
+<td><p>Storm Drain Sub 1</p></td>
+<td><p>Storm Drain\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Design Storm 10 Yrs</p></td>
+<td><p>Storm Drain\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Design Storm 10 Yrs NO SC</p></td>
+<td><p>Storm Drain\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Design Storm 20 Yrs</p></td>
+<td><p>Storm Drain\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Design Storm 20 Yrs NO SC</p></td>
+<td><p>Storm Drain\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Design Storm 50 Yrs</p></td>
+<td><p>Storm Drain\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Design Storm 50 Yrs NO SC</p></td>
+<td><p>Storm Drain\</p></td>
+</tr>
+<tr class="row-even"><td><p>\Elevation.tif</p></td>
+<td><p>Elevation Raster</p></td>
+<td><p>Flood Components\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>100 Yrs Subd 1 baseline</p></td>
+<td><p>Flood Components\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>100 Yrs Subd 1 NO SS</p></td>
+<td><p>Flood Components\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>100 Yrs Subd 1 NO RAIN</p></td>
+<td><p>Flood Components\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>100 Yrs Subd 1 NO INFILTRATION</p></td>
+<td><p>Flood Components\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\WARMER.tif</p></td>
+<td><p>Warmer raster</p></td>
+<td><p>Mitigation\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>MR-Design 100 YRS</p></td>
+<td><p>Mitigation\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>MR-Design 100 YRS High Manning</p></td>
+<td><p>Mitigation\</p></td>
+</tr>
+<tr class="row-even"><td><p>\Naples Streets.shp</p></td>
+<td><p>Naples Streets</p></td>
+<td><p>Mitigation\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>Design Storm 100 Yrs Subd 2 Elev US 41</p></td>
+<td><p>Mitigation\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>F2100_10AEP_High836SLR</p></td>
+<td><p>Future Scenarios\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>F2100_10AEP_Low128SLR</p></td>
+<td><p>Future Scenarios\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>F2100_10AEP_Med377SLR</p></td>
+<td><p>Future Scenarios\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>F2060_10AEP_Med177SLR</p></td>
+<td><p>Future Scenarios\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>F2030_10AEP_Med072SLR</p></td>
+<td><p>Future Scenarios\</p></td>
+</tr>
+<tr class="row-odd"><td><p>\*.OUT</p></td>
+<td><p>Subdomain 1 Hurricane Irma</p></td>
+<td><p>Channel Analysis\</p></td>
+</tr>
+<tr class="row-even"><td><p>\*.OUT</p></td>
+<td><p>100 Yrs Subd 1 Baseline</p></td>
+<td><p>Hazard Maps\</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location: \Coastal 2D Training\Scenarios</p>
+<section id="step-1-create-a-review-project">
+<h2>Step 1. Create a review project<a class="headerlink" href="#step-1-create-a-review-project" title="Link to this heading">#</a></h2>
+<p>Given the complexity of layers in the QGIS FLO-2D Project and the necessity for scenario comparisons,
+it is more effective to maintain a distinct QGIS project specifically for FLO-2D result comparisons.</p>
+<ol class="arabic simple">
+<li><p>Open QGIS and create a new project.</p></li>
+</ol>
+<img alt="../_images/comp001.png" src="../_images/comp001.png" />
+<ol class="arabic simple" start="2">
+<li><p>Locate the Current CRS button on the bottom right of QGIS.
+Set the project CRS to Florida East HARN USft.
+Filter the list with an EPSG code: 2881.
+Select EPSG: 2881 and click OK.</p></li>
+</ol>
+<img alt="../_images/comp002.png" src="../_images/comp002.png" />
+<img alt="../_images/comp003.png" src="../_images/comp003.png" />
+<ol class="arabic simple" start="3">
+<li><p>Save it as Comparison Project</p></li>
+</ol>
+<img alt="../_images/comp004.png" src="../_images/comp004.png" />
+<img alt="../_images/comp005.png" src="../_images/comp005.png" />
+<ol class="arabic simple" start="4">
+<li><p>Create a folder under the Coastal 2D Training directory called Comparison of Results.</p></li>
+</ol>
+</section>
+<section id="step-2-plotting-flo-2d-results">
+<h2>Step 2. Plotting FLO-2D results<a class="headerlink" href="#step-2-plotting-flo-2d-results" title="Link to this heading">#</a></h2>
+<p>The FLO-2D MapCrafter Plugin facilitates the visualization and plotting of various FLO-2D results within the QGIS environment.
+This plugin creates detailed plots and layouts directly on the QGIS Map Canvas,
+providing a quick and efficient way to analyze and present FLO-2D simulation outcomes.</p>
+<ol class="arabic simple">
+<li><p>Open MapCrafter.</p></li>
+</ol>
+<img alt="../_images/haz006.png" src="../_images/haz006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Choose the ‘Subdomain 1 Hurricane Ian’ scenario as the FLO-2D Export Folder.
+This scenario is located under the Plotting FLO-2D Results. Under the Basic group,
+select Maximum Depth and click on Create Maps.</p></li>
+</ol>
+<img alt="../_images/comp083.png" src="../_images/comp083.png" />
+<ol class="arabic simple" start="3">
+<li><p>Use Quick Map Services to load an aerial image onto the map.</p></li>
+</ol>
+<img alt="../_images/Lesson005.png" src="../_images/Lesson005.png" />
+<img alt="../_images/chan003.png" src="../_images/chan003.png" />
+<ol class="arabic simple" start="4">
+<li><p>Check the MAXIMUM_DEPTH raster.</p></li>
+</ol>
+<img alt="../_images/comp092.png" src="../_images/comp092.png" />
+<ol class="arabic simple" start="5">
+<li><p>Open MapCrafter again and select the FLO-2D Layouts tab. Fill the data as the image below and click on Open Selected Layout.</p></li>
+</ol>
+<img alt="../_images/comp084.png" src="../_images/comp084.png" />
+<ol class="arabic simple" start="6">
+<li><p>Select the map and adjust the grid by removing the 1 km grid and enabling the 5 km grid.</p></li>
+</ol>
+<img alt="../_images/comp085.png" src="../_images/comp085.png" />
+<img alt="../_images/comp086.png" src="../_images/comp086.png" />
+<ol class="arabic simple" start="7">
+<li><p>Add a legend to the right side of the Map and adjust the scale to 1:80,000.</p></li>
+</ol>
+<img alt="../_images/comp087.png" src="../_images/comp087.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Users can further customize and enhance the map using various features available in QGIS.
+However, exploring these advanced features for creating high-quality maps goes beyond the scope of this lesson.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Click on Export to PDF and save to the Comparison of Results Folder.</p></li>
+</ol>
+<img alt="../_images/comp088.png" src="../_images/comp088.png" />
+<img alt="../_images/comp089.png" src="../_images/comp089.png" />
+<img alt="../_images/comp090.png" src="../_images/comp090.png" />
+<ol class="arabic simple" start="9">
+<li><p>Open the pdf with your preferred pdf reader.</p></li>
+</ol>
+<img alt="../_images/comp091.png" src="../_images/comp091.png" />
+</section>
+<section id="step-3-advanced-symbology-options">
+<h2>Step 3. Advanced symbology options<a class="headerlink" href="#step-3-advanced-symbology-options" title="Link to this heading">#</a></h2>
+<p>Let’s explore advanced symbology options available in QGIS.</p>
+<ol class="arabic simple">
+<li><p>Select the previously generated MAXIMUM_DEPTH raster.</p></li>
+</ol>
+<img alt="../_images/comp039.png" src="../_images/comp039.png" />
+<ol class="arabic simple" start="2">
+<li><p>Right click on the raster, go to properties, select the symbology tab. Set the symbology exactly as the following
+image.</p></li>
+</ol>
+<img alt="../_images/comp040.png" src="../_images/comp040.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This symbology categorizes the depth intervals into user-defined classes.
+Feel free to modify these classes as per your requirements.</p>
+</div>
+<img alt="../_images/comp041.png" src="../_images/comp041.png" />
+<ol class="arabic simple" start="3">
+<li><p>A useful symbology involves removing depth values less than 0.5 ft. On the symbology tab, add another class using
+the green plus button. Set the value to 0.5. Double click on the color, set it to white and full transparent.</p></li>
+</ol>
+<img alt="../_images/comp042.png" src="../_images/comp042.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Even with transparency, the selected color will be used in the interpolation.
+Therefore, choose a meaningful color to represent the cut-off depth values.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Navigate to the Transparency tab and apply a 50% transparency.
+This will enable a clearer visualization of the aerial image beneath the raster.</p></li>
+</ol>
+<img alt="../_images/comp043.png" src="../_images/comp043.png" />
+<img alt="../_images/comp044.png" src="../_images/comp044.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Changing the symbology does not alter the raster results;
+it only affects the way they are visually presented.
+If a user wishes to modify the actual results in a raster (such as removing lower or higher outliers),
+the Raster Calculator must be used.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Collapse the FLO-2D MapCrafter group and uncheck it.</p></li>
+</ol>
+</section>
+<section id="step-4-storm-drain">
+<h2>Step 4. Storm Drain<a class="headerlink" href="#step-4-storm-drain" title="Link to this heading">#</a></h2>
+<p>In this step, we’ll explore the distinctions between models with and without the storm drain engine,
+taking into account different return periods. Our investigation will encompass maximum depth (DEPTH.OUT),
+maximum velocity (VELFP.OUT), and time to peak (TIMETOPEAK.OUT) results. The FLO-2D Rasterizor Plugin will
+be utilized to assess the differences.</p>
+<ol class="arabic simple">
+<li><p>Drag and drop the Storm Drain layer into the project and move it to the top.</p></li>
+</ol>
+<img alt="../_images/comp010.png" src="../_images/comp010.png" />
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Increase the line thickness in the symbology settings to enhance the visibility of the storm drains.</p>
+</div>
+<section id="compare-the-10-years-scenarios">
+<h3>Compare the 10 years scenarios<a class="headerlink" href="#compare-the-10-years-scenarios" title="Link to this heading">#</a></h3>
+<p>Let’s use the 10-year return period scenario to compare depth changes between the two simulations.</p>
+<ol class="arabic simple">
+<li><p>Open Rasterizor and create the Depth Max for the 10-years scenario.
+The DEPTH.OUT file is located on the Subdomain 1 Design Storm 10 Yrs folder.</p></li>
+</ol>
+<img alt="../_images/comp006.png" src="../_images/comp006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open Rasterizor and create the Depth Max for the 10-years scenario without the storm drain.
+The DEPTH.OUT file is located on the Subdomain 1 Design Storm 10 Yrs NO SD folder.</p></li>
+</ol>
+<img alt="../_images/comp007.png" src="../_images/comp007.png" />
+<p>Differences between the two rasters can be visually identified.
+However, accurately visualizing and quantifying the significance of these differences can be challenging.
+To address this, let’s employ the Rasterizor comparison tool to achieve a clearer visualization of these differences</p>
+<ol class="arabic simple" start="3">
+<li><p>Click on the Rasterizor Compare Outputs.
+Select the two raster previously generated and fill the data as follows.</p></li>
+</ol>
+<img alt="../_images/comp008.png" src="../_images/comp008.png" />
+<ol class="arabic simple" start="4">
+<li><p>Drag the storm drain layer on top of the comparison raster and uncheck the Depth rasters.</p></li>
+</ol>
+<img alt="../_images/comp012.png" src="../_images/comp012.png" />
+<p>This tool computes the difference between raster values, presenting the results using a color ramp ranging from
+blue (indicating negative differences) to red (highlighting positive differences).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The order of input rasters influences how the resulting comparison raster maps the differences.
+Rasterizor subtracts the second raster from the first, indicating that negative differences (blues)
+represent lower values on the first raster, while positive differences
+(reds) signify higher values on the first raster.</p>
+</div>
+<p>The northern section of the project exhibits a less dense storm drain system, resulting in fewer differences.
+Conversely, the southern portion displays a denser storm drain system and a higher prevalence of blues and reds,
+indicating greater disparities between the two simulations.</p>
+<p>The blue pixels represent a reduction in depth when the storm drain was added to the project area,
+while red pixels indicate an increase in depth. In the zoomed area,
+it is evident that the storm drain system effectively removed water from streets (blue areas)
+and discharged the collected water into a detention pond (red areas) elevating its water level.</p>
+<ol class="arabic simple" start="5">
+<li><p>Create a group called ‘10 Years’ on the QGIS Layer Tree to organize the results.
+Select the three rasters, Right Click, Group Selected, and name it 10 Years.</p></li>
+</ol>
+<img alt="../_images/comp014.png" src="../_images/comp014.png" />
+<ol class="arabic simple" start="6">
+<li><p>Uncheck the 10 Years group.</p></li>
+</ol>
+</section>
+<section id="compare-the-20-years-scenarios">
+<h3>Compare the 20 years scenarios<a class="headerlink" href="#compare-the-20-years-scenarios" title="Link to this heading">#</a></h3>
+<p>Let’s use the 20-years to compare velocity changes between the two simulations.</p>
+<ol class="arabic simple">
+<li><p>Open Rasterizor and create the Max Velocity for the 20-years scenario.
+The VELFP.OUT file is located on the Subdomain 1 Design Storm 20 Yrs folder.</p></li>
+</ol>
+<img alt="../_images/comp016.png" src="../_images/comp016.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open Rasterizor and create the Max Velocity for the 20-years scenario without the storm drain.
+The VELFP.OUT file is located on the Subdomain 1 Design Storm 20 Yrs NO SD folder.</p></li>
+</ol>
+<img alt="../_images/comp017.png" src="../_images/comp017.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click on the Rasterizor Compare Outputs tab.
+Select the two raster previously generated and fill the data as follows.</p></li>
+</ol>
+<img alt="../_images/comp018.png" src="../_images/comp018.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ensure to reorganize the layers, placing the Storm Drain layer on top for better visualization.</p>
+</div>
+<p>It is noticeable that near the storm drain inlets, more red pixels are present.
+This is attributed to the accelerated flow entering the storm drain system,
+exhibiting higher velocity compared to the simulation without the storm drain system.</p>
+<img alt="../_images/comp019.png" src="../_images/comp019.png" />
+<ol class="arabic simple" start="4">
+<li><p>Group the 20-years rasters into their own group.</p></li>
+</ol>
+</section>
+<section id="compare-the-50-years-scenarios">
+<h3>Compare the 50 years scenarios<a class="headerlink" href="#compare-the-50-years-scenarios" title="Link to this heading">#</a></h3>
+<p>Let’s use another type of
+result for the 50-years scenario: Time to Peak. This variable represents the
+time of occurrence of the maximum depth.</p>
+<ol class="arabic simple">
+<li><p>Open Rasterizor and create the Time to Peak for the 50-years scenario.
+The TIMETOPEAK.OUT file is located on the Subdomain 1 Design Storm 50 Yrs folder.</p></li>
+</ol>
+<img alt="../_images/comp020.png" src="../_images/comp020.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open Rasterizor and create the Time to Peak for the 50-years scenario without the storm drain.
+The TIMETOPEAK.OUT file is located on the Subdomain 1 Design Storm 50 Yrs NO SD folder.</p></li>
+</ol>
+<img alt="../_images/comp021.png" src="../_images/comp021.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click on the Rasterizor Compare Outputs.
+Select the two raster previously generated and fill the data as follows.</p></li>
+</ol>
+<img alt="../_images/comp022.png" src="../_images/comp022.png" />
+<p>The blue areas represent a reduction on the time to peak. This is because the storm drain quickly drains the water
+from the streets. Without a storm drain, water may need to flow overland or through natural drainage paths,
+taking longer to reach the peak flow. The storm drain system efficiently removes water,
+reducing the time it takes for the flow to reach its maximum.</p>
+<img alt="../_images/comp023.png" src="../_images/comp023.png" />
+<ol class="arabic simple" start="4">
+<li><p>Group the 50-years rasters into their own group.</p></li>
+</ol>
+</section>
+</section>
+<section id="step-5-flood-components">
+<h2>Step 5. Flood Components<a class="headerlink" href="#step-5-flood-components" title="Link to this heading">#</a></h2>
+<p>Each Flood Component simulated using FLO-2D has a substantial impact on the flood depth.
+It is essential to note that compound flood is a non-linear process, implying that one process will influence the other.
+In this step, the QGIS Profile Tool Plugin will be used to evaluate the reduction in the flood depth when each
+flood component is deactivated. The scenarios analyzed in this step are:</p>
+<ul class="simple">
+<li><p>Baseline scenario: All Flood Components activated</p></li>
+<li><p>No SS: Storm Surge deactivated</p></li>
+<li><p>No Infiltration: Infiltration deactivated</p></li>
+<li><p>No Rain: Rainfall deactivated</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All of these scenarios are based on the future year 2040 considering high rainfall.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Uncheck all layers but the Google Hybrid and drag the Subdomain 1 Elevation raster to the project.</p></li>
+</ol>
+<img alt="../_images/comp027.png" src="../_images/comp027.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open Rasterizor and create the Maximum WSE for the 100-years scenario considering all flood drivers.
+The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 Baseline.</p></li>
+</ol>
+<img alt="../_images/comp034.png" src="../_images/comp034.png" />
+<ol class="arabic simple" start="3">
+<li><p>Create the Maximum WSE for the 100-years scenario without considering Storm Surge.
+The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 NO SS.</p></li>
+</ol>
+<img alt="../_images/comp035.png" src="../_images/comp035.png" />
+<ol class="arabic simple" start="4">
+<li><p>Create the Maximum WSE for the 100-years scenario without considering Rainfall.
+The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 NO RAIN.</p></li>
+</ol>
+<img alt="../_images/comp036.png" src="../_images/comp036.png" />
+<ol class="arabic simple" start="5">
+<li><p>Create the Maximum WSE for the 100-years scenario without considering Infiltration.
+The MAXWSELEV.OUT file is located on the 100 Yrs Subd 1 NO INFILTRATION.</p></li>
+</ol>
+<img alt="../_images/comp037.png" src="../_images/comp037.png" />
+<ol class="arabic simple" start="6">
+<li><p>Right click on the Elevation Raster and click on Zoom to Layer.</p></li>
+<li><p>Select the Profile Tool on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../_images/comp030.png" src="../_images/comp030.png" />
+<ol class="arabic simple" start="8">
+<li><p>Select the Subdomain 1 Elevation and click on add layer on the Profile Tool. Repeat this process for
+WSE baseline, WSE NO SS, WSE NO RAINFALL, and WSE NO INFILTRATION.</p></li>
+</ol>
+<img alt="../_images/comp031.png" src="../_images/comp031.png" />
+<ol class="arabic simple" start="9">
+<li><p>Change the Layers colors by double clicking on the red square at the left of the Layer’s name.</p></li>
+</ol>
+<ul class="simple">
+<li><p>WSE baseline: Dark blue</p></li>
+<li><p>WSE NO SS: Purple</p></li>
+<li><p>WSE NO RAINFALL: Black</p></li>
+<li><p>WSE NO INFILTRATION: Dark Green</p></li>
+<li><p>Elevation: Red</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Use dark colors for a better visualization.</p>
+</div>
+<img alt="../_images/comp032.png" src="../_images/comp032.png" />
+<ol class="arabic simple" start="10">
+<li><p>Uncheck the recently created WSE baseline, WSE NO SS, WSE NO RAINFALL, and WSE NO INFILTRATION.</p></li>
+<li><p>Zoom into the southwest of the project domain and create a profile line (west-east) on the floodplain as the following image.</p></li>
+</ol>
+<img alt="../_images/comp038.png" src="../_images/comp038.png" />
+<img alt="../_images/comp033.png" src="../_images/comp033.png" />
+<p>The QGIS Profile Tool shows raster pixel values along a designated line, serving as an effective means for comparing
+diverse data types. Examining the elevation data (red line), distinct features emerge. An elevated region near the ocean
+is followed by the estuary and another elevated area near the buildings. In the baseline scenario,
+accounting for all flood drivers, a water surface elevation (WSE) of approximately 7.82 ft is predicted.
+When infiltration is deactivated, the WSE remains consistent in this region. Upon deactivating rainfall,
+a reduction of approximately 0.4 ft in WSE is observed compared to the baseline scenario.
+The most substantial difference occurs when the Storm Surge is deactivated, resulting in a notable reduction of 5.53 ft.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Utilize the QGIS Profile Tool in various sections of the project domain to evaluate
+the variations across different scenarios.</p>
+</div>
+<ol class="arabic simple" start="12">
+<li><p>Group the layers (except Subdomain 1 Elevation) into their own group called ‘100 years’ an uncheck this group.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The compound flood is a nonlinear process. This means that each compound,
+when activated, will influence the other compounds.
+This lesson is for demonstration purposes to showcase the impact of each flood driver</p>
+</div>
+</section>
+<section id="step-6-mitigation-alternatives">
+<h2>Step 6. Mitigation Alternatives<a class="headerlink" href="#step-6-mitigation-alternatives" title="Link to this heading">#</a></h2>
+<p>In this lesson, mitigation scenarios will be explored using the QGIS Raster Calculator.</p>
+<section id="mangrove-restoration-and-enhancement">
+<h3>Mangrove Restoration and Enhancement<a class="headerlink" href="#mangrove-restoration-and-enhancement" title="Link to this heading">#</a></h3>
+<p>One mitigation scenario is to consider mangrove restoration and enhancement.
+Mangrove forest, specifically the roots, trunks and canopy,
+increases roughness and decreases the storm surge flooding and wave propagation.
+This scenario is based on the WARMER-mangrove model
+(<a class="reference external" href="https://www.usgs.gov/data/elevation-and-mangrove-cover-projections-under-sea-level-rise-scenarios-jn-ding-darling">Kevin J Buffington, 2023</a>).
+A higher vegetation density and extension is simulated increasing the Manning Roughness.</p>
+<ol class="arabic simple">
+<li><p>Uncheck all layers and groups except for Google Hybrid.</p></li>
+<li><p>Drag the WARMER raster to the map canvas. Each pixel value represents a land use pattern:</p></li>
+</ol>
+<ul class="simple">
+<li><p>1: Water bodies</p></li>
+<li><p>2: Mangrove</p></li>
+<li><p>3: Salt Marsh</p></li>
+<li><p>4: Fresh Marsh</p></li>
+<li><p>5: Cypress</p></li>
+<li><p>6: Upland Forest</p></li>
+</ul>
+<img alt="../_images/comp059.png" src="../_images/comp059.png" />
+<ol class="arabic simple" start="3">
+<li><p>Open Rasterizor and create the Maximum Velocity for the 100-years scenario with original manning.
+The VELFP.OUT file is located on MR-Design 100 YRS.</p></li>
+</ol>
+<img alt="../_images/comp053.png" src="../_images/comp053.png" />
+<ol class="arabic simple" start="4">
+<li><p>Now, create the Maximum Velocity for the 100-years scenario with high manning.
+The VELFP.OUT file is located on MR-Design 100 YRS High Manning.</p></li>
+</ol>
+<img alt="../_images/comp054.png" src="../_images/comp054.png" />
+<ol class="arabic simple" start="5">
+<li><p>Adjust the symbology for both raster layers to exclude velocities below 0.5. Refer to the image below for guidance.</p></li>
+</ol>
+<img alt="../_images/comp096.png" src="../_images/comp096.png" />
+<ol class="arabic simple" start="6">
+<li><p>Visually compare both raster layers.</p></li>
+</ol>
+<img alt="../_images/comp097.png" src="../_images/comp097.png" />
+<p>The most significant differences are found where the Manning Roughness was changed (see the WARMER raster).
+Mangroves act as natural barriers that help reduce the energy of incoming waves and storm surges.
+The dense root systems and complex vegetation structure of mangroves dissipate wave energy,
+which in turn reduces the force of storm surges.
+This protective function can help prevent coastal erosion and minimize flooding in contiguous urban areas.
+The intricate root systems of mangroves slow down the velocity of water,
+allowing for better absorption and storage of excess rainwater.
+Increasing the areal distribution of mangrove forests will reduce flood waters entering
+stormwater systems during heavy rainfall events mitigating flooding in downstream urban areas.</p>
+<ol class="arabic simple" start="7">
+<li><p>Let’s use the QGIS Profile Tool to quantify the velocity reduction on the estuary. Add the two velocity rasters
+to the QGIS Profile Tool and change their colors as the following figure.</p></li>
+</ol>
+<img alt="../_images/comp098.png" src="../_images/comp098.png" />
+<ol class="arabic simple" start="8">
+<li><p>Create a profile plot over the estuary area and compare the results.</p></li>
+</ol>
+<img alt="../_images/comp099.png" src="../_images/comp099.png" />
+<p>This plot illustrates the impact of elevated Manning roughness in the simulation.
+The green line represents the original Manning velocity,
+while the blue line corresponds to the simulation with increased Manning roughness.
+The plot indicates that raising the Manning roughness results in a decrease in velocity by approximately
+0.20 ft/s in the depicted area of the estuary.
+Similar patterns may be observed in other sections of the estuary within this simulation.
+Feel free to further explore the results within these scenarios.</p>
+<ol class="arabic simple" start="13">
+<li><p>Group the layers generated in this lesson in a group called ‘Mangrove’</p></li>
+</ol>
+</section>
+<section id="elevation-of-us-highway-41">
+<h3>Elevation of US Highway 41<a class="headerlink" href="#elevation-of-us-highway-41" title="Link to this heading">#</a></h3>
+<p>Another mitigation scenario is the elevation of US Highway 41 by 3 ft.
+This modification allows the highway to be safely used for emergency services and evacuation.
+Elevating a highway can serve as a protective measure, preventing flooding in crucial areas such as hospitals and other
+emergency services. Additionally, the approach demonstrated in this section could be applied to identify other roads
+or highways with sufficient elevation to avoid flooding and, consequently, be utilized for emergency services and
+evacuation.</p>
+<ol class="arabic simple">
+<li><p>Uncheck all layers and groups except for Google Hybrid.</p></li>
+<li><p>Open Rasterizor and create the Maximum Depth for the 100-years scenario considering an elevation of the US Highway 41.
+The DEPTH.OUT file is located on the Design Storm 100 Yrs Subd 2 Elev US 41 Raise.</p></li>
+</ol>
+<img alt="../_images/comp045.png" src="../_images/comp045.png" />
+<ol class="arabic simple" start="3">
+<li><p>Right click on the Depth Elev US 41 and click on Zoom to Layer(s).</p></li>
+<li><p>Drag the Naples Streets into the map.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This shapefile does not encompass all the roads within the project domain.
+However, it contains sufficient street data to fulfill the objectives of this lesson.</p>
+</div>
+<img alt="../_images/comp046.png" src="../_images/comp046.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>To evaluate only the depth over the streets,
+it’s necessary to clip the depth raster using the streets layers as the clipping mask.
+This process will help in visualizing the depth specifically over the streets and facilitate subsequent calculations.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Clip the Depth Elev US 41 raster with the Naples Streets shapefile. Select the Clip Raster by Mask layer function.</p></li>
+</ol>
+<img alt="../_images/comp047.png" src="../_images/comp047.png" />
+<ol class="arabic simple" start="6">
+<li><p>Fill the data as the image bellow and click Run.</p></li>
+</ol>
+<img alt="../_images/comp048.png" src="../_images/comp048.png" />
+<ol class="arabic simple" start="7">
+<li><p>Uncheck the Naples Streets layer.</p></li>
+<li><p>Utilize the Raster Calculator to identify regions on the streets where the water depth is less than 0.25 ft.</p></li>
+</ol>
+<img alt="../_images/comp049.png" src="../_images/comp049.png" />
+<ol class="arabic simple" start="9">
+<li><p>Fill the data as the image bellow and click OK.</p></li>
+</ol>
+<img alt="../_images/comp050.png" src="../_images/comp050.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The expression used - IF(“Depth Elev US 41 Clipped&#64;1” &lt; 0.25, 1, 0) - evaluates all pixels with a
+depth less than 0.25 ft and sets these pixels to 1. All other pixels are set to 0.</p>
+</div>
+<ol class="arabic simple" start="10">
+<li><p>Right click on the newly created raster and click on properties. Select the symbology tab and fill the symbology as
+follows.</p></li>
+</ol>
+<img alt="../_images/comp051.png" src="../_images/comp051.png" />
+<ol class="arabic simple" start="11">
+<li><p>Analyze the Depth Elev US 41 Streets.</p></li>
+</ol>
+<img alt="../_images/comp052.png" src="../_images/comp052.png" />
+<p>In this scenario, the US Highway 41 was elevated by 3 ft.
+The green areas on the streets represent a maximum depth less than 0.25 ft,
+indicating situations where any vehicle can safely cross.
+The red areas represent streets where the maximum depth is greater than 0.25 ft,
+indicating situations where it may be difficult for a vehicle to cross.
+This map clearly shows that the elevated US Highway 41 can be safely used for emergency services and evacuation.</p>
+<ol class="arabic simple" start="12">
+<li><p>Let’s assess the effect of elevating US Highway 41 on the Maximum Depths.
+Open Rasterizor and create the Maximum Depth raster for the 100-years scenario.
+The DEPTH.OUT file is located on the Design Storm 100 Yrs Subd 2.</p></li>
+</ol>
+<img alt="../_images/comp093.png" src="../_images/comp093.png" />
+<ol class="arabic simple" start="13">
+<li><p>Use the Rasterizor Compare Output tool to evaluate the differences.</p></li>
+</ol>
+<img alt="../_images/comp094.png" src="../_images/comp094.png" />
+<ol class="arabic simple" start="14">
+<li><p>Uncheck all layers but Google Hybrid and evaluate the resulting raster.
+Zoom into the southern portion of the Subdomain 2.</p></li>
+</ol>
+<img alt="../_images/comp095.png" src="../_images/comp095.png" />
+<p>In the southern portion of the previous image,
+an increase is evident on the right side of US Highway 41 when the highway is elevated.
+Conversely, in the northern portion, a reduction is observed on the left side of US Highway 41.
+This phenomenon is attributed to the highway acting as a barrier to the flow. Consequently,
+when implementing such an approach, it is crucial to consider the impact on flow patterns.
+The inclusion of culverts or other hydraulic structures may be necessary
+if this effect is not aligned with the design objectives.</p>
+<ol class="arabic simple" start="15">
+<li><p>Group the layers generated in this lesson in a group called ‘US Highway 41’</p></li>
+</ol>
+</section>
+</section>
+<section id="step-7-future-scenarios">
+<h2>Step 7. Future Scenarios<a class="headerlink" href="#step-7-future-scenarios" title="Link to this heading">#</a></h2>
+<p>In this step, the water level predictions in future scenarios will be evaluated.</p>
+<section id="low-medium-and-high-sea-level-rise-conditions">
+<h3>2100: Low, Medium, and High Sea Level Rise conditions<a class="headerlink" href="#low-medium-and-high-sea-level-rise-conditions" title="Link to this heading">#</a></h3>
+<p>The sea water level predictions for 2100 consider three scenarios: high, medium, and low.
+In this section, the differences between these three scenarios will be assessed. A 100 years return period is used in
+the simulations. The three sea water level values are:</p>
+<ul class="simple">
+<li><p>Low: 1.28 ft</p></li>
+<li><p>Medium: 3.77 ft</p></li>
+<li><p>High: 8.36 ft</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Open Rasterizor and create the Maximum Water Surface Elevation for the three sea water levels rise considering
+the 100-years scenario. The MAXWSELEV.OUT files are located on the F2100_10AEP_High836SLR, F2100_10AEP_Low128SLR, and
+F2100_10AEP_Med377SLR.</p></li>
+</ol>
+<img alt="../_images/comp060.png" src="../_images/comp060.png" />
+<ol class="arabic simple" start="2">
+<li><p>Check the Subdomain 1 Elevation used on the Flood Components section and drag it to the top of the layer tree.</p></li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you lose the Subdomain 1 Elevation layer, simply add it again to the map canvas by dragging and dropping it.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Let’s use the QGIS Profile Tool Plugin again to compare the differences between these three scenarios. Remove any layer
+that was previously added to the QGIS Profile Tool Plugin.</p></li>
+</ol>
+<img alt="../_images/comp030.png" src="../_images/comp030.png" />
+<ol class="arabic simple" start="4">
+<li><p>Select the Subdomain 1 Elevation and click on add layer on the Profile Tool. Repeat this process for
+F2100_10AEP_High836SLR, F2100_10AEP_Low128SLR, and F2100_10AEP_Med377SLR</p></li>
+<li><p>Change the Layers colors by double clicking on the red square at the left of the Layer’s name.</p></li>
+</ol>
+<ul class="simple">
+<li><p>F2100_10AEP_High836SLR: Red</p></li>
+<li><p>F2100_10AEP_Low128SLR: Green</p></li>
+<li><p>F2100_10AEP_Med377SLR: Orange</p></li>
+<li><p>Subdomain 1 Elevation: Black</p></li>
+</ul>
+<img alt="../_images/comp061.png" src="../_images/comp061.png" />
+<ol class="arabic simple" start="6">
+<li><p>Create a profile plot of the three scenarios over the 111th Avenue North (Immokalee Rd) from west to east.</p></li>
+</ol>
+<img alt="../_images/comp062.png" src="../_images/comp062.png" />
+<p>In this plot, it is evident that the bridge is completely submerged in the High Sea Level Rise scenario but
+is not overtopped in the other scenarios (see the area under the green square).
+This plot also illustrates that the impact of the storm surge ceases near Livingston Rd.</p>
+<ol class="arabic simple" start="7">
+<li><p>Create another plot on the Bonita Beach Rd SW.</p></li>
+</ol>
+<img alt="../_images/comp063.png" src="../_images/comp063.png" />
+<p>The bridge is also overtopped in the High Sea Level simulation (green square)
+but not in the medium and low sea water level scenarios.
+Another notable observation is that the Low Sea Level Rise flooding recedes just after West Av,
+while the other scenarios still predict flooding in this area.</p>
+<ol class="arabic simple" start="8">
+<li><p>Create a plot over the Bay Colony Dr.</p></li>
+</ol>
+<img alt="../_images/comp064.png" src="../_images/comp064.png" />
+<p>This plot is oriented in the north-south direction and clearly indicates that the entire road is flooded.
+All three scenarios predict flooding, with the low sea level rise anticipating a water depth of around 11 ft,
+while the high sea level rise forecasts a water depth of approximately 21.4 ft.</p>
+<ol class="arabic simple" start="9">
+<li><p>Group the layers generated in this lesson in a group called ‘Sea Level Rise’ and uncheck the group.</p></li>
+</ol>
+</section>
+<section id="flooded-areas-in-2030-2060">
+<h3>Flooded Areas in 2030, 2060<a class="headerlink" href="#flooded-areas-in-2030-2060" title="Link to this heading">#</a></h3>
+<p>In this section, the areas flooded by more than 1 ft will be mapped and calculated to estimate the
+area percentage increment between the 2030 and 2060 scenarios.</p>
+<ol class="arabic simple">
+<li><p>Open Rasterizor and create the Maximum Depth for the 2030 scenario.
+The DEPTH.OUT file is located on the F2030_10AEP_Med072SLR.</p></li>
+</ol>
+<img alt="../_images/comp065.png" src="../_images/comp065.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open the Raster Calculator and add the following expression: IF(“Depth 2030&#64;1” &gt;= 1, “Depth 2030&#64;1”, -9999).</p></li>
+</ol>
+<img alt="../_images/comp071.png" src="../_images/comp071.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This raster contains only depth values greater than 1 ft. Users can modify this threshold as needed.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Vectorize the Depth 2030 by following the figures below.</p></li>
+</ol>
+<img alt="../_images/comp066.png" src="../_images/comp066.png" />
+<img alt="../_images/comp067.png" src="../_images/comp067.png" />
+<ol class="arabic simple" start="3">
+<li><p>Wait the process to finish, right click on the vector layer, go to Open Attribute Table. Select the Select Features Using
+an Expression and select all features with DN = -9999.</p></li>
+</ol>
+<img alt="../_images/comp069.png" src="../_images/comp069.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The DN = -9999 are all features containing depth values less than 1 ft.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Delete all these features by toggling the edit mode and clicking on delete selected features.</p></li>
+</ol>
+<img alt="../_images/comp072.png" src="../_images/comp072.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Delete Features on the message and exit the edit mode to save this modification.</p></li>
+</ol>
+<img alt="../_images/comp073.png" src="../_images/comp073.png" />
+<ol class="arabic simple" start="5">
+<li><p>Use the dissolve algorithm to join all features into one.</p></li>
+</ol>
+<img alt="../_images/comp074.png" src="../_images/comp074.png" />
+<img alt="../_images/comp075.png" src="../_images/comp075.png" />
+<ol class="arabic simple" start="6">
+<li><p>Wait the process to finish. Right click on the dissolved vector and Open Attribute Table.</p></li>
+<li><p>Open the Field Calculator, set the Output Field Name as area and type as decimal.
+Fill the expression (&amp;area) and click OK.</p></li>
+</ol>
+<img alt="../_images/comp076.png" src="../_images/comp076.png" />
+<ol class="arabic simple" start="8">
+<li><p>A new field is added to the Attribute Table with the area of the feature.</p></li>
+</ol>
+<img alt="../_images/comp077.png" src="../_images/comp077.png" />
+<ol class="arabic simple" start="9">
+<li><p>Redo steps 1-8 for the DEPTH.OUT located on the F2060_10AEP_Med072SLR.</p></li>
+<li><p>The two vectors will look like this:</p></li>
+</ol>
+<img alt="../_images/comp078.png" src="../_images/comp078.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Add the layer with the higher flooded area to the bottom of the layers with lower flooded areas.</p>
+</div>
+<p>Zooming into specific areas reveals a larger flooded area in the 2060 scenario compared to 2030.</p>
+<ol class="arabic simple" start="11">
+<li><p>Compare the inundated areas greater than 1 ft between the two scenarios.</p></li>
+</ol>
+<ul class="simple">
+<li><p>2030: 38,628,891.980 ft^2</p></li>
+<li><p>2060: 40,631,510.310 ft^2</p></li>
+</ul>
+<img alt="../_images/comp079.png" src="../_images/comp079.png" />
+<ul class="simple">
+<li><p><strong>Percentage increase: 5.2 %</strong></p></li>
+</ul>
+<ol class="arabic simple" start="12">
+<li><p>Group the layers generated in this lesson in a group called ‘Flooded Areas’ and uncheck it.</p></li>
+</ol>
+</section>
+</section>
+<section id="step-8-hazard-maps">
+<h2>Step 8. Hazard Maps<a class="headerlink" href="#step-8-hazard-maps" title="Link to this heading">#</a></h2>
+<p>FLO-2D MapCrafter Plugin creates hazard maps, highlighting areas with elevated risks based on FLO-2D simulations,
+aiding in risk management.</p>
+<ol class="arabic simple">
+<li><p>Open MapCrafter.</p></li>
+</ol>
+<img alt="../_images/haz006.png" src="../_images/haz006.png" />
+<ol class="arabic simple" start="2">
+<li><p>Choose the ‘100 Yrs Subd 1 baseline’ scenario as the FLO-2D Export Folder
+since this scenario considers all flood drivers.
+Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation.</p></li>
+</ol>
+<img alt="../_images/haz007.png" src="../_images/haz007.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The USBR (United States Bureau Reclamation) Hazard map follows the criteria described in the
+Downstream Hazard Classification Guidelines (USBR, 1988). MapCrafter allows the user to select
+five hazard mapping classification systems: Houses, Mobile Homes, Vehicles, Adults, and Children.
+Each of these hazard mapping options define the hazard based on Danger zone curves that are
+separated into High Danger Zone, Judgement Zone and Low Danger Zone.
+The danger zones are curves that define a relationship between depth and velocity.</p>
+<img alt="../_images/haz014.png" src="../_images/haz014.png" />
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Click on Create maps and wait for the process to complete.
+The maps are added on their own group on the QGIS Layer Tree.</p></li>
+</ol>
+<img alt="../_images/haz008.png" src="../_images/haz008.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Hazard maps are generated for the entire project domain.
+It is not meaningful to assess House Hazard in regions without houses
+(e.g., waterbodies, channels, grasslands). The same applies to all hazard maps.
+Engineering judgment must be employed to identify areas more susceptible
+to the specific type of flood damages.</p>
+</div>
+<section id="houses-hazard">
+<h3>Houses Hazard<a class="headerlink" href="#houses-hazard" title="Link to this heading">#</a></h3>
+<p>Houses Hazard Map is focused on permanent residences attached to foundations
+and worksite areas, including facilities that contain workers on a daily basis.
+This includes farm operations, oil and gas operations,
+sand and gravel operations, and fish hatcheries.</p>
+<ol class="arabic simple">
+<li><p>Review the complete hazard raster and zoom in on Vanderbilt Beach for a more detailed examination.</p></li>
+</ol>
+<img alt="../_images/haz009.png" src="../_images/haz009.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Increase transparency in the Hazard layer to facilitate the analysis and visualization.</p>
+</div>
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Occupants of most houses are in danger from floodwater.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Occupants of most houses are not seriously in danger from flood water.</p></li>
+</ul>
+</section>
+<section id="mobile-houses-hazard">
+<h3>Mobile Houses Hazard<a class="headerlink" href="#mobile-houses-hazard" title="Link to this heading">#</a></h3>
+<p>Mobile Houses are typically located in flood plains due to zoning
+requirements in many areas, creating a very dangerous situation for
+occupants of mobile homes, as they are very susceptible to movement
+from relatively small floods.</p>
+<ol class="arabic simple">
+<li><p>Examine the same area as in the previous step.
+This hazard map is more conservative than the Houses Hazard map,
+given the increased impact of small floods on mobile homes</p></li>
+</ol>
+<img alt="../_images/haz010.png" src="../_images/haz010.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Occupants of almost any size mobile home are in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Occupants of almost any size mobile home are not seriously in danger from flood water.</p></li>
+</ul>
+</section>
+<section id="vehicles-hazard">
+<h3>Vehicles Hazard<a class="headerlink" href="#vehicles-hazard" title="Link to this heading">#</a></h3>
+<p>Vehicles Hazard is focused on the possibility for loss
+of life to motorists and pedestrians.</p>
+<ol class="arabic simple">
+<li><p>Zoom into Naples Park. In this area, specific regions are designated as judgment zones for vehicles.</p></li>
+</ol>
+<img alt="../_images/haz011.png" src="../_images/haz011.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Occupants of almost any size passenger vehicle are in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Occupants of almost any size passenger vehicle are not seriously in danger from flood water.</p></li>
+</ul>
+</section>
+<section id="adults-hazard">
+<h3>Adults Hazard<a class="headerlink" href="#adults-hazard" title="Link to this heading">#</a></h3>
+<p>In Adults Hazard Map, an adult is considered any human over 5 feet (150 cm) tall and weighing over
+120 pounds (54 kg).</p>
+<ol class="arabic simple">
+<li><p>Zoom into the Tarpon Cove Yacht &amp; Racquet Club.
+The neighborhood near the mangrove is situated in a high danger zone according to the USBR Adults Hazard Mapping.</p></li>
+</ol>
+<img alt="../_images/haz012.png" src="../_images/haz012.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Almost any size adult is in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Almost any size adult is not seriously threatened by flood water.</p></li>
+</ul>
+</section>
+<section id="children-hazard">
+<h3>Children Hazard<a class="headerlink" href="#children-hazard" title="Link to this heading">#</a></h3>
+<p>The Children Hazard map represents a more conservative classification compared to the Adults Hazard Map.</p>
+<ol class="arabic simple">
+<li><p>Zoom into the southeast of the project domain.
+Significant areas of judgment zones for children are identified in this region.</p></li>
+</ol>
+<img alt="../_images/haz013.png" src="../_images/haz013.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Almost any size child is in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Almost any size child (excluding infants) is not seriously threatened by flood water.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Mapping.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Mapping Results</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-create-a-review-project">Step 1. Create a review project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-plotting-flo-2d-results">Step 2. Plotting FLO-2D results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-advanced-symbology-options">Step 3. Advanced symbology options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-storm-drain">Step 4. Storm Drain</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-10-years-scenarios">Compare the 10 years scenarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-20-years-scenarios">Compare the 20 years scenarios</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-the-50-years-scenarios">Compare the 50 years scenarios</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-flood-components">Step 5. Flood Components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-mitigation-alternatives">Step 6. Mitigation Alternatives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mangrove-restoration-and-enhancement">Mangrove Restoration and Enhancement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#elevation-of-us-highway-41">Elevation of US Highway 41</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-future-scenarios">Step 7. Future Scenarios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#low-medium-and-high-sea-level-rise-conditions">2100: Low, Medium, and High Sea Level Rise conditions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flooded-areas-in-2030-2060">Flooded Areas in 2030, 2060</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-hazard-maps">Step 8. Hazard Maps</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#houses-hazard">Houses Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-houses-hazard">Mobile Houses Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vehicles-hazard">Vehicles Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#adults-hazard">Adults Hazard</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#children-hazard">Children Hazard</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

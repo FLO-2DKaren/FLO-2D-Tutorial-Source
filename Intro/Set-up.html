@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>FLO-2D Setup &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Intro/Set-up';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson 1 Part 1 – Getting Started" href="../Workshops/Lesson%201%20Part%201.html" />
+    <link rel="prev" title="FLO-2D Tutorials" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Intro/Set-up.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>FLO-2D Setup</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-the-flo-2d-pro-installer">Step 1: Download the FLO-2D Pro Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-flo-2d-installer">Step 2: FLO-2D Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-get-qgis-and-flo-2d-plugin">Step 3: Get QGIS and FLO-2D Plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-documentation-installer">Step 3: Documentation Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-qgis-installer">Step 4: QGIS Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-flo-2d-plugin">Step 5: FLO-2D Plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-installation-test">Step 6. Installation Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#port-a-geopackage">Port a Geopackage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdf5">HDF5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intel-packages">Intel Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-packages">Visual Studio Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#call-flopro-exe-from-qgis">Call FLOPRO.exe from QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gds-and-mapper">GDS and Mapper</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="flo-2d-setup">
+<h1>FLO-2D Setup<a class="headerlink" href="#flo-2d-setup" title="Link to this heading">#</a></h1>
+<p>Welcome to the FLO-2D setup page. Get a computer ready for FLO-2D with:</p>
+<ul class="simple">
+<li><p>FLO-2D Software package</p></li>
+<li><p>QGIS stand alone installer</p></li>
+<li><p>Plugins FLO-2D, QuickMapServices, ProfileTool, CurveNumberGenerator</p></li>
+<li><p>Training Data</p></li>
+</ul>
+<p>The training tutorials will teach project development using FLO-2D and QGIS.
+Advanced Modules are used to teach more specific and detailed projects.  Watch this short video to learn how
+to set-up the computer.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/F3RPHbCkHqo" frameborder="0" allowfullscreen></iframe><section id="step-1-download-the-flo-2d-pro-installer">
+<h2>Step 1: Download the FLO-2D Pro Installer<a class="headerlink" href="#step-1-download-the-flo-2d-pro-installer" title="Link to this heading">#</a></h2>
+<p>FLO-2D Pro Subscribers should log into Sharefile and download the software and activator from their
+FLO-2D Tech Support Account.</p>
+<p><a href="https://flo-2d.sharefile.com/" target="_blank">Sharefile Login</a></p>
+<p>Basic users should fill the Basic Download Form to access the limited free version of the software.</p>
+<p><a href="https://flo-2d.com/flo-2d-basic/" target="_blank">Basic Download Form</a></p>
+<p>Once the software is downloaded.  Go to Step 2.</p>
+</section>
+<section id="step-2-flo-2d-installer">
+<h2>Step 2: FLO-2D Installer<a class="headerlink" href="#step-2-flo-2d-installer" title="Link to this heading">#</a></h2>
+<p>Install FLO-2D using the following instructions.  Admin Rights Required.</p>
+<img alt="../_images/image3.png" src="../_images/image3.png" />
+<ol class="arabic simple">
+<li><p>Right click zipped file to access properties.</p></li>
+<li><p>Unblock the file if necessary.</p></li>
+</ol>
+<img alt="../_images/image41.png" src="../_images/image41.png" />
+<ol class="arabic simple" start="3">
+<li><p>Double click the Setup file to run the installer.</p></li>
+</ol>
+<img alt="../_images/image5.png" src="../_images/image5.png" />
+<ol class="arabic simple" start="4">
+<li><p>If FLO-2D is already installed, this installer will remove the FLO-2D Pro folder and rename the
+FLO-2D Documentation folder.</p></li>
+</ol>
+<img alt="../_images/image6.png" src="../_images/image6.png" />
+<ol class="arabic simple" start="5">
+<li><p>If running a new install, check all options.  If running an update, cancel the installation and go to the
+Update Installation section.</p></li>
+</ol>
+<img alt="../_images/image15a.png" src="../_images/image15a.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click Next and Install to run the installer.</p></li>
+</ol>
+<img alt="../_images/image16.png" src="../_images/image16.png" />
+<ol class="arabic simple" start="7">
+<li><p>The two final installers are embedded Microsoft Visual C++ packages.  They install silently,
+but may trigger a restart.</p></li>
+</ol>
+</section>
+<section id="step-3-get-qgis-and-flo-2d-plugin">
+<h2>Step 3: Get QGIS and FLO-2D Plugin<a class="headerlink" href="#step-3-get-qgis-and-flo-2d-plugin" title="Link to this heading">#</a></h2>
+<p>Use this Download Link to access the <strong>installers</strong>, and training data.</p>
+<p><a href="https://flo-2d.sharefile.com/d-s872384bd61524bf3b695612d1f158a78" target="_blank">Click Here to Download</a></p>
+<img alt="../_images/image1.png" src="../_images/image1.png" />
+<ol class="arabic simple">
+<li><p>Select all.</p></li>
+<li><p>Download.</p></li>
+<li><p>The files are zipped into “file.zip”  Extract them into a safe location.</p></li>
+</ol>
+<img alt="../_images/image2.png" src="../_images/image2.png" />
+</section>
+<section id="step-3-documentation-installer">
+<h2>Step 3: Documentation Installer<a class="headerlink" href="#step-3-documentation-installer" title="Link to this heading">#</a></h2>
+<p>Use these instructions to install the FLO-2D Plugin documentation.  Admin Rights Not Required.</p>
+<ol class="arabic simple">
+<li><p>Run the installer.  FLO-2D Plugin Documentation Installer.exe</p></li>
+<li><p>Default settings are fine, click Close to finish.</p></li>
+</ol>
+<img alt="../_images/image7.png" src="../_images/image7.png" />
+</section>
+<section id="step-4-qgis-installer">
+<h2>Step 4: QGIS Installer<a class="headerlink" href="#step-4-qgis-installer" title="Link to this heading">#</a></h2>
+<p>Follow these instructions to set up QGIS.</p>
+<ol class="arabic simple">
+<li><p>Double click the QGIS-OSGeo4W-3.28.11-1.msi file.</p></li>
+<li><p>Finish installing with the default settings.</p></li>
+</ol>
+<img alt="../_images/image8.png" src="../_images/image8.png" />
+<ol class="arabic simple" start="3">
+<li><p>Open QGIS.</p></li>
+</ol>
+<img alt="../_images/Worksh002.png" src="../_images/Worksh002.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Settings/Options</p></li>
+</ol>
+<img alt="../_images/image13.png" src="../_images/image13.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click the CRS tab and set the options as shown below.  Use CRS from first layer added.  Use Project CRS.  Click OK to
+close the window.</p></li>
+</ol>
+<img alt="../_images/image14.png" src="../_images/image14.png" />
+</section>
+<section id="step-5-flo-2d-plugin">
+<h2>Step 5: FLO-2D Plugin<a class="headerlink" href="#step-5-flo-2d-plugin" title="Link to this heading">#</a></h2>
+<p>With QGIS installed it is time to add the FLO-2D plugin and a few other handy plugins.</p>
+<ol class="arabic simple">
+<li><p>Navigate to the plugin manager.</p></li>
+</ol>
+<img alt="../_images/image10.png" src="../_images/image10.png" />
+<ol class="arabic simple" start="2">
+<li><p>Install Quick Map Services and Profile Tool, and Curve Number Generator.</p></li>
+</ol>
+<img alt="../_images/image11.png" src="../_images/image11.png" />
+<ol class="arabic simple" start="3">
+<li><p>Lastly install from Zip FLO-2D Pro.
+Close the Plugin Manager once everything is finished installing.</p></li>
+</ol>
+<img alt="../_images/image12.gif" src="../_images/image12.gif" />
+<ol class="arabic simple" start="4">
+<li><p>Add more services to Quick Map Services and eliminate unwanted maps.  Click Quick Map Services icon and click Settings.
+On the settings window, go to More Services and click Get Contributed pack.  On the Visibility window, uncheck the
+unwanted maps.</p></li>
+</ol>
+<img alt="../_images/image15.gif" src="../_images/image15.gif" />
+<p>This concludes the installation and setup.  The tutorial data is here:
+C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials</p>
+<img alt="../_images/image9.png" src="../_images/image9.png" />
+<p>Go to Lesson 1 Part 1 on on the left sidebar to start.</p>
+</section>
+<section id="step-6-installation-test">
+<h2>Step 6. Installation Test<a class="headerlink" href="#step-6-installation-test" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Test FLO-2D engine by running a model from a project folder.  Copy the Run for Project files from</p>
+<p>C:\Program Files (x86)\FLO-2D PRO\Run for Project Folder</p>
+</li>
+</ol>
+<img alt="../_images/installtest01.png" src="../_images/installtest01.png" />
+<ol class="arabic" start="2">
+<li><p>Paste the files into any project folder with *.DAT files like Barn.</p>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\Example Projects\Barn Mudflow</p>
+</li>
+</ol>
+<img alt="../_images/installtest02.png" src="../_images/installtest02.png" />
+<ol class="arabic simple" start="3">
+<li><p>Double click FLOPRO.EXE to start a test run.</p></li>
+<li><p>If the computer is activated with the professional version, this message will appear.</p></li>
+</ol>
+<img alt="../_images/installtest03.png" src="../_images/installtest03.png" />
+<ol class="arabic simple" start="5">
+<li><p>If the computer isn’t activated, this message will appear.</p></li>
+</ol>
+<img alt="../_images/installtest04.png" src="../_images/installtest04.png" />
+<ol class="arabic simple" start="6">
+<li><p>Any other message might need some troubleshooting.  Find the related issue below.</p></li>
+</ol>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
+<p>If something isn’t working, do not uninstall FLO-2D.  That is rarely a correct way to fix the installation.
+Find some help below or email FLO-2D via the <a href="https://flo-2d.com/contact/" target="_blank">Contact Form</a> for support.</p>
+<p>Starting in 2022, the FLO-2D engine uses 4 distribution packages.  These installers are embedded into the FLO-2D Pro
+Setup.exe.  If one of the embedded installers fails or is skipped, it may be necessary troubleshoot the issue.
+This guide can help fix common issues.</p>
+<section id="port-a-geopackage">
+<h3>Port a Geopackage<a class="headerlink" href="#port-a-geopackage" title="Link to this heading">#</a></h3>
+<p>If an older project is loaded into a new geopackage, a warning will appear to alert the user that it needs to be updated.
+For Plugin version 115, this video shows the correct way to port</p>
+</section>
+<section id="hdf5">
+<h3>HDF5<a class="headerlink" href="#hdf5" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>HDF5 installer will not edit the system path if the system path is too long. During the FLO-2D installation, the
+following fault may appear.  Close the message to continue the installation.</p></li>
+</ol>
+<img alt="../_images/image18.png" src="../_images/image18.png" />
+<ol class="arabic" start="2">
+<li><p>If the path is not added to the system variables, it may be necessary to add some hdf5 dll files to the FLO-2D Pro
+folder.  Copy them from here:</p>
+<ul class="simple">
+<li><p>C:\Program Files\HDF_Group\HDF5\1.8.11\bin</p></li>
+</ul>
+<p>Paste them here:</p>
+<ul class="simple">
+<li><p>C:\Program Files (x86)\FLO-2D PRO</p></li>
+<li><p>C:\Program Files (x86)\FLO-2D PRO\Run for Project Folder.</p></li>
+</ul>
+</li>
+</ol>
+<img alt="../_images/image23.png" src="../_images/image23.png" />
+</section>
+<section id="intel-packages">
+<h3>Intel Packages<a class="headerlink" href="#intel-packages" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>IntelOneAPI support packages are used to compile FLOPRO.EXE and are needed to run the model.</p></li>
+<li><p>If the drivers are not installed or updated correctly FLOPRO.EXE cannot run.</p></li>
+<li><p>FLOPRO.exe cannot find libio dlls.  When this occurs, it will be necessary to run the Intel
+Fortran packages.  The missing files might be named:</p>
+<ul class="simple">
+<li><p>libiomp5md.dll</p></li>
+<li><p>libmmd.dll</p></li>
+<li><p>libmmdd.dll</p></li>
+<li><p>libifcoremdd.dll</p></li>
+<li><p>libifportmd.dll</p></li>
+</ul>
+</li>
+<li><p>The fault message might look like this:</p></li>
+</ol>
+<img alt="../_images/image25.png" src="../_images/image25.png" />
+<ol class="arabic simple" start="5">
+<li><p>It may also look like this:</p></li>
+</ol>
+<img alt="../_images/image26.PNG" src="../_images/image26.PNG" />
+<ol class="arabic simple" start="6">
+<li><p>Older files might be on the computer if the update process wasn’t followed.  These dlls should be removed by the
+FLO-2D installer.  Sometimes one or more of these files are are not removed.  If the error
+message from 4. appears, find and remove the following files:</p>
+<ul class="simple">
+<li><p>C:\Program Files (x86)\FLO-2D Pro\libio5md.dll</p></li>
+<li><p>C:\Program Files (x86)\FLO-2D Pro\Run for Project Folder\libio5md.dll</p></li>
+<li><p>C:\Windows\System 32\libio5md.dll</p></li>
+<li><p>C:\Windows\SysWOW64\libio5md.dll</p></li>
+</ul>
+</li>
+<li><p>If the fault still appears, correct it by running <strong>Intel cpp 2022.2.0.3790.msi</strong> and
+<strong>Intel fortran 2022.2.0.3790.msi</strong>.  They will require admin rights.  <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the Intel Installers Here.</a></p></li>
+</ol>
+</section>
+<section id="visual-studio-packages">
+<h3>Visual Studio Packages<a class="headerlink" href="#visual-studio-packages" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Microsoft Visual Studio 2019 is the platform used build the FLO-2D model.  Visual Studio redistributable packages
+are required. If the Visual Studio Redist embedded installer failed or skipped,
+it may be necessary to run it again.  This installer requires Admin rights.
+<a href="https://flo-2d.sharefile.com/d-s3e38b0b9e0f94c4bb5d546b955e0495a" target="_blank">Download the installer here.</a></p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>Microsoft Visual Studio 13 is used for the Storm Drain engine.  The fault will be an error message about a missing
+msvcp120.dll or msvcp140.dll or something similar.  As the Visual Studio version changes, the dlls file name changes.</p></li>
+</ol>
+<img alt="../_images/image27.PNG" src="../_images/image27.PNG" />
+<ol class="arabic simple" start="3">
+<li><p>For example, this computer has many different redistributable packages.  Any software built with Visual Studio
+should add the required dll to the computer.  If that process fails, it may be necessary to install the packages
+from the VCredist_x64 or x86 installers.</p></li>
+</ol>
+<img alt="../_images/image22.png" src="../_images/image22.png" />
+<ol class="arabic" start="4">
+<li><p>FLOPRO.exe Build 22 uses the 2015 - 2019 version of Visual Studio.</p></li>
+<li><p>FLOPRO.exe Build 14 thru Build 21 uses
+version 2013 of Visual Studio.  The older FLO-2D Builds require the 64-bit and 32-bit packages.</p>
+<p>Older redistributable packages can be downloaded from Microsoft:
+<a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft msvcp redistributable installers.</a></p>
+</li>
+</ol>
+</section>
+<section id="call-flopro-exe-from-qgis">
+<h3>Call FLOPRO.exe from QGIS<a class="headerlink" href="#call-flopro-exe-from-qgis" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Run a simulation from QGIS using the Run FLO-2D Button.</p></li>
+<li><p>QGIS message states the the model started but nothing happens.  FLOPRO.exe does not start.</p></li>
+</ol>
+<img alt="../_images/image21.png" src="../_images/image21.png" />
+<ol class="arabic simple" start="3">
+<li><p>This fault seems to be related to QGIS permissions or perhaps an intel compatibility issue.  FLO-2D staff is actively
+seeking a solution but the quick fix is to set up the FLOPRO.exe and its support dlls in the project folder.</p></li>
+<li><p>Copy the files from C:Program Files (x86)FLO-2D ProRun for Project Folder. Paste them into the Project Folder and
+double click FLOPRO.exe to start the simulation.</p></li>
+</ol>
+<img alt="../_images/image24.png" src="../_images/image24.png" />
+</section>
+<section id="gds-and-mapper">
+<h3>GDS and Mapper<a class="headerlink" href="#gds-and-mapper" title="Link to this heading">#</a></h3>
+<p>GDS and Mapper are written in Visual Basic code.  Visual basic has been obsolete code for more than a decade.
+Because of SysWOW (System Windows on Windows), old programs can be used but are challenging to install.
+Some computers won’t have any issues and others simply will not run GDS and Mapper because things like
+Microsoft Data Access (MDAC) and Data Access Objects (DAO) will not load or be recognized by the computer.</p>
+<p>FLO-2D solved this issue by upgrading to QGIS and the FLO-2D Plugin.  If you still want to
+use GDS or Mapper and you get missing dll failures or struggle to use GDS processors, this section may help.</p>
+<ol class="arabic simple">
+<li><p>GDS might not be connected to it’s MapObjects dlls.  These are the objects that do things like load images, load
+tables, intersect shapefiles, and create the grid.  The fault will look like this:</p></li>
+</ol>
+<img alt="../_images/gdsfault01.png" src="../_images/gdsfault01.png" />
+<ol class="arabic" start="2">
+<li><p>If this fault shows up, delete the contents of this folder and run the FLO-2D Pro Setup Installer - MapObjects section again.</p>
+<p>C:\Program Files(x86)\Common Files\ESRI</p>
+<p>Don’t worry, these old files are not used by ArcGIS Desktop or ArcGIS Pro.</p>
+</li>
+<li><p>GDS might give an error message when the user tries to set up a new project using Define Working Region….
+A path correction will fix this fault.  When a new project doesn’t have a project path, it tries to write data
+to the C:\Program Filex(x86)\FLO-2D Pro path.  This path is protected by Admin Rights.</p></li>
+</ol>
+<img alt="../_images/gdsfault03.png" src="../_images/gdsfault03.png" />
+<ol class="arabic simple" start="4">
+<li><p>The error message that appears states something about admin rights or permissions.  Correct it by applying a project
+path in GDS\Tools\Options\Directory Paths</p></li>
+</ol>
+<img alt="../_images/gdsfault04.png" src="../_images/gdsfault04.png" />
+<ol class="arabic simple" start="5">
+<li><p>GDS and Mapper may have overflow or out of memory error messages.  This is not a correctable fault.
+They are both 32-bit programs and have limitations related to the memory they can use.  This varies by computer
+and by screen size so if you get this fault on one computer, it may not show up on an older computer.</p></li>
+</ol>
+<img alt="../_images/gdsfault05.png" src="../_images/gdsfault05.png" />
+<ol class="arabic simple" start="5">
+<li><p>GDS and Mapper default settings are for computers in the USA.  It may be necessary to adjust the number separator.
+If an error message appears about the number separator, use the Control Panel\Clock and Region\Additional Settings
+to set the decimal separator to a “.”.  International users might want to use QGIS so this is not necessary.</p></li>
+</ol>
+<img alt="../_images/gdsfault06.png" src="../_images/gdsfault06.png" />
+<ol class="arabic simple" start="6">
+<li><p>Sometimes the Microsoft Data Access program doesn’t install correctly and GDS cannot find the MDAC dlls.
+It may be possible to reinstall the MDAC setup program.
+<a href="https://flo-2d.sharefile.com/d-sca2c917fcb9d424091e9faa8272b29b8" target="_blank">Download GDS Patch.</a></p></li>
+</ol>
+<ol class="arabic simple" start="7">
+<li><p>GDS Tutorials are no longer part of the FLO-2D Pro Setup.  To get the GDS and Mapper Tutorials, Run this installer:
+<a href="https://flo-2d.sharefile.com/d-s6907dafe3ebc4abab8aa6ad4df386a2c" target="_blank">Download GDS Tutorials.</a></p></li>
+</ol>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">FLO-2D Tutorials</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Workshops/Lesson%201%20Part%201.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lesson 1 Part 1 – Getting Started</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-download-the-flo-2d-pro-installer">Step 1: Download the FLO-2D Pro Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-flo-2d-installer">Step 2: FLO-2D Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-get-qgis-and-flo-2d-plugin">Step 3: Get QGIS and FLO-2D Plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-documentation-installer">Step 3: Documentation Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-qgis-installer">Step 4: QGIS Installer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-flo-2d-plugin">Step 5: FLO-2D Plugin</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-installation-test">Step 6. Installation Test</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#port-a-geopackage">Port a Geopackage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hdf5">HDF5</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#intel-packages">Intel Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-packages">Visual Studio Packages</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#call-flopro-exe-from-qgis">Call FLOPRO.exe from QGIS</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gds-and-mapper">GDS and Mapper</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

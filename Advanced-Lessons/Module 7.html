@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Tailings Dam Model &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Advanced-Lessons/Module 7';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mudflow Part 1 - Create a Watershed Model" href="Module%205%20Part%201.html" />
+    <link rel="prev" title="Dam Breach - Erosion" href="Module%206.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Advanced-Lessons/Module 7.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Tailings Dam Model</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-find-inflow-node">Step 2. Find inflow node</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-run-the-tailings-dam-tool">Step 3. Run the Tailings Dam Tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-review-dam-geometry">Step 4. Review Dam geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-dam-and-tailings-volume">Step 5. Dam and Tailings Volume</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-dam-geotech-data">Step 6. Dam geotech data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-foundation-geotechnical-data-from-tuv-report">Step 7. Foundation geotechnical data from TUV report</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-saturated-tailings-depth">Step 8. Saturated tailings depth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-tailings-dam-tool">Step 9. Tailings dam tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-import-the-inflow-data">Step 10. Import the inflow data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-set-the-mud-debris-data">Step 11. Set the Mud/Debris Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-export-and-run-the-model">Step 12. Export and run the model</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tailings-dam-model">
+<h1>Tailings Dam Model<a class="headerlink" href="#tailings-dam-model" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>In this tutorial, use QGIS and the tailings dam tool to create a tailings dam hydrograph and simulate a tailings dam failure.
+The following video covers the Data Assembly Process for a Tailings Dam Study.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/z8epzv95l4k" frameborder="0" allowfullscreen></iframe><p><strong>Required data</strong></p>
+<p>The required data is in Module 7.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+<th class="head"><p><strong>Location</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.qgz</p></td>
+<td><p>QGIS data files</p></td>
+<td><p>Module 7 Folder</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.gpkg</p></td>
+<td><p>FLO-2D Geopackage</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>*.xml</p></td>
+<td><p>Tailings dam data</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>*.exe</p></td>
+<td><p>Tailings dam tool</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Citation List for this Tutorial:</p>
+<p>Robertson, P.K., de Melo, L., Williams, D.J., &amp; Wilson, G.W. (2019).
+Report of the Expert Panel on the Technical Causes of the Failure of Feijão Dam I.
+Pg. 1–71.</p>
+<p><a class="reference external" href="http://www.b1technicalinvestigation.com/report.html">http://www.b1technicalinvestigation.com/report.html</a></p>
+<p>TUV SUD Bureau, Periodic Review Dam Mine Safety Stream Bean - Dam I Technical Report.
+SP-RC-117/17 Rev.4.Pg.1–265. published on May 17, 2017, Ordinance DNPM No. 70,389 / 2017.
+<a href="https://worldminetailingsfailures.org/wp-content/uploads/2019/03/TUV_SUD_2017_Periodic_Safety_Review.en_.pdf" target="_blank">Download Report.</a></p>
+<p><strong>Note:  Copy the link into a browser if broken.</strong></p>
+<p>The following video will use the tutorial steps below to create the tailings dam hydrograph and run the model.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KJ7NYb_YIHo" frameborder="0" allowfullscreen></iframe><section id="step-1-load-the-project">
+<h2>Step 1: Load the project<a class="headerlink" href="#step-1-load-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Start with the project from Module 7.</p></li>
+<li><p>If necessary, load it into QGIS.
+Open QGIS and drag the Tailings Dam Module 7.qgz file into the project.</p></li>
+<li><p>Save the project.</p></li>
+</ol>
+<img alt="../_images/Module238.png" src="../_images/Module238.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Yes to load the model.</p></li>
+</ol>
+<img alt="../_images/Module239.png" src="../_images/Module239.png" />
+</section>
+<section id="step-2-find-inflow-node">
+<h2>Step 2. Find inflow node<a class="headerlink" href="#step-2-find-inflow-node" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Zoom in on the inflow node.</p></li>
+<li><p>Open the Boundary Condition Editor</p></li>
+<li><p>Check the Center check box.</p></li>
+<li><p>Click the Tailings Dam Loc</p></li>
+</ol>
+<img alt="../_images/Module240.png" src="../_images/Module240.png" />
+<ol class="arabic simple" start="5">
+<li><p>Zoom in with the mouse wheel.
+This is the inflow node location where the breach starts.</p></li>
+</ol>
+<img alt="../_images/Module241.png" src="../_images/Module241.png" />
+</section>
+<section id="step-3-run-the-tailings-dam-tool">
+<h2>Step 3. Run the Tailings Dam Tool<a class="headerlink" href="#step-3-run-the-tailings-dam-tool" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the run Tailings Dam Tool button.</p></li>
+</ol>
+<img alt="../_images/Module242.png" src="../_images/Module242.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set both file locations to the Module 7 folder.</p></li>
+</ol>
+<img alt="../_images/Module243.png" src="../_images/Module243.png" />
+</section>
+<section id="step-4-review-dam-geometry">
+<h2>Step 4. Review Dam geometry<a class="headerlink" href="#step-4-review-dam-geometry" title="Link to this heading">#</a></h2>
+<p>Dam Height = 86 m</p>
+<p>Downstream Slope = 1.5:1</p>
+<img alt="../_images/Module244.png" src="../_images/Module244.png" />
+<p>Figure 1.
+Dam Profile.
+Source: Feijao Dam 1 Expert Panel Appendices (2019).</p>
+<p>Freeboard = 5m</p>
+<img alt="../_images/Module245.png" src="../_images/Module245.png" />
+<p>Figure 2.
+Dam geometry at crest.
+Source: Periodic Safety Review Vale TUV SUD (2017).</p>
+</section>
+<section id="step-5-dam-and-tailings-volume">
+<h2>Step 5. Dam and Tailings Volume<a class="headerlink" href="#step-5-dam-and-tailings-volume" title="Link to this heading">#</a></h2>
+<p>Volume Solids: 7.53X10^6 m<sup>3</sup></p>
+<p>Actual Volume: 8X10^6 m<sup>3</sup></p>
+<p>Volume to the crest 8.80X10^6 m<sup>3</sup></p>
+<img alt="../_images/Module246.png" src="../_images/Module246.png" />
+<p>Figure 3.
+Volume Curve 6.22.
+Source: Periodic Safety Review Vale TUV SUD (2017).</p>
+</section>
+<section id="step-6-dam-geotech-data">
+<h2>Step 6. Dam geotech data<a class="headerlink" href="#step-6-dam-geotech-data" title="Link to this heading">#</a></h2>
+<p>Dam compacted Unit Weight = 19 KN/m<sup>3</sup> = 9279.43 kg/m<sup>3</sup></p>
+<p>Dam Cohesion = 10 KPa = 1,019.72 kg/m<sup>2</sup></p>
+<p>Angle of friction = 30 degrees</p>
+<img alt="../_images/Module247.png" src="../_images/Module247.png" />
+<p>Figure 4.
+Adopted Geotechnical Parameters.
+Source: Periodic Safety Review Vale TUV SUD (2017).</p>
+</section>
+<section id="step-7-foundation-geotechnical-data-from-tuv-report">
+<h2>Step 7. Foundation geotechnical data from TUV report<a class="headerlink" href="#step-7-foundation-geotechnical-data-from-tuv-report" title="Link to this heading">#</a></h2>
+<p>NSPT silty clay between 5 and 11 strokes</p>
+<p>NSPT saprolite horizon between 15 and 40 strokes</p>
+<p>Unit weight = 20 KN/m<sup>3</sup> = 2039.44 kg/m<sup>3</sup></p>
+</section>
+<section id="step-8-saturated-tailings-depth">
+<h2>Step 8. Saturated tailings depth<a class="headerlink" href="#step-8-saturated-tailings-depth" title="Link to this heading">#</a></h2>
+<p>Dam elevation = 942 m</p>
+<p>Water depth = 20 m (max) 5 m (min)</p>
+<p>Freeboard 5 m</p>
+<img alt="../_images/Module248.png" src="../_images/Module248.png" />
+<p>Figure 5.
+Overlay of the Interpreted Water Surface and the Cross Section 3-3 Profile.
+Source: Periodic Safety Review Vale TUV SUD (2017).</p>
+</section>
+<section id="step-9-tailings-dam-tool">
+<h2>Step 9. Tailings dam tool<a class="headerlink" href="#step-9-tailings-dam-tool" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Fill the data from the previous pages.  Start with Options/Units = Metric</p></li>
+</ol>
+<img alt="../_images/Module249.png" src="../_images/Module249.png" />
+<ol class="arabic simple" start="2">
+<li><p>On the next, Choose the Static Mode and set the Reservoir Level to Medium.</p></li>
+<li><p>Click the Create INFLOW.DAT button.</p></li>
+</ol>
+<img alt="../_images/Module250.png" src="../_images/Module250.png" />
+<ol class="arabic simple" start="4">
+<li><p>Set the volume to Vrmax.</p></li>
+<li><p>Change the event time to 0.50 hours.  This variable is highly sensitive to the early hazard zone.
+The report states that in 10 min 75% of the reservoir was drained.</p></li>
+<li><p>Set the max concentration to 0.50 or 0.60.
+This value can be used to test sensitivity of the breach runnout and deposition.</p></li>
+<li><p>The inflow node is 7872.</p></li>
+<li><p>Click the graph on the bottom left shown in the blue rectangle.</p></li>
+</ol>
+<img alt="../_images/Module251.png" src="../_images/Module251.png" />
+<ol class="arabic simple" start="9">
+<li><p>Change the tab to Sediment Concentration by Volume.</p></li>
+<li><p>Set the graph to the blue box and Save the INFLOW.DAT file.</p></li>
+<li><p>Save the INFLOW.DAT file to the <strong>Module 7 Export</strong> folder.</p></li>
+</ol>
+<img alt="../_images/Module252.png" src="../_images/Module252.png" />
+<ol class="arabic simple" start="12">
+<li><p>Save the Tailings Breach 1.xml file.</p></li>
+</ol>
+<img alt="../_images/Module291.png" src="../_images/Module291.png" />
+<ol class="arabic simple" start="13">
+<li><p>Close the Tailings Dam Tool.</p></li>
+</ol>
+</section>
+<section id="step-10-import-the-inflow-data">
+<h2>Step 10. Import the inflow data<a class="headerlink" href="#step-10-import-the-inflow-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Close the message in QGIS.</p></li>
+</ol>
+<img alt="../_images/Module292.png" src="../_images/Module292.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Import Components button.</p></li>
+</ol>
+<img alt="../_images/Module293.png" src="../_images/Module293.png" />
+<ol class="arabic simple" start="3">
+<li><p>Open the CONT.DAT file.</p></li>
+</ol>
+<img alt="../_images/Module294.png" src="../_images/Module294.png" />
+<ol class="arabic simple" start="4">
+<li><p>Uncheck Select All, check Inflow Elements and click OK.</p></li>
+</ol>
+<img alt="../_images/Module295.png" src="../_images/Module295.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click ok to close the import message.</p></li>
+</ol>
+<img alt="../_images/Module296.png" src="../_images/Module296.png" />
+<img alt="../_images/Module297.png" src="../_images/Module297.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the Schematized layers to User layers conversion button.</p></li>
+</ol>
+<img alt="../_images/Module298.png" src="../_images/Module298.png" />
+<ol class="arabic simple" start="7">
+<li><p>Check the boundary conditions box and click OK and then click ok to close the message.</p></li>
+</ol>
+<img alt="../_images/Module299.png" src="../_images/Module299.png" />
+<img alt="../_images/Module300.png" src="../_images/Module300.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click the Schematize button on the Boundary Condition Editor widget and then close both messages.</p></li>
+</ol>
+<img alt="../_images/Module305.png" src="../_images/Module305.png" />
+</section>
+<section id="step-11-set-the-mud-debris-data">
+<h2>Step 11. Set the Mud/Debris Data<a class="headerlink" href="#step-11-set-the-mud-debris-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Mudflow / Sediment transport button.</p></li>
+</ol>
+<img alt="../_images/Module301.png" src="../_images/Module301.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill the dialog box as shown below and click OK.</p></li>
+</ol>
+<img alt="../_images/Module302.png" src="../_images/Module302.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Control Variable button.</p></li>
+</ol>
+<img alt="../_images/Module303.png" src="../_images/Module303.png" />
+<ol class="arabic simple" start="4">
+<li><p>Select Mud/Debris from the drop down box and click Save.</p></li>
+</ol>
+<img alt="../_images/Module304.png" src="../_images/Module304.png" />
+</section>
+<section id="step-12-export-and-run-the-model">
+<h2>Step 12. Export and run the model<a class="headerlink" href="#step-12-export-and-run-the-model" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Export the FLO-2D Data files.
+Click OK.</p></li>
+</ol>
+<img alt="../_images/Module123.png" src="../_images/Module123.png" />
+<img alt="../_images/Module253.png" src="../_images/Module253.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Module 7 Export folder.</p></li>
+</ol>
+<img alt="../_images/Module254.png" src="../_images/Module254.png" />
+<ol class="arabic simple" start="3">
+<li><p>The data is ready to run.</p></li>
+</ol>
+<img alt="../_images/Module255.png" src="../_images/Module255.png" />
+<ol class="arabic simple" start="4">
+<li><p>Correct the paths and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../_images/Module256.png" src="../_images/Module256.png" />
+<ol class="arabic simple" start="5">
+<li><p>Results imported from Mapper.</p></li>
+</ol>
+<img alt="../_images/Module257.png" src="../_images/Module257.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module%206.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Dam Breach - Erosion</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module%205%20Part%201.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mudflow Part 1 - Create a Watershed Model</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-find-inflow-node">Step 2. Find inflow node</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-run-the-tailings-dam-tool">Step 3. Run the Tailings Dam Tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-review-dam-geometry">Step 4. Review Dam geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-dam-and-tailings-volume">Step 5. Dam and Tailings Volume</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-dam-geotech-data">Step 6. Dam geotech data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-foundation-geotechnical-data-from-tuv-report">Step 7. Foundation geotechnical data from TUV report</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-saturated-tailings-depth">Step 8. Saturated tailings depth</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-tailings-dam-tool">Step 9. Tailings dam tool</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-import-the-inflow-data">Step 10. Import the inflow data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-set-the-mud-debris-data">Step 11. Set the Mud/Debris Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-export-and-run-the-model">Step 12. Export and run the model</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

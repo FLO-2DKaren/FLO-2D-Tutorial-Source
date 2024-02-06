@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hydrology &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Hydrology';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Boundary Conditions" href="Boundary%20Conditions.html" />
+    <link rel="prev" title="Create a Grid" href="Create%20Grid.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Hydrology.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hydrology</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-determine-the-total-rainfall">Step 1. Determine the total rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-sample-the-rainfall-raster">Step 2. Sample the rainfall raster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-the-rainfall">Step 3. Set up the rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-simplify-layers-list">Step 4. Simplify layers list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculate-infiltration">Step 5. Calculate infiltration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-save-export-and-run">Step 6. Save, export, and run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-create-a-backup-file">Step 7: Create a backup file</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hydrology">
+<h1>Hydrology<a class="headerlink" href="#hydrology" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>In this module, learn how to retrieve data from NOAA to create rainfall and calculate infiltration from spatial data.</p>
+<p>Required Data</p>
+<p>The required data is in the Coastal 2D Training Folder.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+<th class="head"><p>Location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>LandUse Training</p></td>
+<td><p>Hydrology\Green Ampt</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.tif</p></td>
+<td><p>Soil Training</p></td>
+<td><p>Hydrology\Green Ampt</p></td>
+</tr>
+<tr class="row-even"><td><p>*.asc</p></td>
+<td><p>NOAA rainfall data</p></td>
+<td><p>NOAA Website</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location: \Coastal 2D Training\Project Data\Hydrology</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MP_pQuUtI08" frameborder="0" allowfullscreen></iframe><section id="step-1-determine-the-total-rainfall">
+<h2>Step 1. Determine the total rainfall<a class="headerlink" href="#step-1-determine-the-total-rainfall" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If taking this training in a Live Class, skip to Step 3.  The live class will have less time to complete
+the hydrology tutorial.</p>
+</div>
+<ol class="arabic simple">
+<li><p>In an internet browser right click this link and open it in a new tab. <a class="reference external" href="https://hdsc.nws.noaa.gov/hdsc/pfds/">https://hdsc.nws.noaa.gov/hdsc/pfds/</a></p></li>
+<li><p>On the NOAA website, click on Florida.</p></li>
+</ol>
+<img alt="../_images/hydrology001.png" src="../_images/hydrology001.png" />
+<ol class="arabic simple" start="3">
+<li><p>To navigate to the project area, search for “Immokalee and Tamiami 34110”</p></li>
+</ol>
+<img alt="../_images/hydrology002.png" src="../_images/hydrology002.png" />
+<ol class="arabic simple" start="4">
+<li><p>Scroll down to the table data and find the total rainfall for this area.  100yr 24hr rainfall is 12.2 inches.</p></li>
+</ol>
+<img alt="../_images/hydrology003.png" src="../_images/hydrology003.png" />
+<ol class="arabic simple" start="5">
+<li><p>Change the Tab to Supplementary Info, set the variables to 100yr, 24hr and click Submit.</p></li>
+</ol>
+<img alt="../_images/hydrology004.png" src="../_images/hydrology004.png" />
+<ol class="arabic" start="6">
+<li><p>The file was most likely saved to the Download folder.  Copy it to the project folder and Extract it.</p>
+<p>\Coastal 2D Training\Project Data\Hydrology</p>
+</li>
+</ol>
+<img alt="../_images/hydrology005.png" src="../_images/hydrology005.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click the manning_n layer near the bottom of the Layers List and drag the se100yr24ha.asc file onto the map space.</p></li>
+</ol>
+<img alt="../_images/hydrology006.png" src="../_images/hydrology006.png" />
+<ol class="arabic simple" start="8">
+<li><p>Right click the se100yr24ha layer and click Zoom to Layer.</p></li>
+</ol>
+<img alt="../_images/hydrology007.png" src="../_images/hydrology007.png" />
+<ol class="arabic simple" start="9">
+<li><p>These pixels are rainfall in inches * 1000.</p></li>
+<li><p>Zoom to the Computational Domain</p></li>
+</ol>
+<img alt="../_images/hydrology008.png" src="../_images/hydrology008.png" />
+<ol class="arabic simple" start="11">
+<li><p>Use the Export option to save the data in the correct coordinate system and clipped to the Map Canvas Extent.
+Right click the layer and Export the data.</p></li>
+</ol>
+<img alt="../_images/hydrology009.png" src="../_images/hydrology009.png" />
+<ol class="arabic simple" start="12">
+<li><p>Select the Hydrology folder to save the data.</p></li>
+<li><p>Set the coordinate system to EPSG 2881.</p></li>
+<li><p>Click the Map Canvas Extent button to clip the new raster to the project area.</p></li>
+<li><p>Check add the saved file to the map.</p></li>
+<li><p>Click OK.</p></li>
+</ol>
+<img alt="../_images/hydrology010.png" src="../_images/hydrology010.png" />
+</section>
+<section id="step-2-sample-the-rainfall-raster">
+<h2>Step 2. Sample the rainfall raster<a class="headerlink" href="#step-2-sample-the-rainfall-raster" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Remove the original raster from the layers list.  It has the wrong coordinate system and cannot be used to calculate
+rainfall data.</p></li>
+</ol>
+<img alt="../_images/hydrology011.png" src="../_images/hydrology011.png" />
+<ol class="arabic simple" start="2">
+<li><p>Use the ID tool to find the peak rainfall.</p></li>
+<li><p>In this case, the lightest color is the highest rainfall.</p></li>
+<li><p>12216 is 12.2 inches of rainfall.</p></li>
+</ol>
+<img alt="../_images/hydrology012.png" src="../_images/hydrology012.png" />
+</section>
+<section id="step-3-set-up-the-rainfall">
+<h2>Step 3. Set up the rainfall<a class="headerlink" href="#step-3-set-up-the-rainfall" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Collapse the FLO-2D widgets and click Rain Editor.</p></li>
+</ol>
+<img alt="../_images/hydrology013.png" src="../_images/hydrology013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Enter the total rainfall.</p></li>
+<li><p>Select a rainfall distribution with the Folder button.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Rainfall Distributions\SCS 24-Hr Type II</p>
+<ol class="arabic simple" start="4">
+<li><p>Check the Spatial Variation (Depth Area Reduction)</p></li>
+</ol>
+<img alt="../_images/hydrology014.png" src="../_images/hydrology014.png" />
+<ol class="arabic simple" start="5">
+<li><p>Skip to Step 4 if participating in Live Training.</p></li>
+<li><p>To interpolate the rainfall depth reduction factor, click the AR button on the bottom of the rain editor widget.</p></li>
+<li><p>Fill the form.</p></li>
+<li><p>Click OK to calculate the rainARF and OK to close the message.</p></li>
+</ol>
+<img alt="../_images/hydrology015.png" src="../_images/hydrology015.png" />
+<ol class="arabic simple" start="9">
+<li><p>The rainfall is now complete.  It will be exported into the RAIN.DAT file.</p></li>
+</ol>
+</section>
+<section id="step-4-simplify-layers-list">
+<h2>Step 4. Simplify layers list<a class="headerlink" href="#step-4-simplify-layers-list" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Move all of the external data to the bottom of the Layers List.</p></li>
+<li><p>Select the external layers using CTRL-Click or Shift-Click.</p></li>
+<li><p>Right click the selected layers and click Group Selected.</p></li>
+<li><p>Right click the Grouped Layers and rename them Project data or External data.  The name should be something
+that helps organize the data.</p></li>
+</ol>
+<img alt="../_images/hydrology016.png" src="../_images/hydrology016.png" />
+<ol class="arabic simple" start="5">
+<li><p>There are many tools to manage the layers list.  These can help organize data so that it is easy to find.</p></li>
+<li><p>Use the cursor to hover over each icon and read the tool tip.  Collapse All and the Hide Selected are two tools
+that will keep the layers list manageable.</p></li>
+</ol>
+<img alt="../_images/hydrology017.png" src="../_images/hydrology017.png" />
+<ol class="arabic simple" start="7">
+<li><p>Layers can be grouped into like groups to simplify the layers list.  A tidy layers list makes finding data easier.
+Take a moment to group data into a well organized system.</p></li>
+</ol>
+<img alt="../_images/hydrology017a.png" src="../_images/hydrology017a.png" />
+</section>
+<section id="step-5-calculate-infiltration">
+<h2>Step 5. Calculate infiltration<a class="headerlink" href="#step-5-calculate-infiltration" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tutorial shows how to use Green-Ampt infiltration.  SCS, and Horton can also be applied with
+the calculator.  SCS can be calculated from a shapefile or a raster.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Collapse the FLO-2D widgets and click Infiltration Editor.</p></li>
+</ol>
+<img alt="../_images/hydrology013.png" src="../_images/hydrology013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Project Data group in the layers list and drag the file LandUse Training.shp onto the map space.</p></li>
+</ol>
+<p>\Coastal 2D Training\Project Data\Hydrology\Green Ampt\LandUse Training.shp</p>
+<ol class="arabic simple" start="3">
+<li><p>Drag the file Soil Training.shp onto the map space.</p></li>
+</ol>
+<p>\Coastal 2D Training\Project Data\Hydrology\Green Ampt\Soil Training.shp</p>
+<img alt="../_images/hydrology018.png" src="../_images/hydrology018.png" />
+<ol class="arabic simple" start="4">
+<li><p>From the Infiltration Editor click the Global Infiltration icon.</p></li>
+</ol>
+<img alt="../_images/Worksh048.png" src="../_images/Worksh048.png" />
+<ol class="arabic simple" start="5">
+<li><p>Check the Global Green Ampt switch.  For a description of how these variables are used, please see the
+INFIL.DAT section of the Data Input Manual.  Note that the soil depth solution will not be used if the
+global soil depth is 0.00.</p></li>
+<li><p>Click OK to close.</p></li>
+</ol>
+<img alt="../_images/Worksh049.png" src="../_images/Worksh049.png" />
+<ol class="arabic simple" start="7">
+<li><p>On the Infiltration Editor click Calculate Green-Ampt.</p></li>
+</ol>
+<img alt="../_images/Worksh050.png" src="../_images/Worksh050.png" />
+<ol class="arabic simple" start="8">
+<li><p>Specify the attributes as shown in the following image and click OK.
+The calculation process should take less than a couple of minutes to complete because this project is small.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Green-Ampt calculator was modified in 2023 and extra potential Green-Ampt sources are now available.  In
+this example, the 2021 method is used so DTHETA, and PSIF, and Vegetation cover are not required.</p>
+</div>
+<img alt="../_images/hydrology019.png" src="../_images/hydrology019.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a calculator is taking too long, make sure the data is on the C: drive.  If the project is in a
+directory on the C: drive, and the data is in the same directory, the SQLite database manager works much
+faster.</p>
+</div>
+</section>
+<section id="step-6-save-export-and-run">
+<h2>Step 6. Save, export, and run<a class="headerlink" href="#step-6-save-export-and-run" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/Module046.png" src="../_images/Module046.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set up the Control Variables and click Save.</p></li>
+</ol>
+<img alt="../_images/chan047.png" src="../_images/chan047.png" />
+<img alt="../_images/hydrology020.png" src="../_images/hydrology020.png" />
+<ol class="arabic simple" start="3">
+<li><p>Export the project.</p></li>
+</ol>
+<img alt="../_images/Module089.png" src="../_images/Module089.png" />
+<img alt="../_images/hydrology021.png" src="../_images/hydrology021.png" />
+<ol class="arabic simple" start="4">
+<li><p>Save the data to the Project Folder and click OK to close the message.</p></li>
+</ol>
+<img alt="../_images/hydrology022.png" src="../_images/hydrology022.png" />
+<img alt="../_images/hydrology023.png" src="../_images/hydrology023.png" />
+<ol class="arabic simple" start="5">
+<li><p>Use the Run Settings to set the Project path and the FLO-2D Engine Path.</p></li>
+</ol>
+<img alt="../_images/hydrology024.png" src="../_images/hydrology024.png" />
+<ol class="arabic simple" start="6">
+<li><p>Run the model.</p></li>
+</ol>
+<img alt="../_images/runengine.png" src="../_images/runengine.png" />
+<ul class="simple">
+<li><p>The blue message with the Professional License means this computer has a valid activator turned on.</p></li>
+<li><p>Once the time lines appear, that means the initial data tests have passes.</p></li>
+<li><p>The file path can be found at the bottom of the run window.</p></li>
+</ul>
+<img alt="../_images/hydrology026.png" src="../_images/hydrology026.png" />
+<ol class="arabic simple" start="7">
+<li><p>Let the project run and continue on to the next step.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If an error message appears, use the snipping tool to get a screenshot of the error message.
+Review the error.chk file.  If help is required, ask the class instructor for help.
+If working through tutorials independently, email both the image and error message to
+FLO-2D tech support for help.  Most error messages are resolved quickly.</p>
+</div>
+</section>
+<section id="step-7-create-a-backup-file">
+<h2>Step 7: Create a backup file<a class="headerlink" href="#step-7-create-a-backup-file" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../_images/creategrid019.png" src="../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: <strong>Hydrology OK.zip</strong></p></li>
+</ol>
+<img alt="../_images/hydrology025.png" src="../_images/hydrology025.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../_images/creategrid021.png" src="../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+<img alt="../_images/creategrid022.png" src="../_images/creategrid022.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Create%20Grid.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Create a Grid</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Boundary%20Conditions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Boundary Conditions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-determine-the-total-rainfall">Step 1. Determine the total rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-sample-the-rainfall-raster">Step 2. Sample the rainfall raster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-set-up-the-rainfall">Step 3. Set up the rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-simplify-layers-list">Step 4. Simplify layers list</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-calculate-infiltration">Step 5. Calculate infiltration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-save-export-and-run">Step 6. Save, export, and run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-create-a-backup-file">Step 7: Create a backup file</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

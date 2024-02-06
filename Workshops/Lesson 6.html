@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lesson 6 – Hydraulic Structures &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Workshops/Lesson 6';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Project Recovery and Debug" href="../Advanced-Lessons/Module%201.html" />
+    <link rel="prev" title="Lesson 5 – Realtime Rainfall Data" href="Lesson%205.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Workshops/Lesson 6.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lesson 6 – Hydraulic Structures</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-data">Required Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-procedure">Step-by-Step Procedure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setup-the-project">Step 1: Setup the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-import-data">Step 2: Import data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-format-the-data-layers">Step 3: Format the data layers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-build-the-culverts-into-the-user-layers-structure-lines">Step 4: Build the culverts into the User Layers Structure Lines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-assign-the-structure-attributes">Step 5: Assign the structure attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-assign-the-rating-tables">Step 6: Assign the rating tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-schematize-the-data">Step 7: Schematize the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-export-the-data">Step 8: Export the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-run-the-simulation">Step 9: Run the simulation</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lesson-6-hydraulic-structures">
+<h1>Lesson 6 – Hydraulic Structures<a class="headerlink" href="#lesson-6-hydraulic-structures" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>Lesson 6 outlines the process of creating hydraulic structures with rating tables and generalized culvert equations.
+This lesson needs a channel so please use the data from QGIS Lesson 2, 3, or 4 to run through this tutorial.</p>
+<p>This video shows the full process of this tutorial.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H02oR4bySw4" frameborder="0" allowfullscreen></iframe><section id="required-data">
+<h2>Required Data<a class="headerlink" href="#required-data" title="Link to this heading">#</a></h2>
+<p>The lesson makes use of QGIS Lesson 2, 3, or 4 and hydraulic structure shapefile and structure data files in QGIS Lesson 6.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File</strong></p></td>
+<td><p><strong>Content</strong></p></td>
+<td><p><strong>Location</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Hydraulic Structures</p></td>
+<td><p>QGIS Lesson 6</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.txt</p></td>
+<td><p>Culvert Tables</p></td>
+<td><p>QGIS Lesson 6\Culvert Tables</p></td>
+</tr>
+</tbody>
+</table>
+<p>Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation\Example Projects\QGIS Tutorials</p>
+<p>Check these folders to ensure the data is available before starting the lesson.</p>
+</section>
+<section id="step-by-step-procedure">
+<h2>Step-by-Step Procedure<a class="headerlink" href="#step-by-step-procedure" title="Link to this heading">#</a></h2>
+<p>To build HYSTRUC.DAT following these steps.</p>
+<ol class="arabic simple">
+<li><p>Open Lesson 2, 3, or 4 qgz file;</p></li>
+<li><p>Import the Hydraulic Structures shapefile;</p></li>
+<li><p>Build the structures into the User Layers;</p></li>
+<li><p>Assign the structure attributes;</p></li>
+<li><p>Assign the rating tables;</p></li>
+<li><p>Schematize the data;</p></li>
+<li><p>Export and project;</p></li>
+<li><p>Run the simulation.</p></li>
+</ol>
+</section>
+<section id="step-1-setup-the-project">
+<h2>Step 1: Setup the project<a class="headerlink" href="#step-1-setup-the-project" title="Link to this heading">#</a></h2>
+<img alt="../_images/Worksh002.png" src="../_images/Worksh002.png" />
+<ol class="arabic simple">
+<li><p>Search the start menu and run the “QGIS Desktop” program.</p></li>
+<li><p>Complete Lesson 2 prior to starting this lesson.</p></li>
+<li><p>Save the project</p></li>
+</ol>
+</section>
+<section id="step-2-import-data">
+<h2>Step 2: Import data<a class="headerlink" href="#step-2-import-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Start by cleaning up the map space so the next layer will be easy to see.</p></li>
+<li><p>Uncheck the User Left Bank Lines, Right Bank Lines, and Cross Sections layers;</p></li>
+<li><p>Uncheck the Blocked Areas;</p></li>
+<li><p>Uncheck the Storm Drain User Layers;</p></li>
+<li><p>Click the User Boundary Conditions Layer to activate this layer;</p></li>
+<li><p>Drag the Hydraulic Structures onto the map space.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the image is blurry, use Firefox or open the image in a new tab.</p>
+</div>
+<img alt="../_images/Worksh139.png" src="../_images/Worksh139.png" />
+</section>
+<section id="step-3-format-the-data-layers">
+<h2>Step 3: Format the data layers<a class="headerlink" href="#step-3-format-the-data-layers" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the Attributes Table on the Hydraulic Structures Layer.</p></li>
+</ol>
+<img alt="../_images/Module033.png" src="../_images/Module033.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select structure 130, and 131 and click Zoom map to selected rows button.
+This will zoom the map to these two structures.</p></li>
+</ol>
+<img alt="../_images/Module034.png" src="../_images/Module034.png" />
+<p><strong>Label the Hydraulic Structures layer.</strong></p>
+<ol class="arabic simple" start="3">
+<li><p>Double click the Hydraulic Structures layer</p></li>
+<li><p>Set the Labels like the following image.</p></li>
+<li><p>This shows which culvert is being reviewed.</p></li>
+</ol>
+<img alt="../_images/Module035.png" src="../_images/Module035.png" />
+<p><strong>Change the layer Symbology</strong></p>
+<ol class="arabic simple" start="6">
+<li><p>Change the tab to Symbology</p></li>
+<li><p>Set the Symbol Layer Type to Arrow</p></li>
+<li><p>Uncheck Curved Arrows</p></li>
+<li><p>This shows the flow direction of each structure.</p></li>
+</ol>
+<img alt="../_images/Module036.png" src="../_images/Module036.png" />
+</section>
+<section id="step-4-build-the-culverts-into-the-user-layers-structure-lines">
+<h2>Step 4: Build the culverts into the User Layers Structure Lines<a class="headerlink" href="#step-4-build-the-culverts-into-the-user-layers-structure-lines" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Use the Structure Editor to add all of the new structures.</p></li>
+<li><p>Digitize all of the structures.</p></li>
+<li><p>Click the Save icon to confirm that close the digitizing tool and load the data.</p></li>
+</ol>
+<img alt="../_images/Module037.png" src="../_images/Module037.png" />
+<p><strong>Digitizing process:</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Left click the inlet node (upstream node)</p></li>
+<li><p>Left click the outlet node (downstream node)</p></li>
+<li><p>Right Click to finish the polyine.</p></li>
+<li><p>Click OK to finish the feature.</p></li>
+</ul>
+</div></blockquote>
+<img alt="../_images/Worksh145.png" src="../_images/Worksh145.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Save in the Structures Widget to load the data into the dialog box.</p></li>
+</ol>
+<img alt="../_images/Module039.png" src="../_images/Module039.png" />
+</section>
+<section id="step-5-assign-the-structure-attributes">
+<h2>Step 5: Assign the structure attributes<a class="headerlink" href="#step-5-assign-the-structure-attributes" title="Link to this heading">#</a></h2>
+<p><strong>Complete the Structure Fields</strong></p>
+<ol class="arabic simple">
+<li><p>Load the Hydraulic Structures Attribute table.
+The attributes will help fill out each structure table.</p></li>
+<li><p>Check the center button.</p></li>
+<li><p>Select the first structure.</p></li>
+<li><p>Rename the Structure with the “A” button.</p></li>
+<li><p>Fill the Type and Rating fields</p></li>
+<li><p>Move to the next structure and repeat the process.</p></li>
+</ol>
+<img alt="../_images/Module040.png" src="../_images/Module040.png" />
+<ol class="arabic simple" start="7">
+<li><p>Schematize the structure data.</p></li>
+</ol>
+<img alt="../_images/Module041.png" src="../_images/Module041.png" />
+</section>
+<section id="step-6-assign-the-rating-tables">
+<h2>Step 6: Assign the rating tables<a class="headerlink" href="#step-6-assign-the-rating-tables" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Import Rating Tables button</p></li>
+</ol>
+<img alt="../_images/Worksh147.png" src="../_images/Worksh147.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the rating tables from the project folder.</p></li>
+<li><p>Click open.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 6\Culverts Tables</p>
+<img alt="../_images/Worksh148.png" src="../_images/Worksh148.png" />
+<ol class="arabic simple" start="4">
+<li><p>The data has been imported.  Switch to another structure in the list if the table and plot does not update.</p></li>
+</ol>
+<img alt="../_images/Worksh149.png" src="../_images/Worksh149.png" />
+</section>
+<section id="step-7-schematize-the-data">
+<h2>Step 7: Schematize the data<a class="headerlink" href="#step-7-schematize-the-data" title="Link to this heading">#</a></h2>
+<p>Schematize the structure data and click Yes to replace the data.</p>
+<img alt="../_images/Worksh165.png" src="../_images/Worksh165.png" />
+<img alt="../_images/Worksh150.png" src="../_images/Worksh150.png" />
+</section>
+<section id="step-8-export-the-data">
+<h2>Step 8: Export the data<a class="headerlink" href="#step-8-export-the-data" title="Link to this heading">#</a></h2>
+<img alt="../_images/Worksh083.png" src="../_images/Worksh083.png" />
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/Worksh021.png" src="../_images/Worksh021.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Project Folder in QGIS Lesson 6 Export.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 6\Lesson 6 Export</p>
+<ol class="arabic simple" start="3">
+<li><p>All GDS data files will be created in the selected project folder.</p></li>
+</ol>
+<img alt="../_images/Worksh167.png" src="../_images/Worksh167.png" />
+<img alt="../_images/Worksh168.png" src="../_images/Worksh168.png" />
+<ol class="arabic simple" start="4">
+<li><p>The swmm.inp file was not exported.
+Copy it from Lesson 3 Export folder or export it again using the Storm Drain Editor.</p></li>
+</ol>
+<img alt="../_images/Worksh151.png" src="../_images/Worksh151.png" />
+</section>
+<section id="step-9-run-the-simulation">
+<h2>Step 9: Run the simulation<a class="headerlink" href="#step-9-run-the-simulation" title="Link to this heading">#</a></h2>
+<img alt="../_images/Worksh0052.png" src="../_images/Worksh0052.png" />
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+<li><p>Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../_images/Worksh152.png" src="../_images/Worksh152.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lesson%205.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lesson 5 – Realtime Rainfall Data</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Advanced-Lessons/Module%201.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Project Recovery and Debug</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-data">Required Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-procedure">Step-by-Step Procedure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-setup-the-project">Step 1: Setup the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-import-data">Step 2: Import data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-format-the-data-layers">Step 3: Format the data layers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-build-the-culverts-into-the-user-layers-structure-lines">Step 4: Build the culverts into the User Layers Structure Lines</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-assign-the-structure-attributes">Step 5: Assign the structure attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-assign-the-rating-tables">Step 6: Assign the rating tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-schematize-the-data">Step 7: Schematize the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-export-the-data">Step 8: Export the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-run-the-simulation">Step 9: Run the simulation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

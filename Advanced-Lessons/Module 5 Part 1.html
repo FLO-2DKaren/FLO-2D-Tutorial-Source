@@ -1,0 +1,859 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mudflow Part 1 - Create a Watershed Model &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Advanced-Lessons/Module 5 Part 1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mudflow Part 2 - Mudflow Parameters and Hydrograph" href="Module%205%20Part%202.html" />
+    <link rel="prev" title="Tailings Dam Model" href="Module%207.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Advanced-Lessons/Module 5 Part 1.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mudflow Part 1 - Create a Watershed Model</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-the-hydrography-map">Step 2. Load the hydrography map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-review-the-watershed">Step 3. Review the watershed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-grid">Step 4. Create the grid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-interpolate-elevation">Step 5. Interpolate Elevation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-calculate-roughness">Step 6. Calculate Roughness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-save-and-create-a-recovery-point">Step 7. Save and create a recovery point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-determine-the-total-rainfall">Step 8. Determine the total rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-sample-the-rainfall-raster">Step 9. Sample the rainfall raster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-set-up-the-rainfall">Step 10. Set up the rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-generate-the-curve-number-data">Step 11. Generate the curve number data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-calculate-the-infiltration">Step 12. Calculate the infiltration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-save-export-and-run">Step 13. Save, export, and run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-map-the-velocity-vectors-and-import-them-into-qgis">Step 14. Map the velocity vectors and import them into QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-create-a-floodplain-cross-section">Step 15. Create a floodplain cross section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-save-export-and-run-again">Step 16. Save, export, and run again</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="mudflow-part-1-create-a-watershed-model">
+<h1>Mudflow Part 1 - Create a Watershed Model<a class="headerlink" href="#mudflow-part-1-create-a-watershed-model" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>In this tutorial, create a watershed model to estimate the runoff.
+Part 1 will set up the watershed rainfall runoff model.
+Part II will apply mudflow parameters to the watershed hydrograph.</p>
+<p>Required Data</p>
+<p>The required data is in Module 5 Watershed Mudflow Tutorial.
+This is a new project.
+Please save and close the previous QGIS.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+<th class="head"><p>Location</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.qgz</p></td>
+<td><p>QGIS data files</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>*.gpkg</p></td>
+<td><p>FLO-2D Geopackage</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Elevation data</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>*.shp</p></td>
+<td><p>LandSoil shapefile</p></td>
+<td><p>Hydrology</p></td>
+</tr>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>CN and rainfall raster</p></td>
+<td><p>Hydrology</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.asc</p></td>
+<td><p>NOAA rainfall data</p></td>
+<td><p>Hydrology</p></td>
+</tr>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>AOI</p></td>
+<td><p>Shapefiles</p></td>
+</tr>
+</tbody>
+</table>
+<section id="step-1-load-the-project">
+<h2>Step 1: Load the project<a class="headerlink" href="#step-1-load-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Start with the project from Module 5 Part I Watershed Hydrology.</p></li>
+<li><p>If necessary, load it into QGIS.
+Open QGIS and drag the Watershed Module 5.qgz file into the project.</p></li>
+<li><p>Save the project.</p></li>
+</ol>
+<img alt="../_images/Module145.png" src="../_images/Module145.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+<img alt="../_images/Module146.png" src="../_images/Module146.png" />
+</section>
+<section id="step-2-load-the-hydrography-map">
+<h2>Step 2. Load the hydrography map<a class="headerlink" href="#step-2-load-the-hydrography-map" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open this website: <a class="reference external" href="https://apps.nationalmap.gov/services/">https://apps.nationalmap.gov/services/</a></p></li>
+<li><p>Click on the Theme Overlays button.</p></li>
+<li><p>Find the National Hydrography Dataset.</p></li>
+<li><p>Right click the WMS/WMTS link and click Copy Link Address.</p></li>
+</ol>
+<img alt="../_images/GetHydroData.gif" src="../_images/GetHydroData.gif" />
+<ol class="arabic simple" start="5">
+<li><p>Click the Open Data Source Manager button.</p></li>
+</ol>
+<img alt="../_images/Module147.png" src="../_images/Module147.png" />
+<ol class="arabic simple" start="6">
+<li><p>Select the WMS/WMTS tab and click New.</p></li>
+</ol>
+<img alt="../_images/Module306.png" src="../_images/Module306.png" />
+<ol class="arabic simple" start="7">
+<li><p>Enter the name and paste the URL into the top two boxes and click OK.</p></li>
+</ol>
+<img alt="../_images/Module307.png" src="../_images/Module307.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click Connect.</p></li>
+<li><p>Select 4 flowlines.</p></li>
+<li><p>Set the Image Encoding to PNG.</p></li>
+<li><p>If the CRS is not set, set it to EPSG 4326.</p></li>
+<li><p>Name the data Flow Line and click Add.</p></li>
+</ol>
+<img alt="../_images/Module308.png" src="../_images/Module308.png" />
+<ol class="arabic simple" start="13">
+<li><p>Click close to close the Data Source Manager.</p></li>
+<li><p>Double click the Flow Directions Layer.</p></li>
+<li><p>Click Transparency and set the Opacity to 50%.</p></li>
+</ol>
+<img alt="../_images/Module309.png" src="../_images/Module309.png" />
+<ol class="arabic simple" start="16">
+<li><p>Doubleclick the Elevation layer and click Symbology.</p></li>
+<li><p>Set the Render to Hillshade and click OK.</p></li>
+</ol>
+<img alt="../_images/Module310.png" src="../_images/Module310.png" />
+</section>
+<section id="step-3-review-the-watershed">
+<h2>Step 3. Review the watershed<a class="headerlink" href="#step-3-review-the-watershed" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Scan the AOI and hydrography map to see if the feature is collecting all the water from the watershed above the point
+of concentration where the mudflow is most likely to occur.</p></li>
+<li><p>This is typically at the apex of the fan.</p></li>
+<li><p>The AOI shapefile needs an integer cell_size field.
+In this case, the cell size is 100ft.</p></li>
+</ol>
+<img alt="../_images/Module150.png" src="../_images/Module150.png" />
+</section>
+<section id="step-4-create-the-grid">
+<h2>Step 4. Create the grid<a class="headerlink" href="#step-4-create-the-grid" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the create grid button.</p></li>
+<li><p>Select Use External Layer.</p></li>
+<li><p>Set the layer to AOI.</p></li>
+<li><p>Set the Cell size field to cell_size.</p></li>
+<li><p>Click OK to start the calculation and OK to close the message form.</p></li>
+</ol>
+<img alt="../_images/Module151.png" src="../_images/Module151.png" />
+</section>
+<section id="step-5-interpolate-elevation">
+<h2>Step 5. Interpolate Elevation<a class="headerlink" href="#step-5-interpolate-elevation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Interpolate from Raster button.</p></li>
+<li><p>Fill the form and click OK.</p></li>
+<li><p>Click OK to close the message form.</p></li>
+</ol>
+<img alt="../_images/Module152.png" src="../_images/Module152.png" />
+</section>
+<section id="step-6-calculate-roughness">
+<h2>Step 6. Calculate Roughness<a class="headerlink" href="#step-6-calculate-roughness" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Check the LandSoil Layer is turned on.</p></li>
+</ol>
+<img alt="../_images/step6.png" src="../_images/step6.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Calculate roughness button.</p></li>
+<li><p>Fill the form and click OK.</p></li>
+<li><p>Click OK to close the message form.</p></li>
+</ol>
+<img alt="../_images/Module153.png" src="../_images/Module153.png" />
+</section>
+<section id="step-7-save-and-create-a-recovery-point">
+<h2>Step 7. Save and create a recovery point<a class="headerlink" href="#step-7-save-and-create-a-recovery-point" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Save QGIS.</p></li>
+<li><p>Close QGIS.</p></li>
+<li><p>Zip the *.qgz and *.gpkg together.</p></li>
+<li><p>Rename the zipped file Part I Watershed Hydrology Elev and Man OK.zip</p></li>
+<li><p>Reload the project.</p></li>
+</ol>
+</section>
+<section id="step-8-determine-the-total-rainfall">
+<h2>Step 8. Determine the total rainfall<a class="headerlink" href="#step-8-determine-the-total-rainfall" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>In an internet browser, go here: <a class="reference external" href="https://hdsc.nws.noaa.gov/hdsc/pfds/">https://hdsc.nws.noaa.gov/hdsc/pfds/</a></p></li>
+<li><p>Click on California.</p></li>
+</ol>
+<img alt="../_images/Module154.png" src="../_images/Module154.png" />
+<ol class="arabic simple" start="3">
+<li><p>Scroll down to the table data and change the Tab to Supplementary Information.</p></li>
+<li><p>Change PF in GIS Format to 10yr, 3-hr and click submit.</p></li>
+</ol>
+<img alt="../_images/Module155.png" src="../_images/Module155.png" />
+<ol class="arabic simple" start="5">
+<li><p>Extract the new data into the project/Hydrology folder.</p></li>
+</ol>
+<img alt="../_images/Module156.png" src="../_images/Module156.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the User Layers Group.</p></li>
+<li><p>Drag the sw10yr03ha.asc file onto the map.</p></li>
+</ol>
+<img alt="../_images/Module157.png" src="../_images/Module157.png" />
+<ol class="arabic simple" start="8">
+<li><p>These pixels are rainfall in inches * 1000.</p></li>
+</ol>
+</section>
+<section id="step-9-sample-the-rainfall-raster">
+<h2>Step 9. Sample the rainfall raster<a class="headerlink" href="#step-9-sample-the-rainfall-raster" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Use the ID tool to find the peak rainfall.</p></li>
+</ol>
+<img alt="../_images/Module160.png" src="../_images/Module160.png" />
+<ol class="arabic simple" start="4">
+<li><p>In this case, the lightest color is the highest rainfall.  2.98 inches.</p></li>
+</ol>
+<img alt="../_images/Module161.png" src="../_images/Module161.png" />
+</section>
+<section id="step-10-set-up-the-rainfall">
+<h2>Step 10. Set up the rainfall<a class="headerlink" href="#step-10-set-up-the-rainfall" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Collapse the FLO-2D widgets and click Rain Editor.</p></li>
+<li><p>Enter the total rainfall.</p></li>
+<li><p>Select or create a rainfall distribution.</p>
+<ul class="simple">
+<li><p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Rainfall Distributions</p></li>
+</ul>
+</li>
+<li><p>Check the Spatial Variation (Depth Area Reduction)</p></li>
+</ol>
+<img alt="../_images/Module162.png" src="../_images/Module162.png" />
+<ol class="arabic simple" start="5">
+<li><p>Interpolate the rainfall depth reduction factor.</p></li>
+<li><p>Click the AR button.</p></li>
+<li><p>Fill the form.</p></li>
+<li><p>Click OK to calculate the rainARF and OK to close the message.</p></li>
+</ol>
+<img alt="../_images/Module163.png" src="../_images/Module163.png" />
+</section>
+<section id="step-11-generate-the-curve-number-data">
+<h2>Step 11. Generate the curve number data<a class="headerlink" href="#step-11-generate-the-curve-number-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>If necessary, add the Plugin Curve Number Generator.</p></li>
+</ol>
+<img alt="../_images/Module311.png" src="../_images/Module311.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open the Curve Number Generator.</p></li>
+</ol>
+<img alt="../_images/Module312.png" src="../_images/Module312.png" />
+<ol class="arabic simple" start="3">
+<li><p>Set the Area Boundary to Grid.  Check the boxes and click OK.</p></li>
+</ol>
+<img alt="../_images/Module313.png" src="../_images/Module313.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Close when it is finished.</p></li>
+</ol>
+</section>
+<section id="step-12-calculate-the-infiltration">
+<h2>Step 12. Calculate the infiltration<a class="headerlink" href="#step-12-calculate-the-infiltration" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the collapse FLO-2D Widgets button and click the Infiltration Editor Widget.</p></li>
+<li><p>Click the Global Infiltration button and fill the form.</p></li>
+<li><p>Click OK to close the form.</p></li>
+</ol>
+<img alt="../_images/Module164.png" src="../_images/Module164.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Calculate SCS CN button</p></li>
+<li><p>Fill the form and click OK to calculate and OK to close the message.</p></li>
+</ol>
+<img alt="../_images/Module165.png" src="../_images/Module165.png" />
+<ol class="arabic simple" start="6">
+<li><p>Review the Curve Number field to make sure the curve number data is as expected.</p></li>
+</ol>
+<img alt="../_images/Module166.png" src="../_images/Module166.png" />
+</section>
+<section id="step-13-save-export-and-run">
+<h2>Step 13. Save, export, and run<a class="headerlink" href="#step-13-save-export-and-run" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/Module046.png" src="../_images/Module046.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the Control Variables and click Save.</p></li>
+</ol>
+<img alt="../_images/Module314.png" src="../_images/Module314.png" />
+<img alt="../_images/Module315.png" src="../_images/Module315.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Project Folder in Advanced Class Folder</p></li>
+<li><p>Part I Watershed HydrologyWatershed Export.</p></li>
+</ol>
+<img alt="../_images/Module089.png" src="../_images/Module089.png" />
+<img alt="../_images/Module182.png" src="../_images/Module182.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/Module051.png" src="../_images/Module051.png" />
+<ol class="arabic simple" start="5">
+<li><p>Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../_images/Module316.png" src="../_images/Module316.png" />
+</section>
+<section id="step-14-map-the-velocity-vectors-and-import-them-into-qgis">
+<h2>Step 14. Map the velocity vectors and import them into QGIS<a class="headerlink" href="#step-14-map-the-velocity-vectors-and-import-them-into-qgis" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>The first run is used to identify an area of concentrated flow and build a Floodplain Hydrograph.</p></li>
+<li><p>Close the run.</p></li>
+</ol>
+<img alt="../_images/Module184.png" src="../_images/Module184.png" />
+<ol class="arabic simple" start="3">
+<li><p>Run Mapper.</p></li>
+</ol>
+<img alt="../_images/Module185.png" src="../_images/Module185.png" />
+<ol class="arabic simple" start="4">
+<li><p>Set the paths and click OK.</p></li>
+</ol>
+<img alt="../_images/Module186.png" src="../_images/Module186.png" />
+<ol class="arabic simple" start="5">
+<li><p>Load the data into Mapper.
+Click File/Read FLO-2D results.</p></li>
+</ol>
+<img alt="../_images/Module187.png" src="../_images/Module187.png" />
+<ol class="arabic simple" start="6">
+<li><p>Find the FPLAIN.DAT and click Open.</p></li>
+</ol>
+<img alt="../_images/Module187a.png" src="../_images/Module187a.png" />
+<ol class="arabic simple" start="7">
+<li><p>Plot the Velocity Vector Map.
+Scale factor = 1.</p></li>
+</ol>
+<img alt="../_images/Module188.png" src="../_images/Module188.png" />
+<ol class="arabic simple" start="8">
+<li><p>Close Mapper.</p></li>
+<li><p>Drag the Velocity Vector shapefile onto the map.</p></li>
+</ol>
+<img alt="../_images/Module189.png" src="../_images/Module189.png" />
+</section>
+<section id="step-15-create-a-floodplain-cross-section">
+<h2>Step 15. Create a floodplain cross section<a class="headerlink" href="#step-15-create-a-floodplain-cross-section" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Zoom in to the apex of the alluvial fan.</p></li>
+</ol>
+<img alt="../_images/Module190.png" src="../_images/Module190.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Digitize Floodplain Cross Section button.</p></li>
+<li><p>Draw the cross section across the canyon.</p></li>
+<li><p>click OK button to complete the feature.</p></li>
+<li><p>Click the Save button to load the Widget.</p></li>
+<li><p>Set the Flow direction.</p></li>
+<li><p>Click Schematize.</p></li>
+</ol>
+<img alt="../_images/Module191.png" src="../_images/Module191.png" />
+</section>
+<section id="step-16-save-export-and-run-again">
+<h2>Step 16. Save, export, and run again<a class="headerlink" href="#step-16-save-export-and-run-again" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/Module046.png" src="../_images/Module046.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Project Folder in Advanced Class Folder</p></li>
+<li><p>Part I Watershed HydrologyWatershed Export.</p></li>
+</ol>
+<img alt="../_images/Module089.png" src="../_images/Module089.png" />
+<img alt="../_images/Module192.png" src="../_images/Module192.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/Module051.png" src="../_images/Module051.png" />
+<ol class="arabic simple" start="5">
+<li><p>Correct the paths and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../_images/Module316.png" src="../_images/Module316.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module%207.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Tailings Dam Model</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module%205%20Part%202.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Mudflow Part 2 - Mudflow Parameters and Hydrograph</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-the-hydrography-map">Step 2. Load the hydrography map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-review-the-watershed">Step 3. Review the watershed</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-grid">Step 4. Create the grid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-interpolate-elevation">Step 5. Interpolate Elevation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-calculate-roughness">Step 6. Calculate Roughness</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-save-and-create-a-recovery-point">Step 7. Save and create a recovery point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-determine-the-total-rainfall">Step 8. Determine the total rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-sample-the-rainfall-raster">Step 9. Sample the rainfall raster</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-set-up-the-rainfall">Step 10. Set up the rainfall</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-generate-the-curve-number-data">Step 11. Generate the curve number data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-calculate-the-infiltration">Step 12. Calculate the infiltration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-save-export-and-run">Step 13. Save, export, and run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-map-the-velocity-vectors-and-import-them-into-qgis">Step 14. Map the velocity vectors and import them into QGIS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-create-a-floodplain-cross-section">Step 15. Create a floodplain cross section</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-save-export-and-run-again">Step 16. Save, export, and run again</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

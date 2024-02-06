@@ -1,0 +1,695 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Create a Grid &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Create Grid';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hydrology" href="Hydrology.html" />
+    <link rel="prev" title="Coastal Set-Up" href="Coastal%20Set-Up.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Create Grid.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Create a Grid</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-set-up-the-flo-2d-project">Step 1: Set up the FLO-2D project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-grid">Step 2: Create the grid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-save-the-project">Step 3: Save the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-assign-grid-elevation">Step 4: Assign grid elevation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-assign-roughness-data">Step 5: Assign roughness data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-assign-control-variables">Step 6: Assign Control Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-save-the-project">Step 7: Save the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-create-a-backup-file">Step 8: Create a backup file</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="create-a-grid">
+<h1>Create a Grid<a class="headerlink" href="#create-a-grid" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>This module will outline how create a grid using QGIS, FLO-2D Plugin and project data.  Calculate elevation and
+roughness to the grid.</p>
+<p>Required Data</p>
+<p>The required data is in the Coastal 2D Training Folder.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Elevation Raster</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.shp</p></td>
+<td><p>Project AOI</p></td>
+</tr>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Manning_n</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location:  \Coastal 2D Training\Project Data\AOI</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nyX01bFoUBA" frameborder="0" allowfullscreen></iframe><section id="step-1-set-up-the-flo-2d-project">
+<h2>Step 1: Set up the FLO-2D project<a class="headerlink" href="#step-1-set-up-the-flo-2d-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open QGIS 3.22.9 or newer.</p></li>
+<li><p>Drag the Project Area of Interest shapefile onto the map.</p></li>
+</ol>
+<p>C:\user\public\public document\FLO-2D Pro Documentation\Example Projects\Coastal 2D Training\Project Data\AOI</p>
+<img alt="../_images/aoi.png" src="../_images/aoi.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Set-up button.</p></li>
+</ol>
+<img alt="../_images/creategrid001.png" src="../_images/creategrid001.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click create.</p></li>
+</ol>
+<img alt="../_images/creategrid002.png" src="../_images/creategrid002.png" />
+<ol class="arabic simple" start="5">
+<li><p>Save the geopackage file to the project folder.</p></li>
+<li><p>Name the file Coastal Project.gpkg.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\Coastal 2D Training</p>
+<ol class="arabic simple" start="7">
+<li><p>Set the project CRS to Florida East HARN USft.
+Filter the list with an EPSG code: 2881.
+Select EPSG: 2881 and click OK.</p></li>
+</ol>
+<img alt="../_images/creategrid003.png" src="../_images/creategrid003.png" />
+<ol class="arabic simple" start="8">
+<li><p>Wait for the geopackage to write and check the accuracy of the project settings and click OK.</p></li>
+</ol>
+<img alt="../_images/creategrid004.png" src="../_images/creategrid004.png" />
+</section>
+<section id="step-2-create-the-grid">
+<h2>Step 2: Create the grid<a class="headerlink" href="#step-2-create-the-grid" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>From the Grid Tools widget, select Create Grid.</p></li>
+</ol>
+<img alt="../_images/creategrid005.png" src="../_images/creategrid005.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Project Domain layer, and the Cell Size field and click OK.</p></li>
+</ol>
+<img alt="../_images/creategrid006.png" src="../_images/creategrid006.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a shapefile is not available, digitize the project domain in the Computational Domain Layer.
+In order to align the grid to a raster, load the raster file into the dialog box.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Click OK to close.
+The grid is complete.</p></li>
+</ol>
+<img alt="../_images/creategrid007.png" src="../_images/creategrid007.png" />
+</section>
+<section id="step-3-save-the-project">
+<h2>Step 3: Save the project<a class="headerlink" href="#step-3-save-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the main Save button on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../_images/creategrid008.png" src="../_images/creategrid008.png" />
+<ol class="arabic simple" start="2">
+<li><p>Navigate to the coastal folder, name the project Coastal Project.qgz and click Save.</p></li>
+</ol>
+<p>\Coastal 2D Training\Coastal Project.qgz</p>
+</section>
+<section id="step-4-assign-grid-elevation">
+<h2>Step 4: Assign grid elevation<a class="headerlink" href="#step-4-assign-grid-elevation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Uncheck the Project Area of Interest Layer.</p></li>
+<li><p>Click the Computational Domain Layer</p></li>
+</ol>
+<img alt="../_images/creategrid011.png" src="../_images/creategrid011.png" />
+<ol class="arabic simple" start="3">
+<li><p>Import the elevation file.
+Open the project folder and drag the Elevation Raster.tif file onto the map space.</p></li>
+</ol>
+<p>\Coastal 2D Training\Project Data\AOI\Elevation Raster.tif</p>
+<img alt="../_images/creategrid009.png" src="../_images/creategrid009.png" />
+<ol class="arabic simple" start="4">
+<li><p>Move the elevation raster layer to the bottom of the layers list and click it to activate the Elevation layer.</p></li>
+</ol>
+<img alt="../_images/moveelevationtobottom.gif" src="../_images/moveelevationtobottom.gif" />
+<ol class="arabic simple" start="5">
+<li><p>To interpolate the elevation to a grid layer from a raster layer, use the Sample Grid Elevation button.</p></li>
+</ol>
+<img alt="../_images/creategrid010.png" src="../_images/creategrid010.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click on the Sample Grid Elevation button and enter the required data in the dialog fields and click OK.</p></li>
+<li><p>Sampling Done dialog box will appear once the process is complete.
+Click OK to close it.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use the Fill NoData option if the elevation raster is missing data such as buildings.  This method uses the
+GDAL Warp processing tool.  To learn more about GDAL Warp, visit this page:</p>
+<p><a class="reference external" href="https://gdal.org/programs/gdalwarp.html">https://gdal.org/programs/gdalwarp.html</a></p>
+</div>
+<img alt="../_images/creategrid012.png" src="../_images/creategrid012.png" />
+<img alt="../_images/Worksh154.png" src="../_images/Worksh154.png" />
+</section>
+<section id="step-5-assign-roughness-data">
+<h2>Step 5: Assign roughness data<a class="headerlink" href="#step-5-assign-roughness-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the project folder and drag the Mannings_n.shp file onto the map space.</p></li>
+</ol>
+<img alt="../_images/creategrid013.png" src="../_images/creategrid013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Sample Roughness button.</p></li>
+</ol>
+<img alt="../_images/creategrid014.png" src="../_images/creategrid014.png" />
+<ol class="arabic simple" start="3">
+<li><p>Fill the dialog box and click OK.</p></li>
+</ol>
+<img alt="../_images/creategrid015.png" src="../_images/creategrid015.png" />
+<ol class="arabic simple" start="4">
+<li><p>Once the sample is complete, the following window will appear.
+Close the window.  It is OK if your time is different from the time in the following image.</p></li>
+</ol>
+<img alt="../_images/creategrid016.png" src="../_images/creategrid016.png" />
+<ol class="arabic simple" start="5">
+<li><p>The roughness values and elevations are assigned to the grid layer in the Schematized Layers group.  Use the
+Grid Info Tool to see individual values for each cell.  Click the Grid Info button and then click any cell in the
+area of the grid.</p></li>
+</ol>
+<img alt="../_images/creategrid017.png" src="../_images/creategrid017.png" />
+<img alt="../_images/creategrid018.png" src="../_images/creategrid018.png" />
+</section>
+<section id="step-6-assign-control-variables">
+<h2>Step 6: Assign Control Variables<a class="headerlink" href="#step-6-assign-control-variables" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Set Control Parameters Button.</p></li>
+</ol>
+<img alt="../_images/creategrid023.png" src="../_images/creategrid023.png" />
+<ol class="arabic simple" start="2">
+<li><p>Fill the dialog box using the two figures below.
+Save the data to the GeoPackage with the Save button.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The variable descriptions and additional instructions are presented in the Data Input Manual.</p>
+</div>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\flo_help\Manuals\Data Input Manual PRO.pdf</p>
+<img alt="../_images/Worksh018.png" src="../_images/Worksh018.png" />
+<img alt="../_images/Worksh019.png" src="../_images/Worksh019.png" />
+</section>
+<section id="step-7-save-the-project">
+<h2>Step 7: Save the project<a class="headerlink" href="#step-7-save-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the main Save button on the QGIS toolbar.</p></li>
+</ol>
+<img alt="../_images/Worksh011.png" src="../_images/Worksh011.png" />
+</section>
+<section id="step-8-create-a-backup-file">
+<h2>Step 8: Create a backup file<a class="headerlink" href="#step-8-create-a-backup-file" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../_images/creategrid019.png" src="../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: Elevation and nvalue OK.zip</p></li>
+</ol>
+<img alt="../_images/creategrid020.png" src="../_images/creategrid020.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../_images/creategrid021.png" src="../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+<img alt="../_images/creategrid022.png" src="../_images/creategrid022.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Coastal%20Set-Up.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Coastal Set-Up</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Hydrology.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hydrology</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-set-up-the-flo-2d-project">Step 1: Set up the FLO-2D project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-the-grid">Step 2: Create the grid</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-save-the-project">Step 3: Save the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-assign-grid-elevation">Step 4: Assign grid elevation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-assign-roughness-data">Step 5: Assign roughness data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-assign-control-variables">Step 6: Assign Control Variables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-save-the-project">Step 7: Save the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-create-a-backup-file">Step 8: Create a backup file</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

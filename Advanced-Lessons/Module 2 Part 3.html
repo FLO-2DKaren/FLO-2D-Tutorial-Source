@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bridge Hydraulic Structure &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Advanced-Lessons/Module 2 Part 3';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Prescribed Breach Part 1 - Watershed" href="Module%203%20Part%201.html" />
+    <link rel="prev" title="Module 2 Part 2 – Advanced Hydraulic Structures" href="Module%202%20Part%202.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Advanced-Lessons/Module 2 Part 3.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bridge Hydraulic Structure</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-the-bridge-variables-and-coefficients">Step 2: Define the bridge variables and coefficients</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-view-parameters">Plan view parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#profile-parameters">Profile parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-opening-ratio">Bridge opening ratio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-tables">Bridge tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-variables-dialog">Bridge variables dialog</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-build-the-cross-section-data">Step 3: Build the cross section data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-save-export-and-run">Step 4: Save, export and run</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="bridge-hydraulic-structure">
+<h1>Bridge Hydraulic Structure<a class="headerlink" href="#bridge-hydraulic-structure" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>In this tutorial, the bridge variables are added to a hydraulic structure.</p>
+<p>Required Data</p>
+<p>The required data is in Module 2 Bridge Tutorial.
+This is a new project.
+Please save and close the previous QGIS.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.qgz</p></td>
+<td><p>QGIS data files</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.gpkg</p></td>
+<td><p>FLO-2D Geopackage</p></td>
+</tr>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Bridge asbuilt files</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.DAT</p></td>
+<td><p>Bridge coefficients and cross sections</p></td>
+</tr>
+</tbody>
+</table>
+<p>Additional Resources:</p>
+<p>Hamill, L., 1999.
+Bridge Hydraulics, E &amp; FN Spon, NY.
+<a class="reference external" href="https://www.google.com/books/edition/Bridge_Hydraulics/e0VZDwAAQBAJ?hl=en&amp;gbpv=0">https://www.google.com/books/edition/Bridge_Hydraulics/e0VZDwAAQBAJ?hl=en&amp;gbpv=0</a></p>
+<p>Measurement of Peak Discharge at Width Contractions by Indirect Methods
+Howard F. Matthai
+<a class="reference external" href="https://pubs.er.usgs.gov/publication/twri03A4">https://pubs.er.usgs.gov/publication/twri03A4</a></p>
+<p>Flow Through Openings in Width Constrictions
+JACOB DAVIDIAN, P. H. CARRIGAN, JR., and JOHN SHEN
+<a class="reference external" href="https://pubs.usgs.gov/wsp/1369d/report.pdf">https://pubs.usgs.gov/wsp/1369d/report.pdf</a></p>
+<p>Bridge Hydraulics Component
+Jimmy S. O’Brien
+See Tutorial Folder</p>
+<section id="step-1-load-the-project">
+<h2>Step 1: Load the project<a class="headerlink" href="#step-1-load-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Start with the project from Module 2 Bridge Tutorial</p></li>
+<li><p>If necessary, load it into QGIS.
+Open QGIS and drag the Bridge Tutorial.qgz file into the project.</p></li>
+<li><p>Save the project.</p></li>
+</ol>
+<img alt="../_images/Module078.png" src="../_images/Module078.png" />
+</section>
+<section id="step-2-define-the-bridge-variables-and-coefficients">
+<h2>Step 2: Define the bridge variables and coefficients<a class="headerlink" href="#step-2-define-the-bridge-variables-and-coefficients" title="Link to this heading">#</a></h2>
+<p>Bridge variables and coefficients are defined by the USGS method for calculating discharge through a bridge.
+Hamill defines this approach in his book on bridge hydraulics (1999).
+O’Brien describes how to apply these variables to FLO-2D in a white paper called Bridge Hydraulics Component (2019).
+This tutorial will show how to estimate or calculate the required variables for a real project setup.</p>
+<p>This bridge in Simi Valley, CA crosses Arroyo Simi at Tapo St.
+It appears to have vertical embankments and abutments.</p>
+<section id="plan-view-parameters">
+<h3>Plan view parameters<a class="headerlink" href="#plan-view-parameters" title="Link to this heading">#</a></h3>
+<img alt="../_images/Module079.png" src="../_images/Module079.png" />
+<p>b = 66 ft measured from QGIS map</p>
+<p>L = 70 ft measured from QGIS map</p>
+<p>w = 5 ft measured from QGIS map</p>
+<p>L<sub>1-2</sub> = 177 ft measured from QGIS map</p>
+</section>
+<section id="profile-parameters">
+<h3>Profile parameters<a class="headerlink" href="#profile-parameters" title="Link to this heading">#</a></h3>
+<img alt="../_images/Module080.png" src="../_images/Module080.png" />
+<p>Z = 9.23 ft</p>
+<p>Abutment left elevation = 941 ft</p>
+<p>Abutment right elevation = 937.74</p>
+<p>Average low chord = 937.4 ft</p>
+<p>Average bridge deck elevation = 953.4 ft</p>
+<p>Deck weir length = 114 ft</p>
+</section>
+<section id="bridge-opening-ratio">
+<h3>Bridge opening ratio<a class="headerlink" href="#bridge-opening-ratio" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Calculate M = q/Q = 0.83 = Discharge through bridge opening/pre-structure discharge)</p></li>
+</ol>
+<p>q = 8600 cfs at normal depth = 8.06</p>
+<p>Q = 10325 cfs at normal depth 8.06</p>
+<img alt="../_images/Module081.png" src="../_images/Module081.png" />
+<img alt="../_images/Module082.png" src="../_images/Module082.png" />
+</section>
+<section id="bridge-tables">
+<h3>Bridge tables<a class="headerlink" href="#bridge-tables" title="Link to this heading">#</a></h3>
+<p>This bridge is a Type I: Vertical embankments and abutments.</p>
+<p>M =0.83 = q/Q = (8600/10325 calculated from sdsu open channel calc)</p>
+<p>C’ = 0.94 derived from table a (L/b = 70/66 = 1.06, M = 0.83)</p>
+<p>k<sub>F</sub> = 1.10 derived from table b (F calculated with open channel calc = 1.0)</p>
+<p>k<sub>w</sub> = 1.05 derived from table e (w/b = 5/66 = 0.076)</p>
+<p>k<sub>ɸ</sub> = 1.00 derived from table g (angle = 10°)</p>
+<p>Z = 9.23 ft (bridge low chord to channel bed)</p>
+<p>Yu = 8.061 ft (normal depth upstream at 100yr discharge.)</p>
+<p>No submergence at 100 yr discharge.</p>
+<img alt="../_images/Module083.jpg" src="../_images/Module083.jpg" />
+<p>Type 1 Bridge Opening (from Hamill, 1999; p.
+111, Figure 4.3)</p>
+<img alt="../_images/Module084.jpg" src="../_images/Module084.jpg" />
+<p>Type 1 Bridge Opening cont.
+(from Hamill, 1999; p.
+112, Figure 4.3)</p>
+</section>
+<section id="bridge-variables-dialog">
+<h3>Bridge variables dialog<a class="headerlink" href="#bridge-variables-dialog" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Fill the table from the preceding instructions.</p></li>
+<li><p>Click ok to close this form.</p></li>
+</ol>
+<img alt="../_images/Module085.png" src="../_images/Module085.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Schematize button on the Structure editor.</p></li>
+</ol>
+<img alt="../_images/Module086.png" src="../_images/Module086.png" />
+</section>
+</section>
+<section id="step-3-build-the-cross-section-data">
+<h2>Step 3: Build the cross section data<a class="headerlink" href="#step-3-build-the-cross-section-data" title="Link to this heading">#</a></h2>
+<img alt="../_images/Module087.png" src="../_images/Module087.png" />
+<ol class="arabic simple">
+<li><p>The cross section data for L<sub>1-2</sub> is taken from the cross section table of Cross-Section-60 and the Bridge cross section estimated based
+on the geometry of the bridge.</p></li>
+</ol>
+<img alt="../_images/step3.png" src="../_images/step3.png" />
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>X</p></th>
+<th class="head"><p>6657</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.00</p></td>
+<td><p>957.08</p></td>
+<td><p>954.11</p></td>
+</tr>
+<tr class="row-odd"><td><p>4.00</p></td>
+<td><p>957.15</p></td>
+<td><p>953.48</p></td>
+</tr>
+<tr class="row-even"><td><p>10.01</p></td>
+<td><p>957.16</p></td>
+<td><p>952.04</p></td>
+</tr>
+<tr class="row-odd"><td><p>20.02</p></td>
+<td><p>954.13</p></td>
+<td><p>949.50</p></td>
+</tr>
+<tr class="row-even"><td><p>22.02</p></td>
+<td><p>953.38</p></td>
+<td><p>944.24</p></td>
+</tr>
+<tr class="row-odd"><td><p>28.03</p></td>
+<td><p>950.24</p></td>
+<td><p>942.80</p></td>
+</tr>
+<tr class="row-even"><td><p>32.04</p></td>
+<td><p>948.06</p></td>
+<td><p>940.84</p></td>
+</tr>
+<tr class="row-odd"><td><p>38.04</p></td>
+<td><p>945.23</p></td>
+<td><p>938.81</p></td>
+</tr>
+<tr class="row-even"><td><p>42.05</p></td>
+<td><p>943.70</p></td>
+<td><p>937.43</p></td>
+</tr>
+<tr class="row-odd"><td><p>46.05</p></td>
+<td><p>942.41</p></td>
+<td><p>937.30</p></td>
+</tr>
+<tr class="row-even"><td><p>50.06</p></td>
+<td><p>942.23</p></td>
+<td><p>937.31</p></td>
+</tr>
+<tr class="row-odd"><td><p>62.07</p></td>
+<td><p>941.52</p></td>
+<td><p>937.26</p></td>
+</tr>
+<tr class="row-even"><td><p>70.08</p></td>
+<td><p>941.74</p></td>
+<td><p>937.31</p></td>
+</tr>
+<tr class="row-odd"><td><p>78.09</p></td>
+<td><p>944.95</p></td>
+<td><p>937.26</p></td>
+</tr>
+<tr class="row-even"><td><p>84.09</p></td>
+<td><p>948.11</p></td>
+<td><p>937.23</p></td>
+</tr>
+<tr class="row-odd"><td><p>86.10</p></td>
+<td><p>948.47</p></td>
+<td><p>937.34</p></td>
+</tr>
+<tr class="row-even"><td><p>88.10</p></td>
+<td><p>949.16</p></td>
+<td><p>937.69</p></td>
+</tr>
+<tr class="row-odd"><td><p>94.11</p></td>
+<td><p>951.27</p></td>
+<td><p>939.68</p></td>
+</tr>
+<tr class="row-even"><td><p>102.12</p></td>
+<td><p>955.43</p></td>
+<td><p>942.52</p></td>
+</tr>
+<tr class="row-odd"><td><p>110.12</p></td>
+<td><p>956.13</p></td>
+<td><p>945.75</p></td>
+</tr>
+<tr class="row-even"><td><p>112.13</p></td>
+<td><p>955.87</p></td>
+<td><p>945.87</p></td>
+</tr>
+<tr class="row-odd"><td><p>118.13</p></td>
+<td><p>955.86</p></td>
+<td><p>948.39</p></td>
+</tr>
+<tr class="row-even"><td><p>120.14</p></td>
+<td><p>955.90</p></td>
+<td><p>954.00</p></td>
+</tr>
+</tbody>
+</table>
+<ol class="arabic simple" start="2">
+<li><p>Create a text file called BRIDGE_XSEC.DAT.</p></li>
+<li><p>Copy the table above into the text file.</p></li>
+<li><p>Replace the tabs with spaces using this method:</p>
+<ul class="simple">
+<li><p>Select a tab.</p></li>
+<li><p>Ctrl-H or Edit Replace</p></li>
+<li><p>Add a few spaces into the Replace with field.</p></li>
+<li><p>Click Replace All.</p></li>
+<li><p>Save the file.</p></li>
+</ul>
+</li>
+<li><p>This file would normally be copied to the export folder but there is already one in there.
+This is just to show the procedure.</p></li>
+</ol>
+<img alt="../_images/Module088.png" src="../_images/Module088.png" />
+</section>
+<section id="step-4-save-export-and-run">
+<h2>Step 4: Save, export and run<a class="headerlink" href="#step-4-save-export-and-run" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/Module046.png" src="../_images/Module046.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Project Folder in Module 2Bridge TutorialBridge Tutorial Export.</p></li>
+</ol>
+<img alt="../_images/Module089.png" src="../_images/Module089.png" />
+<img alt="../_images/Module090.png" src="../_images/Module090.png" />
+<img alt="../_images/Module091.png" src="../_images/Module091.png" />
+<img alt="../_images/Module092.png" src="../_images/Module092.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/Module051.png" src="../_images/Module051.png" />
+<ol class="arabic simple" start="4">
+<li><p>Correct the paths and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../_images/Module093.png" src="../_images/Module093.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module%202%20Part%202.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Module 2 Part 2 – Advanced Hydraulic Structures</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module%203%20Part%201.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Prescribed Breach Part 1 - Watershed</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-define-the-bridge-variables-and-coefficients">Step 2: Define the bridge variables and coefficients</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plan-view-parameters">Plan view parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#profile-parameters">Profile parameters</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-opening-ratio">Bridge opening ratio</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-tables">Bridge tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bridge-variables-dialog">Bridge variables dialog</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-build-the-cross-section-data">Step 3: Build the cross section data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-save-export-and-run">Step 4: Save, export and run</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

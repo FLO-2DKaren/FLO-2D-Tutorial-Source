@@ -1,0 +1,1177 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Channel &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Channel';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Culverts" href="Culverts.html" />
+    <link rel="prev" title="Boundary Conditions" href="Boundary%20Conditions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Channel.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Channel</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-prepare-the-map">Step 1: Prepare the map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-the-data">Step 2: Load the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-left-bank-digitize">Step 3: Left bank digitize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-right-bank-digitize">Step 4: Right bank digitize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-cross-sections-fast-method">Step 5: Cross sections - fast method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-cross-sections-digitize-method">Step 5: Cross sections - digitize method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-cross-section-attributes">Step 6. Cross section attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-load-cross-section-data">Step 7: Load cross section data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-schematize-channel">Step 8: Schematize channel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-review-bank-alignment">Step 9: Review bank alignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-interpolate-the-channel">Step 10: Interpolate the channel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-channel-boundary-condition">Step 11: Channel boundary condition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inlet">Inlet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outlet">Outlet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-test-run">Step 12: Test Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-tide-gates">Step 13: Tide gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-export-the-project">Step 14: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-run-the-simulation">Step 15: Run the simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-create-a-backup-file">Step 16: Create a backup file</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="channel">
+<h1>Channel<a class="headerlink" href="#channel" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>Use this training module to build an urban drainage channel by digitizing the channel components.  Finish it up by
+adding tide gates and boundary conditions to the channel.</p>
+<p><strong>Required Data</strong></p>
+<p>All data is provided in the Lesson folders.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Left bank template</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.shp</p></td>
+<td><p>Right bank template</p></td>
+</tr>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Cross sections template</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.shp</p></td>
+<td><p>Points</p></td>
+</tr>
+<tr class="row-even"><td><p>*.txt</p></td>
+<td><p>Tide gate tables</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location:  \Coastal 2D Training\Project Data\Channel</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XZ6STBmGsWE" frameborder="0" allowfullscreen></iframe><section id="step-1-prepare-the-map">
+<h2>Step 1: Prepare the map<a class="headerlink" href="#step-1-prepare-the-map" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Use Quick Map Services to load an aerial image onto the map.</p></li>
+</ol>
+<img alt="../_images/Lesson005.png" src="../_images/Lesson005.png" />
+<img alt="../_images/chan003.png" src="../_images/chan003.png" />
+<ol class="arabic simple" start="2">
+<li><p>Make sure the Elevation Raster layer is checked on and if necessary change symbology to Hillshade.</p></li>
+</ol>
+<img alt="../_images/chan001.png" src="../_images/chan001.png" />
+<ol class="arabic simple" start="3">
+<li><p>Simplify the layers list by collapsing unused groups and unchecking schematic layers.</p></li>
+</ol>
+<img alt="../_images/chan0013.png" src="../_images/chan0013.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The aerial image and LiDAR map help define the left and right bank lines and help determine where cross
+sections are required.  Sometimes the LiDAR map is better and other times the Aerial is better.  Use
+both to help determine the best placement.</p>
+</div>
+</section>
+<section id="step-2-load-the-data">
+<h2>Step 2: Load the data<a class="headerlink" href="#step-2-load-the-data" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The imported data is used as templates to move the class along and reduce errors.  These templates are not
+needed in general.  The channels can be built directly into the User Channel Layers.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click the Channel group in the User Layers.</p></li>
+<li><p>Drag the channel template shapefiles onto the map.</p></li>
+</ol>
+<img alt="../_images/chan002.png" src="../_images/chan002.png" />
+</section>
+<section id="step-3-left-bank-digitize">
+<h2>Step 3: Left bank digitize<a class="headerlink" href="#step-3-left-bank-digitize" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Normally to digitize a channel, you would select the Left Bank Lines layer and add a channel feature to it.
+That process is too slow and complex for this class. We will use a simplified method to reduce errors and time.
+The following animation shows the full process.  Open it in a new tab to study the method.</p>
+</div>
+<img alt="../_images/makeleftbank.gif" src="../_images/makeleftbank.gif" />
+<ol class="arabic simple">
+<li><p>Please proceed with a faster method to keep on schedule.</p></li>
+<li><p>Click the Left Bank Template layer. It will be copied into the official layer.</p></li>
+<li><p>Select the channel line using the select with rectangle button.  Drag a rectangle over the channel lines to select the line.</p></li>
+</ol>
+<img alt="../_images/chan0034.png" src="../_images/chan0034.png" />
+<ol class="arabic simple" start="4">
+<li><p>Ctrl-c to copy the line feature.</p></li>
+<li><p>Click the official Left Bank Lines layer.</p></li>
+<li><p>Click the Edit Pencil button and Ctrl-v to paste the line into the Left Bank Lines layer.</p></li>
+<li><p>Save the Left Bank Lines layer and un-toggle the Editor Pencil.</p></li>
+</ol>
+<img alt="../_images/chan0037.png" src="../_images/chan0037.png" />
+<ol class="arabic simple" start="8">
+<li><p>Click the de-select all button to reset the select tool.</p></li>
+</ol>
+<img alt="../_images/chan0038.png" src="../_images/chan0038.png" />
+<ol class="arabic simple" start="9">
+<li><p>Watch the animated image for a demo.</p></li>
+</ol>
+<img alt="../_images/copyleftbank.gif" src="../_images/copyleftbank.gif" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Remember, this copy paste method is used to keep the class on schedule.  In your future projects, you can add a
+feature to the Left Bank layer instead of using the copy paste method.  The Advanced Channel Lesson on the left
+sidebar shows a more detailed explanation of channel development.</p>
+</div>
+</section>
+<section id="step-4-right-bank-digitize">
+<h2>Step 4: Right bank digitize<a class="headerlink" href="#step-4-right-bank-digitize" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Normally, you would build a right bank line just like a left bank line.  Again, that process will slow
+the class down too much.  It is demonstrated in the following animation but please follow the simpler
+steps below.
+Open it in a new tab to study the method.</p>
+</div>
+<img alt="../_images/makerightbank.gif" src="../_images/makerightbank.gif" />
+<ol class="arabic simple">
+<li><p>Please proceed with a faster method to keep on schedule.</p></li>
+<li><p>Click the Right Bank Template layer. It will be copied into the official layer.</p></li>
+<li><p>Select the channel line using the Select button.  Drag a rectangle over the channel lines to select the line.</p></li>
+</ol>
+<img alt="../_images/chan0043.png" src="../_images/chan0043.png" />
+<ol class="arabic simple" start="4">
+<li><p>Ctrl-C to copy the line.</p></li>
+<li><p>Click the official Right Bank Lines.</p></li>
+<li><p>Click the Edit button and Ctrl-v to paste the line into the Right Bank Lines layer.</p></li>
+<li><p>Save the Right Bank Lines layer and un-toggle the Editor Pencil.</p></li>
+</ol>
+<img alt="../_images/chan0047.png" src="../_images/chan0047.png" />
+<ol class="arabic simple" start="8">
+<li><p>Watch the animation to see the process.</p></li>
+</ol>
+<img alt="../_images/copyrightbank.gif" src="../_images/copyrightbank.gif" />
+<ol class="arabic simple" start="8">
+<li><p>De-select all features and uncheck the left and right bank templates.</p></li>
+</ol>
+<img alt="../_images/chan003a.png" src="../_images/chan003a.png" />
+</section>
+<section id="step-5-cross-sections-fast-method">
+<h2>Step 5: Cross sections - fast method<a class="headerlink" href="#step-5-cross-sections-fast-method" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Cross section editing takes time.  <strong>Step 5 fast method</strong> is used for this class.  <strong>Step 5 digitize method</strong>
+is to illustrate the process for your own projects.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Collapse the FLO-2D widgets.</p></li>
+<li><p>Open the Cross Section Editor widget.</p></li>
+<li><p>Click the Digitize Cross Sections button.</p></li>
+</ol>
+<img alt="../_images/chan0051.png" src="../_images/chan0051.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Cross Sections Template layer.</p></li>
+<li><p>Click the Select All features button.</p></li>
+<li><p>Ctrl-c to copy all of the cross sections.</p></li>
+</ol>
+<img alt="../_images/chan0054.png" src="../_images/chan0054.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click the Cross Sections layer.</p></li>
+<li><p>Ctrl-v to paste the cross section lines into the layer.</p></li>
+</ol>
+<img alt="../_images/chan0055.png" src="../_images/chan0055.png" />
+<ol class="arabic simple" start="9">
+<li><p>Click the Save button on the Cross Section Editor widget.</p></li>
+<li><p>Note the cross sections loaded into the widget.</p></li>
+<li><p>De-select all of the features.</p></li>
+</ol>
+<img alt="../_images/chan0058.png" src="../_images/chan0058.png" />
+<ol class="arabic simple" start="12">
+<li><p>Watch the animation to see the process.</p></li>
+</ol>
+<img alt="../_images/copycrosssection.gif" src="../_images/copycrosssection.gif" />
+</section>
+<section id="step-5-cross-sections-digitize-method">
+<h2>Step 5: Cross sections - digitize method<a class="headerlink" href="#step-5-cross-sections-digitize-method" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is the method you would use to create cross sections on your own channel.  It has more
+details and instructions.  Review it but please use the fast method for the live class.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Digitize the cross sections in order from upstream to downstream.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Zoom in on the southeast corner of the map.</p></li>
+</ol>
+<img alt="../_images/chan004.png" src="../_images/chan004.png" />
+<ol class="arabic simple" start="2">
+<li><p>Un-check the Grid layer in the Schematized Layers Group.  If the Schematized group is un-checked, skip this.</p></li>
+</ol>
+<img alt="../_images/chan004a.png" src="../_images/chan004a.png" />
+<ol class="arabic simple" start="3">
+<li><p>Go to the Channels group and double click the Cross Sections Template layer.</p></li>
+</ol>
+<img alt="../_images/chan004b.png" src="../_images/chan004b.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click Symbology and Click Simple Line.  Set the color to red and the stroke width to 1.  Click OK to close the
+window.</p></li>
+</ol>
+<img alt="../_images/chan005.png" src="../_images/chan005.png" />
+<ol class="arabic simple" start="5">
+<li><p>Add the Snapping toolbar.  Right click the toolbar area and check the Snapping toolbar.</p></li>
+</ol>
+<img alt="../_images/chan008.png" src="../_images/chan008.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the Config button and set it to Advanced Configuration.</p></li>
+<li><p>Click the eye button and set the active layer to Cross Sections.</p></li>
+</ol>
+<img alt="../_images/chan0557.png" src="../_images/chan0557.png" />
+<ol class="arabic simple" start="7">
+<li><p>Collapse the FLO-2D widgets and click Cross Sections Editor.</p></li>
+</ol>
+<img alt="../_images/chan006.png" src="../_images/chan006.png" />
+<ol class="arabic simple" start="8">
+<li><p>The first cross section has important restrictions.</p>
+<ul class="simple">
+<li><p>The line must cross the left bank line.</p></li>
+<li><p>The line must start in the same cell as the left bank line.</p></li>
+<li><p>The line must cross the right bank line.</p></li>
+<li><p>The line must start in the same cell as the right bank line.</p></li>
+</ul>
+</li>
+<li><p>Click the Add Cross Section Lines button on the Cross Section Editor.</p></li>
+</ol>
+<img alt="../_images/chan007.png" src="../_images/chan007.png" />
+<ol class="arabic simple" start="10">
+<li><p>Digitize all 24 cross sections using process shown the following animation.  Use the red lines as guides.</p>
+<ol class="loweralpha simple">
+<li><p>Left click the south side (left bank).</p></li>
+<li><p>Left click the north side (right bank).</p></li>
+<li><p>Right click to close the line.</p></li>
+<li><p>Click OK or use the Enter key to close attributes window.</p></li>
+</ol>
+</li>
+</ol>
+<img alt="../_images/crossection1.gif" src="../_images/crossection1.gif" />
+<ol class="arabic simple" start="11">
+<li><p>Handy digitizing tools:</p>
+<ul class="simple">
+<li><p>Left click to drop a point.  Right click to close a polyline or polygon.</p></li>
+<li><p>Rotate the scroll wheel to zoom in and out.</p></li>
+<li><p>Click and hold the scroll wheel to pan while in editing mode.</p></li>
+<li><p>Use the delete key to delete the last vertex created.</p></li>
+<li><p>Use the Esc key to cancel the polyline or polygon.</p></li>
+<li><p>The point won’t drop until the mouse button is released.</p></li>
+<li><p>Redo and undo have limited functionality and can be useful.  Ctrl-z to undo.</p></li>
+</ul>
+</li>
+<li><p>Once the last cross section is complete.  Click the Save icon on the Cross Sections Editor.</p></li>
+</ol>
+<img alt="../_images/chan009a.png" src="../_images/chan009a.png" />
+<ol class="arabic simple" start="13">
+<li><p>Remove the channel templates from the layers list.  Right click them and click Remove.</p></li>
+</ol>
+<img alt="../_images/chan010a.png" src="../_images/chan010a.png" />
+<ol class="arabic simple" start="14">
+<li><p>The final cross sections should look like something like this:</p></li>
+</ol>
+<img alt="../_images/chan010.png" src="../_images/chan010.png" />
+</section>
+<section id="step-6-cross-section-attributes">
+<h2>Step 6. Cross section attributes<a class="headerlink" href="#step-6-cross-section-attributes" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>The widget can be used to edit the attributes of the cross sections but that method is slow. Sometimes it is
+faster to use the attribute table editor.</p></li>
+</ol>
+<img alt="../_images/chan0061.png" src="../_images/chan0061.png" />
+<ol class="arabic simple" start="2">
+<li><p>Go to the User layers group.  Right click the Cross Sections layer and click Open Attribute Table.</p></li>
+</ol>
+<img alt="../_images/chan0062.png" src="../_images/chan0062.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Edit pencil.</p></li>
+<li><p>Set the field to fcn.</p></li>
+<li><p>Set the n value to 0.035.</p></li>
+<li><p>Click Update All.</p></li>
+</ol>
+<img alt="../_images/chan0066.png" src="../_images/chan0066.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click Save button</p></li>
+<li><p>Un-toggle the editor pencil.</p></li>
+<li><p>Close the table.</p></li>
+</ol>
+<img alt="../_images/chan0069.png" src="../_images/chan0069.png" />
+</section>
+<section id="step-7-load-cross-section-data">
+<h2>Step 7: Load cross section data<a class="headerlink" href="#step-7-load-cross-section-data" title="Link to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IPgd1tO6LC8" frameborder="0" allowfullscreen></iframe><div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The video discusses cross section development.  Methods to determine the urban channel geometry.</p>
+<ol class="loweralpha simple">
+<li><p>As-built files are the first source of data but not available in all cases.</p></li>
+<li><p>Survey channel cross sections.</p></li>
+<li><p>Sample elevation data from a LiDAR raster. (This method only works if the channels are dry.)</p></li>
+<li><p>Measure and estimate channel geometry with QGIS tools.</p></li>
+</ol>
+</div>
+<ol class="arabic simple">
+<li><p>From the Cross Section Editor, choose Cross-Section-1.</p></li>
+</ol>
+<img alt="../_images/chan011.png" src="../_images/chan011.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open the corresponding cross section text file.</p></li>
+</ol>
+<img alt="../_images/chan012.png" src="../_images/chan012.png" />
+<p>Data Location: \Coastal 2D Training\Project Data\Channel\Cross Section Station Elevation Files</p>
+<ol class="arabic simple" start="3">
+<li><p>Copy the data and close the text file.  Tip: Hold down the Ctrl key and press A C W keys.</p></li>
+</ol>
+<img alt="../_images/chan013.png" src="../_images/chan013.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the first cell of the of the FLO-2D Table Editor and click the Paste button.</p></li>
+</ol>
+<img alt="../_images/chan014.png" src="../_images/chan014.png" />
+<ol class="arabic simple" start="5">
+<li><p>Repeat this process for all 24 cross sections.</p></li>
+<li><p>Use the mouse roller to scroll through each cross section to see that it has correct data.</p></li>
+</ol>
+<img alt="../_images/chan0076.png" src="../_images/chan0076.png" />
+</section>
+<section id="step-8-schematize-channel">
+<h2>Step 8: Schematize channel<a class="headerlink" href="#step-8-schematize-channel" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If any of the following procedure needs to be repeated, always return to this Schematize step to reset
+the data before trying to modify anything.  It is a reset button and it is very important.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click Schematize channel.</p></li>
+</ol>
+<img alt="../_images/chan015.png" src="../_images/chan015.png" />
+<ol class="arabic simple" start="2">
+<li><p>If the channel schematizing process was successful, the following messages will appear.
+Click Yes and Close.</p></li>
+</ol>
+<img alt="../_images/chan016.png" src="../_images/chan016.png" />
+<ol class="arabic simple" start="3">
+<li><p>If an error message appears.  Ask the instructor for help.</p></li>
+</ol>
+</section>
+<section id="step-9-review-bank-alignment">
+<h2>Step 9: Review bank alignment<a class="headerlink" href="#step-9-review-bank-alignment" title="Link to this heading">#</a></h2>
+<p>Channel alignment in urban projects can be important because channels are usually squeezed between features like
+buildings, walls, and streets.  In this image, the right bank right along the houses.  Recheck the banks after adding
+buildings.</p>
+<img alt="../_images/chan017.png" src="../_images/chan017.png" />
+<p>It is simple to make minor corrections to the left bank lines, right bank lines, and cross sections to realign
+the channels.</p>
+<ol class="arabic simple">
+<li><p>In the User Layers group, turn on the Editor Pencil for Left Bank Lines, Right Bank Lines, and Cross Sections.</p></li>
+</ol>
+<img alt="../_images/chan018.png" src="../_images/chan018.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the Vertex Tool to All Layers.</p></li>
+</ol>
+<img alt="../_images/Lesson033.png" src="../_images/Lesson033.png" />
+<ol class="arabic simple" start="3">
+<li><p>Reposition the left or right bank so that it is better aligned with the right side of the channel.</p></li>
+</ol>
+<img alt="../_images/chan019.png" src="../_images/chan019.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Schematize button to adjust the Schematized Channel layers.  Click Yes and Close to close the windows.  In
+This case, hitting the enter button twice will be faster.</p></li>
+</ol>
+<img alt="../_images/Lesson035.png" src="../_images/Lesson035.png" />
+<img alt="../_images/chan020.png" src="../_images/chan020.png" />
+<ol class="arabic simple" start="5">
+<li><p>Always finish by clicking the schematize button to ensure the final edits were updated.</p></li>
+<li><p>Once the final edits are complete, save and close the editors for the User Layers.</p></li>
+</ol>
+</section>
+<section id="step-10-interpolate-the-channel">
+<h2>Step 10: Interpolate the channel<a class="headerlink" href="#step-10-interpolate-the-channel" title="Link to this heading">#</a></h2>
+<p>N type channels are interpolated using the Interpolator.exe program.
+This method will outline how to call the interpolator and reload the data.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kmKWwtY_3n8" frameborder="0" allowfullscreen></iframe><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If this process needs to be repeated for any reason, click Schematize button before performing this
+step.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click the Create CHAN.DAT, XSEC.DAT, AND CHANBANK.DAT button.</p></li>
+</ol>
+<img alt="../_images/chan021.png" src="../_images/chan021.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the folder where the *.DAT files will be saved.</p></li>
+</ol>
+<p>Data Location: \Coastal 2D Training\Project Data\Channel Interpolate Test</p>
+<img alt="../_images/chan022.png" src="../_images/chan022.png" />
+<ol class="arabic simple" start="3">
+<li><p>The first action saves the channel data.
+Click OK to close the message.</p></li>
+</ol>
+<img alt="../_images/chan026.png" src="../_images/chan026.png" />
+<ol class="arabic simple" start="4">
+<li><p>The second action calls the Interpolate.exe program from the FLO-2D Pro folder.  Click Interpolate.</p></li>
+</ol>
+<img alt="../_images/chan023.png" src="../_images/chan023.png" />
+<ol class="arabic simple" start="5">
+<li><p>If the interpolation is performed correctly the following message will appear.
+Click Import CHAN.DAT and XSEC.DAT to update the channel data in QGIS.</p></li>
+</ol>
+<img alt="../_images/Lesson048.png" src="../_images/Lesson048.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the OK icon when the process is finished.</p></li>
+</ol>
+<img alt="../_images/Lesson049.png" src="../_images/Lesson049.png" />
+<ol class="arabic simple" start="7">
+<li><p>The channel is now complete.  The data will be saved to the CHAN.DAT, CHANBANK.DAT, and XSEC.DAT files.</p></li>
+</ol>
+</section>
+<section id="step-11-channel-boundary-condition">
+<h2>Step 11: Channel boundary condition<a class="headerlink" href="#step-11-channel-boundary-condition" title="Link to this heading">#</a></h2>
+<p>The boundary condition for this channel include a hydrograph at the upstream side and a tide stage control at the
+downstream side.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/h-TRq1kY_3w" frameborder="0" allowfullscreen></iframe><section id="inlet">
+<h3>Inlet<a class="headerlink" href="#inlet" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Zoom to the first channel element on the southeast corner of the map.</p></li>
+</ol>
+<img alt="../_images/chan025.png" src="../_images/chan025.png" />
+<ol class="arabic simple" start="2">
+<li><p>Uncheck the visibility of the User Layers Left Bank Lines, Right Bank Lines, Cross Sections.</p></li>
+</ol>
+<img alt="../_images/chan027.png" src="../_images/chan027.png" />
+<ol class="arabic simple" start="3">
+<li><p>Collapse the FLO-2D Widgets and expand the Boundary Condition Editor.</p></li>
+</ol>
+<img alt="../_images/chan029.png" src="../_images/chan029.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Add point BC button, click the first left bank cell of the channel and click OK.</p></li>
+</ol>
+<img alt="../_images/chan028.png" src="../_images/chan028.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Save on the Widget and OK to close the message.</p></li>
+</ol>
+<img alt="../_images/chan030.png" src="../_images/chan030.png" />
+<ol class="arabic simple" start="6">
+<li><p>Check the Inflow radio button and change the BC name of the inflow to CocoIn</p></li>
+<li><p>Set Defined to Channel</p></li>
+<li><p>Name the new Time Series to 24hr100yr.</p></li>
+</ol>
+<img alt="../_images/chan031.png" src="../_images/chan031.png" />
+<ol class="arabic simple" start="9">
+<li><p>Open the hydrograph file in Notepad and copy the data.</p></li>
+</ol>
+<img alt="../_images/chan032.png" src="../_images/chan032.png" />
+<p>Data Location: \Coastal 2D Training\Project Data\Boundary Conditions\24hr100yrInflow.txt</p>
+<ol class="arabic simple" start="10">
+<li><p>Place the cursor in the first cell of the Table and click Paste.</p></li>
+</ol>
+<img alt="../_images/chan033.png" src="../_images/chan033.png" />
+<ol class="arabic simple" start="11">
+<li><p>Click the Schematize button the boundary conditions and click OK to close the message.</p></li>
+</ol>
+<img alt="../_images/chan035.png" src="../_images/chan035.png" />
+<ol class="arabic simple" start="12">
+<li><p>The inflow boundary is now complete. The data will be saved to the INFLOW.DAT file.</p></li>
+</ol>
+</section>
+<section id="outlet">
+<h3>Outlet<a class="headerlink" href="#outlet" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Zoom to the end of the channel.</p></li>
+<li><p>Nothing is required in this location because the channel terminates upstream of the boundary.  It will exchange water
+with the floodplain as the tide goes up and down.</p></li>
+<li><p>The following image has is an overlay of the last cross section and the tide table.</p></li>
+</ol>
+<img alt="../_images/chan034.png" src="../_images/chan034.png" />
+</section>
+</section>
+<section id="step-12-test-run">
+<h2>Step 12: Test Run<a class="headerlink" href="#step-12-test-run" title="Link to this heading">#</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The video shows how to find and fix channel errors but the class project will run without errors.  Review
+the video if you have time but skip it if you don’t.</p>
+</div>
+<p>The test run will help determine if the channel is set up correctly.  There are a handful of common errors with channel
+modeling.  This video will show how to find and fix these 3 common errors.</p>
+<ul class="simple">
+<li><p>Banks too close together.</p></li>
+<li><p>Boundary cross sections are too high.  Invert elevations do not allow downstream flow.</p></li>
+<li><p>A bank element is inside the channel.</p></li>
+</ul>
+<p>These are reported in an the file <strong>ERROR.CHK</strong>.  If they exist, the model can’t run.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bEkNmYHvX4Q" frameborder="0" allowfullscreen></iframe><ol class="arabic simple">
+<li><p>Set the control Parameters and click save.  Turn on the channel switch and turn of the rainfall for this test.</p></li>
+</ol>
+<img alt="../_images/chan0121.png" src="../_images/chan0121.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the project into the Channel Interpolation Test folder.</p></li>
+</ol>
+<img alt="../_images/chan0122.png" src="../_images/chan0122.png" />
+<img alt="../_images/chan0123.png" src="../_images/chan0123.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/chan0124.png" src="../_images/chan0124.png" />
+<ol class="arabic simple" start="4">
+<li><p>As anticipated, the error warning appears.  Follow the video to see how to review the error.</p></li>
+</ol>
+<img alt="../_images/chan0125.png" src="../_images/chan0125.png" />
+</section>
+<section id="step-13-tide-gates">
+<h2>Step 13: Tide gates<a class="headerlink" href="#step-13-tide-gates" title="Link to this heading">#</a></h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zbDq3bpzpX8" frameborder="0" allowfullscreen></iframe><p>Two gated weirs are in the Cocohatchee channel.  Coco1 is further west and Coco2 is close to the east boundary.</p>
+<img alt="../_images/chan036.png" src="../_images/chan036.png" />
+<ol class="arabic simple">
+<li><p>Zoom the map to Coco1.</p></li>
+</ol>
+<img alt="../_images/chan037.png" src="../_images/chan037.png" />
+<ol class="arabic simple" start="2">
+<li><p>Collapse the FLO-2D widgets and click Structures Editor.</p></li>
+</ol>
+<img alt="../_images/chan038.png" src="../_images/chan038.png" />
+<ol class="arabic simple" start="3">
+<li><p>Digitize the first culvert.</p>
+<ol class="arabic simple">
+<li><p>Click the Create Structure button.</p></li>
+<li><p>Click the upstream left bank element.</p></li>
+<li><p>Click the downstream left bank element.</p></li>
+<li><p>Right click to close the line.</p></li>
+<li><p>Click OK to close the feature attributes.</p></li>
+</ol>
+</li>
+</ol>
+<img alt="../_images/chan039.png" src="../_images/chan039.png" />
+<ol class="arabic simple" start="4">
+<li><p>Move upstream to the Coco2 and create the second structure.</p></li>
+</ol>
+<img alt="../_images/chan040a.png" src="../_images/chan040a.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Roll the wheel to zoom.  Use the Arrow Keys or click and drag the wheel to pan.</p>
+</div>
+<img alt="../_images/chan040.png" src="../_images/chan040.png" />
+<ol class="arabic simple" start="5">
+<li><p>Finish the structures in the Structure Editor widget.</p></li>
+</ol>
+<p>Coco1</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Save the Structures.</p></li>
+<li><p>Click the center button</p></li>
+<li><p>Select Structure1 and change the name. Coco1</p></li>
+<li><p>Type = Channel</p></li>
+<li><p>Rating = Rating table</p></li>
+<li><p>Tailwater condition is Allow Upstream Flow.</p></li>
+</ol>
+</div></blockquote>
+<img alt="../_images/chancoco1.png" src="../_images/chancoco1.png" />
+<p>Coco2</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Select Structure2 and change the name. Coco2</p></li>
+<li><p>Type = Channel</p></li>
+<li><p>Rating = Rating table</p></li>
+<li><p>Tailwater condition is Allow Upstream Flow.</p></li>
+</ol>
+</div></blockquote>
+<img alt="../_images/chancoco2.png" src="../_images/chancoco2.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click the Import Rating Tables button</p></li>
+</ol>
+<img alt="../_images/chan042.png" src="../_images/chan042.png" />
+<ol class="arabic simple" start="7">
+<li><p>Navigate to the Rating Tables files, select both tables and click Open.</p></li>
+</ol>
+<p>Data Location: Coastal 2D Training\Project Data\Weirs</p>
+<img alt="../_images/chan043.png" src="../_images/chan043.png" />
+<ol class="arabic simple" start="8">
+<li><p>The data was loaded into the FLO-2D Table Editor for the active structure.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>It may not be obvious that the data as imported.  Select a structure in the widget to refresh the plot.</p>
+</div>
+<img alt="../_images/chan044.png" src="../_images/chan044.png" />
+<ol class="arabic simple" start="9">
+<li><p>Click Schematize to write the data to the schematic layers.</p></li>
+</ol>
+<img alt="../_images/chan045.png" src="../_images/chan045.png" />
+<ol class="arabic simple" start="10">
+<li><p>The hydraulic structures are now ready.  The data will be saved to the HYSTRUCT.DAT file.</p></li>
+</ol>
+</section>
+<section id="step-14-export-the-project">
+<h2>Step 14: Export the project<a class="headerlink" href="#step-14-export-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Setup Control Parameters icon.</p></li>
+</ol>
+<img alt="../_images/chan047.png" src="../_images/chan047.png" />
+<ol class="arabic simple" start="2">
+<li><p>Check the boxes for Main Channel, Rainfall, and Hydraulic Structures and click Save.</p></li>
+</ol>
+<img alt="../_images/chan046.png" src="../_images/chan046.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the Export button for the FLO-2D Data files.</p></li>
+</ol>
+<img alt="../_images/chan048.png" src="../_images/chan048.png" />
+<ol class="arabic simple" start="4">
+<li><p>Create a new Export folder to test the weirs and channel hydraulics.</p></li>
+</ol>
+<img alt="../_images/chan050.png" src="../_images/chan050.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click OK to to export the data.</p></li>
+</ol>
+<img alt="../_images/chan049.png" src="../_images/chan049.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click OK again to close the message. The project is ready to run.</p></li>
+</ol>
+<img alt="../_images/chan051.png" src="../_images/chan051.png" />
+</section>
+<section id="step-15-run-the-simulation">
+<h2>Step 15: Run the simulation<a class="headerlink" href="#step-15-run-the-simulation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/chan054.png" src="../_images/chan054.png" />
+<ol class="arabic simple" start="4">
+<li><p>The model should start with no error messages.  If you see an error message.  Check ERROR.CHK. Ask for help from
+an instructor or by email.</p></li>
+</ol>
+<img alt="../_images/chan052.png" src="../_images/chan052.png" />
+<ol class="arabic simple" start="5">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/chan053.png" src="../_images/chan053.png" />
+</section>
+<section id="step-16-create-a-backup-file">
+<h2>Step 16: Create a backup file<a class="headerlink" href="#step-16-create-a-backup-file" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../_images/creategrid019.png" src="../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: <strong>ChanOK.zip</strong></p></li>
+</ol>
+<img alt="../_images/chan055.png" src="../_images/chan055.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../_images/creategrid021.png" src="../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The following video is a little old but it is still a good channel review.  Use it but ignore references
+to QGIS 3.18.  This tutorial uses QGIS 3.28.11 or so.</p>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lLwSBP_Y-ZY" frameborder="0" allowfullscreen></iframe></section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Boundary%20Conditions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Boundary Conditions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Culverts.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Culverts</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-prepare-the-map">Step 1: Prepare the map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-the-data">Step 2: Load the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-left-bank-digitize">Step 3: Left bank digitize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-right-bank-digitize">Step 4: Right bank digitize</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-cross-sections-fast-method">Step 5: Cross sections - fast method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-cross-sections-digitize-method">Step 5: Cross sections - digitize method</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-cross-section-attributes">Step 6. Cross section attributes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-load-cross-section-data">Step 7: Load cross section data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-schematize-channel">Step 8: Schematize channel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-review-bank-alignment">Step 9: Review bank alignment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-interpolate-the-channel">Step 10: Interpolate the channel</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-channel-boundary-condition">Step 11: Channel boundary condition</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inlet">Inlet</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#outlet">Outlet</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-test-run">Step 12: Test Run</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-13-tide-gates">Step 13: Tide gates</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-14-export-the-project">Step 14: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-15-run-the-simulation">Step 15: Run the simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-16-create-a-backup-file">Step 16: Create a backup file</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

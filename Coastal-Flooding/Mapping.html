@@ -1,0 +1,811 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mapping Results &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Mapping';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Comparison of Results" href="Comparison%20of%20Results.html" />
+    <link rel="prev" title="Review Results" href="Run%20and%20Review.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Mapping.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mapping Results</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-simplify-map">Step 1. Simplify map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-rasterizor">Step 2. Rasterizor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-mapcrafter-flood-maps">Step 3. MapCrafter - Flood Maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-mapcrafter-hazard-maps">Step 4. MapCrafter - Hazard Maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-mapcrafter-layouts">Step 5. MapCrafter - Layouts</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="mapping-results">
+<h1>Mapping Results<a class="headerlink" href="#mapping-results" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>This tutorial outlines the process of mapping the FLO-2D results.</p>
+<p>Required Data</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.out</p></td>
+<td><p>FLO-2D output files</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.out</p></td>
+<td><p>TIMDEP time series output</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location:  \Coastal Training\Project Data\Project Export Folder</p>
+<section id="step-1-simplify-map">
+<h2>Step 1. Simplify map<a class="headerlink" href="#step-1-simplify-map" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Uncheck unnecessary layers like Grid, Elevation, and the user added layers (e.g. Culvert Data, Storm Drain…). Uncheck the following groups:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Schematic Layers</p></li>
+<li><p>Hydraulic Structures</p></li>
+<li><p>Storm Drain</p></li>
+</ul>
+<img alt="../_images/map017.png" src="../_images/map017.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remove unnecessary layers to emphasize the specific result or feature intended for mapping.</p>
+</div>
+</section>
+<section id="step-2-rasterizor">
+<h2>Step 2. Rasterizor<a class="headerlink" href="#step-2-rasterizor" title="Link to this heading">#</a></h2>
+<p>Rasterizor is a quick mapping tool for FLO-2D output files.
+The files should have a standard format with 4 columns ge, x, y, n.
+These are grid element number, x coordinate, y coordinate, and n is the mapped value.
+It could be water surface elevation, depth, velocity or time to depth.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The Rasterizor documentation can be found at: <a class="reference external" href="https://github.com/FLO-2DKaren/FLO-2D-Rasterizor/wiki">Rasterizor Wiki</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>Create a group named ‘Rasterizor Results’ to simplify the management of results.</p></li>
+</ol>
+<img alt="../_images/map019.png" src="../_images/map019.png" />
+<ol class="arabic simple" start="2">
+<li><p>Open Rasterizor</p></li>
+</ol>
+<img alt="../_images/map018.png" src="../_images/map018.png" />
+<ol class="arabic simple" start="3">
+<li><p>A file often mapped by Rasterizor is the DEPTH.OUT. Click on the button to load the file.</p></li>
+</ol>
+<img alt="../_images/map020.png" src="../_images/map020.png" />
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>DEPTH.OUT shows the maximum combined channel/floodplain flow depths. More information regarding the output (*.OUT) files can be found on FLO-2D Data Input Manual.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Select this file in the Run/Export Folder.</p></li>
+</ol>
+<img alt="../_images/map021.png" src="../_images/map021.png" />
+<ol class="arabic simple" start="3">
+<li><p>Create a folder called Rasterizor to save the results and fill the data as the following image. Click Run.</p></li>
+</ol>
+<img alt="../_images/map022.png" src="../_images/map022.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The projection has already been retrieved from the QGIS project.
+However, when mapping results from a blank project in Rasterizor,
+the projection defaults to WGS84. In such cases, the user must manually change it to the correct projection.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>The DEPTH results will be displayed with a default FLO-2D symbology.</p></li>
+</ol>
+<img alt="../_images/map023.png" src="../_images/map023.png" />
+<ol class="arabic simple" start="5">
+<li><p>It is possible to change the symbology by right clicking on the layer and selecting Properties.</p></li>
+</ol>
+<img alt="../_images/map024.png" src="../_images/map024.png" />
+<ol class="arabic simple" start="6">
+<li><p>Navigate to the symbology tab and modify the color ramp for demonstration purposes. Choose either a predefined color ramp or create a custom one.</p></li>
+</ol>
+<img alt="../_images/map025.png" src="../_images/map025.png" />
+<ol class="arabic simple" start="7">
+<li><p>Here is the exact same data from the DEPTH.OUT but using another symbology.</p></li>
+</ol>
+<img alt="../_images/map026.png" src="../_images/map026.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default FLO-2D symbology serves as a color reference and can be customized according to the user’s preferences.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Rasterizor also can map velocities. Select the VELFP.OUT file and click Run.</p></li>
+</ol>
+<img alt="../_images/map027.png" src="../_images/map027.png" />
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>VELFP.OUT shows the maximum floodplain flow velocity. More information can be found on the FLO-2D Data Input Manual.</p>
+</div>
+<ol class="arabic simple" start="9">
+<li><p>Uncheck the Depth layer and check the velocity results.</p></li>
+</ol>
+<img alt="../_images/map028.png" src="../_images/map028.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is possible to use the QGIS Info Tool to check the velocity/depth value.</p>
+<img alt="../_images/map029.png" src="../_images/map029.png" />
+</div>
+</section>
+<section id="step-3-mapcrafter-flood-maps">
+<h2>Step 3. MapCrafter - Flood Maps<a class="headerlink" href="#step-3-mapcrafter-flood-maps" title="Link to this heading">#</a></h2>
+<p>FLO-2D MapCrafter is designed to transform FLO-2D output files into comprehensive visualizations.
+It generates flood maps for single-phase simulations, sediment maps, mudflow maps, and two-phase simulation flood maps.
+Additionally, MapCrafter goes beyond by creating hazard maps, highlighting areas with elevated risks based on
+FLO-2D simulations, aiding in risk management. The plugin also streamlines the QGIS layout manager process by
+automatically generating templates for easy customization.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The MapCrafter documentation can be found at: <a class="reference external" href="https://github.com/FLO-2DSoftware/FLO-2DMapCrafter/wiki">MapCrafter Wiki</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>Uncheck the ‘Rasterizor Results’ group. Creating a specific group for MapCrafter is unnecessary as it automatically generates its own group.</p></li>
+<li><p>Open MapCrafter</p></li>
+</ol>
+<img alt="../_images/map030.png" src="../_images/map030.png" />
+<ol class="arabic simple" start="3">
+<li><p>Select the Run/Export Folder.</p></li>
+</ol>
+<img alt="../_images/map031.png" src="../_images/map031.png" />
+<ol class="arabic simple" start="4">
+<li><p>Expand the Site Characteristics, Basic, and Channel groups. Select the following variables to be mapped by MapCrafter and click on Create maps.</p></li>
+</ol>
+<img alt="../_images/map032.png" src="../_images/map032.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>MapCrafter filters variables for mapping based on the type of simulation,
+including Flood, Sediment, Mudflow, and Two-Phase. The availability of hazard maps depends on the specific type of simulation and the data that is accessible.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Please wait for MapCrafter to generate the maps.
+The duration of this process may vary depending on the number of cells and results being mapped. A notification when the operation is complete will be shown.</p></li>
+</ol>
+<img alt="../_images/map033.png" src="../_images/map033.png" />
+<ol class="arabic simple" start="6">
+<li><p>All MapCrafter results will be displayed within their dedicated group, labeled ‘FLO-2D MapCrafter’, and subgroups, ‘Site Characteristics’, ‘Basic’, ‘Channel’ …</p></li>
+</ol>
+<img alt="../_images/map034.png" src="../_images/map034.png" />
+<p><strong>GROUND ELEVATION</strong></p>
+<p>Maps the ground elevation based on the TOPO.DAT file</p>
+<img alt="../_images/map035.png" src="../_images/map035.png" />
+<p><strong>MAXIMUM DEPTH</strong></p>
+<p>Maps the maximum floodplain depth based on the DEPFP.OUT file</p>
+<img alt="../_images/map036.png" src="../_images/map036.png" />
+<p><strong>FINAL DEPTH</strong></p>
+<p>Maps the final floodplain depth based on the FINALDEP.OUT file</p>
+<img alt="../_images/map037.png" src="../_images/map037.png" />
+<p><strong>MAXIMUM VELOCITY VECTORS</strong></p>
+<p>Maps the maximum velocity vectors based on a combination of the VELFP.OUT and VELDIREC.OUT files</p>
+<img alt="../_images/map038.png" src="../_images/map038.png" />
+<p><strong>FINAL VELOCITY VECTORS</strong></p>
+<p>Maps the final velocity vectors based on a combination of the FINALVEL.OUT and FINALDIR.OUT files</p>
+<img alt="../_images/map039.png" src="../_images/map039.png" />
+<p><strong>MAXIMUM CHANNEL DEPTH</strong></p>
+<p>Maps the maximum channel depth based on the DEPCH.OUT file</p>
+<img alt="../_images/map040.png" src="../_images/map040.png" />
+<p><strong>FINAL CHANNEL DEPTH</strong></p>
+<p>Maps the final channel depth based on the DEPCHFINAL.OUT file</p>
+<img alt="../_images/map041.png" src="../_images/map041.png" />
+<p><strong>MAXIMUM CHANNEL VELOCITY</strong></p>
+<p>Maps the maximum channel velocity based on the VELOC.OUT file</p>
+<img alt="../_images/map042.png" src="../_images/map042.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>There are numerous other options available for mapping results with MapCrafter.
+The examples provided here are just a demonstration of some results that can be mapped.
+It is recommended to explore additional mapping options based on the user’s specific needs.</p>
+</div>
+</section>
+<section id="step-4-mapcrafter-hazard-maps">
+<h2>Step 4. MapCrafter - Hazard Maps<a class="headerlink" href="#step-4-mapcrafter-hazard-maps" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open MapCrafter</p></li>
+</ol>
+<img alt="../_images/map030.png" src="../_images/map030.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Run/Export Folder.</p></li>
+</ol>
+<img alt="../_images/map031.png" src="../_images/map031.png" />
+<ol class="arabic simple" start="4">
+<li><p>Navigate to the Hazard Maps tab and check all maps under the US Bureau of Reclamation. Click on Create maps.</p></li>
+</ol>
+<img alt="../_images/map050.png" src="../_images/map050.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The USBR (United States Bureau Reclamation) Hazard map follows the criteria described in the
+Downstream Hazard Classification Guidelines (USBR, 1988). MapCrafter allows the user to select
+five hazard mapping classification systems: Houses, Mobile Homes, Vehicles, Adults, and Children.
+Each of these hazard mapping options define the hazard based on Danger zone curves that are
+separated into High Danger Zone, Judgement Zone and Low Danger Zone.
+The danger zones are curves that define a relationship between depth and velocity.</p>
+<img alt="../_images/map051.png" src="../_images/map051.png" />
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The Hazard maps are generated for the entire project domain.
+It is not meaningful to assess House Hazard in regions without houses
+(e.g., waterbodies, channels, grasslands). The same applies to all hazard maps.
+Engineering judgment must be employed to identify areas more susceptible
+to the specific type of flood damages.</p>
+</div>
+<p><strong>HOUSES HAZARD</strong></p>
+<p>Houses Hazard Map is focused on permanent residences attached to foundations
+and worksite areas, including facilities that contain workers on a daily basis.
+This includes farm operations, oil and gas operations,
+sand and gravel operations, and fish hatcheries</p>
+<img alt="../_images/map052.png" src="../_images/map052.png" />
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Increase transparency in the Hazard layer to facilitate the analysis and visualization.</p>
+</div>
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Occupants of most houses are in danger from floodwater.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Occupants of most houses are not seriously in danger from flood water.</p></li>
+</ul>
+<p><strong>Mobile Houses Hazard</strong></p>
+<p>Mobile Houses are typically located in flood plains due to zoning
+requirements in many areas, creating a very dangerous situation for
+occupants of mobile homes, as they are very susceptible to movement
+from relatively small floods.</p>
+<img alt="../_images/map053.png" src="../_images/map053.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Occupants of almost any size mobile home are in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgement.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Occupants of almost any size mobile home are not seriously in danger from flood water.</p></li>
+</ul>
+<p><strong>Vehicles Hazard</strong></p>
+<p>Vehicles Hazard is focused on the possibility for loss
+of life to motorists and pedestrians.</p>
+<img alt="../_images/map054.png" src="../_images/map054.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Occupants of almost any size passenger vehicle are in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Occupants of almost any size passenger vehicle are not seriously in danger from flood water.</p></li>
+</ul>
+<p><strong>Adults Hazard</strong></p>
+<p>In Adults Hazard Map, an adult is considered any human over 5 feet (150 cm) tall and weighing over
+120 pounds (54 kg).</p>
+<img alt="../_images/map055.png" src="../_images/map055.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Almost any size adult is in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Almost any size adult is not seriously threatened by flood water.</p></li>
+</ul>
+<p><strong>Children Hazard</strong></p>
+<p>The Children Hazard map represents a more conservative classification compared to the Adults Hazard Map.</p>
+<img alt="../_images/map056.png" src="../_images/map056.png" />
+<ul class="simple">
+<li><p>HIGH DANGER ZONE (RED): Almost any size child is in danger from flood water.</p></li>
+<li><p>JUDGMENT ZONE (YELLOW): Danger level is based upon engineering judgment.</p></li>
+<li><p>LOW DANGER ZONE (BLUE): Almost any size child (excluding infants) is not seriously threatened by flood water.</p></li>
+</ul>
+</section>
+<section id="step-5-mapcrafter-layouts">
+<h2>Step 5. MapCrafter - Layouts<a class="headerlink" href="#step-5-mapcrafter-layouts" title="Link to this heading">#</a></h2>
+<p>The latest MapCrafter version comes with FLO-2D Layouts, a tool that automatizes the creation of QGIS maps by using pre-defined map layouts.</p>
+<ol class="arabic simple">
+<li><p>Select the FLO-2D Layouts tab. Fill out the information bellow and click on ‘Open selected layout’</p></li>
+</ol>
+<img alt="../_images/map043.png" src="../_images/map043.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The available options include A4 and A3 paper sizes, and you can choose between landscape and portrait orientations.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>A QGIS New Print Layout window will appear with the data filled in the previous step.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This layout serves as a starting point and it should be customized according to the user’s specific requirements.</p>
+</div>
+<img alt="../_images/map044.png" src="../_images/map044.png" />
+<ol class="arabic simple" start="3">
+<li><p>To add a legend, click on Add Item and Add Legend. Select a good centered position on the right of the map.</p></li>
+</ol>
+<img alt="../_images/map045.png" src="../_images/map045.png" />
+<ol class="arabic simple" start="4">
+<li><p>Use the item properties to filter out the unnecessary layers and adjust the legend.</p></li>
+</ol>
+<img alt="../_images/map046.png" src="../_images/map046.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>QGIS offers numerous tools and features to enhance map layout, but these are beyond the scope of this training and will not be covered for the sake of time.</p>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>Once the layout is ready, click on Export as PDF to save the map.</p></li>
+</ol>
+<img alt="../_images/map047.png" src="../_images/map047.png" />
+<ol class="arabic simple" start="6">
+<li><p>Select the desired file name and folder.</p></li>
+</ol>
+<img alt="../_images/map048.png" src="../_images/map048.png" />
+<ol class="arabic simple" start="7">
+<li><p>It is possible to select as many layers as desired to export to the pdf, but since a Maximum Depth legend was added, only the Maximum Depth will be selected to be saved.</p></li>
+</ol>
+<img alt="../_images/map049.png" src="../_images/map049.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>This is a user’s choice; all layers can be exported in one PDF, or multiple PDFs containing separated layers can be exported.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Load the pdf to review it.</p></li>
+<li><p>If multiple layers were selected, they will be displayed as layers in the PDF reader.</p></li>
+</ol>
+<img alt="../_images/map015.png" src="../_images/map015.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Run%20and%20Review.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Review Results</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Comparison%20of%20Results.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Comparison of Results</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-simplify-map">Step 1. Simplify map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-rasterizor">Step 2. Rasterizor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-mapcrafter-flood-maps">Step 3. MapCrafter - Flood Maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-mapcrafter-hazard-maps">Step 4. MapCrafter - Hazard Maps</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-mapcrafter-layouts">Step 5. MapCrafter - Layouts</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

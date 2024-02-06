@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Storm Drain Setup &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Storm Drain Setup';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Urban Features" href="Urban%20Features.html" />
+    <link rel="prev" title="Storm Drain - Shapefile Development" href="Storm%20Drain%20Shapefile%20Development.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Storm Drain Setup.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Storm Drain Setup</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-select-components-from-shapefile">Step 1: Select components from shapefile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-the-conduit-node-connections">Step 2: Calculate the conduit node connections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-import-rating-tables">Step 3: Import rating tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-schematize-storm-drain-components">Step 4: Schematize storm drain components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-export-the-project">Step 6: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-run-the-simulation">Step 7: Run the simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-create-a-backup-file">Step 8: Create a backup file</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="storm-drain-setup">
+<h1>Storm Drain Setup<a class="headerlink" href="#storm-drain-setup" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>This lesson will outline the process to convert a set of storm drain shapefiles into a storm drain
+system that will work with a FLO-2D model.</p>
+<p><strong>Required Data</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Point shapefile</p></td>
+<td><p>Inlets Junctions</p></td>
+</tr>
+<tr class="row-odd"><td><p>Polyline shapefile</p></td>
+<td><p>Conduits</p></td>
+</tr>
+<tr class="row-even"><td><p>Point shapefile</p></td>
+<td><p>Outfall</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.txt</p></td>
+<td><p>Type 4 Rating Tables</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location:  \Coastal Training\Project Data\Storm Drain</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ebmer19J1D4" frameborder="0" allowfullscreen></iframe><section id="step-1-select-components-from-shapefile">
+<h2>Step 1: Select components from shapefile<a class="headerlink" href="#step-1-select-components-from-shapefile" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Collapse the widgets, select the Storm Drain Editor.</p></li>
+<li><p>Click the Select components from shapefile layer button.</p></li>
+</ol>
+<img alt="../_images/sd007.png" src="../_images/sd007.png" />
+<ol class="arabic simple" start="3">
+<li><p>Use the Editor to select the fields from 3 shapefiles.  Take care with the purple MaxDepthF.
+That is the final field.</p></li>
+</ol>
+<img alt="../_images/sd008.png" src="../_images/sd008.png" />
+<img alt="../_images/sd009.png" src="../_images/sd009.png" />
+<img alt="../_images/sd010.png" src="../_images/sd010.png" />
+<ol class="arabic simple" start="4">
+<li><p>Once all features are assigned, click on Assign Selected Inlets/Junctions, Outfalls and Conduits to create the data
+structures of the Storm Drain Components.</p></li>
+<li><p>The following message will be displayed.
+Click OK.</p></li>
+</ol>
+<img alt="../_images/sd011.png" src="../_images/sd011.png" />
+</section>
+<section id="step-2-calculate-the-conduit-node-connections">
+<h2>Step 2: Calculate the conduit node connections<a class="headerlink" href="#step-2-calculate-the-conduit-node-connections" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Auto-assign conduits nodes button.
+This step will fill the upstream and downstream node connections between conduits.
+In order for this step to be successful, the conduits must be oriented from upstream to downstream.
+See the arrows on the conduits.</p></li>
+</ol>
+<img alt="../_images/sd013.png" src="../_images/sd013.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click Yes and OK.</p></li>
+</ol>
+<img alt="../_images/sd012.png" src="../_images/sd012.png" />
+</section>
+<section id="step-3-import-rating-tables">
+<h2>Step 3: Import rating tables<a class="headerlink" href="#step-3-import-rating-tables" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Import Rating Table button.</p></li>
+</ol>
+<img alt="../_images/sd015.png" src="../_images/sd015.png" />
+<ol class="arabic simple" start="2">
+<li><p>Navigate to the I4 tables.  Select all of the files and click Open.</p></li>
+</ol>
+<p>Data Location: \Coastal Training\Project Data\Storm drain\Type 4 Rating Tables</p>
+<img alt="../_images/sd014.png" src="../_images/sd014.png" />
+<ol class="arabic simple" start="3">
+<li><p>If an error message appears, the path was not rectified and the rating table check file was not written.
+Repeat opening the files and the path will be fixed.</p></li>
+</ol>
+<img alt="../_images/sd016a.png" src="../_images/sd016a.png" />
+<ol class="arabic simple" start="4">
+<li><p>The table was imported and assigned to the correct inlet nodes.  Click OK to close the message.</p></li>
+</ol>
+<img alt="../_images/sd016.png" src="../_images/sd016.png" />
+</section>
+<section id="step-4-schematize-storm-drain-components">
+<h2>Step 4: Schematize storm drain components<a class="headerlink" href="#step-4-schematize-storm-drain-components" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click on Schematize Storm Drain Components in the Storm Drain Editor widget.</p></li>
+</ol>
+<img alt="../_images/sd017.png" src="../_images/sd017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Once the storm drain components are schematized, the following dialog will appear.
+Click OK to close.</p></li>
+</ol>
+<img alt="../_images/sd018.png" src="../_images/sd018.png" />
+<ol class="arabic simple" start="3">
+<li><p>The storm drain components are now part of the schematized layers in the project.</p></li>
+</ol>
+<img alt="../_images/sd019.png" src="../_images/sd019.png" />
+<ol class="arabic simple" start="4">
+<li><p>Individual Inlets, Junctions, Outfalls and Conduits can be viewed and edited in the various dialog boxes.</p></li>
+</ol>
+<img alt="../_images/sd020a.png" src="../_images/sd020a.png" />
+<ol class="arabic simple" start="5">
+<li><p>The dialog boxes allow the user to select any node or link and review or edit it’s variables.  The box also
+automatically pans the map to the node or link that is selected.</p></li>
+</ol>
+<img alt="../_images/sd020.png" src="../_images/sd020.png" />
+<img alt="../_images/sd020b.png" src="../_images/sd020b.png" />
+</section>
+<section id="step-6-export-the-project">
+<h2>Step 6: Export the project<a class="headerlink" href="#step-6-export-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Export the FLO-2D data files including the new storm drain files.</p></li>
+</ol>
+<img alt="../_images/sd027.png" src="../_images/sd027.png" />
+<img alt="../_images/sd025.png" src="../_images/sd025.png" />
+<img alt="../_images/sd024.png" src="../_images/sd024.png" />
+<ol class="arabic simple" start="2">
+<li><p>The Storm Drain was schematized in Step 4. Click Yes to proceed.</p></li>
+</ol>
+<img alt="../_images/sd024a.png" src="../_images/sd024a.png" />
+<ol class="arabic simple" start="3">
+<li><p>Be careful to set the export folder for the swmm.inp to the Storm Drain Export folder.  Its path will likely
+need to be modified when it is exported.</p></li>
+</ol>
+<img alt="../_images/sd024b.png" src="../_images/sd024b.png" />
+<ol class="arabic simple" start="4">
+<li><p>The control data for the storm drain is set before the swmm.inp file is saved.</p></li>
+</ol>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>There are some important things to define with respect to the time fields.  If tide data or time series data is
+used, the time fields should be synchronized to the times in the corresponding groups of the swmm.inp file.
+The end time should be set to the start time plus the total run time of the FLO-2D simulation.  If it is not,
+the simulation will have an error and will likely fail at the end of the run.</p>
+</div>
+<img alt="../_images/sd024c.png" src="../_images/sd024c.png" />
+<ol class="arabic simple" start="5">
+<li><p>The following image shows the number of storm drain features that were exported.  Click OK to close the message.</p></li>
+</ol>
+<img alt="../_images/sd024d.png" src="../_images/sd024d.png" />
+<ol class="arabic simple" start="6">
+<li><p>The remaining data files have been exported.  Click OK to close the message.</p></li>
+</ol>
+<img alt="../_images/sd026.png" src="../_images/sd026.png" />
+</section>
+<section id="step-7-run-the-simulation">
+<h2>Step 7: Run the simulation<a class="headerlink" href="#step-7-run-the-simulation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/chan054.png" src="../_images/chan054.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the FLO-2D Folder.
+C:\program files (x86)\flo-2d pro</p></li>
+<li><p>Set the Project Folder.</p></li>
+</ol>
+<p>Data Location: \Coastal Training\Project Runs\Storm Drain Test</p>
+<ol class="arabic simple" start="4">
+<li><p>Click OK.</p></li>
+</ol>
+<img alt="../_images/sd028.png" src="../_images/sd028.png" />
+<ol class="arabic simple" start="5">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/chan053.png" src="../_images/chan053.png" />
+</section>
+<section id="step-8-create-a-backup-file">
+<h2>Step 8: Create a backup file<a class="headerlink" href="#step-8-create-a-backup-file" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Close QGIS.</p></li>
+<li><p>Open the project folder.  Select the Coastal Project.gpkg and Coastal Project.qgz files.  Right click them and
+click Sent to/Compressed (zipped) folder.</p></li>
+</ol>
+<img alt="../_images/creategrid019.png" src="../_images/creategrid019.png" />
+<ol class="arabic simple" start="3">
+<li><p>Name the zipped file.
+It is good to choose a name that identifies project progress.
+For Example: <strong>SDOK.zip</strong></p></li>
+</ol>
+<img alt="../_images/sd029.png" src="../_images/sd029.png" />
+<ol class="arabic simple" start="4">
+<li><p>Open QGIS and reload the project.</p></li>
+</ol>
+<img alt="../_images/creategrid021.png" src="../_images/creategrid021.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click yes to load the model.</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Storm%20Drain%20Shapefile%20Development.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Storm Drain - Shapefile Development</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Urban%20Features.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Urban Features</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-select-components-from-shapefile">Step 1: Select components from shapefile</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-calculate-the-conduit-node-connections">Step 2: Calculate the conduit node connections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-import-rating-tables">Step 3: Import rating tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-schematize-storm-drain-components">Step 4: Schematize storm drain components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-export-the-project">Step 6: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-run-the-simulation">Step 7: Run the simulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-create-a-backup-file">Step 8: Create a backup file</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

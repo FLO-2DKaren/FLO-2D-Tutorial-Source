@@ -1,0 +1,745 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mitigation Design &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Coastal-Flooding/Mitigation Design';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Review Results" href="Run%20and%20Review.html" />
+    <link rel="prev" title="Urban Features" href="Urban%20Features.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Coastal-Flooding/Mitigation Design.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mitigation Design</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-data">Step 1. Load the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-open-street-map">Step 2. Load Open Street Map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-run-osm-downloader">Step 3. Run OSM Downloader</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-open-data-connection">Step 4. Open data connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-modify-highway-41">Step 5. Modify Highway 41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-reset-channel-elevation">Step 6. Reset channel elevation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-improve-a-culvert">Step 7. Improve a culvert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-coco1-pump">Step 8. Coco1 pump</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-save-and-export">Step 9. Save and export</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="mitigation-design">
+<h1>Mitigation Design<a class="headerlink" href="#mitigation-design" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>Coastal flood mitigation practices include improving drainage, identifying critical infrastructure, protecting
+evacuation routes, protecting and restoring natural flood barriers.  This lesson cannot cover the topic
+fully but can help show how QGIS and FLO-2D can be used to study mitigation plans.  Mitigation models can help determine
+if potential designs are successful.  Mitigation methods can include:</p>
+<ul class="simple">
+<li><p>Protect critical infrastructure</p></li>
+<li><p>Raise roadway, seawalls, and jetties</p></li>
+<li><p>Improve culverts, tide gates, and pumps</p></li>
+<li><p>Modify base flood elevation for new construction</p></li>
+<li><p>Improve basin storage</p></li>
+<li><p>Restore natural flood management</p></li>
+<li><p>Improve drainage maintenance plans</p></li>
+</ul>
+<p><strong>Required Data</strong></p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.shp</p></td>
+<td><p>Highway Centerline</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.shp</p></td>
+<td><p>Mitigation Polygon</p></td>
+</tr>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Elevation</p></td>
+</tr>
+</tbody>
+</table>
+<p>Data Location:  \Coastal Training\Project Data\Mitigation Design</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kLSV8-NA8R8" frameborder="0" allowfullscreen></iframe><section id="step-1-load-the-data">
+<h2>Step 1. Load the data<a class="headerlink" href="#step-1-load-the-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Collapse the Layers.</p></li>
+</ol>
+<img alt="../_images/mit0021.png" src="../_images/mit0021.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the External Data Group.</p></li>
+<li><p>Drag the Mitigation and Highway shapefiles onto the map.</p></li>
+</ol>
+<img alt="../_images/mit001.png" src="../_images/mit001.png" />
+<ol class="arabic simple" start="4">
+<li><p>Change the symbology of the new layers to make them more visible.</p></li>
+</ol>
+<img alt="../_images/mit0051.png" src="../_images/mit0051.png" />
+<img alt="../_images/mit0052.png" src="../_images/mit0052.png" />
+</section>
+<section id="step-2-load-open-street-map">
+<h2>Step 2. Load Open Street Map<a class="headerlink" href="#step-2-load-open-street-map" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click Quick Map Services and load the Open Street Map Standard.</p></li>
+</ol>
+<img alt="../_images/mit021.png" src="../_images/mit021.png" />
+<ol class="arabic simple" start="2">
+<li><p>Organize the Map Layers.</p></li>
+<li><p>Uncheck Aerial images and elevation.</p></li>
+</ol>
+<img alt="../_images/mit022.png" src="../_images/mit022.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Open Street Map is useful to help find important features.  It has excellent symbology.  This map source is a
+raster so it does not have selectable attributes like a vector layer.  It is still helpful for map browsing.</p>
+</div>
+</section>
+<section id="step-3-run-osm-downloader">
+<h2>Step 3. Run OSM Downloader<a class="headerlink" href="#step-3-run-osm-downloader" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Right click the blank area at the bottom of the layers list.</p></li>
+<li><p>Add a new group called OSM Download.</p></li>
+</ol>
+<img alt="../_images/osm003.png" src="../_images/osm003.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click the new group and then Click the OSM Downloader icon.</p></li>
+<li><p>Use the mouse to draw a rectangle around the project area.</p></li>
+</ol>
+<img alt="../_images/osm002.png" src="../_images/osm002.png" />
+<ol class="arabic simple" start="5">
+<li><p>The downloader will download vectorized map data from the OSM database.</p></li>
+<li><p>Save the data as OSM Download.osm file in the Mitigation folder.</p></li>
+</ol>
+<img alt="../_images/osm004.png" src="../_images/osm004.png" />
+<ol class="arabic simple" start="7">
+<li><p>The Open Street Map layers are now vectorized into polygons, points, and polylines.</p></li>
+</ol>
+<img alt="../_images/osm005.png" src="../_images/osm005.png" />
+</section>
+<section id="step-4-open-data-connection">
+<h2>Step 4. Open data connection<a class="headerlink" href="#step-4-open-data-connection" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ArcGIS Online services can be loaded into QGIS maps.  This allows users to connect to data
+that is hosted on local, state, and federal government sites.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Click Layers &gt;&gt; Add Layer &gt;&gt; Add ArcGIS REST Server Layer.</p></li>
+</ol>
+<img alt="../_images/mit041.png" src="../_images/mit041.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click the Load button and find the Open Data Connection.xml file in the Mitigation folder.</p></li>
+</ol>
+<img alt="../_images/mit043.png" src="../_images/mit043.png" />
+<ol class="arabic simple" start="3">
+<li><p>Click Select All and Import.</p></li>
+</ol>
+<img alt="../_images/mit044.png" src="../_images/mit044.png" />
+<ol class="arabic simple" start="4">
+<li><p>Any of these layers can be added to the map.</p></li>
+</ol>
+<img alt="../_images/mit045.png" src="../_images/mit045.png" />
+<img alt="../_images/mit047.png" src="../_images/mit047.png" />
+<ol class="arabic simple" start="5">
+<li><p>Any new REST connection can be created even if it requires authentication.</p></li>
+</ol>
+<img alt="../_images/mit046.png" src="../_images/mit046.png" />
+</section>
+<section id="step-5-modify-highway-41">
+<h2>Step 5. Modify Highway 41<a class="headerlink" href="#step-5-modify-highway-41" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Now that some data loading methods have been identified, proceed with some simple mitigation
+changes.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Any mitigation change can relieve flooding locally while increasing flooding in other areas.
+Always use a project area that is large enough to show potential flood changes downstream or away from
+the mitigation location.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Collapse the OSM Download group and uncheck it.</p></li>
+<li><p>Click the Highway Centerline layer.</p></li>
+<li><p>Click the Select button.</p></li>
+<li><p>Use the select tool to select Highway 41 polyline.</p></li>
+</ol>
+<img alt="../_images/mit0053.png" src="../_images/mit0053.png" />
+<ol class="arabic simple" start="5">
+<li><p>Collapse the FLO-2D Widgets and open the Grid Tools Widget.</p></li>
+<li><p>Select the Correct Grid Elevation button.</p></li>
+</ol>
+<img alt="../_images/mit0056.png" src="../_images/mit0056.png" />
+<ol class="arabic simple" start="7">
+<li><p>Fill the window as shown below and click OK.</p></li>
+</ol>
+<img alt="../_images/mit0057.png" src="../_images/mit0057.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a simple way to raise grid element elevation.  It uses a correction tool to add or subtract elevation
+from a group of cells that are within buffer.</p>
+</div>
+</section>
+<section id="step-6-reset-channel-elevation">
+<h2>Step 6. Reset channel elevation<a class="headerlink" href="#step-6-reset-channel-elevation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Zoom to the end of the channel and click the Mitigation Polygon Layer.</p></li>
+<li><p>Click the Select button.</p></li>
+<li><p>Select the Polygon that covers the end of the channel.</p></li>
+</ol>
+<img alt="../_images/mit091.png" src="../_images/mit091.png" />
+<ol class="arabic simple" start="4">
+<li><p>Collapse the Widgets and open Grid Tools.</p></li>
+<li><p>Click the Correct Grid Elevation button.</p></li>
+</ol>
+<img alt="../_images/mit092.png" src="../_images/mit092.png" />
+<ol class="arabic simple" start="6">
+<li><p>Fill the form as shown below and click OK.</p></li>
+</ol>
+<img alt="../_images/mit093.png" src="../_images/mit093.png" />
+<ol class="arabic simple" start="7">
+<li><p>Close the message when the grid elevation correction is complete.</p></li>
+</ol>
+<img alt="../_images/mit094.png" src="../_images/mit094.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step can set or re-set the elevation of grid elements within a polygon.  Use it to correct elevation for
+new grading or new basin design.  Use it to correct elevation along a channel or at a headwall.
+It is a very versatile tool.</p>
+</div>
+</section>
+<section id="step-7-improve-a-culvert">
+<h2>Step 7. Improve a culvert<a class="headerlink" href="#step-7-improve-a-culvert" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Select culvert CU10.</p></li>
+<li><p>Change the width to 5 ft and multiple barrels to 3.</p></li>
+<li><p>Click the Schematize Culverts button.</p></li>
+</ol>
+<img alt="../_images/mit063.png" src="../_images/mit063.png" />
+</section>
+<section id="step-8-coco1-pump">
+<h2>Step 8. Coco1 pump<a class="headerlink" href="#step-8-coco1-pump" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Select Coco1.</p></li>
+<li><p>Add a pump to this system by modifying the rating table.</p></li>
+<li><p>Assume the pump uses a steady flow of 100 cfs.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a larger pump is used, any value can be applied
+to match the discharge of the pump plus the discharge of the flow through
+the gated weir.</p>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Add 100 cfs to the depths above 5ft.  This means the pump will turn on at 5 ft of depth.</p></li>
+</ol>
+<img alt="../_images/mit073.png" src="../_images/mit073.png" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Since step 6 and 7 didn’t change the position of a culvert, the Schematize button
+is not needed.  The tables were automatically updated when the data was modified in the
+widget and table editor.</p>
+</div>
+</section>
+<section id="step-9-save-and-export">
+<h2>Step 9. Save and export<a class="headerlink" href="#step-9-save-and-export" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/Module046.png" src="../_images/Module046.png" />
+<ol class="arabic simple" start="2">
+<li><p>Export the data files to the Mitigation Test folder.</p></li>
+</ol>
+<img alt="../_images/Module047.png" src="../_images/Module047.png" />
+<ol class="arabic simple" start="3">
+<li><p>All data files will be created in the selected project folder.</p></li>
+</ol>
+<img alt="../_images/mit081.png" src="../_images/mit081.png" />
+<img alt="../_images/mit082.png" src="../_images/mit082.png" />
+<ol class="arabic simple" start="4">
+<li><p>It is not necessary to schematize the storm drain system since no work was
+added to the storm drain.  Click Yes to continue.</p></li>
+</ol>
+<img alt="../_images/mit083.png" src="../_images/mit083.png" />
+<ol class="arabic simple" start="5">
+<li><p>No changes are needed for this project.  Click OK to continue and close the next
+few messages.</p></li>
+</ol>
+<img alt="../_images/mit084.png" src="../_images/mit084.png" />
+<img alt="../_images/mit085.png" src="../_images/mit085.png" />
+<img alt="../_images/mit086.png" src="../_images/mit086.png" />
+<ol class="arabic simple" start="6">
+<li><p>The project has now been exported.</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Urban%20Features.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Urban Features</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Run%20and%20Review.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Review Results</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-data">Step 1. Load the data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-load-open-street-map">Step 2. Load Open Street Map</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-run-osm-downloader">Step 3. Run OSM Downloader</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-open-data-connection">Step 4. Open data connection</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-modify-highway-41">Step 5. Modify Highway 41</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-reset-channel-elevation">Step 6. Reset channel elevation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-improve-a-culvert">Step 7. Improve a culvert</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-coco1-pump">Step 8. Coco1 pump</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-save-and-export">Step 9. Save and export</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

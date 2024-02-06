@@ -1,0 +1,779 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Dam Breach - Erosion &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Advanced-Lessons/Module 6';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tailings Dam Model" href="Module%207.html" />
+    <link rel="prev" title="Prescribed Breach Part 3 - Add Detail and Troubleshoot" href="Module%203%20Part%203.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Advanced-Lessons/Module 6.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Dam Breach - Erosion</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-initial-conditions-reservoir">Step 2: Initial conditions reservoir</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-review-dam-geometry">Step 3: Review dam geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-review-dam-material">Step 4. Review dam material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-review-general-breach-parameters">Step 5. Review general breach parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-create-the-breach-point">Step 6. Create the breach point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-export-and-run-the-model">Step 7. Export and run the model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-review-the-data">Step 8. Review the data</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="dam-breach-erosion">
+<h1>Dam Breach - Erosion<a class="headerlink" href="#dam-breach-erosion" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>In this tutorial, an erosion dam breach with failure is created.
+In this instance, the reservoir is filled but the pre-reservoir elevation is known.</p>
+<p>Required Data</p>
+<p>The required data is in Module 6.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>*.qgz</p></td>
+<td><p>QGIS data files</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.gpkg</p></td>
+<td><p>FLO-2D Geopackage</p></td>
+</tr>
+<tr class="row-even"><td><p>*.tif</p></td>
+<td><p>Grid elevation</p></td>
+</tr>
+</tbody>
+</table>
+<section id="step-1-load-the-project">
+<h2>Step 1: Load the project<a class="headerlink" href="#step-1-load-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>We are finished with the previous project.
+Save and close it.</p></li>
+<li><p>Start with the project from Module 6.</p></li>
+<li><p>If necessary, load it into QGIS.
+Open QGIS and drag the Erosion Breach Module 6.qgz file into the project.</p></li>
+<li><p>Save the project.</p></li>
+</ol>
+<img alt="../_images/Module222.png" src="../_images/Module222.png" />
+<ol class="arabic simple" start="5">
+<li><p>Click Yes to load the model.</p></li>
+</ol>
+<img alt="../_images/Module223.png" src="../_images/Module223.png" />
+</section>
+<section id="step-2-initial-conditions-reservoir">
+<h2>Step 2: Initial conditions reservoir<a class="headerlink" href="#step-2-initial-conditions-reservoir" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>An initial condition is set to fill the reservoir when FLO-2D PRO.exe initiates the simulation.</p></li>
+<li><p>Set up this condition in QGIS.</p></li>
+<li><p>Click the collapse widgets button.</p></li>
+<li><p>Open the Initial Condition Editor widget.</p></li>
+<li><p>Click the add reservoir button.</p></li>
+</ol>
+<img alt="../_images/Module224.png" src="../_images/Module224.png" />
+<ol class="arabic simple" start="6">
+<li><p>Place a reservoir node anywhere within the reservoir area and fill the form.
+Click ok to close the data.</p></li>
+</ol>
+<img alt="../_images/Module225.png" src="../_images/Module225.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click the Save button and the Schematize button on the widget.</p></li>
+<li><p>This data is saved to the INFLOW.DAT file when the model is exported.</p></li>
+</ol>
+<img alt="../_images/Module226.png" src="../_images/Module226.png" />
+</section>
+<section id="step-3-review-dam-geometry">
+<h2>Step 3: Review dam geometry<a class="headerlink" href="#step-3-review-dam-geometry" title="Link to this heading">#</a></h2>
+<p>Crest width = 32 ft</p>
+<p>Crest length = 7900 ft</p>
+<p>Shell slope US and DS = 2</p>
+<p>Core slope = 0.5</p>
+<img alt="../_images/Module227.png" src="../_images/Module227.png" />
+<img alt="../_images/Module228.png" src="../_images/Module228.png" />
+</section>
+<section id="step-4-review-dam-material">
+<h2>Step 4. Review dam material<a class="headerlink" href="#step-4-review-dam-material" title="Link to this heading">#</a></h2>
+<p>Each variable is discussed in the Data Input Manual BREACH.DAT tab.
+This data may be available from the original dam construction manual or from periodical safety reports.
+Check with the dam owner, or dam safety agency for data.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Variable</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0.1</p></td>
+<td><p>d50c</p></td>
+<td><p>d50 core (mm)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.35</p></td>
+<td><p>porc</p></td>
+<td><p>porosity core</p></td>
+</tr>
+<tr class="row-even"><td><p>120</p></td>
+<td><p>uwc</p></td>
+<td><p>unit weight core (lb/ft<sup>3</sup>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.15</p></td>
+<td><p>cnc</p></td>
+<td><p>roughness n core</p></td>
+</tr>
+<tr class="row-even"><td><p>33</p></td>
+<td><p>afrc</p></td>
+<td><p>angle of internal friction core(degrees)</p></td>
+</tr>
+<tr class="row-odd"><td><p>750</p></td>
+<td><p>cohc</p></td>
+<td><p>cohesive strength core (lb/ft<sup>3</sup>)</p></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p>unfcc</p></td>
+<td><p>sediment gradient ratio</p></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>d50s</p></td>
+<td><p>d50 shell (mm)</p></td>
+</tr>
+<tr class="row-even"><td><p>0.4</p></td>
+<td><p>pors</p></td>
+<td><p>porosity shell</p></td>
+</tr>
+<tr class="row-odd"><td><p>100</p></td>
+<td><p>uws</p></td>
+<td><p>unit weight shell (lb/ft<sup>3</sup>)</p></td>
+</tr>
+<tr class="row-even"><td><p>0.2</p></td>
+<td><p>cns</p></td>
+<td><p>roughness n shell</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>afrs</p></td>
+<td><p>angle of internal friction shell (degrees)</p></td>
+</tr>
+<tr class="row-even"><td><p>250</p></td>
+<td><p>cohs</p></td>
+<td><p>cohesive strength shell (lb/ft<sup>3</sup>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>unfcs</p></td>
+<td><p>sediment gradient ratio</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>grasslength</p></td>
+<td><p>grass length downstream face (in)</p></td>
+</tr>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>grasscond</p></td>
+<td><p>grass condition downstream face (0 or 1)</p></td>
+</tr>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>grassvmaxp</p></td>
+<td><p>maximum permissible velocity (fps)</p></td>
+</tr>
+<tr class="row-odd"><td><p>300</p></td>
+<td><p>d50df</p></td>
+<td><p>d50 downstream face (mm)</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>unfcdf</p></td>
+<td><p>sediment gradient downstream face</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-5-review-general-breach-parameters">
+<h2>Step 5. Review general breach parameters<a class="headerlink" href="#step-5-review-general-breach-parameters" title="Link to this heading">#</a></h2>
+<p>Each variable is discussed in the Data Input Manual BREACH.DAT tab.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Value</p></th>
+<th class="head"><p>Variable</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2500</p></td>
+<td><p>brbotwidmax</p></td>
+<td><p>Maximum width to constrict the bottom of the breach (ft).</p></td>
+</tr>
+<tr class="row-odd"><td><p>7900</p></td>
+<td><p>brtopwidmax</p></td>
+<td><p>Maximum width to constrict the top of the breach.</p></td>
+</tr>
+<tr class="row-even"><td><p>1755</p></td>
+<td><p>brbottomel</p></td>
+<td><p>Start of breach elevation (ft).  Sensitive to instability.
+If unstable, set to 1 to 3 ft below the crest elevation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>3.05</p></td>
+<td><p>weircoef</p></td>
+<td><p>Weir coefficient</p></td>
+</tr>
+<tr class="row-even"><td><p>1.5</p></td>
+<td><p>bratio</p></td>
+<td><p>Initial breach width to depth ratio.</p></td>
+</tr>
+<tr class="row-odd"><td><p>0.0</p></td>
+<td><p>breachtime</p></td>
+<td><p>Time the water surface elevation must sustain before the
+breach will initiate (hours).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-6-create-the-breach-point">
+<h2>Step 6. Create the breach point<a class="headerlink" href="#step-6-create-the-breach-point" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Identify a good breach location.
+Choose any desired location.</p></li>
+</ol>
+<img alt="../_images/Module229.png" src="../_images/Module229.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select a breach location. This location can represent a
+weak point on a dam.</p>
+<ul class="simple">
+<li><p>Spillways</p></li>
+<li><p>Stilling basins</p></li>
+<li><p>Sag, deformation, or erosion</p></li>
+<li><p>Boreholes</p></li>
+<li><p>Ends points</p></li>
+<li><p>Piezometer measurements</p></li>
+</ul>
+</li>
+<li><p>Location is not always important.
+For large reservoirs flooding is a function of the volume not breach parameters.</p></li>
+<li><p>It is important to start the breach from the correct side of the levee feature.</p></li>
+<li><p>Put the breach point on the water side of the levee.</p></li>
+</ol>
+<img alt="../_images/Module230.png" src="../_images/Module230.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click collapse FLO-2D widgets button.</p></li>
+<li><p>Click the Levees and Breach Editor widget.</p></li>
+<li><p>Click the create a breach point button.</p></li>
+</ol>
+<img alt="../_images/number8.png" src="../_images/number8.png" />
+<ol class="arabic simple" start="9">
+<li><p>Click the map where the breach should go and fill the table.</p></li>
+<li><p>Choose a good location based on engineering judgment.</p></li>
+<li><p>The data is listed in step 3, 4 and 5.</p></li>
+<li><p>Click OK to close the table.</p></li>
+</ol>
+<img alt="../_images/number12.png" src="../_images/number12.png" />
+<ol class="arabic simple" start="13">
+<li><p>Not working? Click Revert Breach Edits button and try again.</p></li>
+</ol>
+<img alt="../_images/Module231.png" src="../_images/Module231.png" />
+<ol class="arabic simple" start="14">
+<li><p>Complete the breach data in the widget.</p></li>
+</ol>
+<img alt="../_images/Module232.png" src="../_images/Module232.png" />
+</section>
+<section id="step-7-export-and-run-the-model">
+<h2>Step 7. Export and run the model<a class="headerlink" href="#step-7-export-and-run-the-model" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Export the FLO-2D Data files.
+Click OK.</p></li>
+</ol>
+<img alt="../_images/Module123.png" src="../_images/Module123.png" />
+<img alt="../_images/Module233.png" src="../_images/Module233.png" />
+<ol class="arabic simple" start="2">
+<li><p>Select the Module 6 Export folder.</p></li>
+</ol>
+<img alt="../_images/Module234.png" src="../_images/Module234.png" />
+<ol class="arabic simple" start="3">
+<li><p>The data is ready to run.</p></li>
+</ol>
+<img alt="../_images/Module235.png" src="../_images/Module235.png" />
+<ol class="arabic simple" start="4">
+<li><p>Correct the paths and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../_images/Module236.png" src="../_images/Module236.png" />
+</section>
+<section id="step-8-review-the-data">
+<h2>Step 8. Review the data<a class="headerlink" href="#step-8-review-the-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>These are the 3 data files that were created.</p></li>
+<li><p>Levee.dat needed a Breach switch in Line 1.</p></li>
+<li><p>Inflow.dat has a “dummy” inflow node.
+This allows graphics mode to function.</p></li>
+<li><p>Inflow.dat has the reservoir elevation.
+When run initiates, FLO-2D will fill the reservoir.</p></li>
+<li><p>Breach.dat stores the breach variables.</p></li>
+</ol>
+<img alt="../_images/Module237.png" src="../_images/Module237.png" />
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module%203%20Part%203.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Prescribed Breach Part 3 - Add Detail and Troubleshoot</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Module%207.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tailings Dam Model</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-load-the-project">Step 1: Load the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-initial-conditions-reservoir">Step 2: Initial conditions reservoir</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-review-dam-geometry">Step 3: Review dam geometry</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-review-dam-material">Step 4. Review dam material</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-review-general-breach-parameters">Step 5. Review general breach parameters</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-create-the-breach-point">Step 6. Create the breach point</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-export-and-run-the-model">Step 7. Export and run the model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-review-the-data">Step 8. Review the data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

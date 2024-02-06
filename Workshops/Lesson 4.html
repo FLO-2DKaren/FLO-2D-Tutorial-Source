@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lesson 4 – Buildings, Walls and Wall Failure &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Workshops/Lesson 4';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Lesson 5 – Realtime Rainfall Data" href="Lesson%205.html" />
+    <link rel="prev" title="Lesson 3 – Create a Storm Drain System Using Shapefiles" href="Lesson%203.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Advanced-Lessons/Module%209.html">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Workshops/Lesson 4.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lesson 4 – Buildings, Walls and Wall Failure</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-data">Required Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-procedure">Step-by-Step Procedure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-project-qgis-and-load-the-flo-2d-plugin-data">Step 1: Open project QGIS and load the FLO-2D Plugin data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-assign-buildings">Step 2: Assign buildings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-assign-walls">Step 3: Assign walls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-export-the-project">Step 4: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-run-the-simulation">Step 5: Run the simulation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lesson-4-buildings-walls-and-wall-failure">
+<h1>Lesson 4 – Buildings, Walls and Wall Failure<a class="headerlink" href="#lesson-4-buildings-walls-and-wall-failure" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Lesson 4 will outline the process of setting up buildings and walls and defining wall failure parameters in a FLO-2D
+project using the Plugin for QGIS.  Apply these instructions after Lesson 1, 2 or 3 are completed.</p>
+<p>This video shows the full process of this tutorial.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/guHbOgtpAnM" frameborder="0" allowfullscreen></iframe></section>
+<section id="required-data">
+<h2>Required Data<a class="headerlink" href="#required-data" title="Link to this heading">#</a></h2>
+<p>The lesson makes use of buildings and walls shapefiles.</p>
+<table class="table">
+<colgroup>
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+<col style="width: 33.3%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>File</strong></p></td>
+<td><p><strong>Content</strong></p></td>
+<td><p><strong>Location</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>Buildings.shp</p></td>
+<td><p>Building shapefile</p></td>
+<td><p>QGIS Lesson 4</p></td>
+</tr>
+<tr class="row-odd"><td><p>Walls.shp</p></td>
+<td><p>Walls shapefile</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Project Location C:\Users\Public\Documents\FLO-2D Pro Documentation\Example Projects\QGIS Tutorials</p>
+<p>Check these folders to ensure the data is available before starting the lesson.</p>
+</section>
+<section id="step-by-step-procedure">
+<h2>Step-by-Step Procedure<a class="headerlink" href="#step-by-step-procedure" title="Link to this heading">#</a></h2>
+<p>To setup a FLO-2D flood simulation use these steps.</p>
+<ol class="arabic simple">
+<li><p>Open Lesson 1, 2 or 3 completed project;</p></li>
+<li><p>Assign buildings;</p></li>
+<li><p>Assign walls;</p></li>
+<li><p>Save and export;</p></li>
+<li><p>Run the simulation.</p></li>
+</ol>
+</section>
+<section id="step-1-open-project-qgis-and-load-the-flo-2d-plugin-data">
+<h2>Step 1: Open project QGIS and load the FLO-2D Plugin data<a class="headerlink" href="#step-1-open-project-qgis-and-load-the-flo-2d-plugin-data" title="Link to this heading">#</a></h2>
+<img alt="../_images/Worksh002.png" src="../_images/Worksh002.png" />
+<p>Search the start menu and run the “QGIS Desktop” program.</p>
+<p>QGIS Lesson 1, 2 or 3 can be used to for this project.
+Click Open Project and navigate to Example Projects.
+If QGIS Lesson 1, 2 or 3 are complete, choose any of these files to continue with Lesson 4.
+This tutorial will continue from Lesson 3.</p>
+<img alt="../_images/Worksh055.png" src="../_images/Worksh055.png" />
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 1\QGIS Lesson 1.qgz</p>
+<ol class="arabic simple">
+<li><p>Click Yes in the FLO-2D window to Load the model.</p></li>
+</ol>
+<img alt="../_images/Worksh114.png" src="../_images/Worksh114.png" />
+</section>
+<section id="step-2-assign-buildings">
+<h2>Step 2: Assign buildings<a class="headerlink" href="#step-2-assign-buildings" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The video at the top of this tutorial shows how to remove, add or modify the building polygons.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Drag the Buildings.shp shapefile onto the map space.</p></li>
+</ol>
+<img alt="../_images/Worksh116.png" src="../_images/Worksh116.png" />
+<p>The Buildings.shp shapefile needs 3 Attributes.</p>
+<img alt="../_images/Worksh116a.png" src="../_images/Worksh116a.png" />
+<p>These fields represent switches to set the calculation control for each building.</p>
+<ul class="simple">
+<li><p>Collapse = 0 will ignore building collapse settings.</p></li>
+<li><p>Collapse = 1 will apply the control for building collapse.
+If building collapse is needed, look in the Data Input manual for an extra data file.</p></li>
+<li><p>ARF = 0 will ignore the ARF calculation.</p></li>
+<li><p>ARF = 1 will calculate the ARF calculation.</p></li>
+<li><p>WRF = 0 will ignore the spatially variable WRF but apply a T line to any totally blocked cell.</p></li>
+<li><p>WRF = 1 will calculate the spatially variable WRF and apply a T line to any totally blocked cell.</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>Click the Evaluate Reduction Factors (ARF and WRF) icon.</p></li>
+</ol>
+<img alt="../_images/Worksh117.png" src="../_images/Worksh117.png" />
+<ol class="arabic simple" start="3">
+<li><p>Set up the parameters and click OK</p></li>
+</ol>
+<img alt="../_images/Worksh118.png" src="../_images/Worksh118.png" />
+<ol class="arabic simple" start="4">
+<li><p>Close OK the window.</p></li>
+</ol>
+<img alt="../_images/Worksh119.png" src="../_images/Worksh119.png" />
+<ol class="arabic simple" start="5">
+<li><p>The new layers show ARFs and Blocked Areas Polygons.</p></li>
+</ol>
+<img alt="../_images/Worksh119a.png" src="../_images/Worksh119a.png" />
+</section>
+<section id="step-3-assign-walls">
+<h2>Step 3: Assign walls<a class="headerlink" href="#step-3-assign-walls" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The video at the top of this tutorial shows how to add, delete, or modify wall polylines.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Clean the map.  Uncheck Buildings (user layer) and ARF/WRF (schema layer).  This will improve map loading speed.</p></li>
+<li><p>Click Boundary Condition Points in the User Layer group.  Drag the file Walls.shp into the map space.</p></li>
+</ol>
+<img alt="../_images/Worksh120.png" src="../_images/Worksh120.png" />
+<ol class="arabic simple" start="3">
+<li><p>If the walls are hard to see, make an adjustment to the symbology properties.  Double click Walls layer to open the
+properties window.</p></li>
+</ol>
+<img alt="../_images/Worksh120a.png" src="../_images/Worksh120a.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Add Walls to User Levee Lines button.</p></li>
+</ol>
+<img alt="../_images/Worksh121.png" src="../_images/Worksh121.png" />
+<img alt="../_images/Worksh122.png" src="../_images/Worksh122.png" />
+<ol class="arabic simple" start="5">
+<li><p>Set the wall elevation and failure fields and click Add Walls to User Levee Lines.</p></li>
+<li><p>Check Levee Failure</p></li>
+</ol>
+<img alt="../_images/Worksh123.png" src="../_images/Worksh123.png" />
+<ol class="arabic simple" start="7">
+<li><p>The levees were added to the user layer.
+Click OK.</p></li>
+</ol>
+<img alt="../_images/Worksh124.png" src="../_images/Worksh124.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If an error message was displayed, move the Walls Layer to the User Layer Group.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Click the Levee Elevation Tool from the FLO-2D Toolbar and click the Create Schematic Layers from User Levees button.</p></li>
+</ol>
+<img alt="../_images/Worksh125.png" src="../_images/Worksh125.png" />
+<ol class="arabic simple" start="9">
+<li><p>In this case, only levee lines are used.
+Uncheck elevation polygons if it is checked.</p></li>
+</ol>
+<img alt="../_images/Worksh126.png" src="../_images/Worksh126.png" />
+<ol class="arabic simple" start="10">
+<li><p>Duplicate levees were identified.
+Remove them by clicking Yes.</p></li>
+</ol>
+<img alt="../_images/Worksh127.png" src="../_images/Worksh127.png" />
+<ol class="arabic simple" start="11">
+<li><p>Once the process is complete, the following image will appear.  Click OK to close it.</p></li>
+</ol>
+<img alt="../_images/Worksh128.png" src="../_images/Worksh128.png" />
+<ol class="arabic simple" start="12">
+<li><p>The FLO-2D walls are shown by the red cutoff marks.  Visually inspecting them can help QC the data.</p></li>
+</ol>
+<img alt="../_images/Worksh128a.png" src="../_images/Worksh128a.png" />
+<ol class="arabic simple" start="13">
+<li><p>Turn on levee failure by clicking the prescribed failure checkbox on the Levee Failure Widget.</p></li>
+</ol>
+<img alt="../_images/Worksh128b.png" src="../_images/Worksh128b.png" />
+</section>
+<section id="step-4-export-the-project">
+<h2>Step 4: Export the project<a class="headerlink" href="#step-4-export-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Set Control Parameters icon and enter the data in the FLO-2D Toolbar.
+The following dialog will be displayed, make sure the Area Reduction Factors and Levees component switches are selected.</p></li>
+</ol>
+<img alt="../_images/Worksh017.png" src="../_images/Worksh017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Click Save.</p></li>
+</ol>
+<img alt="../_images/Worksh129.png" src="../_images/Worksh129.png" />
+<ol class="arabic simple" start="3">
+<li><p>This is a good point to save the project.</p></li>
+</ol>
+<img alt="../_images/Worksh083.png" src="../_images/Worksh083.png" />
+<ol class="arabic simple" start="4">
+<li><p>Export the data files to the project folder in QGIS Lesson 4.</p></li>
+</ol>
+<img alt="../_images/Worksh021.png" src="../_images/Worksh021.png" />
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 4\QGIS Lesson 4 Export</p>
+<img alt="../_images/Worksh163.png" src="../_images/Worksh163.png" />
+<ol class="arabic simple" start="5">
+<li><p>Complete the export by saving the swmm.inp file and clicking through all the remaining messages.</p></li>
+</ol>
+<img alt="../_images/Worksh130.png" src="../_images/Worksh130.png" />
+</section>
+<section id="step-5-run-the-simulation">
+<h2>Step 5: Run the simulation<a class="headerlink" href="#step-5-run-the-simulation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/Worksh0052.png" src="../_images/Worksh0052.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.</p></li>
+</ol>
+<img alt="../_images/Worksh131.png" src="../_images/Worksh131.png" />
+<section id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<p>This is the completion of a tutorial for adding buildings and walls to a model that is ready to run.
+This tutorial can be applied to any project once the grid and elevation is assigned.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lesson%203.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lesson 3 – Create a Storm Drain System Using Shapefiles</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Lesson%205.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lesson 5 – Realtime Rainfall Data</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-data">Required Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-procedure">Step-by-Step Procedure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-open-project-qgis-and-load-the-flo-2d-plugin-data">Step 1: Open project QGIS and load the FLO-2D Plugin data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-assign-buildings">Step 2: Assign buildings</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-assign-walls">Step 3: Assign walls</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-export-the-project">Step 4: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-run-the-simulation">Step 5: Run the simulation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

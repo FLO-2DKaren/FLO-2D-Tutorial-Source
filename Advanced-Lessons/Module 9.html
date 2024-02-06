@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lesson 3 Advanced - Storm Drain Network &#8212; FLO-2D Tutorials  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="../_static/static/style.css?v=64325c0e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Advanced-Lessons/Module 9';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Coastal Set-Up" href="../Coastal-Flooding/Coastal%20Set-Up.html" />
+    <link rel="prev" title="Lesson 3 Advanced - Review Shapefiles" href="Module%208.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/FLO-2D_logo.jpg" class="logo__image only-light" alt="FLO-2D Tutorials  documentation - Home"/>
+    <script>document.write(`<img src="../_static/FLO-2D_logo.jpg" class="logo__image only-dark" alt="FLO-2D Tutorials  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Setup:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Intro/Set-up.html">FLO-2D Setup</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Self-Help Kit:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%201.html">Lesson 1 Part 1 – Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%202.html">Lesson 1 Part 2 – Project Recovery Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%201%20Part%203.html">Lesson 1 Part 3 – Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%202.html">Lesson 2 – Channels</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%203.html">Lesson 3 – Create a Storm Drain System Using Shapefiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%204.html">Lesson 4 – Buildings, Walls and Wall Failure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%205.html">Lesson 5 – Realtime Rainfall Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Workshops/Lesson%206.html">Lesson 6 – Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%201.html">Project Recovery and Debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%201.html">Part 1 – Hydraulic Structures</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%202.html">Module 2 Part 2 – Advanced Hydraulic Structures</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bridges:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%202%20Part%203.html">Bridge Hydraulic Structure</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dam Breach Topics:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%201.html">Prescribed Breach Part 1 - Watershed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%202.html">Prescribed Breach Part 2 - Define Dam and Breach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%203%20Part%203.html">Prescribed Breach Part 3 - Add Detail and Troubleshoot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%206.html">Dam Breach - Erosion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%207.html">Tailings Dam Model</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mudflow Modeling:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%201.html">Mudflow Part 1 - Create a Watershed Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%202.html">Mudflow Part 2 - Mudflow Parameters and Hydrograph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%205%20Part%203.html">Mudflow Part 3 - Improve Time of Concentration</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Channel:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%2010.html">Lesson 2 Advanced - Urban Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Module%2012.html">Lesson 2 Advanced - Trapezoidal Channel</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Storm Drain:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Module%208.html">Lesson 3 Advanced - Review Shapefiles</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Lesson 3 Advanced - Storm Drain Network</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Coastal Flooding Tutorial:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Coastal%20Set-Up.html">Coastal Set-Up</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Create%20Grid.html">Create a Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Hydrology.html">Hydrology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Boundary%20Conditions.html">Boundary Conditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Channel.html">Channel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Culverts.html">Culverts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Shapefile%20Development.html">Storm Drain - Shapefile Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Storm%20Drain%20Setup.html">Storm Drain Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Urban%20Features.html">Urban Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mitigation%20Design.html">Mitigation Design</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Run%20and%20Review.html">Review Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Mapping.html">Mapping Results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Coastal-Flooding/Comparison%20of%20Results.html">Comparison of Results</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/Advanced-Lessons/Module 9.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Lesson 3 Advanced - Storm Drain Network</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-complete-previous-lesson">Step 1: Complete previous lesson</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-select-component-fields-from-the-shapefiles">Step 2: Select component fields from the shapefiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-assign-the-link-node-connections">Step 3: Assign the link node connections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-import-rating-tables">Step 4: Import rating tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-pump-data">Step 5: Set up the pump data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-review-the-orifice-data">Step 6: Review the orifice data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-review-the-weir-data">Step 7: Review the weir data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-add-external-inflows">Step 8: Add external inflows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-schematize-the-storm-drain-components">Step 9: Schematize the storm drain components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-export-the-project">Step 10: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-set-up-the-storage-unit-data">Step 11: Set up the storage unit data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-run-the-simulation">Step 12: Run the simulation</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="lesson-3-advanced-storm-drain-network">
+<h1>Lesson 3 Advanced - Storm Drain Network<a class="headerlink" href="#lesson-3-advanced-storm-drain-network" title="Link to this heading">#</a></h1>
+<p><strong>Overview</strong></p>
+<p>This lesson will outline how to construct an advanced storm drain network that is ready for FLO-2D Plugin to process.</p>
+<p>Required Data</p>
+<p>This lesson starts from the end of the Storm Drain - Shapefile Overview.  Please complete that lesson and return here.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>File</strong></p></th>
+<th class="head"><p><strong>Content</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Point shapefile</p></td>
+<td><p>Inlets/Junctions, Outfalls, Storage Units</p></td>
+</tr>
+<tr class="row-odd"><td><p>Polyline shapefile</p></td>
+<td><p>Conduit, Pumps, Orifices, Weirs</p></td>
+</tr>
+<tr class="row-even"><td><p>*.qgz</p></td>
+<td><p>Project file</p></td>
+</tr>
+<tr class="row-odd"><td><p>*.gpkg</p></td>
+<td><p>Geopackage file</p></td>
+</tr>
+<tr class="row-even"><td><p>*.txt</p></td>
+<td><p>Rating table file</p></td>
+</tr>
+</tbody>
+</table>
+<section id="step-1-complete-previous-lesson">
+<h2>Step 1: Complete previous lesson<a class="headerlink" href="#step-1-complete-previous-lesson" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Finish <a href="https://documentation.flo-2d.com/Advanced-Lessons/Module%208.html"
+target="_blank">Storm Drain - Shapefile Overview</a></p></li>
+</ol>
+<ol class="arabic simple" start="2">
+<li><p>The Storm drain overview adds the data and gets the project ready.  Return to this step once it is finished.</p></li>
+</ol>
+</section>
+<section id="step-2-select-component-fields-from-the-shapefiles">
+<h2>Step 2: Select component fields from the shapefiles<a class="headerlink" href="#step-2-select-component-fields-from-the-shapefiles" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Expand the Storm Drain Editor widget and click the Select components from shapefile layer button.</p></li>
+</ol>
+<img alt="../_images/Worksh095.png" src="../_images/Worksh095.png" />
+<ol class="arabic simple" start="2">
+<li><p>Use the Editor to assign all of the fields from the shapefiles.</p></li>
+</ol>
+<img alt="../_images/Worksh096.png" src="../_images/Worksh096.png" />
+<img alt="../_images/Worksh097.png" src="../_images/Worksh097.png" />
+<img alt="../_images/Worksh098d.png" src="../_images/Worksh098d.png" />
+<img alt="../_images/Worksh098a.png" src="../_images/Worksh098a.png" />
+<img alt="../_images/Worksh098b.png" src="../_images/Worksh098b.png" />
+<img alt="../_images/Worksh098c.png" src="../_images/Worksh098c.png" />
+<ol class="arabic simple" start="3">
+<li><p>Once all features are selected in the drop-down menus, click <strong>Assign Selected Inlets/Junctions, Outfalls and
+Conduits</strong> to create the data structures of the Storm Drain Components.</p></li>
+<li><p>The following message will be displayed.
+Click <em>OK</em>.</p></li>
+</ol>
+<img alt="../_images/Worksh099.png" src="../_images/Worksh099.png" />
+</section>
+<section id="step-3-assign-the-link-node-connections">
+<h2>Step 3: Assign the link node connections<a class="headerlink" href="#step-3-assign-the-link-node-connections" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Simulate storm drain checkbox.</p></li>
+<li><p>Click the Auto-assign link nodes button and select Conduits.</p></li>
+<li><p>Repeat the step 3.2 for Pumps, Orifices, and Weirs</p></li>
+</ol>
+<img alt="../_images/Worksh100.png" src="../_images/Worksh100.png" />
+<ol class="arabic simple" start="4">
+<li><p>The success message identifies the number of links that were automatically assigned an Inlet and Outlet node name.</p></li>
+</ol>
+<img alt="../_images/Worksh100b.png" src="../_images/Worksh100b.png" />
+</section>
+<section id="step-4-import-rating-tables">
+<h2>Step 4: Import rating tables<a class="headerlink" href="#step-4-import-rating-tables" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Import Rating Table Button</p></li>
+</ol>
+<img alt="../_images/Worksh101.png" src="../_images/Worksh101.png" />
+<ol class="arabic simple" start="2">
+<li><p>Navigate to the I4 table with this path.
+Select the file and click Open.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 3\Advanced
+Storm Drain Shapefiles\I4-37-32-26-1.txt</p>
+<ol class="arabic simple" start="3">
+<li><p>The table was imported and assigned to the correct inlet node.</p></li>
+<li><p>If an error was detected because one Type 4 inlet didn’t match a selected text file, it
+would be reported to this file:</p></li>
+</ol>
+<img alt="../_images/Worksh103b.png" src="../_images/Worksh103b.png" />
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If a Python error pops up because the Rating Table Warnings file can’t be written, simply perform this
+step again.  The path correction is applied the second time.</p>
+</div>
+</section>
+<section id="step-5-set-up-the-pump-data">
+<h2>Step 5: Set up the pump data<a class="headerlink" href="#step-5-set-up-the-pump-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Add pump curve button.</p></li>
+<li><p>Name the Pump “P1”.</p></li>
+<li><p>Set the Pump Type to Pump4.</p></li>
+<li><p>Add a description. (not required)</p></li>
+</ol>
+<img alt="../_images/Worksh101a.png" src="../_images/Worksh101a.png" />
+<ol class="arabic simple" start="5">
+<li><p>Apply a rating table.</p></li>
+</ol>
+<img alt="../_images/Worksh101b.png" src="../_images/Worksh101b.png" />
+<ol class="arabic simple" start="6">
+<li><p>Pump instructions can be found in the EPA SWMM 5.0 Help Document</p></li>
+</ol>
+<img alt="../_images/Worksh101c.png" src="../_images/Worksh101c.png" />
+<p>C:\ProgramData\Microsoft\Windows\Start Menu\Programs\EPA SWMM 5.0\EPA SWMM 5.0 Help</p>
+</section>
+<section id="step-6-review-the-orifice-data">
+<h2>Step 6: Review the orifice data<a class="headerlink" href="#step-6-review-the-orifice-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Select Orifces from the Links menu.</p></li>
+</ol>
+<img alt="../_images/orifice1.png" src="../_images/orifice1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Review the table to identify the important details for this system.</p></li>
+</ol>
+<img alt="../_images/orifice2.png" src="../_images/orifice2.png" />
+<ol class="arabic simple" start="3">
+<li><p>The Invert of this system is set by the cistern1, cistern2, and cistern3 features.</p></li>
+<li><p>The inlet offset defines the depth to the opening.</p></li>
+<li><p>The orifice has a 6 inch circular opening that allows water to transfer to the other cisterns.</p></li>
+</ol>
+<img alt="../_images/orifice3.png" src="../_images/orifice3.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click close to close the window.</p></li>
+</ol>
+</section>
+<section id="step-7-review-the-weir-data">
+<h2>Step 7: Review the weir data<a class="headerlink" href="#step-7-review-the-weir-data" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Select Weirs from the Links menu.</p></li>
+</ol>
+<img alt="../_images/weir1.png" src="../_images/weir1.png" />
+<ol class="arabic simple" start="2">
+<li><p>Review the table to identify the important details for this system.</p></li>
+</ol>
+<img alt="../_images/weir2.png" src="../_images/weir2.png" />
+<ol class="arabic simple" start="3">
+<li><p>This weir is a control that of the cistern overflow.  The water is retained in the system until it fills the tanks
+to 4.5 ft.  At 4.5ft depth, the water flows out of a V-Notch weir into an outfall node with free bubble up discharge
+back onto the surface retention basin to the East.</p></li>
+</ol>
+<img alt="../_images/weir3.png" src="../_images/weir3.png" />
+</section>
+<section id="step-8-add-external-inflows">
+<h2>Step 8: Add external inflows<a class="headerlink" href="#step-8-add-external-inflows" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Open the Inlet/Outlet Node editor.</p></li>
+</ol>
+<img alt="../_images/inletinflow.png" src="../_images/inletinflow.png" />
+<ol class="arabic simple" start="2">
+<li><p>Find the inlet I3-38-32-2 and load it in the Dialog Box.</p></li>
+<li><p>Check the External inflow checkbox and click the adjacent button.</p></li>
+</ol>
+<img alt="../_images/inletinflow1.png" src="../_images/inletinflow1.png" />
+<ol class="arabic simple" start="4">
+<li><p>Click the browse button next to the Time Series field on the Inlet/Junction dialog box.</p></li>
+</ol>
+<img alt="../_images/inletinflow2.png" src="../_images/inletinflow2.png" />
+<ol class="arabic simple" start="5">
+<li><p>Fill the table with the following data and click Save.</p></li>
+</ol>
+<img alt="../_images/inletinflow3.png" src="../_images/inletinflow3.png" />
+<ol class="arabic simple" start="6">
+<li><p>Click save on the updated Inlet/Junction dialog box.</p></li>
+</ol>
+<img alt="../_images/inletinflow4.png" src="../_images/inletinflow4.png" />
+<ol class="arabic simple" start="7">
+<li><p>Click the final Save button on the larger dialog box.</p></li>
+</ol>
+<img alt="../_images/inletinflow5.png" src="../_images/inletinflow5.png" />
+<ol class="arabic simple" start="8">
+<li><p>The final message alerts the user that the process completed without error but the schematized button is required to
+trigger the data table update.</p></li>
+</ol>
+<img alt="../_images/inletinflow6.png" src="../_images/inletinflow6.png" />
+</section>
+<section id="step-9-schematize-the-storm-drain-components">
+<h2>Step 9: Schematize the storm drain components<a class="headerlink" href="#step-9-schematize-the-storm-drain-components" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click on Schematize Storm Drain Components in the Storm Drain Editor widget.</p></li>
+</ol>
+<img alt="../_images/Worksh104.png" src="../_images/Worksh104.png" />
+<ol class="arabic simple" start="2">
+<li><p>Once the storm drain components are schematized, the following dialog will appear.
+Click <em>OK</em> to close.</p></li>
+</ol>
+<img alt="../_images/Worksh105.png" src="../_images/Worksh105.png" />
+<ol class="arabic simple" start="3">
+<li><p>The storm drain schematized data layers have been completed.  The storm drain components are now part of the
+schematized layers in the project.</p></li>
+</ol>
+<img alt="../_images/Worksh106.png" src="../_images/Worksh106.png" />
+</section>
+<section id="step-10-export-the-project">
+<h2>Step 10: Export the project<a class="headerlink" href="#step-10-export-the-project" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Set Control Variable icon.</p></li>
+</ol>
+<img alt="../_images/Worksh017.png" src="../_images/Worksh017.png" />
+<ol class="arabic simple" start="2">
+<li><p>Verify the data and Click Save.</p></li>
+</ol>
+<img alt="../_images/Worksh111.png" src="../_images/Worksh111.png" />
+<ol class="arabic simple" start="3">
+<li><p>This is a good point to save project.</p></li>
+</ol>
+<img alt="../_images/Worksh083.png" src="../_images/Worksh083.png" />
+<ol class="arabic simple" start="4">
+<li><p>Export the data files to the Project Folder in QGIS Lesson 3</p></li>
+</ol>
+<img alt="../_images/Worksh021.png" src="../_images/Worksh021.png" />
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 3\QGIS Lesson 3
+Export Advanced</p>
+<ol class="arabic simple" start="5">
+<li><p>Click OK to export the main project data files.</p></li>
+</ol>
+<img alt="../_images/Worksh021b.png" src="../_images/Worksh021b.png" />
+<ol class="arabic simple" start="6">
+<li><p>Save the swmm.inp file with the next dialog.  Make sure the path is still Lesson 3 Export.</p></li>
+</ol>
+<img alt="../_images/Worksh021cc.png" src="../_images/Worksh021cc.png" />
+<ol class="arabic simple" start="7">
+<li><p>Check the .INP control variables and click OK.</p></li>
+</ol>
+<img alt="../_images/Worksh021d.png" src="../_images/Worksh021d.png" />
+<ol class="arabic simple" start="8">
+<li><p>These are the storm drain components that were written to the swmm.inp file.</p></li>
+</ol>
+<img alt="../_images/Worksh021e.png" src="../_images/Worksh021e.png" />
+<ol class="arabic simple" start="9">
+<li><p>The final dialog will be displayed.  The associated storm drain data files are created when the storm drain switch
+has been turned ON.</p></li>
+</ol>
+<img alt="../_images/Worksh021f.png" src="../_images/Worksh021f.png" />
+</section>
+<section id="step-11-set-up-the-storage-unit-data">
+<h2>Step 11: Set up the storage unit data<a class="headerlink" href="#step-11-set-up-the-storage-unit-data" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The plugin cannot make a storage unit yet.  This step will be finished in EPA SWMM GUI.  The tutorial will be
+updated when the storage units are added to the plugin.</p>
+</div>
+<ol class="arabic simple">
+<li><p>Open EPA SWMM GUI</p></li>
+</ol>
+<img alt="../_images/stunit001.png" src="../_images/stunit001.png" />
+<ol class="arabic simple" start="2">
+<li><p>Drag the swmm.inp file onto EPA SWMM 5.0 GUI.</p></li>
+<li><p>Zoom to the LID system.</p></li>
+</ol>
+<img alt="../_images/stunit002.png" src="../_images/stunit002.png" />
+<ol class="arabic simple" start="4">
+<li><p>Right click the cistern1, cistern2, and cistern3 nodes. Convert them into Storage Units.</p></li>
+</ol>
+<img alt="../_images/stunit003.png" src="../_images/stunit003.png" />
+<ol class="arabic simple" start="5">
+<li><p>Double click each storage unit and set up the storage data.</p></li>
+</ol>
+<img alt="../_images/stunit004.png" src="../_images/stunit004.png" />
+<ol class="arabic simple" start="6">
+<li><p>Under the Data Tab, click Storage Curves and the + button to create a curve named storage1.</p></li>
+</ol>
+<img alt="../_images/stunit005.png" src="../_images/stunit005.png" />
+<ol class="arabic simple" start="7">
+<li><p>Save and close the EPA SWMM GUI.</p></li>
+<li><p>Make a backup of the swmm.inp file in case it is overwritten by a plugin export.</p></li>
+</ol>
+<img alt="../_images/stunit006.png" src="../_images/stunit006.png" />
+</section>
+<section id="step-12-run-the-simulation">
+<h2>Step 12: Run the simulation<a class="headerlink" href="#step-12-run-the-simulation" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Click the Run FLO-2D Icon.</p></li>
+</ol>
+<img alt="../_images/Worksh0052.png" src="../_images/Worksh0052.png" />
+<ol class="arabic simple" start="2">
+<li><p>Set the Project path and the FLO-2D Engine Path and click OK to start the simulation.</p></li>
+<li><p>Set the <em>FLO-2D Folder</em>.</p></li>
+</ol>
+<p>C:\program files (x86)\flo-2d pro</p>
+<ol class="arabic simple" start="4">
+<li><p>Set the <em>Project Folder</em>.</p></li>
+</ol>
+<p>C:\Users\Public\Documents\FLO-2D PRO Documentation\Example Projects\QGIS Tutorials\QGIS Lesson 3\QGIS Lesson 3
+Export Advanced</p>
+<img alt="../_images/Worksh113a.png" src="../_images/Worksh113a.png" />
+<ol class="arabic simple" start="5">
+<li><p>After the storm drain model is complete, review FLO-2D Storm Drain Manual Chapter 6 for more details about reviewing
+results.</p></li>
+</ol>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Module%208.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lesson 3 Advanced - Review Shapefiles</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../Coastal-Flooding/Coastal%20Set-Up.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Coastal Set-Up</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-complete-previous-lesson">Step 1: Complete previous lesson</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-select-component-fields-from-the-shapefiles">Step 2: Select component fields from the shapefiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-assign-the-link-node-connections">Step 3: Assign the link node connections</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-import-rating-tables">Step 4: Import rating tables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-set-up-the-pump-data">Step 5: Set up the pump data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-review-the-orifice-data">Step 6: Review the orifice data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-7-review-the-weir-data">Step 7: Review the weir data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-8-add-external-inflows">Step 8: Add external inflows</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-9-schematize-the-storm-drain-components">Step 9: Schematize the storm drain components</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-10-export-the-project">Step 10: Export the project</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-11-set-up-the-storage-unit-data">Step 11: Set up the storage unit data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-12-run-the-simulation">Step 12: Run the simulation</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Karen O'Brien
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, Karen O&#39;Brien.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
