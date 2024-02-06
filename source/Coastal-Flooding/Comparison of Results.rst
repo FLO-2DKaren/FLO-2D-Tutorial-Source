@@ -477,10 +477,14 @@ evacuation.
 
 4. Drag the Naples Streets into the map.
 
-.. image:: ../img/Coastal/comp046.png
-
 .. note:: This shapefile does not encompass all the roads within the project domain.
           However, it contains sufficient street data to fulfill the objectives of this lesson.
+
+.. image:: ../img/Coastal/comp046.png
+
+.. important::  To evaluate only the depth over the streets,
+                it's necessary to clip the depth raster using the streets layers as the clipping mask.
+                This process will help in visualizing the depth specifically over the streets and facilitate subsequent calculations.
 
 5. Clip the Depth Elev US 41 raster with the Naples Streets shapefile. Select the Clip Raster by Mask layer function.
 
@@ -575,10 +579,10 @@ the simulations. The three sea water level values are:
 
 .. image:: ../img/Coastal/comp030.png
 
-8. Select the Subdomain 1 Elevation and click on add layer on the Profile Tool. Repeat this process for
+4. Select the Subdomain 1 Elevation and click on add layer on the Profile Tool. Repeat this process for
    F2100_10AEP_High836SLR, F2100_10AEP_Low128SLR, and F2100_10AEP_Med377SLR
 
-9. Change the Layers colors by double clicking on the red square at the left of the Layer's name.
+5. Change the Layers colors by double clicking on the red square at the left of the Layer's name.
 
 - F2100_10AEP_High836SLR: Red
 - F2100_10AEP_Low128SLR: Green
@@ -587,7 +591,7 @@ the simulations. The three sea water level values are:
 
 .. image:: ../img/Coastal/comp061.png
 
-10. Create a profile plot of the three scenarios over the 111th Avenue North (Immokalee Rd) from west to east.
+6. Create a profile plot of the three scenarios over the 111th Avenue North (Immokalee Rd) from west to east.
 
 .. image:: ../img/Coastal/comp062.png
 
@@ -595,7 +599,7 @@ In this plot, it is evident that the bridge is completely submerged in the High 
 is not overtopped in the other scenarios (see the area under the green square).
 This plot also illustrates that the impact of the storm surge ceases near Livingston Rd.
 
-11. Create another plot on the Bonita Beach Rd SW.
+7. Create another plot on the Bonita Beach Rd SW.
 
 .. image:: ../img/Coastal/comp063.png
 
@@ -604,7 +608,7 @@ but not in the medium and low sea water level scenarios.
 Another notable observation is that the Low Sea Level Rise flooding recedes just after West Av,
 while the other scenarios still predict flooding in this area.
 
-12. Create a plot over the Bay Colony Dr.
+8. Create a plot over the Bay Colony Dr.
 
 .. image:: ../img/Coastal/comp064.png
 
@@ -612,7 +616,7 @@ This plot is oriented in the north-south direction and clearly indicates that th
 All three scenarios predict flooding, with the low sea level rise anticipating a water depth of around 11 ft,
 while the high sea level rise forecasts a water depth of approximately 21.4 ft.
 
-13. Group the layers generated in this lesson in a group called 'Sea Level Rise' and uncheck the group.
+9. Group the layers generated in this lesson in a group called 'Sea Level Rise' and uncheck the group.
 
 Flooded Areas in 2030, 2060
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
