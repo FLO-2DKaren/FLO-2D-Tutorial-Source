@@ -35,7 +35,7 @@ Basic users should fill the Basic Download Form to access the limited free versi
 
 .. |Basic_Download| raw:: html
 
-   <a href="https://flo-2d.com/flo-2d-basic/" target="_blank">Basic Download Form</a>
+   <a href="https://flo-2d.com/flo-2d-demo/" target="_blank">FLO-2D Demo Course</a>
 
 Once the software is downloaded.  Go to Step 2.
 
