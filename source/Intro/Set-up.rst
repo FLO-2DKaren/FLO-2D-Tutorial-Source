@@ -286,45 +286,6 @@ ______________
 
    <a href="https://flo-2d.sharefile.com/d-s29e779b1eaac445a974951db6cfd2da0" target="_blank">Download the Intel Installers Here.</a>
    
-
-Visual Studio Packages
-_______________________
-
-1. Microsoft Visual Studio 2019 is the platform used build the FLO-2D model.  Visual Studio redistributable packages
-   are required. If the Visual Studio Redist embedded installer failed or skipped,
-   it may be necessary to run it again.  This installer requires Admin rights.
-   |visualclink|
-
-.. |visualclink| raw:: html
-
-   <a href="https://flo-2d.sharefile.com/d-s3e38b0b9e0f94c4bb5d546b955e0495a" target="_blank">Download the installer here.</a>
-
-
-2. Microsoft Visual Studio 13 is used for the Storm Drain engine.  The fault will be an error message about a missing
-   msvcp120.dll or msvcp140.dll or something similar.  As the Visual Studio version changes, the dlls file name changes.
-
-.. image:: ../img/Instructions/image27.PNG
-
-
-3. For example, this computer has many different redistributable packages.  Any software built with Visual Studio
-   should add the required dll to the computer.  If that process fails, it may be necessary to install the packages
-   from the VCredist_x64 or x86 installers.
-
-.. image:: ../img/Instructions/image22.png
-
-
-4. FLOPRO.exe Build 22 uses the 2015 - 2019 version of Visual Studio.
-
-5. FLOPRO.exe Build 14 thru Build 21 uses
-   version 2013 of Visual Studio.  The older FLO-2D Builds require the 64-bit and 32-bit packages.
-
-   Older redistributable packages can be downloaded from Microsoft:
-   |oldVClink|
-
-.. |oldVClink| raw:: html
-
-   <a href="https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170" target="_blank">Microsoft msvcp redistributable installers.</a>
-
 Call FLOPRO.exe from QGIS
 ___________________________
 
