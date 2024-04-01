@@ -22,8 +22,7 @@ jobs:
 
       - name: Install dependencies and build Sphinx Documentation
         run: |
-          /opt/hostedtoolcache/Python/3.9.18/x64/bin/python3.9 -m pip install -r requirements.txt
-          /opt/hostedtoolcache/Python/3.9.18/x64/bin/python3.9 -m pip install sphinxcontrib-youtube
+          /opt/hostedtoolcache/Python/3.9.18/x64/bin/python3.9 -m pip install -r sphinx_rtd_theme, sphinx-book-theme, sphinx-docxbuilder
           sphinx-build -b html source build
         shell: bash
         env:
